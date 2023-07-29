@@ -18,7 +18,8 @@ def get_actor_id(
     df_out = wmpaws.run_sql(f'''
     SELECT
         actor.actor_name AS username,
-        actor.actor_id AS actor_id
+        actor.actor_id AS actor_id,
+        actor.actor_user AS user_id
     FROM
         actor
     WHERE
