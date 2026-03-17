@@ -1,0 +1,3430 @@
+[
+  {
+    "edition": "Wikimania 2005",
+    "year": 2005,
+    "location": "Frankfurt, Germany",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2005",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2005-08-05",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'D to D Month YYYY': '05 to 8 August 2005'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202005%20overview&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2005-08-08",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'D to D Month YYYY': '05 to 8 August 2005'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202005%20overview&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2005-05-25",
+            "date_confidence": "approximate",
+            "notes": "Main abstract deadline; original was May 10, extended to May 25. From: '* May 10 → May 25 - Abstract deadline for panels, papers, posters and presentations'",
+            "sources": [
+              {
+                "url": "https://wikimania2005.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline_extended",
+            "date": "2005-06-30",
+            "date_confidence": "approximate",
+            "notes": "Last-minute / breaking-news posters and short presentations. From: '* June 30 - Submission deadline for last-minute / breaking-news posters'",
+            "sources": [
+              {
+                "url": "https://wikimania2005.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No scholarship page found on wikimania2005.wikimedia.org or meta.wikimedia.org",
+            "sources": []
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No scholarship page found on wikimania2005.wikimedia.org or meta.wikimedia.org",
+            "sources": []
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No scholarship page found on wikimania2005.wikimedia.org or meta.wikimedia.org",
+            "sources": []
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No registration page found for Wikimania 2005.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No registration page found for Wikimania 2005.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No registration page found for Wikimania 2005.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2006",
+    "year": 2006,
+    "location": "Boston, USA",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2006",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2006-08-04",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 4 - 6, 2006'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202006/en&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2006-08-06",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 4 - 6, 2006'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202006/en&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2006-04-15",
+            "date_confidence": "confirmed",
+            "notes": "Extended deadline; original unknown. From: '* 15 April 2006 (Extended) : Proposal deadline'",
+            "sources": [
+              {
+                "url": "https://wikimania2006.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2006-05-15",
+            "date_confidence": "approximate",
+            "notes": "From: 'Notification of acceptance: by May 15'",
+            "sources": [
+              {
+                "url": "https://wikimania2006.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2006-06-28",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: 'Please fill out an [[Scholarships/Application|application]] and send it to <tt>wikimania-registration@wikimedia.org</tt>'",
+            "sources": [
+              {
+                "url": "https://wikimania2006.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated. Cancellation policy mentions Aug 3, 2006 as last refund date.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No early bird tier mentioned on registration page.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration closed before conference (Aug 4-6, 2006) but no exact deadline stated on page.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2007",
+    "year": 2007,
+    "location": "Taipei, Taiwan",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2007",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2007-08-03",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D YYYY to Month D': 'August 3, 2007 to August 5'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2007&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2007-08-05",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D YYYY to Month D': 'August 3, 2007 to August 5'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2007&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2007-03-01",
+            "date_confidence": "confirmed",
+            "notes": "From: '* 1 March – 30 April: Submission (The deadline has been extended to May 15)'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2007-04-30",
+            "date_confidence": "confirmed",
+            "notes": "Original deadline. From: '* 1 March – 30 April: Submission'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline_extended",
+            "date": "2007-05-15",
+            "date_confidence": "confirmed",
+            "notes": "Extended from April 30. From: 'The deadline has been extended to May 15'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Approximate: 'May 1 – 31 May: Feedback and notification of acceptance'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2007-04-01",
+            "date_confidence": "confirmed",
+            "notes": "Original deadline before extension: 'The original deadline was April 1, 2007'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline_extended",
+            "date": "2007-04-15",
+            "date_confidence": "confirmed",
+            "notes": "Extended deadline announced: 'The new deadline is April 15, 2007'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2007-04-22",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*Announcements: it is anticipated that the selection of scholarship recipients will be completed by '''April 22, 2007''''",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No early bird tier mentioned on registration page.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2007-07-30",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '*'''Online registration deadline:''' July 30th (without accommodation)' — year inferred from conference year",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_late_deadline",
+            "date": "2007-08-03",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*'''On-site registration deadline:''' start of the conference at 2007-08-03 10:00 (UTC+8)'",
+            "sources": [
+              {
+                "url": "https://wikimania2007.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2008",
+    "year": 2008,
+    "location": "Alexandria, Egypt",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2008",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2008-07-17",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 17 – 19, 2008'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2008&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2008-07-19",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 17 – 19, 2008'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2008&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2008-02-01",
+            "date_confidence": "confirmed",
+            "notes": "From: '* 1 February – 19 March : Submission'",
+            "sources": [
+              {
+                "url": "https://wikimania2008.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2008-03-19",
+            "date_confidence": "confirmed",
+            "notes": "From: '* 1 February – 19 March : Submission'",
+            "sources": [
+              {
+                "url": "https://wikimania2008.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2008-04-30",
+            "date_confidence": "confirmed",
+            "notes": "End of review/notification window. From: '* 20 March – 30 April : Review, feedback and notification of acceptance'",
+            "sources": [
+              {
+                "url": "https://wikimania2008.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2008-04-21",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* '''Scholarship applications must be received by April 21, 2008 at 23:59:59 (UTC)'''.  Announcement of scholarships and'",
+            "sources": [
+              {
+                "url": "https://wikimania2008.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2008-05-30",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '**'''Early Bird deadline:''' May 30' — year inferred from conference year",
+            "sources": [
+              {
+                "url": "https://wikimania2008.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2008-07-10",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '*'''Online registration deadline:''' July 10' — year inferred from conference year",
+            "sources": [
+              {
+                "url": "https://wikimania2008.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2009",
+    "year": 2009,
+    "location": "Buenos Aires, Argentina",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2009",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2009-08-26",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 26-28, 2009'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania/2009&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2009-08-28",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 26-28, 2009'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania/2009&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2009-03-01",
+            "date_confidence": "approximate",
+            "notes": "No year on page; context year applied. From: '* Submissions will open on: March 1'",
+            "sources": [
+              {
+                "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2009-04-15",
+            "date_confidence": "approximate",
+            "notes": "Original deadline (strikethrough). From: 'Deadline for submitting ... <s>April 15</s> April 30'",
+            "sources": [
+              {
+                "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline_extended",
+            "date": "2009-04-30",
+            "date_confidence": "approximate",
+            "notes": "Extended from April 15. From: 'We have extended the submission deadline until April 30'",
+            "sources": [
+              {
+                "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2009-05-31",
+            "date_confidence": "approximate",
+            "notes": "From: 'Notification of acceptance ... May 31' (posters/discussions track)",
+            "sources": [
+              {
+                "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Scholarship page on wikimania2009.wikimedia.org is a post-event archive with no dates",
+            "sources": []
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Scholarship page on wikimania2009.wikimedia.org is a post-event archive with no dates",
+            "sources": []
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Scholarship page on wikimania2009.wikimedia.org is a post-event archive with no dates",
+            "sources": []
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No open date found. Registration page states fees were lower until July 30, 2009.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2009-07-30",
+            "date_confidence": "approximate",
+            "notes": "Inferred from fee structure: 'Until 30 July 2009: USD 45; After 30 July 2009: USD 60' — effective early bird deadline",
+            "sources": [
+              {
+                "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page says 'closed' but no explicit deadline date found.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2010",
+    "year": 2010,
+    "location": "Gdańsk, Poland",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2010",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2010-07-09",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 9–11, 2010'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2010&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2010-07-11",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 9–11, 2010'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2010&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2010-05-20",
+            "date_confidence": "approximate",
+            "notes": "Original (del). From: '<del>May 20</del> May 24'",
+            "sources": [
+              {
+                "url": "https://wikimania2010.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline_extended",
+            "date": "2010-05-24",
+            "date_confidence": "approximate",
+            "notes": "Extended from May 20. From: 'extended the submission deadline ... May 24'",
+            "sources": [
+              {
+                "url": "https://wikimania2010.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2010-05-29",
+            "date_confidence": "approximate",
+            "notes": "Extended notification date. From: 'Notification of acceptance: <del>May 25</del> May 29'",
+            "sources": [
+              {
+                "url": "https://wikimania2010.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2010-04-11",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Deadline for submission''': The deadline to apply for the Wikimania 2010 Scholarships Program was '''April 11, 2010'''",
+            "sources": [
+              {
+                "url": "https://wikimania2010.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but contained no deadline dates.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but contained no deadline dates.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but contained no deadline dates.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2011",
+    "year": 2011,
+    "location": "Haifa, Israel",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2011",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2011-08-04",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month Dth to Dth YYYY': 'August 4th to 7th, 2011'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2011&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2011-08-07",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month Dth to Dth YYYY': 'August 4th to 7th, 2011'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2011&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2011-04-30",
+            "date_confidence": "confirmed",
+            "notes": "From: '* Deadline for submitting ... proposals: 30 April, 2011'",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2011-06-15",
+            "date_confidence": "confirmed",
+            "notes": "From: '* Notification of acceptance: 15 June, 2011'",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2011-01-31",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Deadline for submission''': The deadline to apply for the Wikimania 2011 Scholarships Program is '''January 31, 2011''",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2011-04-20",
+            "date_confidence": "approximate",
+            "notes": "Approximate: 'End-March-Early April 2011 – Applicants are notified about final decisions'",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_applications_open",
+            "date": "2011-01-01",
+            "date_confidence": "confirmed",
+            "notes": "From: 'January 1-31, 2011 – Scholarship application open'",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": "2011-01-01",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*<s>'''Early Bird Registration starts:''' January 1st, 2011'",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2011-03-31",
+            "date_confidence": "approximate",
+            "notes": "Inferred: Early Bird tier opens Jan 1; next tier (Early Registration) starts April 1st, 2011 — so earlybird ends ~March 31",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2011-08-01",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*'''Online registration deadline:''' August 1st, 2011'",
+            "sources": [
+              {
+                "url": "https://wikimania2011.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2012",
+    "year": 2012,
+    "location": "Washington DC, USA",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2012",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2012-07-12",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 12–15, 2012'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2012&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2012-07-15",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 12–15, 2012'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2012&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2012-03-18",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Deadline for submitting proposals was: '''18 March 2012''' (11:59 PM Pacific Daylight Time or 06:59 UTC on 19 March 20'",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2012-04-24",
+            "date_confidence": "confirmed",
+            "notes": "Extended from April 8. From: '<s>8 April 2012</s> 24 April 2012'",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2012-02-16",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Deadline for submission''': The scholarship application deadline was February 16, 2012, at 23:59:59 UTC. We notified '",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_applications_open",
+            "date": "2012-01-16",
+            "date_confidence": "confirmed",
+            "notes": "Manually corrected: date range 'January 16 – February 16, 2012' — open date is January 16",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": "2012-01-23",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Early Registration starts:''' January 23, 2012'",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2012-04-30",
+            "date_confidence": "approximate",
+            "notes": "Inferred: Early tier opens Jan 23; Regular tier starts May 1, 2012 — so early registration closes ~April 30",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2012-07-04",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Online registration deadline:''' July 4, 2012 at 23:59 EDT'",
+            "sources": [
+              {
+                "url": "https://wikimania2012.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2013",
+    "year": 2013,
+    "location": "Hong Kong SAR, China",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2013",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2013-08-05",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 5–7, 2013'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2013&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2013-08-07",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 5–7, 2013'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2013&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2012-12-15",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Call for participation open: '''15 December 2012'''</translate>'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2013-04-30",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Deadline for submitting proposals is: '''30 April 2013''', 23:59 UTC</translate></s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "First round May 2013, ongoing into June. From: 'Notification: May – June 2013 – 1st round was [date]'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2013-02-22",
+            "date_confidence": "confirmed",
+            "notes": "Manually corrected: parser grabbed notification date from 'now closed' line. Actual deadline from 'Deadline for applying: 22 February 2013'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2013-03-20",
+            "date_confidence": "confirmed",
+            "notes": "Confirmed: 'All applicants were notified on 20 March'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_applications_open",
+            "date": "2013-01-22",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* <s>Scholarship applications open: '''22 January 2013'''</s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": "2013-02-22",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Early Registration starts:''' February 22, 2013' — first registration tier open",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2013-04-14",
+            "date_confidence": "approximate",
+            "notes": "Inferred: Early tier opens Feb 22; Regular tier starts April 15, 2013 — early registration closes ~April 14",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2013-07-31",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: ''''Online registration deadline:''' July 31, 2013 at 23:59 HKT'",
+            "sources": [
+              {
+                "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2014",
+    "year": 2014,
+    "location": "London, United Kingdom",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2014",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2014-08-06",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D to D YYYY': 'August 6 to 10, 2014'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2014&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2014-08-10",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D to D YYYY': 'August 6 to 10, 2014'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2014&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2014-01-01",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Call for proposals opens: 1 January 2014'",
+            "sources": [
+              {
+                "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2014-03-31",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Deadline for submitting proposals: 31 March 2014'",
+            "sources": [
+              {
+                "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2014-06-01",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Notification of acceptance: 1 June 2014 – the full [[programme]] has been announced'",
+            "sources": [
+              {
+                "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2014-01-08",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* <s>Scholarship applications open: '''Wednesday 8 January 2014'''</s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2014-02-17",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* <s>Deadline for applying for scholarships: '''Monday 17 February 2014 23:59 UTC'''</s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2014-03-11",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* <s>Applicants are notified about [[#Selection process|phase one]] decisions: 11 March 2014</s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page says closed; no open date found.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No early bird information on registration page.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page says closed; no specific deadline date found.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2015",
+    "year": 2015,
+    "location": "Mexico City, Mexico",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2015",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2015-07-15",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 15–19, 2015'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2015&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2015-07-19",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'July 15–19, 2015'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2015&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2015-02-28",
+            "date_confidence": "confirmed",
+            "notes": "From: '* Deadline for submitting proposals: February 28, 2015'",
+            "sources": [
+              {
+                "url": "https://wikimania2015.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2015-04-20",
+            "date_confidence": "confirmed",
+            "notes": "From: 'Authors will be notified ... no later than April 20, 2015'",
+            "sources": [
+              {
+                "url": "https://wikimania2015.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_open",
+            "date": "2015-01-19",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Call for proposals opens: January 19, 2015'",
+            "sources": [
+              {
+                "url": "https://wikimania2015.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2015-02-16",
+            "date_confidence": "confirmed",
+            "notes": "Manually corrected: parser grabbed notification date from 'now closed' line. Actual deadline from 'Deadline for applying: Monday 16 February 2015 23:59 UTC'",
+            "sources": [
+              {
+                "url": "https://wikimania2015.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2015-04-12",
+            "date_confidence": "confirmed",
+            "notes": "Confirmed: 'All applicants were notified of final decisions on April 12, 2015'",
+            "sources": [
+              {
+                "url": "https://wikimania2015.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_applications_open",
+            "date": "2015-01-19",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* <s>Scholarship applications open: '''Monday 19 January 2015'''</s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2015.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page says closed; no open date found.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No early bird information on registration page.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page says closed; no specific deadline date found.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2016",
+    "year": 2016,
+    "location": "Esino Lario, Italy",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2016",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2016-06-21",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'June 21–28, 2016'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2016&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2016-06-28",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'June 21–28, 2016'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2016&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No program submission deadline page found on wikimania2016.wikimedia.org",
+            "sources": []
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No program submission deadline page found on wikimania2016.wikimedia.org",
+            "sources": []
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No program submission deadline page found on wikimania2016.wikimedia.org",
+            "sources": []
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2015-12-05",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* [[File:Yes check.svg|15px|Check mark|alt=Green tick|link=]] Scholarship applications open: '''05 December 2015''''",
+            "sources": [
+              {
+                "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2016-01-09",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* [[File:Yes check.svg|15px|Check mark|alt=Green tick|link=]] Deadline for applying for scholarships: '''09 January 2016'",
+            "sources": [
+              {
+                "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2016-03-04",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '* [[File:Yes check.svg|15px|Check mark|alt=Green tick|link=]] Applicants are notified about final decisions:  by March 4'",
+            "sources": [
+              {
+                "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "No early bird pricing tier mentioned for Wikimania 2016.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2016-06-10",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from registration page: 'Simple tickets will be on sale until Sunday, 15 May 2016' (full+accommodation) and 'Simple tickets will be on sale until Friday, 10 June 2016' — using later date as overall deadline.",
+            "sources": [
+              {
+                "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2017",
+    "year": 2017,
+    "location": "Montréal, Canada",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2017",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2017-08-09",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 9–13, 2017'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2017&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2017-08-13",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 9–13, 2017'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2017&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2017-02-02",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* '''Call for proposals opens: February 2, 2017''' {{done}}'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2017-04-10",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* '''Deadline for submitting presentation (lecture, panel, roundtable and workshop) submissions: April 10, 2017''' {{don'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline_extended",
+            "date": "2017-06-10",
+            "date_confidence": "confirmed",
+            "notes": "Lightning talks, posters and birds-of-a-feather only (not main presentations). From: '* Deadline for submitting lightning talks, poster, and birds of a feather: June 10, 2017 (extended)'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": "2017-05-01",
+            "date_confidence": "confirmed",
+            "notes": "Original May 1 was extended. From: 'Notification of acceptance for presentations: <s>May 1, 2017</s>'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2017-01-06",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Scholarship applications open: 6 January 2017 {{done}}'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2017-02-20",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*Deadline for applying for scholarships: 20 February 2017  {{done}}'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2017-04-20",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '* Applicants are notified about final decisions: by '''early April 2017''' {{done}}.'",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2017-07-10",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '*Please note that early bird pricing ends on July 10' — year inferred from conference year",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2017-07-31",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: '*Please note that online registration ends July 31' — year inferred from conference year",
+            "sources": [
+              {
+                "url": "https://wikimania2017.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2018",
+    "year": 2018,
+    "location": "Cape Town, South Africa",
+    "conference_site_url": "https://wikimania2018.wikimedia.org/wiki/Wikimania",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2018",
+    "notes": "Pre-conference days: 18–19 July. Main program: 20–22 July. conference_start/end span the full event.",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2018-07-18",
+            "date_confidence": "confirmed",
+            "notes": "18 July = first pre-conference day; main program began 20 July",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Wikimania&prop=revisions&rvprop=content&format=json&formatversion=2",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2018-07-22",
+            "date_confidence": "confirmed",
+            "notes": "22 July = last day of main program",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Wikimania&prop=revisions&rvprop=content&format=json&formatversion=2",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_deadline",
+            "date": "2018-03-18",
+            "date_confidence": "confirmed",
+            "notes": "From: 'The Deadline for conference submissions is 23:59 UTC on Sunday March 18, 2018'",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2017-12-15",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Scholarship applications open: 15 December 2017 {{done}}'",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2018-01-22",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Deadline for applying for scholarships: 22 January 2018 23:59 UTC. {{done}}'",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2018-06-04",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*Please note that Early Bird Pricing ends on June 4, 2018.'",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2018-07-13",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Please note that online registration ends July 13 at midnight PST' — year confirmed from context (conference July 18-22, 2018)",
+            "sources": [
+              {
+                "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2019",
+    "year": 2019,
+    "location": "Stockholm, Sweden",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2019",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2019-08-14",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 14-18, 2019'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2019&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2019-08-18",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D–D YYYY': 'August 14-18, 2019'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2019&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2019-05-01",
+            "date_confidence": "approximate",
+            "notes": "No year on page; context year applied. From: '* Call for submissions opened 1 May'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3ASubmissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2019-06-01",
+            "date_confidence": "approximate",
+            "notes": "Original (strikethrough). From: 'Call for submissions closed <s>1 June</s> 9 June'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3ASubmissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline_extended",
+            "date": "2019-06-09",
+            "date_confidence": "approximate",
+            "notes": "Extended from June 1. From: 'Call for submissions closed <s>1 June</s> 9 June'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3ASubmissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2019-02-27",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Scholarship applications open: 27 February 2019'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2019-03-15",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '* Deadline for applying for scholarships: 15 March 2019 23:59 UTC.'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No specific date; page states 'Applicants are notified about final decisions: by April/May'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": "2019-05-31",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*Please note that Early Bird pricing ended on May 31, 2019.'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2019-07-31",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Please note that online registration ends on July 31, 2019 at midnight PST.'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2019%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2020",
+    "year": 2020,
+    "location": "N/A",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2020",
+    "notes": "Cancelled — not held",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "No wikitext retrieved",
+            "sources": []
+          },
+          {
+            "type": "conference_end",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "No wikitext retrieved",
+            "sources": []
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "program_speaker_confirmation",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "program_schedule_published",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          },
+          {
+            "type": "scholarship_acceptance_confirmation",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+            "sources": []
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19. No registration took place.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19. No registration took place.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2020 was cancelled due to COVID-19. No registration took place.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2021",
+    "year": 2021,
+    "location": "Virtual",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2021",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2021-08-13",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Dth to Dth of Month YYYY': '13th to 17th of August 2021'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2021&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2021-08-17",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Dth to Dth of Month YYYY': '13th to 17th of August 2021'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2021&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). No traditional program submission process found",
+            "sources": []
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). No traditional program submission process found",
+            "sources": []
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). No traditional program submission process found",
+            "sources": []
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+            "sources": []
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+            "sources": []
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+            "sources": []
+          },
+          {
+            "type": "scholarship_acceptance_confirmation",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+            "sources": []
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2021 was a free virtual event; registration opened at an unspecified date with no formal deadline.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "No early bird pricing — virtual event was free.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2021-08-17",
+            "date_confidence": "approximate",
+            "notes": "Virtual event registration open through end of conference (August 13-17, 2021). Approximate close = last day of conference.",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2021%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2022",
+    "year": 2022,
+    "location": "Virtual",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2022",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2022-08-11",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D through Month D': 'August 11 through Sunday, August 14'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2022&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2022-08-14",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D through Month D': 'August 11 through Sunday, August 14'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2022&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Festival edition with different program structure; no CfP deadline page found on wiki",
+            "sources": []
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Festival edition with different program structure; no CfP deadline page found on wiki",
+            "sources": []
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Festival edition with different program structure; no CfP deadline page found on wiki",
+            "sources": []
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2022-05-09",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Applications opens on May 9th 2022'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2022-06-03",
+            "date_confidence": "confirmed",
+            "notes": "Corrected: June 3 was the original closing date. From: 'The Individual Scholarship Submission Process ended on 03 June 2022'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline_extended",
+            "date": "2022-06-14",
+            "date_confidence": "confirmed",
+            "notes": "Extended by ~1 week from June 3. From: 'ended on 03 June 2022, was extended...and then officially closed on 14 June 2022'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "Wikimania 2022 was a free virtual (festival) event; no formal open date found.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "No early bird pricing — virtual event was free.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2022-08-14",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Registration for the virtual Wikimania will run through the end of Wikimania on August 14, 2022.'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2023",
+    "year": 2023,
+    "location": "Singapore",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2023",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2023-08-16",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D to D YYYY': 'August 16 to 19, 2023'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2023&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2023-08-19",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'Month D to D YYYY': 'August 16 to 19, 2023'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2023&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "From: 'Program proponents will receive decision on their program proposal in June 2023'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2023%3AProgram/Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_deadline",
+            "date": "2023-02-05",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: '*<translate><!--T:13--> {{done}} Deadline for applying for scholarships: Sunday, 5 February 2023 at {{<tvar name=\"1\">zon'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2023%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": "2023-04-21",
+            "date_confidence": "confirmed",
+            "notes": "First notifications sent April 21 on rolling basis. From: 'Offers are being sent on a rolling basis: April 21 – May'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2023%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but says 'concluded'; no open date found.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No early bird information found on registration page.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page says concluded; no specific deadline date found.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2024",
+    "year": 2024,
+    "location": "Katowice, Poland",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2024",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2024-08-07",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'D–D Month YYYY': '7–10 August 2024'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2024&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2024-08-10",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'D–D Month YYYY': '7–10 August 2024'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2024&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Program submission deadline not found on wiki; likely via external platform",
+            "sources": []
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Program submission deadline not found on wiki; likely via external platform",
+            "sources": []
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Program submission deadline not found on wiki; likely via external platform",
+            "sources": []
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2023-11-15",
+            "date_confidence": "confirmed",
+            "notes": "Manually corrected: parser grabbed close date from same line. Open date from 'Applications phase opens on November 15'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2024%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2023-12-18",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'Applications phase opens on November 15 and closes December 18 2023, [[w:Anywhere on Earth|Anywhere on Earth]]. This is '",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2024%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No exact date; page states 'Offers will start going out during the second half of February [2024]'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2024%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but contained no open date.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No early bird information found on registration page.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but contained no deadline date.",
+            "sources": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2025",
+    "year": 2025,
+    "location": "Nairobi, Kenya",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2025",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2025-08-06",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'D to D Month YYYY': '6 to 9 August 2025'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2025&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2025-08-09",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'D to D Month YYYY': '6 to 9 August 2025'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2025&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Program submission deadline not found on wiki; likely via external platform",
+            "sources": []
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Program submission deadline not found on wiki; likely via external platform",
+            "sources": []
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Program submission deadline not found on wiki; likely via external platform",
+            "sources": []
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2024-11-07",
+            "date_confidence": "confirmed",
+            "notes": "Manually corrected: parser grabbed close date from same line. Open date from 'applications phase opens on November 07'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2024-12-08",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'The applications phase opens on November 07 and closes on December 08 2024.'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_results_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "No exact date; page states 'Offers will start going out in early March [2025]'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration page found but no open date stated. In-person tickets sold out.",
+            "sources": []
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "not_applicable",
+            "notes": "No early bird pricing tier mentioned for Wikimania 2025.",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": "2025-08-09",
+            "date_confidence": "approximate",
+            "notes": "Virtual registration stayed open until Wikimania (August 5-9, 2025). Approximate close = last day of conference. In-person tickets sold out before this.",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "edition": "Wikimania 2026",
+    "year": 2026,
+    "location": "Paris, France",
+    "conference_site_url": null,
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2026",
+    "notes": "",
+    "buckets": {
+      "conference": {
+        "deadlines": [
+          {
+            "type": "conference_start",
+            "date": "2026-07-21",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'du D au D Month YYYY (French)': 'du 21 au 25 juillet 2026'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2026&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "conference_end",
+            "date": "2026-07-25",
+            "date_confidence": "confirmed",
+            "notes": "Pattern 'du D au D Month YYYY (French)': 'du 21 au 25 juillet 2026'",
+            "sources": [
+              {
+                "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2026&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "meta_wiki",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "program": {
+        "deadlines": [
+          {
+            "type": "program_submission_open",
+            "date": "2026-01-26",
+            "date_confidence": "confirmed",
+            "notes": "From: 'The call for submissions for the program ran from 26 January until 1 March 2026'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2026%3AProgram&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_submission_deadline",
+            "date": "2026-03-01",
+            "date_confidence": "confirmed",
+            "notes": "From: 'The call for submissions ran from 26 January until 1 March 2026'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2026%3AProgram&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "program_acceptance_notification",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Approximate: 'The results will be published early May'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2026%3AProgram&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "scholarship": {
+        "deadlines": [
+          {
+            "type": "scholarship_applications_open",
+            "date": "2025-09-10",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'The application phase opens on September 10, 2025 and closes on October 31st, 2025.'",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2026%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "scholarship_deadline",
+            "date": "2025-10-31",
+            "date_confidence": "confirmed",
+            "notes": "Parsed from: 'The application phase opens on September 10, 2025 and closes on October 31st, 2025.' — date corrected to closing date.",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2026%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration": {
+        "deadlines": [
+          {
+            "type": "registration_open",
+            "date": "2026-03-01",
+            "date_confidence": "approximate",
+            "notes": "Parsed from: 'This process will be open in March–April.' on 2026:Registration page. Approximate — exact date not yet set.",
+            "sources": [
+              {
+                "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2026%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+                "source_type": "conference_site",
+                "verified": false,
+                "verified_date": null,
+                "verified_text_found": null
+              }
+            ]
+          },
+          {
+            "type": "registration_earlybird_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration not yet open as of data collection date (March 2026).",
+            "sources": []
+          },
+          {
+            "type": "registration_deadline",
+            "date": null,
+            "date_confidence": "unknown",
+            "notes": "Registration not yet open as of data collection date (March 2026).",
+            "sources": []
+          }
+        ]
+      }
+    }
+  }
+]
