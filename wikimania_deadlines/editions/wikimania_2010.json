@@ -1,0 +1,235 @@
+{
+  "edition": "Wikimania 2010",
+  "year": 2010,
+  "location": "Gdańsk, Poland",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2010",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2010-07-09",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'July 9–11, 2010'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2010&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2010-07-09",
+              "verified_text_found": "Wikimania 2010—the 6th annual Wikimedia Conference—took place in Gdańsk, Poland from July 9–11, 2010."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2010-07-11",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'July 9–11, 2010'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2010&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2010-07-11",
+              "verified_text_found": "Wikimania 2010—the 6th annual Wikimedia Conference—took place in Gdańsk, Poland from July 9–11, 2010."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_deadline",
+          "date": "2010-03-31",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'Mar 31 2010'. Source: https://meta.wikimedia.org/wiki/Wikimania_2010. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/wiki/Wikimania_2010",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": "2010-05-24",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Wikimania 2010: Call for Participation Extended' — 'Abstract Registration: May 24, 11.59 p.m. (Pacific Time)'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-May/001804.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2010-05-29",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Wikimania 2010: Call for Participation Extended' — 'Notification for workshops: May 29, 11.59 p.m. (Pacific Time)'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-May/001804.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_open",
+          "date": "2010-04-29",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Wikimania 2010: Call for Participation is there!' — 'Wikimania 2010: Call for Participation is there!'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-April/001768.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2010-05-25",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'May 25 2010'. Source: https://meta.wikimedia.org/wiki/Wikimania_2010. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/wiki/Wikimania_2010",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_speaker_confirmation",
+          "date": "2010-06-18",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2010 Review Results' — 'You are required to provide a short summary of your presentation by *June 18*.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-June/001851.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_deadline",
+          "date": "2010-04-11",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: ''''Deadline for submission''': The deadline to apply for the Wikimania 2010 Scholarships Program was '''April 11, 2010'''",
+          "sources": [
+            {
+              "url": "https://wikimania2010.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2010-04-11",
+              "verified_text_found": "The deadline to apply for the Wikimania 2010 Scholarships Program was April 11, 2010 at 23:59:59 UTC."
+            }
+          ]
+        },
+        {
+          "type": "scholarship_applications_open",
+          "date": "2010-02-11",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Call for Volunteers, Wikimania 2010 scholarships' — 'Wikimania 2010 is going to require will be requiring a number of volunteers to handle scholarship applications.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-February/001703.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": "2010-06-05",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Notification hasn't come to me yet' — 'Email sent on this date (Date: header) announcing partial scholarship results.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-June/001836.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2010-06-15",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Registration' — 'The public announcement will come in the next day or two... The address is: https://wm10reg.wikimedia.org/'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-May/001809.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "Registration page found but contained no deadline dates.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": "2010-07-04",
+          "date_confidence": "approximate",
+          "notes": "From email: '[Wikimania-l] My Registration' — 'I am leaving for Gdansk on July 4'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2010-June/001988.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

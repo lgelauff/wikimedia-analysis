@@ -1,0 +1,219 @@
+{
+  "edition": "Wikimania 2006",
+  "year": 2006,
+  "location": "Boston, USA",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2006",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2006-08-04",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'August 4 - 6, 2006'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202006/en&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2006-08-04",
+              "verified_text_found": "Welcome to the organization pages for Wikimania 2006, the second international Wikimedia conference, to be held in Boston, Massachusetts from August 4 - 6, 2006."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2006-08-06",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'August 4 - 6, 2006'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202006/en&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2006-08-06",
+              "verified_text_found": "August 4 – August 6"
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_deadline",
+          "date": "2006-04-30",
+          "date_confidence": "confirmed",
+          "notes": "Extended deadline; original unknown. From: '* 15 April 2006 (Extended) : Proposal deadline' [corrected 2006-04-15→2006-04-30 via bisect rev 2006-04-28T06:26:56Z]",
+          "sources": [
+            {
+              "url": "https://wikimania2006.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2006-04-30",
+              "verified_text_found": "[rev 2006-04-28T06:26:56Z] 30 April 2006 (Extended) : Abstracts due for panels, papers, posters, discussion sessions, and presentations"
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2006-05-15",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'May 15 2006'. Source: https://wikimania2006.wikimedia.org/wiki/Call_for_participation. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://wikimania2006.wikimedia.org/wiki/Call_for_participation",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_open",
+          "date": "2006-02-03",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Call for Participation : Wikimania 2006, the annual Wikimedia Conf' — 'submissions are currently being accepted for the second annual Wikimedia Conference'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2006-February/000166.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No extension — same as original deadline.",
+          "sources": []
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2006-06-01",
+          "date_confidence": "approximate",
+          "notes": "From curated notes file: 'June 2006'. Source: https://wikimania2006.wikimedia.org/wiki/Call_for_participation. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://wikimania2006.wikimedia.org/wiki/Call_for_participation",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_deadline",
+          "date": "2006-06-28",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Website, schedules, and scholarships' — 'today is the last day to submit applications for them'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2006-June/000281.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": "2006-07-25",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2006 scholarships available; early registration notes' — 'Email date (Date: header) where the user asks about scholarship results.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2006-June/000272.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_applications_open",
+          "date": "2006-06-19",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2006 scholarships available; early registration notes' — 'Some scholarships (and visa support) will be available for community members hoping to attend Wikimania.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2006-June/000272.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline_extended",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No extension — same as original deadline.",
+          "sources": []
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2006-05-04",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Conference registration' — 'Registration is now open, and I'd like to get the \"in crowd\" processed'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2006-May/000224.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": "2006-07-09",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2006 scholarships available; early registration notes' — 'Early registration for the conference will be open through July 9'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2006-June/000272.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "Registration closed before conference (Aug 4-6, 2006) but no exact deadline stated on page.",
+          "sources": []
+        }
+      ]
+    }
+  }
+}

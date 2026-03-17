@@ -1,0 +1,228 @@
+{
+  "edition": "Wikimania 2018",
+  "year": 2018,
+  "location": "Cape Town, South Africa",
+  "conference_site_url": "https://wikimania2018.wikimedia.org/wiki/Wikimania",
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2018",
+  "notes": "Pre-conference days: 18–19 July. Main program: 20–22 July. conference_start/end span the full event.",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2018-07-18",
+          "date_confidence": "confirmed",
+          "notes": "18 July = first pre-conference day; main program began 20 July",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Wikimania&prop=revisions&rvprop=content&format=json&formatversion=2",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": "2018-07-20",
+              "verified_text_found": "[conf-date-discrepancy] the main program will be held from 20 July 2018 to 22 July 2018"
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2018-07-22",
+          "date_confidence": "confirmed",
+          "notes": "22 July = last day of main program",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Wikimania&prop=revisions&rvprop=content&format=json&formatversion=2",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2018-07-22",
+              "verified_text_found": "the main program will be held from 20 July 2018 to 22 July 2018"
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_deadline",
+          "date": "2018-03-18",
+          "date_confidence": "confirmed",
+          "notes": "From: 'The Deadline for conference submissions is 23:59 UTC on Sunday March 18, 2018'",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2018-03-18",
+              "verified_text_found": "The Deadline for conference submissions is 23:59 UTC on Sunday March 18, 2018"
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2018-05-01",
+          "date_confidence": "approximate",
+          "notes": "From email: 'Update on Wikimania '18' — 'Rejections and acceptance emails have gone out in the past week.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2018-May/008425.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2018-06-14",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] The program is now live' — 'we now have a program published for Wikimania Cape Town: https://wikimania2018.wikimedia.org/wiki/Program'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2018-June/008476.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_open",
+          "date": "2018-02-05",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2018 Call for Submissions' — 'We are pleased to announce that Wikimania 2018 is now accepting proposals'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2018-February/008408.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": "2017-12-15",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* Scholarship applications open: 15 December 2017 {{done}}'",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2017-12-15",
+              "verified_text_found": "Scholarship applications open: 15 December 2017  Done"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": "2018-01-22",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* Deadline for applying for scholarships: 22 January 2018 23:59 UTC. {{done}}'",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2018-01-22",
+              "verified_text_found": "Deadline for applying for scholarships: 22 January 2018 23:59 UTC."
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": "2018-05-15",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Update on Wikimania '18' — '135 people were offered and subsequently accepted a full or partial scholarship to attend.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2018-May/008425.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_acceptance_confirmation",
+          "date": "2018-05-15",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Update on Wikimania '18' — '135 people were offered and subsequently accepted a full or partial scholarship to attend.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2018-May/008425.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2018-05-15",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Update on Wikimania '18' — 'Registration and accommodation information is now up for everyone'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2018-May/008425.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": "2018-06-04",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '*Please note that Early Bird Pricing ends on June 4, 2018.'",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2018-06-04",
+              "verified_text_found": "*Please note that Early Bird Pricing ends on June 4, 2018."
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": "2018-07-13",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: 'Please note that online registration ends July 13 at midnight PST' — year confirmed from context (conference July 18-22, 2018)",
+          "sources": [
+            {
+              "url": "https://wikimania2018.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2018-07-13",
+              "verified_text_found": "Please note that online registration ends July 13 at midnight PST."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

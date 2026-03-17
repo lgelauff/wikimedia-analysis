@@ -1,0 +1,131 @@
+{
+  "edition": "Wikimania 2020",
+  "year": 2020,
+  "location": "N/A",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2020",
+  "notes": "Cancelled — not held",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No wikitext retrieved",
+          "sources": []
+        },
+        {
+          "type": "conference_end",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No wikitext retrieved",
+          "sources": []
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "program_speaker_confirmation",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "program_schedule_published",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        },
+        {
+          "type": "scholarship_acceptance_confirmation",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19.",
+          "sources": []
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19. No registration took place.",
+          "sources": []
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2020 was cancelled due to COVID-19. No registration took place.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "sources": [],
+          "notes": "Wikimania 2020 was cancelled (COVID-19)."
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "sources": [],
+          "notes": "Wikimania 2020 was cancelled (COVID-19)."
+        }
+      ]
+    }
+  }
+}

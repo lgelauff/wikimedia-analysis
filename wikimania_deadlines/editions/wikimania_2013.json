@@ -1,0 +1,258 @@
+{
+  "edition": "Wikimania 2013",
+  "year": 2013,
+  "location": "Hong Kong SAR, China",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2013",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2013-08-05",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'August 5–7, 2013'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2013&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": false,
+              "verified_date": "2013-08-07",
+              "verified_text_found": "[conf-date-discrepancy] held in Hong Kong from  August 7 to 11,  2013, with 700 attendees"
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2013-08-07",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'August 5–7, 2013'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2013&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": false,
+              "verified_date": "2013-08-11",
+              "verified_text_found": "[conf-date-discrepancy] held in Hong Kong from  August 7 to 11,  2013, with 700 attendees"
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": "2012-12-15",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: 'Call for participation open: '''15 December 2012'''</translate>'",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2012-12-15",
+              "verified_text_found": "Call for participation open: 15 December 2012"
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": "2013-04-30",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: 'Deadline for submitting proposals is: '''30 April 2013''', 23:59 UTC</translate></s>'",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2013-04-30",
+              "verified_text_found": "Deadline for submitting proposals is: 30 April 2013, 23:59 UTC"
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2013-05-17",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'May 17 2013'. Source: https://wikimania2013.wikimedia.org/wiki/Submissions. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/wiki/Submissions",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": "2013-05-15",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Not explicitly found in provided emails' — 'The new deadline for submitting a proposal is May 15, 2013.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2012-December/004414.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2013-06-03",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2013 schedule' — 'Wikimania 2013 schedule is posted at http://wikimania2011.wikimedia.org/wiki/Schedule'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2012-December/004414.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_deadline",
+          "date": "2013-02-22",
+          "date_confidence": "confirmed",
+          "notes": "Manually corrected: parser grabbed notification date from 'now closed' line. Actual deadline from 'Deadline for applying: 22 February 2013'",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2013-02-22",
+              "verified_text_found": "Deadline for applying for scholarships: 22 February 2013 23:59 UTC"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": "2013-04",
+          "date_confidence": "confirmed",
+          "notes": "Confirmed: 'All applicants were notified on 20 March' [corrected 2013-03-20→2013-04 via bisect rev 2013-02-27T18:20:00Z]",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2013-04",
+              "verified_text_found": "[rev 2013-02-27T18:20:00Z] Applicants are notified about final decisions: April 2013 or earlier"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_applications_open",
+          "date": "2013-01-22",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* <s>Scholarship applications open: '''22 January 2013'''</s>'",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2013-01-22",
+              "verified_text_found": "Scholarship applications open: 22 January 2013"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline_extended",
+          "date": "2013-02-28",
+          "date_confidence": "confirmed",
+          "notes": "From email: 'Not explicitly found in provided emails' — 'The extended deadline for scholarship applications is February 28, 2013.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2012-December/004414.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_acceptance_confirmation",
+          "date": "2013-06-10",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2013 Scholarship results' — 'Scholarship awardees must confirm their attendance by June 10, 2013.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2012-December/004413.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2013-02-22",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: ''''Early Registration starts:''' February 22, 2013' — first registration tier open",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2013-02-22",
+              "verified_text_found": "Early Registration starts: February 22 , 2013"
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": "2013-04-14",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] [Wikimania 2013] Too many people accessing the website at this tim' — 'The registration website crashed in time for the last day of \"Early Bird Registration\"'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2012-December/004413.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": "2013-07-31",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: ''''Online registration deadline:''' July 31, 2013 at 23:59 HKT'",
+          "sources": [
+            {
+              "url": "https://wikimania2013.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2013-07-31",
+              "verified_text_found": "Online registration deadline: July 31, 2013 at 23:59 HKT"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

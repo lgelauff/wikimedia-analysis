@@ -1,0 +1,273 @@
+{
+  "edition": "Wikimania 2014",
+  "year": 2014,
+  "location": "London, United Kingdom",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2014",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2014-08-06",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D to D YYYY': 'August 6 to 10, 2014'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2014&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2014-08-06",
+              "verified_text_found": "Wikimania 2014 was the 10th Wikimania conference, an annual event for the international Wikimedia community, and was held in London from August 6 to 10, 2014."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2014-08-10",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D to D YYYY': 'August 6 to 10, 2014'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2014&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2014-08-10",
+              "verified_text_found": "Wikimania 2014 was the 10th Wikimania conference, an annual event for the international Wikimedia community, and was held in London from August 6 to 10, 2014."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": "2014-01-01",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* Call for proposals opens: 1 January 2014'",
+          "sources": [
+            {
+              "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2014-01-01",
+              "verified_text_found": "Call for proposals opens: 1 January 2014"
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": "2014-03-31",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* Deadline for submitting proposals: 31 March 2014'",
+          "sources": [
+            {
+              "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2014-03-31",
+              "verified_text_found": "Deadline for submitting proposals: 31 March 2014"
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2014-06-01",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* Notification of acceptance: 1 June 2014 – the full [[programme]] has been announced'",
+          "sources": [
+            {
+              "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Submissions&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2014-06-01",
+              "verified_text_found": "Notification of acceptance: 1 June 2014 – the full programme has been announced"
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": "2014-05-06",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Deadline extension for Wikimania submissions' — 'The deadline for submitting proposals has been extended to May 6th, 2014.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2013-November.txt.gz",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_speaker_confirmation",
+          "date": "2014-06-04",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Acceptance of proposal for Wikimania' — 'Acceptees have 3 days to reply with confirmation, or they are considered withdrawn'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2014-May/005710.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2014-07-01",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimedia-l] [Wikimedia Announcements] [PRESS RELEASE] Wikipedia Summit “Wikima' — 'Wikimania 2014 will be held at the Barbican Centre in London from 8th to 10th August, with a two day pre-conference held August 6th and 7th.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2013-November.txt.gz",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": "2014-01-08",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* <s>Scholarship applications open: '''Wednesday 8 January 2014'''</s>'",
+          "sources": [
+            {
+              "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2014-01-08",
+              "verified_text_found": "Scholarship applications open: Wednesday 8 January 2014"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": "2014-02-17",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* <s>Deadline for applying for scholarships: '''Monday 17 February 2014 23:59 UTC'''</s>'",
+          "sources": [
+            {
+              "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2014-02-17",
+              "verified_text_found": "Deadline for applying for scholarships: Monday 17 February 2014 23:59 UTC"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": "2014-05-01",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* <s>Applicants are notified about [[#Selection process|phase one]] decisions: 11 March 2014</s>' [corrected 2014-03-11→2014-05-01 via bisect rev 2014-02-25T15:51:00Z]",
+          "sources": [
+            {
+              "url": "https://wikimania2014.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2014-05-01",
+              "verified_text_found": "[rev 2014-02-25T15:51:00Z] All applicants were notified of final decisions on 1 May 2014."
+            }
+          ]
+        },
+        {
+          "type": "scholarship_acceptance_confirmation",
+          "date": "2014-07-18",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] WMF Scholarship Recipients for Wikimania' — 'The WMF Scholarship recipients will be getting an email later today about their hotel arrangements'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2014-July/005894.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline_extended",
+          "date": "2014-02-24",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Extension of scholarship application deadline' — 'The deadline for scholarship applications has been extended to February 24, 2014.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2013-November.txt.gz",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2014-05-06",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] What's wrong with the registration?' — 'the link is back and registration is now open!'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2014-May/005688.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": "2014-07-01",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania Payment Processing/Early Bird extension.' — 'we have extended the Early-Bird price to July 1st'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2014-June/005790.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": "2014-06-10",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Thistle City Barbican fully booked?' — 'according to the website today should be the last day for registration'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2014-June/005788.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

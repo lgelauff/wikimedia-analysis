@@ -1,0 +1,142 @@
+{
+  "edition": "Wikimania 2005",
+  "year": 2005,
+  "location": "Frankfurt, Germany",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2005",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2005-08-05",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'D to D Month YYYY': '05 to 8 August 2005'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202005%20overview&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": false,
+              "verified_date": "2005-08-04",
+              "verified_text_found": "[conf-date-discrepancy] Wikimania 2005 - The First International Wikimedia Conference—a conference for all users of Wikimedia projects—was held in Frankfurt am Main, Germany from 4 August 2005 to 8 August 2005."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2005-08-08",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'D to D Month YYYY': '05 to 8 August 2005'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania%202005%20overview&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2005-08-08",
+              "verified_text_found": "was held in Frankfurt am Main, Germany from 4 August 2005 to 8 August 2005."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_deadline",
+          "date": "2005-05-25",
+          "date_confidence": "approximate",
+          "notes": "Main abstract deadline; original was May 10, extended to May 25. From: '* May 10 → May 25 - Abstract deadline for panels, papers, posters and presentations'",
+          "sources": [
+            {
+              "url": "https://wikimania2005.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2005-05-25",
+              "verified_text_found": "May 10 May 25  - Abstract deadline for panels, papers, posters and presentations"
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No extension — same as original deadline.",
+          "sources": []
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2005-05-10",
+          "date_confidence": "approximate",
+          "notes": "[rev 2005-03-23T05:17:46Z] Parsed from: '* May 10  - Abstract deadline for panels, papers, posters and presentations [Notification: by May 25]'",
+          "sources": [
+            {
+              "url": "https://wikimania2005.wikimedia.org/w/api.php?action=query&titles=Call_for_participation&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvlimit=1&rvdir=older&rvstart=2005-05-01T00%3A00%3A00Z&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No scholarship page found on wikimania2005.wikimedia.org or meta.wikimedia.org",
+          "sources": []
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No scholarship page found on wikimania2005.wikimedia.org or meta.wikimedia.org",
+          "sources": []
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No scholarship page found on wikimania2005.wikimedia.org or meta.wikimedia.org",
+          "sources": []
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No registration page found for Wikimania 2005.",
+          "sources": []
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No registration page found for Wikimania 2005.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No registration page found for Wikimania 2005.",
+          "sources": []
+        }
+      ]
+    }
+  }
+}

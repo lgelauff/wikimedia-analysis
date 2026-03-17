@@ -1,0 +1,220 @@
+{
+  "edition": "Wikimania 2022",
+  "year": 2022,
+  "location": "Virtual",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2022",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2022-08-11",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D through Month D': 'August 11 through Sunday, August 14'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2022&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2022-08-11",
+              "verified_text_found": "Wikimania 2022 took take place from Thursday, August 11 through Sunday, August 14."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2022-08-14",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D through Month D': 'August 11 through Sunday, August 14'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2022&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2022-08-14",
+              "verified_text_found": "Wikimania 2022 took take place from Thursday, August 11 through Sunday, August 14."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": "2022-05-09",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'May 9 2022'. Source: https://diff.wikimedia.org/2022/05/09/wikimania-2022. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2022/05/09/wikimania-2022",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": "2022-06-03",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'June 3 2022'. Source: https://diff.wikimedia.org/2022/05/09/wikimania-2022. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2022/05/09/wikimania-2022",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2022-07-01",
+          "date_confidence": "approximate",
+          "notes": "From curated notes file: 'July 2022'. Source: https://diff.wikimedia.org/2022/05/09/wikimania-2022. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2022/05/09/wikimania-2022",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": "2022-06-14",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'June 14 2022'. Source: https://diff.wikimedia.org/2022/05/09/wikimania-2022. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2022/05/09/wikimania-2022",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2022-07-01",
+          "date_confidence": "approximate",
+          "notes": "From curated notes file: 'July 2022'. Source: https://diff.wikimedia.org/2022/05/09/wikimania-2022. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2022/05/09/wikimania-2022",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": "2022-05-09",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: 'Applications opens on May 9th 2022'",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2022-05-09",
+              "verified_text_found": "Applications opens on May 9th 2022"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": "2022-06-03",
+          "date_confidence": "confirmed",
+          "notes": "Corrected: June 3 was the original closing date. From: 'The Individual Scholarship Submission Process ended on 03 June 2022'",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2022-06-03",
+              "verified_text_found": "The deadline to apply was June 3rd."
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline_extended",
+          "date": "2022-06-14",
+          "date_confidence": "confirmed",
+          "notes": "Extended by ~1 week from June 3. From: 'ended on 03 June 2022, was extended...and then officially closed on 14 June 2022'",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2022%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2022-06-14",
+              "verified_text_found": "The Individual Scholarship Submission Process ended on 03 June 2022, was extended for a period of approximately one week and then officially closed on 14 June 2022."
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2022-07-25",
+          "date_confidence": "confirmed",
+          "notes": "Registration opened July 25, 2022.",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/wiki/2022:Registration",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No early bird pricing — virtual event was free.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": "2022-08-14",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: 'Registration for the virtual Wikimania will run through the end of Wikimania on August 14, 2022.'",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/wiki/2022:Registration",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2022-08-14",
+              "verified_text_found": "Registration for the virtual Wikimania will run through the end of Wikimania on August 14, 2022."
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Virtual-only event; no in-person registration deadline.",
+          "sources": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "edition": "Wikimania 2025",
+  "year": 2025,
+  "location": "Nairobi, Kenya",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2025",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2025-08-06",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'D to D Month YYYY': '6 to 9 August 2025'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2025&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2025-08-06",
+              "verified_text_found": "was both an in-person and virtual event on 6 to 9 August 2025, celebrated Wikimania's 20th anniversary."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2025-08-09",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'D to D Month YYYY': '6 to 9 August 2025'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2025&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2025-08-09",
+              "verified_text_found": "happened in the city of Nairobi, Kenya with online/ virtual conference setup on 6th to 9th August 2025"
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": "2025-03-03",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'Mar 3 2025'. Source: https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": "2025-03-31",
+          "date_confidence": "confirmed",
+          "notes": "From curated notes file: 'Mar 31 2025'. Source: https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2025-06-01",
+          "date_confidence": "approximate",
+          "notes": "From curated notes file: 'June 2025'. Source: https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2025-06-01",
+          "date_confidence": "approximate",
+          "notes": "From curated notes file: 'June 2025'. Source: https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/. Pending quality check.",
+          "sources": [
+            {
+              "url": "https://diff.wikimedia.org/2025/03/03/apply-now-to-speak-at-wikimania-2025/",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": "2024-11-07",
+          "date_confidence": "confirmed",
+          "notes": "From wiki: 'applications phase opens on November 07'. December 8 is the close date, not the open date.",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": "2024-12-08",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: 'The applications phase opens on November 07 and closes on December 08 2024.'",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2024-12-08",
+              "verified_text_found": "The form to apply for a Wikimania Travel Scholarship for Wikimania 2025 was open through December 8, 2024."
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "No exact date; page states 'Offers will start going out in early March [2025]'",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3AScholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "Registration page found but no open date stated. In-person tickets sold out.",
+          "sources": []
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No early bird pricing tier mentioned for Wikimania 2025.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": "2025-08-09",
+          "date_confidence": "approximate",
+          "notes": "Virtual registration stayed open until Wikimania (August 5-9, 2025). Approximate close = last day of conference. In-person tickets sold out before this.",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/w/api.php?action=query&titles=2025%3ARegistration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "In-person registration deadline not yet confirmed.",
+          "sources": []
+        }
+      ]
+    }
+  }
+}

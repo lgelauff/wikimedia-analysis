@@ -1,0 +1,212 @@
+{
+  "edition": "Wikimania 2009",
+  "year": 2009,
+  "location": "Buenos Aires, Argentina",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2009",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2009-08-26",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'August 26-28, 2009'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania/2009&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2009-08-26",
+              "verified_text_found": "Wikimania 2009 was held in Buenos Aires, Argentina, August 26-28, 2009."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2009-08-28",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'August 26-28, 2009'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania/2009&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2009-08-28",
+              "verified_text_found": "Wikimania 2009 was held in Buenos Aires, Argentina, August 26-28, 2009."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": "2009-02-22",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2009: Call for Participation' — 'Please circulate this call among Wikimedia communities... This call is also online at http://wikimania2009.wikimedia.org/wiki/Call_for_Participation'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-February/001343.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": "2009-04-30",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Call for Participation extension: April 30' — 'The Call for Participation for Wikimania 2009 has been extended: the new date is April 30, 2009.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-April/001358.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No extension — same as original deadline.",
+          "sources": []
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2009-05-15",
+          "date_confidence": "approximate",
+          "notes": "From: 'Notification of acceptance ... May 31' (posters/discussions track) [corrected 2009-05-31→2009-05-15 via bisect rev 2009-02-25T03:27:36Z]",
+          "sources": [
+            {
+              "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Call_for_Participation&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2009-05-15",
+              "verified_text_found": "[rev 2009-02-25T03:27:36Z] Notification of acceptance of workshops, panels, presentations: May 15"
+            }
+          ]
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2009-07-12",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Buenos Aires - program? registration?' — 'A preliminary version, subject to a lot of changes, is now published on the web site'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-July/001420.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": "2009-04-08",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2009 Scholarships' — 'Wikimania 2009 is now accepting applications for scholarships to the conference.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-April/001354.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": "2009-04-30",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Call for Participation extension: April 30' — 'Also, remember that scholarship applications are also open until April 30!'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-April/001358.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "Scholarship page on wikimania2009.wikimedia.org is a post-event archive with no dates",
+          "sources": []
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2009-07-08",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Buenos Aires - program? registration?' — 'I received word through Facebook that registration is now open for Wikimania.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-July/001420.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": "2009-07-30",
+          "date_confidence": "approximate",
+          "notes": "Inferred from fee structure: 'Until 30 July 2009: USD 45; After 30 July 2009: USD 60' — effective early bird deadline",
+          "sources": [
+            {
+              "url": "https://wikimania2009.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2009-07-30",
+              "verified_text_found": "Until 30 July 2009: USD 45"
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": "2009-07-30",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Buenos Aires - program? registration?' — 'She doesn't want to miss the July 30th deadline!'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2009-July/001420.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

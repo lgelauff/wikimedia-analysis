@@ -1,0 +1,219 @@
+{
+  "edition": "Wikimania 2016",
+  "year": 2016,
+  "location": "Esino Lario, Italy",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2016",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2016-06-21",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'June 21–28, 2016'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2016&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2016-06-21",
+              "verified_text_found": "Wikimania 2016 was the 12th Wikimania conference, an annual event for the international Wikimedia community, and was held in Esino Lario, June 21–28, 2016."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2016-06-28",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Month D–D YYYY': 'June 21–28, 2016'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2016&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2016-06-28",
+              "verified_text_found": "Wikimania 2016 was the 12th Wikimania conference, an annual event for the international Wikimedia community, and was held in Esino Lario, June 21–28, 2016."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": "2015-12-11",
+          "date_confidence": "confirmed",
+          "notes": "Critical Issues track CfP opened December 11, 2015. From wiki: 'Call for proposals opens: 11th December 2015'",
+          "sources": [
+            {
+              "url": "https://wikimania2016.wikimedia.org/wiki/Critical_issues_presentations",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2015-12-11",
+              "verified_text_found": "Call for proposals opens: 11th December 2015"
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": "2016-01-17",
+          "date_confidence": "confirmed",
+          "notes": "Critical Issues track deadline. From wiki: 'Deadline for submitting proposals: 17th January 2016'. Extended from an earlier date per mailing list.",
+          "sources": [
+            {
+              "url": "https://wikimania2016.wikimedia.org/wiki/Critical_issues_presentations",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2016-01-17",
+              "verified_text_found": "Deadline for submitting proposals: 17th January 2016"
+            }
+          ]
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": "2016-02-01",
+          "date_confidence": "confirmed",
+          "notes": "Critical Issues track notification. From wiki: 'Notification of acceptance: 1st February 2016 (delay 2nd February 2016)'",
+          "sources": [
+            {
+              "url": "https://wikimania2016.wikimedia.org/wiki/Critical_issues_presentations",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2016-02-01",
+              "verified_text_found": "Notification of acceptance: 1st February 2016 (delay 2nd February 2016)"
+            }
+          ]
+        },
+        {
+          "type": "program_submission_deadline_extended",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No extension of the main Critical Issues deadline found. Posters/Discussions closed March 20; Training sessions closed March 30 — these are secondary tracks.",
+          "sources": []
+        },
+        {
+          "type": "program_schedule_published",
+          "date": null,
+          "date_confidence": "unknown",
+          "notes": "Full schedule publication date not found. February 14 email announced accepted Critical Issues submissions only, not full schedule.",
+          "sources": []
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": "2015-12-05",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* [[File:Yes check.svg|15px|Check mark|alt=Green tick|link=]] Scholarship applications open: '''05 December 2015''''",
+          "sources": [
+            {
+              "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2015-12-05",
+              "verified_text_found": " Scholarship applications open: 05 December 2015"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": "2016-01-09",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from: '* [[File:Yes check.svg|15px|Check mark|alt=Green tick|link=]] Deadline for applying for scholarships: '''09 January 2016'",
+          "sources": [
+            {
+              "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Scholarships&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2016-01-09",
+              "verified_text_found": " Deadline for applying for scholarships: 09 January 2016 23:59 UTC"
+            }
+          ]
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": "2016-03-03",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania '16 Scholarships' — 'All the notices to people who applied for either a full or partial scholarship to attend Wikimania '16 have been sent.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2015-November/007096.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "scholarship_acceptance_confirmation",
+          "date": "2016-03-18",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] WMF Scholarship registration information for Wikimania '16' — 'I have followed up with everyone who accepted the WMF Full and Partial Scholarships offer.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2016-March/007285.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2016-03-14",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Bus from Airport to the Venue' — 'I recently noticed that registration has already been open, as well as the buses from airports to Esino Lario.'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2016-March/007257.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No early bird pricing tier mentioned for Wikimania 2016.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "In-person only event; no online registration deadline.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": "2016-05-15",
+          "date_confidence": "confirmed",
+          "notes": "Parsed from registration page: 'Simple tickets will be on sale until Sunday, 15 May 2016' (full+accommodation) and 'Simple tickets will be on sale until Friday, 10 June 2016' — using later date as overall deadline. [corrected 2016-06-10→2016-05-15 via bisect rev 2016-04-08T04:22:59Z]",
+          "sources": [
+            {
+              "url": "https://wikimania2016.wikimedia.org/w/api.php?action=query&titles=Registration&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2016-05-15",
+              "verified_text_found": "[rev 2016-04-08T04:22:59Z] Registration for full tickets will close once all tickets have been sold or at the latest on Sunday, 15 May 2016."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

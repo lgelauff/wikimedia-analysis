@@ -1,0 +1,164 @@
+{
+  "edition": "Wikimania 2021",
+  "year": 2021,
+  "location": "Virtual",
+  "conference_site_url": null,
+  "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2021",
+  "notes": "",
+  "buckets": {
+    "conference": {
+      "deadlines": [
+        {
+          "type": "conference_start",
+          "date": "2021-08-13",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Dth to Dth of Month YYYY': '13th to 17th of August 2021'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2021&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2021-08-13",
+              "verified_text_found": "The conference was from the 13th to 17th of August 2021, following the precedent set by past Wikimanias."
+            }
+          ]
+        },
+        {
+          "type": "conference_end",
+          "date": "2021-08-17",
+          "date_confidence": "confirmed",
+          "notes": "Pattern 'Dth to Dth of Month YYYY': '13th to 17th of August 2021'",
+          "sources": [
+            {
+              "url": "https://meta.wikimedia.org/w/api.php?action=query&titles=Wikimania_2021&prop=revisions&rvprop=content&format=json&formatversion=2&redirects=1",
+              "source_type": "meta_wiki",
+              "verified": true,
+              "verified_date": "2021-08-17",
+              "verified_text_found": "The conference was from the 13th to 17th of August 2021, following the precedent set by past Wikimanias."
+            }
+          ]
+        }
+      ]
+    },
+    "program": {
+      "deadlines": [
+        {
+          "type": "program_submission_open",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). No traditional program submission process found",
+          "sources": []
+        },
+        {
+          "type": "program_submission_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). No traditional program submission process found",
+          "sources": []
+        },
+        {
+          "type": "program_acceptance_notification",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). No traditional program submission process found",
+          "sources": []
+        },
+        {
+          "type": "program_schedule_published",
+          "date": "2021-08-13",
+          "date_confidence": "confirmed",
+          "notes": "From email: '[Wikimania-l] Wikimania 2021 Updates: Save the date and Core Organizing Team' — 'Wikimania will be hosted virtually from August 13-17th, 2021'",
+          "sources": [
+            {
+              "url": "https://lists.wikimedia.org/pipermail/wikimania-l/2021-April/008933.html",
+              "source_type": "mailing_list",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        }
+      ]
+    },
+    "scholarship": {
+      "deadlines": [
+        {
+          "type": "scholarship_applications_open",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+          "sources": []
+        },
+        {
+          "type": "scholarship_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+          "sources": []
+        },
+        {
+          "type": "scholarship_results_notification",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+          "sources": []
+        },
+        {
+          "type": "scholarship_acceptance_confirmation",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Wikimania 2021 was virtual (COVID). Individual travel scholarships were not offered; only affiliate stipends.",
+          "sources": []
+        }
+      ]
+    },
+    "registration": {
+      "deadlines": [
+        {
+          "type": "registration_open",
+          "date": "2021-07-09",
+          "date_confidence": "confirmed",
+          "notes": "Registration via Eventbrite opened July 9, 2021.",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/wiki/2021:Registration",
+              "source_type": "conference_site",
+              "verified": false,
+              "verified_date": null,
+              "verified_text_found": null
+            }
+          ]
+        },
+        {
+          "type": "registration_earlybird_deadline",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "No early bird pricing — virtual event was free.",
+          "sources": []
+        },
+        {
+          "type": "registration_deadline_online",
+          "date": "2021-08-12",
+          "date_confidence": "confirmed",
+          "notes": "Registration closed August 12, 2021, the day before the conference started.",
+          "sources": [
+            {
+              "url": "https://wikimania.wikimedia.org/wiki/2021:Registration",
+              "source_type": "conference_site",
+              "verified": true,
+              "verified_date": "2021-08-12",
+              "verified_text_found": "Wikimania goes live on August 13 and ends on August 17, 2021. Registration for Wikimania 2021 is now closed."
+            }
+          ]
+        },
+        {
+          "type": "registration_deadline_inperson",
+          "date": null,
+          "date_confidence": "not_applicable",
+          "notes": "Virtual-only event; no in-person registration deadline.",
+          "sources": []
+        }
+      ]
+    }
+  }
+}
