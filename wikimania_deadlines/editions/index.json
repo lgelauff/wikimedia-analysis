@@ -1,0 +1,222 @@
+[
+  {
+    "year": 2005,
+    "edition": "Wikimania 2005",
+    "location": "Frankfurt, Germany",
+    "conference_start": "2005-08-05",
+    "conference_end": "2005-08-08",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2005"
+  },
+  {
+    "year": 2006,
+    "edition": "Wikimania 2006",
+    "location": "Boston, USA",
+    "conference_start": "2006-08-04",
+    "conference_end": "2006-08-06",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2006"
+  },
+  {
+    "year": 2007,
+    "edition": "Wikimania 2007",
+    "location": "Taipei, Taiwan",
+    "conference_start": "2007-08-03",
+    "conference_end": "2007-08-05",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2007"
+  },
+  {
+    "year": 2008,
+    "edition": "Wikimania 2008",
+    "location": "Alexandria, Egypt",
+    "conference_start": "2008-07-17",
+    "conference_end": "2008-07-19",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2008"
+  },
+  {
+    "year": 2009,
+    "edition": "Wikimania 2009",
+    "location": "Buenos Aires, Argentina",
+    "conference_start": "2009-08-26",
+    "conference_end": "2009-08-28",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2009"
+  },
+  {
+    "year": 2010,
+    "edition": "Wikimania 2010",
+    "location": "Gdańsk, Poland",
+    "conference_start": "2010-07-09",
+    "conference_end": "2010-07-11",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2010"
+  },
+  {
+    "year": 2011,
+    "edition": "Wikimania 2011",
+    "location": "Haifa, Israel",
+    "conference_start": "2011-08-04",
+    "conference_end": "2011-08-07",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2011"
+  },
+  {
+    "year": 2012,
+    "edition": "Wikimania 2012",
+    "location": "Washington DC, USA",
+    "conference_start": "2012-07-12",
+    "conference_end": "2012-07-15",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2012"
+  },
+  {
+    "year": 2013,
+    "edition": "Wikimania 2013",
+    "location": "Hong Kong SAR, China",
+    "conference_start": "2013-08-05",
+    "conference_end": "2013-08-07",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2013"
+  },
+  {
+    "year": 2014,
+    "edition": "Wikimania 2014",
+    "location": "London, United Kingdom",
+    "conference_start": "2014-08-06",
+    "conference_end": "2014-08-10",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2014"
+  },
+  {
+    "year": 2015,
+    "edition": "Wikimania 2015",
+    "location": "Mexico City, Mexico",
+    "conference_start": "2015-07-15",
+    "conference_end": "2015-07-19",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2015"
+  },
+  {
+    "year": 2016,
+    "edition": "Wikimania 2016",
+    "location": "Esino Lario, Italy",
+    "conference_start": "2016-06-21",
+    "conference_end": "2016-06-28",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2016"
+  },
+  {
+    "year": 2017,
+    "edition": "Wikimania 2017",
+    "location": "Montréal, Canada",
+    "conference_start": "2017-08-09",
+    "conference_end": "2017-08-13",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2017"
+  },
+  {
+    "year": 2018,
+    "edition": "Wikimania 2018",
+    "location": "Cape Town, South Africa",
+    "conference_start": "2018-07-18",
+    "conference_end": "2018-07-22",
+    "date_confidence": "confirmed",
+    "notes": "Pre-conference 18–19 July; main program 20–22 July",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2018"
+  },
+  {
+    "year": 2019,
+    "edition": "Wikimania 2019",
+    "location": "Stockholm, Sweden",
+    "conference_start": "2019-08-14",
+    "conference_end": "2019-08-18",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2019"
+  },
+  {
+    "year": 2020,
+    "edition": "Wikimania 2020",
+    "location": "N/A",
+    "conference_start": null,
+    "conference_end": null,
+    "date_confidence": "not_applicable",
+    "notes": "Cancelled — not held",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2020"
+  },
+  {
+    "year": 2021,
+    "edition": "Wikimania 2021",
+    "location": "Virtual",
+    "conference_start": "2021-08-13",
+    "conference_end": "2021-08-17",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2021"
+  },
+  {
+    "year": 2022,
+    "edition": "Wikimania 2022",
+    "location": "Virtual",
+    "conference_start": "2022-08-11",
+    "conference_end": "2022-08-14",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2022"
+  },
+  {
+    "year": 2023,
+    "edition": "Wikimania 2023",
+    "location": "Singapore",
+    "conference_start": "2023-08-16",
+    "conference_end": "2023-08-19",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2023"
+  },
+  {
+    "year": 2024,
+    "edition": "Wikimania 2024",
+    "location": "Katowice, Poland",
+    "conference_start": "2024-08-07",
+    "conference_end": "2024-08-10",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2024"
+  },
+  {
+    "year": 2025,
+    "edition": "Wikimania 2025",
+    "location": "Nairobi, Kenya",
+    "conference_start": "2025-08-06",
+    "conference_end": "2025-08-09",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2025"
+  },
+  {
+    "year": 2026,
+    "edition": "Wikimania 2026",
+    "location": "Paris, France",
+    "conference_start": "2026-07-21",
+    "conference_end": "2026-07-25",
+    "date_confidence": "confirmed",
+    "notes": "",
+    "meta_wiki_url": "https://meta.wikimedia.org/wiki/Wikimania_2026"
+  }
+]
