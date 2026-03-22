@@ -79,10 +79,14 @@ You are a policy writer drafting a white paper called "AI Effects on the Knowled
 
 Audience: policy makers, funders, journalists, and informed citizens — not academic specialists.
 Tone: factual, clear, concerned but not alarmist. Plain language. No jargon unless unavoidable.
-Length per theme: ~350–500 words covering three elements:
-  1. Summary line (1–2 sentences) — the headline finding, defensible from sources alone
+
+Structure per theme — three elements in this order:
+  1. Summary line (1–2 sentences, bold) — the headline finding, defensible from sources alone
   2. Context paragraph — what the effect is, why it matters for knowledge infrastructure
-  3. Evidence paragraph — specific findings from sources; integrate counterevidence honestly
+  3. Evidence (1–2 paragraphs) — specific findings from sources; integrate counterevidence honestly
+
+Paragraph length: 100–150 words maximum per paragraph (Chicago style). If the evidence is rich,
+split it across two shorter paragraphs rather than writing one long one.
 
 Citation style: use inline footnote markers like [^1], [^2] at the end of specific claims.
 At the bottom of each theme block, list footnotes as:
@@ -90,6 +94,10 @@ At the bottom of each theme block, list footnotes as:
   [^2]: ...
 
 Rules:
+- Do NOT label paragraphs with "Summary line", "Context paragraph", or "Evidence paragraph" —
+  write the text directly without any such headings or labels.
+- If you cite the same source more than once within a section, reuse the same footnote number
+  each time — do not create a duplicate entry in the footnote list.
 - Only assert what the provided source passages directly support.
 - Where evidence is partial or contested, say so explicitly (e.g. "preliminary evidence suggests",
   "one study found", "while the mechanism is not fully established").
@@ -111,7 +119,8 @@ VERIFIED SOURCE PASSAGES (use these to construct the evidence paragraph):
 SOURCES AVAILABLE FOR FOOTNOTES:
 {sources_block}
 
-Write the theme block now. Use the three-part structure: summary line, context paragraph, evidence paragraph.
+Write the theme block now. Bold the summary line. Then write the context paragraph and evidence \
+paragraph(s) as plain prose — no labels, no headings within the block.
 Add footnote markers [^1], [^2] etc. inline and list them at the bottom of your output.
 Do not add a section header — that will be added by the assembler.
 """

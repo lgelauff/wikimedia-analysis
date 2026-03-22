@@ -202,7 +202,37 @@ def run(input_path: Path, dry_run: bool) -> None:
             replacements += 1
             return f"{m.group(1)} {citation}"
 
-        return footnote_def.sub(replace_footnote, section_text)
+        result = footnote_def.sub(replace_footnote, section_text)
+
+        # Deduplicate: if the same citekey appears under multiple footnote numbers,
+        # collapse all references to the first number and drop the later definitions.
+        key_to_first_num: dict[str, int] = {}
+        for n, k in num_to_key.items():
+            if k not in key_to_first_num:
+                key_to_first_num[k] = n
+
+        # Build a reverse map: later_num → first_num for duplicated keys
+        remap: dict[int, int] = {}
+        for n, k in num_to_key.items():
+            first = key_to_first_num[k]
+            if first != n:
+                remap[n] = first
+
+        if remap:
+            # Replace inline markers pointing to later numbers
+            for later, first in sorted(remap.items(), reverse=True):
+                result = re.sub(rf"\[\^{later}\](?!:)", f"[^{first}]", result)
+            # Remove duplicate footnote definitions (keep only first occurrence)
+            seen_def: set[int] = set()
+            def dedup_def(m: re.Match) -> str:
+                n = int(m.group(1))
+                if n in seen_def:
+                    return ""  # drop duplicate
+                seen_def.add(n)
+                return m.group(0)
+            result = re.sub(r"^\[\^(\d+)\]:[^\n]*\n?", dedup_def, result, flags=re.MULTILINE)
+
+        return result
 
     # Process section by section (split on <!-- theme: markers)
     chunks = re.split(r"(?=<!-- theme:)", text)
