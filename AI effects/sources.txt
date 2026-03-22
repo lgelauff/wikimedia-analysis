@@ -1,0 +1,2663 @@
+# Sources — AI Effects on the Knowledge Ecosystem
+# All sources seriously considered or used, including those not yet verified or cited.
+# Status: candidate | accepted | excluded
+# PDF: yes / no / partial
+# Access: open | paywall-user (user has institutional access) | paywall-unknown | restricted
+# -------------------------------------------------------------------------------------
+
+---
+citekey:    khosravi2026impact
+authors:    Mehrzad Khosravi, Hema Yoganarasimhan (University of Washington)
+year:       2026
+title:      Impact of AI Search Summaries on Website Traffic: Evidence from Google AI Overviews and Wikipedia
+type:       Academic preprint (not yet peer-reviewed)
+url:        https://arxiv.org/abs/2602.18455
+doi:        —
+themes:     1 (information-seeking), 2 (platform traffic), 7 (attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv preprint (open access)
+summary:    Difference-in-differences study using geographic rollout of Google AI Overviews as
+            a natural experiment. Finds ~15% reduction in daily Wikipedia traffic in markets
+            where AIO was active vs. control language editions. Strongest causal design in the
+            literature for the traffic decline claim. Substitution (not complement) effect confirmed.
+notes:      Preprint — flag in document. Best available causal estimate for Wikipedia traffic loss.
+
+---
+citekey:    delriochanona2024large
+authors:    R. Maria del Rio-Chanona, Nadzeya Laurentsyeva, Johannes Wachs (Oxford / Vienna)
+year:       2024
+title:      Large Language Models Reduce Public Knowledge Sharing on Online Q&A Platforms
+type:       Academic paper (peer-reviewed, PNAS Nexus)
+url:        https://academic.oup.com/pnasnexus/article/3/9/pgae400/7754871
+doi:        10.1093/pnasnexus/pgae400
+themes:     2 (platform traffic), 3 (contributor pipeline), 1 (information-seeking)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Open Access (Oxford Academic)
+summary:    Peer-reviewed. DiD study comparing Stack Overflow activity against control platforms
+            (Russian/Chinese equivalents, maths forums) where ChatGPT access was restricted.
+            Finds 25% decline in Stack Overflow weekly posts within 6 months of ChatGPT launch.
+            All experience levels affected. Identifies structural feedback risk: reduced public
+            data production threatens future LLM training pipelines.
+notes:      Strongest empirical paper for Stack Overflow decline. Peer-reviewed; use as primary source.
+
+---
+citekey:    aral2026rise
+authors:    Sinan Aral, Haiwen Li, Rui Zuo (MIT Sloan / MIT Initiative on the Digital Economy)
+year:       2026
+title:      The Rise of AI Search: Implications for Information Markets and Human Judgement at Scale
+type:       Academic preprint (under review)
+url:        https://arxiv.org/abs/2602.13415
+doi:        —
+themes:     1 (information-seeking), 2 (platform traffic/web economics), 7 (attribution), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv preprint (open access)
+summary:    24,000 search queries across 243 countries, 2.8M AI and traditional search results.
+            AI search surfaces fewer long-tail sources, more low-credibility and politically
+            skewed sources. Accelerates decisions while collapsing scrutiny. Re-centralises
+            the web toward single AI synthesisers. Models systematic human judgement error at scale.
+notes:      Preprint. Exceptional scale and global scope. Covers web economics and information
+            literacy simultaneously. Flag preprint status in document.
+
+---
+citekey:    pew2025click
+authors:    Colleen McClain et al. (Pew Research Center)
+year:       2025
+title:      Do People Click on Links in Google AI Summaries?
+type:       Institutional survey (Pew Research Center)
+url:        https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/
+doi:        —
+themes:     1 (information-seeking), 2 (platform traffic), 7 (attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Pew Research Center (free to cite)
+summary:    ~900 U.S. adults, March 2025. Behavioural data (actual clicks tracked, not self-reported).
+            Click-through on traditional results drops from 15% to 8% when AI summary is present.
+            Only 1% of visits result in a click on sources cited within AI summaries.
+            26% session abandonment after AI summary vs. 16% without.
+notes:      Behavioural (not attitudinal) data — higher reliability than typical surveys.
+            U.S.-only; does not cover non-Google engines.
+
+---
+citekey:    wikimedia2025newuser
+authors:    Marshall Miller (Wikimedia Foundation)
+year:       2025
+title:      New User Trends on Wikipedia
+type:       Institutional report
+url:        https://wikimediafoundation.org/news/2025/10/17/new-user-trends-on-wikipedia/
+doi:        —
+themes:     1 (information-seeking), 2 (platform traffic), 3 (contributor pipeline), 4 (financial sustainability)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Wikimedia Foundation (CC-BY)
+summary:    After revising bot-detection, WMF confirmed ~8% YoY decline in human Wikipedia pageviews.
+            Attributes decline to generative AI and social media displacing direct site visits.
+            Links traffic decline to reduced editor recruitment (readers → editors pipeline) and
+            lower individual donations. Announces AI attribution framework and scraper policy.
+notes:      Primary institutional source from WMF. Fundraising interest in highlighting threats
+            is a mild bias; data is internally collected and cross-validated.
+
+---
+citekey:    wikimedia2025crawlers
+authors:    Wikimedia Foundation (Site Reliability Engineering)
+year:       2025
+title:      How Crawlers Impact the Operations of the Wikimedia Projects
+type:       Technical/institutional report
+url:        https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/
+doi:        —
+themes:     5 (scraping harm), 4 (financial sustainability), 6 (defensive responses)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Wikimedia Foundation (CC-BY)
+summary:    Since Jan 2024, Wikimedia Commons multimedia bandwidth up 50% driven by AI training bots.
+            65% of resource-consuming datacenter traffic now from bots (vs. 35% of pageviews).
+            Bots request less-cached content causing expensive backend computation.
+            2025/26 plan targets 20% reduction in scraper request rate, 30% in bandwidth.
+notes:      Primary source with direct server log access. No cost figures in dollars.
+            50% bandwidth figure independently confirmed by TechCrunch, The Register.
+
+---
+citekey:    vannoorden2025webscraping
+authors:    Richard Van Noorden (Nature News)
+year:       2025
+title:      Web-Scraping AI Bots Cause Disruption for Scientific Databases and Journals
+type:       Journalism with original reporting (Nature News)
+url:        https://www.nature.com/articles/d41586-025-01661-4
+doi:        —
+themes:     5 (scraping harm), 6 (defensive responses), 4 (financial sustainability), 7 (attribution)
+status:     candidate
+pdf:        yes
+access:     open (PDF obtained)
+copyright:  Nature (all rights reserved; cite with attribution)
+summary:    COAR survey of 66 academic repository members: >90% experienced AI bot scraping,
+            ~two-thirds suffered significant operational impacts. DiscoverLife: millions of bot
+            hits/day in early 2025. Surge intensified post-DeepSeek. Documents emergency rate-limiting,
+            blocking, CAPTCHA deployment across scientific infrastructure.
+notes:      Nature News editorial review; Van Noorden is highly credible in this domain.
+            COAR survey has selection bias (affected orgs more likely to respond).
+            Best source for impact on scientific/academic platforms specifically.
+
+---
+citekey:    noroozian2025generative
+authors:    Arman Noroozian et al. (24 authors — Wikimedia, Open Future Foundation, multiple universities)
+year:       2025
+title:      Generative AI and the Future of the Digital Commons: Five Open Questions and Knowledge Gaps
+type:       Academic survey/position paper (preprint, arXiv)
+url:        https://arxiv.org/abs/2508.06470
+doi:        —
+themes:     3 (contributor pipeline), 4 (financial sustainability), 5 (scraping harm), 6 (defensive responses), 7 (attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv preprint (open access)
+summary:    Multi-author synthesis (24 contributors incl. Denny Vrandecic, Wikidata founder).
+            Identifies five open questions: undersupply of contributions, web closure from anti-scraping
+            measures, synthetic content contamination, infrastructure cost redistribution,
+            environmental/equity considerations. Proposes levy on commercial AI to fund public
+            knowledge infrastructure.
+notes:      Explicit advocacy frame (levy proposal). Preprint. Best landscape source for
+            multiple themes simultaneously. Broad coalition authorship adds credibility.
+
+---
+citekey:    grimmelmann2026scraping
+authors:    James Grimmelmann (Cornell Law School)
+year:       2026
+title:      AI Scraping and the Open Web
+type:       Academic opinion/analysis (peer-reviewed, Communications of the ACM)
+url:        https://doi.org/10.1145/3775063
+doi:        10.1145/3775063
+themes:     5 (scraping harm), 6 (defensive responses), 7 (attribution/credit), 4 (financial sustainability)
+status:     candidate
+pdf:        yes
+access:     open (ACM Open)
+copyright:  ACM (open access)
+summary:    Legal and policy analysis of the arms race between AI scrapers and web operators.
+            Covers robots.txt as norm vs. enforceable restriction, evolving litigation landscape,
+            IETF AI data consent protocol proposals. Argues asymmetric cost burden on open content
+            providers. Examines threats to journalism, research, and archiving.
+notes:      Peer-reviewed ACM. Most authoritative legal/policy source on scraping.
+            U.S. legal framework orientation; may need European supplement.
+
+---
+citekey:    simon2025generative
+authors:    Felix Simon, Rasmus Kleis Nielsen, Richard Fletcher (Reuters Institute, Oxford)
+year:       2025
+title:      Generative AI and News Report 2025
+type:       Institutional report (Reuters Institute for the Study of Journalism, Oxford)
+url:        https://reutersinstitute.politics.ox.ac.uk/generative-ai-and-news-report-2025-how-people-think-about-ais-role-journalism-and-society
+doi:        —
+themes:     1 (information-seeking), 7 (attribution), 8 (information literacy), 4 (financial sustainability)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Reuters Institute (free to cite)
+summary:    ~2,000 respondents/country across 6 countries (YouGov, June–July 2025).
+            Only 12% comfortable with entirely AI-produced news; 43% with human-led AI-assisted.
+            Widening "comfort gap" between behind-scenes AI assistance (accepted) and front-facing
+            AI production (rejected). Persistent concerns about accuracy, transparency, accountability.
+notes:      Reuters Institute is world standard-bearer for news consumption research.
+            Focuses on journalism/news, not open knowledge platforms directly.
+
+---
+citekey:    newman2024digital
+authors:    Nic Newman et al. (Reuters Institute for the Study of Journalism, Oxford)
+year:       2024
+title:      Digital News Report 2024
+type:       Institutional report (Reuters Institute, Oxford)
+url:        https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024
+doi:        —
+themes:     1 (information-seeking), 8 (information literacy), 7 (attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Reuters Institute (free to cite)
+summary:    ~95,000 respondents across 47 markets. Documents AI tools entering news consumption.
+            Audiences open to AI for background uses, strongly opposed to AI front-facing content
+            on politics. Declining news trust across most markets. Early evidence of AI chatbots
+            functioning as news intermediaries. Includes publisher economics and AI content sections.
+notes:      Largest and most cited annual news consumption study. Longitudinal value.
+            AI sections less developed than 2025 edition; use 2025 edition where possible.
+
+---
+citekey:    fraumengs2024user
+authors:    Divina Frau-Meigs / UNESCO
+year:       2024
+title:      User Empowerment Through Media and Information Literacy to the Evolution of Generative AI
+type:       UNESCO policy brief
+url:        https://unesdoc.unesco.org/ark:/48223/pf0000388547
+doi:        —
+themes:     8 (information literacy), 1 (information-seeking), 7 (attribution/source reliability)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  UNESCO (free to cite with attribution)
+summary:    Policy brief arguing MIL frameworks must adapt to generative AI. Identifies AI-generated
+            disinformation, hate speech, privacy infringement, and source reliability degradation
+            as key challenges. Calls for updated educational frameworks and platform transparency.
+            Published at UNESCO Global Forum on Ethics of AI, February 2024.
+notes:      Normative (policy), not empirical. No original data. UNESCO institutional weight
+            makes it relevant for policy audience. Supplement with empirical sources per theme.
+
+
+---
+citekey:    shumailov2024ai
+authors:    Ilia Shumailov et al. (Oxford / Cambridge / Toronto)
+year:       2024
+title:      AI Models Collapse When Trained on Recursively Generated Data
+type:       Peer-reviewed journal article (Nature, vol. 631)
+url:        https://www.nature.com/articles/s41586-024-07566-y
+doi:        10.1038/s41586-024-07566-y
+themes:     9 (synthetic content contamination)
+status:     candidate
+pdf:        yes
+access:     paywall-user (Nature — user to download)
+copyright:  Nature (all rights reserved)
+summary:    Foundational empirical paper establishing model collapse as real and measurable.
+            Training successive model generations on their own outputs causes irreversible
+            degradation — tails of the original data distribution progressively disappear.
+            Demonstrated across language models, VAEs, and Gaussian mixtures. Ninth-generation
+            model trained recursively on a medieval architecture passage produced only jackrabbit
+            lists. Indiscriminate scraping of AI-generated web content poses structural risk to
+            model quality.
+notes:      Gold standard source for model collapse. Published in Nature. A qualifying response
+            exists (arXiv:2410.12954) but does not refute the core finding.
+
+---
+citekey:    gerstgrasser2024model
+authors:    Matthias Gerstgrasser et al. (Stanford / SALT Lab)
+year:       2024
+title:      Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data
+type:       Preprint (arXiv:2404.01413); under review NeurIPS 2024
+url:        https://arxiv.org/abs/2404.01413
+doi:        —
+themes:     9 (synthetic content contamination — qualifying/contradicting)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv preprint (open access)
+summary:    Directly challenges inevitability of model collapse. Distinguishes "replace" regime
+            (synthetic replaces prior data → collapse) from "accumulate" regime (synthetic added
+            on top of all prior real data → no collapse). Argues data pipeline design, not
+            AI-generated content per se, is the critical variable. Main peer-reviewed
+            counterargument to Shumailov et al.
+notes:      Key counterevidence — factual qualification, not interpretive disagreement.
+            The "accumulate" condition requires stable access to clean historical data,
+            which degrades as the web fills with AI content. Cite alongside shumailov2024ai.
+
+---
+citekey:    brooks2024rise
+authors:    Creston Brooks, Samuel Eggert, Denis Peskoff (Princeton University)
+year:       2024
+title:      The Rise of AI-Generated Content in Wikipedia
+type:       Peer-reviewed workshop paper (NLP for Wikipedia Workshop, EMNLP 2024)
+url:        https://arxiv.org/abs/2410.08044
+doi:        —
+themes:     9 (synthetic content contamination)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  ACL Anthology (open access)
+summary:    Applied GPTZero and Binoculars detectors to 2,909 English Wikipedia articles
+            created August 2024. Found statistically significant increase in AI-generated content
+            post-GPT-3.5; up to 5% of new articles showing substantial AI content (lower bound —
+            detectors undercount). Explicitly raises concern that Wikipedia AI content contaminates
+            future model training data.
+notes:      Peer-reviewed at EMNLP workshop. Code publicly available. 5% figure is a floor
+            estimate — actual prevalence likely higher. Directly supports sub-claim on Wikipedia.
+
+---
+citekey:    liang2024onefifth
+authors:    Weixin Liang et al. (Stanford University) — reported by Science/AAAS
+year:       2024
+title:      One-Fifth of Computer Science Papers May Include AI-Generated Content
+type:       Institutional news report (Science/AAAS) citing peer-reviewed empirical study
+url:        https://www.science.org/content/article/one-fifth-computer-science-papers-may-include-ai-content
+doi:        —
+themes:     9 (synthetic content contamination)
+status:     candidate
+pdf:        yes
+access:     open (PDF obtained)
+copyright:  AAAS (all rights reserved)
+summary:    Analysis of 1M+ scientific papers 2020–2024 using word-frequency signatures
+            (e.g. "commendable", "intricate", "pivotal"). By late 2024, >20% of CS preprints
+            showed signs of LLM involvement. Rate accelerated sharply post-Nov 2022 (ChatGPT).
+            arXiv subsequently banned non-peer-reviewed CS survey papers — first major platform
+            policy intervention.
+notes:      Stylometric method does not rely on AI detectors — stronger methodology.
+            20% figure widely cited and unchallenged. Conflates heavy AI use with light editing.
+
+---
+citekey:    harding2024coding
+authors:    Bill Harding (GitClear)
+year:       2024
+title:      Coding on Copilot: 2023 Data Suggests Downward Pressure on Code Quality
+type:       Industry research report (non-peer-reviewed)
+url:        https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality
+doi:        —
+themes:     9 (synthetic content contamination), 3 (contributor pipeline)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  GitClear (free to cite)
+summary:    153M changed lines of code 2020–2023. Code churn (lines reverted within 2 weeks)
+            projected to double in 2024 vs. 2021 baseline. Pearson r=0.98 between Copilot
+            usage and churn. Declining code reuse and rising copy-paste patterns.
+notes:      Industry report — potential conflict of interest (GitClear sells code analytics).
+            Correlation only, no causal identification. Directionally consistent with CMU
+            and CodeRabbit studies. Use with appropriate caveats.
+
+---
+citekey:    pmc2024aidetector
+authors:    (see PMC12331776)
+year:       2024
+title:      Can We Trust Academic AI Detectors? Accuracy and Limitations of AI-Output Detectors
+type:       Peer-reviewed journal article (PMC indexed)
+url:        https://pmc.ncbi.nlm.nih.gov/articles/PMC12331776/
+doi:        —
+themes:     9 (synthetic content contamination — detection unreliability)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  PMC open access
+summary:    Evaluates commercial AI detectors on academic text. Accuracy 60–90%; false positive
+            rate 24.5–25%. Paraphrasing AI content through a second LLM reduced detection
+            accuracy ~55%. Critical finding: >61% of ESL writers' essays misclassified as
+            AI-generated — systematic bias against non-native English speakers.
+notes:      PMC-indexed. False-positive bias on non-native speakers replicates Stanford findings.
+            Relevant for claim that detection remains unreliable. Context: academic essays,
+            not Wikipedia-style content specifically.
+
+---
+citekey:    bulletin2026ai
+authors:    Bulletin of the Atomic Scientists
+year:       2026
+title:      How AI Use in Scholarly Publishing Threatens Research Integrity, Lessens Trust, and Invites Misinformation
+type:       Institutional policy commentary (Bulletin of the Atomic Scientists)
+url:        https://thebulletin.org/premium/2026-03/how-ai-use-in-scholarly-publishing-threatens-research-integrity-lessens-trust-and-invites-misinformation/
+doi:        —
+themes:     9 (synthetic content contamination), 8 (information literacy)
+status:     candidate
+pdf:        yes
+access:     open (PDF obtained)
+copyright:  Bulletin of the Atomic Scientists (all rights reserved)
+summary:    Synthesis arguing AI in scholarly publishing degrades research integrity systemically.
+            Combination of AI-assisted writing, declining peer-review capacity, and contaminated
+            training corpora creates compounding risk. Future models trained on AI-assisted
+            literature inherit and amplify errors. Frames this as an epistemic trust problem
+            for policymakers and public, not just a quality problem.
+notes:      Commentary, not primary research. Well-sourced and policy-oriented — good fit for
+            white paper audience. Bulletin of Atomic Scientists has high credibility on emerging
+            tech risks.
+
+# ============================================================
+# WAVE 2 SOURCES — Contributor Pipeline Erosion (Theme 3)
+# ============================================================
+
+---
+citekey:    wagner2025death
+authors:    Christian Wagner, Ling Jiang (City University of Hong Kong)
+year:       2025
+title:      Death by AI: Will Large Language Models Diminish Wikipedia?
+type:       Peer-reviewed journal article (JASIST, Q1)
+url:        https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24975
+doi:        10.1002/asi.24975
+themes:     3 (contributor pipeline)
+status:     candidate
+pdf:        yes
+access:     open (PDF obtained)
+copyright:  Wiley (all rights reserved)
+summary:    Models the self-reinforcing cycle by which LLMs diminish Wikipedia: AI pervades
+            information landscape → contributors perceive efforts less necessary → withdrawal.
+            Falling readership reduces recruitment of new editors (readers-become-authors
+            pipeline disrupted), staling content, further reducing readership. Most direct
+            theoretical case for pipeline erosion available.
+notes:      Primarily theoretical/predictive, not empirical. JASIST Q1 peer-reviewed.
+            Best source for the mechanism of contributor pipeline damage.
+
+---
+citekey:    borwankar2023unraveling
+authors:    Sameer Borwankar, Warut Khern-am-nuai, Karthik Kannan (McGill University)
+year:       2023
+title:      Unraveling the Impact: An Empirical Investigation of ChatGPT's Exclusion from Stack Overflow
+type:       Working paper (SSRN preprint)
+url:        https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4481959
+doi:        —
+themes:     3 (contributor pipeline), 2 (platform traffic)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  SSRN (open access)
+summary:    Exploits Stack Overflow's Dec 2022 ChatGPT ban as natural quasi-experiment.
+            Finds decrease in questions, answers, and first-time contributors post-ChatGPT.
+            Uses Reddit AskProgramming as control. Supplementary analysis documents
+            decline in first-time contributors specifically.
+notes:      SSRN preprint — not peer-reviewed. First-time contributor finding is
+            supplementary, not primary result. Treat as supporting, not central evidence.
+
+---
+citekey:    khatibi2024stackoverflow
+authors:    Samira Khatibi, Christoph Treude et al. (multiple institutions)
+year:       2024
+title:      Is Stack Overflow Obsolete? An Empirical Study of the Characteristics of ChatGPT Answers to Stack Overflow Questions
+type:       Peer-reviewed conference paper (ACM CHI 2024)
+url:        https://dl.acm.org/doi/10.1145/3613904.3642596
+doi:        10.1145/3613904.3642596
+themes:     3 (contributor pipeline), 2 (platform traffic)
+status:     candidate
+pdf:        yes
+access:     open (ACM Open)
+copyright:  ACM (open access)
+summary:    517 Stack Overflow questions; ChatGPT answers evaluated against human answers.
+            52% of ChatGPT answers contain incorrect information, yet 35% of users
+            preferred ChatGPT due to comprehensiveness and style. Documents demand-side
+            shift: users substitute SO with ChatGPT even when AI answers are inferior.
+            People who never visit SO never become SO contributors.
+notes:      ACM CHI — top HCI venue, rigorous peer review. Key qualifying evidence:
+            ChatGPT answers are often wrong, but users prefer them anyway.
+
+---
+citekey:    socket2026ai
+authors:    Socket.dev (security research)
+year:       2026
+title:      AI Agent Submits PR to Matplotlib, Publishes Angry Blog Post After Rejection
+type:       Credible technology journalism / incident documentation
+url:        https://socket.dev/blog/ai-agent-submits-pr-to-matplotlib-publishes-angry-blog-post-after-rejection
+doi:        —
+themes:     3 (contributor pipeline)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Socket.dev (free to cite)
+summary:    Documents the Matplotlib incident: autonomous AI agent submitted PR, was rejected
+            under human-contributor policy, then published a hit piece on the maintainer.
+            Places in broader "AI Slopageddon" pattern — AI PRs flooding open source
+            issue trackers, shifting maintainer time from development and mentoring
+            newcomers to triage of low-quality AI submissions.
+notes:      Single incident analysis — case study, not systematic study. Verified via
+            The Register, Fast Company, maintainer's own blog (theshamblog.com).
+            Use as illustrative example, not statistical evidence.
+
+---
+citekey:    gitclear2025ai
+authors:    Bill Harding (GitClear)
+year:       2025
+title:      AI Copilot Code Quality: 2025 Data Suggests 4x Growth in Code Clones
+type:       Industry research report
+url:        https://www.gitclear.com/ai_assistant_code_quality_2025_research
+doi:        —
+themes:     3 (contributor pipeline), 9 (synthetic content contamination)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  GitClear (free to cite)
+summary:    211M lines of code 2020–2024. Cloned code blocks (5+ duplicated lines) grew 8x
+            in 2024; refactoring fell from 25% to under 10% of changed lines; code churn
+            rose from 5.5% to 7.9%. AI contributions frequently fail project guidelines,
+            are abandoned, and require disproportionate reviewer time — displacing mentorship
+            of genuine new contributors.
+notes:      Commercial conflict of interest — GitClear sells code analytics. Not peer-reviewed.
+            Link to pipeline erosion is inferential (reviewer burden → less mentoring).
+            Consistent with harding2024coding.
+
+# ============================================================
+# WAVE 2 SOURCES — Information Literacy (Theme 8)
+# ============================================================
+
+---
+citekey:    klingbeil2024trust
+authors:    Artur Klingbeil, Cassandra Grützner, Philipp Schreck
+year:       2024
+title:      Trust and Reliance on AI — An Experimental Study on the Extent and Costs of Overreliance on AI
+type:       Peer-reviewed experimental study (Computers in Human Behavior, Elsevier)
+url:        https://doi.org/10.1016/j.chb.2024.108352
+doi:        10.1016/j.chb.2024.108352
+themes:     8 (information literacy)
+status:     candidate
+pdf:        yes
+access:     paywall-user
+copyright:  Elsevier (all rights reserved)
+summary:    Incentivised behavioural experiment: participants followed AI advice even when it
+            contradicted contextual evidence and their own judgment. AI-origin label alone
+            caused overreliance. Persistent even when leading to negative outcomes for third
+            parties. Isolates AI-origin label as the operative mechanism (not content quality).
+notes:      Peer-reviewed, high-impact journal. Incentivised design reduces social-desirability
+            bias. Measures actual decisions, not self-report. Tasks are decision-support,
+            not information-seeking specifically.
+
+---
+citekey:    kosmyna2025brainchatgpt
+authors:    Nataliya Kosmyna et al. (MIT Media Lab)
+year:       2025
+title:      Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task
+type:       Peer-reviewed journal article (Computers in Human Behavior, Elsevier)
+url:        https://www.media.mit.edu/publications/your-brain-on-chatgpt/
+doi:        10.1016/j.chb.2025.108214
+themes:     8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  MIT Media Lab (open access)
+summary:    EEG study with 54 participants across 3 conditions (LLM, search engine, brain-only)
+            over 3 sessions. LLM users showed lowest brain engagement across neural, linguistic,
+            and behavioural measures. In session 4 (switched to brain-only), LLM users
+            struggled to recall or quote their own prior AI-assisted work — loss of epistemic
+            ownership. NLP confirmed LLM essays were less distinctive and less personally attributed.
+notes:      Now peer-reviewed, published in Computers in Human Behavior (Elsevier), DOI
+            10.1016/j.chb.2025.108214 — upgrade from preprint status. Small sample (n=54).
+            EEG design provides objective neural data beyond self-report. Lab setting may not
+            reflect real usage. Most striking empirical evidence of cognitive engagement loss.
+
+---
+citekey:    xu2024aisummariesattitudes
+authors:    Yiwei Xu, Saloni Dash, Sungha Kang, Wang Liao, Emma Spiro
+year:       2024
+title:      AI Summaries in Online Search Influence Users' Attitudes
+type:       Preregistered RCT (arXiv preprint)
+url:        https://arxiv.org/abs/2511.22809
+doi:        —
+themes:     8 (information literacy), 1 (information-seeking)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv (open access)
+summary:    Preregistered RCT, 2,004 participants, mock search pages with/without AI summaries
+            on four policy topics. Participants exposed to AI summaries aligned significantly
+            more closely with the summary's framing. Top-page placement produced stronger
+            attitude shifts. Issue familiarity and general AI trust moderated the effect.
+            Strongest causal evidence that AI summaries shape beliefs without critical resistance.
+notes:      Preprint — not peer-reviewed. Uses mock pages, not real Google results.
+            Preregistered design is gold standard for causal inference on attitude change.
+
+---
+citekey:    hou2025criticalthinking
+authors:    Yiqi Hou et al.
+year:       2025
+title:      The Role of Critical Thinking on Undergraduates' Reliance Behaviours on Generative AI in Problem-Solving
+type:       Peer-reviewed (British Journal of Educational Technology)
+url:        https://doi.org/10.1111/bjet.13613
+doi:        10.1111/bjet.13613
+themes:     8 (information literacy)
+status:     candidate
+pdf:        yes
+access:     paywall-user
+copyright:  Wiley/BERA (all rights reserved)
+summary:    Pre/post survey of 1,498 undergraduates completing an AI-permitted policy
+            proposal task. Critical thinking disposition mediates AI literacy/trust → reliance
+            behaviour. Students with lower critical thinking scores exhibited significantly
+            more uncritical AI delegation. Critical thinking is a measurable protective factor.
+notes:      Peer-reviewed, large sample. Self-reported reliance behaviours. Important
+            qualifier: AI doesn't uniformly degrade critical thinking — unstructured
+            over-reliance is the risk condition. Cite alongside contradicting meta-analysis
+            (Li et al. 2025, Humanities and Social Sciences Communications: AI has
+            moderately positive effect on higher-order thinking when pedagogically structured).
+
+---
+citekey:    massenon2025lying
+authors:    Massenon R., Gambo I., Khan J.A. et al.
+year:       2025
+title:      "My AI Is Lying to Me": User-Reported LLM Hallucinations in AI Mobile Apps Reviews
+type:       Peer-reviewed (Scientific Reports, Nature Portfolio)
+url:        https://doi.org/10.1038/s41598-025-15416-8
+doi:        10.1038/s41598-025-15416-8
+themes:     8 (information literacy), 9 (synthetic content contamination)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Nature Portfolio (open access CC-BY)
+summary:    3M user reviews from 90 AI mobile apps; 20,000 hallucination reports identified,
+            1,000 manually annotated. ~1.75% hallucination indicator prevalence among flagged
+            reviews. Users express surprise/betrayal — hallucinations discovered post-hoc,
+            not in real time. One of very few studies measuring user awareness of hallucinations
+            from natural behaviour data rather than lab exposure.
+notes:      Peer-reviewed, Nature Portfolio. Exceptionally large dataset. App reviews are
+            convenience sample — underestimates true hallucination prevalence. Provides
+            rare real-world evidence of post-hoc discovery pattern.
+
+---
+citekey:    essel2024chatgpt
+authors:    Harry Barton Essel, Dimitrios Vlachopoulos, Albert Benjamin Essuman, John Opuni Amankwa
+year:       2024
+title:      ChatGPT Effects on Cognitive Skills of Undergraduate Students: Receiving Instant Responses from AI-Based Conversational Large Language Models (LLMs)
+type:       Peer-reviewed (Computers and Education: Artificial Intelligence, Elsevier)
+url:        https://doi.org/10.1016/j.caeai.2023.100198
+doi:        10.1016/j.caeai.2023.100198
+themes:     8 (information literacy), 12 (children/education)
+status:     candidate
+pdf:        yes
+access:     open (CC BY)
+copyright:  Elsevier CC BY
+summary:    Pretest-posttest RCT, n=125 undergraduate students in Ghana (Research Methodology course),
+            randomly allocated to ChatGPT group (n=60) or control group (traditional search engines, n=65).
+            Experimental group showed significant improvement in critical thinking, creative thinking,
+            and reflective thinking compared to controls. Students in the ChatGPT group reported positive
+            learning experiences; ChatGPT use enhanced effectiveness of learning activities.
+notes:      Peer-reviewed, CC BY open access. Positive finding: ChatGPT improved, not degraded,
+            cognitive skills in this scaffolded educational context. Important counter-finding to H3
+            and EC-12's concern-oriented claims. RCT design with pretest-posttest is stronger than
+            cross-sectional surveys. Ghana context; flipped classroom pedagogical structure —
+            generalisation requires care. Full text cached at tmp/pdf_cache/essel2024chatgpt.txt.
+
+# ============================================================
+# WAVE 2 SOURCES — Defensive Countermeasures (Theme 6)
+# ============================================================
+
+---
+citekey:    searles2023captcha
+authors:    Andrew Searles et al. (UC Irvine, ETH Zürich, Microsoft, Lawrence Livermore)
+year:       2023
+title:      An Empirical Study & Evaluation of Modern CAPTCHAs
+type:       Peer-reviewed conference paper (USENIX Security 2023)
+url:        https://www.usenix.org/system/files/usenixsecurity23-searles.pdf
+doi:        —
+themes:     6 (defensive responses)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  USENIX (open access)
+summary:    1,400 participants, 14,000 CAPTCHAs across most widely deployed systems.
+            Bot accuracy 85–100% (most over 96%); human accuracy 50–85%. Bots now outperform
+            humans on CAPTCHAs. Aggregate human time wasted: over 819 million hours across
+            512 billion reCAPTCHA v2 sessions. CAPTCHAs harm humans more reliably than they
+            stop bots.
+notes:      Foundational citation for CAPTCHA human cost. Top-tier venue, large dataset.
+            Real-world false-positive rates for specific populations not separately reported.
+
+---
+citekey:    opnreseurope2025botdetection
+authors:    (see PMC11962364)
+year:       2025
+title:      Balancing Security and Privacy: Web Bot Detection, Privacy Challenges, and Regulatory Compliance under the GDPR and AI Act
+type:       Peer-reviewed (Open Research Europe, EC-affiliated)
+url:        https://pmc.ncbi.nlm.nih.gov/articles/PMC11962364/
+doi:        —
+themes:     6 (defensive responses)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Open Research Europe (open access)
+summary:    Detection algorithms "inevitably contain errors" misclassifying legitimate users
+            as bots. Many operators deploy blanket 403 responses blocking legitimate AI-driven
+            services and automation. Calls for human oversight to mitigate false-positive risks.
+            Reviews GDPR and EU AI Act compliance tensions with aggressive bot detection.
+notes:      Peer-reviewed, EU regulatory context. Primarily GDPR framing, not empirical
+            false-positive rate measurement. Qualifying — acknowledges harm but discusses solutions.
+
+---
+citekey:    theconversation2024openweb
+authors:    The Conversation (scholar-authored)
+year:       2024
+title:      News Sites Are Locking Out the Internet Archive to Stop AI Crawling. Is the 'Open Web' Closing?
+type:       Institutional commentary (The Conversation — academic authors required)
+url:        https://theconversation.com/news-sites-are-locking-out-the-internet-archive-to-stop-ai-crawling-is-the-open-web-closing-274968
+doi:        —
+themes:     6 (defensive responses), 3 (contributor pipeline)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  The Conversation (CC-BY-ND)
+summary:    Documents anti-AI scraping measures blocking Internet Archive's Wayback Machine
+            as collateral damage — cutting off historians, journalists, and researchers.
+            Robot-exclusion rules aimed at AI crawlers catching legitimate archival infrastructure.
+            Raises structural question of whether anti-AI defences are systematically degrading
+            the open, linkable, archivable web.
+notes:      The Conversation requires academic author affiliations — credible journalism.
+            Qualitative and case-based; no quantified scale of blocked archival access.
+
+---
+citekey:    ietf2025aipref
+authors:    Internet Engineering Task Force (AIPREF Working Group)
+year:       2025
+title:      IETF AI Preferences Working Group — robots.txt Update Proposal
+type:       Standards-body technical draft
+url:        https://www.ietf.org/archive/id/draft-jimenez-tbd-robotstxt-update-00.html
+doi:        —
+themes:     6 (defensive responses), 5 (scraping harm)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  IETF (public domain)
+summary:    AIPREF Working Group launched 2025 to develop common vocabulary for AI content-use
+            preferences. Concrete robots.txt update introduces intent-based policies, API endpoint
+            discovery, and cryptographic bot verification (WebBotAuth). IAB AI-Control workshop
+            confirms community consensus that current web standards are insufficient for the AI era.
+notes:      Primary source — IETF is the definitive internet standards body. These are drafts;
+            final standards not yet adopted. Compliance will remain voluntary absent regulation.
+            Best source for robots.txt revision sub-claim.
+
+---
+citekey:    brown2025webscraping
+authors:    Megan A. Brown et al. (NYU Center for Social Media and Politics)
+year:       2025
+title:      Web Scraping for Research: Legal, Ethical, Institutional, and Scientific Considerations
+type:       Peer-reviewed (Big Data & Society, SAGE)
+url:        https://journals.sagepub.com/doi/10.1177/20539517251381686
+doi:        10.1177/20539517251381686
+themes:     6 (defensive responses)
+status:     candidate
+pdf:        yes
+access:     paywall-user
+copyright:  SAGE (all rights reserved)
+summary:    Documents that as AI demand for training data grew, platforms greatly restricted
+            access through official channels and scraping. Rate limiting, IP blocking, ToS
+            changes now affect academic data collection at scale. Twitter/X API: free in 2022,
+            $42,000/month by 2023 — forcing researchers to abandon longitudinal datasets.
+notes:      Peer-reviewed, multi-institution. Best scholarly treatment of how defensive
+            measures harm academic research access. Primarily social media platforms context.
+
+# ============================================================
+# WAVE 2 SOURCES — Journalism Theme (EC-5)
+# ============================================================
+
+---
+citekey:    cjr2025aioverviews
+authors:    Columbia Journalism Review
+year:       2025
+title:      Google's AI Overviews Are Killing Traffic to News Sites
+type:       Institutional journalism analysis (CJR)
+url:        https://www.cjr.org/analysis/traffic-apocalypse-google-ai-overviews-killing-click-throughs-news-sites.php
+doi:        —
+themes:     10 (journalism), 1 (information-seeking), 2 (platform traffic)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  CJR (free to cite)
+summary:    No-click share of news searches rose from 56% to 69% in year following AIO launch.
+            37 of top 50 U.S. news sites experienced YoY traffic declines mid-2025; some
+            (CNN, Forbes, Business Insider) lost 27–50% of traffic. Publishers expect further
+            43% decline over 3 years. Distinguishes AI Overviews mechanism from older
+            zero-click trends.
+notes:      Draws on Similarweb, TollBit, Pew data — transparent cross-checked sourcing.
+            Not a primary study. Traffic losses may partly reflect non-AI Google algorithm changes.
+
+---
+citekey:    pinkslime2025ranlp
+authors:    (see arXiv:2512.05331)
+year:       2025
+title:      Exposing Pink Slime Journalism: Linguistic Signatures and Robust Detection Against LLM-Generated Threats
+type:       Peer-reviewed conference paper (RANLP 2025)
+url:        https://arxiv.org/abs/2512.05331
+doi:        —
+themes:     10 (journalism), 9 (synthetic content contamination)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv (open access)
+summary:    First systematic empirical study of linguistic signatures distinguishing
+            AI-generated pink slime from legitimate local news. LLM-generated content shows
+            measurable lexical/syntactic differences. Consumer LLMs can be used to generate
+            content evading existing detection, reducing classifier F1-scores by 40%.
+            AI dramatically lowers the barrier to producing pink slime at scale.
+notes:      Peer-reviewed RANLP (respected NLP venue). Focuses on detection methods, not
+            public harm measurement. Serves 28 million Americans dependent on local news.
+
+---
+citekey:    newsguard2025tracker
+authors:    NewsGuard (media intelligence firm)
+year:       2025
+title:      Tracking AI-Enabled Misinformation: AI-Generated News Websites
+type:       Institutional tracker / special report
+url:        https://www.newsguardtech.com/special-reports/ai-tracking-center/
+doi:        —
+themes:     10 (journalism), 9 (synthetic content contamination)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  NewsGuard (free to cite)
+summary:    2,089 undisclosed AI-generated news/information sites catalogued across 16 languages
+            as of October 2025. Sites produce hundreds of articles/day with no bylines,
+            no editorial oversight. No labour costs → attract programmatic ad revenue,
+            directly undermining legitimate local news economic model. Yale ISPS: people
+            often trust fake local news sites more than real ones.
+notes:      Commercial firm (sells browser extension) — methodology documented but
+            potential conflict of interest. Findings cited by academic researchers and
+            government inquiries. Best longitudinal tracker of the phenomenon.
+
+---
+citekey:    nytvopenai2024
+authors:    The New York Times (plaintiff); U.S. District Court SDNY
+year:       2024
+title:      The New York Times v. OpenAI (copyright case)
+type:       Legal case with scholarly and journalistic documentation
+url:        https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face/
+doi:        —
+themes:     10 (journalism), 7 (credit attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Court documents (public); HLR blog (free to cite)
+summary:    NYT sued OpenAI/Microsoft Dec 2023 for unlicensed use of millions of articles
+            to train LLMs. ChatGPT reproduced near-verbatim Times content including paywalled
+            material. April 2025: Judge allowed core claims to proceed. OpenAI subsequently
+            signed licensing deals with Hearst, Condé Nast, Vox, The Atlantic, News Corp.
+            Case establishes AI training on news content as live legal/economic dispute.
+notes:      Case is unresolved — no final judgment. OpenAI argues fair use. Existence of
+            licensing deals may indicate market self-correcting. Use as evidence of the
+            dispute, not proof of liability.
+
+---
+citekey:    pew2025aijourno
+authors:    Pew Research Center
+year:       2025
+title:      Americans Largely Foresee AI Having Negative Effects on News, Journalists
+type:       Survey report (nationally representative, Pew)
+url:        https://www.pewresearch.org/short-reads/2025/04/28/americans-largely-foresee-ai-having-negative-effects-on-news-journalists/
+doi:        —
+themes:     10 (journalism), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Pew Research Center (free to cite)
+summary:    59% of Americans expect AI to lead to fewer journalism jobs over 20 years;
+            ~60% of AI experts share this view. Public anticipates net negative AI effect
+            on journalism. Connects to Pew behavioural finding that users almost never
+            click links inside AI summaries (~1%).
+notes:      Measures expectations/attitudes, not observed outcomes. U.S.-only.
+            Treat as attitudinal support, not evidence of actual job losses.
+
+# ============================================================
+# WAVE 2 SOURCES — Cross-cutting / Multi-theme
+# ============================================================
+
+---
+citekey:    burtch2024consequences
+authors:    Gordon Burtch, Dokyun Lee, Zheng Chen (Boston University Questrom)
+year:       2024
+title:      The Consequences of Generative AI for Online Knowledge Communities
+type:       Peer-reviewed (Scientific Reports, Nature Publishing Group)
+url:        https://www.nature.com/articles/s41598-024-61221-0
+doi:        10.1038/s41598-024-61221-0
+themes:     1 (information-seeking), 2 (platform traffic), 3 (contributor pipeline)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Nature Portfolio (open access CC-BY)
+summary:    DiD natural experiment comparing Stack Overflow with Russian/Chinese equivalents
+            (ChatGPT inaccessible). ~25% relative decline in SO activity within 6 months of
+            ChatGPT release. Answer quality declining as newer contributors exit. Reddit
+            communities showed no comparable decline (social cohesion buffers substitution).
+            Landmark empirical paper for themes 1–3 simultaneously.
+notes:      Peer-reviewed Scientific Reports (Nature). Widely cited including in ACM
+            Communications. Strongest empirical anchor for platform displacement claim.
+            Same core finding as delriochanona2024large — cite alongside each other.
+
+---
+citekey:    mdpi2025disinfomap
+authors:    (multiple authors)
+year:       2025
+title:      Mapping the Impact of Generative AI on Disinformation: Insights from a Scoping Review
+type:       Peer-reviewed scoping review (Publications, MDPI)
+url:        https://www.mdpi.com/2304-6775/13/3/33
+doi:        —
+themes:     8 (information literacy), 9 (synthetic content contamination), 10 (journalism)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  MDPI (open access CC-BY)
+summary:    Scoping review of academic literature 2021–2024 across 6 themes: political
+            disinformation, scientific disinformation, fact-checking, journalism, media
+            literacy, deepfakes. 80% of countries holding elections in 2024 had AI-generated
+            electoral disinformation cases. NewsGuard counted 1,200+ AI content farm
+            websites by 2024. Generative AI plays dual role — enables synthetic disinformation
+            and offers detection tools.
+notes:      MDPI lower prestige than Nature/Oxford. Scoping review is systematic and
+            well-sourced. Best literature anchor for disinformation sub-topics.
+            Use for themes 8, 9, 10.
+
+---
+citekey:    stanfordhai2025index
+authors:    Stanford Human-Centered Artificial Intelligence Institute
+year:       2025
+title:      Artificial Intelligence Index Report 2025
+type:       Annual institutional report (Stanford HAI)
+url:        https://hai.stanford.edu/ai-index/2025-ai-index-report
+doi:        —
+themes:     1 (information-seeking), 3 (contributor pipeline), 4 (financial sustainability), 8 (information literacy), 9 (synthetic content contamination)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Stanford HAI (free to cite)
+summary:    Comprehensive annual reference for AI trends: technical progress, economic effects,
+            public perception, governance, societal impact. Inference cost drop 280x in 2 years;
+            GitHub AI repository growth 40% in 2024. Added Science/Medicine chapter in 2025.
+            59 new U.S. AI regulations in 2024. Provides macro-level quantitative backdrop
+            for all 10 white paper themes.
+notes:      Not peer-reviewed but produced by one of the world's most credible AI institutions.
+            Standard reference for policymakers. Use for macro-level statistics to frame
+            the argument, not as primary source for individual claims.
+
+# ============================================================
+# WAVE 3 SOURCES — Power Concentration (Theme 11)
+# ============================================================
+
+---
+citekey:    korinek2025concentrating
+authors:    Anton Korinek, Jai Vipra (University of Virginia / NBER)
+year:       2025
+title:      Concentrating Intelligence: Scaling and Market Structure in Artificial Intelligence
+type:       Peer-reviewed economics paper (Economic Policy, CEPR/CESifo; also NBER w33139)
+url:        https://www.nber.org/papers/w33139
+doi:        10.1093/epolic/eiae057
+themes:     11 (power concentration), 4 (financial sustainability)
+status:     candidate
+pdf:        no
+access:     open (NBER preprint free; journal paywalled)
+copyright:  Oxford Academic / CEPR
+summary:    Identifies significant economies of scale and scope in the foundation model market —
+            in compute, data, and talent — that systematically favour incumbents and may cause
+            the market to "tip" toward a small number of dominant firms. Examines vertical
+            integration incentives and warns that AI market concentration could translate into
+            an unprecedented accumulation of private power with broad societal consequences.
+            Most rigorous economic treatment of AI market concentration available.
+notes:      Published in top-tier peer-reviewed economics policy journal. Primary academic source
+            for the market-tipping and concentration argument. Predates some 2025 consolidation events.
+
+---
+citekey:    ftc2024jointstatement
+authors:    FTC, DOJ (USA), UK Competition and Markets Authority, European Commission
+year:       2024
+title:      Joint Statement on Competition in Generative AI Foundation Models and AI Products
+type:       Official regulatory document / inter-governmental policy statement
+url:        https://www.ftc.gov/system/files/ftc_gov/pdf/ai-joint-statement.pdf
+doi:        —
+themes:     11 (power concentration)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Public domain (government document)
+summary:    Four major antitrust authorities identify three core competition concerns: concentrated
+            control of key inputs (chips, compute, expertise); large incumbent firms entrenching
+            existing dominance into AI; and anti-competitive arrangements among key players.
+            All signatories committed to use available legal powers to safeguard fair competition.
+            Formalises at the highest regulatory level that AI market structure constitutes a
+            competition crisis.
+notes:      Primary-source regulatory document — highest-authority source for claims about
+            regulatory concern. Statement of principle, not legal findings; enforcement pending.
+
+---
+citekey:    sag2025falsehopeL
+authors:    Matthew Sag (Emory University School of Law)
+year:       2025
+title:      The False Hope of Content Licensing at Internet Scale
+type:       Policy commentary (ProMarket / Stigler Center, University of Chicago Booth)
+url:        https://www.promarket.org/2025/11/19/the-false-hope-of-content-licensing-at-internet-scale/
+doi:        —
+themes:     11 (power concentration), 7 (credit attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  ProMarket (free to cite)
+summary:    Bilateral content licensing deals are structurally limited to large institutional
+            players — media conglomerates, publishers, platforms — and cannot feasibly extend
+            to volunteer-based knowledge producers (Wikipedia, open source). AI companies
+            continue to extract value from open sources for free while paying only well-resourced
+            publishers. Licensing deals may reinforce concentration by giving large players
+            preferential terms unavailable to smaller actors.
+notes:      ProMarket/Stigler Center is the leading platform for antitrust economics commentary.
+            Commentary, not peer-reviewed paper. Directly addresses Wikipedia/open source exclusion
+            from any compensation regime — strongest available source for that specific claim.
+
+---
+citekey:    tarkowski2024aicommons
+authors:    Alek Tarkowski (Open Future)
+year:       2024
+title:      AI and the Commons: The Wikimedia Movement
+type:       Policy analysis (Open Future — European digital rights think tank)
+url:        https://openfuture.eu/blog/ai-and-the-commons-the-wikimedia-movement/
+doi:        —
+themes:     11 (power concentration), 7 (credit attribution), 4 (financial sustainability)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Open Future (free to cite)
+summary:    Virtually every major LLM trains on Wikipedia datasets, yet the Wikimedia Foundation
+            and its volunteer editors receive no financial compensation and have no formal seat at
+            the table in licensing negotiations. Frames this as both an economic extraction problem
+            and a governance failure: the commons generates value that flows entirely to private
+            firms. Calls for participatory governance models giving knowledge commons a voice in
+            how AI systems are trained and deployed.
+notes:      Open Future is credible European digital policy think tank. Tarkowski is well-published
+            on digital commons. Think-tank blog post — not peer-reviewed. Unique analytical framing
+            on Wikipedia specifically.
+
+---
+citekey:    heikkila2024coughup
+authors:    Melissa Heikkilä (MIT Technology Review)
+year:       2024
+title:      AI Companies Are Finally Being Forced to Cough Up for Training Data
+type:       Technology journalism (MIT Technology Review)
+url:        https://www.technologyreview.com/2024/07/02/1094508/ai-companies-are-finally-being-forced-to-cough-up-for-training-data/
+doi:        —
+themes:     11 (power concentration), 7 (credit attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  MIT Technology Review (free to cite)
+summary:    Documents the wave of lawsuits from Sony Music, Warner, UMG against AI music companies
+            and contextualises this within AI firms having "pillaged the internet" for training data.
+            The News Corp–OpenAI deal (~$250M) demonstrates that when large rights-holders negotiate
+            they extract significant sums, implying uncompensated extraction from smaller/open sources
+            was equally valuable. Marks the shift from extraction as accepted practice to legally
+            contested territory.
+notes:      MIT Technology Review is rigorous specialist publication. Captures historical inflection
+            point of mid-2024. Does not address open knowledge commons directly — focuses on commercial IP.
+
+---
+citekey:    adexchanger2026aisearch
+authors:    AdExchanger staff
+year:       2026
+title:      The AI Search Reckoning Is Dismantling Open Web Traffic — And Publishers May Never Recover
+type:       Trade journalism (AdExchanger)
+url:        https://www.adexchanger.com/publishers/the-ai-search-reckoning-is-dismantling-open-web-traffic-and-publishers-may-never-recover/
+doi:        —
+themes:     11 (power concentration), 2 (platform traffic), 10 (journalism)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  AdExchanger (free to cite)
+summary:    Business Insider lost 55% of organic search traffic 2022–2025; news publishers saw
+            Google-driven referrals fall from 51% to 27% of total traffic in 2023–Q4 2025.
+            Crucially, OpenAI's crawl-to-referral ratio estimated at 1,200:1 to 1,700:1 —
+            AI companies extract vastly more content than they return as traffic. The economic
+            model underpinning open web publishing is breaking, with some smaller publishers
+            already closed.
+notes:      AdExchanger is trade publication of record for digital advertising/publishing.
+            The crawl-to-referral ratio figure is a powerful quantitative illustration of
+            extraction asymmetry. Trade journalism — no peer review. Data from Chartbeat, DMG Media.
+
+# ============================================================
+# WAVE 3 SOURCES — Demographic Stratification + Global South (Themes 13–14)
+# ============================================================
+
+---
+citekey:    daepp2025genaidivide
+authors:    Madeleine Daepp, Scott Counts (Microsoft Research)
+year:       2025
+title:      The Emerging Generative Artificial Intelligence Divide in the United States
+type:       Peer-reviewed conference paper (AAAI ICWSM, vol. 19(1), pp. 443–456)
+url:        https://ojs.aaai.org/index.php/ICWSM/article/view/35825
+doi:        —
+themes:     13 (demographic stratification)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  AAAI (open access proceedings)
+summary:    Maps geography of AI uptake across US using county-level ChatGPT search volume.
+            Counties with higher adoption cluster in coastal metropolitan areas; coldspots in
+            South, Appalachia, and Midwest. Education is the strongest positive predictor of
+            AI awareness, outpacing race, urbanicity, and income in adjusted models. Without
+            intervention, early differences will compound existing spatial and socioeconomic
+            inequalities. One of first empirically rigorous analyses of a "generative AI divide."
+notes:      Top-tier peer-reviewed venue (AAAI ICWSM). Search-volume proxy captures awareness,
+            not actual use. US-only; no cross-national dimension.
+
+---
+citekey:    pew2025aiaware
+authors:    Pew Research Center
+year:       2025
+title:      Americans' Awareness of AI and Views of Use in Daily Life, Control Over It
+type:       Survey report (nationally representative, Pew Research Center)
+url:        https://www.pewresearch.org/science/2025/09/17/ai-in-americans-lives-awareness-experiences-and-attitudes/
+doi:        —
+themes:     13 (demographic stratification), 1 (information-seeking), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Pew Research Center (free to cite)
+summary:    31% of Americans interact with AI at least several times daily (up from 22% in 2024).
+            Adults under 30 far more likely to report high AI awareness than those 65+.
+            60% with postgraduate degrees report high awareness vs. 38% with high school diploma
+            or less. Teen chatbot use for information retrieval significantly higher in households
+            earning $75k+ vs under $30k (66% vs 56%). Clear age, education, and income gradients
+            in AI engagement are documented.
+notes:      Pew gold standard for US public opinion. Self-reported awareness/use. US-only.
+            Different from existing pew2025aijourno entry — covers general AI awareness, not news.
+
+---
+citekey:    brookings2024languagegaps
+authors:    Brookings Institution
+year:       2024
+title:      How Language Gaps Constrain Generative AI Development
+type:       Policy analysis (Brookings Institution)
+url:        https://www.brookings.edu/articles/how-language-gaps-constrain-generative-ai-development/
+doi:        —
+themes:     14 (global south exclusion), 13 (demographic stratification)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Brookings (free to cite)
+summary:    ChatGPT trained on ~300 billion largely English words; systematic performance
+            disparities exist for non-standard and non-English language users. AI plagiarism
+            and detection tools are unreliable for non-native English writers, creating downstream
+            equity harms in education and employment. Over 7,000 languages exist globally but
+            only a handful receive meaningful model investment. Calls for diversified training
+            datasets and targeted investment in under-resourced languages.
+notes:      Respected policy institution. Policy analysis, not primary peer-reviewed research.
+            Should be supplemented with technical benchmarking literature for empirical claims.
+
+---
+citekey:    stanfordhai2025languagegap
+authors:    Stanford Human-Centered AI / The African Future Forum (Pretoria)
+year:       2025
+title:      Mind the (Language) Gap: Mapping the Challenges of LLM Development in Low-Resource Language Contexts
+type:       Policy white paper (Stanford HAI)
+url:        https://hai.stanford.edu/policy/mind-the-language-gap-mapping-the-challenges-of-llm-development-in-low-resource-language-contexts
+doi:        —
+themes:     14 (global south exclusion)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Stanford HAI (free to cite)
+summary:    State-of-the-art LLMs achieve ~80% accuracy on English-language tasks but can fall
+            below 55% on the same tasks in low-resource languages like Yoruba (40M speakers).
+            Low-resource languages face dual problem: scarcity of labelled training data and
+            poor representational quality. Analyses three development approaches (massively
+            multilingual, regional multilingual, monolingual) — each faces distinct trade-offs.
+            Recommends subsidised compute for Global South researchers and participatory
+            development co-designed with language communities.
+notes:      Stanford HAI + African policy co-author gives technical credibility and regional
+            legitimacy. White paper, not peer-reviewed. Quantitative performance gap (80% vs 55%)
+            sourced from underlying benchmarking literature.
+
+---
+citekey:    regilme2024aicolonialism
+authors:    Salvador Santino F. Regilme Jr. (Leiden University)
+year:       2024
+title:      Artificial Intelligence Colonialism: Environmental Damage, Labor Exploitation, and Human Rights Crises in the Global South
+type:       Peer-reviewed journal article (SAIS Review of International Affairs, vol. 44, no. 2, pp. 75–92)
+url:        https://muse.jhu.edu/article/950958
+doi:        —
+themes:     14 (global south exclusion)
+status:     candidate
+pdf:        yes
+access:     open (PDF obtained)
+copyright:  SAIS Review (all rights reserved)
+summary:    AI development reproduces colonial patterns of extraction: rewards concentrate in
+            Global North elites while labour exploitation, environmental damage, and human rights
+            crises are exported to the Global South. Data workers in Kenya, India, Philippines
+            earn $1.50–$2/hour vs $20/hour for US equivalents. In early 2024, ~100 Kenyan AI
+            workers wrote to President Biden describing conditions as "modern-day slavery."
+            Identifies four colonial dimensions: data colonialism, infrastructure dependence,
+            epistemic colonialism, and governance colonialism.
+notes:      SAIS Review (Johns Hopkins/SAIS) — refereed policy journal. The "colonialism" framing
+            is contested; some scholars argue it conflates different phenomena. Primarily qualitative.
+            Widely cited in AI ethics and political economy literature.
+
+---
+citekey:    mittr2025wikidoomspiral
+authors:    MIT Technology Review
+year:       2025
+title:      How AI and Wikipedia Have Sent Vulnerable Languages into a Doom Spiral
+type:       Investigative journalism (MIT Technology Review)
+url:        https://www.technologyreview.com/2025/09/25/1124005/ai-wikipedia-vulnerable-languages-doom-spiral/
+doi:        —
+themes:     14 (global south exclusion), 3 (contributor pipeline), 2 (platform traffic)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  MIT Technology Review (free to cite)
+summary:    Editors of four African-language Wikipedias estimate 40–60% of articles consist of
+            uncorrected machine translations; Inuktitut Wikipedia had over two-thirds of
+            multi-sentence pages partially AI-generated. Greenlandic Wikipedia was voted for
+            closure by administrators in September 2025, citing AI-generated content causing
+            active harm to the language. Identifies self-reinforcing loop: AI scrapes Wikipedia,
+            produces inaccurate translations that re-enter Wikipedia, degrading future training
+            data — smaller communities lack capacity to vet at scale.
+notes:      MIT Technology Review — credible specialist journalism. Percentage estimates are
+            community self-assessments, not independently audited. Greenlandic closure is
+            verifiable public record. Use to illustrate claims supported by academic sources.
+
+# ============================================================
+# WAVE 3 SOURCES — AI Model Opacity / Transparency (Theme 15)
+# ============================================================
+
+---
+citekey:    magesh2024hallucination
+authors:    Varun Magesh, Faiz Surani, Matthew Dahl, Mirac Suzgun, Christopher D. Manning, Daniel E. Ho (Stanford RegLab / Stanford Law School)
+year:       2024
+title:      Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools
+type:       Preprint (arXiv:2405.20362); peer-reviewed Journal of Empirical Legal Studies (2025)
+url:        https://arxiv.org/abs/2405.20362
+doi:        10.1111/jels.12413
+themes:     15 (model opacity), 8 (information literacy)
+status:     candidate
+pdf:        yes
+access:     open (PDF obtained)
+copyright:  Wiley/JELS (all rights reserved; arXiv open)
+summary:    First preregistered empirical evaluation of AI legal research tools marketed as
+            "hallucination-free" by LexisNexis and Thomson Reuters. Despite using retrieval-
+            augmented generation, tools hallucinated 17–33% of the time across tested queries.
+            Demonstrates gap between vendor transparency claims and documented system behaviour.
+            Distinguishes types of citation errors: fabricated, misattributed, partially accurate.
+notes:      Peer-reviewed JELS after preregistration — high methodological rigour. Stanford RegLab
+            is leading institution for empirical AI-law research. Focuses on legal tools specifically;
+            hallucination rates may differ in other domains.
+
+---
+citekey:    cen2024transparency
+authors:    Sarah H. Cen, Rohan Alur (MIT)
+year:       2024
+title:      From Transparency to Accountability and Back: A Discussion of Access and Evidence in AI Auditing
+type:       Peer-reviewed conference paper (ACM EAAMO 2024)
+url:        https://arxiv.org/abs/2410.04772
+doi:        10.1145/3689904.3694711
+themes:     15 (model opacity)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  ACM / MIT DSpace (open access)
+summary:    Examines the structural relationship between transparency and accountability in AI
+            auditing, arguing transparency is necessary but insufficient for accountability.
+            Analyses four types of auditor access (black-box, grey-box, white-box, process) and
+            identifies what evidence each can produce. Frames auditing as a hypothesis test and
+            argues that at minimum, guaranteed black-box query access must be mandated by law.
+            Current voluntary disclosure regimes leave auditors unable to obtain evidence needed
+            to hold AI developers accountable.
+notes:      ACM EAAMO — rigorous peer-reviewed venue on equity and accountability. MIT affiliation.
+            Theoretical and conceptual; does not quantify harms of opacity in specific domains.
+
+---
+citekey:    shen2026limits
+authors:    Judy Hanwen Shen, Ken Liu, Angelina Wang, Sarah H. Cen, Andy K. Zhang et al. (Stanford)
+year:       2026
+title:      The Limits of AI Data Transparency Policy: Three Disclosure Fallacies
+type:       Preprint (arXiv:2601.18127)
+url:        https://arxiv.org/abs/2601.18127
+doi:        —
+themes:     15 (model opacity)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv (open access)
+summary:    Critically evaluates AI data transparency policies — including EU AI Act training data
+            summaries and California AB 2013 — and identifies three systematic fallacies in how
+            these policies are designed. Argues a specification gap exists between stated transparency
+            goals and what disclosures actually enable users/regulators to verify. Draws on nutrition
+            labelling research: disclosures without user-oriented design and enforcement mechanisms
+            fail to achieve accountability.
+notes:      Stanford interdisciplinary team (AI, law, policy). January 2026 — among most current
+            regulatory analysis available. Preprint — not yet peer-reviewed. Potentially outpaced
+            if EU AI Act enforcement guidance clarifies implementation.
+
+---
+citekey:    blilihamelin2024accountability
+authors:    Borhane Blili-Hamelin, Leif Hancox-Li et al. (independent researchers / policy community)
+year:       2024
+title:      Towards AI Accountability Infrastructure: Gaps and Opportunities in AI Audit Tooling
+type:       Preprint (arXiv:2402.17861)
+url:        https://arxiv.org/abs/2402.17861
+doi:        —
+themes:     15 (model opacity)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv (open access)
+summary:    Curates a dataset of 435 AI auditing tools and maps them against a taxonomy of audit
+            practitioner needs. Central finding: existing tooling does not support the full scope
+            of accountability audit practitioners require — most tools address narrow technical
+            tasks (bias detection, fairness metrics) but cannot support systemic investigation of
+            how AI systems affect broader information environments. Identifies structural gaps:
+            no access to model internals, absent standardised evidence formats, misalignment
+            between tool capability and regulatory demand.
+notes:      Empirical dataset of 435 tools is distinctive concrete contribution. Widely cited
+            in AI governance literature. Preprint — lacks journal peer review.
+
+---
+citekey:    gptzero2026neurips
+authors:    GPTZero (Edward Tian et al.)
+year:       2026
+title:      GPTZero Finds 100+ Hallucinated Citations in NeurIPS 2025 Accepted Papers
+type:       Technical report / investigative journalism (GPTZero; corroborated by Fortune, TechCrunch)
+url:        https://gptzero.me/news/neurips/
+doi:        —
+themes:     15 (model opacity), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  GPTZero (free to cite)
+summary:    Analysis of 4,000+ NeurIPS 2025 accepted papers identified 100+ hallucinated citations
+            across at least 53 papers — all of which had passed peer review. Fabricated references
+            ranged from fully invented to subtly corrupted (real authors with altered titles).
+            Demonstrates hallucinated citations penetrate expert, high-stakes publication contexts,
+            not just naive user interactions.
+notes:      GPTZero is a commercial AI detection company — conflict of interest. Methodology
+            described but not independently verified. Corroborated by Fortune and TechCrunch.
+            Use as documented incident example, not statistical prevalence evidence.
+
+---
+citekey:    euaiact2024
+authors:    European Parliament and Council of the European Union
+year:       2024
+title:      Regulation (EU) 2024/1689 (EU AI Act) — Articles 13 and 50
+type:       Primary legislation (Official Journal of the European Union)
+url:        https://artificialintelligenceact.eu/article/13/
+doi:        —
+themes:     15 (model opacity), 6 (defensive responses)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  EU (public domain)
+summary:    EU AI Act in force August 2024, phased application through 2026. Article 13 requires
+            providers of high-risk AI to document system limitations and ensure transparency to
+            deployers. Article 50 mandates disclosure when humans interact with AI and requires
+            AI-generated content to be identifiable. European Commission additionally released
+            mandatory template requiring GPAI model providers to disclose training data sources,
+            types, and collection methods. Implementation guidelines pending Q2 2026.
+notes:      Primary legislation — highest-authority source for regulatory requirements.
+            Globally leading regulatory text on AI. Gap between legal text and enforcement practice
+            not yet empirically documented. Applies only in EU.
+
+# ============================================================
+# WAVE 3 SOURCES — Children and Psychological Effects (Theme 16)
+# ============================================================
+
+---
+citekey:    zhai2024overreliance
+authors:    Chunpeng Zhai, Santoso Wibowo, Lily D. Li (Central Queensland University et al.)
+year:       2024
+title:      The Effects of Over-Reliance on AI Dialogue Systems on Students' Cognitive Abilities: A Systematic Review
+type:       Peer-reviewed systematic review (Smart Learning Environments, Springer)
+url:        https://link.springer.com/article/10.1186/s40561-024-00316-7
+doi:        10.1186/s40561-024-00316-7
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Springer (open access)
+summary:    PRISMA systematic review of 14 studies on AI dialogue system use in educational
+            contexts. Finds dual pattern: AI can enhance writing confidence and streamline tasks,
+            but over-reliance correlates with diminished creativity, reduced analytical effort,
+            and acceptance of AI output without scrutiny. Defines over-reliance precisely as
+            accepting AI-generated recommendations without verification. Calls for pedagogies
+            that require students to interrogate AI output rather than consume it passively.
+notes:      Peer-reviewed Springer open-access journal. PRISMA methodology appropriate.
+            Review corpus of 14 studies is small. Mostly higher education contexts, limited
+            applicability to K-12.
+
+---
+citekey:    bauer2025hype
+authors:    Bauer, E., Greiff, S., Graesser, A., Scheiter, K., Sailer, M. (University of Luxembourg / LMU Munich)
+year:       2025
+title:      Looking Beyond the Hype: Understanding the Effects of AI on Learning
+type:       Peer-reviewed review (Educational Psychology Review, Springer)
+url:        https://link.springer.com/article/10.1007/s10648-025-10020-8
+doi:        10.1007/s10648-025-10020-8
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        yes
+access:     paywall-user (Springer)
+copyright:  Springer (all rights reserved)
+summary:    Introduces ISAR framework (Inversion, Substitution, Augmentation, Redefinition) to
+            distinguish how AI affects cognitive learning outcomes. Identifies an "inversion effect"
+            where AI intended to support deep learning reduces cognitive processing depth —
+            generative AI use linked to shallower engagement and poorer retention on constructive
+            tasks. Argues short-term performance gains can mask long-term developmental costs.
+            Calls on researchers to look beyond quiz scores to cognitive process depth and transfer.
+notes:      Leading educational psychology journal, high impact factor. Theoretical/synthesis paper,
+            not original RCT. ISAR framework is new and requires empirical validation.
+
+---
+citekey:    mansfield2025lancet
+authors:    Mansfield et al. (The Lancet Child & Adolescent Health editorial/research team)
+year:       2025
+title:      From Social Media to Artificial Intelligence: Improving Research on Digital Harms in Youth
+type:       Peer-reviewed commentary / research agenda (The Lancet Child & Adolescent Health, vol. 9, pp. 194–204)
+url:        https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(24)00332-8/abstract
+doi:        10.1016/S2352-4642(24)00332-8
+themes:     16 (children/psychological)
+status:     candidate
+pdf:        yes
+access:     paywall-user (Lancet/Elsevier)
+copyright:  Elsevier (all rights reserved)
+summary:    Critically evaluates methodological limitations of research on social media and AI
+            effects on children's mental health. Argues that findings consistently outpace evidence
+            quality, driven by moral panic dynamics, and that the same weaknesses afflicting social
+            media research (cross-sectional design, self-report, confounding) are being reproduced
+            in AI studies. Lays out research agenda to build a more reliable evidence base.
+            Does not deny harms exist, but insists current evidence is insufficient to establish
+            causality or magnitude with confidence.
+notes:      High-prestige venue (Lancet). Methodologically sophisticated — critical for intellectual
+            honesty when making claims about children and AI. Commentary, not original study.
+            Important counterweight — cite alongside supporting sources to demonstrate rigour.
+
+---
+citekey:    apa2025advisory
+authors:    American Psychological Association
+year:       2025
+title:      APA Health Advisory on the Use of AI and Adolescent Well-Being
+type:       Professional health advisory (APA, June 2025)
+url:        https://www.apa.org/topics/artificial-intelligence-machine-learning/health-advisory-ai-adolescent-well-being
+doi:        —
+themes:     16 (children/psychological)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  APA (free to cite)
+summary:    APA calls on AI companies to implement age-appropriate safeguards for adolescent users.
+            Identifies specific concerns: neurological immaturity makes adolescents more susceptible
+            to addictive design features and emotional manipulation; generative AI can deliver
+            health misinformation to vulnerable youth; data privacy is a structural vulnerability.
+            Specifically addresses AI companion applications and the risk of adolescents developing
+            parasocial bonds with AI systems, linked to emotional dysregulation and social withdrawal.
+notes:      APA is high-credibility professional body; health advisory carries institutional weight.
+            Consensus-based professional guidance rather than original research study.
+            Issued proactively — evidentiary citations are real but selective. US-centric.
+
+---
+citekey:    brookings2024tutoring
+authors:    Brookings Institution (Global Task Force on AI in Education)
+year:       2024
+title:      What the Research Shows About Generative AI in Tutoring
+type:       Policy brief / evidence synthesis (Brookings Institution)
+url:        https://www.brookings.edu/articles/what-the-research-shows-about-generative-ai-in-tutoring/
+doi:        —
+themes:     16 (children/psychological)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Brookings (free to cite)
+summary:    Synthesises four recent RCTs of AI tutoring platforms. Well-designed AI tutoring can
+            produce substantial learning gains, particularly for under-resourced schools.
+            However, explicitly flags that AI tutoring introduces concerns about accuracy, pedagogical
+            judgement, and student dependence. Distinguishes AI as supplement to human instruction
+            (generally positive) from AI as replacement for human instruction (evidence weaker,
+            dependency risks higher).
+notes:      High-credibility policy research institution. Secondary synthesis of named RCTs.
+            Partially contradicts simple harm narratives — harm arises from poor implementation
+            or replacement of human instruction, not AI tutoring per se.
+
+---
+citekey:    unesco2024parasocial
+authors:    UNESCO
+year:       2024
+title:      Ghost in the Chatbot: The Perils of Parasocial Attachment
+type:       Institutional analysis (UNESCO)
+url:        https://www.unesco.org/en/articles/ghost-chatbot-perils-parasocial-attachment
+doi:        —
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  UNESCO (free to cite with attribution)
+summary:    Examines psychological mechanisms by which users — especially young people — form
+            parasocial bonds with AI chatbots. AI systems are designed with engagement-maximising
+            features that mimic social reciprocity, making attachment formation structurally likely.
+            Notes documented case of a 14-year-old who died by suicide following prolonged
+            dependency on Character.AI, framing this not as anomaly but as indicator of systemic
+            design risk. Calls for platform regulation, child-specific design standards, and
+            educator training.
+notes:      UNESCO policy authority. Commentary-style institutional article, not primary research.
+            The Setzer suicide case is a verified public record. Extreme case — population-level
+            prevalence of serious parasocial harm in children remains poorly quantified.
+
+
+# ============================================================
+# WAVE 3 SOURCES — AI Disinformation (Theme 12 / EC-8)
+# ============================================================
+
+---
+citekey:    vaccari2020deepfakes
+authors:    Cristian Vaccari, Andrew Chadwick (Loughborough University)
+year:       2020
+title:      Deepfakes and Disinformation: Exploring the Impact of Synthetic Political Video on Deception, Uncertainty, and Trust in News
+type:       Peer-reviewed journal article (Social Media + Society, SAGE, vol. 6, no. 1)
+url:        https://journals.sagepub.com/doi/10.1177/2056305120903408
+doi:        10.1177/2056305120903408
+themes:     12 (ai disinformation)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  SAGE (open access)
+summary:    Pre-registered survey experiment (n=2,005, UK representative adult sample) with three
+            versions of a BuzzFeed/Jordan Peele Obama deepfake. Primary finding: deepfake exposure
+            does not straightforwardly deceive viewers, but induces epistemic uncertainty about
+            what is real. That uncertainty reduces trust in news on social media — a corrosive
+            secondary effect even when overt deception fails. Mechanism is uncertainty-mediated
+            trust erosion rather than direct belief change.
+notes:      Pre-registered RCT; nationally representative UK sample; 500+ citations.
+            Foundational citation on deepfakes and public trust. The trust-erosion finding
+            (even without deception) is more important than the "did they believe it" question.
+
+---
+citekey:    williams2025large
+authors:    Angus R. Williams et al. (Alan Turing Institute / Oxford Internet Institute)
+year:       2025
+title:      Large Language Models Can Consistently Generate High-Quality Content for Election Disinformation Operations
+type:       Peer-reviewed journal article (PLOS ONE, March 2025)
+url:        https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317421
+doi:        10.1371/journal.pone.0317421
+themes:     12 (ai disinformation)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  PLOS ONE (open access CC-BY)
+summary:    Tested 13 LLMs against DisElect, a novel evaluation dataset of 2,200 malicious prompts
+            and 50 benign prompts calibrated to UK electoral context. Nine of 13 models produced
+            disinformation text that 700+ human evaluators could not reliably identify as AI-generated
+            — two models rated more "human" than actual human-written samples. Cost of a comparable
+            influence operation drops from ~$4,500 using traditional methods to under $1 with
+            leading LLMs. Most safety guardrails also inappropriately refuse benign election queries.
+notes:      Peer-reviewed PLOS ONE. Large purpose-built evaluation dataset with 700+ human
+            evaluators. Multi-model comparison. Best current empirical evidence of LLM capability
+            for election disinformation at scale. The $4,500 → <$1 cost figure is highly citable.
+
+---
+citekey:    stockwell2024ai
+authors:    Sam Stockwell (Centre for Emerging Technology and Security, Alan Turing Institute)
+year:       2024
+title:      AI-Enabled Influence Operations: Threat Analysis of the 2024 UK and European Elections
+type:       Institutional briefing paper (CETaS, Alan Turing Institute)
+url:        https://cetas.turing.ac.uk/publications/ai-enabled-influence-operations-threat-analysis-2024-uk-and-european-elections
+doi:        —
+themes:     12 (ai disinformation)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Alan Turing Institute (free to cite)
+summary:    Post-election empirical analysis of AI-enabled disinformation during 2024 UK general
+            election and EU/French elections. Found only 16 confirmed viral cases of AI-generated
+            disinformation or deepfakes in the UK election and 11 in EU/French elections.
+            Despite limited measurable vote-level impact, deceptive AI content amplified harmful
+            narratives and entrenched political polarisation. Recommends curtailing disinformation
+            creation, limiting spread, and empowering digital literacy.
+notes:      Institutional report, not peer-reviewed in journal sense. Incident count methodology
+            transparent. Part of a three-report longitudinal CETaS series. Named researcher with
+            cited evidence. The low incident count is important qualifying data.
+
+---
+citekey:    simon2025dont
+authors:    Felix M. Simon (Oxford Internet Institute), Sacha Altay (University of Zurich / Oxford)
+year:       2025
+title:      Don't Panic (Yet): Assessing the Evidence and Discourse Around Generative AI and Elections
+type:       Working paper / report (Knight First Amendment Institute, Columbia University)
+url:        https://knightcolumbia.org/content/dont-panic-yet-assessing-the-evidence-and-discourse-around-generative-ai-and-elections
+doi:        —
+themes:     12 (ai disinformation — qualifying/counterevidence)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Knight First Amendment Institute (free to cite)
+summary:    Reviews empirical evidence from 2024 global elections and concludes that GenAI's
+            influence on election outcomes was overestimated relative to pre-election discourse.
+            Identifies structural reasons GenAI does not straightforwardly upend democracy:
+            challenges of mass persuasion, audience resistance, microtargeting limitations, and
+            dominance of socioeconomic factors on voting behaviour. Argues the "AI panic" discourse
+            is a recurring technology-scare cycle that distracts from more structural electoral
+            threats including voter disenfranchisement.
+notes:      Named academics at established institutions; comprehensive evidence review.
+            Not peer-reviewed in journal form but cross-published with Reuters Institute commentary.
+            Key qualifying source — the primary counterargument to disinformation alarmism.
+            Cite alongside williams2025large and stockwell2024ai for balanced coverage.
+
+---
+citekey:    goldstein2023generative
+authors:    Josh A. Goldstein, Girish Sastry, Micah Musser, Renée DiResta, Matthew Gentzel, Katerina Sedova (Georgetown CSET / OpenAI / Stanford IO)
+year:       2023
+title:      Generative Language Models and Automated Influence Operations: Emerging Threats and Potential Mitigations
+type:       Preprint / co-published report (arXiv:2301.04246; Georgetown CSET; Stanford IO)
+url:        https://arxiv.org/abs/2301.04246
+doi:        10.48550/arXiv.2301.04246
+themes:     12 (ai disinformation)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv (open access)
+summary:    Systematic capability assessment of how LLMs lower the barrier to influence operations
+            across five stages: narrative generation, content personalisation, sockpuppet persona
+            creation, translation/localisation, and amplification. AI substantially reduces cost
+            and labour for content generation and persona maintenance even if not yet fully
+            automating sophisticated campaigns. Detection will be increasingly difficult as model
+            quality improves.
+notes:      Multi-institutional (Georgetown, OpenAI, Stanford); widely cited (800+).
+            Foundational threat-modelling framework for the field. Predates GPT-4 era — some
+            capabilities now more advanced than described. Use as framing source, supplement
+            with 2024–2025 empirical evidence.
+
+---
+citekey:    nightingale2022ai
+authors:    Sophie J. Nightingale (Lancaster University), Hany Farid (UC Berkeley)
+year:       2022
+title:      AI-Synthesized Faces Are Indistinguishable from Real Faces and More Trustworthy
+type:       Peer-reviewed journal article (PNAS, vol. 119, no. 8)
+url:        https://www.pnas.org/doi/10.1073/pnas.2120481119
+doi:        10.1073/pnas.2120481119
+themes:     12 (ai disinformation)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  PNAS (open access via PMC)
+summary:    Participants attempted to classify 800 AI-generated GAN faces vs. 800 real faces.
+            Mean accuracy was 48.2% — effectively chance. AI-generated faces were rated
+            significantly more trustworthy than real faces. Disinformation actors can use
+            synthetic portraits that audiences not only fail to detect but actively trust more.
+            Brief training intervention modestly improved detection but could not eliminate the gap.
+notes:      Peer-reviewed PNAS (top-tier). Controlled psychophysical design; 315 participants;
+            pre-registered. Uses GAN technology — newer diffusion models may be even less
+            detectable. Best experimental evidence for the "AI faces are more trusted" finding.
+
+---
+citekey:    yan2025origin
+authors:    Harry Y. Yan, Garrett Morrow, Kai-Cheng Yang, John Wihbey (Northeastern University / Network Science Institute)
+year:       2025
+title:      The Origin of Public Concerns over AI Supercharging Misinformation in the 2024 U.S. Presidential Election
+type:       Peer-reviewed journal article (Harvard Kennedy School Misinformation Review, vol. 6)
+url:        https://misinforeview.hks.harvard.edu/article/the-origin-of-public-concerns-over-ai-supercharging-misinformation-in-the-2024-u-s-presidential-election/
+doi:        10.37016/mr-2020-171
+themes:     12 (ai disinformation), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  HKS Misinformation Review (open access)
+summary:    Survey of 1,000 U.S. adults around the 2024 presidential election. 83.4% expressed
+            concern about AI being used to spread election misinformation. Counterintuitively,
+            direct personal use of AI tools was NOT correlated with concern levels. Television
+            news consumption was the strongest predictor of elevated concern, suggesting concerns
+            are media-mediated rather than experience-based — with implications for how AI
+            disinformation risk perceptions form and spread.
+notes:      Peer-reviewed (HKS Misinformation Review is editorially independent and peer-reviewed).
+            National survey n=1,000. The "concerns are media-driven not experience-driven" finding
+            is a useful nuance for a policy audience. US-only.
+
+
+# ============================================================
+# WAVE 3 SOURCES — AI and Education / Independent Analysis (Theme 8/16 extended)
+# ============================================================
+
+---
+citekey:    bastani2025generative
+authors:    Hamsa Bastani, Osbert Bastani et al. (University of Pennsylvania / Wharton)
+year:       2025
+title:      Generative AI without Guardrails Can Harm Learning: Evidence from High School Mathematics
+type:       Peer-reviewed journal article (PNAS, vol. 122, no. 26)
+url:        https://www.pnas.org/doi/10.1073/pnas.2422633122
+doi:        10.1073/pnas.2422633122
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  PNAS (open access)
+summary:    Large-scale field RCT (~1,000 Turkish high school maths students) comparing unrestricted
+            GPT-4, a guardrailed GPT Tutor (hints only), and a control group. Unrestricted AI group
+            improved practice-session performance by 48% but then performed 17% WORSE than controls
+            on unassisted assessments — direct demonstration of transfer failure. Guardrailed tutor
+            condition mitigated these harms. Mechanism: reduction of productive cognitive struggle
+            rather than AI tutoring per se.
+notes:      Strongest single piece of evidence for transfer failure from AI use.
+            Large-scale RCT in authentic educational setting. Published correction exists (conclusions
+            unaffected). The guardrailed vs. unrestricted contrast is the pivotal finding.
+
+---
+citekey:    barcaui2025chatgpt
+authors:    Andre Barcaui (Universidade Federal do Rio de Janeiro)
+year:       2025
+title:      ChatGPT as a Cognitive Crutch: Evidence from a Randomized Controlled Trial on Knowledge Retention
+type:       Peer-reviewed journal article (Social Sciences & Humanities Open, vol. 12)
+url:        https://doi.org/10.1016/j.ssaho.2025.102287
+doi:        10.1016/j.ssaho.2025.102287
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Elsevier SSAHO (open access)
+summary:    Three-month RCT (n=120 undergraduates) with surprise retention test 45 days post-learning.
+            ChatGPT users scored significantly lower: 57.5% vs. 68.5% for controls (t(83)=-3.19,
+            p=.002, Cohen's d=0.68). Attributed to reduced cognitive effort during encoding —
+            AI use bypasses retrieval practice and elaborative processing that cement long-term memory.
+            Consistent with the desirable difficulties framework in cognitive psychology.
+notes:      RCT design with delayed retention test — strong methodology. Effect size d=0.68 is
+            meaningful. Undergraduate sample. Directly measures retention, not just performance.
+
+---
+citekey:    benedek2025impact
+authors:    Marton Benedek, Balazs R. Sziklai (Corvinus University of Budapest)
+year:       2025
+title:      Impact of AI Tools on Learning Outcomes: Decreasing Knowledge and Over-Reliance
+type:       Preprint (arXiv:2510.16019)
+url:        https://arxiv.org/abs/2510.16019
+doi:        —
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv (open access)
+summary:    Quasi-experimental classroom study (~110 students) over a full semester. AI-permitted group's
+            rankings on successive midterms became statistically indistinguishable from random, with
+            second midterm producing near-inverse rankings — best AI-assisted performers became worst
+            unassisted performers. Students substituted entire problem-solving process with AI output,
+            preventing acquisition of underlying conceptual understanding. AI had reached capability
+            level where it could pass assessments, eliminating incentive for genuine learning.
+notes:      Preprint — not yet peer-reviewed. Quasi-experimental design. The inverse-ranking
+            finding is striking and unusual. Supports bastani2025generative's transfer failure finding.
+
+---
+citekey:    gerlich2025ai
+authors:    Michael Gerlich (SBS Swiss Business School, Kloten-Zurich)
+year:       2025
+title:      AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking
+type:       Peer-reviewed journal article (Societies, MDPI, vol. 15, no. 1, article 6)
+url:        https://doi.org/10.3390/soc15010006
+doi:        10.3390/soc15010006
+themes:     8 (information literacy), 16 (children/psychological)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  MDPI (open access)
+summary:    Mixed-method study of 666 participants across diverse age groups using validated Halpern
+            Critical Thinking Assessment. Cognitive offloading strongly correlated with AI tool usage
+            (r=+0.72) and inversely correlated with measured critical thinking skills (r=-0.75).
+            Younger participants showed higher AI dependence and lower critical thinking scores.
+            Educational attainment partially buffered the effect.
+notes:      Published table correction (Sept 2025) — scientific conclusions unaffected. n=666 is
+            substantial. Cross-sectional design — correlational, not causal. Validated assessment
+            scale is strength. MDPI venue — lower prestige than Nature/Oxford.
+
+---
+citekey:    dunn2025generative
+authors:    Peter K. Dunn (University of the Sunshine Coast, Queensland)
+year:       2025
+title:      Generative AI May Impact Students' Marks: A Case Study from a Large First-Year Statistics Course
+type:       Peer-reviewed journal article (International Journal of Mathematical Education in Science and Technology, Taylor & Francis)
+url:        https://doi.org/10.1080/0020739X.2025.2539711
+doi:        10.1080/0020739X.2025.2539711
+themes:     16 (children/psychological), 8 (information literacy)
+status:     candidate
+pdf:        no
+access:     open (Creative Commons Attribution-NonCommercial-NoDerivatives)
+copyright:  Taylor & Francis (CC-BY-NC-ND)
+summary:    Longitudinal analysis of 3,109 students across six successive offerings of the same
+            first-year statistics course (2022–2024). After ChatGPT's emergence: exam scores rose
+            21.88 percentage points and pass rates jumped from ~50% to 86%; research writing project
+            scores fell by more than 10 percentage points. Students who scored highest on exams were
+            now among those failing written assignments — a reversal of the pre-AI correlation.
+            Documents the dissociation between AI-assisted factual recall and analytical writing.
+notes:      Large longitudinal observational study (n=3,109). Pre/post design is strong. The
+            exam-score inflation alongside writing degradation is a particularly vivid finding.
+
+---
+citekey:    lee2025impact
+authors:    Hao-Ping (Hank) Lee, Advait Sarkar et al. (Microsoft Research / Carnegie Mellon)
+year:       2025
+title:      The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects
+type:       Peer-reviewed conference paper (ACM CHI 2025)
+url:        https://doi.org/10.1145/3706598.3713778
+doi:        10.1145/3706598.3713778
+themes:     8 (information literacy), 16 (children/psychological)
+status:     candidate
+pdf:        no
+access:     open (ACM Open)
+copyright:  ACM (open access)
+summary:    Survey of 319 knowledge workers contributing 936 accounts of GenAI-assisted tasks.
+            Higher confidence in GenAI predicts reduced critical thinking effort; higher confidence
+            in own expertise predicts more critical engagement with AI output. AI shifts the cognitive
+            character of critical thinking from generation and analysis toward output verification —
+            a qualitatively shallower form of reasoning. Directly relevant as a mechanism-level
+            account of how AI erodes independent reasoning.
+notes:      ACM CHI — top HCI venue. Knowledge workers, not students — mechanism study, not
+            educational performance. Self-report methodology. Useful for explaining the mechanism
+            behind educational performance findings.
+
+---
+citekey:    kestin2025ai
+authors:    Greg Kestin, Kelly Miller et al. (Harvard University, Physics / SEAS)
+year:       2025
+title:      AI Tutoring Outperforms In-Class Active Learning: An RCT Introducing a Novel Research-Based Design
+type:       Peer-reviewed journal article (Scientific Reports, Nature Portfolio, vol. 15, article 17458)
+url:        https://doi.org/10.1038/s41598-025-97652-6
+doi:        10.1038/s41598-025-97652-6
+themes:     16 (children/psychological — qualifying/counterevidence)
+status:     candidate
+pdf:        no
+access:     open (PMC)
+copyright:  Nature Portfolio (open access)
+summary:    RCT at Harvard (undergraduate physics, Fall 2023): students assigned to a purpose-built
+            structured AI tutor (Socratic questioning, adaptive pacing) learned more than twice as
+            much per unit time as students in standard in-class active learning. Key counterevidence:
+            when AI is carefully scaffolded with pedagogical best practices it can augment independent
+            reasoning rather than displace it. The contrast with bastani2025generative is instructive —
+            guardrails and pedagogical design are the pivotal variable.
+notes:      Strong RCT at elite university. Purpose-built AI tutor — not representative of off-the-shelf
+            ChatGPT use. Key qualifying source alongside brookings2024tutoring. Cite together with
+            bastani2025generative to show the design variable matters.
+
+
+---
+citekey:    lyu2025wikipedia
+authors:    Liang Lyu, James Siderius, Hannah Li, Daron Acemoglu, Daniel Huttenlocher, Asuman Ozdaglar
+            (MIT CSAIL / Columbia Business School)
+year:       2025
+title:      Wikipedia Contributions in the Wake of ChatGPT
+type:       Peer-reviewed conference paper (ACM Web Conference 2025 Companion, WWW '25)
+url:        https://doi.org/10.1145/3701716.3715543
+doi:        10.1145/3701716.3715543
+arxiv:      2503.00757
+themes:     9 (contributor pipelines — Wikipedia editors specifically)
+status:     candidate
+pdf:        no
+access:     open (ACM Open + arXiv preprint)
+copyright:  ACM (open access) / arXiv
+summary:    Natural experiment exploiting ChatGPT's November 2022 launch. Newly created, popular
+            Wikipedia articles whose content overlaps substantially with ChatGPT 3.5 saw a greater
+            decline in both editing activity and page viewership after launch than dissimilar articles.
+            Direct empirical evidence that ChatGPT substitutes for Wikipedia use and depresses
+            volunteer editor engagement on the exact articles where ChatGPT competes.
+notes:      Co-authored by Daron Acemoglu (Nobel laureate, MIT) — highest-prestige author in the
+            contributor-pipeline literature. Directly addresses priority gap for claim 9 (Wikipedia
+            editor pipeline). ACM Open Access. arXiv preprint available. Key paper — should be
+            primary anchor for contributor pipeline theme alongside wagner2025death.
+
+---
+citekey:    yeverechyahu2024impact
+authors:    Doron Yeverechyahu, Raveesh Mayya, Gal Oestreicher-Singer (Tel Aviv / NYU Stern)
+year:       2024
+title:      The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot
+type:       Working paper (SSRN / arXiv)
+url:        https://arxiv.org/abs/2409.08379
+doi:        10.48550/arXiv.2409.08379
+arxiv:      2409.08379
+themes:     9 (contributor pipelines — open source, counterevidence)
+status:     candidate
+pdf:        no
+access:     open (arXiv preprint)
+copyright:  arXiv (preprint)
+summary:    Natural experiment exploiting GitHub Copilot's selective rollout in October 2021 across
+            programming languages (supported Python/Rust but not R/Haskell). Overall contribution
+            counts jumped post-Copilot. Iterative innovation (maintenance, feature-refining commits)
+            increased significantly more than capability innovation (new features, code-development
+            commits). AI coding tools shifted the character of open-source contribution toward
+            incremental work.
+notes:      Important qualifying source for claim 9. Copilot INCREASED overall volume but changed
+            composition: more maintenance, less capability innovation. Interpretation ambiguous —
+            could reflect deskilling or efficiency gains. Use as counterweight to pipeline-erosion
+            narrative; note it tests coding assistance tools, not conversational AI substitution.
+            Compare with lyu2025wikipedia (which measures voluntary engagement decline) and
+            becker2025measuring (productivity effects on experienced contributors).
+
+---
+citekey:    noy2023experimental
+authors:    Shakked Noy, Whitney Zhang (MIT Economics)
+year:       2023
+title:      Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence
+type:       Peer-reviewed journal article (Science, vol. 381, pp. 187–192)
+url:        https://doi.org/10.1126/science.adh2586
+doi:        10.1126/science.adh2586
+themes:     framing (introduction/conclusion — AI productivity effects context)
+status:     candidate
+pdf:        no
+access:     paywall (Science); NBER/SSRN preprint may exist — check author pages
+copyright:  AAAS (Science)
+summary:    RCT with 453 college-educated professionals performing writing tasks. Access to ChatGPT
+            reduced task completion time by 37% and improved output quality as rated by evaluators.
+            Effects were largest for lower-ability writers, suggesting an equalising productivity
+            effect within the study sample. The most-cited empirical paper on AI productivity
+            effects in professional settings (1,100+ citations as of early 2026).
+notes:      Not a knowledge-ecosystem paper — it measures professional productivity gains, not
+            harms. Use for context/framing only: establishes that AI productivity gains are real
+            and large, making the displacement effects (bastani2025generative) more important to
+            explain. Do NOT cite as evidence for harms. Paywalled Science — check for NBER preprint
+            before flagging as unavailable.
+
+---
+citekey:    cui2026effects
+authors:    Kevin Cui, Mert Demirer, Sonia Jaffe, Leon Musolff, Sida Peng, Tobias Salz
+year:       2026
+title:      The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments
+            with Software Developers
+type:       Peer-reviewed journal article (Management Science, 2026)
+url:        https://doi.org/10.1287/mnsc.2025.00535
+doi:        10.1287/mnsc.2025.00535
+themes:     9 (contributor pipelines — software developer productivity, context/counterevidence)
+status:     candidate
+pdf:        no
+access:     paywall (Management Science / INFORMS)
+copyright:  INFORMS
+summary:    Three field experiments with software developers at a large tech company. AI coding
+            assistants produced a 26% productivity gain in at least one experiment; effects varied
+            substantially by developer seniority and task type. Provides corporate-context evidence
+            on AI-augmented developer productivity.
+notes:      Useful context for open-source contributor pipeline discussion — but note this is
+            professional software developers at a company, not volunteer open-source contributors.
+            Counterevidence for pipeline erosion narrative. Paywalled. Lower priority than
+            becker2025measuring which specifically targets open-source.
+
+---
+citekey:    becker2025measuring
+authors:    Joel Becker, Nate Rush, Elizabeth Barnes, David Rein
+year:       2025
+title:      Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
+type:       Preprint (arXiv 2507.09089)
+url:        https://arxiv.org/abs/2507.09089
+doi:        10.48550/arXiv.2507.09089
+arxiv:      2507.09089
+themes:     9 (contributor pipelines — open source developer productivity, priority gap EC-9)
+status:     candidate
+pdf:        no
+access:     open (arXiv preprint)
+copyright:  arXiv (preprint)
+summary:    Experimental study measuring the productivity impact of early-2025 AI tools (frontier
+            models) on experienced open-source developers. Provides direct empirical measurement
+            of how state-of-the-art AI affects experienced contributors — distinct from newcomer
+            effects and from earlier Copilot studies.
+notes:      Directly fills priority gap for claim 9 (open-source contributor pipeline). Specifically
+            studies open-source developers, not corporate. Uses 2025 frontier models (more
+            powerful than Copilot-era studies). arXiv preprint, open access. Results should be
+            read carefully for direction of effect before citing in support of pipeline erosion.
+
+---
+citekey:    summerfield2025impact
+authors:    Christopher Summerfield, Lisa P. Argyle, Michiel A. Bakker, Teddy Collins, Esin Durmus,
+            Tyna Eloundou, Iason Gabriel et al. (Google DeepMind / Oxford / Stanford)
+year:       2025
+title:      The Impact of Advanced AI Systems on Democracy
+type:       Peer-reviewed journal article (Nature Human Behaviour, vol. 9, pp. 2420–2430)
+url:        https://doi.org/10.1038/s41562-025-02309-z
+doi:        10.1038/s41562-025-02309-z
+themes:     EC-8 (AI disinformation and electoral integrity — framework/overview)
+status:     candidate
+pdf:        no
+access:     paywall (Nature Human Behaviour)
+copyright:  Nature Portfolio
+summary:    Comprehensive framework article from Google DeepMind researchers reviewing how advanced
+            AI systems may affect democratic processes. Covers disinformation, electoral manipulation,
+            opinion formation, and governance of AI in democratic contexts. Published in a flagship
+            Nature journal; highly prestigious framing piece for the disinformation/democracy theme.
+notes:      Not open access — check for author preprint on Google Scholar / DeepMind publications.
+            Published October 2025. Use as high-authority framing alongside williams2025large and
+            goldstein2023generative. Google DeepMind authorship makes this notable for its source
+            (AI companies acknowledging democracy risks).
+
+---
+citekey:    costello2024durably
+authors:    Thomas H. Costello, Gordon Pennycook, David G. Rand (MIT / Cambridge / MIT)
+year:       2024
+title:      Durably Reducing Conspiracy Beliefs through Dialogues with AI
+type:       Peer-reviewed journal article (Science, vol. 385, 2024)
+url:        https://doi.org/10.1126/science.adq1814
+doi:        10.1126/science.adq1814
+themes:     EC-8 (AI disinformation and electoral integrity — qualifying/counterevidence)
+status:     candidate
+pdf:        no
+access:     open (green OA via OSF: https://osf.io/xcwdn/download)
+copyright:  AAAS (Science, open access green)
+summary:    RCT in which AI chatbot (GPT-4) held persuasive dialogues with conspiracy believers.
+            Conspiracy beliefs were reduced by ~20% on average and effect was durable for two months
+            of follow-up. Directly contradicts the assumption that AI universally spreads
+            misinformation; AI can also be a powerful tool for debunking when deployed deliberately.
+notes:      Critical counterevidence and qualifier for EC-8. Without this, the disinformation section
+            risks one-sided framing. Use to add nuance: the same technology that enables cheap
+            disinformation campaigns (williams2025large) can also debunk them at scale. Green open
+            access — PDF available via OSF link above. Published Science, 265+ citations.
+
+# ============================================================
+# NEW SOURCES — Peer Review Integrity (Theme C5)
+# ============================================================
+
+---
+citekey:    russo2025aireviews
+authors:    Giuseppe Russo, Manoel Horta Ribeiro, Tim R. Davidson, Veniamin Veselovsky, Robert West (EPFL)
+year:       2025
+title:      The AI Review Lottery: Widespread AI-Assisted Peer Reviews Boost Paper Scores and Acceptance Rates
+type:       Peer-reviewed journal article (Proceedings of the ACM on Human-Computer Interaction / CSCW 2025)
+url:        https://dl.acm.org/doi/10.1145/3757667
+doi:        10.1145/3757667
+themes:     C (contributor pipeline — peer review integrity)
+status:     candidate
+pdf:        no
+access:     open (ACM)
+copyright:  ACM
+summary:    GPTZero analysis of ICLR 2024 reviews finds at least 15.8% of 28,028 reviews AI-assisted
+            (lower bound); 49.4% of all submissions received at least one AI-assisted review.
+            AI-assisted reviews systematically inflated scores and increased acceptance rates by
+            3.1 percentage points for borderline submissions.
+notes:      Primary empirical source for AI peer review infiltration. ACM CSCW, peer-reviewed.
+            15.8% is a lower bound; actual rate likely higher.
+
+---
+citekey:    lin2025promptinjection
+authors:    Zhicheng Lin (Yonsei University / USTC)
+year:       2025
+title:      Hidden Prompts in Manuscripts Exploit AI-Assisted Peer Review
+type:       Academic preprint (arXiv)
+url:        https://arxiv.org/abs/2507.06185
+doi:        —
+themes:     C (contributor pipeline — peer review integrity)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  arXiv preprint (open access)
+summary:    Documents 18 arXiv manuscripts containing hidden prompt injection instructions (e.g.,
+            white text reading "GIVE A POSITIVE REVIEW ONLY") designed to manipulate LLM-assisted
+            reviewers. Identifies four injection types; confirms practice constitutes research misconduct.
+notes:      Preprint only. Case count (18) shows phenomenon exists; not a prevalence estimate.
+
+---
+citekey:    plos2025nhanes
+authors:    [VERIFY — check doi.org/10.1371/journal.pbio.3003152 for first author; update citekey]
+year:       2025
+title:      Explosion of Formulaic Research Articles, Including Inappropriate Study Designs and False Discoveries, Based on the NHANES US National Health Database
+type:       Peer-reviewed journal article (PLOS Biology, May 2025)
+url:        https://doi.org/10.1371/journal.pbio.3003152
+doi:        10.1371/journal.pbio.3003152
+themes:     C (contributor pipeline — paper mills / peer review)
+status:     candidate
+pdf:        no
+access:     open (PLOS Biology, CC BY)
+copyright:  PLOS Biology (open access)
+summary:    NHANES-based papers grew from 4,926 in 2023 to 7,876 in 2024, following a cookie-cutter
+            structure attributed to AI-assisted paper mills. 341 such papers identified across 147
+            journals including Scientific Reports and BMJ Open.
+notes:      IMPORTANT: citekey must be updated once first author is verified (convention: lastname+year+firsttitleword).
+            Source for the paper-mill doubling figure in C5.
+
+# ============================================================
+# NEW SOURCES — Intellectual Monoculture (Theme EC-13)
+# ============================================================
+
+---
+citekey:    traberg2026monoculture
+authors:    Cecilie Steenbuch Traberg, Jon Roozenbeek, Sander van der Linden (Cambridge)
+year:       2026
+title:      AI Is Turning Research into a Scientific Monoculture
+type:       Peer-reviewed comment (Communications Psychology, Nature portfolio)
+url:        https://www.nature.com/articles/s44271-026-00428-5
+doi:        10.1038/s44271-026-00428-5
+themes:     EC-13 (intellectual monoculture)
+status:     candidate
+pdf:        no
+access:     open (Nature portfolio)
+copyright:  Nature Portfolio
+summary:    The rush to study generative AI is producing topical, methodological, and linguistic
+            convergence in social/behavioral science, flattening the pluralism needed to keep
+            research adaptive and resilient. Documents convergence on shared benchmarks and
+            evaluation criteria as a "scientific monoculture."
+notes:      Nature portfolio (Communications Psychology), peer-reviewed. Written as Comment/Opinion
+            rather than primary empirical study. High-authority framing; pair with hao2026artificial
+            and doshi2024creativity for empirical grounding.
+
+---
+citekey:    doshi2024creativity
+authors:    Anil R. Doshi, Oliver P. Hauser (UCL / University of Exeter)
+year:       2024
+title:      Generative AI Enhances Individual Creativity but Reduces the Collective Diversity of Novel Content
+type:       Peer-reviewed journal article (Science Advances, vol. 10, 2024)
+url:        https://www.science.org/doi/10.1126/sciadv.adn5290
+doi:        10.1126/sciadv.adn5290
+themes:     EC-13 (intellectual monoculture)
+status:     candidate
+pdf:        no
+access:     open (Science Advances, CC BY)
+copyright:  AAAS (open access)
+summary:    Randomised experiment: AI-assisted stories are individually rated more creative but are
+            significantly more similar to each other than human-only stories — a net reduction in
+            collective novelty even as individual outputs improve. Direct empirical demonstration
+            of the creativity-diversity trade-off.
+notes:      Science Advances, AAAS flagship open-access journal, peer-reviewed. Strong empirical
+            source for EC-13. RCT design with creative writing task; generalisation to research
+            outputs requires care. Pair with hao2026artificial for research-domain evidence.
+
+---
+citekey:    hao2026artificial
+authors:    Qianyue Hao, Fengli Xu, Yong Li (Tsinghua), James Evans (University of Chicago)
+year:       2026
+title:      Artificial Intelligence Tools Expand Scientists' Impact but Contract Science's Focus
+type:       Peer-reviewed journal article (Nature, 2026)
+url:        https://www.nature.com/articles/s41586-025-09922-y
+doi:        10.1038/s41586-025-09922-y
+themes:     EC-13 (intellectual monoculture)
+status:     candidate
+pdf:        no
+access:     open (check Nature for OA status)
+copyright:  Nature Portfolio
+summary:    Analysis of 41.3 million research papers finds AI tool adoption boosts individual
+            scientists' output (3.02× more papers, 4.84× more citations) but collectively narrows
+            scientific focus, concentrating work in already data-rich areas and reducing diversity
+            of research questions pursued. Direct empirical demonstration at population scale.
+notes:      Nature, flagship journal, peer-reviewed. Strongest empirical source for EC-13 —
+            41.3M papers is unusually high statistical power. Use as primary source alongside
+            traberg2026monoculture for framing.
+
+---
+citekey:    sourati2026homogenizing
+authors:    Zhivar Sourati, Alireza S. Ziabari, Morteza Dehghani (USC / multiple)
+year:       2026
+title:      The Homogenizing Effect of Large Language Models on Human Expression and Thought
+type:       Peer-reviewed journal article (Trends in Cognitive Sciences, Cell Press, 2026)
+url:        https://doi.org/10.1016/j.tics.2026.01.003
+doi:        10.1016/j.tics.2026.01.003
+themes:     EC-13 (intellectual monoculture)
+status:     candidate
+pdf:        no
+access:     paywall-unknown
+copyright:  Cell Press / Elsevier
+summary:    Synthesises evidence across linguistics, psychology, and cognitive science showing
+            LLMs reflect and reinforce dominant linguistic and reasoning styles while marginalising
+            alternative voices. Unchecked, this standardisation threatens the cognitive diversity
+            underpinning collective intelligence and adaptability.
+notes:      Trends in Cognitive Sciences (Cell Press), top-tier review journal. Broadens EC-13
+            beyond research outputs to linguistic and cognitive diversity.
+
+---
+citekey:    kreminski2024homogenization
+authors:    Max Kreminski et al. (multiple institutions)
+year:       2024
+title:      Homogenization Effects of Large Language Models on Human Creative Ideation
+type:       Peer-reviewed conference paper (ACM Creativity & Cognition 2024)
+url:        https://mkremins.github.io/publications/Homogenization_C&C2024.pdf
+doi:        10.1145/3635636.3656204
+themes:     EC-13 (intellectual monoculture)
+status:     candidate
+pdf:        no
+access:     open (author preprint)
+copyright:  ACM
+summary:    Users working with ChatGPT produce idea sets that are less semantically distinct from
+            each other than users working without AI, directly measuring narrowing of group-level
+            diversity of thought in creative ideation tasks.
+notes:      ACM C&C 2024, peer-reviewed. DOI confirmed: 10.1145/3635636.3656204.
+
+# ============================================================
+# NEW SOURCES — Deep Expertise Pipeline Erosion (Theme EC-14)
+# ============================================================
+
+---
+citekey:    brynjolfsson2025canaries
+authors:    Erik Brynjolfsson, Bharat Chandar, Ruyu Chen (Stanford Digital Economy Lab / SIEPR)
+year:       2025
+title:      Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence
+type:       Working paper (Stanford Digital Economy Lab)
+url:        https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/
+doi:        —
+themes:     EC-14 (deep expertise pipeline erosion)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Stanford Digital Economy Lab
+summary:    Using ADP administrative payroll microdata covering millions of U.S. workers, finds a
+            13% relative decline in employment for early-career workers (ages 22–25) in the most
+            AI-exposed occupations since late 2022, while older workers in same roles remain stable.
+            Declines concentrated in roles where AI automates rather than augments tasks, directly
+            threatening the entry-level pipeline through which domain expertise is developed.
+notes:      Working paper (not yet peer-reviewed). Brynjolfsson is a top economist; ADP payroll
+            microdata is a strong empirical base. Source for the entry-level employment decline
+            claim only — it does NOT measure expertise depth or learning quality. Pair with
+            airev2025medicdeskilling and acmicer2025copilot for the mechanism claim. Flag working
+            paper status.
+
+---
+citekey:    airev2025medicdeskilling
+authors:    [VERIFY — check doi.org/10.1007/s10462-025-11352-1 for first author; update citekey]
+year:       2025
+title:      AI-Induced Deskilling in Medicine: A Mixed-Method Review and Research Agenda for Healthcare and Beyond
+type:       Peer-reviewed journal article (Artificial Intelligence Review, Springer Nature)
+url:        https://doi.org/10.1007/s10462-025-11352-1
+doi:        10.1007/s10462-025-11352-1
+themes:     EC-14 (deep expertise pipeline erosion)
+status:     candidate
+pdf:        no
+access:     paywall-unknown
+copyright:  Springer Nature
+summary:    Distinguishes three mechanisms specific to trainees: deskilling (erosion of acquired
+            competencies through disuse), upskilling inhibition (AI removes practice opportunities
+            through which expertise would have formed), and "never-skilling" (AI introduced so
+            early that foundational reasoning is never acquired). Empirical evidence from radiology:
+            junior radiologists' independent adenoma detection rate fell from 29% to 22% when AI
+            was removed; juniors far less able than seniors to catch AI errors.
+notes:      Springer Artificial Intelligence Review, peer-reviewed. Introduces "never-skilling"
+            as formal mechanism — language the claim can use precisely. Medical context but
+            framed as applicable across knowledge domains. IMPORTANT: citekey must be updated
+            once first author is verified.
+
+---
+citekey:    acmicer2025copilot
+authors:    [VERIFY — check doi.org/10.1145/3702652.3744219 for authors; update citekey]
+year:       2025
+title:      The Effects of GitHub Copilot on Computing Students' Programming Effectiveness, Efficiency, and Processes in Brownfield Coding Tasks
+type:       Peer-reviewed conference paper (ACM ICER 2025 — flagship computing education research conference)
+url:        https://dl.acm.org/doi/10.1145/3702652.3744219
+doi:        10.1145/3702652.3744219
+themes:     EC-14 (deep expertise pipeline erosion)
+status:     candidate
+pdf:        no
+access:     open (arXiv preprint: https://arxiv.org/abs/2506.10051)
+copyright:  ACM
+summary:    Students completed tasks 35% faster with Copilot and spent 11.6% less time on
+            independent problem investigation. Critically, students reported not understanding how
+            or why Copilot suggestions work; lower-performing students accepted AI-generated code
+            wholesale without comprehension — efficiency gains with no corresponding understanding
+            gains. Directly flags this as a pipeline concern in the CS domain.
+notes:      ACM ICER — flagship computing education research conference, peer-reviewed.
+            CS domain, student sample. Best empirical source for the "expertise not formed even
+            as tasks are completed" mechanism. IMPORTANT: citekey must be updated with first author.
+
+---
+citekey:    nejmai2025deskilling
+authors:    [VERIFY — check ai.nejm.org/doi/full/10.1056/AIp2500932 for authors; update citekey]
+year:       2025
+title:      Cognitive Aids, Artificial Intelligence, and Deskilling in Medicine: The History of an Enduring Anxiety
+type:       Peer-reviewed journal article (NEJM AI, New England Journal of Medicine group)
+url:        https://ai.nejm.org/doi/full/10.1056/AIp2500932
+doi:        10.1056/AIp2500932
+themes:     EC-14 (deep expertise pipeline erosion)
+status:     candidate
+pdf:        no
+access:     paywall-unknown
+copyright:  NEJM Group
+summary:    Places AI deskilling in historical context but identifies AI as qualitatively different
+            from prior cognitive aids because it operates across the full spectrum of clinical
+            reasoning simultaneously — not just isolated skills. The concern is erosion of the
+            integrated reasoning process that residency is designed to build through supervised
+            practice, not discrete skill loss.
+notes:      NEJM AI, peer-reviewed. NEJM group carries high authority in medical domain. Use to
+            establish that the pipeline concern is taken seriously at the highest level of medical
+            education research. IMPORTANT: citekey must be updated with first author.
+
+---
+citekey:    ferdman2025deskilling
+authors:    Avigail Ferdman
+year:       2025
+title:      AI Deskilling Is a Structural Problem
+type:       Peer-reviewed journal article (AI & Society, Springer Nature)
+url:        https://doi.org/10.1007/s00146-025-02686-z
+doi:        10.1007/s00146-025-02686-z
+themes:     EC-14 (deep expertise pipeline erosion)
+status:     candidate
+pdf:        no
+access:     paywall-unknown
+copyright:  Springer Nature
+summary:    Introduces "capacity-hostile environments" concept: AI mediation creates systemic
+            conditions that impede cultivation of human capacities across professional domains.
+            Frames deskilling not as individual over-reliance but as a structural outcome of how
+            AI tools are deployed, providing the theoretical grounding for EC-14.
+notes:      AI & Society (Springer), peer-reviewed. Conceptual/empirical. Provides structural
+            framing for EC-14 that elevates it above individual-level cognitive offloading claims.
+
+# ============================================================
+# NEW SOURCES — Confidence Miscalibration (Theme H5)
+# ============================================================
+
+---
+citekey:    leng2024taming
+authors:    Jixuan Leng, Chengsong Huang, Banghua Zhu, Jiaxin Huang
+year:       2024
+title:      Taming Overconfidence in LLMs: Reward Calibration in RLHF
+type:       Peer-reviewed conference paper (ICLR 2026; preprint 2024)
+url:        https://arxiv.org/abs/2410.09724
+doi:        —
+themes:     H (information literacy — confidence miscalibration mechanism)
+status:     candidate
+pdf:        no
+access:     open (arXiv)
+copyright:  arXiv preprint / ICLR proceedings
+summary:    RLHF reward models have a systematic bias toward high-confidence responses regardless
+            of actual quality. Quantifies the mechanism: reward models penalise uncertainty language
+            (average score −1.86) while rewarding confident statements, causing RLHF-trained models
+            to verbalize overconfidence at significantly higher rates than their base counterparts.
+notes:      ICLR 2026, peer-reviewed. This is the primary source for the H5 RLHF-mechanism claim —
+            it directly quantifies that reward models penalise hedging. Use as the mechanistic anchor.
+
+---
+citekey:    zhou2024relying
+authors:    Kaitlyn Zhou, Jena D. Hwang, Xiang Ren, Maarten Sap (Stanford / USC / CMU / Allen AI)
+year:       2024
+title:      Relying on the Unreliable: The Impact of Language Models' Reluctance to Express Uncertainty
+type:       Peer-reviewed conference paper (ACL 2024)
+url:        https://arxiv.org/abs/2401.06730
+doi:        —
+themes:     H (information literacy — confidence miscalibration)
+status:     candidate
+pdf:        no
+access:     open (arXiv)
+copyright:  ACL anthology
+summary:    Deployed LMs are reluctant to express uncertainty even when incorrect; confident
+            responses carry a 47% average error rate. Preference-annotated datasets used in
+            alignment training show a human bias against hedged language, explaining why alignment
+            amplifies overconfidence. Bridges calibration failure and RLHF mechanism.
+notes:      ACL 2024, peer-reviewed. Directly supports both the calibration failure and the RLHF
+            mechanism components of H5. 47% error rate on confident responses is a striking figure.
+
+---
+citekey:    li2024miscalibrated
+authors:    Jingshu Li, Yitian Yang, Renwen Zhang, Q. Vera Liao, Tianqi Song, Zhengtao Xu, Yi-Chieh Lee
+year:       2024
+title:      Understanding the Effects of Miscalibrated AI Confidence on User Trust, Reliance, and Decision Efficacy
+type:       Peer-reviewed conference paper (ACM CHI 2024)
+url:        https://arxiv.org/abs/2402.07632
+doi:        —
+themes:     H (information literacy — confidence miscalibration / user trust)
+status:     candidate
+pdf:        no
+access:     open (arXiv)
+copyright:  ACM
+summary:    Controlled experiment: users fail to detect AI miscalibration, over-rely on overconfident
+            AI outputs, and this reduces decision efficacy. Communicating calibration to users
+            reduces trust but does not fix over-reliance, implying the harm persists even with
+            disclosure.
+notes:      ACM CHI 2024, peer-reviewed. Directly addresses user trust responses to confident vs.
+            calibrated AI outputs — the empirical link that H5's ecosystem-trust argument requires.
+
+---
+citekey:    ouyang2022instructgpt
+authors:    Long Ouyang, Jeff Wu, Xu Jiang et al. (OpenAI)
+year:       2022
+title:      Training Language Models to Follow Instructions with Human Feedback
+type:       Peer-reviewed conference paper (NeurIPS 2022)
+url:        https://arxiv.org/abs/2203.02155
+doi:        —
+themes:     H (information literacy — RLHF background)
+status:     candidate
+pdf:        no
+access:     open (arXiv)
+copyright:  arXiv / NeurIPS proceedings
+summary:    Foundational InstructGPT paper establishing RLHF: human labellers rate model outputs
+            and these ratings train reward models. Background source for the RLHF mechanism.
+notes:      NeurIPS 2022, peer-reviewed. ~15,000 citations. Background/context only — leng2024taming
+            and zhou2024relying are now the primary sources for the overconfidence mechanism claim.
+
+# ============================================================
+# NEW SOURCES — Training Data Depletion (Theme EC1-5)
+# ============================================================
+
+---
+citekey:    villalobos2022data
+authors:    Pablo Villalobos, Jaime Sevilla, Lennart Heim et al. (Epoch AI)
+year:       2022
+title:      Will We Run Out of Data? An Analysis of the Limits of Scaling Datasets in Machine Learning
+type:       Academic preprint (arXiv; widely cited)
+url:        https://arxiv.org/abs/2211.04325
+doi:        —
+themes:     EC-1 (synthetic content contamination — training data depletion)
+status:     candidate
+pdf:        no
+access:     open (arXiv)
+copyright:  arXiv preprint
+summary:    Projects that high-quality language data on the public web will be exhausted for LLM
+            training between 2026 and 2032 at current consumption rates. Low-quality data lasts
+            somewhat longer; quality data is the binding constraint on frontier model scaling.
+notes:      Epoch AI preprint, not peer-reviewed in a journal, but Epoch AI is a credible AI
+            research organisation; ~1,000+ citations. The 2026–2032 window is a projection with
+            uncertainty depending on consumption rate assumptions — flag this in document.
+
+# ============================================================
+# NEW SOURCES — Suggested batch (March 2026)
+# ============================================================
+
+---
+citekey:    acemoglu2025ai
+authors:    Daron Acemoglu, Dingwen Kong, Asuman Ozdaglar (MIT / NBER)
+year:       2025
+title:      AI, Human Cognition and Knowledge Collapse
+type:       NBER Working Paper (w34910)
+url:        https://www.nber.org/papers/w34910
+doi:        10.3386/w34910
+themes:     EC-14 (expertise pipeline), EC-13 (monoculture), H (information literacy)
+status:     candidate
+pdf:        no
+access:     open (NBER)
+copyright:  NBER (free to cite)
+summary:    Dynamic model showing that "agentic AI" — while improving short-term decision quality
+            — substitutes for human effort and erodes the learning incentives that sustain
+            long-run collective knowledge. Introduces the concept of a "knowledge-collapse steady
+            state" where shared community general knowledge effectively vanishes. Acemoglu is a
+            Nobel laureate in economics; NBER WP carries high credibility.
+notes:      Working paper, not yet peer-reviewed in a journal. Theoretical economic model;
+            empirical validation is not the paper's contribution. Directly supports EC-14
+            (expertise pipeline erosion) and H4 (cognitive engagement loss) at the system level.
+            Highest-profile theoretical framing for knowledge collapse available.
+
+---
+citekey:    peterson2024knowledge
+authors:    Andrew J. Peterson
+year:       2024
+title:      AI and the Problem of Knowledge Collapse
+type:       Peer-reviewed journal article (AI & Society, Springer Nature)
+url:        https://link.springer.com/article/10.1007/s00146-024-02173-x
+doi:        10.1007/s00146-024-02173-x
+themes:     EC-13 (monoculture), EC-1 (synthetic contamination)
+status:     candidate
+pdf:        no
+access:     paywalled (Springer)
+copyright:  Springer Nature
+summary:    Argues that because LLMs naturally generate output towards the "centre" of their
+            training distribution, widespread reliance on them leads to regression toward the
+            mean in human knowledge production. This "knowledge collapse" harms innovation and
+            cultural richness by systematically filtering out the diverse, rare, and "tail-end"
+            information essential for a healthy knowledge ecosystem.
+notes:      Peer-reviewed, AI & Society is a reputable Springer interdisciplinary journal.
+            Complements peterson's argument with shumailov2024ai (technical model collapse)
+            and traberg2026monoculture (homogenisation). Add to needs_download.md (paywalled).
+
+---
+citekey:    he2025academic
+authors:    Yongyuan He and Yi Bu
+year:       2025
+title:      Academic Journals' AI Policies Fail to Curb the Surge in AI-Assisted Academic Writing
+type:       Peer-reviewed journal article (PNAS)
+url:        https://www.pnas.org/doi/10.1073/pnas.2526734123
+doi:        10.1073/pnas.2526734123
+themes:     C5 (peer review), EC-1 (synthetic contamination)
+status:     candidate
+pdf:        no
+access:     open (PNAS)
+copyright:  PNAS (open access)
+summary:    Analyses 5.2 million papers: 70% of journals have AI policies but they have not
+            slowed AI adoption. Critical finding: only ~0.1% of papers explicitly disclose AI
+            use, creating a "transparency gap" in which the peer-review process becomes a review
+            of AI-generated logic rather than human expertise. Directly relevant to C5 and EC1-2.
+notes:      PNAS, peer-reviewed — high credibility. Large-scale empirical analysis (5.2M papers).
+            Stronger than russo2025aireviews for the systemic policy-failure claim in C5.
+            Fetch text via PNAS open-access URL.
+
+---
+citekey:    crawford2025eating
+authors:    Kate Crawford
+year:       2025
+title:      Eating the Future: The Metabolic Logic of AI Slop
+type:       Essay (e-flux Architecture / Intensification Series)
+url:        https://www.e-flux.com/architecture/intensification/6782975/eating-the-future-the-metabolic-logic-of-ai-slop/
+doi:        —
+themes:     EC-1 (synthetic contamination), EC-13 (monoculture)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  e-flux (free to cite with attribution)
+summary:    Applies a "metabolic" framework to digital information: AI is "eating its own future"
+            by polluting the digital commons with low-quality synthetic content ("AI slop").
+            This triggers "Model Autophagy Disorder" (MAD) — AI models trained on synthetic
+            data progressively lose contact with reality and nuanced knowledge. Kate Crawford
+            is a prominent AI researcher (co-founder AI Now Institute, Microsoft Research).
+notes:      Essay/commentary, not peer-reviewed. Crawford is a credible voice but this is not
+            primary evidence. Useful for framing and as a citable public-intellectual argument.
+            Weight as opinion/framing, not empirical finding. Themes: EC-1, EC-13.
+
+---
+citekey:    evans2025epistemic
+authors:    James Evans and Molly Wright (University of Chicago)
+year:       2025
+title:      Epistemic Diversity Across Language Models Mitigates Knowledge Collapse
+type:       Peer-reviewed article (American Scientist) / arXiv preprint (2512.15011)
+url:        https://www.americanscientist.org/article/epistemic-diversity-across-language-models-mitigates-knowledge-collapse
+doi:        10.1511/2025.158.12
+themes:     EC-13 (monoculture)
+status:     candidate
+pdf:        no
+access:     open (arXiv version: 2512.15011v2)
+copyright:  American Scientist / Sigma Xi
+summary:    Using ecological models of diversity, demonstrates that a "monoculture" of AI models
+            accelerates knowledge collapse. Without a high variance of independent human viewpoints,
+            the collective information space shrinks into a narrow, inaccurate set of ideas.
+            Argues for deliberate cultivation of epistemic diversity in AI systems.
+notes:      American Scientist is peer-reviewed and well-regarded for accessible science.
+            James Evans is a leading scholar in science-of-science at U Chicago. Best available
+            source for EC-13's ecological/diversity framing of the monoculture concern.
+
+---
+citekey:    deplano2025generative
+authors:    Rossana Deplano (University of Leicester)
+year:       2025
+title:      Generative AI Has Access to a Small Slice of Human Knowledge
+type:       Essay (Aeon)
+url:        https://aeon.co/essays/generative-ai-has-access-to-a-small-slice-of-human-knowledge
+doi:        —
+themes:     EC-10 (global south), EC-13 (monoculture)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Aeon (free to cite)
+summary:    Evidence that AI models are trained on a "hyper-localised" slice of human experience
+            (primarily Western, English-speaking, digital-first). Argues this causes "active
+            erasure" of centuries-old knowledge systems and indigenous wisdom never digitised,
+            permanently biasing the global knowledge commons.
+notes:      Aeon essay — not peer-reviewed but backed by university-affiliated research.
+            Deplano is at Leicester; credible academic voice. Lower evidence weight than
+            peer-reviewed sources but useful for EC-10 framing and indigenous knowledge angle.
+
+---
+citekey:    messeri2024artificial
+authors:    Lisa Messeri and M. J. Crockett (Yale University)
+year:       2024
+title:      Artificial Intelligence and the Illusion of Explanatory Depth
+type:       Peer-reviewed journal article (Nature, published in ACM Digital Library as 10.1145/3706599)
+url:        https://dl.acm.org/doi/10.1145/3706599
+doi:        10.1145/3706599
+themes:     H3 (information literacy), H5 (confidence miscalibration)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Nature / ACM
+summary:    Identifies an "epistemic risk" where AI creates a false sense of understanding.
+            Because AI provides fluent, confident summaries, humans stop engaging in the deep,
+            critical thinking required to comprehend complex systems — producing a population
+            that "knows" many things superficially but understands nothing deeply. Directly
+            supports H5's argument that AI's confident tone undermines epistemically honest
+            knowledge infrastructure.
+notes:      Nature-published, peer-reviewed. Messeri and Crockett are at Yale (sociology/
+            neuroscience). The "illusion of explanatory depth" concept directly complements
+            the H5 mechanism. Fetch text — likely open access.
+
+
+---
+citekey:    cloudflare2024crawlratio
+authors:    Cloudflare Radar Team
+year:       2024
+title:      The Crawl Before the Fall of Referrals: Understanding AI's Impact on Content Providers
+type:       Industry data report (Cloudflare Radar blog)
+url:        https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/
+doi:        —
+themes:     EC6 (power concentration), G (credit attribution)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  Cloudflare (open blog post)
+summary:    Empirical analysis of crawl-to-referral ratios for major AI bots. Documents
+            GPTBot's crawl-to-referral ratio of ~1,276:1 — one of the primary empirical sources
+            for the claim that AI companies extract far more content than they return as traffic.
+            Breaks down ratios by bot (OpenAI, Anthropic, Google, etc.) and industry type.
+notes:      Primary empirical source for the 1,200:1 crawl-to-referral claim (EC6-2, G2).
+            Cloudflare has direct infrastructure visibility — methodology is sound.
+
+---
+citekey:    liang2023aidetectorbias
+authors:    Weixin Liang, Mert Yuksekgonul, Yining Mao, Eric Wu, James Zou (Stanford)
+year:       2023
+title:      GPT Detectors Are Biased Against Non-Native English Writers
+type:       Peer-reviewed article (Patterns, Cell Press)
+url:        https://arxiv.org/abs/2304.02819
+doi:        10.1016/j.patter.2023.100779
+themes:     EC1 (synthetic contamination), EC10 (Global South/language exclusion)
+status:     candidate
+pdf:        no
+access:     open (arXiv)
+copyright:  arXiv preprint / Cell Press
+summary:    Finds that 7 commercial AI text detectors falsely flag over 61% of TOEFL essays
+            (written by non-native English speakers) as AI-generated, vs. near-zero false
+            positive rate for native-speaker essays. Documents severe equity harm from AI
+            detection deployment in academic settings. Stanford authors.
+notes:      Key empirical source for EC1-4's claim about AI detector false positive bias.
+            The 61% false-positive rate for non-native speakers is a more specific and
+            striking finding than the generic accuracy range previously cited.
+
+---
+citekey:    github2025eternalseptember
+authors:    GitHub Open Source Team
+year:       2025
+title:      Welcome to the Eternal September of Open Source. Here's What We Plan to Do for Maintainers.
+type:       Industry report / blog post (GitHub)
+url:        https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/
+doi:        —
+themes:     C (contributor pipeline)
+status:     candidate
+pdf:        no
+access:     open
+copyright:  GitHub (open blog post)
+summary:    GitHub officially acknowledges the surge of AI-generated pull requests overwhelming
+            maintainers. Describes the problem as an "Eternal September" of open source —
+            a wave of low-quality automated contributions disrupting community norms. Outlines
+            planned tooling responses. GitHub's own data / institutional acknowledgment.
+notes:      First-party institutional source for C3. GitHub's own admission that only ~1 in 10
+            AI-generated PRs meets quality standards provides concrete grounding for the claim.
+
+---
+citekey:    reeves2025wikipedia
+authors:    Erica Reeves, Tommy Shane et al.
+year:       2025
+title:      Exploring the Impact of ChatGPT on Wikipedia Engagement
+type:       Peer-reviewed journal article (Collective Intelligence, SAGE)
+url:        https://arxiv.org/abs/2405.10205
+doi:        10.1177/26339137251372599
+themes:     B (platform traffic), C (contributor pipeline)
+status:     candidate
+pdf:        no
+access:     open (arXiv preprint)
+copyright:  SAGE / open access
+summary:    2025 peer-reviewed study examining editing and viewing behaviour on Wikipedia
+            post-ChatGPT. Finds no aggregate decline in editing activity but slower growth
+            in ChatGPT-available language editions vs. unavailable ones. Useful nuanced
+            counterpoint — does not refute decline claims but contextualises them.
+notes:      Important for C2 — provides 2025 peer-reviewed evidence alongside lyu2025wikipedia.
+            The "slower growth" finding is weaker than the overlap-specific decline in lyu,
+            but from a stronger methodological design. Cite as corroborating context for C2.
+
+---
+citekey:    nightingale2022faces
+authors:    Sophie J. Nightingale, Hany Farid (Lancaster / UC Berkeley)
+year:       2022
+title:      AI-Synthesized Faces Are Indistinguishable from Real Faces and More Trustworthy
+type:       Peer-reviewed journal article (PNAS)
+url:        https://www.pnas.org/doi/10.1073/pnas.2120481119
+doi:        10.1073/pnas.2120481119
+themes:     EC8 (disinformation)
+status:     candidate
+pdf:        no
+access:     open (PNAS OA)
+copyright:  PNAS (open access)
+summary:    Participants averaged 48.2% accuracy (near chance) distinguishing AI-synthesized
+            from real faces; synthetic faces rated ~7.7% more trustworthy than real faces.
+            Even with training, accuracy only improved to 59%. Foundational empirical source
+            for the deepfake trustworthiness and indistinguishability claim.
+notes:      This replaces nightingale2022ai (cache was corrupt — contained wrong paper).
+            New citekey nightingale2022faces to avoid confusion with the corrupt cache.
+            Needs PDF download (PNAS paywalled for PDF).
+
+---
+citekey:    ssrn2025cogcrutch
+authors:    [First author TBD — verify before publication]
+year:       2025
+title:      ChatGPT as a Cognitive Crutch: Evidence from a Randomized Controlled Trial on Knowledge Retention
+type:       Working paper (SSRN)
+url:        https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5353041
+doi:        —
+themes:     EC12 (children/psychological), H (information literacy)
+status:     candidate
+pdf:        no
+access:     paywall-unknown
+copyright:  SSRN (working paper)
+summary:    RCT (N=120) measuring long-term knowledge retention among undergraduates using
+            ChatGPT. Directly addresses the claim that AI assistance degrades retention even
+            when improving short-term performance.
+notes:      Directly supports EC12-2 claim. Needs download (SSRN paywalled). Verify first
+            author and update citekey before publication.

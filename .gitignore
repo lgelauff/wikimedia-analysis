@@ -1,0 +1,15 @@
+**/notes.txt
+.claude/
+**/Claude/
+*/tmp/
+*.log
+*.cache
+.env
+**/.env
+**/__pycache__/
+**/.DS_Store
+**/.vscode/
+AI effects/pdf sources/
+AI effects/notes.txt
+AI effects/Claude/
+AI effects/archive/
