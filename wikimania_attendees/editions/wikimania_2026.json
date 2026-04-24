@@ -1,0 +1,55 @@
+{
+  "edition": "Wikimania 2026",
+  "year": 2026,
+  "location": "Paris, France",
+  "notes": "",
+  "reported_figures": [
+    {
+      "figure_raw": "21",
+      "figure_numeric": 21,
+      "definition_as_reported": "e conférence Wikimedia",
+      "context": "Wikimania 2026, la 21e conférence Wikimedia, est prévue à Paris, en France, en format présentiel et en ligne.",
+      "author": null,
+      "author_role": null,
+      "source_url": "https://meta.wikimedia.org/wiki/Wikimania_2026",
+      "source_type": "meta_wiki",
+      "retrieved": "2026-04-15",
+      "verified": false,
+      "verified_date": null,
+      "verified_text_found": null,
+      "needs_review": false
+    },
+    {
+      "figure_raw": "25",
+      "figure_numeric": 25,
+      "definition_as_reported": "e anniversaire",
+      "context": "Une partie de cet événement consistera à célébrer le 25e anniversaire des Wikipédia pionnières.",
+      "author": null,
+      "author_role": null,
+      "source_url": "https://meta.wikimedia.org/wiki/Wikimania_2026",
+      "source_type": "meta_wiki",
+      "retrieved": "2026-04-15",
+      "verified": false,
+      "verified_date": null,
+      "verified_text_found": null,
+      "needs_review": false
+    },
+    {
+      "figure_raw": "8 January 2023",
+      "figure_numeric": 82023,
+      "definition_as_reported": "deadline for expressions of interest",
+      "context": "submit a form response on or before 8 January 2023",
+      "author": null,
+      "author_role": null,
+      "source_url": "https://meta.wikimedia.org/wiki/Wikimania_2026",
+      "source_type": "meta_wiki",
+      "retrieved": "2026-04-15",
+      "verified": false,
+      "verified_date": null,
+      "verified_text_found": null,
+      "excluded": true,
+      "excluded_reason": "submission deadline, not a headcount",
+      "needs_review": false
+    }
+  ]
+}

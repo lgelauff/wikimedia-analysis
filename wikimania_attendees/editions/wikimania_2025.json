@@ -1,0 +1,53 @@
+{
+  "edition": "Wikimania 2025",
+  "year": 2025,
+  "location": "Nairobi, Kenya",
+  "notes": "",
+  "reported_figures": [
+    {
+      "figure_raw": "776",
+      "figure_numeric": 776,
+      "definition_as_reported": "in-person attendees",
+      "context": "2025 Nairobi, Kenya — 776 in-person attendees",
+      "author": null,
+      "author_role": null,
+      "source_url": "https://en.wikipedia.org/wiki/Wikimania",
+      "source_type": "wikipedia",
+      "retrieved": "2026-04-15",
+      "verified": false,
+      "verified_date": null,
+      "verified_text_found": null,
+      "needs_review": false
+    },
+    {
+      "figure_raw": "1,900+",
+      "figure_numeric": 1900,
+      "definition_as_reported": "virtual attendees",
+      "context": "2025 Nairobi, Kenya — 1,900+ virtual attendees",
+      "author": null,
+      "author_role": null,
+      "source_url": "https://en.wikipedia.org/wiki/Wikimania",
+      "source_type": "wikipedia",
+      "retrieved": "2026-04-15",
+      "verified": false,
+      "verified_date": null,
+      "verified_text_found": null,
+      "needs_review": false
+    },
+    {
+      "figure_raw": "20",
+      "figure_numeric": 20,
+      "definition_as_reported": "Wikimedia conference edition",
+      "context": "The 20th Wikimedia conference, was both an in-person and virtual event on 6 to 9 August 2025, celebrated Wikimania's 20th anniversary.",
+      "author": null,
+      "author_role": null,
+      "source_url": "https://meta.wikimedia.org/wiki/Wikimania_2025",
+      "source_type": "meta_wiki",
+      "retrieved": "2026-04-15",
+      "verified": false,
+      "verified_date": null,
+      "verified_text_found": null,
+      "needs_review": false
+    }
+  ]
+}
