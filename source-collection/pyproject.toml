@@ -1,0 +1,14 @@
+[project]
+name = "fetch-research"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "certifi",
+    "wayback",
+]
+
+[project.optional-dependencies]
+pdf = ["pypdf"]
+
+[project.scripts]
+fetch-research = "fetch:main"
