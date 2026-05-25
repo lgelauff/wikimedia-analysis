@@ -127,13 +127,22 @@ class RateLimitRegistry:
     Priority: caller overrides > robots.txt Crawl-delay > DEFAULTS > DEFAULT_DELAY
     """
 
-    def __init__(self, overrides: dict[str, float] | None = None):
+    def __init__(
+        self,
+        overrides: dict[str, float] | None = None,
+        ignore_robots: bool = False,
+    ):
         """
         overrides: {domain_fragment: delay_seconds}
         Substring match — "archive.org" matches "web.archive.org".
         Longer/more-specific fragments win over shorter ones.
+
+        ignore_robots: if True, is_allowed() always returns True.
+        Use only when you have confirmed the site permits automated access
+        through means other than robots.txt (e.g. explicit API terms).
         """
         self._overrides: dict[str, float] = overrides or {}
+        self._ignore_robots = ignore_robots
 
     # ------------------------------------------------------------------
     def delay_for(self, url: str) -> float:
@@ -165,6 +174,8 @@ class RateLimitRegistry:
         return None
 
     def is_allowed(self, url: str) -> bool:
+        if self._ignore_robots:
+            return True
         return _robots_for(url).can_fetch(_UA, url)
 
     # ------------------------------------------------------------------

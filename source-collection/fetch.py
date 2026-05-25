@@ -15,7 +15,7 @@ Override per-run: --rate-override arxiv.org=5
 
 Usage:
     python fetch.py [--dry-run] [--citekey KEY] [--force]
-                   [--pipeline STAGE,...] [--no-spn2]
+                   [--pipeline STAGE,...] [--no-spn2] [--ignore-robots]
                    [--rate-override DOMAIN=SECS ...]
 
 sources.txt format (--- separated blocks):
@@ -133,16 +133,18 @@ def _stage_pdf(entry, url, rl, spn2, raw_dir):
 
 def _stage_direct(entry, url, rl, spn2, raw_dir):
     """Explicit opt-in stage — not in DEFAULT_PIPELINE.
-    Respects robots.txt; handles both HTML and PDF responses.
+    Respects robots.txt unless ignore_robots: true is set on the entry.
+    Handles both HTML and PDF responses.
     """
-    if not rl.is_allowed(url):
+    entry_ignores = str(entry.get("ignore_robots", "")).lower() in ("true", "yes", "1")
+    if not entry_ignores and not rl.is_allowed(url):
         raise PermissionError(f"blocked by robots.txt: {url}")
     body, ct = http_get(url, rl)
     if "application/pdf" in ct:
         dest = raw_dir / f"{entry['citekey']}.pdf"
         dest.write_bytes(body)
         return pdf_to_text(body), "live", "direct-pdf"
-    return html_to_text(body.decode("utf-8", errors="replace")), "live", "direct"
+    return html_to_text(body, content_type=ct), "live", "direct"
 
 
 _STAGES = {
@@ -192,14 +194,14 @@ def fetch_entry(
 def _fetch_arxiv(arxiv_id: str, rl: RateLimitRegistry) -> str:
     """Try arXiv HTML full text, fall back to abstract page."""
     try:
-        body, _ = http_get(f"https://arxiv.org/html/{arxiv_id}", rl)
-        text = html_to_text(body.decode("utf-8", errors="replace"))
+        body, ct = http_get(f"https://arxiv.org/html/{arxiv_id}", rl)
+        text = html_to_text(body, content_type=ct)
         if len(text) > 2000:
             return text
     except Exception:
         pass
-    body, _ = http_get(f"https://arxiv.org/abs/{arxiv_id}", rl)
-    return html_to_text(body.decode("utf-8", errors="replace"))
+    body, ct = http_get(f"https://arxiv.org/abs/{arxiv_id}", rl)
+    return html_to_text(body, content_type=ct)
 
 
 # ---------------------------------------------------------------------------
@@ -216,6 +218,7 @@ def run(
     pipeline: list[str] = DEFAULT_PIPELINE,
     rate_overrides: dict[str, float] | None = None,
     use_spn2: bool = True,
+    ignore_robots: bool = False,
 ):
     entries = parse_sources(sources_path)
     if only_citekey:
@@ -231,7 +234,7 @@ def run(
         and (force or not (cache_dir / f"{e['citekey']}.md").exists())
     ]
 
-    rl = RateLimitRegistry(overrides=rate_overrides)
+    rl = RateLimitRegistry(overrides=rate_overrides, ignore_robots=ignore_robots)
 
     spn2 = None
     if use_spn2:
@@ -310,6 +313,11 @@ def main():
     )
     p.add_argument("--no-spn2", action="store_true", help="Disable SavePageNow")
     p.add_argument(
+        "--ignore-robots",
+        action="store_true",
+        help="Skip robots.txt checks (use only when site explicitly permits automated access)",
+    )
+    p.add_argument(
         "--rate-override",
         action="append",
         metavar="DOMAIN=SECS",
@@ -329,6 +337,7 @@ def main():
         pipeline=[s.strip() for s in a.pipeline.split(",")],
         rate_overrides=rate_overrides or None,
         use_spn2=not a.no_spn2,
+        ignore_robots=a.ignore_robots,
     )
 
 

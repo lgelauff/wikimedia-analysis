@@ -76,5 +76,5 @@ def fetch_snapshot(snapshot_url: str, rl: RateLimitRegistry) -> str:
 
     Uses http_get() so rl.wait() is applied before the request.
     """
-    body, _ = http_get(snapshot_url, rl, accept="text/html")
-    return html_to_text(body.decode("utf-8", errors="replace"))
+    body, ct = http_get(snapshot_url, rl, accept="text/html")
+    return html_to_text(body, content_type=ct)
