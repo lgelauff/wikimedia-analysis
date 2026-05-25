@@ -41,31 +41,41 @@ DEFAULTS: dict[str, tuple[float, str, str | None]] = {
         "No published policy; slightly above wayback-edgi CDX limit (0.8 req/s)",
         None,
     ),
-    # Wikimedia REST API (api.wikimedia.org)
-    # Anonymous:     500 req/hour ≈ 7.2s/req  → use 8s
-    # Authenticated: 5000 req/hour ≈ 0.72s/req → use 1s
-    # Current limits reportedly higher; query action=query&meta=userinfo&uiprop=ratelimits for exact values.
+    # Wikimedia REST API / API Gateway (api.wikimedia.org)
+    # Anonymous rate limit is significantly lower than authenticated.
+    # Check current limits at: https://api.wikimedia.org/wiki/Rate_limits
     "api.wikimedia.org": (
         8.0,
-        "Anonymous: 500 req/hour; authenticated: 5000 req/hour (historical lower bound)",
-        "https://wikitech.wikimedia.org/wiki/API_Portal/Deprecation#Rate_limits",
+        "Conservative anonymous default; authenticated limit is significantly higher — see https://api.wikimedia.org/wiki/Rate_limits",
+        "https://api.wikimedia.org/wiki/Rate_limits",
     ),
     # MediaWiki Action API (/w/api.php): no published numerical read limit.
-    # Use maxlag=5 for write operations. 1s conservative default for reads.
+    # Use maxlag=5 for write operations. 1s is a conservative default for reads.
+    # See: https://www.mediawiki.org/wiki/API:Etiquette
     "wikipedia.org": (
         1.0,
-        "Action API: no published read limit; 1s conservative; use maxlag for writes",
+        "Action API: no published read limit; 1s conservative default; use maxlag=5 for writes",
         "https://www.mediawiki.org/wiki/API:Etiquette",
     ),
     "wikimedia.org": (
         1.0,
-        "Action API: no published read limit; 1s conservative; use maxlag for writes",
+        "Action API: no published read limit; 1s conservative default; use maxlag=5 for writes",
         "https://www.mediawiki.org/wiki/API:Etiquette",
     ),
     "mediawiki.org": (
         1.0,
-        "Action API: no published read limit; 1s conservative; use maxlag for writes",
+        "Action API: no published read limit; 1s conservative default; use maxlag=5 for writes",
         "https://www.mediawiki.org/wiki/API:Etiquette",
+    ),
+    # Crossref REST API: polite pool (mailto: in UA) has significantly better
+    # throughput than the anonymous pool. crossref.py manages its own rate limiting
+    # (it knows which pool it is in at import time), so this entry is documentation
+    # only — it is not used by RateLimitRegistry during normal fetch runs.
+    # Current guidance: https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/
+    "api.crossref.org": (
+        1.0,
+        "Polite pool (mailto: in UA) has significantly better throughput than anonymous. crossref.py self-limits.",
+        "https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/",
     ),
 }
 

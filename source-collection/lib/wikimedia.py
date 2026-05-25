@@ -5,12 +5,31 @@ Wikimedia pages are fetched through the API rather than scraped, which gives
 cleaner text, avoids exposing the user's IP, and is the explicitly recommended
 access method per MediaWiki API:Etiquette.
 
-Rate limits (historical lower bounds — current limits may be higher):
-  Anonymous:     500 req/hour → ~8s between requests
-  Authenticated: 5000 req/hour → ~1s between requests
-  Reference: https://wikitech.wikimedia.org/wiki/API_Portal/Deprecation#Rate_limits
+Authentication tiers (set via environment variables):
 
-Enterprise API: set WIKIMEDIA_ENTERPRISE_KEY env var to use it.
+  Anonymous (default)
+    No credentials needed. Current rate limits:
+    https://www.mediawiki.org/wiki/API:Etiquette
+
+  Bot password  — WIKIMEDIA_USERNAME + WIKIMEDIA_BOT_PASSWORD
+    Create at https://en.wikipedia.org/wiki/Special:BotPasswords
+    Username format: "YourAccount@bot-name"  (e.g. "Lgelauff@source-collection")
+    Identifies your traffic to Wikimedia ops; good practice for any automated tool.
+    Currently not wired into fetch() — placeholder for future use.
+
+  OAuth 2.0  — WIKIMEDIA_OAUTH_ACCESS_TOKEN
+    Create an owner-only consumer at Special:OAuthConsumerRegistration.
+    Owner-only consumers are active immediately (no admin approval needed).
+    Significantly increases the rate limit on api.wikimedia.org vs. anonymous.
+    Use scope "basic" — "openid" is not supported and returns invalid_scope.
+    Current rate limits: https://api.wikimedia.org/wiki/Rate_limits
+    Reference: https://www.mediawiki.org/wiki/OAuth/For_Developers/OAuth_2.0
+    Currently not wired into fetch() — placeholder for future use.
+
+  Enterprise API  — WIKIMEDIA_ENTERPRISE_KEY
+    Set this env var to use the Wikimedia Enterprise API instead of the
+    public Action API. Richer output and higher rate limits.
+    Current rate limits and pricing: https://enterprise.wikimedia.com/
 """
 
 import json
