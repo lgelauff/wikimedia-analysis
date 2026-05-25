@@ -4,6 +4,11 @@ ratelimits.py — documented rate-limit registry with override support.
 Each entry carries the delay in seconds, a human-readable reason, and a reference URL
 so the source can be checked if limits change or something breaks.
 
+The defaults in this file are best-known values based on published policies and
+robots.txt at the time of writing. They carry no guarantee of accuracy — rate limits
+change without notice. Always verify against the reference URL before relying on a
+specific value, and use the override mechanism if you need to adjust for your situation.
+
 Priority for delay_for(url):
   1. Caller overrides (passed to RateLimitRegistry.__init__)
   2. robots.txt Crawl-delay for the domain
