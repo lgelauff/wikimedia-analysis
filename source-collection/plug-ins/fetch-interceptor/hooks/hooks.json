@@ -1,0 +1,14 @@
+{
+  "hooks": [
+    {
+      "event": "PreToolUse",
+      "matcher": "WebFetch",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"/Users/lodewijk/Library/Application Support/Claude/local-agent-mode-sessions/742b4782-d31f-4b4a-b0a2-6e59881bca1f/90c7a276-b2a6-4cfc-b3ca-cceb6b65fa03/rpm/plugin_0155zZVATbJU3jHUmPP9NvMC/scripts/intercept_fetch.py\""
+        }
+      ]
+    }
+  ]
+}

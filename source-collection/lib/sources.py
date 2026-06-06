@@ -26,6 +26,7 @@ _SPECIFIC_RE = re.compile(
 
 # Domains/patterns that imply immutable content
 _IMMUTABLE_HOSTS = {"arxiv.org", "doi.org", "zenodo.org", "osf.io"}
+_SPECIFIC_HOSTS  = {"medium.com"}  # published articles; content never changes after publication
 
 # Path fragments that imply documentation
 _DOCS_PATHS = {"/docs/", "/wiki/", "/documentation/", "/book/", "/help/", "/manual/"}
@@ -44,6 +45,10 @@ def freshness_category(url: str) -> str:
 
     # Date or version pattern in path
     if _SPECIFIC_RE.search(path):
+        return "specific"
+
+    # Specific hosts (published content, never changes)
+    if any(h in host for h in _SPECIFIC_HOSTS):
         return "specific"
 
     # Known immutable domains

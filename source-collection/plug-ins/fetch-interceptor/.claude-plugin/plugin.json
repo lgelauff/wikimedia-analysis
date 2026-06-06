@@ -1,0 +1,9 @@
+{
+  "name": "fetch-interceptor",
+  "version": "0.1.0",
+  "description": "Intercepts WebFetch calls and routes them through the source-collection fetch pipeline (cache → fetch.py → WebFetch fallback).",
+  "author": {
+    "name": "Lodewijk"
+  },
+  "keywords": ["fetch", "cache", "research", "wikimedia"]
+}

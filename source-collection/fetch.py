@@ -32,11 +32,12 @@ Credentials (from environment variables):
 """
 
 import argparse
+import json
 import os
 import re
 import sys
 import time
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 # Resolve lib/ relative to this script so it works when called from any cwd.
@@ -52,6 +53,25 @@ _HERE      = Path(__file__).parent
 _CACHE_DIR = _HERE / "cache"
 _RAW_DIR   = _HERE / "raw"
 _SOURCES   = _HERE / "sources.txt"
+_PENDING   = Path(__file__).parent.parent.parent / "research-vault" / "inbox" / "pending.txt"
+
+
+def _log_failed(entry: dict, reason: str, project: str = "") -> None:
+    """Append a failed fetch to research-vault/inbox/pending.txt."""
+    if not _PENDING.parent.exists():
+        return  # research-vault not present; skip silently
+    existing = _PENDING.read_text(encoding="utf-8") if _PENDING.exists() else ""
+    effective_project = entry.get("project", "") or project
+    block = "\n---\n"
+    block += f"query:     {json.dumps(entry.get('title', entry.get('citekey', '')))}\n"
+    if entry.get("url"):
+        block += f"url:       {entry['url']}\n"
+    if effective_project:
+        block += f"project:   {effective_project}\n"
+    block += f"status:    failed\n"
+    block += f"added:     {date.today()}\n"
+    block += f"failure:   {reason}\n"
+    _PENDING.write_text(existing + block, encoding="utf-8")
 
 DEFAULT_PIPELINE = ["wikimedia", "arxiv", "wayback", "spn2"]
 _SKIP_ACCESS = {"paywall", "login", "blocked"}
@@ -219,6 +239,7 @@ def run(
     rate_overrides: dict[str, float] | None = None,
     use_spn2: bool = True,
     ignore_robots: bool = False,
+    project: str = "",
 ):
     entries = parse_sources(sources_path)
     if only_citekey:
@@ -292,6 +313,7 @@ def run(
             ok += 1
         except Exception as exc:
             print(f"ERROR: {exc}")
+            _log_failed(e, str(exc), project=project)
             err += 1
 
     print(f"\nDone: {ok} fetched, {skip} empty/skipped, {err} errors")
@@ -312,6 +334,7 @@ def main():
         help=f"Comma-separated stages (default: {','.join(DEFAULT_PIPELINE)})",
     )
     p.add_argument("--no-spn2", action="store_true", help="Disable SavePageNow")
+    p.add_argument("--project", default="", help="Project name to record in pending.txt for failed fetches")
     p.add_argument(
         "--ignore-robots",
         action="store_true",
@@ -338,6 +361,7 @@ def main():
         rate_overrides=rate_overrides or None,
         use_spn2=not a.no_spn2,
         ignore_robots=a.ignore_robots,
+        project=a.project,
     )
 
 

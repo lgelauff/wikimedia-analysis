@@ -1,0 +1,41 @@
+---
+citekey: providing2022contextaware
+title: Providing Insights for Open-Response Surveys via End-to-End Context-Aware Clustering
+url: https://www.researchgate.net/publication/362275464_Providing_Insights_for_Open-Response_Surveys_via_End-to-End_Context-Aware_Clustering
+access: login
+notes: Centroid refinement pipeline for clustering open-ended survey responses; relevant to featured statement selection in Polis-style tools. ResearchGate requires login; no Wayback snapshot available. Skip.
+
+---
+citekey: medium2021extractivekmeans
+title: Extractive Text Summarization using Sentence Transformer and K-Means Clustering
+url: https://medium.com/nerd-for-tech/extractive-text-summarization-using-sentence-transformer-and-kmeans-clustering-algorithm-e942a6b33860
+access: open
+notes: Describes selecting the embedding closest to a cluster centroid as representative sentence; standard exemplar-selection method.
+
+---
+citekey: medium2021mmr
+title: Maximal Marginal Relevance to Re-rank Results in Unsupervised Keyphrase Extraction
+url: https://medium.com/tech-that-works/maximal-marginal-relevance-to-rerank-results-in-unsupervised-keyphrase-extraction-22d95015c7c5
+access: open
+notes: Accessible explanation of MMR algorithm for picking representative items while avoiding near-duplicate picks across clusters.
+
+---
+citekey: el2021unsupervised
+title: An unsupervised method for extractive multi-document summarization based on centroid approach and sentence embeddings
+url: https://www.sciencedirect.com/science/article/abs/pii/S0957417420308952
+access: paywall
+notes: BERT embeddings + centroid-based cluster scoring; five-step embed-cluster-score-select pipeline maps onto choosing one featured statement per opinion group.
+
+---
+citekey: manh2021mmrkmeans
+title: Extractive Multi-document Summarization using K-means, Centroid-based Method, MMR, and Sentence Position
+url: https://www.semanticscholar.org/paper/Extractive-Multi-document-Summarization-using-MMR,-Manh-Thanh/321ca3ef3c40aea8f708819a8073c64957e3fb13
+access: open
+notes: Empirically compares K-means, centroid scoring, MMR re-ranking and position heuristics for multi-document extractive summarization. SemanticScholar blocks crawlers; no Wayback snapshot. Skip.
+
+---
+citekey: rossiello2020sentence
+title: Sentence Embedding Based Semantic Clustering for Discussion Thread Summarization
+url: https://onlinelibrary.wiley.com/doi/10.1155/2020/4750871
+access: open
+notes: Applies sentence embeddings to cluster discussion threads and extract representative sentences; bridges deliberative-forum summarization and moderator tooling.

@@ -42,7 +42,7 @@ def availability(url: str, rl: RateLimitRegistry) -> dict | None:
     Uses urllib directly (20s timeout) so we control the timeout precisely.
     Applies rl.wait() before the request.
     """
-    api_url = _AVAILABILITY_API.format(urllib.parse.quote(url, safe=""))
+    api_url = _AVAILABILITY_API.format(urllib.parse.quote(url, safe=":/?=&#"))
     rl.wait(api_url)
     try:
         req = urllib.request.Request(
