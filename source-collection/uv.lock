@@ -106,6 +106,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "certifi" },
+    { name = "requests" },
     { name = "wayback" },
 ]
 
@@ -118,6 +119,7 @@ pdf = [
 requires-dist = [
     { name = "certifi" },
     { name = "pypdf", marker = "extra == 'pdf'" },
+    { name = "requests" },
     { name = "wayback" },
 ]
 provides-extras = ["pdf"]

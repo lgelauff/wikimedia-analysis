@@ -13,10 +13,15 @@ Override per-entry: add `strategy: wayback,spn2` to the entry in sources.txt
 Rate limits default to ethical documented values (see lib/ratelimits.py).
 Override per-run: --rate-override arxiv.org=5
 
+Pre-flight enrichment (runs before the fetch loop):
+  Citoid  — fills missing title/year/url from Wikipedia's citation resolver.
+  OpenAlex — fills missing url (OA PDF), year, abstract from the scholarly graph.
+  Both run only for entries missing the relevant fields; existing values are never overwritten.
+
 Usage:
     python fetch.py [--dry-run] [--citekey KEY] [--force]
                    [--pipeline STAGE,...] [--no-spn2] [--ignore-robots]
-                   [--rate-override DOMAIN=SECS ...]
+                   [--no-enrich] [--rate-override DOMAIN=SECS ...]
 
 sources.txt format (--- separated blocks):
     ---
@@ -43,11 +48,13 @@ from pathlib import Path
 # Resolve lib/ relative to this script so it works when called from any cwd.
 sys.path.insert(0, str(Path(__file__).parent))
 
+import requests
+
 from lib.ratelimits import RateLimitRegistry
 from lib.http import get as http_get
 from lib.text import html_to_text, pdf_to_text
 from lib.sources import parse as parse_sources, max_age_days
-from lib import wikimedia, wayback as wb, spn2 as spn2_mod
+from lib import wikimedia, wayback as wb, spn2 as spn2_mod, citoid, openalex
 
 _HERE      = Path(__file__).parent
 _CACHE_DIR = _HERE / "cache"
@@ -228,6 +235,31 @@ def _fetch_arxiv(arxiv_id: str, rl: RateLimitRegistry) -> str:
 # Runner
 # ---------------------------------------------------------------------------
 
+def _enrich_entries(entries: list[dict], rl: RateLimitRegistry) -> None:
+    """
+    Pre-flight enrichment: fill missing metadata via Citoid and OpenAlex.
+
+    Runs only for entries that lack a url or have a doi but no url.
+    Modifies entries in-place; existing values are never overwritten.
+    """
+    needs_enrich = [
+        e for e in entries
+        if e.get("citekey") and (not e.get("url") or e.get("doi"))
+    ]
+    if not needs_enrich:
+        return
+
+    print(f"Pre-flight enrichment: {len(needs_enrich)} entries via Citoid + OpenAlex…")
+    session = requests.Session()
+    for e in needs_enrich:
+        citekey = e.get("citekey", "?")
+        before_url = e.get("url")
+        citoid.enrich(e, rl, session)
+        openalex.enrich(e, rl, session)
+        if not before_url and e.get("url"):
+            print(f"  {citekey}: resolved url → {e['url'][:70]}")
+
+
 def run(
     sources_path: Path = _SOURCES,
     cache_dir: Path = _CACHE_DIR,
@@ -239,6 +271,7 @@ def run(
     rate_overrides: dict[str, float] | None = None,
     use_spn2: bool = True,
     ignore_robots: bool = False,
+    enrich: bool = True,
     project: str = "",
 ):
     entries = parse_sources(sources_path)
@@ -248,14 +281,17 @@ def run(
             print(f"citekey not found: {only_citekey}", file=sys.stderr)
             sys.exit(1)
 
+    rl = RateLimitRegistry(overrides=rate_overrides, ignore_robots=ignore_robots)
+
+    if enrich and not dry_run:
+        _enrich_entries(entries, rl)
+
     to_fetch = [
         e for e in entries
         if e.get("citekey")
         and e.get("access", "").lower() not in _SKIP_ACCESS
         and (force or not (cache_dir / f"{e['citekey']}.md").exists())
     ]
-
-    rl = RateLimitRegistry(overrides=rate_overrides, ignore_robots=ignore_robots)
 
     spn2 = None
     if use_spn2:
@@ -334,6 +370,7 @@ def main():
         help=f"Comma-separated stages (default: {','.join(DEFAULT_PIPELINE)})",
     )
     p.add_argument("--no-spn2", action="store_true", help="Disable SavePageNow")
+    p.add_argument("--no-enrich", action="store_true", help="Skip Citoid/OpenAlex pre-flight enrichment")
     p.add_argument("--project", default="", help="Project name to record in pending.txt for failed fetches")
     p.add_argument(
         "--ignore-robots",
@@ -361,6 +398,7 @@ def main():
         rate_overrides=rate_overrides or None,
         use_spn2=not a.no_spn2,
         ignore_robots=a.ignore_robots,
+        enrich=not a.no_enrich,
         project=a.project,
     )
 
