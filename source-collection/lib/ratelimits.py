@@ -82,6 +82,18 @@ DEFAULTS: dict[str, tuple[float, str, str | None]] = {
         "Polite pool (mailto: in UA) has significantly better throughput than anonymous. crossref.py self-limits.",
         "https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/",
     ),
+    # GitHub REST API: 60 req/hour unauthenticated, 5000 req/hour authenticated (PAT).
+    # Always use authenticated access — raw.githubusercontent.com does not support auth
+    # and shares the unauthenticated quota. Use conditional requests (If-None-Match) to
+    # avoid burning quota on unchanged files (304s are free).
+    # Rate-limit headers: x-ratelimit-remaining, x-ratelimit-reset, retry-after.
+    # robots.txt: github.com/robots.txt blocks /*/raw/ — use the API, not raw URLs.
+    # Reference: https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api
+    "api.github.com": (
+        1.0,
+        "5000 req/hour authenticated; 60/hour unauthenticated. Use PAT via GITHUB_TOKEN env var.",
+        "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    ),
 }
 
 DEFAULT_DELAY = 5.0   # fallback for domains not in DEFAULTS and without robots.txt Crawl-delay
