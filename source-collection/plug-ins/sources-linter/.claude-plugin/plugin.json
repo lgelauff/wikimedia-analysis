@@ -1,0 +1,9 @@
+{
+  "name": "sources-linter",
+  "version": "0.1.0",
+  "description": "Validates sources.txt on every write: checks required fields, naming conventions, duplicate citekeys, and access values.",
+  "author": {
+    "name": "Lodewijk"
+  },
+  "keywords": ["sources", "lint", "validation", "research"]
+}

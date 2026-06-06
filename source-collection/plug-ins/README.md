@@ -13,6 +13,8 @@ A plugin is a self-contained directory that adds skills, hooks, agents, and MCP 
 | Plugin | File | Description |
 |--------|------|-------------|
 | [fetch-interceptor](fetch-interceptor/) | [fetch-interceptor.plugin](fetch-interceptor.plugin) | Intercepts `WebFetch` calls and checks `source-collection/cache/` first. Blocks the call on a cache hit; suggests `fetch.py` pipeline on a miss. |
+| [sources-linter](sources-linter/) | _(not yet packaged)_ | Validates `sources.txt` on every Write/Edit: required fields, citekey convention, duplicate keys, valid access values. |
+| [robots-checker](robots-checker/) | _(not yet packaged)_ | Intercepts `fetch.py --ignore-robots` runs and reports which domains disallow our User-Agent before proceeding. |
 
 ## Plugin structure
 

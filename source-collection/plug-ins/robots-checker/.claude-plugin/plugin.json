@@ -1,0 +1,9 @@
+{
+  "name": "robots-checker",
+  "version": "0.1.0",
+  "description": "Intercepts fetch.py --ignore-robots runs and reports which domains would be scraped in violation of robots.txt, requiring explicit confirmation.",
+  "author": {
+    "name": "Lodewijk"
+  },
+  "keywords": ["robots", "ethics", "fetch", "research"]
+}
