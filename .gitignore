@@ -1,7 +1,7 @@
 **/notes.txt
 .claude/
 **/Claude/
-*/tmp/
+**/tmp/
 *.log
 *.cache
 .env
