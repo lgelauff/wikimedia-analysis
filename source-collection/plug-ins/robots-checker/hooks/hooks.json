@@ -6,7 +6,7 @@
       "hooks": [
         {
           "type": "command",
-          "command": "python3 \"$(dirname \"$0\")/../scripts/check_robots.py\""
+          "command": "python3 scripts/check_robots.py"
         }
       ]
     }

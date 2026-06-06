@@ -6,7 +6,7 @@
       "hooks": [
         {
           "type": "command",
-          "command": "python3 \"$(dirname \"$0\")/../scripts/lint_sources.py\""
+          "command": "python3 scripts/lint_sources.py"
         }
       ]
     },
@@ -16,7 +16,7 @@
       "hooks": [
         {
           "type": "command",
-          "command": "python3 \"$(dirname \"$0\")/../scripts/lint_sources.py\""
+          "command": "python3 scripts/lint_sources.py"
         }
       ]
     }
