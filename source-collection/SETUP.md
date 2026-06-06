@@ -64,7 +64,7 @@ echo 'dotenv' > .envrc
 direnv allow
 ```
 
-direnv will automatically load `.env` whenever you `cd` into the directory and unload it when you leave. Claude Code inherits the shell environment, so variables loaded by direnv are visible to hooks and scripts.
+direnv automatically loads `.env` whenever you `cd` into the directory and unloads it when you leave. Claude Code inherits the shell environment, so variables loaded by direnv are visible to both hooks and scripts without any extra steps.
 
 **Option C — uv --env-file (for manual runs only):**
 
@@ -72,57 +72,57 @@ direnv will automatically load `.env` whenever you `cd` into the directory and u
 uv run --env-file .env python fetch.py --dry-run
 ```
 
-This only applies to the single `uv run` invocation; it does not affect Claude Code or hooks.
+This only applies to the single `uv run` invocation and does not affect Claude Code or hooks.
 
-> **Important:** Claude Code reads the environment from the shell that launched it. If you start Claude Code before loading `.env`, the variables will not be available to hooks or scripts. Always load `.env` first (Option A or B).
+> **Important:** Claude Code reads the environment from the shell that launched it. If you start Claude Code before loading `.env`, the variables will not be available to hooks or scripts. Always load `.env` first — Option B (direnv) is the most reliable way to ensure this.
 
 ---
 
 ## 3. Claude Code hooks
 
-Hooks intercept Claude's tool calls to add gates and checks. This project defines hooks in `.claude/settings.json` (committed, shared) and `.claude/settings.local.json` (local only, gitignored).
+Hooks intercept Claude's tool calls to add gates and checks. This project defines hooks in `.claude/settings.json` (committed, shared across the team) and `.claude/settings.local.json` (local only, gitignored).
 
 ### How hooks work
 
-Each hook fires on a tool event (`PreToolUse`, `PostToolUse`) and runs a shell command. The command reads a JSON payload from stdin describing the tool call. It can:
+Each hook fires on a tool event and runs a shell command. The command receives a JSON payload on stdin describing the tool call, and communicates back via exit code:
 
-- **Exit 0** — allow the tool call to proceed normally
-- **Exit 2 + write to stderr** — block the tool call and show the message to Claude
-- **Exit other** — allow the call but log the error
+| Exit code | Meaning |
+|---|---|
+| `0` | Allow the tool call to proceed |
+| `2` + stderr output | Block the tool call; stderr is shown to Claude as the reason |
+| anything else | Allow the call, but log the error |
 
-### Active hooks in this project
-
-| Hook | Trigger | Script | What it does |
-|---|---|---|---|
-| `fetch-interceptor` | PreToolUse on `WebFetch` | `plug-ins/fetch-interceptor/scripts/intercept_fetch.py` | Checks `cache/` before WebFetch; blocks on hit, suggests `fetch.py` on miss |
-
-Defined in `.claude/settings.json`:
+The stdin payload looks like:
 
 ```json
 {
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "WebFetch",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 \"/absolute/path/to/intercept_fetch.py\""
-          }
-        ]
-      }
-    ]
-  }
+  "tool_name": "WebFetch",
+  "tool_input": { "url": "https://example.com" }
 }
 ```
 
-> The path in `settings.json` is absolute. If you clone this repo to a different location, update the path in `.claude/settings.json` to match.
+For `PostToolUse`, the payload also includes `tool_response`.
 
-### Adding a new hook
+### Active hooks in this project
 
-1. Write the script in `plug-ins/<name>/scripts/`.
-2. Add an entry to `.claude/settings.json` under the appropriate event.
-3. Test with `--dry-run` or by triggering the tool manually in Claude.
+Defined in `.claude/settings.json`:
+
+| Hook | Event | Matcher | Script | What it does |
+|---|---|---|---|---|
+| fetch-interceptor | `PreToolUse` | `WebFetch` | `plug-ins/fetch-interceptor/scripts/intercept_fetch.py` | Checks `cache/` first; blocks WebFetch on a hit, suggests `fetch.py` on a miss |
+
+### Hook script path — CLI vs Cowork
+
+This is the most important difference between the two systems:
+
+| Context | Path format | Example |
+|---|---|---|
+| **Claude Code CLI** (`.claude/settings.json`) | Absolute path | `python3 "/Users/you/repo/scripts/hook.py"` |
+| **Cowork plug-in** (`hooks/hooks.json`) | `${CLAUDE_PLUGIN_ROOT}` variable | `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/hook.py"` |
+
+`${CLAUDE_PLUGIN_ROOT}` is resolved by the Cowork installer to the plug-in's installed location. It is **not** available in Claude Code CLI settings — use an absolute path there instead.
+
+> If you clone this repo to a different location, update the absolute path in `.claude/settings.json` to match.
 
 ### Global vs project hooks
 
@@ -132,48 +132,97 @@ Defined in `.claude/settings.json`:
 | `.claude/settings.json` | This project only | Yes |
 | `.claude/settings.local.json` | This project, this machine | No (gitignored) |
 
-Project hooks are merged with global hooks — both run. If a global hook blocks a tool call, project hooks for the same event still run.
+Project hooks are merged with global hooks — both run. A global hook that blocks a tool call does not prevent project hooks for the same event from also running.
+
+### Adding a new hook (CLI)
+
+1. Write the hook script (reads stdin JSON, exits 0 or 2).
+2. Add an entry to `.claude/settings.json`:
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/absolute/path/to/your_hook.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+3. Test by triggering the matched tool in Claude and checking the output.
 
 ---
 
 ## 4. Claude Cowork plug-ins
 
-Plug-ins are the Cowork equivalent of hooks. They are packaged as `.plugin` files (zip archives) and installed via **Settings → Plugins** in the Cowork interface.
+Plug-ins are the Cowork equivalent of Claude Code hooks. They are self-contained directories packaged as `.plugin` files (zip archives) and installed via the Cowork interface.
+
+### Plug-in structure
+
+```
+my-plugin/
+├── .claude-plugin/
+│   └── plugin.json        # Required: name, version, description
+├── hooks/
+│   └── hooks.json         # Hook definitions (use ${CLAUDE_PLUGIN_ROOT} for paths)
+├── scripts/               # Hook scripts
+│   └── my_hook.py
+└── README.md
+```
+
+### hooks.json format
+
+```json
+{
+  "hooks": [
+    {
+      "event": "PreToolUse",
+      "matcher": "WebFetch",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/my_hook.py\""
+        }
+      ]
+    }
+  ]
+}
+```
+
+Always use `${CLAUDE_PLUGIN_ROOT}` for script paths in plug-ins. The Cowork installer resolves this to the plug-in's installed location at install time.
 
 ### Available plug-ins
 
-| File | Trigger | What it does |
-|---|---|---|
-| `plug-ins/fetch-interceptor.plugin` | PreToolUse on `WebFetch` | Same as the CLI hook above |
-| `plug-ins/sources-linter.plugin` | PreToolUse on `Write`/`Edit` | Validates `sources.txt` entries before saving |
-| `plug-ins/robots-checker.plugin` | PreToolUse on `Bash` | Blocks `fetch.py --ignore-robots` if any domain disallows our User-Agent |
+| File | Event | Matcher | What it does |
+|---|---|---|---|
+| `plug-ins/fetch-interceptor.plugin` | `PreToolUse` | `WebFetch` | Checks cache before fetching; blocks on hit |
+| `plug-ins/sources-linter.plugin` | `PreToolUse` | `Write`, `Edit` | Validates `sources.txt` on every save |
+| `plug-ins/robots-checker.plugin` | `PreToolUse` | `Bash` | Blocks `fetch.py --ignore-robots` for violating domains |
 
-### Installing
+### Installing a plug-in
 
 1. Open Claude Cowork.
 2. Go to **Settings → Plugins**.
 3. Drag the `.plugin` file onto the window, or click **Install plugin**.
 
-### Packaging (after editing a plug-in)
+### Packaging a plug-in
+
+After editing source files, repackage with zip from inside the plug-in directory:
 
 ```bash
 cd plug-ins/sources-linter
 zip -r ../sources-linter.plugin .claude-plugin hooks scripts README.md
 ```
 
-### Script paths in hooks.json
-
-In Cowork plug-ins, use `${CLAUDE_PLUGIN_ROOT}` to reference scripts inside the plug-in:
-
-```json
-"command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/my_script.py\""
-```
-
-In Claude Code `.claude/settings.json`, use an absolute path instead — `${CLAUDE_PLUGIN_ROOT}` is not available outside Cowork:
-
-```json
-"command": "python3 \"/absolute/path/to/scripts/my_script.py\""
-```
+The zip must contain files at the root (not inside a subdirectory), matching the structure above. Commit both the source directory and the `.plugin` file.
 
 ---
 
@@ -186,10 +235,10 @@ uv run python fetch.py --dry-run
 # Fetch all sources
 uv run python fetch.py
 
-# Fetch a single entry
+# Fetch a single entry by citekey
 uv run python fetch.py --citekey smith2024example
 
-# Force re-fetch (ignore cache)
+# Force re-fetch (ignore existing cache)
 uv run python fetch.py --force
 
 # Skip Citoid/OpenAlex pre-flight enrichment
@@ -209,18 +258,22 @@ Fetch failures are automatically logged to `research-vault/inbox/pending.txt` fo
 ## 6. Verifying the setup
 
 ```bash
-# Check all imports resolve
+# Check all lib imports resolve
 uv run python -c "from lib import github, citoid, openalex, wikimedia; print('ok')"
 
-# Check GitHub auth (should show your rate limit, not 60/hour)
+# Check GitHub auth (limit should be 5000, not 60)
 uv run python -c "
 import os, requests
 r = requests.get('https://api.github.com/rate_limit',
     headers={'Authorization': f'Bearer {os.environ[\"GITHUB_TOKEN\"]}',
-             'User-Agent': 'test'})
+             'User-Agent': 'WikimediaAnalysis/1.0'})
 print(r.json()['rate'])
 "
 
-# Dry run to confirm sources.txt parses correctly
+# Confirm sources.txt parses correctly
 uv run python fetch.py --dry-run
+
+# Confirm the fetch-interceptor hook is active (Claude Code CLI)
+# Trigger a WebFetch in Claude on any URL — the hook should log either
+# a cache hit (blocked) or a cache miss (allowed with fetch.py suggestion).
 ```
