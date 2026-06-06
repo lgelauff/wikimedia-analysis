@@ -1,5 +1,6 @@
 **/notes.txt
-.claude/
+**/.claude/*
+!**/.claude/settings.json
 **/Claude/
 **/tmp/
 **/cache/
