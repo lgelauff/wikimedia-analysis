@@ -2,6 +2,7 @@
 .claude/
 **/Claude/
 **/tmp/
+**/cache/
 *.log
 *.cache
 .env
