@@ -252,8 +252,8 @@ def main() -> None:
         help="LLM model/alias (default: bulk = mistral-large-latest; use 'judge' for hard cases)",
     )
     parser.add_argument(
-        "--pdf-dir", default="pdf sources",
-        help="Directory containing PDFs (batch mode, default: 'pdf sources')",
+        "--pdf-dir", default=str(Path.home() / "Documents/GitHub/research-vault/pdfs"),
+        help="Directory containing PDFs (default: research-vault/pdfs/; override with --pdf-dir)",
     )
     parser.add_argument(
         "--output", "-o", default="tmp/verification_results.json",

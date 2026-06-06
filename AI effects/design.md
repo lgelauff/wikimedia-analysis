@@ -16,7 +16,7 @@ AI effects/
 ├── design.md            # This file
 ├── sources.bib          # BibTeX citation database
 ├── sources.txt          # Human-readable overview (copyright, availability)
-├── pdf sources/         # Local PDF copies, named [citekey].pdf
+│   (PDFs moved to ~/Documents/GitHub/research-vault/pdfs/ — shared library)
 ├── tmp/                 # Cache and intermediate files (persists across sessions, not committed to git)
 │   ├── dropbox/         # Drop PDFs here for processing; not permanent storage
 │   └── external_ai_responses/  # Responses from external AI tools (leads only)
@@ -82,7 +82,9 @@ AI effects/
 
 ### Phase 5 — Source verification
 - For each candidate source:
-  1. Fetch/locate the PDF → store in `pdf sources/[citekey].pdf`
+  1. Fetch/locate the PDF → store in `~/Documents/GitHub/research-vault/pdfs/[citekey].pdf`
+     (centralized library; drop in research-vault/inbox/ and run ingest.py, or use lookup.py
+     which checks the library before fetching from the internet)
   2. Run a verification script that:
      - Extracts the relevant passage(s) from the PDF
      - Checks whether the passage supports the claim (semantic match)

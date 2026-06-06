@@ -37,7 +37,7 @@ _SSL_CTX = ssl.create_default_context(cafile=certifi.where())
 _UA = "WikimediaAnalysis/1.0 (personal research project; https://github.com/lgelauff/wikimedia-analysis)"
 _CACHE_DIR = Path(__file__).parent.parent / "tmp" / "pdf_cache"
 _SOURCES_TXT = Path(__file__).parent.parent / "sources.txt"
-_PDF_DIR = Path(__file__).parent.parent / "pdf sources"
+_PDF_DIR = Path.home() / "Documents" / "GitHub" / "research-vault" / "pdfs"
 
 DELAY_BETWEEN_REQUESTS = 2.0  # seconds
 
