@@ -60,14 +60,16 @@ _HERE      = Path(__file__).parent
 _CACHE_DIR = _HERE / "cache"
 _RAW_DIR   = _HERE / "raw"
 _SOURCES   = _HERE / "sources.txt"
-_PENDING   = Path(__file__).parent.parent.parent / "research-vault" / "inbox" / "pending.txt"
+# Failed fetches are logged here by default — cwd-local, inside the project.
+# Point elsewhere (e.g. a shared research-vault inbox) with --pending-file.
+_PENDING_DEFAULT = _HERE / "fetch_errors.txt"
 
 
-def _log_failed(entry: dict, reason: str, project: str = "") -> None:
-    """Append a failed fetch to research-vault/inbox/pending.txt."""
-    if not _PENDING.parent.exists():
-        return  # research-vault not present; skip silently
-    existing = _PENDING.read_text(encoding="utf-8") if _PENDING.exists() else ""
+def _log_failed(entry: dict, reason: str, pending_path: Path, project: str = "") -> None:
+    """Append a failed fetch to the pending-downloads file."""
+    if not pending_path.parent.exists():
+        return  # target directory not present; skip silently
+    existing = pending_path.read_text(encoding="utf-8") if pending_path.exists() else ""
     effective_project = entry.get("project", "") or project
     block = "\n---\n"
     block += f"query:     {json.dumps(entry.get('title', entry.get('citekey', '')))}\n"
@@ -78,7 +80,7 @@ def _log_failed(entry: dict, reason: str, project: str = "") -> None:
     block += f"status:    failed\n"
     block += f"added:     {date.today()}\n"
     block += f"failure:   {reason}\n"
-    _PENDING.write_text(existing + block, encoding="utf-8")
+    pending_path.write_text(existing + block, encoding="utf-8")
 
 DEFAULT_PIPELINE = ["wikimedia", "arxiv", "wayback", "spn2"]
 _SKIP_ACCESS = {"paywall", "login", "blocked"}
@@ -273,7 +275,9 @@ def run(
     ignore_robots: bool = False,
     enrich: bool = True,
     project: str = "",
+    pending_file: Path | None = None,
 ):
+    pending_path = pending_file or _PENDING_DEFAULT
     entries = parse_sources(sources_path)
     if only_citekey:
         entries = [e for e in entries if e.get("citekey") == only_citekey]
@@ -349,7 +353,7 @@ def run(
             ok += 1
         except Exception as exc:
             print(f"ERROR: {exc}")
-            _log_failed(e, str(exc), project=project)
+            _log_failed(e, str(exc), pending_path, project=project)
             err += 1
 
     print(f"\nDone: {ok} fetched, {skip} empty/skipped, {err} errors")
@@ -371,7 +375,13 @@ def main():
     )
     p.add_argument("--no-spn2", action="store_true", help="Disable SavePageNow")
     p.add_argument("--no-enrich", action="store_true", help="Skip Citoid/OpenAlex pre-flight enrichment")
-    p.add_argument("--project", default="", help="Project name to record in pending.txt for failed fetches")
+    p.add_argument("--project", default="", help="Project name recorded alongside failed fetches")
+    p.add_argument(
+        "--pending-file",
+        default="",
+        help="Where to log failed fetches (default: ./fetch_errors.txt). "
+             "Point at a shared inbox, e.g. ../../research-vault/inbox/pending.txt",
+    )
     p.add_argument(
         "--ignore-robots",
         action="store_true",
@@ -400,6 +410,7 @@ def main():
         ignore_robots=a.ignore_robots,
         enrich=not a.no_enrich,
         project=a.project,
+        pending_file=Path(a.pending_file) if a.pending_file else None,
     )
 
 

@@ -17,3 +17,6 @@ AI effects/Claude/
 AI effects/archive/
 AI effects/v2/archive/
 **/needs_download.md
+
+# fetch.py failed-fetch log (cwd-local default; may contain source URLs/titles)
+**/fetch_errors.txt
