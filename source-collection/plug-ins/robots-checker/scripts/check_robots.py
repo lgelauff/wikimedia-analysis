@@ -19,7 +19,9 @@ import urllib.robotparser
 from pathlib import Path
 
 _UA = "WikimediaAnalysis/1.0 (personal research project; https://github.com/lgelauff/wikimedia-analysis)"
-_IGNORE_ROBOTS_RE = re.compile(r"\bfetch\.py\b.*--ignore-robots\b")
+# Matches both the script form (fetch.py) and the packaged module form
+# (python -m source_collection.fetch), so the guard fires either way.
+_IGNORE_ROBOTS_RE = re.compile(r"(?:\bfetch\.py\b|source_collection\.fetch).*--ignore-robots\b")
 _SOURCES_RE = re.compile(r"--sources\s+(\S+)")
 _SSL_CTX = None
 

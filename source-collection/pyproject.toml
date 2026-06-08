@@ -1,6 +1,6 @@
 [project]
-name = "fetch-research"
-version = "0.1.0"
+name = "wikimedia-source-collection"
+version = "0.2.0"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 dependencies = [
@@ -13,4 +13,11 @@ dependencies = [
 pdf = ["pypdf"]
 
 [project.scripts]
-fetch-research = "fetch:main"
+fetch-research = "source_collection.fetch:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["source_collection"]

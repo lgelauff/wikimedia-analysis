@@ -13,6 +13,7 @@ Rate limiting: RateLimitRegistry enforces 1.5s between archive.org requests,
 slightly more conservative than the wayback-edgi CDX limit (0.8 req/s).
 """
 
+import re
 import ssl
 import urllib.parse
 import urllib.request
@@ -87,17 +88,79 @@ def availability(url: str, rl: RateLimitRegistry, session: requests.Session | No
     return {"url": snapshot_url, "timestamp": timestamp, "status": status}
 
 
+def recent_snapshots(
+    url: str,
+    rl: RateLimitRegistry,
+    session: requests.Session | None = None,
+    n: int = 5,
+) -> list[dict]:
+    """Return up to `n` most-recent clean (status=200) snapshots, newest first.
+
+    Lets the caller fall back to an older capture when the newest 200 turns out
+    to be a soft-404/placeholder (caught downstream by a length check).
+    """
+    params = {
+        "url": url,
+        "output": "json",
+        "filter": "statuscode:200",
+        "fl": "timestamp,statuscode,original",
+        "collapse": "digest",     # drop consecutive identical captures
+        "limit": str(-abs(n)),    # most-recent N
+        "fastLatest": "true",
+    }
+    cdx_url = _CDX_API + "?" + urllib.parse.urlencode(params)
+    rl.wait(cdx_url)
+    try:
+        if session is not None:
+            resp = session.get(cdx_url, headers={"User-Agent": _UA}, timeout=20)
+            resp.raise_for_status()
+            rows = resp.json()
+        else:
+            req = urllib.request.Request(cdx_url, headers={"User-Agent": _UA, "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=20, context=_SSL_CTX) as r:
+                import json
+                rows = json.loads(r.read())
+    except Exception:
+        return []
+    if not rows or len(rows) < 2:
+        return []
+    header = rows[0]
+    try:
+        ts_idx = header.index("timestamp")
+        st_idx = header.index("statuscode")
+    except ValueError:
+        return []
+    out = []
+    for row in reversed(rows[1:]):  # newest first
+        ts = row[ts_idx]
+        out.append({
+            "url": f"https://web.archive.org/web/{ts}/{url}",
+            "timestamp": ts,
+            "status": row[st_idx],
+        })
+    return out
+
+
 def snapshot_age_days(timestamp: str) -> int:
     """Return how many days ago a Wayback timestamp (YYYYMMDDHHMMSS) was taken."""
     dt = datetime.strptime(timestamp[:14], "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
     return (datetime.now(timezone.utc) - dt).days
 
 
-def fetch_snapshot(snapshot_url: str, rl: RateLimitRegistry) -> str:
+def _raw_snapshot_url(snapshot_url: str) -> str:
+    """Insert the `id_` modifier so Wayback serves the ORIGINAL capture without
+    its toolbar/banner injection → cleaner text extraction, fewer empty results."""
+    # .../web/<timestamp>/<url>  →  .../web/<timestamp>id_/<url>
+    return re.sub(r"(/web/\d{14})/", r"\1id_/", snapshot_url, count=1)
+
+
+def fetch_snapshot(snapshot_url: str, rl: RateLimitRegistry, raw: bool = True) -> str:
     """
     Fetch a Wayback snapshot and return cleaned plain text.
 
     Uses http_get() so rl.wait() and Retry-After handling are applied.
+    With raw=True, requests the un-rewritten capture via the `id_` modifier.
     """
-    body, ct = http_get(snapshot_url, rl, accept="text/html")
+    target = _raw_snapshot_url(snapshot_url) if raw else snapshot_url
+    body, ct = http_get(target, rl, accept="text/html")
     return html_to_text(body, content_type=ct)

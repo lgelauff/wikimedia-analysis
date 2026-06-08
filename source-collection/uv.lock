@@ -101,30 +101,6 @@ wheels = [
 ]
 
 [[package]]
-name = "fetch-research"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "certifi" },
-    { name = "requests" },
-    { name = "wayback" },
-]
-
-[package.optional-dependencies]
-pdf = [
-    { name = "pypdf" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "certifi" },
-    { name = "pypdf", marker = "extra == 'pdf'" },
-    { name = "requests" },
-    { name = "wayback" },
-]
-provides-extras = ["pdf"]
-
-[[package]]
 name = "idna"
 version = "3.18"
 source = { registry = "https://pypi.org/simple" }
@@ -178,3 +154,27 @@ sdist = { url = "https://files.pythonhosted.org/packages/70/0b/adc81965586a08d96
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e8/4e/8f11f39436879dd9e0e71d23608ae6cb12999772ae7e4f389fde46b7be8c/wayback-0.5.0-py3-none-any.whl", hash = "sha256:5d85673751a9f6f2894318a74ed9b9dfccc270b2dc1c76635bf89295fd504b7c", size = 32170, upload-time = "2026-05-22T20:12:22.655Z" },
 ]
+
+[[package]]
+name = "wikimedia-source-collection"
+version = "0.2.0"
+source = { editable = "." }
+dependencies = [
+    { name = "certifi" },
+    { name = "requests" },
+    { name = "wayback" },
+]
+
+[package.optional-dependencies]
+pdf = [
+    { name = "pypdf" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "certifi" },
+    { name = "pypdf", marker = "extra == 'pdf'" },
+    { name = "requests" },
+    { name = "wayback" },
+]
+provides-extras = ["pdf"]

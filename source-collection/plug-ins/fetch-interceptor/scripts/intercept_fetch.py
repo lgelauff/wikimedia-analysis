@@ -85,8 +85,8 @@ def main() -> None:
         )
         sys.stderr.write(
             f"[fetch-interceptor] No cache hit for this URL.\n"
-            f"Consider fetching via the pipeline first:\n"
-            f"  uv run python {rel_script} --citekey <key>\n"
+            f"Consider fetching via the pipeline first (portable module form):\n"
+            f"  uv run python -m source_collection.fetch --citekey <key>\n"
             f"Proceeding with WebFetch.\n"
         )
 
