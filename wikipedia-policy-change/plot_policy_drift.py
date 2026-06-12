@@ -36,7 +36,7 @@ DRIFT_DIR = Path(__file__).parent / "data" / "policy_drift"
 PLOT_DIR  = Path(__file__).parent / "data" / "policy_drift" / "plots"
 PLOT_DIR.mkdir(parents=True, exist_ok=True)
 
-OTHER_LANGS = ["de", "fr", "es", "ja"]
+OTHER_LANGS = ["de", "fr", "es", "ja", "nl"]
 ENWIKI_POLICIES = [
     "Wikipedia:Ownership of content",
     "Wikipedia:Banning policy",
