@@ -1,0 +1,15 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+fr.wikipedia,Wikipédia:Bannissement,2008,31302101,217,15,,,,,
+fr.wikipedia,Wikipédia:Bannissement,2009,46660636,217,15,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2010,56381447,217,15,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2011,69095332,217,15,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2012,84615887,217,15,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2013,90443893,217,15,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2014,110386254,217,15,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2016,132580931,211,11,63,69,0.8789,0.2667,0.3636
+fr.wikipedia,Wikipédia:Bannissement,2018,154647456,273,14,62,0,0.9612,0.9091,0.7143
+fr.wikipedia,Wikipédia:Bannissement,2019,165822407,447,22,174,0,0.9609,0.9286,0.5909
+fr.wikipedia,Wikipédia:Bannissement,2020,176437445,473,23,27,1,0.9945,0.9545,0.913
+fr.wikipedia,Wikipédia:Bannissement,2023,207436801,498,22,25,0,0.9948,1.0,0.9545
+fr.wikipedia,Wikipédia:Bannissement,2024,214098829,495,22,2,5,0.9989,1.0,1.0
+fr.wikipedia,Wikipédia:Bannissement,2025,224583381,486,22,8,17,0.9959,0.9091,0.9091

@@ -1,0 +1,17 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+ja.wikipedia,Wikipedia:著作権侵害への対処,2004,2219697,92,1,,,,,
+ja.wikipedia,Wikipedia:著作権侵害への対処,2005,2779077,92,1,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2006,9731018,89,1,64,67,0.2829,0.0,0.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2007,14755485,93,1,12,8,0.9,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2008,23407394,254,2,245,84,0.0652,0.0,0.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2009,24544504,274,2,26,6,0.9458,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2010,35629156,281,2,7,0,0.9887,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2011,40426554,281,2,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2012,45242786,286,2,8,3,0.9796,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2013,49985142,294,2,8,0,0.988,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2014,53303842,294,2,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2016,58710280,297,2,6,3,0.9866,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2017,65440696,297,2,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2018,68250787,297,2,1,1,0.997,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2022,90357317,300,2,13,10,0.9573,1.0,1.0
+ja.wikipedia,Wikipedia:著作権侵害への対処,2025,103480144,307,2,7,0,0.9899,0.5,0.5

@@ -1,0 +1,14 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+es.wikipedia,Wikipedia:Propiedad de los artículos,2008,21625625,1344,61,,,,,
+es.wikipedia,Wikipedia:Propiedad de los artículos,2009,32182026,1341,61,9,12,0.9994,0.9672,0.9672
+es.wikipedia,Wikipedia:Propiedad de los artículos,2010,42123677,1341,61,2,2,0.9999,1.0,1.0
+es.wikipedia,Wikipedia:Propiedad de los artículos,2011,52474199,1341,61,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:Propiedad de los artículos,2012,59571635,1340,61,3,4,0.9998,0.9508,0.9508
+es.wikipedia,Wikipedia:Propiedad de los artículos,2013,68731671,1340,61,2,2,0.9999,0.9836,0.9836
+es.wikipedia,Wikipedia:Propiedad de los artículos,2014,75607998,1340,61,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:Propiedad de los artículos,2015,84345955,1338,62,37,39,0.9977,0.8197,0.8387
+es.wikipedia,Wikipedia:Propiedad de los artículos,2016,95057532,1338,62,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:Propiedad de los artículos,2018,111309678,1336,60,3,5,0.9998,0.9839,0.9833
+es.wikipedia,Wikipedia:Propiedad de los artículos,2019,121305762,1336,60,0,0,1.0,0.9667,0.9667
+es.wikipedia,Wikipedia:Propiedad de los artículos,2021,136250237,1342,59,8,2,0.9998,0.9833,1.0
+es.wikipedia,Wikipedia:Propiedad de los artículos,2026,173762641,1342,59,0,0,1.0,1.0,1.0

@@ -1,0 +1,15 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+es.wikipedia,Wikipedia:VRT,2007,13697909,349,17,,,,,
+es.wikipedia,Wikipedia:VRT,2008,22896919,933,33,641,57,0.859,0.2353,0.0909
+es.wikipedia,Wikipedia:VRT,2009,32181959,1015,39,101,19,0.987,0.7879,0.7692
+es.wikipedia,Wikipedia:VRT,2010,37729447,1050,40,37,2,0.9982,1.0,0.975
+es.wikipedia,Wikipedia:VRT,2012,60992009,1118,47,117,49,0.9878,0.675,0.5957
+es.wikipedia,Wikipedia:VRT,2013,69899763,1170,49,67,15,0.9967,0.9787,0.9184
+es.wikipedia,Wikipedia:VRT,2014,76809332,1170,49,1,1,0.9999,1.0,1.0
+es.wikipedia,Wikipedia:VRT,2016,88903994,1170,49,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:VRT,2018,110230042,1178,49,11,3,0.9995,0.9592,0.9592
+es.wikipedia,Wikipedia:VRT,2019,117616641,1178,49,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:VRT,2020,129571096,1178,49,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:VRT,2021,137474089,1181,49,14,11,0.9939,0.8367,0.8367
+es.wikipedia,Wikipedia:VRT,2022,142369501,1181,49,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:VRT,2023,152282671,1181,49,6,6,0.9985,0.9592,0.9592

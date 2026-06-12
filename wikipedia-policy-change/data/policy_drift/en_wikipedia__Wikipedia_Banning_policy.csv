@@ -1,0 +1,24 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+en.wikipedia,Wikipedia:Banning policy,2004,9311860,1525,78,,,,,
+en.wikipedia,Wikipedia:Banning policy,2005,32299107,1627,84,131,29,0.9951,0.9231,0.869
+en.wikipedia,Wikipedia:Banning policy,2006,97331221,1029,59,181,779,0.9406,0.0952,0.1695
+en.wikipedia,Wikipedia:Banning policy,2007,180229277,1255,70,288,62,0.9875,0.5932,0.5143
+en.wikipedia,Wikipedia:Banning policy,2008,261020879,1995,81,825,85,0.9764,0.5714,0.4568
+en.wikipedia,Wikipedia:Banning policy,2009,334491717,2133,93,206,68,0.9967,0.7407,0.6882
+en.wikipedia,Wikipedia:Banning policy,2010,404939842,2882,120,973,224,0.9641,0.3656,0.3
+en.wikipedia,Wikipedia:Banning policy,2011,464189211,2708,114,39,213,0.9981,0.85,0.8947
+en.wikipedia,Wikipedia:Banning policy,2012,524050715,2871,118,199,36,0.9978,0.9386,0.8898
+en.wikipedia,Wikipedia:Banning policy,2013,586570167,2497,102,100,474,0.9952,0.661,0.7353
+en.wikipedia,Wikipedia:Banning policy,2014,636992070,1891,80,12,618,0.9928,0.7549,0.95
+en.wikipedia,Wikipedia:Banning policy,2015,693941908,2036,87,184,39,0.9958,0.9125,0.8391
+en.wikipedia,Wikipedia:Banning policy,2016,753516488,2045,87,70,61,0.9981,0.908,0.908
+en.wikipedia,Wikipedia:Banning policy,2017,813078766,2118,89,81,8,0.9988,0.9655,0.9438
+en.wikipedia,Wikipedia:Banning policy,2018,869753121,2260,90,158,16,0.9974,0.8764,0.8222
+en.wikipedia,Wikipedia:Banning policy,2019,932928967,2291,93,35,4,0.9989,0.9444,0.9355
+en.wikipedia,Wikipedia:Banning policy,2020,996527772,2488,99,209,12,0.9974,0.9462,0.899
+en.wikipedia,Wikipedia:Banning policy,2021,1060870149,2500,101,34,22,0.9996,0.9596,0.9406
+en.wikipedia,Wikipedia:Banning policy,2022,1117445943,2490,99,3,13,0.9998,0.9802,0.9899
+en.wikipedia,Wikipedia:Banning policy,2023,1191620722,2792,111,336,34,0.9965,0.9091,0.8198
+en.wikipedia,Wikipedia:Banning policy,2024,1266413143,2768,110,89,113,0.9978,0.8739,0.8818
+en.wikipedia,Wikipedia:Banning policy,2025,1325564901,3865,152,1127,30,0.9918,0.9091,0.6645
+en.wikipedia,Wikipedia:Banning policy,2026,1354911435,3619,146,7,253,0.9988,0.9276,0.9726

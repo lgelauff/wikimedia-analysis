@@ -1,0 +1,18 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+en.wikipedia,Wikipedia:Clean start,2010,397272625,654,22,,,,,
+en.wikipedia,Wikipedia:Clean start,2011,461288996,652,22,1,3,0.9997,1.0,1.0
+en.wikipedia,Wikipedia:Clean start,2012,530599120,1330,54,791,113,0.9167,0.2273,0.0926
+en.wikipedia,Wikipedia:Clean start,2013,588328829,1255,49,6,81,0.9979,0.8889,0.9796
+en.wikipedia,Wikipedia:Clean start,2014,637433950,1239,49,5,21,0.9993,0.8776,0.8776
+en.wikipedia,Wikipedia:Clean start,2015,689065496,1239,49,1,1,1.0,1.0,1.0
+en.wikipedia,Wikipedia:Clean start,2016,750058053,1375,54,145,9,0.9941,0.9796,0.8889
+en.wikipedia,Wikipedia:Clean start,2017,812402761,1376,54,13,12,0.9995,0.963,0.963
+en.wikipedia,Wikipedia:Clean start,2018,864714138,1412,56,40,4,0.9991,0.8889,0.8393
+en.wikipedia,Wikipedia:Clean start,2019,908973266,1412,56,8,8,0.9997,0.9643,0.9643
+en.wikipedia,Wikipedia:Clean start,2020,995106822,1407,56,2,7,0.9998,1.0,1.0
+en.wikipedia,Wikipedia:Clean start,2021,1049775995,1420,56,29,16,0.999,0.9464,0.9464
+en.wikipedia,Wikipedia:Clean start,2022,1101234643,1429,56,9,0,0.9998,0.9643,0.9643
+en.wikipedia,Wikipedia:Clean start,2023,1174988043,1429,56,0,0,1.0,0.9821,0.9821
+en.wikipedia,Wikipedia:Clean start,2024,1248975267,1429,56,0,0,1.0,1.0,1.0
+en.wikipedia,Wikipedia:Clean start,2025,1319218517,1422,56,5,12,0.9997,0.9821,0.9821
+en.wikipedia,Wikipedia:Clean start,2026,1354950445,1425,56,5,2,0.9998,0.9107,0.9107
