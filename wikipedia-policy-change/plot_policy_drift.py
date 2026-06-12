@@ -204,6 +204,80 @@ def make_plots(wiki_data: dict[str, dict[str, pd.DataFrame]], suffix: str = "") 
         plot_metric(metric, ylabel, is_ratio, wiki_data, suffix)
 
 
+# One color per language; translucent individual policy lines + solid average line.
+LANG_COLORS = {
+    "en.wikipedia": "#1f77b4",
+    "de.wikipedia": "#d62728",
+    "fr.wikipedia": "#2ca02c",
+    "es.wikipedia": "#ff7f0e",
+    "ja.wikipedia": "#9467bd",
+    "nl.wikipedia": "#8c564b",
+}
+
+
+def plot_metric_lang_avg(metric: str, ylabel: str, is_ratio: bool,
+                         wiki_data: dict[str, dict[str, pd.DataFrame]],
+                         suffix: str = "") -> Path:
+    """
+    Single axes. Each language = one color.
+    Individual policies: translucent thin lines (alpha=0.25).
+    Per-language average across policies: solid thick line (alpha=1).
+    """
+    fig, ax = plt.subplots(figsize=(11, 6))
+
+    legend_handles = []
+
+    for wiki, policy_dfs in wiki_data.items():
+        color = LANG_COLORS.get(wiki, "#7f7f7f")
+        lang = wiki.split(".")[0]
+
+        # Collect all (year, value) series for this wiki
+        yearly_values: dict[int, list[float]] = {}
+        for df in policy_dfs.values():
+            series = df[["year", metric]].dropna()
+            for _, row in series.iterrows():
+                yearly_values.setdefault(int(row["year"]), []).append(row[metric])
+                # draw individual translucent line
+            if not series.empty:
+                ax.plot(series["year"], series[metric],
+                        color=color, linewidth=0.9, alpha=0.20)
+
+        # Average line
+        years = sorted(yearly_values)
+        if not years:
+            continue
+        avgs = [np.mean(yearly_values[y]) for y in years]
+        line, = ax.plot(years, avgs,
+                        color=color, linewidth=2.5, alpha=1.0,
+                        marker="o", markersize=4,
+                        label=f"{lang} (n={len(policy_dfs)})")
+        legend_handles.append(line)
+
+    ax.set_xlabel("Year")
+    ax.set_ylabel(ylabel)
+    ax.set_title(ylabel, fontsize=13, fontweight="bold")
+    if is_ratio:
+        ax.set_ylim(0, 1.05)
+    ax.grid(axis="y", alpha=0.3)
+    ax.tick_params(axis="x", rotation=45)
+    ax.legend(handles=legend_handles, loc="best", fontsize=9)
+
+    fig.tight_layout()
+    slug = re.sub(r"\W+", "_", metric).strip("_")
+    out = PLOT_DIR / f"{slug}{suffix}.png"
+    fig.savefig(out, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  Saved: {out.name}")
+    return out
+
+
+def make_lang_avg_plots(wiki_data: dict[str, dict[str, pd.DataFrame]],
+                        suffix: str = "_lang_avg") -> None:
+    print("\nGenerating language-average plots …")
+    for metric, ylabel, is_ratio in METRICS:
+        plot_metric_lang_avg(metric, ylabel, is_ratio, wiki_data, suffix)
+
+
 # ---------------------------------------------------------------------------
 # Fetch other-language data
 # ---------------------------------------------------------------------------
@@ -263,6 +337,9 @@ def main() -> None:
                 combined[wiki] = data
                 print(f"Loaded {len(data)} policies for {wiki}")
         make_plots(combined, suffix="_all")
+        make_lang_avg_plots(combined)
+    else:
+        make_lang_avg_plots({"en.wikipedia": en_data})
 
 
 if __name__ == "__main__":
