@@ -1,0 +1,22 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+es.wikipedia,Wikipedia:Políticas y convenciones,2002,18708,1226,63,,,,,
+es.wikipedia,Wikipedia:Políticas y convenciones,2003,80107,1161,62,6,71,0.9906,0.8889,0.9677
+es.wikipedia,Wikipedia:Políticas y convenciones,2004,561255,1161,62,10,10,0.9993,0.9677,0.9677
+es.wikipedia,Wikipedia:Políticas y convenciones,2005,1822703,1170,62,15,6,0.9985,0.9032,0.9032
+es.wikipedia,Wikipedia:Políticas y convenciones,2006,6184145,1175,62,26,21,0.9984,0.9194,0.9355
+es.wikipedia,Wikipedia:Políticas y convenciones,2007,13744256,1206,66,64,33,0.9953,0.9032,0.8788
+es.wikipedia,Wikipedia:Políticas y convenciones,2008,22138906,1201,66,19,24,0.9982,0.8939,0.8939
+es.wikipedia,Wikipedia:Políticas y convenciones,2009,32557671,1428,78,798,571,0.8518,0.0,0.0
+es.wikipedia,Wikipedia:Políticas y convenciones,2010,36368401,1428,78,5,5,0.9998,0.9487,0.9359
+es.wikipedia,Wikipedia:Políticas y convenciones,2011,52250731,1428,78,0,0,1.0,1.0,1.0
+es.wikipedia,Wikipedia:Políticas y convenciones,2012,61536234,1436,79,55,47,0.9978,0.9359,0.9367
+es.wikipedia,Wikipedia:Políticas y convenciones,2013,71188845,1435,79,0,1,1.0,0.9747,0.9873
+es.wikipedia,Wikipedia:Políticas y convenciones,2014,78543431,1435,79,2,2,0.9999,0.9873,0.9873
+es.wikipedia,Wikipedia:Políticas y convenciones,2015,79343655,1433,79,0,2,1.0,1.0,1.0
+es.wikipedia,Wikipedia:Políticas y convenciones,2016,89637918,1435,79,2,0,1.0,0.9873,0.9873
+es.wikipedia,Wikipedia:Políticas y convenciones,2017,96059863,1435,79,1,1,1.0,0.9873,0.9873
+es.wikipedia,Wikipedia:Políticas y convenciones,2018,111221912,1435,79,4,4,0.9998,0.962,0.962
+es.wikipedia,Wikipedia:Políticas y convenciones,2019,114495136,1435,79,1,1,1.0,1.0,1.0
+es.wikipedia,Wikipedia:Políticas y convenciones,2021,139863523,1435,79,1,1,1.0,0.9873,0.9873
+es.wikipedia,Wikipedia:Políticas y convenciones,2022,142066066,1436,79,1,0,1.0,0.9873,0.9873
+es.wikipedia,Wikipedia:Políticas y convenciones,2023,154198298,1490,81,62,8,0.9971,0.9494,0.9259

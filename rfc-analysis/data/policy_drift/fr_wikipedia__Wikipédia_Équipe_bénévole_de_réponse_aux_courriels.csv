@@ -1,0 +1,20 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2006,11574696,76,5,,,,,
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2007,24120818,82,5,26,20,0.8182,0.2,0.2
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2008,33222520,82,5,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2009,48023066,92,5,16,6,0.9293,0.6,0.4
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2010,50833947,92,5,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2011,70049411,92,5,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2012,82902404,93,5,7,6,0.9628,0.8,0.8
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2013,95103994,86,4,0,7,0.9808,0.8,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2014,102078567,96,4,10,0,0.9696,1.0,0.75
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2015,121300277,132,5,48,12,0.8303,0.5,0.4
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2016,131813098,115,5,36,53,0.812,0.0,0.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2017,137487511,128,6,13,0,0.9789,1.0,0.8333
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2018,151407170,115,5,0,13,0.9789,0.8333,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2020,168131044,115,5,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2021,187646653,355,13,245,5,0.8235,0.4,0.1538
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2022,195166292,355,13,3,3,0.9981,0.9231,0.9231
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2023,206530524,357,13,4,2,0.9962,1.0,1.0
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2024,218167906,394,15,58,21,0.9334,0.6154,0.5333
+fr.wikipedia,Wikipédia:Équipe bénévole de réponse aux courriels,2026,235726795,403,15,11,2,0.9959,0.8667,0.8667

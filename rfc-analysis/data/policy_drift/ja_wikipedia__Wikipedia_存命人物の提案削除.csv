@@ -1,0 +1,4 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+ja.wikipedia,Wikipedia:存命人物の提案削除,2011,38797056,135,1,,,,,
+ja.wikipedia,Wikipedia:存命人物の提案削除,2012,42213605,135,1,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:存命人物の提案削除,2018,70427594,135,1,0,0,1.0,1.0,1.0
