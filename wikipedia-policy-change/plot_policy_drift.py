@@ -336,6 +336,7 @@ def main() -> None:
             if data:
                 combined[wiki] = data
                 print(f"Loaded {len(data)} policies for {wiki}")
+                make_plots({wiki: data}, suffix=f"_{lang}")
         make_plots(combined, suffix="_all")
         make_lang_avg_plots(combined)
     else:
