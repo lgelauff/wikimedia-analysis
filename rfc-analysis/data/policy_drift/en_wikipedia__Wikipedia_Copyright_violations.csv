@@ -1,0 +1,23 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+en.wikipedia,Wikipedia:Copyright violations,2004,16996692,1,0,,,,,
+en.wikipedia,Wikipedia:Copyright violations,2006,95319634,321,15,321,1,0.0,1.0,0.0
+en.wikipedia,Wikipedia:Copyright violations,2007,181280735,672,28,394,43,0.9301,0.4,0.2143
+en.wikipedia,Wikipedia:Copyright violations,2008,259932922,719,29,47,0,0.9947,1.0,0.9655
+en.wikipedia,Wikipedia:Copyright violations,2009,332116129,843,32,156,32,0.9857,0.7241,0.6562
+en.wikipedia,Wikipedia:Copyright violations,2010,405016848,1023,38,191,11,0.9886,0.875,0.6842
+en.wikipedia,Wikipedia:Copyright violations,2011,467178522,1467,45,455,11,0.975,0.8684,0.7333
+en.wikipedia,Wikipedia:Copyright violations,2012,527840194,1466,45,0,1,1.0,0.9778,0.9778
+en.wikipedia,Wikipedia:Copyright violations,2013,566991890,1520,49,55,1,0.999,0.9556,0.898
+en.wikipedia,Wikipedia:Copyright violations,2014,633733161,1538,49,23,5,0.9994,1.0,1.0
+en.wikipedia,Wikipedia:Copyright violations,2015,689663424,1646,51,128,20,0.9974,0.898,0.8824
+en.wikipedia,Wikipedia:Copyright violations,2016,754110555,1704,55,74,16,0.9968,0.9608,0.8909
+en.wikipedia,Wikipedia:Copyright violations,2017,815968651,1763,58,61,2,0.9991,0.9818,0.931
+en.wikipedia,Wikipedia:Copyright violations,2018,869535196,1814,62,53,2,0.9991,0.9655,0.9032
+en.wikipedia,Wikipedia:Copyright violations,2019,927349401,1814,62,0,0,1.0,1.0,1.0
+en.wikipedia,Wikipedia:Copyright violations,2020,997387267,1827,62,16,3,0.9997,0.9677,0.9516
+en.wikipedia,Wikipedia:Copyright violations,2021,1062497414,1827,62,0,0,1.0,0.9839,0.9839
+en.wikipedia,Wikipedia:Copyright violations,2022,1129847265,1800,61,9,36,0.9993,0.9516,0.9508
+en.wikipedia,Wikipedia:Copyright violations,2023,1159081893,1806,61,8,2,0.9999,0.9836,0.9836
+en.wikipedia,Wikipedia:Copyright violations,2024,1261750254,1804,61,8,10,0.9998,0.9672,0.9672
+en.wikipedia,Wikipedia:Copyright violations,2025,1325153299,1813,61,17,8,0.9997,0.9836,0.9836
+en.wikipedia,Wikipedia:Copyright violations,2026,1345191712,1806,61,1,8,0.9999,0.9836,0.9836

@@ -1,0 +1,25 @@
+wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
+en.wikipedia,Wikipedia:Ownership of content,2003,2542537,261,18,,,,,
+en.wikipedia,Wikipedia:Ownership of content,2004,11249519,695,35,456,22,0.8192,0.5556,0.2286
+en.wikipedia,Wikipedia:Ownership of content,2005,32288126,852,36,308,151,0.9209,0.5429,0.5278
+en.wikipedia,Wikipedia:Ownership of content,2006,94506552,1145,56,542,249,0.8902,0.4167,0.3036
+en.wikipedia,Wikipedia:Ownership of content,2007,180319239,1265,61,150,30,0.9903,0.7143,0.6066
+en.wikipedia,Wikipedia:Ownership of content,2008,259037217,1281,61,48,32,0.9971,0.918,0.918
+en.wikipedia,Wikipedia:Ownership of content,2009,334740464,1395,67,186,72,0.989,0.7377,0.7015
+en.wikipedia,Wikipedia:Ownership of content,2010,400945645,1575,71,292,112,0.9833,0.5821,0.5775
+en.wikipedia,Wikipedia:Ownership of content,2011,467710837,1822,82,250,3,0.9947,0.8873,0.7683
+en.wikipedia,Wikipedia:Ownership of content,2012,529917057,1784,74,111,149,0.994,0.6341,0.7027
+en.wikipedia,Wikipedia:Ownership of content,2013,587891128,1818,76,102,68,0.9961,0.8784,0.8553
+en.wikipedia,Wikipedia:Ownership of content,2014,640170286,1892,79,89,15,0.9983,0.9474,0.9114
+en.wikipedia,Wikipedia:Ownership of content,2015,697462860,2015,81,131,8,0.9984,0.9367,0.9012
+en.wikipedia,Wikipedia:Ownership of content,2016,754123584,2242,89,243,16,0.9972,0.9259,0.8427
+en.wikipedia,Wikipedia:Ownership of content,2017,803679860,2241,88,0,1,1.0,0.9663,0.9659
+en.wikipedia,Wikipedia:Ownership of content,2018,875873290,2219,87,14,36,0.9995,0.9205,0.931
+en.wikipedia,Wikipedia:Ownership of content,2019,906742159,2200,87,10,29,0.9996,0.977,0.977
+en.wikipedia,Wikipedia:Ownership of content,2020,996619664,2068,85,9,141,0.9971,0.9425,0.9647
+en.wikipedia,Wikipedia:Ownership of content,2021,1060863324,1970,83,49,147,0.9975,0.8706,0.8916
+en.wikipedia,Wikipedia:Ownership of content,2022,1130533365,1937,81,25,58,0.9986,0.9398,0.963
+en.wikipedia,Wikipedia:Ownership of content,2023,1188742334,1916,79,6,27,0.9996,0.9383,0.962
+en.wikipedia,Wikipedia:Ownership of content,2024,1263813511,2105,86,193,4,0.9971,1.0,0.9302
+en.wikipedia,Wikipedia:Ownership of content,2025,1324759772,2105,86,22,22,0.9995,0.9535,0.9535
+en.wikipedia,Wikipedia:Ownership of content,2026,1354949668,2101,86,6,10,0.9998,0.9535,0.9651

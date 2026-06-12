@@ -1,3 +1,6 @@
+# /// script
+# dependencies = ["certifi"]
+# ///
 """
 policy_drift.py — measure how much a policy page has changed over time.
 
@@ -65,9 +68,19 @@ def _get(wiki: str, params: dict) -> dict:
         url,
         headers={"User-Agent": UA, "Accept": "application/json"},
     )
-    time.sleep(RATE_DELAY)
-    with urllib.request.urlopen(req, timeout=30, context=_SSL_CTX) as resp:
-        return json.loads(resp.read())
+    for attempt in range(5):
+        time.sleep(RATE_DELAY * (2 ** attempt) if attempt else RATE_DELAY)
+        try:
+            with urllib.request.urlopen(req, timeout=30, context=_SSL_CTX) as resp:
+                return json.loads(resp.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                wait = 30 * (2 ** attempt)
+                print(f"  429 rate-limited, waiting {wait}s …", flush=True)
+                time.sleep(wait)
+            else:
+                raise
+    raise RuntimeError(f"Failed after 5 attempts: {url}")
 
 
 def fetch_revision_index(wiki: str, title: str) -> list[dict]:
