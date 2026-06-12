@@ -248,7 +248,7 @@ def plot_metric_lang_avg(metric: str, ylabel: str, is_ratio: bool,
             continue
         avgs = [np.mean(yearly_values[y]) for y in years]
         line, = ax.plot(years, avgs,
-                        color=color, linewidth=2.5, alpha=1.0,
+                        color=color, linewidth=1.6, alpha=1.0,
                         marker="o", markersize=4,
                         label=f"{lang} (n={len(policy_dfs)})")
         legend_handles.append(line)
