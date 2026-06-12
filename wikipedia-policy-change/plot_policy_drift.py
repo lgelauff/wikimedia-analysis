@@ -240,7 +240,7 @@ def plot_metric_lang_avg(metric: str, ylabel: str, is_ratio: bool,
                 # draw individual translucent line
             if not series.empty:
                 ax.plot(series["year"], series[metric],
-                        color=color, linewidth=0.9, alpha=0.20)
+                        color=color, linewidth=0.9, alpha=0.40)
 
         # Average line
         years = sorted(yearly_values)
