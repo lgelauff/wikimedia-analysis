@@ -1,6 +1,9 @@
 # Policy Network — Roadmap
 
-**Primary RQ: where do language editions *truly* diverge?** — which policy domains/norms genuinely differ by editorial choice, vs merely lagging, translating, or neglecting a shared template. Deliverable = a divergence map (M9). See [design §RQ](policy_network_design.md).
+**Research questions** (where / what / when) — see [design §RQ](policy_network_design.md):
+- **RQ1 (where):** where do editions *truly* diverge? → divergence map (M9).
+- **RQ2 (what):** what does genuine policy *reform* look like? → case studies linking textual reform to its RfC/VPP deliberation (M11; candidate detection early on existing data).
+- **RQ3 (when):** what are the inflection points in policy development? → change-point analysis on M5-normalized aggregate series (M5/M10; raw-series proxy early).
 
 Actionable companion to [`policy_network_design.md`](policy_network_design.md). Milestones are ordered by dependency; the two-tier split means **Tier 1 (structural) ships a usable artifact before any LLM spend**, and the methodology gate (M5) blocks *quantitative claims*, not the build.
 
@@ -74,6 +77,13 @@ At the atomic level; the only level where cross-wiki comparison is meaningful.
 
 ## M10 — Analysis + write-up  🟢
 Hypotheses from M0 tested with M5 machinery; cross-wiki typology from M9; web app (M3) as the public artifact.
+- **RQ3 (inflection points):** change-point detection (PELT/Bayesian) on M5-normalized aggregate series per wiki; cross-wiki synchronized-vs-staggered test (staggered ossification onset → H5 evidence). Raw-series proxy available earlier at M2/M4.
+
+## M11 — Reform case studies (RQ2)  🟢
+The rare true-reform events as the informative tail; joins the policy + RfC tracks.
+- Candidate detection (Tier-1 reform score: low old-in-new + large change + cosine drop) — *early win on existing drift CSVs*. Artifact/move/revert filter. Cross-page reform via provenance layer.
+- Semantic confirmation of norm change (M7/M8); select exemplars across domains.
+- Per case: before/after norm, triggering revisions+editors, **associated RfC/VPP deliberation + closing rationale** (RfC track), timeline, durability, and (satellites) independent-vs-followed-en.
 
 ---
 

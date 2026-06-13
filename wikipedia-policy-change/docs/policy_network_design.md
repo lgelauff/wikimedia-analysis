@@ -18,7 +18,26 @@ The operative word is **"truly."** Apparent divergence has four causes; only the
 
 Answering it = a **divergence map**: for each cross-wiki-matched policy cluster (M9), a divergence score + a classification into the four causes (via the genetic/functional `relationship` field + per-node activity), projected onto the topical structure of the network (content / conduct / deletion / notability / procedure …) so we can see *where* genuine divergence concentrates.
 
-Overarching thesis behind it: **mature Wikipedia policy ossifies and accretes defensively rather than reforming; satellite editions decouple from en over time — and the RQ asks where that decoupling is real.** Five falsifiable sub-hypotheses feed the RQ. H1 and H2 are a spectrum and must be tested *against* each other (is there much change at all → H2; and when there is, is it additive → H1); H5 + the artifact-disambiguation above are what make the RQ answerable.
+**Secondary RQ: what does genuine policy *reform* look like, when it happens? — develop case studies.** If reform is rare (H1/H2), the reform events are the informative tail; the right method for a small-N tail is the case study, not statistics. This RQ also **joins the two tracks**: a true reform should have a *deliberation* behind it (an RfC / Village Pump discussion + closing rationale), so each case study links the textual reform to the governance process that produced it.
+
+*True reform* = a transition that **replaces or inverts a norm**, not additive accretion or defensive detail (and not a cleaning/markup artifact, not a page move, not a bot/revert). Detection → case-study pipeline:
+1. **Candidate detection (Tier-1, cheap):** rank node-year transitions by a reform score — low `containment_old_in_new` (old text gone) + large net change + `cosine` drop — on mwparserfromhell-cleaned data. *Early win: runnable now on the existing drift CSVs.*
+2. **Artifact filter:** drop template/markup churn, page moves, bot edits, and changes that revert within N snapshots (non-durable).
+3. **Cross-page reform:** catch reform that happened via merge/split/spin-out, not in-place rewrite (uses the provenance/lineage layer — content moved *and transformed*).
+4. **Semantic confirmation (M7/M8):** did a normative principle actually change (rule added/removed/inverted, threshold moved, scope changed), vs reorganization? Classify reform type.
+5. **Rank + select exemplars** across domains (content / conduct / deletion / notability / procedure).
+6. **Case study each:** before/after norm; triggering revision(s) + editors; the associated **RfC/VPP deliberation + closing rationale** (RfC track); timeline; durability (did it stick or get rolled back?); and — for satellite wikis — whether the reform was independent or followed en (ties to H5 / the divergence map).
+
+**Third RQ: what are the inflection points in Wikipedia policy development? — when did the trajectory bend?** System-level and temporal (complements RQ1's *where* and RQ2's *what* — together: where / what / when). Inflection points = regime shifts in the aggregate policy system: bursts or collapses in new-policy creation, the **onset of ossification** (when per-node change rate dropped — when did it freeze?), reform waves (temporal clusters of RQ2 events), structural reorganizations (the ~2005–07 formalization of the policy/guideline distinction; major mergers like WP:ATT), and editor-base-driven shifts.
+
+Operationalization:
+- Build aggregate annual series per wiki: new-node count, reform-event count, total corpus size, mean per-node change, new-edge count, network density.
+- **Change-point detection** (e.g. PELT / Bayesian) on each series → candidate inflection years. *Must run on M5-normalized series* — a change-point in raw density is a growth artifact, not a regime shift.
+- Qualitative overlay: align detected inflections with known external events (editor-base growth curve, major controversies, WMF/governance milestones) — association, not causation (n=3).
+- **Cross-wiki:** are inflection points synchronized (shared external driver) or staggered/lagged (each community matures on its own clock)? Staggered + lagged ossification onset is direct evidence for H5 decoupling / independent maturation.
+- *Early proxy:* change-points on raw aggregate series testable at Tier-1 (M2/M4); the defensible version needs M5.
+
+Overarching thesis behind it: **mature Wikipedia policy ossifies and accretes defensively rather than reforming; satellite editions decouple from en over time — and the three RQs ask *where* that decoupling is real, *what* the rare genuine reforms look like, and *when* the trajectory bent.** Five falsifiable sub-hypotheses feed the RQ. H1 and H2 are a spectrum and must be tested *against* each other (is there much change at all → H2; and when there is, is it additive → H1); H5 + the artifact-disambiguation above are what make the RQ answerable.
 
 | # | Hypothesis | Operationalization (metric) | Null | Tested by |
 |---|---|---|---|---|
