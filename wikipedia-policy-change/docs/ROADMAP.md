@@ -8,10 +8,11 @@ Legend: 🟢 runs local · 🔵 runs Toolforge · ⚪ either · ⛔ gate (stop &
 
 ---
 
-## M0 — Research question + null-model plan  ⛔  🟢
-The #1 unresolved risk (both review rounds). Before quantitative results exist, decide what's falsifiable.
-- Deliverable: 1–2 falsifiable hypotheses + their nulls; what a null result looks like; which need M5 machinery; acknowledge n=3 caps cross-wiki to typology + existence claims.
-- **Gate:** no quantitative network metric is reported until M0 + M5 exist. Can be drafted in parallel with M1–M4 (it doesn't block the build).
+## M0 — Hypotheses + null-model plan  ⛔  🟢
+The #1 unresolved risk (both review rounds). **Hypotheses now defined** — see [design §Hypotheses](policy_network_design.md): H1 additive-not-reform, H2 ossification, H3 defensive accretion, H4 new-policy-as-prohibition. Thesis: mature policy ossifies and accretes defensively rather than reforming.
+- Deliverable: per-hypothesis metric + null + test layer (done, in design); pre-register reform threshold τ and trend tests; n=3 caps cross-wiki to typology/existence.
+- **Early win:** H1 + H2 are partially testable now on the existing mwparserfromhell-cleaned 10-policy drift CSVs — cheap pilot before the full build.
+- **Gate:** no quantitative network metric ships until M0 + M5 exist. Parallelizable with M1–M4.
 
 ## M1 — 2026 enwiki structural slice (Tier 1, SQL)  🔵
 The agreed next build. Current network from replica tables — no dumps, no LLM.

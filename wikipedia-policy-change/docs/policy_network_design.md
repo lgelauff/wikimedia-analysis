@@ -6,6 +6,25 @@ This supersedes the per-page drift framing: a policy page is a node in a tempora
 
 ---
 
+## Hypotheses (M0)
+
+Overarching thesis: **mature Wikipedia policy ossifies and accretes defensively rather than reforming.** Four falsifiable sub-hypotheses. H1 and H2 are a spectrum and must be tested *against* each other (is there much change at all → H2; and when there is, is it additive → H1).
+
+| # | Hypothesis | Operationalization (metric) | Null | Tested by |
+|---|---|---|---|---|
+| **H1** | Policies add content but rarely reform | Per snapshot pair: word_count ↑ while `containment_old_in_new` stays high (old text retained); a "reform" = `containment_old_in_new` below threshold τ. Predict reforms are rare vs additions; added ≫ removed. | Reforms occur at a rate comparable to additions (old text frequently replaced). | **Tier 1** (drift metrics) — *partially testable on existing 10-policy data now* |
+| **H2** | Policies are mostly frozen — limited meaningful change | Per-node change magnitude (`1−cosine_vs_prev`, net word change) declines with policy age and calendar year; recent years → cosine ≈ 1. Trend test. | Change rate is constant or rising over time. | **Tier 1**. Separate per-node stasis from system growth (new nodes) — both can hold. |
+| **H3** | Changes are defensive: more verbose, more edge cases, more detail, responding to specifics | Added content skews to exceptions/qualifiers/clarifications/procedure over new principles; linguistic defensiveness rises (conditionals, "except/unless", cross-refs, sentence length, specificity). | Additions introduce new principles at the same rate as defensive detail. | **M8 atomic** (statement-type classification) + cheap linguistic features earlier |
+| **H4** | New policies mostly exist to stop people doing things | New policy *nodes* skew proscriptive (deontic: prohibition > permission/obligation) and cluster in conduct/enforcement regions of the network. | New policies are balanced proscriptive/permissive-enabling. | **M8** (deontic polarity) + **network** (new-node topical placement) |
+
+**Cross-wiki angle (de/nl):** is ossification (H2) and defensive accretion (H3) a *universal* property of mature peer-governance, or en-specific? n=3 caps this to existence/typology claims, not general inference.
+
+**Confounds to control (all):** the mwparserfromhell cleaning fix is mandatory — the old regex manufactured phantom "change" (template nesting) that would masquerade as reform/anti-ossification; bot/category-only edits; survivorship (frozen-then-demoted `{{historical}}` pages vs active); and the growing-panel null-model requirement (M5) for any network-level H4 claim.
+
+**Early win:** H1 and H2 are partially testable *right now* on the existing mwparserfromhell-cleaned 10-policy drift CSVs — a cheap pilot before the full build.
+
+---
+
 ## Build decisions (this session)
 
 - **First wikis:** en + de + nl (contrasting structures: en two-tier hierarchy, de flat list, nl Portal-namespace index) → scale to 5 later.
