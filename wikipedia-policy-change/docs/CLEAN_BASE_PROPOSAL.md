@@ -29,6 +29,21 @@ M1 (enwiki depth-2) is built and validated; M2 (de/nl) is mid-run. This proposes
 - **Navbox membership** = a *facet*: which Type-B policy navbox(es) enumerate a page (the curated grouping), kept separate from the body-link graph.
 - **Node attributes** = title, namespace, redirect, QID, admitted_via, status tier.
 
+### Discovery by indicator scoring + confirmed/suspect tiers
+
+Replace blind depth-bounded BFS with **scored propagation anchored on a confirmed seed**. This is precision-oriented and self-limiting — drift can't sneak in because a wayward category/template simply scores low.
+
+**Confidence tiers (node attribute `confidence`):**
+- **`confirmed`** — carries a Type-A status template (`{{policy}}`/`{{guideline}}`/…), or sits in a hand-confirmed core category (`Category:Wikipedia policies`, `Category:Wikipedia guidelines`). Near-ground-truth. This is the anchor set **C**.
+- **`suspect`** — reached *through* a scored category or navbox but lacks its own status marker. Stays suspect until it (a) acquires a status template, or (b) passes the Tier-2 LLM judge (M6). May be dropped at reduction.
+
+**Indicator scoring (rank, then work down):**
+- *Category* `cat`: `support = |members(cat) ∩ C|`, `density = support / |members(cat)|`. Indicator if `support ≥ s_min` **and** `density ≥ d_min`. Its non-C members → suspects.
+- *Template* `t` (Type-B): on its link *targets*: `support = |targets(t) ∩ C|`, `density = support / |targets(t)|`. Policy-navbox if it clears the same bars. Its non-C targets → suspects.
+- Rank indicators by `support`; descend the list admitting suspects until the threshold cut. Score stays anchored on **C** (not on suspects) to prevent runaway propagation; optional decayed re-scoring rounds if needed.
+
+Every suspect records the indicator + score that surfaced it (auditable). `s_min`/`d_min` are versioned parameters; the ranked list is inspectable so we can set the cut by eye on real data.
+
 ### Template roles (the "only some templates indicate policy, two ways" point)
 
 | role | mechanism | examples | use |
@@ -37,7 +52,15 @@ M1 (enwiki depth-2) is built and validated; M2 (de/nl) is mid-run. This proposes
 | `navigation` | **links to policies** (Type B) | `{{Wikipedia policies and guidelines}}` navbox | its **targets** are policy candidates (discovery) + grouping facet |
 | `noise` | neither | `{{cite web}}`, `{{reflist}}`, infoboxes, maintenance | ignored for the network; registry only |
 
-Role assignment: name-pattern heuristic first (cheap), LLM for the ambiguous tail later. A Type-B navbox is identified by *what fraction of its links are already-admitted policy pages* — a navbox whose targets are mostly policy is a policy navbox. Stored in `template_registry.role`.
+**Role assignment — four features, strongest first** (no hardcoded lists; all language-agnostic):
+1. **The template's own categories** — a template page is itself categorized (`Category:Wikipedia policy and guideline templates`, `…navigational boxes`, `…citation templates`, maintenance). This *declares* its role; query `categorylinks` on the template's `page_id`.
+2. **Target-overlap with confirmed** — a Type-B policy-navbox is one whose link targets are mostly confirmed policy pages (the scoring above).
+3. **Name pattern** — cheap fallback.
+4. **Template QID `P31`** — supplementary Wikidata classification.
+
+LLM only for the ambiguous tail. Stored in `template_registry.role` (+ optionally the template's own categories/QID for audit).
+
+**Recursive anchor:** the category `Wikipedia policy and guideline templates` *enumerates the Type-A status templates directly* — so discovering that one template-category hands us the whole status-template set, and every page transcluding them is **confirmed**. A second independent route into **C**, language-agnostic via the same category-scoring.
 
 ---
 
