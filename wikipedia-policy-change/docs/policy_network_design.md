@@ -15,6 +15,28 @@ This supersedes the per-page drift framing: a policy page is a node in a tempora
 
 ---
 
+## Review round 2 — corrections & decisions
+
+Three-reviewer panel (data-engineering, methodology, LLM). Full reviews in `.claude/policy_network_review2_{data,method,llm}.md`.
+
+**New decisions:**
+- **Namespace policy = exclusion-based, not inclusion.** Exclude main (ns 0) + a per-wiki list of clearly-non-governance namespaces; default-include the rest. Projects differ — some wikis host essays/governance in User space — so an allowlist would miss things; we blocklist instead. (Accepts a larger historical scan than a governance whitelist; the 2026 SQL slice is unaffected.)
+- **Tier-2 judge = cheap-draft / strong-verify** (two-stage): cheap model first pass, strong model re-checks negatives near the threshold.
+
+**Must-fix corrections (fold into the relevant sections before building):**
+1. **LLM-admitted nodes do NOT expand the frontier.** Only rule-positive nodes expand; LLM-admitted nodes are labeled but are traversal dead-ends. Otherwise the node *population* becomes judge-version-dependent.
+2. **Replica schema (2026 build):** `cl_to` is removed; `pagelinks`/`categorylinks`/`templatelinks` all go through the shared **`linktarget`** table (`*_target_id` → `lt_namespace`, `lt_title`). No cross-DB joins on replicas → Phase D QID alignment is two-step. Recursive category descent = BFS in code, not one SQL query. Namespace numbers/names per wiki from `siteinfo`, never hardcoded English prefixes.
+3. **No bz2 multistream index for HISTORY dumps** (only current-articles). API-by-revid is the primary wikitext fetch; stream-by-part is the offline fallback.
+4. **Inference gate (the #1 threat, still open):** no quantitative network metric (density, centrality, modularity, diameter) may be reported until size-normalized against a **null/configuration model** and detrended for panel growth. Template/navbox edges inject complete-subgraph artifacts — handle explicitly.
+5. **Bootstrap selection bias:** the discovered-indicator snowball is homophilous — under-finds vocabulary-divergent / link-isolated governance on de/nl (the very cross-wiki signal of interest). Estimate miss-rate via capture–recapture across independent frames.
+6. **1-Jan off-by-one:** the 1-Jan-Y snapshot = state at end of Y−1; label time-series accordingly. Detect lifecycle status transitions (proposed→rejected/promoted) at *event* resolution from the stub; use annual snapshots for topology only.
+7. **Cache key bug:** add `model_id` to verdict cache keys (verdicts collide on model switch); `rubric_version` = content-hash; verdict cache is a first-class publishable artifact. For raw revisions, default to publishing **manifest + hashes only** (CC BY-SA attribution obligation) rather than the text blobs.
+8. **Atomic layer:** define the unit as **extractive, span-anchored, deontic-marker-anchored** (not generative); do NOT start until it clears a pre-registered human boundary-agreement gate. (Earlier "~6M statements" was a ~20× overcount — section-level work is ~100–300k calls.)
+9. **Cross-wiki matching:** block by (QID ∪ langlink) → embedding-ANN → LLM-verify top-k. Never O(n²). Add a `relationship` field (genetic/copied vs functional/convergent) backed by external evidence; use known translations as a positive control.
+10. **Validity hygiene:** state falsifiable hypotheses + their nulls (currently descriptive only; n=3 caps cross-wiki to typology + existence claims); inter-coder reliability (κ, ≥2 coders) at all three judging layers; pre-register the reduction threshold τ and report metrics as curves over τ.
+
+---
+
 ## 0. Scope decisions (locked)
 
 - **The body = policies ∪ guidelines**, treated as one corpus. We do not separate them in the headline analysis (status tier still recorded per node-year so the split is recoverable).
