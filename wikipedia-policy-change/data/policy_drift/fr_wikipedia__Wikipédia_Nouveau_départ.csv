@@ -1,12 +1,12 @@
 wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
-fr.wikipedia,Wikipédia:Nouveau départ,2012,84963449,891,35,,,,,
-fr.wikipedia,Wikipédia:Nouveau départ,2013,98869154,890,35,0,1,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2014,107836916,890,35,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2015,117662432,889,35,0,1,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2016,132119724,892,35,3,0,0.9999,0.9714,0.9714
-fr.wikipedia,Wikipédia:Nouveau départ,2017,139803261,892,35,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2018,144834357,892,35,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2023,209936749,892,35,1,1,0.9999,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2024,214098863,892,35,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Nouveau départ,2025,226329078,892,36,0,0,1.0,0.9714,0.9722
-fr.wikipedia,Wikipédia:Nouveau départ,2026,233360845,892,36,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2012,84963449,944,35,,,,,
+fr.wikipedia,Wikipédia:Nouveau départ,2013,98869154,943,35,0,1,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2014,107836916,943,35,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2015,117662432,942,35,0,1,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2016,132119724,948,35,6,0,0.9998,0.9714,0.9714
+fr.wikipedia,Wikipédia:Nouveau départ,2017,139803261,961,35,13,0,0.9993,0.9714,0.9714
+fr.wikipedia,Wikipédia:Nouveau départ,2018,144834357,961,35,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2023,209936749,961,35,1,1,0.9999,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2024,214098863,966,35,5,0,0.9998,1.0,1.0
+fr.wikipedia,Wikipédia:Nouveau départ,2025,226329078,970,37,4,0,0.9998,1.0,0.973
+fr.wikipedia,Wikipédia:Nouveau départ,2026,233360845,970,37,0,0,1.0,1.0,1.0

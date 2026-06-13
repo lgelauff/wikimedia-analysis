@@ -1,14 +1,14 @@
 wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
-fr.wikipedia,Wikipédia:Appropriation d'un article,2009,47691319,292,15,,,,,
-fr.wikipedia,Wikipédia:Appropriation d'un article,2010,59740059,292,15,1,1,0.9992,0.9333,0.9333
-fr.wikipedia,Wikipédia:Appropriation d'un article,2011,73525824,297,11,32,27,0.9746,0.5333,0.6364
-fr.wikipedia,Wikipédia:Appropriation d'un article,2012,85303119,288,11,8,17,0.9909,0.2727,0.2727
-fr.wikipedia,Wikipédia:Appropriation d'un article,2013,95563003,288,11,3,3,0.9978,0.9091,0.9091
-fr.wikipedia,Wikipédia:Appropriation d'un article,2014,101026299,288,11,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Appropriation d'un article,2016,133139115,288,11,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Appropriation d'un article,2018,148757529,309,12,22,1,0.9925,0.9091,0.8333
-fr.wikipedia,Wikipédia:Appropriation d'un article,2019,160054034,309,12,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Appropriation d'un article,2020,174857093,309,12,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Appropriation d'un article,2023,209454660,309,12,0,0,1.0,1.0,1.0
-fr.wikipedia,Wikipédia:Appropriation d'un article,2025,225658864,284,12,30,55,0.9613,0.8333,0.8333
-fr.wikipedia,Wikipédia:Appropriation d'un article,2026,233052015,284,12,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Appropriation d'un article,2009,47691319,295,15,,,,,
+fr.wikipedia,Wikipédia:Appropriation d'un article,2010,59740059,295,15,1,1,0.9992,0.9333,0.9333
+fr.wikipedia,Wikipédia:Appropriation d'un article,2011,73525824,303,11,37,29,0.9735,0.4667,0.5455
+fr.wikipedia,Wikipédia:Appropriation d'un article,2012,85303119,294,11,8,17,0.9913,0.2727,0.2727
+fr.wikipedia,Wikipédia:Appropriation d'un article,2013,95563003,294,11,3,3,0.9979,0.9091,0.9091
+fr.wikipedia,Wikipédia:Appropriation d'un article,2014,101026299,294,11,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Appropriation d'un article,2016,133139115,294,11,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Appropriation d'un article,2018,148757529,322,13,29,1,0.9908,0.9091,0.7692
+fr.wikipedia,Wikipédia:Appropriation d'un article,2019,160054034,322,13,0,0,1.0,1.0,1.0
+fr.wikipedia,Wikipédia:Appropriation d'un article,2020,174857093,328,13,6,0,0.9981,0.9231,0.9231
+fr.wikipedia,Wikipédia:Appropriation d'un article,2023,209454660,335,13,7,0,0.9979,0.9231,0.9231
+fr.wikipedia,Wikipédia:Appropriation d'un article,2025,225658864,310,13,30,55,0.9641,0.8462,0.8462
+fr.wikipedia,Wikipédia:Appropriation d'un article,2026,233052015,314,13,4,0,0.9987,1.0,1.0

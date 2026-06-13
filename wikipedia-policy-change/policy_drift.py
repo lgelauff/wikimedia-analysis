@@ -1,5 +1,5 @@
 # /// script
-# dependencies = ["certifi"]
+# dependencies = ["certifi", "mwparserfromhell"]
 # ///
 """
 policy_drift.py — measure how much a policy page has changed over time.
@@ -147,28 +147,29 @@ def fetch_revision_text(wiki: str, revid: int) -> str:
 # Text processing
 # ---------------------------------------------------------------------------
 
-# Patterns to strip from wikitext before analysis
-_STRIP = [
-    re.compile(r"<ref[^>]*>.*?</ref>",    re.S | re.I),  # ref tags
-    re.compile(r"<ref[^>]*/?>",           re.I),          # self-closing refs
-    re.compile(r"<!--.*?-->",             re.S),           # comments
-    re.compile(r"\{\{[^}]*\}\}",          re.S),           # templates (single-level)
-    re.compile(r"\[\[[^\]|]*\|([^\]]*)\]\]"),              # [[link|label]] → label
-    re.compile(r"\[\[([^\]]*)\]\]"),                       # [[link]] → link
-    re.compile(r"\[https?://\S+\s+([^\]]+)\]"),            # [url label] → label
-    re.compile(r"\[https?://\S+\]"),                       # bare url → remove
-    re.compile(r"={2,}([^=]+)={2,}"),                     # section headers → text
-    re.compile(r"'{2,}"),                                  # bold/italic markers
-    re.compile(r"^\s*[*#:;]\s*", re.M),                   # list/indent markers
-    re.compile(r"\|[^\n]*", re.M),                         # table cells
-    re.compile(r"\{\|.*?\|\}", re.S),                      # tables
-]
+# Category and interwiki links (e.g. [[Category:…]], [[de:…]]) are scaffolding,
+# not policy text. Strip them before parsing so they don't leak in as link labels.
+# The leading-letter requirement skips in-text links like [[:Category:…]] and
+# ordinary wikilinks (no namespace/lang prefix).
+_NS_LINK = re.compile(r"\[\[[A-Za-z][A-Za-z\-]*:[^\]]*\]\]", re.S)
 
 
 def strip_markup(wikitext: str) -> str:
-    text = wikitext
-    for pattern in _STRIP:
-        text = pattern.sub(" ", text)
+    """
+    Strip wiki markup to plain policy text using mwparserfromhell.
+
+    mwparserfromhell parses the wikitext into a node tree and `strip_code()`
+    removes templates (at any nesting depth), ref tags, HTML, file embeds,
+    and heading/format markers while keeping link display text. This replaces
+    the previous single-level regex template stripper, which mangled nested
+    templates and produced phantom year-over-year discontinuities (see
+    .claude/discontinuity/FINDING.md).
+    """
+    import mwparserfromhell
+
+    text = _NS_LINK.sub(" ", wikitext)
+    code = mwparserfromhell.parse(text)
+    text = code.strip_code(normalize=True, collapse=True)
     # collapse whitespace
     text = re.sub(r"\s+", " ", text).strip()
     return text

@@ -1,7 +1,7 @@
 wiki,title,year,revid,word_count,sent_count,words_added,words_removed,cosine_vs_prev,containment_old_in_new,containment_new_in_old
-ja.wikipedia,Wikipedia:攻撃ページ,2011,38317607,56,1,,,,,
-ja.wikipedia,Wikipedia:攻撃ページ,2012,43054917,53,1,5,8,0.8745,0.0,0.0
-ja.wikipedia,Wikipedia:攻撃ページ,2013,49200986,53,1,0,0,1.0,1.0,1.0
-ja.wikipedia,Wikipedia:攻撃ページ,2015,55051915,53,1,0,0,1.0,1.0,1.0
-ja.wikipedia,Wikipedia:攻撃ページ,2022,90993252,67,1,42,28,0.4232,0.0,0.0
-ja.wikipedia,Wikipedia:攻撃ページ,2026,109827014,67,1,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:攻撃ページ,2011,38317607,57,1,,,,,
+ja.wikipedia,Wikipedia:攻撃ページ,2012,43054917,55,1,6,8,0.8758,0.0,0.0
+ja.wikipedia,Wikipedia:攻撃ページ,2013,49200986,55,1,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:攻撃ページ,2015,55051915,55,1,0,0,1.0,1.0,1.0
+ja.wikipedia,Wikipedia:攻撃ページ,2022,90993252,82,1,60,33,0.381,0.0,0.0
+ja.wikipedia,Wikipedia:攻撃ページ,2026,109827014,82,1,0,0,1.0,1.0,1.0
