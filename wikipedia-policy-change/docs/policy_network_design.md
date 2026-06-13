@@ -6,6 +6,15 @@ This supersedes the per-page drift framing: a policy page is a node in a tempora
 
 ---
 
+## Build decisions (this session)
+
+- **First wikis:** en + de + nl (contrasting structures: en two-tier hierarchy, de flat list, nl Portal-namespace index) → scale to 5 later.
+- **Next action:** build the 2026 SQL slice (enwiki current network from replica tables — no dumps, no LLM).
+- **Tier-2 judge model:** cheap tier (Haiku-class); validate accuracy on a gold set.
+- **Body scope (supplements/information pages in/out):** DEFERRED — capture + flag now, decide inclusion later.
+
+---
+
 ## 0. Scope decisions (locked)
 
 - **The body = policies ∪ guidelines**, treated as one corpus. We do not separate them in the headline analysis (status tier still recorded per node-year so the split is recoverable).
