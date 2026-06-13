@@ -1,0 +1,26 @@
+lang,policy,year,word_count,cosine_vs_prev,containment_old_in_new,containment_new_in_old,reform_score
+ja,Wikipedia:著作権侵害への対処,2008,287,0.074,0.0,0.0,0.926
+de,Wikipedia:Richtlinien,2014,2,0.09,0.0,1.0,0.91
+ja,Wikipedia:追放の方針,2009,304,0.138,0.0,0.0,0.862
+ja,Wikipedia:方針とガイドライン,2005,191,0.156,0.0,0.0,0.844
+ja,Wikipedia:再出発の方針,2020,176,0.078,0.188,0.0,0.749
+ja,Wikipedia:記事の所有権,2012,235,0.268,0.0,0.0,0.732
+ja,Wikipedia:著作権侵害への対処,2006,93,0.29,0.0,0.0,0.71
+ja,Wikipedia:存命人物の伝記,2007,493,0.216,0.173,1.0,0.649
+ja,Wikipedia:攻撃ページ,2022,82,0.381,0.0,0.0,0.619
+ja,Wikipedia:方針とガイドライン,2011,232,0.515,0.0,0.0,0.485
+ja,Wikipedia:問い合わせ対応ボランティアチーム,2021,283,0.548,0.143,0.0,0.388
+en,Wikipedia:Volunteer Response Team,2007,344,0.795,0.0,0.0,0.205
+ja,Wikipedia:記事の所有権,2010,50,0.798,0.0,0.0,0.202
+en,Wikipedia:Volunteer Response Team,2009,1415,0.83,0.0,0.0,0.17
+nl,Wikipedia:Contactpunt,2025,116,0.777,0.286,0.667,0.159
+ja,Wikipedia:方針とガイドライン,2007,171,0.862,0.0,0.0,0.138
+fr,Wikipédia:Équipe bénévole de réponse aux courriels,2021,409,0.829,0.2,0.154,0.137
+es,Wikipedia:Políticas y convenciones,2009,1591,0.868,0.0,0.0,0.132
+ja,Wikipedia:攻撃ページ,2012,55,0.876,0.0,0.0,0.124
+en,Wikipedia:Policies and guidelines,2002,651,0.876,0.041,0.147,0.119
+fr,Wikipédia:Équipe bénévole de réponse aux courriels,2016,162,0.862,0.167,0.2,0.115
+fr,Wikipédia:Équipe bénévole de réponse aux courriels,2007,112,0.887,0.167,0.167,0.094
+en,Wikipedia:Attack page,2007,314,0.827,0.5,0.182,0.086
+en,Wikipedia:Ownership of content,2004,718,0.823,0.556,0.229,0.079
+es,Wikipedia:VRT,2008,943,0.868,0.412,0.182,0.078
