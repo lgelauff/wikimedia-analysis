@@ -1,6 +1,6 @@
-# Toolforge setup — policy-network tool
+# Toolforge setup — wikimedia-policies tool
 
-New dedicated tool for the policy-network build (M1+). I prepare repo scaffolding + this checklist; **you run the bastion steps** (SSH to the bastion is out of scope for the agent) and paste results back. Pattern follows the wiki-polis lessons.
+New dedicated tool for the wikimedia-policies build (M1+). I prepare repo scaffolding + this checklist; **you run the bastion steps** (SSH to the bastion is out of scope for the agent) and paste results back. Pattern follows the wiki-polis lessons.
 
 Prereq: you already have a Toolforge account. These steps create a *new tool* under it.
 
@@ -11,18 +11,18 @@ Prereq: you already have a Toolforge account. These steps create a *new tool* un
 On the bastion (`ssh <you>@login.toolforge.org`):
 
 ```
-# Request/create a new tool named e.g. "policy-network"
+# Request/create a new tool named "wikimedia-policies"
 # via https://toolsadmin.wikimedia.org/tools/  (Create new tool)
 # then become it:
-become policy-network
+become wikimedia-policies
 ```
 
-The tool gets its own home `/data/project/policy-network/`, its own `replica.my.cnf` (replica + ToolsDB creds), and its own quota.
+The tool gets its own home `/data/project/wikimedia-policies/`, its own `replica.my.cnf` (replica + ToolsDB creds), and its own quota.
 
 ## 2. Verify replica access
 
 ```
-become policy-network
+become wikimedia-policies
 mariadb --defaults-file=$HOME/replica.my.cnf -h enwiki.analytics.db.svc.wikimedia.cloud enwiki_p \
   -e "SELECT page_id,page_namespace,page_title FROM page WHERE page_namespace=4 LIMIT 3;"
 ```
@@ -35,7 +35,7 @@ mariadb --defaults-file=$HOME/replica.my.cnf -h enwiki.analytics.db.svc.wikimedi
 mariadb --defaults-file=$HOME/replica.my.cnf -h tools.db.svc.wikimedia.cloud
 ```
 ```sql
-CREATE DATABASE s#####__policynet CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE s#####__policies CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 - Replace `s#####` with the credential username prefix from `replica.my.cnf` (the `user=` line). The `s#####__` prefix must match exactly or you get "Access denied".
 
@@ -77,7 +77,7 @@ Reuse the wiki-polis Flask/Toolforge deploy pattern (`~/www/python` real dir, ve
 - **You run:** steps 1–6 on the bastion; paste back the replica smoke-test output, the ToolsDB user prefix (`s#####`), the latest dump date, and `toolforge jobs images`. Those four unblock M1 on Toolforge.
 
 ## Open values to capture (paste back)
-- [ ] Tool name (proposed: `policy-network`)
+- [ ] Tool name (`wikimedia-policies`)
 - [ ] ToolsDB user prefix `s#####`
 - [ ] Replica smoke-test: does the `linktarget` join return rows?
 - [ ] Latest `/public/dumps` enwiki dump date + stub-meta-history present?
