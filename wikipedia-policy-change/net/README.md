@@ -8,24 +8,35 @@ No dumps, no LLM. See [`../docs/policy_network_design.md`](../docs/policy_networ
 
 ## Run on Toolforge
 
+**Key rule:** create the venv AND run the script with the *same* image (`python3.11`).
+A venv built in a job won't work from the bastion (different interpreter path).
+Run via `toolforge jobs run`; write SQLite to `~` (a pod's `/tmp` is ephemeral).
+
 ```bash
 become wikimedia-policies
-git -C $HOME/wikimedia-analysis pull          # get latest
 
-# one-time: venv + load schema into ToolsDB
+# one-time: clone + venv
+cd $HOME && git clone https://github.com/lgelauff/wikimedia-analysis.git
 toolforge jobs run venv --image python3.11 --wait \
   --command "python3 -m venv ~/venv && ~/venv/bin/pip install pymysql"
+toolforge jobs logs venv
+
+# one-time: load schema into ToolsDB
 mariadb --defaults-file=~/replica.my.cnf -h tools.db.svc.wikimedia.cloud \
   $(grep '^user' ~/replica.my.cnf | cut -d= -f2 | tr -d ' ')__policies \
   < $HOME/wikimedia-analysis/wikipedia-policy-change/net/schema.sql
 
-# quick smoke test first (shallow, SQLite only, no ToolsDB write)
-~/venv/bin/python $HOME/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py \
-  --wiki enwiki --year 2026 --max-depth 2 --no-toolsdb --sqlite /tmp/net.db
+# update later
+git -C $HOME/wikimedia-analysis pull
 
-# full build as a job
+# smoke test (shallow, SQLite only) — read summary from logs
+toolforge jobs run net-smoke --image python3.11 --mem 1Gi --wait \
+  --command "~/venv/bin/python ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 2 --no-toolsdb --sqlite ~/net_smoke.db"
+toolforge jobs logs net-smoke
+
+# full build (writes ToolsDB)
 toolforge jobs run net-build --image python3.11 --mem 2Gi --wait \
-  --command "~/venv/bin/python $HOME/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 4"
+  --command "~/venv/bin/python ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 4"
 toolforge jobs logs net-build
 ```
 
