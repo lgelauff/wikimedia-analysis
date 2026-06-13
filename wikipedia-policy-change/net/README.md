@@ -34,12 +34,12 @@ git -C $HOME/wikimedia-analysis pull
 
 # smoke test (shallow, SQLite only) — read summary from logs
 toolforge jobs run net-smoke --image python3.11 --mem 1Gi --wait \
-  --command "~/venv/bin/python ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 2 --no-toolsdb --sqlite ~/net_smoke.db"
+  --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 2 --no-toolsdb --sqlite ~/net_smoke.db"
 toolforge jobs logs net-smoke
 
 # full build (writes ToolsDB)
 toolforge jobs run net-build --image python3.11 --mem 2Gi --wait \
-  --command "~/venv/bin/python ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 4"
+  --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 4"
 toolforge jobs logs net-build
 ```
 
