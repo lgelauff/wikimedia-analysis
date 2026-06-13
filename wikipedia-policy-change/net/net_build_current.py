@@ -40,11 +40,23 @@ except ImportError:
     pymysql = None
 
 # Seed indicators (BOOTSTRAP only — the operative set is discovered from the tree).
-SEED_ROOT_CATEGORY = "Wikipedia policies and guidelines"   # spaces; we store with underscores
-SEED_STATUS_TEMPLATES = [           # ns-10 titles (underscores), resolved per wiki at run time
-    "Policy", "Guideline", "MoS_guideline", "Subcat_guideline",
-    "Naming_conventions", "Notability_guideline", "Procedural_policy",
-]
+# Per-wiki root category (resolved from enwiki langlinks; ns-14 title WITHOUT the
+# localized "Category:" prefix). Category-BFS admission is language-agnostic from here.
+WIKI_ROOTS = {
+    "enwiki": "Wikipedia policies and guidelines",
+    "dewiki": "Wikipedia:Richtlinien",
+    "nlwiki": "Wikipedia:Beleid",
+}
+SEED_ROOT_CATEGORY = WIKI_ROOTS["enwiki"]
+
+# Status-template seeds are en-only for now; on other wikis these find nothing and
+# admission falls back to category-BFS (the primary, language-agnostic path).
+# Localized status templates will be discovered later (M6 / registry bootstrap).
+WIKI_STATUS_TEMPLATES = {
+    "enwiki": ["Policy", "Guideline", "MoS_guideline", "Subcat_guideline",
+               "Naming_conventions", "Notability_guideline", "Procedural_policy"],
+}
+SEED_STATUS_TEMPLATES = WIKI_STATUS_TEMPLATES["enwiki"]
 EXCLUDE_NS = {0}                    # exclusion-based: drop only mainspace
 BATCH = 500
 
@@ -308,11 +320,18 @@ def main():
     ap.add_argument("--wiki", default="enwiki")
     ap.add_argument("--year", type=int, default=2026)
     ap.add_argument("--max-depth", type=int, default=4)
-    ap.add_argument("--root", default=SEED_ROOT_CATEGORY)
+    ap.add_argument("--root", default=None,
+                    help="ns-14 root category title (no 'Category:' prefix). "
+                         "Defaults to the per-wiki value in WIKI_ROOTS.")
     ap.add_argument("--no-toolsdb", action="store_true")
     ap.add_argument("--sqlite", default=str(Path.home() / "policy_net.db"))
     args = ap.parse_args()
     wiki, year = args.wiki, args.year
+    if args.root is None:
+        if wiki not in WIKI_ROOTS:
+            sys.exit(f"No default root for {wiki}; pass --root explicitly.")
+        args.root = WIKI_ROOTS[wiki]
+    seed_templates = WIKI_STATUS_TEMPLATES.get(wiki, [])
 
     rep = connect_replica(wiki)
     print(f"=== M1 build: {wiki} year={year} root='{args.root}' depth<={args.max_depth} ===")
@@ -324,8 +343,8 @@ def main():
     # B. admit
     print("B. admission …")
     by_cat = pages_in_categories(rep, cats.keys())
-    tmpl_ids = template_page_ids(rep, SEED_STATUS_TEMPLATES)
-    by_tmpl = pages_transcluding(rep, list(tmpl_ids.keys()))
+    tmpl_ids = template_page_ids(rep, seed_templates) if seed_templates else {}
+    by_tmpl = pages_transcluding(rep, list(tmpl_ids.keys())) if tmpl_ids else set()
     print(f"  via category: {len(by_cat):,} pages · via template: {len(by_tmpl):,} pages")
 
     admitted = set(by_cat) | set(by_tmpl)
@@ -366,7 +385,7 @@ def main():
     for _f, etype, ns, title in raw_edges:
         if etype == "template" and ns == 10:
             tmpl_counts[title] = tmpl_counts.get(title, 0) + 1
-    tmpl_reg = [(wiki, year, t, n, 1 if t in SEED_STATUS_TEMPLATES else 0)
+    tmpl_reg = [(wiki, year, t, n, 1 if t in seed_templates else 0)
                 for t, n in tmpl_counts.items()]
 
     built_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
