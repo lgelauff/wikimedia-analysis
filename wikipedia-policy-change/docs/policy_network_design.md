@@ -6,9 +6,19 @@ This supersedes the per-page drift framing: a policy page is a node in a tempora
 
 ---
 
-## Hypotheses (M0)
+## Research question + hypotheses (M0)
 
-Overarching thesis: **mature Wikipedia policy ossifies and accretes defensively rather than reforming.** Four falsifiable sub-hypotheses. H1 and H2 are a spectrum and must be tested *against* each other (is there much change at all → H2; and when there is, is it additive → H1).
+**Primary RQ: Where do language editions *truly* diverge?** — in which policy domains and on which norms do editions develop genuinely different governance, as opposed to merely lagging, translating, or neglecting a shared template?
+
+The operative word is **"truly."** Apparent divergence has four causes; only the last is the target:
+1. **Coverage gap** — a policy simply doesn't exist (yet) in that edition.
+2. **Translation lag** — imported from en, not yet re-synced; looks divergent, isn't independent.
+3. **Abandonment** — an imported translation left to rot; divergence by neglect, not choice.
+4. **Genuine divergence** — both editions active, normative content actually differs by editorial choice. ← *the target*
+
+Answering it = a **divergence map**: for each cross-wiki-matched policy cluster (M9), a divergence score + a classification into the four causes (via the genetic/functional `relationship` field + per-node activity), projected onto the topical structure of the network (content / conduct / deletion / notability / procedure …) so we can see *where* genuine divergence concentrates.
+
+Overarching thesis behind it: **mature Wikipedia policy ossifies and accretes defensively rather than reforming; satellite editions decouple from en over time — and the RQ asks where that decoupling is real.** Five falsifiable sub-hypotheses feed the RQ. H1 and H2 are a spectrum and must be tested *against* each other (is there much change at all → H2; and when there is, is it additive → H1); H5 + the artifact-disambiguation above are what make the RQ answerable.
 
 | # | Hypothesis | Operationalization (metric) | Null | Tested by |
 |---|---|---|---|---|

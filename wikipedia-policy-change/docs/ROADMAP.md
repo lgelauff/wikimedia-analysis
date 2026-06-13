@@ -1,5 +1,7 @@
 # Policy Network — Roadmap
 
+**Primary RQ: where do language editions *truly* diverge?** — which policy domains/norms genuinely differ by editorial choice, vs merely lagging, translating, or neglecting a shared template. Deliverable = a divergence map (M9). See [design §RQ](policy_network_design.md).
+
 Actionable companion to [`policy_network_design.md`](policy_network_design.md). Milestones are ordered by dependency; the two-tier split means **Tier 1 (structural) ships a usable artifact before any LLM spend**, and the methodology gate (M5) blocks *quantitative claims*, not the build.
 
 Decisions in force: first wikis **en + de + nl**; **exclusion-based** namespace policy; **cheap-draft/strong-verify** judge; supplements/info-page body-scope **deferred**; snapshot = **state at 1 Jan** (label = end of prior year).
