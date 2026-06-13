@@ -50,10 +50,23 @@ WIKI_ROOTS = {
     "dewiki": "Wikipedia:Richtlinien",
     "nlwiki": "Wikipedia:Beleid",
 }
-WIKI_STATUS_TEMPLATES = {
+# Policy/guideline status banners → CORE (the "this IS policy/guideline" templates).
+CORE_STATUS_TEMPLATES = {
     "enwiki": ["Policy", "Guideline", "MoS_guideline", "Subcat_guideline",
-               "Naming_conventions", "Notability_guideline", "Procedural_policy"],
+               "Naming_conventions", "Notability_guideline", "Procedural_policy",
+               "Content_guideline", "Conduct_guideline", "Editing_guideline"],
 }
+# Essay / non-binding banners → demote to CANDIDATE (maybe), never core. An essay
+# tag OVERRIDES policy-category membership (the page says "this is not policy").
+ESSAY_MAYBE_TEMPLATES = {
+    "enwiki": ["Essay", "Supplement", "Information_page", "Wikipedia_how-to",
+               "WikiProject_advice", "Humorous_essay", "Historical", "Proposed",
+               "Failed_proposal", "Rejected"],
+}
+ESSAY_TIER = {"Essay": "essay", "Humorous_essay": "essay", "Supplement": "supplement",
+              "Information_page": "info", "Wikipedia_how-to": "howto",
+              "WikiProject_advice": "advice", "Historical": "historical",
+              "Proposed": "proposed", "Failed_proposal": "rejected", "Rejected": "rejected"}
 EXCLUDE_NS = {0}
 Q_POLICY_PAGE = "Q4656150"      # Wikimedia project policies and guidelines page
 Q_NAVBOX      = "Q11753321"     # Wikimedia navigational template
@@ -190,6 +203,26 @@ def templates_of(rep, page_ids):
             SELECT tl.tl_from, lt.lt_title
             FROM templatelinks tl JOIN linktarget lt ON tl.tl_target_id=lt.lt_id
             WHERE lt.lt_namespace=10 AND tl.tl_from IN ({ph})""", ch):
+            res.setdefault(frm, set()).add(dec(t))
+    return res
+
+
+def transcluding(rep, template_titles, ns=None):
+    """{page_id: set(matched template titles)} for hosts transcluding any ns10 template.
+    Optional ns filter restricts the HOST namespace."""
+    res = {}
+    if not template_titles:
+        return res
+    for ch in batched(list(template_titles)):
+        ph = ",".join(["%s"] * len(ch))
+        nsf = " AND p.page_namespace=%s" if ns is not None else ""
+        params = ([*ch, ns] if ns is not None else ch)
+        for (frm, t) in q(rep, f"""
+            SELECT tl.tl_from, lt.lt_title
+            FROM templatelinks tl
+            JOIN linktarget lt ON tl.tl_target_id=lt.lt_id
+            JOIN page p ON p.page_id=tl.tl_from
+            WHERE lt.lt_namespace=10 AND lt.lt_title IN ({ph}){nsf}""", params):
             res.setdefault(frm, set()).add(dec(t))
     return res
 
@@ -393,42 +426,32 @@ def main():
     wiki, year = a.wiki, a.year
     root = a.root or WIKI_ROOTS.get(wiki)
     if not root: sys.exit(f"no root for {wiki}; pass --root")
-    status_templates = WIKI_STATUS_TEMPLATES.get(wiki, [])
+    core_t = CORE_STATUS_TEMPLATES.get(wiki, [])
+    essay_t = ESSAY_MAYBE_TEMPLATES.get(wiki, [])
     rep = connect_replica(wiki)
     print(f"=== clean build: {wiki} {year} root='{root}' s_min={a.s_min} d_min={a.d_min} ===")
 
-    # A. confirmed seed
-    print("A. confirmed seed …")
-    root_u = root.replace(" ", "_")
-    core_cats = {root_u} | subcats(rep, {root_u})           # root + depth-1 subcats
-    core_members = cat_members(rep, core_cats)
-    C = set().union(*core_members.values()) if core_members else set()
-    via = {pid: "core_category" for pid in C}
-    if status_templates:
-        tpid = title_to_pageid(rep, 10, status_templates)
-        tt = {dec(t) for t in tpid}
-        st = set()
-        if tt:
-            for ch in batched(list(tt)):
-                ph = ",".join(["%s"] * len(ch))
-                for (frm,) in q(rep, f"""
-                    SELECT tl.tl_from FROM templatelinks tl
-                    JOIN linktarget lt ON tl.tl_target_id=lt.lt_id
-                    WHERE lt.lt_namespace=10 AND lt.lt_title IN ({ph})""", ch):
-                    st.add(frm)
-        for pid in st:
-            via.setdefault(pid, "status_template")
-        C |= st
-    print(f"  confirmed seed C = {len(C):,}")
+    # A. CORE seed — project-ns pages carrying a policy/guideline status banner,
+    #    minus essay-tagged (an essay/supplement/historical tag OVERRIDES -> candidate).
+    print("A. core seed …")
+    core_host = transcluding(rep, core_t, ns=4)      # {pid: {tmpl}} in project ns
+    essay_host = transcluding(rep, essay_t)          # {pid: {tmpl}} any ns
+    essay_pids = set(essay_host)
+    core = set(core_host) - essay_pids
+    via = {pid: "status_template" for pid in core}
+    tier_of = {}
+    for pid, ts in essay_host.items():
+        tier_of[pid] = next((ESSAY_TIER[t] for t in ts if t in ESSAY_TIER), "essay")
+    print(f"  core (policy/guideline banner, ns4, non-essay) = {len(core):,}; essay-tagged = {len(essay_pids):,}")
 
-    # B. scored category discovery (count-based: never materialize huge memberships)
+    # B. scored category discovery -> expansion candidates (anchored on core)
     print("B. category scoring …")
     support_by_cat = Counter()
-    for cs in cats_of(rep, C).values():        # confirmed pages' own categories
+    for cs in cats_of(rep, core).values():
         for c in cs:
             support_by_cat[c] += 1
     cand_cats = list(support_by_cat)
-    ncounts = cat_member_counts(rep, cand_cats)  # cheap COUNT, no member lists
+    ncounts = cat_member_counts(rep, cand_cats)      # cheap COUNT, no member lists
     cat_reg, ind_cats = [], set()
     for cat in cand_cats:
         supp = support_by_cat[cat]; n = ncounts.get(cat, 0)
@@ -436,65 +459,71 @@ def main():
         is_ind = supp >= a.s_min and dens >= a.d_min
         if is_ind: ind_cats.add(cat)
         cat_reg.append((wiki, year, cat, supp, n, round(dens, 4), int(is_ind)))
-    ind_members = cat_members(rep, ind_cats)   # member lists ONLY for indicators (bounded)
+    ind_members = cat_members(rep, ind_cats)         # member lists ONLY for indicators
     susp_cat = set()
     for cat in ind_cats:
-        susp_cat |= ind_members.get(cat, set()) - C
-    print(f"  candidate cats {len(cand_cats):,} · indicators {len(ind_cats):,} · suspects {len(susp_cat):,}")
+        susp_cat |= ind_members.get(cat, set()) - core
+    print(f"  candidate cats {len(cand_cats):,} · indicators {len(ind_cats):,} · territory {len(susp_cat):,}")
 
-    # C. scored navbox discovery (templates transcluded by >=2 confirmed)
+    # C. scored navbox discovery -> expansion candidates
     print("C. navbox scoring …")
-    tpl_of_C = templates_of(rep, C)
-    tcount = {}
-    for s in tpl_of_C.values():
-        for t in s: tcount[t] = tcount.get(t, 0) + 1
+    tcount = Counter()
+    for s in templates_of(rep, core).values():
+        for t in s: tcount[t] += 1
     cand_nav_titles = [t for t, n in tcount.items() if n >= 2]
     nav_pid = title_to_pageid(rep, 10, cand_nav_titles)
     tgt = template_targets(rep, set(nav_pid.values()))
-    # resolve target (ns,title) -> page_id only as needed: match against C by page_id directly
-    pid2title = {v: k for k, v in nav_pid.items()}
     tmpl_reg, ind_navbox_titles, susp_nav, navbox_members_rows = [], set(), set(), []
-    # build a quick (ns,title)->pid map for C members for target overlap
-    cmeta = page_meta(rep, C)
+    cmeta = page_meta(rep, core)
     c_key = {(m["ns"], m["title"]): pid for pid, m in cmeta.items()}
     for tt, tp in nav_pid.items():
         targets = tgt.get(tp, [])
-        tpids = {c_key.get(k) for k in targets if k in c_key}
-        tpids.discard(None)
+        tpids = {c_key.get(k) for k in targets if k in c_key}; tpids.discard(None)
         supp = len(tpids); n = len(targets); dens = supp / n if n else 0
         is_ind = supp >= a.s_min and dens >= a.d_min
-        if is_ind:
-            ind_navbox_titles.add(tt)
+        if is_ind: ind_navbox_titles.add(tt)
         tmpl_reg.append((wiki, year, tt, "navigation" if is_ind else "noise",
                          supp, round(dens, 4), int(is_ind)))
-    print(f"  candidate navboxes {len(cand_nav_titles):,} · indicators {len(ind_navbox_titles):,}")
+    for tt in ind_navbox_titles:
+        for (ns, title) in tgt.get(nav_pid[tt], []):
+            mp = c_key.get((ns, title))
+            # navbox targets that aren't core become expansion territory
+    # resolve indicator-navbox targets -> page_ids for candidate territory
+    nav_target_keys = {(ns, t) for tt in ind_navbox_titles for (ns, t) in tgt.get(nav_pid[tt], [])}
+    for ns in {k[0] for k in nav_target_keys}:
+        tpid = title_to_pageid(rep, ns, [t for (n, t) in nav_target_keys if n == ns])
+        for t, pid in tpid.items():
+            if pid not in core: susp_nav.add(pid)
+    print(f"  candidate navboxes {len(cand_nav_titles):,} · indicators {len(ind_navbox_titles):,} · territory {len(susp_nav):,}")
 
-    # D. admitted set
-    suspects = (susp_cat | susp_nav) - C
-    admitted = C | suspects
+    # D. candidates (expansion territory) + admitted set
+    candidates = (susp_cat | susp_nav | essay_pids) - core
+    admitted = core | candidates
     meta = page_meta(rep, admitted)
     admitted = {p for p in admitted if p in meta and meta[p]["ns"] not in EXCLUDE_NS}
-    C &= admitted; suspects = admitted - C
+    core &= admitted; candidates = admitted - core
     qid = qids(rep, admitted)
 
-    # Wikidata P31 promotion + navbox confirmation
+    # Wikidata: P31=Q4656150 promotes a candidate into CORE (project-ns, non-essay)
     if not a.no_wikidata and qid:
-        print("D. wikidata P31 …")
+        print("D. wikidata P31 promotion …")
         p31 = wikidata_p31(list(qid.values()))
-        for pid in list(suspects):
-            if Q_POLICY_PAGE in p31.get(qid.get(pid, ""), set()):
-                C.add(pid); suspects.discard(pid); via[pid] = "wikidata"
-    for pid in C: via.setdefault(pid, "core_category")
-    for pid in suspects: via.setdefault(pid, "scored_category")
-    print(f"  admitted {len(admitted):,}  (confirmed {len(C):,} · suspect {len(suspects):,})")
+        for pid in list(candidates):
+            if (Q_POLICY_PAGE in p31.get(qid.get(pid, ""), set())
+                    and meta[pid]["ns"] == 4 and pid not in essay_pids):
+                core.add(pid); candidates.discard(pid); via[pid] = "wikidata"
+    for pid in candidates:
+        via.setdefault(pid, "essay" if pid in essay_pids else
+                       "scored_navbox" if pid in susp_nav else "scored_category")
+    print(f"  admitted {len(admitted):,}  (core {len(core):,} · candidate {len(candidates):,})")
 
-    # E. link graph from wikitext
-    print("E. wikitext links …")
+    # E. link graph from wikitext — CORE only (the live graph is core->core)
+    print("E. wikitext links (core) …")
     nsmap = siteinfo_ns(wiki)
-    adm_key = {(meta[p]["ns"], meta[p]["title"]): p for p in admitted}
-    wikitext = fetch_wikitext(wiki, admitted)
+    core_key = {(meta[p]["ns"], meta[p]["title"]): p for p in core}
+    wikitext = fetch_wikitext(wiki, core)
     links = []
-    for pid in admitted:
+    for pid in core:
         wt = wikitext.get(pid)
         if not wt: continue
         seen = set()
@@ -502,15 +531,14 @@ def main():
             ns, title = parse_link(str(wl.title), nsmap)
             if (ns, title) in seen: continue
             seen.add((ns, title))
-            to_pid = adm_key.get((ns, title))
+            to_pid = core_key.get((ns, title))
             links.append((wiki, year, pid, ns, title, to_pid, 1 if to_pid else 0))
-    print(f"  links {len(links):,} (policy->policy {sum(1 for l in links if l[6]):,})")
+    print(f"  links {len(links):,} (core->core {sum(1 for l in links if l[6]):,})")
 
-    # F. facets
+    # F. facets — for CORE (the live set)
     print("F. facets …")
-    nc = [(wiki, year, p, c) for p, cs in cats_of(rep, admitted).items() for c in cs]
-    tpl_all = templates_of(rep, admitted)
-    # role per template: own categories + QID + name + scored-navbox
+    nc = [(wiki, year, p, c) for p, cs in cats_of(rep, core).items() for c in cs]
+    tpl_all = templates_of(rep, core)
     all_tmpl_titles = {t for s in tpl_all.values() for t in s}
     tmpl_pid = title_to_pageid(rep, 10, all_tmpl_titles)
     tmpl_owncats = cats_of(rep, set(tmpl_pid.values()))
@@ -524,28 +552,21 @@ def main():
         role_of[t] = tag_role(t, owncats, p31, t in ind_navbox_titles)
     nt = [(wiki, year, p, t, role_of.get(t, "noise"))
           for p, ts in tpl_all.items() for t in ts]
-    # navbox_member: admitted pages that are targets of an indicator navbox
     for tt in ind_navbox_titles:
-        tp = nav_pid.get(tt)
-        for (ns, title) in tgt.get(tp, []):
-            mp = adm_key.get((ns, title))
+        for (ns, title) in tgt.get(nav_pid[tt], []):
+            mp = core_key.get((ns, title))
             if mp: navbox_members_rows.append((wiki, year, mp, tt))
-
-    # tier from status template route (en): policy vs guideline
-    def tier(pid):
-        v = via.get(pid)
-        return None  # left for M7 refinement; status template name mapping later
 
     built_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     nodes = [(wiki, p, year, meta[p]["title"], meta[p]["ns"], meta[p]["is_redirect"],
-              qid.get(p), "confirmed" if p in C else "suspect", via.get(p, "scored_category"),
-              tier(p)) for p in admitted]
+              qid.get(p), "core" if p in core else "candidate",
+              via.get(p, "scored_category"), tier_of.get(p)) for p in admitted]
     data = {
         "node": nodes, "link": links, "node_category": nc, "node_template": nt,
         "navbox_member": navbox_members_rows,
         "category_registry": cat_reg, "template_registry": tmpl_reg,
         "build_run": (wiki, year, built_at, "replica+api:current",
-                      len(C), len(suspects), len(links), a.s_min, a.d_min),
+                      len(core), len(candidates), len(links), a.s_min, a.d_min),
     }
 
     print("G. writing …")
@@ -553,16 +574,17 @@ def main():
     if not a.no_toolsdb: write_toolsdb(wiki, year, data)
 
     print("\n=== summary ===")
-    print(f"  confirmed {len(C):,} · suspect {len(suspects):,} · total {len(admitted):,}")
-    print(f"  links {len(links):,} (policy->policy {sum(1 for l in links if l[6]):,})")
+    print(f"  CORE {len(core):,} · candidate(territory) {len(candidates):,} · total {len(admitted):,}")
+    print(f"  core links {len(links):,} (core->core {sum(1 for l in links if l[6]):,})")
     print(f"  indicator cats {len(ind_cats):,} · indicator navboxes {len(ind_navbox_titles):,}")
     nsp = {}
-    for n in nodes: nsp[n[4]] = nsp.get(n[4], 0) + 1
-    print(f"  namespace spread {dict(sorted(nsp.items()))}")
-    roles = {}
-    for r in tmpl_reg: roles[r[3]] = roles.get(r[3], 0) + 1
-    print(f"  template roles (registry) {roles}")
-    print(f"  with QID {sum(1 for n in nodes if n[6]):,}")
+    for n in nodes:
+        if n[7] == "core": nsp[n[4]] = nsp.get(n[4], 0) + 1
+    print(f"  CORE namespace spread {dict(sorted(nsp.items()))}")
+    roles = Counter(r[3] for r in tmpl_reg)
+    print(f"  template roles (registry) {dict(roles)}")
+    print(f"  essay-tagged (-> candidate) {len(essay_pids & admitted):,}")
+    print(f"  core with QID {sum(1 for n in nodes if n[7]=='core' and n[6]):,}")
 
 
 if __name__ == "__main__":
