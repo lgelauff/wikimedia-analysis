@@ -1,0 +1,66 @@
+{{Skrót|WP: Z}}
+{{Pomoc:Nawigacja metastron
+ | n2 = 5
+ | zakładka = edytowanie
+ | link2 1= Wikipedia:Zasady
+ | nazwa2 1= Zasady
+ | link2 2 = Wikipedia:Współpraca
+ | nazwa2 2 = Współpraca
+ | link2 3=  Wikipedia:Społeczność wikipedystów
+ | nazwa2 3= Społeczność
+ | link2 4 =  Wikipedia:Szablony
+ | nazwa2 4 = Szablony
+ | link2 5 = Pomoc:Spis treści
+ | nazwa2 5 = Pomoc
+ | zakładka2 = Wikipedia:Zasady
+}}
+'''Strona podaje listę i opisy wszystkich zasad przyjętych w polskojęzycznej [[Wikipedia|Wikipedii]]. Pierwsze pięć z nich wynika wprost z pierwszych trzech [[Wikipedia:Pięć filarów|filarów Wikipedii]]; są one źródłem wielu zaleceń i zwyczajów, a także zasad podanych poniżej.'''
+
+'''Zobacz też: [[:m:Terms of Use|warunki korzystania z projektów Wikimedia Foundation]]''' (po angielsku), [[:m:Terms of use/pl|tłumaczenie na język polski]] <small>(w przypadku różnic znaczenia między wersją oryginalną w języku angielskim a tłumaczeniem, wersja oryginalna ma pierwszeństwo).</small>
+
+{{Wikipedia:Pięć filarów/nawigacja|zasady}}
+
+== Zasady wynikające wprost z filarów Wikipedii ==
+; [[Plik:BluePillar.svg|20px]] ''Wikipedia to encyklopedia''
+* Zawiera w sobie hasła (opisywane tematy) na wzór publikowanych w encyklopediach powszechnych, specjalistycznych i różnego rodzaju almanachach. Artykuły opisujące tematy uznane za [[Wikipedia:czym Wikipedia nie jest|nieencyklopedyczne]] są usuwane.
+
+; [[Plik:GreenPillar.svg|20px]] ''Wikipedia to neutralny punkt widzenia''
+* Artykuły należy pisać w sposób [[Wikipedia:Neutralny punkt widzenia|neutralny]]. W artykułach, gdzie istnieje różnica opinii, poglądy odmienne powinny znaleźć swoje miejsce i powinny być potraktowane uczciwie.
+* Informacje wprowadzane do Wikipedii powinny mieć wskazane [[Wikipedia:Weryfikowalność|wiarygodne źródła]], z których pochodzą.
+* Źródła te muszą być [[Wikipedia:Nie przedstawiamy twórczości własnej|uprzednio opublikowane]].
+
+; [[Plik:YellowPillar.svg|20px]] ''Wikipedia to wolny zbiór wiedzy''
+* Treści zamieszczane w Wikipedii są przedmiotem [[Wikipedia:Prawa autorskie|praw autorskich]]. W Wikipedii można publikować treści zgodne z warunkami wolnych licencji. Włączanie do Wikipedii materiałów objętych ochroną praw autorskich ''copyright'' zagraża rozwojowi Wikipedii, dlatego takie materiały są usuwane.
+
+== Dalsze zasady ==
+=== Zasady dotyczące społeczności wikipedystów ===
+* Podstawową metodą podejmowania decyzji przez wikipedystów jest osiąganie [[wp:konsensus|konsensusu]] w drodze dyskusji.
+* Obowiązuje swoboda wyboru [[Wikipedia:Nazwa użytkownika|nazwy użytkownika]], a ograniczenia tej swobody są wyczerpująco wymienione.
+* Określono niedozwolone zachowania wikipedysty edytującego Wikipedię z [[Wikipedia:Pacynka|dodatkowego konta]].
+* Wszystkich użytkowników obowiązują [[:foundation:Policy:Universal Code of Conduct/pl|minimalne standardy współpracy]].
+
+=== Zasady dotyczące administratorów ===
+* Świadome niszczenie stron to [[wp:wandalizm|wandalizm]]. Takie edycje są cofane, a autorzy wandalizmów blokowani.
+* Istnieje [[Wikipedia:Administratorzy/Odbieranie uprawnień|pięć okoliczności]] skutkujących utratą uprawnień administratorskich.
+* Wyczerpująco określono warunki [[Wikipedia:Ekspresowe kasowanie|ekspresowego kasowania]] stron.
+* Określone są warunki [[Wikipedia:Usuwanie wersji|usuwania pojedynczych edycji]] z historii zmian strony.
+* Biogramy kandydatów do wyborów mogą być usuwane w tzw. [[Wikipedia:Tryb wyborczy|trybie wyborczym]] na podstawie jednostkowej decyzji administratora.
+* Wyczerpująco określono warunki i sposób [[Wikipedia:Blokowanie użytkowników|blokowania]] kont oraz możliwość wniesienia odwołania od blokady.
+* Adresy IP serwerów korzystających z [[Wikipedia:Open proxy|open proxy]] są blokowane.
+* Podstawą zablokowania konta administratora może być wzięcie przez niego udziału w [[Wikipedia:Wojna administratorów|wojnie administratorów]].
+
+== Zasada dotycząca korzystania ==
+* Wikipedia nie udziela gwarancji, zapewnień ani obietnic dotyczących poprawności publikowanych treści. Czytelnicy [[Wikipedia:Korzystasz z Wikipedii tylko na własną odpowiedzialność|korzystają z Wikipedii na własną odpowiedzialność]].
+<div style="color:gray;">
+
+== Stara zasada dotycząca multimediów ==
+* Zalecane jest [[Wikipedia:Przesyłanie plików|przesyłanie plików na serwery Wikimedia Commons]], magazynu plików multimedialnych dla wszystkich wersji językowych projektów siostrzanych Wikimedia Foundation.
+</div>
+
+== Zobacz też ==
+* [[:m:Terms of Use|Warunki korzystania z projektów Wikimedia Foundation]] (po angielsku) oraz [[:m:Terms of use/pl|tłumaczenie na język polski]] (w przypadku różnic pierwszeństwo ma wersja oryginalna)
+
+== Wypracowywanie zasad ==
+Zasady wypracowywane są w czasie dyskusji wśród społeczności wikipedystów, na zasadzie [[wp:konsensus|konsensusu]], a w przypadkach skrajnych, gdy istnieje zarówno wielu zwolenników i przeciwników danego rozwiązania, pewne punkty zasad [[Wikipedia:Komunikacja|poddawane są pod głosowanie]]. Postępowanie zgodne z zasadami przyspiesza prace nad rozwojem Wikipedii, a także umożliwia unikanie [[wp:rozwiązywanie konfliktów|konfliktów]].
+
+[[Kategoria:Zasady Wikipedii| ]]

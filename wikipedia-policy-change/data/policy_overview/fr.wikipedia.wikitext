@@ -1,0 +1,163 @@
+<div style="text-align: center; margin: 1.5em 0 2.5em 0;">
+<span style="color: #000; letter-spacing: 1px; font-size: 2.5em;"><span style="color: #D33;">Principes fondateurs</span>, <span style="color: #00af89;">règles</span> et <span style="color: #36C;">recommandations</span></span><br>
+'''Cette page liste les [[Wikipédia:Règles et recommandations|règles et recommandations]] applicables sur la wikipédia en français.'''
+</div>
+
+== Principes fondateurs ==
+Il y a cinq [[Wikipédia:Principes fondateurs|principes fondateurs]] :
+* [[Wikipédia:Wikipédia est une encyclopédie|Wikipédia est une encyclopédie]]
+* [[Wikipédia:Neutralité de point de vue|Neutralité de point de vue]]
+* [[Wikipédia:Droit d'auteur|Droit d’auteur]]
+* [[Wikipédia:Règles de savoir-vivre|Savoir-vivre]]
+* [[Wikipédia:Interprétation créative des règles|Interprétation créative des règles]]
+
+== Règles ==
+Il y a actuellement {{Pagesincat|Wikipédia:Règle}} règles recensées dans [[:Catégorie:Wikipédia:Règle]] dont :
+* [[Wikipédia:AbuseFilter|AbuseFilter]]
+* [[Wikipédia:Administrateur|Administrateur]]
+* [[Wikipédia:Administrateur d'interface|Administrateur d'interface]]
+* [[Wikipédia:Bureaucrate|Bureaucrate]]
+* [[Wikipédia:Citation|Citation]]
+* [[Wikipédia:Contestation du statut d'administrateur|Contestation du statut d'administrateur]]
+* [[Wikipédia:Contestation du statut de bureaucrate|Contestation du statut de bureaucrate]]
+* [[Wikipédia:Contributions rémunérées|Contributions rémunérées]] {{petit|(partiellement)}}
+* [[Wikipédia:Conventions d'utilisation des images |Conventions d'utilisation des images ]] {{petit|(partiellement)}}
+* [[Wikipédia:Conventions sur les catégories|Conventions sur les catégories]]
+* [[Wikipédia:Exceptions au droit d'auteur|Exceptions au droit d’auteur]]
+* [[Wikipédia:Liens vers les portails|Liens vers les portails]]
+* [[Wikipédia:Restriction thématique|Restriction thématique]]
+* [[Wikipédia:Révocateur|Révocateur]] {{petit|(partiellement)}}
+* [[Wikipédia:Semi-protection|Semi-protection]]
+* [[Wikipédia:Transcription du japonais|Transcription du japonais]]
+* [[Wikipédia:Travaux inédits|Travaux inédits]]
+* [[Wikipédia:Utilisation de données Wikidata dans les articles|Utilisation de données Wikidata dans les articles]] 
+* [[Wikipédia:Vérifiabilité|Vérifiabilité]]
+* [[Wikipédia:Vérificateur d'utilisateurs|Vérificateur d'utilisateurs]]
+
+== Recommandations ==
+Il y a actuellement {{Pagesincat|Wikipédia:Recommandation}} recommandations recensées dans [[:Catégorie:Wikipédia:Recommandation]] dont :
+
+{{Début de colonnes|nombre=2}}
+{{Début de bloc solidaire}}
+=== Usages ===
+* [[Wikipédia:Aucune chance|Aucune chance]]
+* [[Wikipédia:Blocage en écriture|Blocage en écriture]]
+* [[Wikipédia:Conflit d'intérêts|Conflit d'intérêts]]
+* [[Wikipédia:Consensus|Consensus]]
+* [[Wikipédia:Critères de suppression immédiate|Critères de suppression immédiate]]
+* [[Wikipédia:Discuter au lieu de voter|Discuter au lieu de voter]]
+* [[Wikipédia:Faux-nez|Faux-nez]]
+* [[Wikipédia:Ne jouez pas avec les règles|Ne jouez pas avec les règles]]
+* [[Wikipédia:N'hésitez pas !|N’hésitez pas !]]
+* [[Wikipédia:Nom d'utilisateur connu|Nom d'utilisateur connu]]
+* [[Wikipédia:Collusion|Collusion]]
+* [[Wikipédia:Protection|Protection]]
+* [[Aide:Signature|Signature]]
+* [[Wikipédia:Sous-page|Sous-page]]
+* [[Wikipédia:Vandalisme|Vandalisme]]
+{{Fin de bloc solidaire}}
+{{Début de bloc solidaire}}
+
+=== Savoir-vivre ===
+* [[Wikipédia:Commentez vos modifications|Commentez vos modifications]]
+* [[Wikipédia:Esprit de non-violence|Esprit de non-violence]]
+* [[Wikipédia:Harcèlement|Harcèlement]]
+* [[Wikipédia:Ne vous moquez pas du monde !|Ne vous moquez pas du monde !]]
+* [[Wikipédia:Ne mordez pas les nouveaux|Ne mordez pas les nouveaux]]
+* [[Wikipédia:Ne pas désorganiser Wikipédia pour une argumentation personnelle|Ne pas désorganiser Wikipédia pour une argumentation personnelle]]
+* [[Wikipédia:Pas d'attaque personnelle|Pas d'attaque personnelle]]
+* [[Wikipédia:Règle des trois révocations|Règle des trois révocations]]
+* [[Wikipédia:Supposez la bonne foi|Supposez la bonne foi]]
+{{Fin de bloc solidaire}}
+{{Début de bloc solidaire}}
+
+=== Rôles et statuts ===
+* [[Wikipédia:Bot|Bot]]
+* [[Wikipédia:Créateur de comptes|Créateur de comptes]]
+* [[Wikipédia:Révocateur|Révocateur]] {{petit|(partiellement)}}
+{{Fin de bloc solidaire}}
+{{Début de bloc solidaire}}
+
+=== Style rédactionnel ===
+* [[Wikipédia:Accessibilité|Accessibilité]]
+* [[Wikipédia:Citez vos sources|Citez vos sources]]
+* [[Wikipédia:Conventions bibliographiques|Conventions bibliographiques]]
+* [[Wikipédia:Conventions de plan|Conventions de plan]]
+* [[Wikipédia:Conventions de style|Conventions de style]]
+* [[Wikipédia:Conventions d'utilisation des images |Conventions d'utilisation des images ]] {{petit|(partiellement)}}
+* [[Wikipédia:Conventions filmographiques|Conventions filmographiques]]
+* [[Wikipédia:Conventions sur les catégories|Conventions sur les catégories]]
+* [[Wikipédia:Conventions sur les titres|Conventions sur les titres]]
+* [[Wikipédia:Conventions sur les titres d'œuvres de musique classique|Conventions sur les titres d'œuvres de musique classique]]
+* [[Wikipédia:Conventions sur les titres de personnages de la mythologie grecque|Conventions sur les titres de personnages de la mythologie grecque]]
+* [[Wikipédia:Conventions typographiques|Conventions typographiques]]
+* [[Wikipédia:Conventions concernant les nombres|Conventions concernant les nombres]]
+* [[Wikipédia:Dates|Dates]]
+* [[Aide:Indentation|Indentation]]
+* [[Wikipédia:Liens externes|Liens externes]]
+* [[Wikipédia:Liens internes|Liens internes]]
+* [[Aide:Lien interwiki|Lien interwiki]]
+* [[Aide:Lien interlangue|Lien interlangue]]
+* [[Wikipédia:Limitez l'usage de la couleur dans les articles|Limitez l'usage de la couleur dans les articles]]
+* [[Wikipédia:Mise en forme des images|Mise en forme des images]]
+* [[Wikipédia:Néologisme|Néologisme]]
+* [[Wikipédia:Conventions de style#Orthographe |Orthographe]]
+* [[Wikipédia:Principe de moindre surprise|Principe de moindre surprise]]
+* [[Wikipédia:Résumé introductif|Résumé introductif]]
+* [[Aide:Signature|Signature]]
+* [[Wikipédia:Style encyclopédique|Style encyclopédique]]
+* [[Wikipédia:Transcription du chinois|Transcription du chinois]]
+{{Fin de bloc solidaire}}
+{{Début de bloc solidaire}}
+
+=== Contenu encyclopédique===
+* [[Wikipédia:Accessibilité|Accessibilité]]
+* [[Wikipédia:Articles consacrés à la pornographie|Articles consacrés à la pornographie]]
+* [[Wikipédia:Autobiographie|Autobiographie]]
+* [[Wikipédia:Biographie de personne vivante|Biographie de personne vivante]]
+* [[Wikipédia:Citez vos sources|Citez vos sources]]
+* [[Wikipédia:Contenu choquant|Contenu choquant]]
+* [[Wikipédia:Contenu évasif|Contenu évasif]]
+* [[Wikipédia:Critère des deux ans|Critère des deux ans]]
+* [[Wikipédia:Dévoile l'intrigue du récit|Dévoile l'intrigue du récit]]
+* [[Wikipédia:Exactitude et vérité|Exactitude et vérité]]
+* [[Wikipédia:Guide contre l'anthropocentrisme|Guide contre l'anthropocentrisme]]
+* [[Wikipédia:Guide pratique|Guide pratique]]
+* [[Wikipédia:Importance disproportionnée|Importance disproportionnée]]
+*  [[Wikipédia:Intelligence artificielle générative|Intelligence artificielle générative]]
+* [[Wikipédia:Internationalisation|Internationalisation]]
+* [[Wikipédia:Ne pas désorganiser Wikipédia pour une argumentation personnelle|Ne pas désorganiser Wikipédia pour une argumentation personnelle]]
+* [[Wikipédia:Résumé introductif|Résumé introductif]]
+* [[Wikipédia:Scission de contenu|Scission de contenu]]
+* [[Wikipédia:Sources de presse|Sources de presse]]
+{{Fin de bloc solidaire}}
+{{Début de bloc solidaire}}
+
+=== Notoriété ===
+* [[Wikipédia:Notoriété|Notoriété]]
+* [[Wikipédia:Critères d'admissibilité des articles|Critères d'admissibilité des articles]]
+* [[Wikipédia:Critères spécifiques de notoriété|Critères spécifiques de notoriété]]
+* [[Wikipédia:Notoriété des arts visuels|Arts visuels]]
+* [[Wikipédia:Notoriété des entreprises, sociétés et produits|Entreprises, sociétés et produits]]
+* [[Wikipédia:Notoriété des fanzines|Fanzines]]
+* [[Wikipédia:Notoriété dans le football|Football]]
+* [[Projet:Hockey sur glace/Conventions/Notoriété|Hockey sur glace]]
+* [[Wikipédia:Notoriété des jeux de société|Jeux de société]]
+* [[Wikipédia:Notoriété de la musique|Musique]]
+* [[Wikipédia:Notoriété des œuvres de fiction|Œuvres de fiction]]
+* [[Wikipédia:Notoriété des personnalités politiques|Personnalités politiques]]
+* [[Wikipédia:Notoriété dans le domaine de la pornographie|Pornographie]]
+* [[Projet:Rugby à XV/Critères d'admissibilité|Rugby à XV]]
+* [[Wikipédia:Notoriété des sites web|Sites web]]
+* [[Wikipédia:Notoriété des sportifs|Sportifs]]
+* [[Projet:Tennis/Critères d'admissibilité|Tennis]]
+{{Fin de bloc solidaire}}
+{{Fin de colonnes}}
+
+== Autres ==
+* [[:Catégorie:Wikipédia:Essai]], un ensemble d'[[Wikipédia:Essai|essais]] recensés qui n'ont aucune valeur normative, illustrant parfois à certains [[Wikipédia:Usages|usages]] ;
+* [[:Catégorie:Espace Aide]], un ensemble des pages d'aide recensées.
+
+{{Palette Règles et recommandations}}
+
+<noinclude>[[Catégorie:Wikipédia:Règles et recommandations|*]]</noinclude>

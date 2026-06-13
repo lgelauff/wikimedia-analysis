@@ -1,0 +1,190 @@
+{{머리말 둘러보기 모음}}
+{{ombox
+| type = notice
+| text =이 문서엔 한국어 위키백과의 '''[[위키백과:정책과 지침|정책과 지침]]'''을 나열한 목록이 있습니다. 정책과 지침 문서는 위키백과의 규칙과 합의로 세워진 모범 사례를 설명합니다. '''정책'''은 모든 사용자가 기본적으로 지켜야 할 규칙이며, '''지침'''은 총의에 따라 많은 편집자에게 지지받고 있는 모범 사례를 모아둔 것입니다.
+}}
+{{정책과 지침}}
+아래 문서는 현재 한국어 위키백과에서 적용 중인 '''주요 정책과 지침 목록'''입니다. 각각의 자세한 모든 정책이나 지침 목록은 [[위키백과:정책 목록]], [[위키백과:지침 목록]]을 참고하세요.
+
+== 용어 설명 ==
+위키백과의 규칙과 모범 사례를 모아둔 문서는 크게 아래 셋으로 구분합니다.
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] 정책 ===
+'''정책'''이란 모든 위키백과 편집자들과 사용자들이 반드시 따라야 하는 광범위한 규칙이나 원칙을 설명해 둔 문서입니다.
+
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] 지침 ===
+'''지침'''이란 위키백과 편집자들이 합의로 세운 모범 사례를 모아둔 문서를 말합니다. 위키백과의 편집자들은 되도록이면 상식적인 관점에서 지침을 따라야 합니다. 지침에는 가끔 예외가 적용될 수 있습니다. 편집자들이 합의한 '''문서 제목 규칙'''도 지침으로 취급합니다.
+
+=== [[파일:Info Simple.svg|30px]] 정보 문서 ===
+'''정보 문서'''는 위키백과가 굴러가고 공동체의 합의를 반영하는 과정을 설명하는 문서입니다.
+
+== 대원칙 ==
+=== 다섯 원칙 ===
+'''[[위키백과:다섯 원칙|다섯 원칙]]'''은 위키백과의 근간을 이루는 변함 없는 5가지 원칙입니다.
+
+{|
+|- 
+|style="padding:5px"|[[파일:Encyclopedia icon.svg|47px]]
+|[[위키백과:위키백과에 대한 오해|위키백과는 백과사전입니다.]]
+|-
+|style="padding:5px"|[[파일:Scale icon green.svg|47px]]
+|[[위키백과:중립적 시각|위키백과는 ‘중립적 시각’에서 바라봅니다.]]
+|-
+|style="padding:5px"|[[파일:Jigsaw piece yellow 01.svg|47px]]
+|[[위키백과:저작권|위키백과의 글은 우리 모두의 것입니다.]]
+|-
+|style="padding:5px"|[[파일:Smiley icon orange.svg|47px]]
+|[[위키백과:토론에서 지켜야 할 점|위키백과에서는 다른 사용자를 존중합니다.]]
+|-
+|style="padding:5px"|[[파일:Light bulb icon red.svg|47px]]
+|[[위키백과:규칙에 얽매이지 마세요|위키백과에는 엄격한 규칙이 없습니다.]]
+|}
+
+== 목록 ==
+<big>'''큰 글씨 링크'''</big>는 위키백과 전체에 적용되는 광범위하고 근본적인, 큰 범위의 정책과 지침입니다.
+
+'''보통 글씨 링크'''는 보편적으로 쓰여 있긴 하지만 보다 구체적인 상황에 적용되는, 작은 범위의 정책과 지침입니다.
+
+<small>'''작은 글씨 링크'''</small>는 위키백과의 특정 주제나 상황, 특정 범위에서 적용되는 세부적인 범위의 정책과 지침입니다.
+
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" | &nbsp;
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:규칙에 얽매이지 마세요|규칙에 얽매이지 마세요]] – [[위키백과:위키백과에 대한 오해|위키백과에 대한 오해]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] [[위키백과:정책 목록#콘텐츠 정책|콘텐츠 정책]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"> [[위키백과:중립적 시각|중립적 시각]] – [[위키백과:확인 가능|확인 가능]] – [[위키백과:독자 연구 금지|독자 연구 금지]]</div>
+[[위키백과:생존 인물의 전기|생존 인물의 전기]]<!--- – [[위키백과:그림 사용 정책|그림 사용 정책]] – [[위키백과:위키백과는 단어 사전이 아닙니다|위키백과는 단어 사전이 아닙니다]]--->
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[파일:Antu mail-mark-notjunk blue.svg|30px]] [[위키백과:지침 목록#콘텐츠 지침|콘텐츠 지침]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:출처 밝히기|출처 밝히기]]<!-- – [[위키백과:허구를 지어내지 마십시오|허구를 지어내지 마십시오]] – [[Wikipedia:Do not include the full text of lengthy primary sources|No Full Texts of Primary Sources]]--> – [[위키백과:신뢰할 수 있는 출처|신뢰할 수 있는 출처]]<!-- – [[위키백과:표절|표절]]--> – [[위키백과:무의미한 편집|무의미한 편집]]</div>
+[[위키백과:자신에 대한 이야기|자신에 대한 이야기]]<!-- – [[Wikipedia:Accuracy dispute|Accuracy Dispute]] –  [[Wikipedia:Content forking|Content Forking]]--> – [[위키백과:외부 링크|외부 링크]] – [[위키백과:문서에 면책 조항을 넣지 마세요|문서에 면책 조항을 넣지 마세요]] – [[위키백과:비자유 저작물의 공정한 이용|비자유 저작물의 공정한 이용]]<!-- – [[Wikipedia:Non-free use rationale guideline|Non-Free Use Rationale Guideline]] – [[Wikipedia:Non-U.S. copyrights|Non-U.S. Copyrights]]--> – [[위키백과:불쾌한 자료|불쾌한 자료]] – [[위키백과:퍼블릭 도메인|퍼블릭 도메인]]<!-- – [[Wikipedia:Spam|Spam]]--> – [[위키백과:스포일러|스포일러]]
+<div style="font-size:90%;"><!---[[Wikipedia:Days of the year|Days of the Year]] – -->[[위키백과:비주류 이론|비주류 이론]]<!--- – [[Wikipedia:Identifying reliable sources (medicine)|Identifying Reliable Sources (Medicine)]] – [[Wikipedia:Indic transliteration|Indic Transliteration]] – [[Wikipedia:Logos|Logos]] – [[Wikipedia:No 3D illustrations|No 3D Illustrations]] – [[Wikipedia:Record charts|Record Charts]] – [[Wikipedia:Scientific citation guidelines|Scientific Citation Guidelines]] – [[Wikipedia:Television episodes|Television Episodes]]--> – [[위키백과:종교 문서와 중립성|종교 문서와 중립성]] – [[위키프로젝트:비디오 게임/편집 지침|비디오 게임 편집 지침]]<!-- – [[위키백과:위키백과는 하루아침에 만들어진 것들을 위한 곳이 아닙니다|위키백과는 하루아침에 만들어진 것들을 위한 곳이 아닙니다]]--></div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[파일:Antu mail-mark-notjunk blue.svg|30px]] [[위키백과:지침 목록#편집 과정|편집 과정 지침]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!--[[Wikipedia:Article size|Article Size]] – -->[[위키백과:편집은 과감하게|편집은 과감하게]] – [[위키백과:분류|분류]] – [[위키백과:동음이의어 문서|동음이의어 문서]]<!-- – [[Wikipedia:Make technical articles understandable|Understandability]]--> – [[위키백과:토막글|토막글]]<!-- – [[Wikipedia:Summary style|Summary Style]]--></div>
+<!--[[Wikipedia:As of|As Of]] – [[Wikipedia:Broad-concept articles|Broad-Concept Articles]] – [[위키백과:분류, 목록 및 둘러보기 틀|분류, 목록 및 둘러보기 틀]] – [[Wikipedia:Copying within Wikipedia|Copying within Wikipedia]] – [[Wikipedia:Reviewing good articles|Reviewing Good Articles]] – [[Wikipedia:Hatnote|Hatnote]] – [[Wikipedia:Page blanking|Page Blanking]] – [[위키백과:과잉 분류|과잉 분류]] – [[Wikipedia:Preparing images for upload|Preparing Images for Upload]] – [[Wikipedia:Red link|Red Link]] – -->[[위키백과:넘겨주기 문서|넘겨주기 문서]]<!-- – [[위키백과:색인 모음 문서|색인 모음 문서]] – [[위키백과:넘나들기|넘나들기]] – [[Wikipedia:Spellchecking|Spellchecking]] – [[위키백과:하위 문서|하위 문서]] – [[Wikipedia:Updating information|Updating Information]] – [[Wikipedia:User categories|User Categories]]-->
+<div style="font-size:90%;"><!-- [[Wikipedia:Categorization of people|Categorization of People]] – [[Wikipedia:In the news/Recurring items|In The News: Recurring Items]] – [[Wikipedia:People by year|People by Year]] – [[Wikipedia:Categorizing redirects|Categorizing Redirects]] – [[Wikipedia:Disambiguation/PrimaryTopicDefinition|Primary Topic Definition]] – [[Wikipedia:Extended image syntax|Extended Image Syntax]] – [[Wikipedia:Overcategorization/User categories|Overcategorization: User Categories]] – [[Wikipedia:Recent years|Recent Years]] – -->[[위키백과:문서 평가|문서 평가]]<!-- – [[Wikipedia:Categorization/Ethnicity, gender, religion and sexuality|Categorization: Ethnicity, Gender, Religion and Sexuality]]--></div>
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] [[백:지침 목록#문서 등재 기준|문서 등재 기준 지침]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:문서 등재 기준|문서 등재 기준]]</div>
+<!-- [[위키백과:문서 등재 기준 (교육)|교육]] – [[Wikipedia:Notability (astronomical objects)|Astronomical Objects]] – [[위키백과:문서 등재 기준 (책)|책]] – -->[[위키백과:문서 등재 기준 (사건)|사건]]<!-- – [[위키백과:문서 등재 기준 (영화)|영화]] – [[위키백과:문서 등재 기준 (지리)|지리]]--> – [[위키백과:문서 등재 기준 (음악)|음악]]<!-- – [[위키백과:문서 등재 기준 (숫자)|숫자]]--> – [[위키백과:문서 등재 기준 (회사 및 단체)|회사 및 단체]] – [[위키백과:문서 등재 기준 (인물)|인물]]<!-- – [[위키백과:문서 등재 기준 (스포츠)|스포츠]]--> – [[위키백과:문서 등재 기준 (웹 콘텐츠)|웹 콘텐츠]]
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] 문서 제목 합의 ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:제목 선택하기|제목 선택하기]] –  [[위키백과:통용표기|통용 표기(외래어)]]<!-- – [[Wikipedia:Category names|Category Names]] – [[위키백과:파일 이름|파일 이름]]--></div>
+<!-- [[Wikipedia:Naming conventions (acronyms)|Acronyms]] – [[Wikipedia:Naming conventions (capitalization)|Capitalization]] – [[Wikipedia:Naming conventions (country-specific topics)|Country-Specific Topics]] – [[Wikipedia:Naming conventions (definite or indefinite article at beginning of name)|Definite or Indefinite Articles]] – [[위키백과:제목 선택하기/사건|사건]] – [[Wikipedia:Naming conventions (geographic names)|Geographic Names]] – [[Wikipedia:Naming conventions (numbers and dates)|Numbers and Dates]] – [[Wikipedia:Naming conventions (long lists)|Long Lists]] – [[Wikipedia:Naming conventions (people)|People]] – [[Wikipedia:Naming conventions (plurals)|Plurals]] – -->[[위키백과:제목의 기술적 한계|제목의 기술적 한계]]<!-- – [[Wikipedia:Naming conventions (use English)|Use English]]-->
+<div style="font-size:90%;"><!--[[Wikipedia:Naming conventions (aircraft)|Aircraft]] – [[Wikipedia:Naming conventions (ancient Romans)|Ancient Romans]] – [[Wikipedia:Naming conventions (Armenian)|Armenian]] – [[Wikipedia:Naming conventions (astronomical objects)|Astronomical Objects]] – [[Wikipedia:Naming conventions (Australian roads)|Australian Roads]] – [[Wikipedia:Naming conventions (baseball players)|Baseball Players]] – [[Wikipedia:WikiProject Belgium/Castle, country house, château and kasteel naming conventions|Belgium: Castle, Country House, Château and Kasteel]] – [[Wikipedia:WikiProject Belgium/Alternate language names|Belgium: Alternate Language Names]] – [[Wikipedia:Naming conventions (books)|Books]] – [[Wikipedia:Naming conventions (broadcasting)|Broadcasting]] – [[Wikipedia:WikiProject Belgium/Brussels naming conventions|Brussels]] – [[Wikipedia:Naming conventions (Burmese)|Burmese]] – [[Wikipedia:Naming conventions (law enforcement agency categories)|Law Enforcement Agency Categories]] – [[Wikipedia:Naming conventions (chemistry)|Chemistry]] – [[Wikipedia:Naming conventions (Chinese)|Chinese]] – [[Wikipedia:Naming conventions (clergy)|Clergy]] – [[Wikipedia:WikiProject College football/Naming conventions|College Football]] – [[Wikipedia:Naming conventions (comics)|Comics]] – [[Wikipedia:Naming conventions (companies)|Companies]] – [[Wikipedia:Naming conventions (fauna)|Fauna]] – [[Wikipedia:Naming conventions (films)|Films]] – [[Wikipedia:Naming conventions (flora)|Flora]] – [[Wikipedia:Naming conventions (UK Parliament constituencies)|UK Parliament Constituencies]] – [[Wikipedia:Naming conventions (government and legislation)|Government and Legislation]] – [[Wikipedia:Naming conventions (Greek)|Greek]] – [[Wikipedia:Naming conventions (Hebrew)|Hebrew]] – [[Wikipedia:Naming conventions (ice hockey)|Ice Hockey]] – [[Wikipedia:Naming conventions (Indic)|Indic]] – [[Wikipedia:WikiProject Ireland/Ireland Category Norms|Irish Categories]] – [[Wikipedia:Naming conventions (Korean)|Korean]] – [[Wikipedia:Naming conventions (languages)|Languages]] – [[Wikipedia:Naming conventions (Latter Day Saints)|Latter Day Saints]] – [[Wikipedia:Naming conventions (Macedonia)|Macedonia]] – [[Wikipedia:Naming conventions (manuscripts)|Manuscripts]] – [[Wikipedia:Naming conventions (Mongolian)|Mongolian]] – [[Wikipedia:Naming conventions (music)|Music]] – [[Wikipedia:Naming conventions (New Zealand)|New Zealand]] – [[Wikipedia:Naming conventions (Norse mythology)|Norse Mythology]] – [[Wikipedia:Naming conventions (operas)|Operas]] – [[Wikipedia:Naming conventions (ethnicities and tribes)|Ethnicities and Tribes]] – [[Wikipedia:WikiProject Mining/Style guide|Mining]] – [[Wikipedia:Naming conventions (political parties)|Political Parties]] – [[Wikipedia:Naming conventions (ships)|Ships]] – [[Wikipedia:Naming conventions (sports teams)|Sports Teams]] – [[Wikipedia:Naming conventions (sportspeople)|Sportspeople]] – [[Wikipedia:Naming conventions (stations in Poland)|Stations in Poland]] – [[Wikipedia:Naming conventions (television)|Television]] – [[Wikipedia:Naming conventions (Tibetan)|Tibetan]] – [[Wikipedia:Naming conventions (royalty and nobility)|Royalty and Nobility]] – [[Wikipedia:Naming conventions (U.S. state and territory highways)|U.S. State and Territory Highways]] – [[Wikipedia:Naming conventions (UK stations)|UK Stations]] – [[Wikipedia:Naming conventions (video games)|Video Games]] – [[Wikipedia:Naming conventions (West Bank)|West Bank]] – [[Wikipedia:WikiProject Swiss municipalities/Article title conventions|Swiss Municipalities]] – [[Wikipedia:Naming conventions (writing systems)|Writing Systems]]--></div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] [[위키백과:지침 목록#편집 지침|편집 지침]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:편집 지침|편집 지침]]<!-- ([[Wikipedia:Manual of Style/Contents|Contents]])--></div>
+'''내용:''' <!-- [[위키백과:편집 지침/접근성|접근성]] – [[위키프로젝트:인물 전기/편집 지침|인물 전기]] – [[Wikipedia:Manual of Style/Linking|Linking]] – [[Wikipedia:Manual of Style/Self-references to avoid|Self-references to avoid]] – -->[[위키백과:모호한 표현을 삼가 주세요|어휘]] – [[위키백과:외래어의 한글 표기|외래어의 한글 표기]]([[위키백과:일본어의 한글 표기|일본어의 한글 표기]])<!-- – [[위키백과:자매 프로젝트|자매 프로젝트]]-->
+<!--
+'''서식:''' [[Wikipedia:Manual of Style/Abbreviations|Abbreviations]] – [[Wikipedia:Manual of Style/Capital letters|Capital Letters]] – [[Wikipedia:Manual of Style/Dates and numbers|Dates and Numbers]] – [[Wikipedia:Manual of Style/Pronunciation|Pronunciation]] – [[Wikipedia:Manual of Style/Proper names|Proper Names]] – [[Wikipedia:Manual of Style/Spelling|Spelling]] – [[위키백과:편집 지침/서식|텍스트 서식]] – [[Wikipedia:Manual of Style/Titles|Titles]]-->
+
+'''구성:''' [[위키백과:편집 지침/문단 구성|문단 구성]]<!-- – [[위키백과:편집 지침/도입부|도입부]] – [[Wikipedia:Manual of Style/Lists|Lists]] <span style="font-size:90%;">([[Wikipedia:Manual of Style/Embedded lists|Embedded Lists]] – [[Wikipedia:Manual of Style/Lists of works|Lists of Works]] – [[Wikipedia:Manual of Style/Road junction lists|Road Junction Lists]] – [[위키백과:목록 문서|목록 문서]])</span> – [[Wikipedia:Manual of Style/Tables|Tables]] – [[Wikipedia:Manual of Style/Trivia sections|Trivia Sections]]-->
+
+'''그림:''' <!-- [[위키백과:그림 사용하기|그림]] – [[Wikipedia:Manual of Style/Captions|Captions]] – -->[[위키백과:편집 지침/아이콘|아이콘]]
+
+<div style="font-size:90%;">''예술'' – [[위키프로젝트:일본의 만화와 애니메이션/문서 편집 지침|만화와 애니메이션]]<!-- – [[Wikipedia:Manual of Style/Comics|Comics]] – [[위키프로젝트:영화/편집 지침|영화]]--> – [[위키프로젝트:라이트 노벨/편집 지침|라이트 노벨]] – [[위키백과:편집 지침/음반|음반]] – [[위키프로젝트:비디오 게임/편집 지침|비디오 게임]]<!-- ([[Wikipedia:Manual of Style/Music samples|Music Samples]] – [[Wikipedia:Manual of Style/Record charts|Record Charts]] – [[Wikipedia:Manual of Style/Stringed instrument tunings|Stringed Instrument Tunings]]) – [[Wikipedia:Manual of Style/Novels|Novels]] – [[Wikipedia:Manual of Style/Television|Television]] – [[Wikipedia:Manual of Style/Visual arts|Visual Arts]] – [[Wikipedia:Manual of Style/Writing about fiction|Writing About Fiction]] – ''역사'' – [[Wikipedia:Manual of Style/Military history|Military History]] – [[Wikipedia:Blazon|Blazon]]--> – ''법률'' – [[위키프로젝트:대한민국의 행정기관/편집 지침|대한민국 행정기관]]<!-- – [[Wikipedia:Manual of Style/Legal|Legal]] – [[Wikipedia:Manual of Style/Trademarks|Trademarks]] – ''지역'' – [[Wikipedia:Manual of Style/Canada-related articles|Canada]] – [[Wikipedia:Manual of Style/China-related articles|China]] – [[Wikipedia:Manual of Style/France and French-related|France]] – [[Wikipedia:Manual of Style/Hawaii-related articles|Hawaii]] – [[Wikipedia:Manual of Style/India-related articles|India]] – [[Wikipedia:Manual of Style/Ireland-related articles|Ireland]] – [[Wikipedia:Manual of Style/Japan-related articles|Japan]] – [[Wikipedia:Manual of Style/Korea-related articles|Korea]] – [[Wikipedia:Manual of Style/Philippine-related articles|Philippines]] – [[Wikipedia:Manual of Style/Poland-related articles|Poland]] – [[Wikipedia:Manual of Style/Singapore-related articles|Singapore]] – [[Wikipedia:Trinidad and Tobago Wikipedians' notice board/Style guide|Trinidad and Tobago]] – ''종교'' – [[Wikipedia:Manual of Style/Islam-related articles|Islam]] – [[Wikipedia:Manual of Style/Latter Day Saints|Latter Day Saints]] – ''과학'' – [[Wikipedia:Manual of Style/Chemistry|Chemistry]] – [[Wikipedia:Manual of Style/Computing|Computing]] – [[Wikipedia:Manual of Style/Mathematics|Mathematics]] – [[Wikipedia:Manual of Style/Medicine-related articles|Medicine]] – [[Template:Taxobox/doc|TaxoBox Documentation]] – ''스포츠'' –  [[Wikipedia:Manual of Style/Cue sports|Cue Sports]] – [[Wikipedia:Manual of Style/Snooker|Snooker]]--> – ''기타 위키백과 내용'' – [[위키프로젝트:재난/편집 지침|재난]] – [[위키프로젝트:철도/편집 도우미|철도]]<!-- – [[Wikipedia:Manual of Style/Disambiguation pages|Disambiguation Pages]] – [[위키백과:편집 지침/정보상자|정보상자]]--></div>
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] [[위키백과:정책 목록#행동|행동 관련 정책]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!--[[위키백과:예의|예의]] – -->[[위키백과:총의|총의]]<!-- – [[위키백과:편집 정책|편집 정책]] – [[Wikipedia:Harassment|Harassment]]--> – [[위키백과:문서 훼손|문서 훼손]]</div>
+<!--[[위키백과:새로운 시작|새로운 시작]] – -->[[위키백과:분쟁 해결|분쟁 해결]] – [[위키백과:편집 분쟁|편집 분쟁]] – [[위키백과:인신 공격 금지|인신 공격 금지]] – [[위키백과:문서의 소유권|문서의 소유권]] – [[위키백과:다중 계정|다중 계정]] – [[위키백과:계정 이름|계정 이름]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] [[위키백과:지침 목록#행동|행동 지침]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:좋은 뜻으로 보기|좋은 뜻으로 보기]] – [[위키백과:이해관계의 충돌|이해관계의 충돌]] – [[위키백과:방해 편집|방해 편집]] – [[위키백과:토론에서 지켜야 할 점|토론에서 지켜야 할 점]] – [[위키백과:토론 문서 지침|토론 문서 지침]]</div>
+[[위키백과:요청/가이드라인|요청 지침]] – [[위키백과:차단 재검토|차단 재검토]] – [[위키백과:선전 행위|선전 행위]]<!-- – [[Wikipedia:Changing username/Guidelines|Changing Username Guidelines]] – [[위키백과:사라질 권리|사라질 권리]] – [[Wikipedia:Deceased Wikipedians/Guidelines|Deceased Wikipedians Guidelines]] – [[위키백과:자신의 주장을 위해 위키백과를 흔들지 마세요|자신의 주장을 위해 위키백과를 흔들지 마세요]] – [[위키백과:체제에 대한 시험|체제에 대한 시험]]--> – [[위키백과:새로 온 손님을 쫓아내지 마세요|새로 온 손님을 쫓아내지 마세요]]<!-- – [[Wikipedia:Reviewing pending changes|Reviewing]]--> – [[위키백과:일괄 되돌리기 기능|일괄 되돌리기 기능]] – [[위키백과:서명|서명]]<!-- – [[Wikipedia:Spam blacklist|Spam Blacklist]] – [[Wikipedia:Linking to external harassment|Linking to External Harassment]]-->
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] [[위키백과:정책 목록#삭제|삭제 정책]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:삭제 정책|삭제 정책]] – [[위키백과:빠른 삭제 기준|빠른 삭제 기준]] – [[위키백과:삭제 제안|삭제 제안]]</div>
+<!--[[Wikipedia:Attack page|Attack Page]] – -->[[위키백과:기록보호자|기록보호자]] – [[위키백과:생존 인물의 전기의 삭제 제안|생존 인물의 전기의 삭제 제안]] – [[위키백과:특정판 삭제 정책|특정판 삭제 정책]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] [[위키백과:지침 목록#삭제|삭제 지침]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:삭제 절차|삭제 절차]]</div>
+<!--[[Wikipedia:Deletion guidelines for administrators|Deletion Guidelines for Administrators]] – -->[[위키백과:빠른 유지|빠른 유지]]
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] [[위키백과:정책 목록#절차|절차 관련 정책]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:정책과 지침|정책과 지침]]<!-- – [[Wikipedia:Arbitration/Policy|Arbitration Policy]]--> – [[위키백과:조정|조정]] – [[위키백과:위키미디어 정책|위키미디어 정책]]</div>
+<!--[[Wikipedia:Arbitration Committee/CheckUser and Oversight|Arbitration Committee: CheckUser and Oversight]] – -->[[위키백과:업로더|업로더]] – [[위키백과:봇 정책|봇 정책]] – [[위키백과:검사관|검사관]]<!-- – [[Wikipedia:Global rights policy|Global Rights Policy]]--> – [[위키백과:IP 차단 면제|IP 차단 면제]]<!-- – [[Wikipedia:Page mover|Page mover]]--> – [[위키백과:공개 프록시|공개 프록시]]<!-- – [[위키백과:OTRS|OTRS 팀]]-->
+
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Info Simple.svg|30px]] 절차적 정보 ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">
+[[위키백과:사무관|사무관]]<!-- – [[Wikipedia:Office actions|Office Actions]]--></div>
+
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] [[위키백과:정책 목록#집행|집행 정책]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:관리자|관리자]] – [[위키백과:차단 정책|차단 정책]] –  [[위키백과:보호 정책|보호 정책]]</div>
+<!--[[Wikipedia:Arbitration Committee/Discretionary sanctions|Discretionary Sanctions]] – -->[[위키백과:부분 차단|부분 차단]] – [[위키백과:제한 정책|제한 정책]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk.svg|30px]] [[위키백과:정책 목록#법|법적 정책]] ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:저작권|저작권]] – [[위키백과:법적 위협 금지|법적 위협 금지]] – [[위키백과:이용 약관|이용 약관]]</div>
+<!--[[위키백과:어린이 보호|어린이 보호]] – [[위키백과:저작권 침해|저작권 침해]] – [[위키백과:명예훼손|명예훼손]] – -->[[위키백과:비자유 저작물 기준|비자유 저작물 기준]]<!-- – [[Wikipedia:Paid-contribution disclosure|Paid-contribution disclosure]] – [[위키백과:위키백과 콘텐츠의 재사용|위키백과 콘텐츠의 재사용]]-->
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] 이름공간 지침 ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!--[[위키백과:위키백과 이름공간|위키백과 이름공간]] – -->[[위키백과:사용자 문서|사용자 문서]]</div>
+[[위키백과:단축|단축]] – [[위키백과:유저박스|유저박스]]<!-- – [[위키백과:위키프로젝트/설명|위키프로젝트 지침]]-->
+|-<!--
+| style="vertical-align:top; width:20%;" |
+=== [[파일:Antu mail-mark-notjunk blue.svg|30px]] 틀 관련 지침 ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[위키백과:틀 이름공간|틀 이름공간]]</div>
+[[Wikipedia:High-risk templates|High-Risk Templates]] – [[Wikipedia:Substitution|Substitution]] – [[Wikipedia:Talk page templates|Talk Page Templates]]-->
+|}
+
+== 같이 보기 ==
+* [[위키백과:도움말 디렉토리]]
+
+{{위키백과 원리}}
+{{위키백과 주요 정책과 지침}}
+
+[[분류:위키백과 정책과 지침|목록]]

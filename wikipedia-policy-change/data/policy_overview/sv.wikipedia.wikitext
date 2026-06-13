@@ -1,0 +1,115 @@
+{{Genväg|WP:POLICY}}
+{{Riktlinje}}
+{{Riktlinjer}}
+{{Policylista}}
+{{Manual}}
+{{Stilguide}}
+[[Wikipedia]] är ett samarbetsprojekt vars grundare och deltagande har ett gemensamt mål:
+
+{{citat|Vårt mål med Wikipedia är att skapa ett tillförlitligt och fritt uppslagsverk – faktiskt historiens största uppslagsverk, både vad gäller djup och bredd.|{{källa behövs|vore fint meden referens till engelska originalet|2010-02}}}}
+
+För att hjälpa oss att uppnå dessa mål, tillämpar Wikipedia ''policyer och riktlinjer''. En del av dessa policyer utvecklas fortfarande, medan andra är fastlagda sedan länge och i stort sett helt okontroversiella. Det är viktigt att komma ihåg att även policy och riktlinjer skrivs, redigeras och utvecklas av vanliga Wikipediaanvändare, med undantag för några grundprinciper som formulerades av Wikipedias skapare. De kan alltså justeras förutsatt brett stöd bland gemenskapens användare.
+
+== Grundprinciper ==
+{{Se även|Wikipedia:Grundprinciperna}}
+Man behöver inte läsa varenda policy innan man börjar bidra! Men [[Wikipedia:Grundprinciperna|grundprinciperna]] är nyckeln till hur arbetet med Wikipedia kan bli produktivt, och ju förr du kommer underfund med dem desto bättre.
+
+#'''Wikipedia är ett uppslagsverk.''' Dess mål sträcker sig inte längre än så. Se [[Wikipedia:Vad Wikipedia inte är|Vad Wikipedia inte är]].
+#'''Ta inte ställning.''' Artiklar ska [[Wikipedia:Neutral synvinkel|skrivas från en neutral synpunkt]], och företräda olika synpunkter på ämnet rättvist och välvilligt.
+#'''Respektera upphovsrätten.''' Wikipedia är en fri encyklopedi, licensierad under [[Wikipedia:Ordlista#Licens|licensen]] ''[[Wikipedia:Ordlista#CC BY-SA|Creative Commons' erkännande-dela lika]]''. Att lägga in material som bryter mot upphovsrätten kan leda till legala problem. Det är något som hotar vårt mål, att bygga ett fritt uppslagsverk som alla kan distribuera vidare. Se [[Wikipedia:Upphovsrätt|Upphovsrätt]].
+# '''Respektera de andra bidragsgivarna.''' [[Wikipedia:Förutsätt att andra har goda avsikter|Förutsätt att andra har goda avsikter]]. De som bidrar till Wikipedia kommer från många olika länder och kulturer, och har i många fall vitt skilda synsätt. Att behandla andra med respekt är nyckeln till ett effektivt samarbete kring skapandet av uppslagsverket. Riktlinjer finns bland annat på [[Wikipedia:Etikett|Etikett]] och [[Wikipedia:Konflikthantering|Konflikthantering]].
+#'''Wikipedia har inga fasta regler'''. [[Wikipedia:Var djärv|Var djärv]] när du redigerar, även om perfektion är ett mål så är det inte nödvändigt. Gör så gott du kan, och om någon regel står i vägen för att göra encyklopedin bättre, i enlighet med reglerna ovan, [[Wikipedia:Strunta i reglerna|strunta i den]].
+
+== Policy ==
+
+Med ''policy'' menas en allmänt accepterad arbetsmetodik för utvecklandet av Wikipedia, vilken är att betrakta som en standard ''alla'' [[wp:användare|användare]] ''bör följa''. Till skillnad från grundprinciperna kan policyer utvecklas av användare, även om det mycket sällan sker. Wikipedias policy till stor del är formulerad i ett tidigt stadium av projektet, i allmänhet före 2003.
+
+=== Sammanställning av policyer ===
+
+* [[Wikipedia:Grundprinciperna]]
+
+;Innehåll
+* [[Wikipedia:Neutral synvinkel]]
+* [[Wikipedia:Verifierbarhet]]
+* [[Wikipedia:Upphovsrätt]]
+* [[Wikipedia:Artiklar om nu levande personer]]
+
+;Samarbete
+* [[Wikipedia:Etikett]]
+* [[Wikipedia:Strunta i reglerna]]
+* [[Wikipedia:Förutsätt att andra har goda avsikter]]
+
+== Riktlinjer ==
+{{Se även|Kategori:Wikipedia:Riktlinjer}}
+
+Med ''riktlinje'' menas en arbetsmetodik som en ''stor del'' av [[wp:användare|Wikipediagemenskapen]] ''rekommenderar''.
+
+=== Sammanställning av riktlinjer ===
+Nedan är en lista på de ''riktlinjer'' som kan ses som informella tumregler och beskriver: "ett arbetssätt som de flesta användare rekommenderar". Under dessa finns olika ''stödtexter'' listade som inte har samma uttalade stöd, men ändå kan vara läsvärda i sitt sammanhang.
+
+==== Samarbete ====
+* [[Wikipedia:Konsensus|Konsensus]]
+* [[Wikipedia:Agera inte demonstrativt|Agera inte demonstrativt]]
+* [[Wikipedia:Användarkonto|Användarkonto]]
+* [[Wikipedia:Diskussionssidor|Diskussionssidor]]
+* [[Wikipedia:Intressekonflikter|Intressekonflikter]]
+* [[Wikipedia:Marionetter|Marionetter]]
+* [[Wikipedia:Sammanfattningsfältet|Sammanfattningsfältet]]
+* [[Wikipedia:Signera diskussionsinlägg|Signera diskussionsinlägg]]
+* [[Wikipedia:Var snäll mot nybörjare|Var snäll mot nybörjare]]
+* [[Wikipedia:Var djärv|Var djärv]]
+
+''Se även: [[Wikipedia:Strunta i reglerna|Strunta i reglerna]] (policy), [[Wikipedia:Etikett|Etikett]] (policy), [[Wikipedia:Förutsätt att andra har goda avsikter|Förutsätt att andra har goda avsikter]] (policy), [[Wikipedia:Inga personangrepp|Inga personangrepp]], [[Wikipedia:Att redigera kontroversiella artiklar|Att redigera kontroversiella artiklar]], [[Wikipedia:Konflikthantering|Konflikthantering]], [[Wikipedia:Omröstningar och enkäter|Omröstningar och enkäter]], [[Wikipedia:Redigeringskrig|Redigeringskrig]]''
+
+==== Innehåll ====
+* [[Wikipedia:Vad Wikipedia inte är|Vad Wikipedia inte är]]
+* [[Wikipedia:Relevans|Relevans]]
+* [[Wikipedia:Ingen originalforskning|Ingen originalforskning]]
+* [[Wikipedia:Källhänvisningar|Källhänvisningar]]
+*[[Wikipedia:Wikidataanvändning på Wikipedia|Wikidataanvändning på Wikipedia]]
+
+''Se även: [[Wikipedia:Neutral synvinkel|Neutral synvinkel]] (policy), [[Wikipedia:Verifierbarhet|Verifierbarhet]] (policy), [[Wikipedia:Upphovsrätt|Upphovsrätt]] (policy), [[Wikipedia:Artiklar om nu levande personer|Artiklar om nu levande personer]] (policy), [[Wikipedia:Globalt perspektiv|Globalt perspektiv]], [[Wikipedia:Hur man skriver en bra artikel|Hur man skriver en bra artikel]], [[Wikipedia:Handbok för NPOV|Handbok för NPOV]], [[Wikipedia:Inledning och sammanhang#Förklara sammanhanget|Inledning och sammanhang#Förklara sammanhanget]]''
+
+==== Stil ====
+* [[Wikipedia:Stilguide|Stilguide]]
+* [[Wikipedia:Artikelnamn|Artikelnamn]]
+* [[Wikipedia:Personnamn|Personnamn]]
+* [[Wikipedia:Illustrationer|Illustrationer]]
+
+''Se även: [[Wikipedia:Biografiska artiklar|Biografiska artiklar]], [[Wikipedia:Disposition|Disposition]], [[Wikipedia:Skriv specifikt och koncist|Skriv specifikt och koncist]], [[Wikipedia:Återgivning av främmande språk|Återgivning av främmande språk]]''
+
+==== Struktur ====
+* [[Wikipedia:Strukturering|Strukturering]]
+* [[Wikipedia:Särskiljning|Särskiljning]]
+* [[Wikipedia:Externa länkar|Externa länkar]]
+
+''Se även: [[Wikipedia:Kategorier|Kategorier]], [[Wikipedia:Listor|Listor]], [[Wikipedia:Mallar|Mallar]]''
+
+==== Administration ====
+*[[Wikipedia:Policy och riktlinjer|Policy och riktlinjer]] (denna sida)
+*[[Wikipedia:Blockeringar|Blockeringar]]
+*[[Wikipedia:Klottersanering|Klottersanering]]
+*[[Wikipedia:Manual för administratörer|Manual för administratörer]]
+*[[Wikipedia:Robotar|Robotar]]
+*[[Wikipedia:Skrivskydd|Skrivskydd]]
+*[[Wikipedia:Raderingar|Raderingar]]
+*[[Wikipedia:Tillbakarullning|Tillbakarullning]]
+ 
+''Se även: [[Wikipedia:Hur policy och riktlinjer skapas|Hur policy och riktlinjer skapas]], [[Wikipedia:Snabbraderingar|Snabbraderingar]]''
+
+==Supplement==
+Till policyer och riktlinjer finns ofta sidor benämnda [[WP:supplement|supplement]]. Detta är sidor som på olika sätt förtydligar och fördjupar vad som står i huvuddokumenten. Att en sida är märkt som supplement betyder inte att den kan bortses från, snarare att den inte bedöms kunna stå helt på egna ben. Exempelvis är [[Wikipedia:Skrivregler]] supplement till [[Wikipedia:Stilguide]].
+
+== Hur policy och riktlinjer skapas och upprätthålls ==
+{{Huvudartikel|Wikipedia:Hur policy och riktlinjer skapas}}
+
+Nya riktlinjer uppstår genom att användare skapar nya förslag som finner [[wp:konsensus|konsensus]], och även genom att en befintlig riktlinjes sida så stor och omfattande, att det är bättre att dela upp den i flera. Nya riktlinjer har ofta en förlaga på [[engelskspråkiga Wikipedia]] eller andra språkversioner. Processen för att skapa en ny policy liknar den för riktlinjer. Wikipedia har dock endast ett fåtal policyer, och i realiteten är dock konsensus kring att förändra en policy extremt svår att uppnå och nya policyer skapas mycket sällan.
+
+De flesta policyer och riktlinjer upprätthålls av de enskilda användarna som redigerar sidor, och diskuterar problem med varandra. Några policyer upprätthålls genom tillfälliga tekniska [[Wikipedia:Blockeringar|blockeringar]] (i allmänhet för att [[Wikipedia:Klottersanering|hantera klotter]]) utfärdade av [[Wikipedia:Administratörer|administratörer]]. Om [[Wikipedia:Konsensus|konsensus]] inte uppnås genom [[Wikipedia:Diskussionssidor|diskussion]] finns det ett antal olika vägar för [[Wikipedia:Konflikthantering|konflikthantering]].
+
+== Se även ==
+*[[Wikipedia:Supplement]]
+*[[Wikipedia:Böcker/Wikipediamanual-Appendix: Policy och riktlinjer]]
+
+[[Kategori:Wikipedia:Policy och riktlinjer| ]]
+[[Kategori:Wikipedia:Manual]]

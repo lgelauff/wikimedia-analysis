@@ -1,0 +1,68 @@
+__NOTOC__
+{{Informativo aprovado|Wikipédia:Esplanada/propostas/Oficializar artigos informativos (30mai2012)|WP:POL}}
+{{Políticas da Wikipedia}}
+
+'''Políticas''' e '''recomendações''' da Wikipédia são desenvolvidas pela comunidade para descrever as melhores práticas, clarificar princípios, resolver conflitos, e de outros modos chegar mais perto do objetivo de criar uma enciclopédia livre e fiável. É altamente recomendável a leitura da página dos [[WP:5P|Cinco pilares]], que contém um sumário dos princípios mais pertinentes.
+
+Apesar da Wikipédia [[WP:IGNORE|não ter regras fixas]], as páginas de políticas e recomendações descrevem os seus princípios e práticas mais conhecidas. As [[Ficheiro:Green check.svg|15px|link=]] '''políticas''' explicam e descrevem padrões que todos os usuários devem seguir, enquanto que [[Ficheiro:Blue_check.svg|15px|link=]] '''recomendações''' pretendem descrever padrões que devem ser normalmente seguidos, a depender do contexto. Políticas e recomendações devem ser aplicadas usando a razão e bom senso.
+
+A Wikipédia lusófona mantém algumas políticas [[Wikipedia:Decisões da comunidade|elaboradas pela própria comunidade]] que servem de apoio para as atividades no projeto. A ideia é padronizar algumas ações, manter um rumo e facilitar a colaboração no dia-a-dia. Você também pode participar das decisões. Elabore e lance uma proposta na [[Wikipedia:Esplanada/propostas|Esplanada]] e veja o que a comunidade tem a dizer.
+
+É importante ressaltar que algumas políticas da Wikipédia lusófona foram inspiradas em políticas de Wikipédias em outras línguas, ou seja, são experiências compartilhadas internacionalmente. Dê uma olhada nos [[Wikipedia:interwiki|''interwikis'']] para visualizar quais Wikipédias partilham conosco as mesmas políticas e filosofias.''
+
+<h4>[[Ficheiro:Column impost.svg|25px]] [[Wikipedia:Cinco pilares|'''Cinco pilares''']]</h4>
+:São princípios fundamentais, comuns a todas as Wikipédias, que não podem ser objeto de revisão nem de alteração e têm primazia sobre as regras e recomendações adotadas pela comunidade dos contribuintes.
+<h4>[[Imagem:Green check.svg|20px]] [[Wikipedia:Lista de políticas|'''Políticas oficiais''']] </h4>
+:Descrevem normas que todos os editores devem seguir. 
+<h4> [[Imagem:Blue check.svg|20px]] [[Wikipedia:Lista de recomendações|'''Recomendações''']] </h4>
+:Descrevem normas amplamente aceita que todos os editores devem normalmente seguir.
+<h4>[[Imagem:Info Simple.svg|20px]] [[Wikipedia:Artigo informativo|'''Artigos informativos''']] </h4>
+:Descrevem práticas da comunidade sobre algum ou mais aspetos das normas e costumes da Wikipédia.
+<h4> [[Imagem:Aufgabe-schreiben.svg|20px]] [[Wikipédia:Ensaios|'''Ensaios''']] </h4>
+:São textos escritos por alguns editores ou grupo de editores. São usados frequentemente em discussões internas para evitar a repetição dos argumentos expostos neles. Muitas políticas começaram como ensaios e ganharam a aprovação comunitária até tornarem-se políticas. Ensaios podem eventualmente não representar a opinião geral. 
+<h4> [[Imagem:Aufgabe-zeichnen.svg|20px]] [[Wikipédia:Rascunhos|'''Rascunhos''']] </h4>
+:São textos escritos por um único editor. Podem estar em processo de escrita ou seu autor apenas esboçou ideias e não tem certeza se há apoio da comunidade para um possível ensaio ou informativo sobre o tema. Rascunhos podem eventualmente não representar a opinião geral. 
+
+{{Clear}}
+
+== Quadro-síntese ==
+
+{| class="wikitable" style="text-align: center;"
+|+
+!
+!Imutável 
+!Obrigatório 
+!Autônomo
+!Consensual
+!Apreciado
+|-
+|[[Ficheiro:Column impost.svg|50px|link=WP:Cinco pilares]]<br>[[WP:Cinco pilares|Pilar]]
+|rowspan=1 {{Sim3|Por princípio, não deve ser revisto.}}
+|rowspan=2 {{Sim3|Deve ser seguido por todos, sem margem para exceções.}}
+|rowspan=3 {{Sim3|Emana regramento próprio, sem dependência direta de outros textos.}}
+|rowspan=4 {{Sim3|Foi discutido e aprovado de modo consensual (ou via votação).}}
+|rowspan=5 {{Sim3|Está no domínio {{ns:4}} e presume-se que é de conhecimento da comunidade.}}
+|-
+|[[Ficheiro:Green check.svg|50px|link=WP:Lista de políticas]]<br>[[WP:Lista de políticas|Política]]
+|rowspan=5 {{Não3|Pode ser modificado, revisto ou revogado caso haja consenso da comunidade.}}
+|-
+|[[Ficheiro:Blue_check.svg|50px|link=WP:Lista de recomendações]]<br>[[WP:Lista de recomendações|Recomendação]]
+|rowspan=4 {{Não3|Pode ser dispensado quando ocorrer consenso para tal em circunstâncias específicas e delimitadas.}}
+|-
+|[[Ficheiro:Info Simple.svg|50px|link=WP:Artigo informativo]]<br>[[WP:Artigo informativo|Informativo]]
+|rowspan=3 {{Não3|Não estabelece regras, apenas expande conceitos e documenta consensos da comunidade de forma mais esmiuçada.}}
+|-
+|[[Ficheiro:Aufgabe-schreiben.svg|50px|link=WP:Ensaios]]<br>[[WP:Ensaios|Ensaio]]
+|rowspan=2 {{Não3|Não foi discutido e aprovado formalmente e ainda está em processo de ajuste, discussão e formação de consenso.}}
+|-
+|[[Ficheiro:Aufgabe-zeichnen.svg|50px]]<br>[[WP:Rascunhos|Rascunho]]
+|rowspan=1 {{pendente|Ainda está em elaboração ou há provável consenso pela reprovação do texto.}}
+|}
+
+{{Políticas e recomendações da Wikipédia}}
+
+[[Categoria:!Políticas| ]]
+[[Categoria:!Regras da Wikipédia]]
+
+[[af:Wikipedia:Beleid]]
+[[hsb:Wikipedija:Prawidła]]

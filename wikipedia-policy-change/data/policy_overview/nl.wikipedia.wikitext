@@ -1,0 +1,192 @@
+<!--- TEMPLATE STYLES -->
+<templatestyles src="Sjabloon:Portaal/styles.css" />
+<!-- HELPDESK MEDEDELING -->
+<div class="plainlinks" style="border: 2px solid #909090; background-color:#f8f9fa; padding: 0.5em; margin: 5px 0; font-size: 150%; text-align: center;">'''[https://nl.wikipedia.org/w/index.php?title=Help:Helpdesk&action=edit&section=new Klik hier om een vraag te stellen, uw vraag wordt daarna beantwoord in de] [[Help:Helpdesk|Helpdesk]]'''</div>
+
+<!-- DIV FLEX START -->
+<div style="margin:0 auto; display:flex; flex-wrap:wrap; column-gap:1px; justify-content:center; text-align:center; border:2px solid #a3b1bf; background-color:#cee0f2; overflow:hidden; ">
+
+<!-------------------- HEADER -------------------->
+<div style="flex: 1 1 100%; min-width: 300px; background-color:#cee0f2;">
+<!-- HELP:ENGLISH -->
+<table class="noprint" cellpadding="0" cellspacing="0" style="min-width: 85px; border: 2px solid #a3b1bf; background-color: #f5faff; margin:0.3em; padding: 3px; float: left;">
+<tr><td valign="top" style="padding: 0px 3px; text-align: center;"><small>[[Bestand:Gnome-globe.svg|21px]] [[Help:English|English]]</small></td></tr></table>
+
+<!-- VERWIJZING -->
+<div style="margin:0.3em;">
+{{Verwijzing|P:HB|H:I|WP:HELP}}
+</div>
+
+<!-- KOP -->
+<div style="text-align:center; color:#000000; background-color:#cee0f2; font-weight:bold; font-size:1.5em; margin:0; "> {{nowrap|Portaal: Hulp en beheer}} – overzicht van hulp- en beheerpagina's </div>
+
+<!-- WP NAV & WP HELP HEADER -->
+{{WP nav pag (header)}}
+{{WP help pagina's (header)}}
+
+<!-- ZOEKBALK -->
+<div class="desktop-zoekbalk">
+<inputbox>
+type=search
+width=20
+namespaces=Help**,Wikipedia**,Sjabloon
+searchbuttonlabel=Zoeken
+bgcolor=#cee0f2
+break=no
+</inputbox>
+</div>
+<div class="responsive-zoekbalk">
+<inputbox>
+type=search
+width=20
+namespaces=Help**,Wikipedia**,Sjabloon
+searchbuttonlabel=Zoeken
+bgcolor=#cee0f2
+break=yes
+</inputbox>
+</div>
+
+<!-------------------- DIV HEADER SLUITEN --------------------></div>
+
+<!---------------------- BLOKJES ------------------------->
+<!-- Om te beginnen -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;">[[Bestand:Nuvola apps edu miscellaneous.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Om te beginnen|Om te beginnen]] </div>
+[[Help:Registreren en aanmelden|Inloggen]] <kbd>|</kbd> [[Wikipedia:Snelcursus|snelcursus]] <kbd>|</kbd> [[Media:Schrijven voor Wikipedia.pdf|Handleiding Wikipedia (pdf)]]
+</div>
+</div>
+
+<!-- Regels en richtlijnen -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps agent.png|35px]] &nbsp; [[Portaal:Hulp en beheer/Regels en richtlijnen|Regels en richtlijnen]] </div>
+[[Portaal:Hulp en beheer/Regels en richtlijnen|regels en richtlijnen]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Regels en richtlijnen#Artikelstandaarden|artikelstandaarden]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Regels en richtlijnen#Samenwerking|samenwerking]] <kbd>|</kbd> [[Help:Verantwoordelijkheid|verantwoordelijkheid]]
+</div>
+</div>
+
+<!-- Zoeken en navigeren -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps kappfinder.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Zoeken en navigeren|Zoeken en navigeren]] </div>
+[[Portaal:Hulp en beheer/Zoeken en navigeren#Navigeren in Wikipedia|navigeren in Wikipedia]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Zoeken en navigeren#Manieren om te navigeren|manieren om te navigeren]] <kbd>|</kbd>
+[[Help:Zoeken|informatie zoeken]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Zoeken en navigeren#Zie ook|zie ook]]
+</div>
+</div>
+
+<!-- Communicatie -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps edu languages.svg|35px]]&nbsp; [[Portaal:Hulp en beheer/Communicatiemethoden|Communicatie]] </div>
+[[Portaal:Hulp en beheer/Communicatiemethoden#Vragen stellen|vragen stellen]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Communicatiemethoden#In contact komen|in contact komen]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Communicatiemethoden#Blijf op de hoogte: Nieuws|blijf op de hoogte: Nieuws]]
+</div>
+</div>
+
+<!-- Artikelen bewerken -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Icon tools.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Artikelen bewerken|Artikelen bewerken]] </div>
+[[Portaal:Hulp en beheer/Artikelen bewerken|starten]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Artikelen bewerken#Bewerken|bewerken]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Artikelen bewerken#Bewerking opslaan|bewerken en aanmaken pagina's]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Artikelen bewerken#Onderhoud van artikelen|onderhoud]] <kbd>|</kbd> [[Help:Technische problemen|Hulp bij technische problemen]]
+</div>
+</div>
+
+<!-- Wikipedia-gemeenschap -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps kuser.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Wikipediagemeenschap|Wikipedia-gemeenschap]] </div>
+[[Portaal:Hulp en beheer/Wikipediagemeenschap#Stemmen, peilen en consensus (actueel)|stemmen, peilen en consensus]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Wikipediagemeenschap#Conflicten|conflicten]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Wikipediagemeenschap#Moderatoren|moderatoren]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Wikipediagemeenschap#Wikipediaanse cultuur|wikicultuur]] <kbd>|</kbd>[[Wikipedia:De kroeg|de kroeg]] <kbd>|</kbd> [[Wikipedia:Ontmoeten|bijeenkomsten en ontmoetingen]]
+</div>
+</div>
+
+<!-- Links en referenties -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps bookcase.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Links en referenties|Links en referenties]] </div>
+[[Portaal:Hulp en beheer/Links en referenties#Bronvermelding en referenties|bronvermelding & referenties]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Links en referenties#Externe links|externe links]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Links en referenties#Interne links|interne links]] <kbd>|</kbd> <!--
+
+--> [[Portaal:Hulp en beheer/Links en referenties#Links naar andere Wikimedia-projecten|links naar andere projecten]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Links en referenties#Citeren, gebruik en licentie|citeren en gebruik van artikelen en licenties]]
+</div>
+</div>
+
+<!-- Hulpmiddelen en lijsten -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola filesystems folder yellow.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Hulpmiddelen en lijsten|Hulpmiddelen en lijsten]] </div>
+[[Portaal:Hulp en beheer/Hulpmiddelen en lijsten#Pagina's waar iets mee is|pagina's waar iets mee is]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Hulpmiddelen en lijsten#Niet bestaande artikelen|niet-bestaande artikelen]] <kbd>|</kbd>
+[[Help:Menu hulpmiddelen|menu hulpmiddelen]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Hulpmiddelen en lijsten#Sjablonen algemeen|sjablonen]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Hulpmiddelen en lijsten#Onderhoud|onderhoud]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Hulpmiddelen en lijsten#Overige lijsten|overige lijsten]]
+</div>
+</div>
+
+<!-- Afbeeldingen en media -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola camera.svg|35px]]&nbsp; [[Portaal:Hulp en beheer/Afbeeldingen en media|Afbeeldingen en media]] </div>
+[[Portaal:Hulp en beheer/Afbeeldingen en media|afbeeldingen]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Afbeeldingen en media#Vinden van afbeeldingen|vinden van afbeeldingen]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Afbeeldingen en media#Gebruik van media|gebruik van andere media]] <kbd>|</kbd>
+[[Commons:Commons:Hergebruik van inhoud buiten Wikimedia|hergebruik van afbeeldingen buiten Wikimedia]]
+</div>
+</div>
+
+<!-- Gebruikersinstellingen -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps kcmsystem.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Gebruikersinstellingen|Gebruikersinstellingen]] </div>
+[[Portaal:Hulp en beheer/Gebruikersinstellingen#Gebruikerspagina|gebruikerspagina]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Gebruikersinstellingen#Overlegpagina|overlegpagina]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Gebruikersinstellingen#Kladblokpagina|kladblokpagina]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Gebruikersinstellingen#Gebruikersinstellingen|gebruikersinstellingen]]
+</div>
+</div>
+
+<!-- Veranderingen nagaan -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps ksysv.png|30px]]&nbsp; [[Portaal:Hulp en beheer/Veranderingen nagaan|Veranderingen nagaan]] </div>
+[[Portaal:Hulp en beheer/Veranderingen nagaan|veranderingen nagaan en paginageschiedenis]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Veranderingen nagaan#Vandalisme|vandalisme]]
+</div>
+</div>
+
+<!-- Technische informatie -->
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> [[Bestand:Nuvola apps konsole.png|35px]]&nbsp; [[Portaal:Hulp en beheer/Technische informatie|Technische informatie]] </div>
+[[Portaal:Hulp en beheer/Technische informatie|algemeen]] <kbd>|</kbd>
+[[Portaal:Hulp en beheer/Technische informatie|bots]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Technische informatie#Systeemberichten|systeemberichten]] <kbd>|</kbd> [[Portaal:Hulp en beheer/Technische informatie#Archief en oud|archief en oud]]
+</div>
+</div>
+
+<!-- Contact met Wikipedia -->
+<div style="flex: 1 1 100%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff; border-top:1px solid #cee0f2;">
+<div style="padding:1em 1em 0.5em 1em;"> [[Bestand:Nuvola apps filetypes.png|35px]]&nbsp;&nbsp; Heeft u vragen? Op '''[[Help:Contact met Wikipedia]]''' vindt u onze contactinformatie. </div>
+</div>
+
+<!-- Zie ook -->
+<div style="flex: 1 1 100%; min-width: 300px; background-color:#f5faff; border:1px solid #f5faff; border-top:1px solid #cee0f2;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+<div style="font-weight:bold;font-size:1.2em; color:#000;"> Zie ook: </div>
+: '''[[Help:Veelgestelde vragen|Veelgestelde vragen]]''' – antwoorden op vaker gestelde vragen
+: '''[[Wikipedia:Pers|Pers]]''' – informatie voor de pers
+</div>
+</div>
+
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f8f9fa; border:1px solid #f5faff; border-top:1px solid #cee0f2;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+'' '''[[Portaal:Hulp en beheer/Totaaloverzicht|Totaaloverzicht]]''' - om alle menu's op één pagina te zien.''
+</div>
+</div>
+
+<div style="flex: 1 1 45%; min-width: 300px; background-color:#f8f9fa; border:1px solid #f5faff; border-top:1px solid #cee0f2;">
+<div style="padding:0.5em 1em 0.5em 1em;">
+'' '''[[Portaal:Gebruikersportaal|Gebruikersportaal]]''' – het middelpunt van de activiteit op Wikipedia.''
+</div>
+</div>
+<!-- DIV FLEX EINDE --> </div>
+__NOTOC__
+__NOEDITSECTION__
+
+[[Categorie:Wikipedia| 1Hulp en beheer]]
+[[Categorie:Wikipedia:Portalen|Hulp en beheer]]
+[[Categorie:Wikipedia:Help| ]]

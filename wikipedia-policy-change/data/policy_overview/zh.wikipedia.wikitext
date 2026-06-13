@@ -1,0 +1,195 @@
+{{Header navbar community}}
+{{see|:分类:维基百科方针|:分类:维基百科指引}}
+{{mbox
+| type = notice
+| text = 这是一个'''[[Wikipedia:方针与指引|方针与指引]]'''列表。方针与政策描述了维基百科的共识。方针是所有用户通常情况下都需要遵守的，而指引是指某些特定情形下的最佳实践。
+| imageright = {{Ombox/shortcut|WP:POLICYLIST|WP:PGLIST}}
+}}
+{{Policylist}}
+
+这是一个完整的方针与指引列表。对于詳細的目录，请见[[Wikipedia:方针列表|方针列表]]、[[Wikipedia:指引列表|指引列表]]和[[Wikipedia:格式手册|格式手册]]。
+
+== 术语 ==
+<div style="margin:2em 0em;"></div>
+维基百科的规则和最佳实践分为'''两类'''文档：
+<div style="margin:2em 0em;"></div>
+=== [[File:Green check.svg|30px]] 方针 ===
+方针记录了一个被维基百科编者广泛接受的规则或者是标准，所有用户都通常都需要遵守。
+<div style="margin:2em 0em;"></div>
+=== [[File:Blue check.svg|30px]] 指引 ===
+指引是指一系列由维基百科编者达成的最佳实践。编者一般应该尽量遵循这些指引，但最好把它们当做常识。偶有例外。'''命名惯例'''是一种指引。
+<div style="margin:2em 0em;"></div>
+
+==基础==
+<div style="margin-top:2em; margin-bottom:2em;" ></div>
+===五大支柱===
+'''<!-- [[Wikipedia:Five pillars|Five Pillars]] -->[[Wikipedia:五大支柱|五大支柱]]'''是五个维基百科的基础原则。
+::{|
+|- 
+|style="padding:5px"|[[File:Encyclopedia icon.svg|47px]]
+|<!-- [[Wikipedia:What Wikipedia is not|Wikipedia is an encyclopedia]] -->[[Wikipedia:维基百科不是什么|維基百科是一部百科全書]]
+|-
+|style="padding:5px"|[[File:Scale icon green.svg|47px]]
+|<!-- [[Wikipedia:Neutral point of view|Wikipedia is written from a neutral point of view]] -->[[Wikipedia:中立的观点|维基百科採用中立观点]]
+|-
+|style="padding:5px"|[[File:Jigsaw piece yellow 01.svg|47px]]
+|<!-- [[Wikipedia:Copyrights|Wikipedia is free content that anyone can use, edit, and distribute]] -->[[Wikipedia:版权信息|維基百科內容開放版權]]
+|-
+|style="padding:5px"|[[File:Smiley icon orange.svg|47px]]
+|<!-- [[Wikipedia:Civility|Editors should treat each other with respect and civility]] -->[[Wikipedia:文明|維基人以禮相待、相互尊重]]
+|-
+|style="padding:5px"|[[File:Light bulb icon red.svg|47px]]
+|<!-- [[Wikipedia:Ignore all rules|Wikipedia has no firm rules]] -->[[Wikipedia:忽略所有规则|維基百科不墨守成規]]
+|}
+
+<div style="margin-top:2em; margin-bottom:2em;" ></div>
+
+<div style="margin-top:2em; margin-bottom:2em;" ></div>
+
+==列表==
+::<big>'''大字体'''</big>是广泛适用于维基百科的基础方针与指引。
+::'''正常字体'''是通用的，但更加适用于具体情形的方针与指引。
+::<small>'''小字体'''</small>是适用于具体话题领域或者维基百科过程的方针与指引。
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;" ></div>
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" | &nbsp;
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Ignore all rules|Ignore All Rules]] -->[[Wikipedia:忽略所有规则]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Green check.svg|30px]] [[WP:方针列表#内容|内容方针]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:What Wikipedia is not|What Wikipedia Is Not]] -->[[Wikipedia:维基百科不是什么]] – <!-- [[Wikipedia:Neutral point of view|Neutral Point of View]] -->[[Wikipedia:中立的观点]] – <!-- [[Wikipedia:Verifiability|Verifiability]] -->[[Wikipedia:可供查證]] – <!-- [[Wikipedia:No original research|No Original Research]] -->[[Wikipedia:非原创研究]]</div>
+<!-- [[Wikipedia:Biographies of living persons|Biographies of Living Persons]] -->[[Wikipedia:生者傳記]] – <!-- [[Wikipedia:Image use policy|Image Use Policy]] -->[[Wikipedia:文件使用方针]] – <!-- [[Wikipedia:Wikipedia is not a dictionary|Wikipedia is Not a Dictionary]] -->[[Wikipedia:维基百科不是词典]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:指引列表#内容|内容指引]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Citing sources|Citing Sources]] -->[[Wikipedia:列明来源]] – <!-- [[Wikipedia:Do not create hoaxes|Do Not Create Hoaxes]] -->[[Wikipedia:不要製造惡作劇]] – <!-- [[Wikipedia:Do not include the full text of lengthy primary sources|No Full Texts of Primary Sources]] -->[[Wikipedia:不要包含原始资料的副本]] – <!-- [[Wikipedia:Identifying reliable sources|Identifying Reliable Sources]] -->[[Wikipedia:可靠来源]] – [[Wikipedia:Plagiarism|Plagiarism]] – <!-- [[Wikipedia:Patent nonsense|Patent Nonsense]] -->[[Wikipedia:胡言亂語]]</div>
+<!-- [[Wikipedia:Autobiography|Autobiography]] -->[[Wikipedia:自傳]] – <!-- [[Wikipedia:Accuracy dispute|Accuracy Dispute]] -->[[Wikipedia:准确性争议]] –  <!-- [[Wikipedia:Content forking|Content Forking]] -->[[Wikipedia:內容分歧]] – <!-- [[Wikipedia:External links|External Links]] -->[[Wikipedia:外部链接]] – <!-- [[Wikipedia:No disclaimers in articles|No Disclaimers in Articles]] -->[[Wikipedia:不要在條目中進行聲明]] – <!-- [[Wikipedia:Non-free content|Non-Free Content]] -->[[Wikipedia:合理使用]] – <!-- [[Wikipedia:Non-free use rationale guideline|Non-Free Use Rationale Guideline]] -->[[Wikipedia:非自由文件使用依据指引]] – <!-- [[Wikipedia:Non-U.S. copyrights|Non-U.S. Copyrights]] -->[[Wikipedia:非美国版权]] – <!-- [[Wikipedia:Offensive material|Offensive Material]] -->[[Wikipedia:冒犯性内容]] – [[Wikipedia:Portal guidelines|Portal Guidelines]] – <!-- [[Wikipedia:Public domain|Public Domain]] -->[[Wikipedia:公有領域]] – <!-- [[Wikipedia:Spam|Spam]] -->[[Wikipedia:垃圾内容]] – <!-- [[Wikipedia:Spoiler|Spoiler]] -->[[Wikipedia:剧透内容]]
+<div style="font-size:90%;">[[Wikipedia:Anarchism referencing guidelines|Anarchism Referencing Guidelines]] – [[Wikipedia:Days of the year|Days of the Year]] – <!-- [[Wikipedia:Fringe theories|Fringe Theories]] -->[[Wikipedia:边缘学说]] – <!-- [[Wikipedia:Identifying reliable sources (medicine)|Identifying Reliable Sources (Medicine)]] [[Wikipedia:可靠來源 (醫學)]] – --> [[Wikipedia:Indic transliteration|Indic Transliteration]] – <!-- [[Wikipedia:Logos|Logos]] -->[[Wikipedia:標誌]] – [[Wikipedia:No 3D illustrations|No 3D Illustrations]] – [[Wikipedia:Record charts|Record Charts]] – [[Wikipedia:Scientific citation guidelines|Scientific Citation Guidelines]] – [[Wikipedia:Television episodes|Television Episodes]] – <!-- [[Wikipedia:WikiProject Video games/Article guidelines|Video Game Article Guidelines]] -->[[Wikipedia:电子游戏专题/条目指引]] – [[Wikipedia:Wikipedia is not for things made up one day|Wikipedia Is Not For Things Made Up One Day]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:指引列表#编辑|编辑指引]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Article size|Article Size]] -->[[Wikipedia:条目长度]] – <!-- [[Wikipedia:Be bold|Be Bold]] -->[[Wikipedia:勇于更新页面]] – <!-- [[Wikipedia:Categorization|Categorization]] -->[[Wikipedia:頁面分類]] – <!-- [[Wikipedia:Disambiguation|Disambiguation]] -->[[Wikipedia:消歧义]] – <!-- [[Wikipedia:Make technical articles understandable|Understandability]] -->[[Wikipedia:行话解释]] – <!-- [[Wikipedia:Stub|Stub]] -->[[Wikipedia:小作品]] – <!-- [[Wikipedia:Summary style|Summary Style]] -->[[Wikipedia:摘要格式]]</div>
+[[Wikipedia:As of|As Of]] – [[Wikipedia:Broad-concept articles|Broad-Concept Articles]] – <!-- [[Wikipedia:Categories, lists, and navigation templates|Categories, Lists, and Navigation Templates]] -->[[Wikipedia:分類、列表與導航模板]] – <!-- [[Wikipedia:Copying within Wikipedia|Copying within Wikipedia]] -->[[Wikipedia:在维基百科内复制内容]] – [[Wikipedia:Reviewing good articles|Reviewing Good Articles]] – <!-- [[Wikipedia:Hatnote|Hatnote]] -->[[Wikipedia:頂註]] – [[Wikipedia:Page blanking|Page Blanking]] – <!-- [[Wikipedia:Overcategorization|Overcategorization]] -->[[Wikipedia:过度分类]] – [[Wikipedia:Preparing images for upload|Preparing Images for Upload]] – <!-- [[Wikipedia:Red link|Red Link]] -->[[Wikipedia:紅字連結]] – <!-- [[Wikipedia:Redirect|Redirect]] -->[[Wikipedia:重定向]] – <!-- [[Wikipedia:Set index articles|Set Index Articles]] -->[[Wikipedia:同類索引條目]] – <!-- [[Wikipedia:Soft redirect|Soft Redirect]] -->[[Wikipedia:软重定向]] – [[Wikipedia:Spellchecking|Spellchecking]] – <!-- [[Wikipedia:Subpages|Subpages]] -->[[Wikipedia:子頁面]] – [[Wikipedia:Updating information|Updating Information]] – [[Wikipedia:User categories|User Categories]]
+<div style="font-size:90%;"><!-- [[Wikipedia:Categorization of people|Categorization of People]] -->[[Wikipedia:人物分类方法]] – [[Wikipedia:In the news/Recurring items|In The News: Recurring Items]] – [[Wikipedia:People by year|People by Year]] – [[Wikipedia:Categorizing redirects|Categorizing Redirects]] – [[Wikipedia:Disambiguation/PrimaryTopicDefinition|Primary Topic Definition]] – [[Wikipedia:Extended image syntax|Extended Image Syntax]] – [[Wikipedia:Overcategorization/User categories|Overcategorization: User Categories]] – [[Wikipedia:Recent years|Recent Years]] – [[Wikipedia:Reference desk/Guidelines|Reference Desk Guidelines]] – [[Wikipedia:Reference desk/Guidelines/Medical advice|Reference Desk Guidelines: Medical Advice]] – <!-- [[Wikipedia:Version 1.0 Editorial Team/Assessment|Wikipedia 1.0 Editorial Team Assessment Guidelines]] -->[[Wikipedia:条目质量评级标准]] – [[Wikipedia:Categorization/Ethnicity, gender, religion and sexuality|Categorization: Ethnicity, Gender, Religion and Sexuality]]</div>
+|}
+
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;" ></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:指引列表#关注度|关注度指引]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Notability|Notability]] -->[[Wikipedia:关注度]]</div>
+<!-- [[Wikipedia:Notability (academics)|Academics]] -->[[Wikipedia:關注度 (學者)]] – [[Wikipedia:Notability (astronomical objects)|Astronomical Objects]] – <!-- [[Wikipedia:Notability (books)|Books]] -->[[Wikipedia:關注度 (書籍)]] – <!-- [[Wikipedia:Notability (events)|Events]] -->[[Wikipedia:关注度 (事件)]] – <!-- [[Wikipedia:Notability (films)|Films]] -->[[Wikipedia:关注度 (电影)]] – <!-- [[Wikipedia:Notability (geographic features)|Geographic Features]] -->[[Wikipedia:关注度 (地理特征)]] – <!-- [[Wikipedia:Notability (music)|Music]] -->[[Wikipedia:關注度 (音樂)]] – <!-- [[Wikipedia:Notability (numbers)|Numbers]] -->[[Wikipedia:关注度 (数字)]] – <!-- [[Wikipedia:Notability (organizations and companies)|Organizations and Companies]] -->[[Wikipedia:关注度 (组织与公司)]] – <!-- [[Wikipedia:Notability (people)|People]] -->[[Wikipedia:人物收錄準則]] – [[Wikipedia:Notability (sports)|Sports]] – <!-- [[Wikipedia:Notability (web)|Web]] -->[[Wikipedia:关注度 (网站)]]
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Blue check.svg|30px]]命名习惯===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Article titles|Article Titles]] -->[[Wikipedia:命名常规]] – <!-- [[Wikipedia:Category names|Category Names]] -->[[Wikipedia:分类名称]] – <!-- [[Wikipedia:File names|File Names]] -->[[Wikipedia:檔案名稱]]</div>
+<!-- [[Wikipedia:Naming conventions (acronyms)|Acronyms]] -->[[Wikipedia:格式手册/缩写]] – <!-- [[Wikipedia:Naming conventions (capitalization)|Capitalization]] -->[[Wikipedia:命名常规/大写]] – [[Wikipedia:Naming conventions (country-specific topics)|Country-Specific Topics]] – [[Wikipedia:Naming conventions (definite or indefinite article at beginning of name)|Definite or Indefinite Articles]] – <!-- [[Wikipedia:Naming conventions (events)|Events]] -->[[Wikipedia:命名常規/事件]] – [[Wikipedia:Naming conventions (geographic names)|Geographic Names]] – [[Wikipedia:Naming conventions (numbers and dates)|Numbers and Dates]] – [[Wikipedia:Naming conventions (long lists)|Long Lists]] – <!-- [[Wikipedia:Naming conventions (people)|People]] -->[[Wikipedia:命名常规/人名]] – [[Wikipedia:Naming conventions (plurals)|Plurals]] – <!-- [[Wikipedia:Naming conventions (technical restrictions)|Technical Restrictions]] -->[[Wikipedia:命名常规/技术限制]] – [[Wikipedia:Naming conventions (use English)|Use English]]
+<div style="font-size:90%;">[[Wikipedia:Naming conventions (aircraft)|Aircraft]] – [[Wikipedia:Naming conventions (ancient Romans)|Ancient Romans]] – [[Wikipedia:Naming conventions (Armenian)|Armenian]] – <!-- [[Wikipedia:Naming conventions (astronomical objects)|Astronomical Objects]] -->[[Wikipedia:命名常規/天體]] – [[Wikipedia:Naming conventions (Australian roads)|Australian Roads]] – [[Wikipedia:Naming conventions (baseball players)|Baseball Players]] – [[Wikipedia:WikiProject Belgium/Castle, country house, château and kasteel naming conventions|Belgium: Castle, Country House, Château and Kasteel]] – [[Wikipedia:WikiProject Belgium/Alternate language names|Belgium: Alternate Language Names]] – <!-- [[Wikipedia:Naming conventions (books)|Books]] -->[[Wikipedia:命名常规/书籍]] – [[Wikipedia:Naming conventions (broadcasting)|Broadcasting]] – [[Wikipedia:WikiProject Belgium/Brussels naming conventions|Brussels]] – [[Wikipedia:Naming conventions (Burmese)|Burmese]] – [[Wikipedia:Naming conventions (law enforcement agency categories)|Law Enforcement Agency Categories]] – [[Wikipedia:Naming conventions (chemistry)|Chemistry]] – [[Wikipedia:Naming conventions (Chinese)|Chinese]] – [[Wikipedia:Naming conventions (clergy)|Clergy]] – [[Wikipedia:WikiProject College football/Naming conventions|College Football]] – [[Wikipedia:Naming conventions (comics)|Comics]] – [[Wikipedia:Naming conventions (companies)|Companies]] – [[Wikipedia:Naming conventions (fauna)|Fauna]] – [[Wikipedia:Naming conventions (flora)|Flora]] – [[Wikipedia:Naming conventions (geographic names)|Geographic names]] – [[Wikipedia:Naming conventions (UK Parliament constituencies)|UK Parliament Constituencies]] – [[Wikipedia:Naming conventions (government and legislation)|Government and Legislation]]– [[Wikipedia:Naming conventions (Greek)|Greek]] – [[Wikipedia:Naming conventions (Hebrew)|Hebrew]] – [[Wikipedia:Naming conventions (ice hockey)|Ice Hockey]] – [[Wikipedia:Naming conventions (Indic)|Indic]] – [[Wikipedia:WikiProject Ireland/Ireland Category Norms|Irish Categories]] – [[Wikipedia:Naming conventions (Korean)|Korean]] – [[Wikipedia:Naming conventions (languages)|Languages]] – [[Wikipedia:Naming conventions (Latter Day Saints)|Latter Day Saints]] – [[Wikipedia:Naming conventions (Macedonia)|Macedonia]] – [[Wikipedia:Naming conventions (manuscripts)|Manuscripts]] – [[Wikipedia:Naming conventions (Mongolian)|Mongolian]] – [[Wikipedia:Naming conventions (music)|Music]] – [[Wikipedia:Naming conventions (New Zealand)|New Zealand]] – [[Wikipedia:Naming conventions (Norse mythology)|Norse Mythology]] – [[Wikipedia:Naming conventions (operas)|Operas]] – [[Wikipedia:Naming conventions (ethnicities and tribes)|Ethnicities and Tribes]] – [[Wikipedia:WikiProject Mining/Style guide|Mining]] – [[Wikipedia:Naming conventions (political parties)|Political Parties]] – [[Wikipedia:Naming conventions (ships)|Ships]] – [[Wikipedia:Naming conventions (sports teams)|Sports Teams]] – [[Wikipedia:Naming conventions (sportspeople)|Sportspeople]] – [[Wikipedia:Naming conventions (stations in Poland)|Stations in Poland]] – <!-- [[Wikipedia:Naming conventions (television)|Television]] -->[[Wikipedia:命名常規/影視]] – [[Wikipedia:Naming conventions (Tibetan)|Tibetan]] – [[Wikipedia:Naming conventions (royalty and nobility)|Royalty and Nobility]] – [[Wikipedia:Naming conventions (U.S. state and territory highways)|U.S. State and Territory Highways]] – [[Wikipedia:Naming conventions (UK stations)|UK Stations]] – <!-- [[Wikipedia:Naming conventions (video games)|Video Games]] -->[[Wikipedia:命名常规/电子游戏]] – [[Wikipedia:Naming conventions (West Bank)|West Bank]] – [[Wikipedia:WikiProject Swiss municipalities/Article title conventions|Swiss Municipalities]] – [[Wikipedia:Naming conventions (writing systems)|Writing Systems]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:指引列表#风格|风格指引]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Manual of Style|Manual of Style]] -->[[Wikipedia:格式手册]] ([[Wikipedia:格式手册/Contents|主录]])</div>
+'''内容:''' <!-- [[Wikipedia:Manual of Style/Accessibility|Accessibility]] -->[[Wikipedia:格式手冊/親和力]] – <!-- [[Wikipedia:Manual of Style/Biographies|Biographies]] -->[[Wikipedia:格式手册/传记]] – <!-- [[Wikipedia:Manual of Style/Linking|Linking]] -->[[Wikipedia:格式手册/链接]] – <!-- [[Wikipedia:Manual of Style/Self-references to avoid|Self-References to Avoid]] -->[[Wikipedia:格式手冊/避免自我提及]] – <!-- [[Wikipedia:Manual of Style/Words to watch|Words to Watch]] -->[[Wikipedia:格式手冊/避免使用的字詞]] – <!-- [[Wikipedia:Wikimedia sister projects|Wikimedia Sister Projects]] -->[[Wikipedia:姊妹计划]]
+
+'''格式:''' <!-- [[Wikipedia:Manual of Style/Abbreviations|Abbreviations]] -->[[Wikipedia:格式手册/缩写]] – [[Wikipedia:Manual of Style/Capital letters|Capital Letters]] – <!-- [[Wikipedia:Manual of Style/Dates and numbers|Dates and Numbers]] -->[[Wikipedia:格式手册/日期和数字]] – <!-- [[Wikipedia:Manual of Style/Pronunciation|Pronunciation]] -->[[Wikipedia:格式手册/音标]] – [[Wikipedia:Manual of Style/Proper names|Proper Names]] – [[Wikipedia:Manual of Style/Spelling|Spelling]] – <!-- [[Wikipedia:Manual of Style/Text formatting|Text Formatting]] -->[[Wikipedia:格式手冊/文字格式]] – <!-- [[Wikipedia:Manual of Style/Titles|Titles]] -->[[Wikipedia:格式手冊/標題]]
+
+'''排版:''' <!-- [[Wikipedia:Manual of Style/Layout|Layout]] -->[[Wikipedia:格式手冊/版面佈局]] – <!-- [[Wikipedia:Manual of Style/Lead section|Lead Section]] -->[[Wikipedia:格式手冊/序言章節]] – <!-- [[Wikipedia:Manual of Style/Lists|Lists]] -->[[Wikipedia:格式手冊/列表]] <span style="font-size:90%;">(<!-- [[Wikipedia:Manual of Style/Embedded lists|Embedded Lists]] -->[[Wikipedia:格式手冊/嵌入列表]] – <!-- [[Wikipedia:Manual of Style/Lists of works|Lists of Works]] -->[[Wikipedia:格式手冊/作品列表]] – [[Wikipedia:Manual of Style/Road junction lists|Road Junction Lists]] – <!-- [[Wikipedia:Manual of Style/Stand-alone lists|Stand-Alone Lists]] -->[[Wikipedia:独立列表]])</span> – <!-- [[Wikipedia:Manual of Style/Tables|Tables]] -->[[Wikipedia:格式手冊/表格]] – <!-- [[Wikipedia:Manual of Style/Trivia sections|Trivia Sections]] -->[[Wikipedia:格式手冊/瑣碎章節]]
+
+'''文件:''' <!-- [[Wikipedia:Manual of Style/Images|Images]] -->[[Wikipedia:图像]] – <!-- [[Wikipedia:Manual of Style/Captions|Captions]] -->[[Wikipedia:格式手册/题注]] – <!-- [[Wikipedia:Manual of Style/Icons|Icons]] -->[[Wikipedia:格式手册/旗帜]]
+
+<div style="font-size:90%;">''艺术'' – <!-- [[Wikipedia:Manual of Style/Anime- and manga-related articles|Anime and Manga]] -->[[Wikipedia:日本動漫遊戲條目指導|动漫]] – <!-- [[Wikipedia:Manual of Style/Comics|Comics]] -->[[Wikipedia:漫画专题/格式手册]] – <!-- [[Wikipedia:Manual of Style/Film|Film]] -->[[Wikipedia:电影专题/指南|电影]] – [[Wikipedia:Manual of Style/Music|Music]] ([[Wikipedia:Manual of Style/Music samples|Music Samples]] – [[Wikipedia:Manual of Style/Record charts|Record Charts]] – [[Wikipedia:Manual of Style/Stringed instrument tunings|Stringed Instrument Tunings]]) – [[Wikipedia:Manual of Style/Novels|Novels]] – <!-- [[Wikipedia:Manual of Style/Television|Television]] -->[[Wikipedia:格式手冊/電視]] – [[Wikipedia:Manual of Style/Visual arts|Visual Arts]] – <!-- [[Wikipedia:Manual of Style/Writing about fiction|Writing About Fiction]] -->[[Wikipedia:格式手册/虚构事物]] – ''历史'' – [[Wikipedia:Manual of Style/Military history|Military History]] – [[Wikipedia:Blazon|Blazon]] – ''法律'' – [[Wikipedia:Manual of Style/Legal|Legal]] – <!-- [[Wikipedia:Manual of Style/Trademarks|Trademarks]] -->[[Wikipedia:格式手册/商标]] – ''地区'' – [[Wikipedia:Manual of Style/Canada-related articles|Canada]] – <!-- [[Wikipedia:Manual of Style/China-related articles|China]] -->[[Wikipedia:格式手册/中国相关条目]] – [[Wikipedia:Manual of Style/France and French-related|France]] – [[Wikipedia:Manual of Style/Hawaii-related articles|Hawaii]] – [[Wikipedia:Manual of Style/India-related articles|India]] – [[Wikipedia:Manual of Style/Ireland-related articles|Ireland]] – <!-- [[Wikipedia:Manual of Style/Japan-related articles|Japan]] -->[[Wikipedia:格式手册/日本相关条目]] – <!-- [[Wikipedia:Manual of Style/Korea-related articles|Korea]] -->[[Wikipedia:格式手冊/朝鮮相關條目]] – [[Wikipedia:Manual of Style/Philippine-related articles|Philippines]] – [[Wikipedia:Manual of Style/Poland-related articles|Poland]] – [[Wikipedia:Manual of Style/Singapore-related articles|Singapore]] – [[Wikipedia:Trinidad and Tobago Wikipedians' notice board/Style guide|Trinidad and Tobago]] – ''宗教'' – [[Wikipedia:Manual of Style/Islam-related articles|Islam]] – [[Wikipedia:Manual of Style/Latter Day Saints|Latter Day Saints]] – ''科学'' – <!-- [[Wikipedia:Manual of Style/Chemistry|Chemistry]] -->[[Wikipedia:格式手册/化学（英語維基百科）]] – <!-- [[Wikipedia:Manual of Style/Computing|Computing]] -->[[Wikipedia:格式手册/计算机]] – <!-- [[Wikipedia:Manual of Style/Mathematics|Mathematics]] -->[[Wikipedia:格式手册/数学]] – [[Wikipedia:Manual of Style/Medicine-related articles|Medicine]] – [[Template:Taxobox/doc|TaxoBox Documentation]] – ''体育'' –  [[Wikipedia:Manual of Style/Cue sports|Cue Sports]] – [[Wikipedia:Manual of Style/Snooker|Snooker]] – ''Wikipedia Content'' – <!-- [[Wikipedia:Manual of Style/Disambiguation pages|Disambiguation Pages]] -->[[Wikipedia:格式手冊/消歧義頁]] – <!-- [[Wikipedia:Manual of Style/Infoboxes|Infoboxes]] -->[[Wikipedia:格式手册/信息框|信息框]]</div>
+|}
+
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;" ></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:指引列表#Conduct|行为方针]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Civility|Civility]] -->[[Wikipedia:文明]] – <!-- [[Wikipedia:Consensus|Consensus]] -->[[Wikipedia:共识]] – <!-- [[Wikipedia:Editing policy|Editing Policy]] -->[[Wikipedia:编辑方针]] – <!-- [[Wikipedia:Harassment|Harassment]] -->[[Wikipedia:騷擾]] – <!-- [[Wikipedia:Vandalism|Vandalism]] -->[[Wikipedia:破坏]]</div>
+[[Wikipedia:Clean start|Clean Start]] – <!-- [[Wikipedia:Dispute resolution|Dispute Resolution]] -->[[Wikipedia:爭議解決指南]] – <!-- [[Wikipedia:Edit warring|Edit Warring]] -->[[Wikipedia:編輯戰]] – <!-- [[Wikipedia:No personal attacks|No Personal Attacks]] -->[[Wikipedia:不要人身攻击]] – <!-- [[Wikipedia:Ownership of articles|Ownership of Articles]] -->[[Wikipedia:条目所有权]] – <!-- [[Wikipedia:Sock puppetry|Sock Puppetry]] -->[[Wikipedia:傀儡]] – <!-- [[Wikipedia:Username policy|Username Policy]] -->[[Wikipedia:用户名]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:指引列表#行为指引|行为指引]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Assume good faith|Assume Good Faith]] -->[[Wikipedia:假定善意]] – <!-- [[Wikipedia:Conflict of interest|Conflict of Interest]] -->[[Wikipedia:利益衝突]] – <!-- [[Wikipedia:Disruptive editing|Disruptive Editing]] -->[[Wikipedia:扰乱性编辑]] – <!-- [[Wikipedia:Etiquette|Etiquette]] -->[[Wikipedia:礼仪]] – <!-- [[Wikipedia:Talk page guidelines|Talk Page Guidelines]] -->[[Wikipedia:討論頁指引]]</div>
+<!-- [[Wikipedia:Appealing a block|Appealing a Block]] -->[[Wikipedia:封禁申诉]] – [[Wikipedia:Article Feedback/Feedback response guidelines|Article Feedback Response Guidelines]] – <!-- [[Wikipedia:Canvassing|Canvassing]] -->[[Wikipedia:拉票]] – [[Wikipedia:Changing username/Guidelines|Changing Username Guidelines]] – <!-- [[Wikipedia:Courtesy vanishing|Courtesy Vanishing]] -->[[Wikipedia:隐退]] – [[Wikipedia:Deceased Wikipedians/Guidelines|Deceased Wikipedians Guidelines]] – <!-- [[Wikipedia:Do not disrupt Wikipedia to illustrate a point|Do Not Disrupt Wikipedia to Illustrate a Point]] -->[[Wikipedia:不要為闡釋觀點而擾亂維基百科]] – <!-- [[Wikipedia:Gaming the system|Gaming the System]] -->[[Wikipedia:游戏维基规则]] – <!-- [[Wikipedia:Please do not bite the newcomers|Please Do Not Bite the Newcomers]] -->[[Wikipedia:不要伤害新手]] – [[Wikipedia:Reviewing pending changes|Reviewing]] – <!-- [[Wikipedia:Rollback|Rollback]] -->[[Wikipedia:回退功能]] – <!-- [[Wikipedia:Signatures|Signatures]] -->[[Wikipedia:签名]] – [[Wikipedia:Spam blacklist|Spam Blacklist]] – [[Wikipedia:Linking to external harassment|Linking to External Harassment]]
+|}
+
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;" ></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:方针列表#Deletion|删除方针]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Deletion policy|Deletion Policy]] -->[[Wikipedia:删除方针]] – <!-- [[Wikipedia:Criteria for speedy deletion|Criteria for Speedy Deletion]] -->[[Wikipedia:快速删除方针]] – [[Wikipedia:Proposed deletion|Proposed Deletion]]</div>
+<!-- [[Wikipedia:Attack page|Attack Page]] -->[[Wikipedia:攻击性页面]] – <!-- [[Wikipedia:Oversight|Oversight]] -->[[Wikipedia:监督]] – [[Wikipedia:Proposed deletion (books)|Proposed Deletion (Books)]] – [[Wikipedia:Proposed deletion of biographies of living people|Proposed Deletion of Biographies of Living People]] – <!-- [[Wikipedia:Revision deletion|Revision Deletion]] -->[[Wikipedia:修訂版本刪除]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:指引列表#Deletion|删除指引]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Deletion process|Deletion Process]] -->[[Wikipedia:删除程序]]</div>
+<!-- [[Wikipedia:Deletion guidelines for administrators|Deletion Guidelines for Administrators]] -->[[Wikipedia:管理员删除指导]] – <!-- [[Wikipedia:Speedy keep|Speedy Keep]] -->[[Wikipedia:快速保留]]
+|}
+
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;" ></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:方针列表#Procedural|流程方针]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Policies and guidelines|Policies and Guidelines]] -->[[Wikipedia:方針與指引]] – [[Wikipedia:Arbitration/Policy|Arbitration Policy]] – <!-- [[Wikipedia:Mediation|Mediation]] -->[[Wikipedia:調解委員會]] – [[Wikipedia:Wikimedia policy|Wikimedia Policy]]</div>
+<!-- [[Wikipedia:Arbitration Committee/CheckUser and Oversight|Arbitration Committee: CheckUser and Oversight]] -->[[Wikipedia:用戶查核方針]] – <!-- [[Wikipedia:Bot policy|Bot Policy]] -->[[Wikipedia:機械人方針]] – <!-- [[Wikipedia:Bureaucrats|Bureaucrats]] -->[[Wikipedia:行政员]] – <!-- [[Wikipedia:CheckUser|CheckUser]] -->[[Wikipedia:用戶查核]] – [[Wikipedia:Global rights policy|Global Rights Policy]] – <!-- [[Wikipedia:IP block exemption|IP Block Exemption]] -->[[Wikipedia:IP封禁豁免]] – [[Wikipedia:Mediation Committee/Policy|Mediation Committee Policy]] – [[Wikipedia:Page mover|Page mover]] – <!-- [[Wikipedia:Office actions|Office Actions]] -->[[Wikipedia:基金會行動]] – [[Wikipedia:Open proxies|Open Proxies]] – <!-- [[Wikipedia:Volunteer Response Team|Volunteer Response Team]] -->[[Wikipedia:志愿者回复团队]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:方针列表#执行|执行方针]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Administrators|Administrators]] -->[[Wikipedia:管理员]] – <!-- [[Wikipedia:Blocking policy|Blocking Policy]] -->[[Wikipedia:封禁方针]] –  <!-- [[Wikipedia:Protection policy|Protection Policy]] -->[[Wikipedia:保護方針]]</div>
+[[Wikipedia:Arbitration Committee/Discretionary sanctions|Discretionary Sanctions]] – <!-- [[Wikipedia:Banning policy|Banning Policy]] -->[[Wikipedia:編輯禁制方針]]
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Green check.svg|30px]] [[WP:方针列表#法律|法律方针]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Copyrights|Copyrights]] -->[[Wikipedia:版权信息]] – <!-- [[Wikipedia:No legal threats|No Legal Threats]] -->[[Wikipedia:不要訴諸法律威脅]] – <!-- [[Wikipedia:Terms of use|Terms of Use]] -->[[Wikipedia:使用条款]]</div>
+<!-- [[Wikipedia:Child protection|Child Protection]] -->[[Wikipedia:儿童保护]] – <!-- [[Wikipedia:Copyright violations|Copyright Violations]] -->[[Wikipedia:侵犯著作权]] – <!-- [[Wikipedia:Libel|Libel]] -->[[Wikipedia:誹謗]] – <!-- [[Wikipedia:Non-free content criteria|Non-Free Content Criteria]] -->[[Wikipedia:非自由内容使用准则]] – <!-- [[Wikipedia:Paid-contribution disclosure|Paid-contribution disclosure]] -->[[Wikipedia:申報有償編輯]] – [[Wikipedia:Reusing Wikipedia content|Reusing Wikipedia Content]]
+|}
+
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;" ></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] 非条目页面指引===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:命名空间|维基百科命名空间]] – [[:Wikipedia:User pages|用户页]]</div>
+<!-- [[Wikipedia:Userboxes|Userboxes]] -->[[Wikipedia:用戶框|用戶框]] – <!-- [[Wikipedia:WikiProject Council/Guide|WikiProject Council Guide]] -->[[Wikipedia:专题委员会/专题指引|专题指引]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]]模板指引===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"><!-- [[Wikipedia:Template namespace|Template Namespace]] -->[[Wikipedia:模板命名空间]]</div>
+<!-- [[Wikipedia:High-risk templates|High-Risk Templates]] -->[[Wikipedia:高風險模板]] – [[Wikipedia:Substitution|Substitution]] – [[Wikipedia:Talk page templates|Talk Page Templates]]
+|}
+
+==参见==
+* [[Help:目录|Community standards and advice]]&nbsp;–  a quick directory of community norms and related guidance essays.
+* <!-- [[Wikipedia:WikiProject Council/Guide|Advice pages]] -->[[Wikipedia:专题委员会/专题指引]]&nbsp;–  about advice pages written by WikiProjects. 
+
+;教程
+*[[Help:方針與指引簡介|Introduction to policies and guidelines]]&nbsp;–  a quick introduction to the major policies and guidelines for very new users.
+*<!-- [[Wikipedia:Tutorial/Keep in mind|Keep in mind]] -->[[Wikipedia:新手入門/方針指引]]&nbsp;– a quick introduction on how to apply policies and guidelines as you go about editing.
+
+;相关论述
+*<!-- [[Wikipedia:Simplified ruleset|Simplified rule-set]] -->[[Wikipedia:简要规则集]]&nbsp;– some basic aspect of Wikipedia norms and practices.
+**<!-- [[Wikipedia:8 simple rules for editing our encyclopedia|Eight rules for editing]] -->[[Wikipedia:八個編輯我們百科全書的簡單規則]] &nbsp;–  if you start out by following these simple rules, the rest should come naturally.
+**<!-- [[Wikipedia:Ten Simple Rules for Editing Wikipedia|Ten rules for editing]] -->[[Wikipedia:十個編輯維基百科的簡單規則]] &nbsp;– Wikipedia can be daunting, but here we provide tips to make editing smoother.
+**<!-- [[Wikipedia:Trifecta|Trifecta]] -->[[Wikipedia:三连击|三连击]]&nbsp;– ultra-fast overview of foundational principles related to policies and guidelines. 
+*<!-- [[Wikipedia:The rules are principles|The rules are principles]] -->[[Wikipedia:規則只是原則|規則只是原則]]&nbsp;– policies and guidelines exist as rough approximations of their underlying principles.
+<!--{{Category:维基百科原则}}
+<!--{{Category:维基百科方针指引}}
+<!--{{Category:维基百科目录}}
+<!-- [[Category:Wikipedia policies and guidelines| List]] -->
+[[Category:维基百科方针与指引|－]]

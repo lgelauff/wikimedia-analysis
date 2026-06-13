@@ -1,0 +1,119 @@
+{{protetta}}
+{{abbreviazioni|Wikipedia:LG|Wikipedia:LINEA GUIDA|Wikipedia:LINEE GUIDA|Wikipedia:RACCOMANDAZIONI}}
+{{tipi di pagina}}
+[[WP:Siamo qui per scrivere un'enciclopedia|Siamo qui per scrivere un'enciclopedia]] insieme. Wikipedia è un progetto paritario basato sulla collaborazione. I suoi fondatori e i contributori hanno un obiettivo comune:
+{{quote|creare un'enciclopedia a contenuto aperto (cioè modificabile) ed attendibile: la più grande della storia, sia in termini di ampiezza, sia in termini di profondità dei contenuti.}}
+
+Via via che il progetto è cresciuto, sono state raccolte delle '''raccomandazioni e linee guida''' che fossero di orientamento per coloro che collaborano al raggiungimento di questo obiettivo comune. Alcune di queste linee guida sono in continua evoluzione, mentre altre sono stabilite da tempo e sostanzialmente condivise. Un carattere speciale hanno i '''[[Wikipedia:Cinque pilastri|cinque pilastri]]''' su cui si basa Wikipedia: essi sono fissi e indiscutibili.
+
+Le linee guida continuano ad evolvere secondo le esigenze, ma nessuna forma scritta, nessuna "lettera della legge" può pretendere di coprire ogni possibile variante di comportamento. Per questo, i [[Wikipedia:wikipediani|wikipediani]] tendono a rapportare le linee guida al [[Wikipedia:buonsenso|buonsenso]]: tramite [[Wikipedia:consenso|consenso]] le migliori prassi diventano nel tempo linee guida. Ma resta fermo il contenuto del quinto pilastro: [[Wikipedia:Ignora le regole|Wikipedia non ha regole fisse]]. Quindi quando c'è una motivazione seria molte regole possono essere ignorate mentre, ad esempio, un utente che agisca [[WP:DANNEGGIARE|contro il "senso" delle regole scritte]] viene ripreso anche se non le ha violate alla lettera. Per altro verso, un principio fondamentale di ogni [[wiki]] e quindi anche di Wikipedia è quello di [[Wikipedia:Presumi la buona fede|presumere la buona fede altrui]]: quando valutiamo l'operato altrui, non ci proponiamo di valutare intenzioni recondite, ma badiamo al risultato finale, dando per inteso che chi interviene modificando una pagina lo fa per aiutare Wikipedia, non per distruggerla, il che mette tra parentesi l'intenzione di ciascuno di "salvarla": il wiki ha successo se partecipato e non cerca eroi.
+
+Presumere la buona fede degli altri wikipediani, uniformarsi ad uno [[Wikipedia:Wikilove|spirito di collegialità]] e cercare il consenso per operare insieme: queste sono le condizioni ottimali per creare un'enciclopedia [[Aiuto:NPOV|imparziale]] in un [[Wikipedia:Wikiquette|ambiente favorevole]].
+
+== Regole chiave ==
+Non c'è bisogno di leggere tutte le regole di Wikipedia prima di poter contribuire! Comunque, le seguenti norme sono la chiave per una produttiva esperienza su Wikipedia e prima si prende confidenza con esse meglio è.
+
+# '''Rispetta il copyright.''' Wikipedia è un'enciclopedia libera, licenziata in base ai termini della licenza [[Creative Commons|Creative Commons Attribuzione-Condividi allo stesso modo]] (e, in quasi tutte le voci, della [[GNU Free Documentation License]] &ndash; GFDL). Inserire su Wikipedia opere che violano il [[copyright]] minaccia il nostro obiettivo di costruire un'enciclopedia veramente libera che chiunque possa ridistribuire. Si veda [[Wikipedia:Copyright]] per ulteriori informazioni.
+# Accetta   [https://wikimediafoundation.org/wiki/Terms_of_Use/it   '''le nostre condizioni d'uso'''].
+# '''Evita i pregiudizi.''' Le voci devono essere scritte partendo da un [[Aiuto:NPOV|punto di vista neutrale]], che rappresenti le diverse opinioni su un argomento in maniera equa e comprensiva.
+# '''Wikipedia è un'enciclopedia.''' I suoi scopi non vanno oltre. Si veda [[Wikipedia:Cosa Wikipedia non è|Cosa Wikipedia non è]] e [[Wikipedia:Cosa non mettere su Wikipedia|Cosa non mettere su Wikipedia]] per ulteriori informazioni.
+# '''Rispetta gli altri contributori.''' I contributori a Wikipedia provengono da molte nazioni e culture differenti, e hanno opinioni ampiamente differenti. Trattare gli altri con rispetto è una chiave per collaborare efficacemente a costruire un'enciclopedia. Per alcune linee guida si veda [[Aiuto:Wikiquette|l'etichetta di Wikipedia]] e <!-- [[Wikipedia:Writers rules of engagement]], [[Wikipedia:Civility]], --> [[Wikipedia:Risoluzione dei conflitti|come risolvere i conflitti]].
+
+==Questioni procedurali==
+=== Come vengono decise le regole? ===
+Le linee guida vengono formulate per la maggior parte utilizzando il [[Wikipedia:Consenso|consenso]]. Tale consenso può essere raggiunto attraverso la discussione, soprattutto su argomenti complessi o in qualche modo controversi, oppure può essere il risultato di una pratica già stabilita. In molti casi le linee guida non vengono scritte in un'unica stesura, ma si sviluppano col tempo.
+
+Questioni sulle politiche devono essere formulate e dibattute nel [[Aiuto:Namespace|namespace Wikipedia]], sulle [[Aiuto:Pagina di discussione|pagine di discussione]], e su [[:meta:|Meta-wiki]]. Le discussioni talvolta si svolgono anche su [[m:IRC channels|IRC]] e sulla nostra [[Wikipedia:Mailing list|mailing list]], ma tenete a mente che ufficialmente le politiche devono essere accettate su Wikipedia. Se una politica può essere controversa, deve sempre essere discussa prima di essere adottata. Le [[wp:sondaggi|votazioni]] sono talvolta utili, ma devono essere tenute solo [[Wikipedia:Non correre alle urne|a seguito di una precedente discussione e con l'ottica di ottenere il consenso]].
+
+Le norme che risultano da pratiche consolidate sono talvolta difficili da identificare. Anche se non ci sono obiezioni ad una pratica, può però essere difficile ottenere l'attenzione della comunità i giorni necessari ad un formale processo di adozione di quella prassi come norma. In questa situazione, la miglior soluzione potrebbe essere quella di documentare la pratica esistente su una pagina appropriata. Ciò fornisce quindi un luogo dove discutere la pratica e i possibili cambiamenti, permette inoltre alle persone di citarla come fonte per la norma se necessario.
+
+===Come viene garantito il rispetto delle regole? ===
+''Tu'' sei un redattore di Wikipedia. [[Wikipedia:Non esiste una redazione|Wikipedia è priva di un capo-redattore o di un meccanismo centrale]], dall'alto in basso, che controlla ed approva il progresso giornaliero dell'enciclopedia. Al suo posto, i partecipanti attivi compiono modifiche e correzioni al contenuto e ai problemi di formattazione che incontrano. Quindi i partecipanti sono sia scrittori che redattori.
+
+La maggior parte delle politiche e delle linee guida sono quindi fatte rispettare dai singoli utenti che modificano le pagine, e discutono dei problemi tra loro. Alcune regole sono fatte rispettare anche con blocchi temporanei (soprattutto come meccanismo per [[Wikipedia:Gestione del vandalismo|gestire i vandalismi]]) da parte degli [[Wikipedia:Amministratori|amministratori]].
+
+== Tipi di regole ==
+I collegamenti alle varie regole possono essere trovati nelle seguenti [[Aiuto:Categorie|categorie]]:
+* [[:Categoria:Linee guida]] - politiche ampiamente accettate e suggerimenti che ciascuno dovrebbe seguire
+* [[:Categoria:Linee guida in discussione]] - proposte per nuove politiche e linee guida
+
+=== Convenzioni ===
+Seguendole siamo in grado di produrre un'enciclopedia più uniforme e utilizzabile: 
+* [[Aiuto:Guida essenziale|Guida essenziale]] (come modificare le voci)
+* [[Wikipedia:Titolo della voce|Convenzioni sui titoli]] e [[Aiuto:Manuale di stile|Manuale di stile]] per lo stile e le convenzioni delle voci.
+* [[Aiuto:Disambigua|Disambigua]] (come risolvere i conflitti sui titoli)
+
+=== Caratteristiche riservate ===
+Alcune funzioni del software [[Mediawiki]], l'infrastruttura di [[Wikipedia]], possono potenzialmente essere abusate, come per esempio, cancellare pagine o proteggerle dalla scrittura, tali [[Autorizzazione (informatica)|autorizzazioni]], la maggior parte di quelle più delicate sono limitate agli [[wikipedia:Amministratori|amministratori]], che sono membri esperti e degni di fiducia della comunità. Le linee guida, di particolare rilevanza, per gli amministratori comprendono:
+* [[Wikipedia:Politica di protezione delle pagine|Politica di protezione delle pagine]] (quando e perché proteggere una pagina)
+* [[Wikipedia:Politiche di blocco degli utenti|Politiche di blocco degli utenti]] (bloccare gli utenti come misura per arginare il vandalismo o in applicazione delle decisioni del comitato di arbitraggio)
+<!-- * [[Wikipedia:Politiche di messa al bando degli utenti|Politiche di messa al bando degli utenti]] -->
+Oltre agli amministratori vi sono altri [[Wikipedia:Livelli di accesso degli utenti|gruppi di utenti]] con privilegi informatici particolari.
+
+== Tipi di linee guida ==
+=== Linee guida generali ===
+* [[Wikipedia:Non aver paura di fare modifiche|Non aver paura di fare modifiche]] (''be bold!'')
+* [[Wikipedia:Presumi la buona fede|Presumi la buona fede]]
+* [[Wikipedia:Bot|Evita di utilizzare ''bot'']]
+* [[Aiuto:Oggetto|Spiega le tue modifiche nel campo "Oggetto"]]
+<!-- * [[Wikipedia:Rendi esplicite le omissioni|Rendi esplicite le omissioni]]
+ * [[Wikipedia:Costruisci la rete|Costruisci la rete]] <small>([[:en:Wikipedia:Build the web]])</small> -->
+Queste sono alcuni esempi delle linee guida specifiche che sono state suggerite da vari partecipanti. Per altri consigli utili, vedi [[Aiuto:Errori comuni nell'uso di Wikipedia|come evitare gli errori comuni]].
+
+=== Linee guida sul comportamento ===
+* [[Aiuto:Uso della firma|Firma i tuoi interventi nelle discussioni]]
+* [[Wikipedia:Niente attacchi personali|Evita gli attacchi personali]] (e sposta i dibattiti personali sulle e-mail)
+* [[Wikipedia:Nessuna minaccia legale|Evita minacce legali]]
+* [[Aiuto:Nome utente#Nomi utente inappropriati|Controlla quali nomi sono ritenuti inappropriati]]
+* [[Wikipedia:Non mordere i nuovi arrivati|Non mordere i nuovi arrivati]]
+* [[Aiuto:Annullamento|Motiva sempre quando annulli una modifica]]
+* [[Wikipedia:Edit war|Cerca un compromesso invece di aggravare una battaglia di modifiche (''edit war'') con annullamenti ripetuti]]
+* [[Wikipedia:Regola dei tre ripristini di pagina|Impara la regola dei tre ripristini]] (le "guerre di revert" sono nocive) 
+* [[Wikipedia:Problemi con utenti o amministratori|Risolvi i problemi con altri utenti o amministratori]]
+* [[Aiuto:Pagina utente|Usa la tua pagina utente in modo appropriato]]
+* [[Wikipedia:Non danneggiare Wikipedia per sostenere una tua opinione|Non danneggiare Wikipedia per sostenere una tua opinione]]
+
+=== Linee guida sul contenuto ===
+* [[WP:enciclopedicità|Ricorda che non tutto è enciclopedico]]
+* [[Aiuto:Come scrivere una buona voce|Impara come scrivere una buona voce]]
+<!-- * [[Wikipedia:Spiega il gergo|Spiega i termini gergali]] <small>([[:en:Wikipedia:Explain jargon]])</small>
+* Cerca di sbrogliare in modo appropriato le [[Wikipedia:frasi astruse|frasi astruse]] <small>([[:en:Wikipedia:Patent nonsense]])</small> -->
+* [[Wikipedia:Cita le fonti|Cita le fonti]]: indirizza il lettore verso fonti autorevoli (ed indicale appropriatamente con l'uso di [[aiuto:note|note]])
+* [[Wikipedia:Verificabilità|Assicurati che le informazioni scritte siano verificabili]]
+* Evita di scrivere [[Wikipedia:Evita frasi che dovranno essere aggiornate|espressioni che dovranno essere aggiornate]] fra un po' di tempo (come "oggi", "l'anno scorso", "in questo mese")
+* [[Wikipedia:Verificabilità|Verifica i fatti di cui stai scrivendo]]
+* [[Wikipedia:Evasività|Non essere troppo generico nelle tue affermazioni]]
+* [[Wikipedia:Contenuti promozionali o celebrativi|Evita di scrivere voci promozionali o celebrative]]
+* [[WP:L|Non adottare visioni localistiche e ottiche geopoliticamente limitate]]
+* [[Wikipedia:Autobiografie|Evita di scrivere voci su te stesso]]
+* [[Wikipedia:Trama|Non avvertire quando stai per rivelare una trama]] <small>([[:en:Wikipedia:Spoiler]])</small>
+<!-- * [[Wikipedia:Avoid self-references|Evita auto-riferimenti]] <small>([[:en:Wikipedia:Avoid self-references]])</small>
+* [[Wikipedia:Words to avoid|Evita parole infelici]] <small>([[:en:Wikipedia:Words to avoid]])</small> -->
+<!-- * [[Wikipedia:Spoon Feeding|Evita di trarre conclusioni al posto del lettore]] <small>([[:en:User:Kizzle/Spoon Feeding]])</small> nota: la voce originale inglese è stata votata per la cancellazione. Per valutarne i motivi si legga la votazione in merito (http://en.wikipedia.org/wiki/Wikipedia:Articles for deletion/Spoon feeding) -->
+* [[Wikipedia:Collegamenti esterni|Valuta accuratamente l'eventuale inserimento di collegamenti esterni]]
+
+=== Linee guida sullo stile ===
+* Adotta gli stili condivisi e raccolti nel [[Aiuto:Manuale di stile|Manuale di stile]]
+* [[Aiuto:Oggetto|Specifica sempre l'oggetto della modifica]]
+* [[Wikipedia:Crea solo link appropriati al contesto|Crea wikilink solo quando appropriati al contesto]]
+* [[Aiuto:Sezioni|Non creare troppe sezioni o sottocapitoli]]
+* [[Aiuto:Dimensione della voce|Non creare voci eccessivamente lunghe]]
+* [[Aiuto:Sottopagina|Non usare sottopagine]]
+<!--* [[Aiuto:Accessibilità delle voci tecniche|Rendi accessibili a tutti le voci su argomenti tecnici]] <small>([[:en:Wikipedia:Make technical articles accessible]])</small>
+* [[Wikipedia:Algoritmi su Wikipedia|Algoritmi su Wikipedia]] <small>([[:en:Wikipedia:Algorithms on Wikipedia]])</small>
+* [[Wikipedia:Usa frasi corte ed elenchi|Usa frasi corte ed elenchi]]
+* [[Wikipedia:Paragrafi mono-frase|Evita i paragrafi mono-frase]] 
+* [[Wikipedia:Segui le regole di evidenziamento|Segui le regole di evidenziamento]] -->
+
+=== Linee guida sul raggruppamento dei link alle voci ===
+* [[Wikipedia:Liste|Liste]]
+* [[Aiuto:Categorie|Categorie]]
+* [[Aiuto:Template|Template tematici e di navigazione]]
+
+== Saggi ==
+{{abbreviazioni|WP:SAGGI|WP:SAGGIO}}
+I '''saggi''' sono raccolte di opinioni e raccomandazioni dei loro autori, con funzione orientativa e informativa verso tutta la comunità. Servono a trasmettere il pensiero dietro le azioni su Wikipedia di coloro che li hanno scritti, esprimendo i loro punti di vista, la loro "filosofia di Wikipedia". Gli utenti che non vogliono che un loro saggio sia modificato da altri lo mettono come sottopagina del loro nome utente, mentre le pagine che sono frutto di riflessioni collettive sono nel [[Aiuto:Namespace|namespace]] Wikipedia (per esempio [[Wikipedia:WikipediAhimsa]] o [[Wikipedia:Clausola della palla di neve]]), o addirittura, se sono riflessioni che riguardano tutti i progetti e che si producono analogamente in tutti, sono su [[Aiuto:Meta|Meta]] (come per esempio [[m:Le votazioni sono nocive]]). Queste pagine sono a tutti gli effetti dei [[saggio|saggi]], non sono linee guida o regole, tendenzialmente non hanno nemmeno il consenso di tutta la comunità, anche se in genere contengono consigli di grande valore e molte informazioni.
+
+Un elenco dei saggi presenti su Wikipedia è disponibile qui: [[:Categoria:Saggi su Wikipedia|Categoria:Saggi su Wikipedia]].
+
+[[Categoria:Linee guida| ]]

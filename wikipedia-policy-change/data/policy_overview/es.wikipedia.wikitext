@@ -1,0 +1,105 @@
+{{Última hora|right|ancho=300px}}
+A continuación se enlaza a las principales '''[[Wikipedia:Políticas y convenciones|políticas y convenciones]]''' de Wikipedia en español.
+
+==General==
+
+*[[Wikipedia:Bienvenidos]]
+*[[Wikipedia:La enciclopedia libre]]
+*[[Wikipedia:Los cinco pilares]]
+*[[Wikipedia:Lo que Wikipedia no es]]
+*[[Wikipedia:Derechos de autor]]
+*[[Wikipedia:Sé valiente editando páginas]]
+
+==Edición de artículos==
+
+*[[Wikipedia:Modelo de artículo]]
+*[[Wikipedia:Artículos sin relevancia aparente]]
+*[[Wikipedia:Convenciones de títulos]]
+*[[Wikipedia:Qué es un artículo destacado]]
+*[[Wikipedia:Qué es un artículo bueno]]
+*[[Wikipedia:Enlaces externos]]
+*[[Wikipedia:Esbozo]]
+*[[Wikipedia:Estructura de un artículo]]
+*[[Wikipedia:Evita las autorreferencias]]
+*[[Wikipedia:Fuentes fiables]]
+*[[Wikipedia:Manual de estilo]]
+*[[Wikipedia:Página de desambiguación]]
+*[[Wikipedia:Páginas de autopromoción]]
+*[[Wikipedia:Punto de vista neutral]]
+*[[Wikipedia:Referencias]]
+* [[Wikipedia:Redacción de artículos con modelos de lenguaje grandes]]
+*[[Wikipedia:Véase también]]
+*[[Wikipedia:Verificabilidad]]
+*[[Wikipedia:Wikipedia no es una fuente primaria]]
+*[[Wikipedia:Criterios para el borrado rápido]]
+*[[Wikipedia:Proceso de borrado]]
+*[[Wikipedia:Política de uso de imágenes]]
+
+==Trato con el resto de usuarios==
+
+*[[Wikipedia:Etiqueta]]
+*[[Wikipedia:Civismo]]
+*[[Wikipedia:Presume buena fe]]
+*[[Wikipedia:¿Tú o usted?]]
+*[[Wikipedia:Usa el sentido común]]
+*[[Wikipedia:Cómo mantenerte calmado en un conflicto]]
+*[[Wikipedia:Política de bloqueo]]
+
+==Resolución de dudas==
+
+*[[WP:C/A|Wikipedia:Café/Ayuda]]
+*[[Wikipedia:Ayuda]]
+*[[Wikipedia:Programa de tutoría]]
+
+==Lo que no se debe hacer en Wikipedia==
+
+*[[Wikipedia:Guerra de ediciones]]
+*[[Wikipedia:No hagas ataques personales]]
+*[[Wikipedia:No morder a los novatos]]
+*[[Wikipedia:No sabotees Wikipedia para respaldar tus argumentos]]
+*[[Wikipedia:Páginas de autopromoción]]
+*[[Wikipedia:Política de bloqueo]]
+*[[Wikipedia:Spam]]
+*[[Wikipedia:Vandalismo]]
+*[[Wikipedia:Usuarios títeres]]
+
+==Bibliotecarios==
+
+*[[Wikipedia:Revalidación de bibliotecarios]]
+*[[Wikipedia:Tablón de anuncios de los bibliotecarios]]
+*[[Wikipedia:Candidaturas a bibliotecario]]
+
+==Cambios en políticas y propuestas==
+
+*[[Wikipedia:Encuestas]]
+*[[Wikipedia:Votaciones]]
+*[[WP:C/POL|Wikipedia:Café/Políticas]]
+*[[WP:C/PRO|Wikipedia:Café/Propuestas]]
+
+==Tipos de páginas==
+*[[Ayuda:Espacio de nombres]]
+*[[Wikipedia:Espacio de nombres Wikipedia]]
+*[[Wikipedia:Espacio de nombres Ayuda]]
+*[[Wikipedia:Firma de usuario]]
+*[[Wikipedia:Página de usuario]]
+*[[Usuario:Userbox]]
+*[[Usuaria:Userbox mujer]]
+
+==Tipos de usuarios==
+
+*[[Wikipedia:Tipos de usuarios]]
+*[[Wikipedia:Bibliotecarios]]
+*[[Wikipedia:Supresores]]
+*[[Wikipedia:Burócratas]]
+*[[Wikipedia:Autorizaciones]]
+
+==Plantillas==
+
+*[[Wikipedia:Principales plantillas]]
+
+==Otras==
+
+*[[Wikipedia:Ignora las normas]]
+
+[[Categoría:Ayuda:Sobre Wikipedia]]
+[[Categoría:Wikipedia:Políticas y convenciones|Lista]]

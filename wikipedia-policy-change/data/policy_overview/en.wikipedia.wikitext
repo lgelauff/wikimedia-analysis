@@ -1,0 +1,230 @@
+{{short description|Wikipedia list article}}{{Header navbar community}}
+{{ombox
+| type = notice
+| text =This page includes a listing of '''[[Wikipedia:Policies and guidelines| policies and guidelines]]''' for English Wikipedia. Policy and guideline pages describe Wikipedia's principles and best-agreed practices. '''Policies''' are standards that all users should normally follow, while '''guidelines''' are meant to be best practices for following those standards in specific contexts.
+| imageright ={{shortcut| WP:POLICYLIST|WP:PGLIST}}
+}}
+{{Policylist}}
+
+The following is a comprehensive '''list of policies and guidelines'''. For a quick overview, see [[Wikipedia:Simplified ruleset]]; for descriptive directories see [[Wikipedia:List of policies]], [[Wikipedia:List of guidelines]] and [[Wikipedia:Manual of Style/Contents]].
+
+==Terminology==
+Wikipedia's rules and best practices are specified in '''two types of documents''':
+
+===[[File:Green check.svg|30px]] Policy===
+A '''policy''' documents a rule or standard with wide acceptance among Wikipedia editors that all users should normally follow.
+
+===[[File:Blue check.svg|30px]] Guideline===
+A '''guideline''' is a set of best practices that are supported by the consensus of Wikipedia editors. Editors should attempt to follow guidelines, though they are best treated with common sense. Occasional exceptions may apply. '''Naming conventions''' are considered guidelines.
+
+==Basics==
+
+===Five Pillars===
+The '''[[Wikipedia:Five pillars|Five Pillars]]''' are the five fundamental principles of Wikipedia:
+
+{|
+|- 
+|style="padding:5px"|[[File:Encyclopedia icon.svg|47px|alt=icon]]
+|[[Wikipedia:What Wikipedia is not|Wikipedia is an encyclopedia]]
+|-
+|style="padding:5px"|[[File:Scale icon green.svg|47px|alt=icon]]
+|[[Wikipedia:Neutral point of view|Wikipedia is written from a neutral point of view]]
+|-
+|style="padding:5px"|[[File:Jigsaw piece yellow 01.svg|47px|alt=icon]]
+|[[Wikipedia:Copyrights|Wikipedia is free content that anyone can use, edit, and distribute]]
+|-
+|style="padding:5px"|[[File:Smiley icon orange.svg|47px|alt=icon]]
+|[[Wikipedia:Civility|Editors should treat each other with respect and civility]]
+|-
+|style="padding:5px"|[[File:Light bulb icon red.svg|47px|alt=icon]]
+|[[Wikipedia:Ignore all rules|Wikipedia has no firm rules]]
+|}
+
+==List==
+<big>'''Large-print links'''</big> are broad, fundamental policies and guidelines that apply throughout Wikipedia.
+
+'''Normal-print links''' are policies and guidelines that are general in scope but may apply to more specific situations.
+
+<small>'''Small-print links'''</small>  are policies and guidelines that are specific to a subject area or process on Wikipedia.
+
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" | &nbsp;
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Ignore all rules|Ignore All Rules]]&nbsp;– [[Wikipedia:What Wikipedia is not|What Wikipedia Is Not]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:List of policies#Content|Content policies]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;"> [[Wikipedia:Neutral point of view|Neutral Point of View]]&nbsp;– [[Wikipedia:Verifiability|Verifiability]]&nbsp;– [[Wikipedia:No original research|No Original Research]]</div>
+[[Wikipedia:Biographies of living persons|Biographies of Living Persons]]&nbsp;– [[Wikipedia:Image use policy|Image Use Policy]]&nbsp;– [[Wikipedia:Wikipedia is not a dictionary|Wikipedia is Not a Dictionary]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:List of guidelines#Content|Content guidelines]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Citing sources|Citing Sources]]&nbsp;– [[Wikipedia:Do not create hoaxes|Do Not Create Hoaxes]]&nbsp;– [[Wikipedia:Do not include the full text of lengthy primary sources|No Full Texts of Primary Sources]]&nbsp;– [[Wikipedia:Reliable sources|Reliable Sources]]&nbsp;– [[Wikipedia:Plagiarism|Plagiarism]]&nbsp;– [[Wikipedia:Patent nonsense|Patent Nonsense]]</div>
+[[Wikipedia:Autobiography|Autobiography]]&nbsp;– [[Wikipedia:Accuracy dispute|Accuracy Dispute]]&nbsp;–  [[Wikipedia:Content forks|Content Forks]]&nbsp;– [[Wikipedia:External links|External Links]]&nbsp;– [[Wikipedia:No disclaimers|No Disclaimers]]&nbsp;– [[Wikipedia:Non-free content|Non-Free Content]]&nbsp;– [[Wikipedia:Non-free use rationale guideline|Non-Free Use Rationale Guideline]]&nbsp;– [[Wikipedia:Non-US copyrights|Non-US Copyrights]]&nbsp;– [[Wikipedia:Offensive material|Offensive Material]]&nbsp;– [[Wikipedia:Public domain|Public Domain]]&nbsp;– [[Wikipedia:Spam|Spam]]&nbsp;– [[Wikipedia:Spoiler|Spoiler]]&nbsp;– [[Wikipedia:Writing articles with large language models|Writing Articles With Large Language Models]]
+<div style="font-size:90%;">[[Wikipedia:Days of the year|Days of the Year]]&nbsp;– [[Wikipedia:Fringe theories|Fringe Theories]]&nbsp;– [[Wikipedia:Identifying reliable sources (medicine)|Identifying Reliable Sources (Medicine)]]&nbsp;– [[Wikipedia:Indic transliteration|Indic Transliteration]]&nbsp;– [[Wikipedia:LLM-assisted translation|LLM-Assisted Translation]]&nbsp;– [[Wikipedia:Logos|Logos]]&nbsp;– [[Wikipedia:Record charts|Record Charts]]&nbsp;– [[Wikipedia:Scientific citation guidelines|Scientific Citation Guidelines]]&nbsp;– [[Wikipedia:Wikipedia is not for things made up one day|Wikipedia Is Not For Things Made Up One Day]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:List of guidelines#Editing|Editing guidelines]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Article size|Article Size]]&nbsp;– [[Wikipedia:Be bold|Be Bold]]&nbsp;– [[Wikipedia:Categorization|Categorization]]&nbsp;– [[Wikipedia:Disambiguation|Disambiguation]]&nbsp;– [[Wikipedia:Make technical articles understandable|Understandability]]&nbsp;– [[Wikipedia:Stub|Stub]]&nbsp;– [[Wikipedia:Summary style|Summary Style]]</div>
+[[Wikipedia:As of|As Of]]&nbsp;– [[Wikipedia:Broad-concept article|Broad-Concept Article]]&nbsp;– [[Wikipedia:Categories, lists, and navigation templates|Categories, Lists, and Navigation Templates]]&nbsp;– [[Wikipedia:Copying within Wikipedia|Copying within Wikipedia]]&nbsp;– [[Wikipedia:Reviewing good articles|Reviewing Good Articles]]&nbsp;– [[Wikipedia:Hatnote|Hatnote]]&nbsp;– [[Wikipedia:Page blanking|Page Blanking]]&nbsp;– [[Wikipedia:Overcategorization|Overcategorization]]&nbsp;– [[Wikipedia:Preparing images for upload|Preparing Images for Upload]]&nbsp;– [[Wikipedia:Red link|Red Link]]&nbsp;– [[Wikipedia:Redirect|Redirect]]&nbsp;– [[Wikipedia:Set index articles|Set Index Articles]]&nbsp;– [[Wikipedia:Soft redirect|Soft Redirect]]&nbsp;– [[Wikipedia:Spellchecking|Spellchecking]]&nbsp;– [[Wikipedia:Subpages|Subpages]]&nbsp;– [[Wikipedia:Updating information|Updating Information]]&nbsp;– [[Wikipedia:User categories|User Categories]]
+<div style="font-size:90%;">[[Wikipedia:Categorizing articles about people|Categorizing articles about people]]&nbsp;– [[Wikipedia:Categorizing redirects|Categorizing Redirects]]&nbsp;– [[Wikipedia:Content assessment|Content Assessment]]&nbsp;– [[Wikipedia:Edit filter|Edit filter]]&nbsp;– [[Wikipedia:Extended image syntax|Extended Image Syntax]]&nbsp;– [[Wikipedia:In the news/Recurring items|In The News: Recurring Items]]&nbsp;– [[Wikipedia:Overcategorization/User categories|Overcategorization: User Categories]]&nbsp;– [[Wikipedia:People by year|People by Year]]&nbsp;– [[Wikipedia:Disambiguation/PrimaryTopicDefinition|Primary Topic Definition]]</div>
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:List of guidelines#Notability|Notability guidelines]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Notability|Notability]]</div>
+[[Wikipedia:Notability (academics)|Academics]]&nbsp;– [[Wikipedia:Notability (astronomical objects)|Astronomical Objects]]&nbsp;– [[Wikipedia:Notability (books)|Books]]&nbsp;– [[Wikipedia:Notability (events)|Events]]&nbsp;– [[Wikipedia:Notability (films)|Films]]&nbsp;– [[Wikipedia:Notability (geographic features)|Geographic Features]]&nbsp;– [[Wikipedia:Notability (music)|Music]]&nbsp;– [[Wikipedia:Notability (numbers)|Numbers]]&nbsp;– [[Wikipedia:Notability (organizations and companies)|Organizations and Companies]]&nbsp;– [[Wikipedia:Notability (people)|People]]&nbsp;– [[Wikipedia:Notability (sports)|Sports]]&nbsp;– [[Wikipedia:Notability (web)|Web]]
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Blue check.svg|30px]] Naming conventions===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Article titles|Article Titles]]&nbsp;– [[Wikipedia:Category names|Category Names]]&nbsp;– [[Wikipedia:File names|File Names]]</div>
+[[Wikipedia:Naming conventions (capitalization)|Capitalization]]&nbsp;– [[Wikipedia:Naming conventions (country-specific topics)|Country-Specific Topics]]&nbsp;– [[Wikipedia:Naming conventions (definite or indefinite article at beginning of name)|Definite or Indefinite Articles]]&nbsp;– [[Wikipedia:Naming conventions (events)|Events]]&nbsp;– [[Wikipedia:Naming conventions (geographic names)|Geographic Names]]&nbsp;– [[Wikipedia:Naming conventions (numbers and dates)|Numbers and Dates]]&nbsp;– [[Wikipedia:Naming conventions (lists)|Lists]]&nbsp;– [[Wikipedia:Naming conventions (people)|People]]&nbsp;– [[Wikipedia:Naming conventions (plurals)|Plurals]]&nbsp;– [[Wikipedia:Naming conventions (technical restrictions)|Technical Restrictions]]&nbsp;– [[Wikipedia:Naming conventions (use English)|Use English]]
+<div style="font-size:90%;">[[Wikipedia:Naming conventions (aircraft)|Aircraft]]&nbsp;– [[Wikipedia:Naming conventions (ancient Romans)|Ancient Romans]]&nbsp;– [[Wikipedia:Naming conventions (Armenian)|Armenian]]&nbsp;– [[Wikipedia:Naming conventions (astronomical objects)|Astronomical Objects]]&nbsp;– [[Wikipedia:Naming conventions (Australian roads)|Australian Roads]]&nbsp;– [[Wikipedia:Naming conventions (baseball players)|Baseball Players]]&nbsp;– [[Wikipedia:WikiProject Belgium/Castle, country house, château and kasteel naming conventions|Belgium: Castle, Country House, Château and Kasteel]]&nbsp;– [[Wikipedia:WikiProject Belgium/Alternate language names|Belgium: Alternate Language Names]]&nbsp;– [[Wikipedia:Naming conventions (books)|Books]]&nbsp;– [[Wikipedia:Naming conventions (broadcasting)|Broadcasting]]&nbsp;– [[Wikipedia:WikiProject Belgium/Brussels naming conventions|Brussels]]&nbsp;– [[Wikipedia:Naming conventions (Burmese)|Burmese]]&nbsp;– [[Wikipedia:Naming conventions (chemistry)|Chemistry]]&nbsp;– [[Wikipedia:Naming conventions (Chinese)|Chinese]]&nbsp;– [[Wikipedia:Naming conventions (clergy)|Clergy]]&nbsp;– [[Wikipedia:WikiProject College football/Naming conventions|College Football]]&nbsp;– [[Wikipedia:Naming conventions (comics)|Comics]]&nbsp;– [[Wikipedia:Naming conventions (companies)|Companies]]&nbsp;– [[Wikipedia:Naming conventions (ethnicities and tribes)|Ethnicities and Tribes]]&nbsp;– [[Wikipedia:Naming conventions (fauna)|Fauna]]&nbsp;– [[Wikipedia:Naming conventions (films)|Films]]&nbsp;– [[Wikipedia:Naming conventions (flora)|Flora]]&nbsp;– [[Wikipedia:Naming conventions (government and legislation)|Government and Legislation]]&nbsp;– [[Wikipedia:Naming conventions (Greek)|Greek]]&nbsp;– [[Wikipedia:Naming conventions (Hebrew)|Hebrew]]&nbsp;– [[Wikipedia:Naming conventions (ice hockey)|Ice Hockey]]&nbsp;– [[Wikipedia:Naming conventions (Indic)|Indic]]&nbsp;– [[Wikipedia:WikiProject Ireland/Ireland Category Norms|Irish Categories]]&nbsp;– [[Wikipedia:Naming conventions (Korean)|Korean]]&nbsp;– [[Wikipedia:Naming conventions (languages)|Languages]]&nbsp;– [[Wikipedia:Naming conventions (Latter Day Saints)|Latter Day Saints]]&nbsp;– [[Wikipedia:Naming conventions (law enforcement agency categories)|Law Enforcement Agency Categories]]&nbsp;– [[Wikipedia:Naming conventions (Macedonia)|Macedonia]]&nbsp;– [[Wikipedia:Naming conventions (manuscripts)|Manuscripts]]&nbsp;– [[Wikipedia:Naming conventions (Mongolian)|Mongolian]]&nbsp;– [[Wikipedia:Naming conventions (music)|Music]]&nbsp;– [[Wikipedia:Naming conventions (New Zealand)|New Zealand]]&nbsp;– [[Wikipedia:Naming conventions (Norse mythology)|Norse Mythology]]&nbsp;– [[Wikipedia:WikiProject Mining/Style guide|Mining]]&nbsp;– [[Wikipedia:Naming conventions (operas)|Operas]]&nbsp;– [[Wikipedia:Naming conventions (political parties)|Political Parties]]&nbsp;– [[Wikipedia:Naming conventions (royalty and nobility)|Royalty and Nobility]]&nbsp;– [[Wikipedia:Naming conventions (ships)|Ships]]&nbsp;– [[Wikipedia:Naming conventions (sports teams)|Sports Teams]]&nbsp;– [[Wikipedia:Naming conventions (sportspeople)|Sportspeople]]&nbsp;– [[Wikipedia:Naming conventions (stations in Poland)|Stations in Poland]]&nbsp;– [[Wikipedia:WikiProject Swiss municipalities/Article title conventions|Swiss Municipalities]]&nbsp;– [[Wikipedia:Naming conventions (television)|Television]]&nbsp;– [[Wikipedia:Naming conventions (Tibetan)|Tibetan]]&nbsp;– [[Wikipedia:Naming conventions (UK Parliament constituencies)|UK Parliament Constituencies]]&nbsp;– [[Wikipedia:Naming conventions (UK stations)|UK Stations]]&nbsp;– [[Wikipedia:Naming conventions (U.S. state and territory highways)|U.S. State and Territory Highways]]&nbsp;– [[Wikipedia:Naming conventions (video games)|Video Games]]&nbsp;– [[Wikipedia:Naming conventions (West Bank)|West Bank]]&nbsp;– [[Wikipedia:Naming conventions (writing systems)|Writing Systems]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:List of guidelines#Style|Style guidelines]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Manual of Style|Manual of Style]] ([[Wikipedia:Manual of Style/Contents|Contents]])</div>
+'''Content:''' [[Wikipedia:Manual of Style/Accessibility|Accessibility]]&nbsp;– [[Wikipedia:Manual of Style/Biography|Biography]]&nbsp;– [[Wikipedia:Manual of Style/Linking|Linking]]&nbsp;– [[Wikipedia:Manual of Style/Self-references to avoid|Self-References to Avoid]]&nbsp;– [[Wikipedia:Manual of Style/Words to watch|Words to Watch]]&nbsp;– [[Wikipedia:Wikimedia sister projects|Wikimedia Sister Projects]]
+
+'''Formatting:''' [[Wikipedia:Manual of Style/Abbreviations|Abbreviations]]&nbsp;– [[Wikipedia:Manual of Style/Capital letters|Capital Letters]]&nbsp;– [[Wikipedia:Manual of Style/Dates and numbers|Dates and Numbers]]&nbsp;– [[Wikipedia:Manual of Style/Pronunciation|Pronunciation]]&nbsp;– [[Wikipedia:Manual of Style/Spelling|Spelling]]&nbsp;– [[Wikipedia:Manual of Style/Text formatting|Text Formatting]]&nbsp;– [[Wikipedia:Manual of Style/Titles of works|Titles of Works]]
+
+'''Layout:''' [[Wikipedia:Manual of Style/Layout|Layout]]&nbsp;– [[Wikipedia:Manual of Style/Lead section|Lead Section]]&nbsp;– [[Wikipedia:Manual of Style/Lists|Lists]] <span style="font-size:90%;">([[Wikipedia:Manual of Style/Lists of works|Lists of Works]]&nbsp;– [[Wikipedia:Manual of Style/Road junction lists|Road Junction Lists]]&nbsp;– [[Wikipedia:Stand-alone lists|Stand-Alone Lists]])</span>&nbsp;– [[Wikipedia:Manual of Style/Tables|Tables]]&nbsp;– [[Wikipedia:Manual of Style/Trivia sections|Trivia Sections]]
+
+'''Images:''' [[Wikipedia:Manual of Style/Images|Images]]&nbsp;– [[Wikipedia:Manual of Style/Captions|Captions]]&nbsp;– [[Wikipedia:Manual of Style/Icons|Icons]]
+
+<div style="font-size:90%;">''Arts''&nbsp;– [[Wikipedia:Manual of Style/Anime and manga|Anime and Manga]]&nbsp;– [[Wikipedia:Manual of Style/Comics|Comics]]&nbsp;– [[Wikipedia:Manual of Style/Film|Film]]&nbsp;– [[Wikipedia:Manual of Style/Music|Music]] ([[Wikipedia:Manual of Style/Music samples|Music Samples]]&nbsp;– [[Wikipedia:Manual of Style/Record charts|Record Charts]]&nbsp;– [[Wikipedia:Manual of Style/Stringed instrument tunings|Stringed Instrument Tunings]])&nbsp;– [[Wikipedia:Manual of Style/Novels|Novels]]&nbsp;– [[Wikipedia:Manual of Style/Television|Television]]&nbsp;– [[Wikipedia:Manual of Style/Video games|Video Games]]&nbsp;– [[Wikipedia:Manual of Style/Visual arts|Visual Arts]]&nbsp;– [[Wikipedia:Manual of Style/Writing about fiction|Writing About Fiction]]&nbsp;– ''History''&nbsp;– [[Wikipedia:Manual of Style/Military history|Military History]]&nbsp;– [[Wikipedia:Manual of Style/Blazon|Blazon]]&nbsp;– ''Legal''&nbsp;– [[Wikipedia:Manual of Style/Legal|Legal]]&nbsp;– [[Wikipedia:Manual of Style/Trademarks|Trademarks]]&nbsp;– ''Regional''&nbsp;– [[Wikipedia:Manual of Style/Canada-related articles|Canada]]&nbsp;– [[Wikipedia:Manual of Style/China- and Chinese-related articles|China]]&nbsp;– [[Wikipedia:Manual of Style/France- and French-related articles|France]]&nbsp;– [[Wikipedia:Manual of Style/Hawaii-related articles|Hawaii]]&nbsp;– [[Wikipedia:Manual of Style/India-related articles|India]]&nbsp;– [[Wikipedia:Manual of Style/Ireland-related articles|Ireland]]&nbsp;– [[Wikipedia:Manual of Style/Japan-related articles|Japan]]&nbsp;– [[Wikipedia:Manual of Style/Korea-related articles|Korea]]&nbsp;– [[Wikipedia:Manual of Style/Philippines-related articles|Philippines]]&nbsp;– [[Wikipedia:Manual of Style/Poland-related articles|Poland]]&nbsp;– [[Wikipedia:Manual of Style/Singapore-related articles|Singapore]]&nbsp;– ''Religion''&nbsp;– [[Wikipedia:Manual of Style/Islam-related articles|Islam]]&nbsp;– [[Wikipedia:Manual of Style/Latter Day Saints|Latter Day Saints]]&nbsp;– ''Science''&nbsp;– [[Wikipedia:Manual of Style/Chemistry|Chemistry]]&nbsp;– [[Wikipedia:Manual of Style/Computer science|Computer science]]&nbsp;– [[Wikipedia:Manual of Style/Mathematics|Mathematics]]&nbsp;– [[Wikipedia:Manual of Style/Medicine-related articles|Medicine]]&nbsp;– [[Template:Taxobox/doc|TaxoBox Documentation]]&nbsp;– ''Sports''&nbsp;–  [[Wikipedia:Manual of Style/Cue sports|Cue Sports]]&nbsp;– [[Wikipedia:Manual of Style/Snooker|Snooker]]&nbsp;– ''Wikipedia Content''&nbsp;– [[Wikipedia:Manual of Style/Disambiguation pages|Disambiguation Pages]]&nbsp;– [[Wikipedia:Manual of Style/Infoboxes|Infoboxes]]</div>
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:List of policies#Conduct|Conduct policies]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Civility|Civility]]&nbsp;– [[Wikipedia:Consensus|Consensus]]&nbsp;– [[Wikipedia:Editing policy|Editing Policy]]&nbsp;– [[Wikipedia:Harassment|Harassment]]&nbsp;– [[Wikipedia:Vandalism|Vandalism]]</div>
+[[Wikipedia:Clean start|Clean Start]]&nbsp;– [[Wikipedia:Dispute resolution|Dispute Resolution]]&nbsp;– [[Wikipedia:Edit warring|Edit Warring]]&nbsp;– [[Wikipedia:No personal attacks|No Personal Attacks]]&nbsp;– [[Wikipedia:Ownership of content|Ownership of Content]]&nbsp;– [[Wikipedia:Sockpuppetry|Sockpuppetry]]&nbsp;– [[Wikipedia:Username policy|Username Policy]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:List of guidelines#Behavioral|Behavioral guidelines]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Assume good faith|Assume Good Faith]]&nbsp;– [[Wikipedia:Conflict of interest|Conflict of Interest]]&nbsp;– [[Wikipedia:Disruptive editing|Disruptive Editing]]&nbsp;– [[Wikipedia:Etiquette|Etiquette]]&nbsp;– [[Wikipedia:Talk page guidelines|Talk Page Guidelines]]</div>
+[[Wikipedia:Appealing a block|Appealing a Block]]&nbsp;– [[Wikipedia:Canvassing|Canvassing]]&nbsp;– [[Wikipedia:Changing username/Guidelines|Changing Username Guidelines]]&nbsp;– [[Wikipedia:Courtesy vanishing|Courtesy Vanishing]]&nbsp;– [[Wikipedia:Deceased Wikipedians/Guidelines|Deceased Wikipedians Guidelines]]&nbsp;– [[Wikipedia:Do not disrupt Wikipedia to illustrate a point|Do Not Disrupt Wikipedia to Illustrate a Point]]&nbsp;– [[Wikipedia:Gaming the system|Gaming the System]]&nbsp;– [[Wikipedia:Please do not bite the newcomers|Please Do Not Bite the Newcomers]]&nbsp;– [[Wikipedia:Responding to threats of harm|Responding to Threats of Harm]]&nbsp;– [[Wikipedia:Reviewing pending changes|Reviewing]]&nbsp;– [[Wikipedia:Rollback|Rollback]]&nbsp;– [[Wikipedia:Signatures|Signatures]]&nbsp;– [[Wikipedia:Spam blacklist|Spam Blacklist]]&nbsp;– [[Wikipedia:Linking to external harassment|Linking to External Harassment]]
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:List of policies#Deletion|Deletion policies]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Deletion policy|Deletion Policy]]&nbsp;– [[Wikipedia:Criteria for speedy deletion|Criteria for Speedy Deletion]]&nbsp;– [[Wikipedia:Proposed deletion|Proposed Deletion]]</div>
+[[Wikipedia:Attack page|Attack Page]]&nbsp;– [[Wikipedia:Oversight|Oversight]]&nbsp;– [[Wikipedia:Proposed deletion of biographies of living people|Proposed Deletion of Biographies of Living People]]&nbsp;– [[Wikipedia:Revision deletion|Revision Deletion]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] [[WP:List of guidelines#Deletion|Deletion guidelines]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Deletion process|Deletion Process]]</div>
+[[Wikipedia:Deletion guidelines for administrators|Deletion Guidelines for Administrators]]&nbsp;– [[Wikipedia:Speedy keep|Speedy Keep]]
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:List of policies#Procedural|Procedural policies]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Policies and guidelines|Policies and Guidelines]]&nbsp;– [[Wikipedia:Arbitration/Policy|Arbitration Policy]]&nbsp;– [[Wikipedia:Wikimedia policy|Wikimedia Policy]]</div>
+[[Wikipedia:Arbitration Committee/CheckUser and Oversight|Arbitration Committee: CheckUser and Oversight]]&nbsp;– [[Wikipedia:Bot policy|Bot Policy]]&nbsp;– [[Wikipedia:CheckUser|CheckUser]]&nbsp;– [[Wikipedia:Global rights policy|Global Rights Policy]]&nbsp;– [[Wikipedia:IP block exemption|IP Block Exemption]]&nbsp;– [[Wikipedia:Page mover|Page mover]]&nbsp;– [[Wikipedia:Open proxies|Open Proxies]]&nbsp;– [[Wikipedia:Volunteer Response Team|Volunteer Response Team]]
+
+|-
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Green check.svg|30px]] [[WP:List of policies#Enforcement|Enforcement policies]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Administrators|Administrators]]&nbsp;– [[Wikipedia:Blocking policy|Blocking Policy]]&nbsp;–  [[Wikipedia:Protection policy|Protection Policy]]</div>
+[[Wikipedia:Arbitration Committee/Discretionary sanctions|Discretionary Sanctions]]&nbsp;– [[Wikipedia:Banning policy|Banning Policy]]
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Green check.svg|30px]] [[WP:List of policies#Legal|Legal policies]]===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Copyrights|Copyrights]]&nbsp;– [[Wikipedia:No legal threats|No Legal Threats]]&nbsp;– [[Wikipedia:Terms of use|Terms of Use]]</div>
+[[Wikipedia:Child protection|Child Protection]]&nbsp;– [[Wikipedia:Copyright violations|Copyright Violations]]&nbsp;– [[Wikipedia:Libel|Libel]]&nbsp;– [[Wikipedia:Non-free content criteria|Non-Free Content Criteria]]&nbsp;– [[Wikipedia:Paid-contribution disclosure|Paid-contribution disclosure]]&nbsp;– [[Wikipedia:Reusing Wikipedia content|Reusing Wikipedia Content]]
+|}
+
+<div style="margin: 0em 2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+===[[File:Blue check.svg|30px]] Project content guidelines===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Project namespace|Project Namespace]]&nbsp;– [[:Wikipedia:User pages|User Pages]]</div>
+[[Wikipedia:Userboxes|Userboxes]]&nbsp;– [[Wikipedia:WikiProject Council/Guide|WikiProject Council Guide]]
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Blue check.svg|30px]] Template guidelines===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Template namespace|Template Namespace]]</div>
+[[Wikipedia:High-risk templates|High-Risk Templates]]&nbsp;– [[Wikipedia:Substitution|Substitution]]&nbsp;– [[Wikipedia:Talk page templates|Talk Page Templates]]
+|-
+| style="vertical-align:top; width:20%;" |
+===[[File:Blue check.svg|30px]] Reference Desk guidelines===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Reference desk|Reference Desk]]</div>
+[[Wikipedia:Reference desk/Guidelines|General]]&nbsp;– [[Wikipedia:Reference desk/Guidelines/Medical advice|Medical advice]]
+|}
+
+==Searching ==
+{{main| Wikipedia:List of policies|Wikipedia:List of guidelines|Wikipedia:Manual of Style/Contents}}
+[[Wikipedia:List of policies|Policies]] and [[Wikipedia:List of guidelines|guidelines]] can also be navigated via [[:Category:Wikipedia policies and guidelines|categories]], the [[Template:Wikipedia policies and guidelines|navigation template]] or by [[Help:Searching#Custom search boxes|custom search boxes]] (as seen below).
+<inputbox>
+id = style-searchbox
+type=fulltext
+width=35
+break=no
+searchfilter=incategory:"Wikipedia policies"
+namespaces=Wikipedia**
+searchbuttonlabel = Search policies
+</inputbox>
+<br>
+<inputbox>
+id = style-searchbox
+type=fulltext
+width=35
+break=no
+searchfilter=deepcat:"Wikipedia guidelines"
+namespaces=Wikipedia**
+searchbuttonlabel = Search guidelines
+</inputbox>
+<br>
+<inputbox>
+id = style-searchbox
+type=fulltext
+width=35
+break=no
+searchfilter=incategory:"Wikipedia Manual of Style"
+namespaces=Wikipedia**
+searchbuttonlabel = Search the MOS
+</inputbox>
+
+==See also==
+* [[Help:Contents/Directory#Community standards and advice|Community standards and advice]]&nbsp;–  a quick directory of community norms and related guidance essays.
+* [[Wikipedia:WikiProject Council/Guide#Advice_pages|Advice pages]]&nbsp;–  about advice pages written by WikiProjects. 
+
+;Tutorial
+*[[Help:Introduction to policies and guidelines|Introduction to policies and guidelines]]&nbsp;–  a quick introduction to the major policies and guidelines for very new users.
+
+;Related essays
+*[[Wikipedia:Simplified ruleset|Simplified rule-set]]&nbsp;– some basic aspect of Wikipedia norms and practices.
+**[[Wikipedia:8 simple rules for editing our encyclopedia|Eight rules for editing]] &nbsp;–  if you start out by following these simple rules, the rest should come naturally.
+**[[Wikipedia:Ten Simple Rules for Editing Wikipedia|Ten rules for editing]] &nbsp;– Wikipedia can be daunting, but here we provide tips to make editing smoother.
+**[[Wikipedia:Trifecta|Trifecta]]&nbsp;– ultra-fast overview of foundational principles related to policies and guidelines. 
+*[[Wikipedia:The rules are principles|The rules are principles]]&nbsp;– policies and guidelines exist as rough approximations of their underlying principles.
+{{Wikipedia principles}}
+{{Wikipedia policies and guidelines}}
+{{Wikipedia directories}}
+[[Category:Wikipedia policies and guidelines| List]]

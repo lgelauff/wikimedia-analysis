@@ -1,0 +1,153 @@
+Sau đây là '''Danh sách các quy định và hướng dẫn'''. Để xem toàn bộ danh sách mô tả chi tiết, xem [[Wikipedia:Danh sách quy định]], [[:en:Wikipedia:List_of_guidelines|Wikipedia:Danh sách hướng dẫn]] và [[Wikipedia:Cẩm nang biên soạn]].
+
+== Thuật ngữ ==
+Các quy định và thực hành của Wikipedia được chỉ ra theo '''hai kiểu văn bản''':
+
+=== [[Tập tin:Green_check.svg|30x30px]] Quy định ===
+Một '''quy định''' một quy tắc hay tiêu chuẩn với sự chấp nhận rộng rãi giữa các biên tập viên Wikipedia rằng tất cả người dùng bình thường nên tuân theo.
+
+=== [[Tập tin:Blue_check.svg|30x30px]] Hướng dẫn ===
+Một '''hướng dẫn''' là một tập hợp các thực hành tốt nhất được hỗ trợ bởi sự đồng thuận của các biên tập viên Wikipedia. Biên tập viên nên cố gắng làm theo hướng dẫn, mặc dù chúng đơn giản là những hành vi hợp lý. Thỉnh thoảng có thể có ngoại lệ. Ví dụ '''Cách đặt tên''' là một hướng dẫn.
+
+== Căn bản ==
+
+=== Năm cột trụ ===
+'''[[Wikipedia:Năm cột trụ|Năm cột trụ]]''' là năm quy định nền tảng của Wikipedia:
+* [[Tập tin:BluePillar.svg|47x47px]] [[Wikipedia:Những gì không phải là Wikipedia|Wikipedia là một cuốn từ điển bách khoa]].
+* [[Tập tin:GreenPillar.svg|47x47px]] [[Wikipedia:Thái độ trung lập|Wikipedia có thái độ trung lập.]]
+* [[Tập tin:YellowPillar.svg|47x47px]] [[Wikipedia:Quyền tác giả|Wikipedia có nội dung tự do, ai cũng có thể sử dụng, soạn thảo và phát hành.]]
+* [[Tập tin:OrangePillar.svg|47x47px]] [[Wikipedia:Thái độ văn minh|Tại wikipedia, mọi người đều đối xử với nhau một cách tôn trọng và văn minh]].
+* [[Tập tin:RedPillar.svg|47x47px]] [[Wikipedia:Bỏ qua mọi quy tắc|Wikipedia không có quy tắc cứng nhắc.]]
+
+== Danh sách đầy đủ ==
+<div style="margin-top:2em; margin-bottom:2em;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" | &nbsp;
+| style="line-height:2;" | <span style="font-size:110%; font-weight:bold; margin-top:0.7em;">Các đường link viết bằng chữ đậm</span> là những quy định và hướng dẫn cơ bản và áp dụng rộng rãi trên Wikipedia.
+Liên kết cỡ chữ bình thường là những chính sách và nguyên tắc chung nhưng có thể áp dụng vào các tình huống cụ thể hơn.
+
+<div style="font-size:90%;">Liên kết chữ nhỏ là những chính sách và hướng dẫn cho một vấn đề hoặc quá trình cụ thể trên Wikipedia.</div>
+|}
+
+<div style="margin-top:2em; margin-bottom:2em; border-bottom:1px dotted #999;"></div>
+
+{| style="width:100%;"
+| style="vertical-align:top; width:20%;" | &nbsp;
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Bỏ qua mọi quy tắc|Bỏ qua mọi quy tắc<br>
+]]</div>
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Green_check.svg|30x30px]] Các quy định về nội dung ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Những gì không phải là Wikipedia|Những gì không phải là wikipedia]] – [[Wikipedia:Thái độ trung lập|Thái độ trung lập]] – [[Wikipedia:Thông tin kiểm chứng được|Thông tin kiểm chứng được]] – [[Wikipedia:Không đăng nghiên cứu chưa được công bố|Không đăng nghiên cứu chưa được công bố<br>
+]]</div>
+[[Wikipedia:Tiểu sử người đang sống|Tiểu sử người đang sống]] – [[Wikipedia:Quy định sử dụng hình ảnh|Quy định sử dụng hình ảnh]]– [[Wikipedia:Wikipedia không phải là cái từ điển|Wikipedia không phải là từ điển]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn về nội dung ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Chú thích nguồn gốc|Chú thích nguồn gốc]] – [[Wikipedia:Không tung tin vịt|Không tung tin vịt]] – [[Wikipedia:Đừng chép nguyên văn bài bên ngoài|Đừng chép nguyên văn bài bên ngoài]] – [[Wikipedia:Nguồn đáng tin cậy|Nguồn đáng tin cậy ]]– [[Wikipedia:Đạo văn|Đạo văn]] – [[Wikipedia:Nội dung vô nghĩa|Nội dung vô nghĩa]]</div>
+[[:en:Wikipedia:Autobiography|Autobiography]] – [[:en:Wikipedia:Accuracy_dispute|Accuracy Dispute]] –  [[:en:Wikipedia:Content_forking|Content Forking]] – [[Wikipedia:Liên kết ngoài|Liên kết ngoài]] – [[:en:Wikipedia:No_disclaimers_in_articles|No Disclaimers in Articles]] – [[Wikipedia:Nội dung không tự do|Nội dung không tự do]] – [[Wikipedia:Hướng dẫn mô tả sử dụng hợp lý|Hướng dẫn mô tả sử dụng hợp lý]] – [[:en:Wikipedia:Non-U.S._copyrights|Non-U.S. Copyrights]] – [[:en:Wikipedia:Offensive_material|Offensive Material]] – [[:en:Wikipedia:Portal_guidelines|Portal Guidelines]] – [[Wikipedia:Phạm vi công cộng|Phạm vi công cộng]] – [[Wikipedia:Spam|Spam]] – [[:en:Wikipedia:Spoiler|Spoiler]]
+<div style="font-size:90%;">Anarchism Referencing Guidelines – Days of the Year – Fringe Theories – Identifying Reliable Sources (Medicine) – Indic Transliteration – [[Wikipedia:Biểu trưng|Biểu trưng]] – No 3D Illustrations – Record Charts – Scientific Citation Guidelines – Television Episodes – Video Game Article Guidelines – Wikipedia Is Not For Things Made Up One Day</div>
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn soạn thảo ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Độ lớn bài viết|Độ lớn bài viết]] – [[Wikipedia:Táo bạo|Hãy táo bạo]] – [[Wikipedia:Thể loại|Thể loại]] – [[Wikipedia:Định hướng|Định hướng]] – [[:en:Wikipedia:Make_technical_articles_understandable|Understandability]] – [[Wikipedia:Bài sơ khai|Bài sơ khai]] – [[:en:Wikipedia:Summary_style|Summary Style]]</div>
+As Of – Broad Concept Articles – Categories, Lists, and Navigation Templates – Copying within Wikipedia – Reviewing Good Articles – Hatnote – Page Blanking – Overcategorization – Preparing Images for Upload – Red Link – Redirect – Set Index Articles – Shortcut – Soft Redirect – Spellchecking – Subpages – Updating Information – User Categories
+<div style="font-size:90%;">Categorization of People – In The News: Recurring Items – People by Year – Categorizing Redirects – Primary Topic Definition – Extended Image Syntax – Overcategorization: User Categories – Recent Years – Reference Desk Guidelines – Reference Desk Guidelines: Medical Advice – Wikipedia 1.0 Editorial Team Assessment Guidelines – Categorization: Ethnicity, Gender, Religion and Sexuality</div>
+|}
+{| class="" style="width: 100%; margin-bottom: 10px;"
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn về độ nổi bật ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Độ nổi bật|Độ nổi bật]]</div>
+[[Wikipedia:Độ nổi bật (học giả)|Học thuật]] – [[:en:Wikipedia:Notability_(astronomical_objects)|Vật thể thiên văn]]– [[:en:Wikipedia:Notability_(books)|Sách]]– [[Wikipedia:Độ nổi bật (sự kiện)|Sự kiện]] – [[Wikipedia:Độ nổi bật (phim)|Phim ảnh]] – Geographic Features – [[Wikipedia:Độ nổi bật (âm nhạc)|Âm nhạc]] – [[Wikipedia:Độ nổi bật (con số)|Con số]] – [[Wikipedia:Độ nổi bật (tổ chức và công ty)|Tổ chức và công ty]] – [[Wikipedia:Độ nổi bật (người)|Người]] – Sports – [[Wikipedia:Độ nổi bật (web)|Trang web]]
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Blue_check.svg|30x30px]] Thông lệ đặt tên ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Tên bài|Tên bài]] – [[:en:Wikipedia:Category_names|Category Names]] – [[:en:Wikipedia:File_names|File Names]]</div>
+Acronyms – Capitalization – Country-Specific Topics – Definite or Indefinite Articles – Events – Geographic Names – Numbers and Dates – Long Lists – People – Plurals – Technical Restrictions – Use English
+<div style="font-size:90%;">Aircraft – Ancient Romans – Armenian – Astronomical Objects – Australian Roads – Baseball Players – Belgium: Castle, Country House, Château and Kasteel – Belgium: Alternate Language Names – Books – Broadcasting – Brussels – Burmese – Law Enforcement Agency Categories – [[Wikipedia:Tên bài (hóa học)|Hóa học]]– Chinese – Clergy – College Football – Comics – Companies – Fauna – [[Wikipedia:Tên bài (phim)|Phim ảnh ]]– Flora – Geographic names – UK Parliament Constituencies – Government and Legislation– Greek – Hebrew – Ice Hockey – Indic – Irish Categories – Korean – Languages – Latter Day Saints – Macedonia – Manuscripts – Mongolian – Music – New Zealand – Norse Mythology – Operas – Ethnicities and Tribes – Mining – Political Parties – Ships – Sports Teams – Sportspeople – Stations in Poland – Television – Tibetan – Royalty and Nobility – U.S. State and Territory Highways – UK Stations – Video Games – West Bank – Swiss Municipalities – Writing Systems</div>
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn hình thức soạn thảo ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[:en:Wikipedia:Manual_of_Style|Manual of Style]] ([[:en:Wikipedia:Manual_of_Style/Contents|Contents]])</div>
+'''Content:''' [[:en:Wikipedia:Manual_of_Style/Accessibility|Accessibility]] – [[:en:Wikipedia:Manual_of_Style/Biographies|Biographies]] – [[:en:Wikipedia:Manual_of_Style/Linking|Linking]] – [[:en:Wikipedia:Manual_of_Style/Self-references_to_avoid|Self-References to Avoid]] – [[:en:Wikipedia:Manual_of_Style/Words_to_watch|Words to Watch]] – [[:en:Wikipedia:Wikimedia_sister_projects|Wikimedia Sister Projects]]
+
+'''Formatting:''' [[:en:Wikipedia:Manual_of_Style/Abbreviations|Abbreviations]] – [[:en:Wikipedia:Manual_of_Style/Capital_letters|Capital Letters]] – [[:en:Wikipedia:Manual_of_Style/Dates_and_numbers|Dates and Numbers]] – [[:en:Wikipedia:Manual_of_Style/Pronunciation|Pronunciation]] – [[:en:Wikipedia:Manual_of_Style/Proper_names|Proper Names]] – [[:en:Wikipedia:Manual_of_Style/Spelling|Spelling]] – [[:en:Wikipedia:Manual_of_Style/Text_formatting|Text Formatting]] – [[:en:Wikipedia:Manual_of_Style/Titles|Titles]]
+
+'''Layout:''' [[:en:Wikipedia:Manual_of_Style/Layout|Layout]] – [[:en:Wikipedia:Manual_of_Style/Lead_section|Lead Section]] – [[:en:Wikipedia:Manual_of_Style/Lists|Lists]] ([[:en:Wikipedia:Manual_of_Style/Embedded_lists|Embedded Lists]] – [[:en:Wikipedia:Manual_of_Style/Lists_of_works|Lists of Works]] – [[:en:Wikipedia:Manual_of_Style/Road_junction_lists|Road Junction Lists]] – [[:en:Wikipedia:Manual_of_Style/Stand-alone_lists|Stand-Alone Lists]]) – [[:en:Wikipedia:Manual_of_Style/Tables|Tables]] – [[:en:Wikipedia:Manual_of_Style/Trivia_sections|Trivia Sections]]
+
+'''Images:''' Images – Captions – Icons
+
+<div style="font-size:90%;">''Arts'' – Anime and Manga – Comics – Film – Music (Music Samples – Record Charts – Stringed Instrument Tunings) – Novels – Television – Visual Arts – Writing About Fiction – ''History'' – Military History – Blazon – ''Legal'' – Legal – Trademarks – ''Regional'' – Canada – China – France – Hawaii – India – Ireland – Japan – Korea – Philippines – Poland – Singapore – [[:en:Wikipedia:Trinidad_and_Tobago_Wikipedians'_notice_board/Style_guide|Trinidad and Tobago]] – ''Religion'' – [[:en:Wikipedia:Manual_of_Style/Islam-related_articles|Islam]] – [[:en:Wikipedia:Manual_of_Style/Latter_Day_Saints|Latter Day Saints]] – ''Science'' – [[:en:Wikipedia:Manual_of_Style/Chemistry|Chemistry]] – [[:en:Wikipedia:Manual_of_Style/Computing|Computing]] – [[:en:Wikipedia:Manual_of_Style/Mathematics|Mathematics]] – [[:en:Wikipedia:Manual_of_Style/Medicine-related_articles|Medicine]] – [[:en:Template:Taxobox/doc|TaxoBox Documentation]] – ''Sports'' –  [[:en:Wikipedia:Manual_of_Style/Cue_sports|Cue Sports]] – [[:en:Wikipedia:Manual_of_Style/Snooker|Snooker]] – ''Wikipedia Content'' – [[:en:Wikipedia:Manual_of_Style/Disambiguation_pages|Disambiguation Pages]] – [[:en:Wikipedia:Manual_of_Style/Infoboxes|Infoboxes]]</div>
+|}
+{| class="" style="width:100%;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Green_check.svg|30x30px]] Các quy định ứng xử ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Thái độ văn minh|Thái độ văn minh]] – [[Wikipedia:Đồng thuận|Đồng thuận]] – [[:en:Wikipedia:Editing_policy|Editing Policy]] – [[Wikipedia:Quấy rối|Quấy rối]] – [[Wikipedia:Phá hoại|Phá hoại]]</div>
+[[:en:Wikipedia:Clean_start|Clean Start]] – [[Wikipedia:Giải quyết mâu thuẫn|Giải quyết mâu thuẫn]] – [[Wikipedia:Bút chiến|Bút chiến]] – [[Wikipedia:Không tấn công cá nhân|Không tấn công cá nhân]] – [[Wikipedia:Sở hữu bài viết|Sở hữu bài viết]] – [[Wikipedia:Tài khoản con rối|Tài khoản con rối]] – [[Wikipedia:Tên người dùng|Chinh sách đặt tên người dùng]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn ứng xử ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Giữ thiện ý|Giữ thiện ý]] – [[Wikipedia:Xung đột lợi ích|Xung đột lợi ích]] – [[Wikipedia:Sửa đổi gây hại|Sửa đổi gây hại]] – [[Wikipedia:Quy tắc ứng xử trên Wikipedia|Quy tắc ứng xử]] – [[Wikipedia:Trang thảo luận|Hướng dẫn về trang thảo luận]]</div>
+[[Wikipedia:Chống lại quyết định cấm|Chống lại quyết định cấm]] – [[:en:Wikipedia:Article_Feedback/Feedback_response_guidelines|Article Feedback Response Guidelines]] – [[:en:Wikipedia:Canvassing|Canvassing]] – [[:en:Wikipedia:Changing_username/Guidelines|Changing Username Guidelines]] – [[:en:Wikipedia:Courtesy_vanishing|Courtesy Vanishing]] – [[:en:Wikipedia:Deceased_Wikipedians/Guidelines|Deceased Wikipedians Guidelines]] – [[Wikipedia:Đừng phá rối Wikipedia nhằm chứng minh một quan điểm|Đừng phá rối Wikipedia nhằm chứng minh một quan điểm]] – [[Wikipedia:Chơi trò luẩn quẩn với hệ thống|Chơi trò luẩn quẩn với hệ thống]] – [[Wikipedia:Đừng cắn người mới đến|Đừng cắn người mới đến]] – [[:en:Wikipedia:Reviewing|Reviewing]] – [[Wikipedia:Lùi sửa|Lùi sửa]] – [[Wikipedia:Chữ ký|Chữ ký]] – [[:en:Wikipedia:Spam_blacklist|Spam Blacklist]] – [[:en:Wikipedia:Linking_to_external_harassment|Linking to External Harassment]]
+|}
+{| class="" style="width: 100%; margin-bottom: 10px;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Green_check.svg|30x30px]] Quy định xóa bài ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Quy định xóa trang|Quy định xóa trang]] – [[Wikipedia:Quy định xóa trang#Xóa nhanh|Criteria for Speedy Deletion]] – [[:en:Wikipedia:Proposed_deletion|Proposed Deletion]]</div>
+[[:en:Wikipedia:Attack_page|Attack Page]] – [[Wikipedia:Giám sát viên|Giám sát viên]] – [[:en:Wikipedia:Proposed_deletion_(books)|Proposed Deletion (Books)]] – [[:en:Wikipedia:Proposed_deletion_of_biographies_of_living_people|Proposed Deletion of Biographies of Living People]] – [[:en:Wikipedia:Revision_deletion|Revision Deletion]]
+|-
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Blue_check.svg|30x30px]] Hướng dẫn xóa bài===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[:en:Wikipedia:Deletion_process|Deletion Process]]</div>
+[[:en:Wikipedia:Deletion_guidelines_for_administrators|Deletion Guidelines for Administrators]] – [[:en:Wikipedia:Speedy_keep|Speedy Keep]]
+|}
+{| class="" style="width: 100%; margin-bottom: 10px;"
+| style="vertical-align:top; width:20%;" |
+
+=== [[Tập tin:Green_check.svg|30x30px]] Các quy định về thủ tục ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Quy định và hướng dẫn|Quy định và hướng dẫn]] – [[:en:Wikipedia:Arbitration/Policy|Arbitration Policy]] – [[:en:Wikipedia:Mediation|Mediation]] – [[:en:Wikipedia:Wikimedia_policy|Wikimedia Policy]]</div>
+[[:en:Wikipedia:Arbitration_Committee/CheckUser_and_Oversight|Arbitration Committee: CheckUser and Oversight]] – [[:en:Wikipedia:Bot_policy|Bot Policy]] – [[Wikipedia:Hành chính viên|Hành chính viên]] – [[Wikipedia:CheckUser|CheckUser]] – [[:en:Wikipedia:Global_rights_policy|Global Rights Policy]] – [[Wikipedia:Miễn cấm IP|Miễn cấm IP]] – [[:en:Wikipedia:Mediation_Committee/Policy|Mediation Committee Policy]] – [[:en:Wikipedia:Office_actions|Office Actions]] – [[Wikipedia:Proxy mở rộng|Proxy mở rộng]] – [[Wikipedia:OTRS|OTRS]]
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Green_check.svg|30x30px]] Các quy định thực thi ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Bảo quản viên|Bảo quản viên]]– [[Wikipedia:Điều phối viên|Điều phối viên]] - [[Wikipedia:Quy định cấm thành viên|Quy định cấm thành viên]] – [[Wikipedia:Khóa trang|Quy định khóa trang]]</div>
+[[:en:Wikipedia:Arbitration_Committee/Discretionary_sanctions|Discretionary Sanctions]] – [[Wikipedia:Quy định cấm chỉ|Quy định cấm chỉ]]
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Green_check.svg|30x30px]] Các quy định pháp luật ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[Wikipedia:Quyền tác giả|Quyền tác giả]] – [[Wikipedia:Không hăm dọa kiện tụng|Không hăm dọa kiện tụng]] – [[:en:Wikipedia:Terms_of_use|Terms of Use]]</div>
+[[Wikipedia:Bảo vệ trẻ em|Bảo vệ trẻ em]] – [[Wikipedia:Vi phạm bản quyền|Vi phạm bản quyền]] – [[Wikipedia:Bôi nhọ|Bôi nhọ]] – [[Wikipedia:Tiêu chuẩn cho nội dung không tự do|Tiêu chuẩn cho nội dung không tự do]]– [[:en:Wikipedia:Reusing_Wikipedia_content|Reusing Wikipedia Content]]
+|}
+{| class="" style="width: 100%; margin-bottom: 10px;"
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn cho nội dung dự án ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[:en:Wikipedia:Project_namespace|Project Namespace]] – [[Wikipedia:Trang cá nhân|Trang cá nhân]]</div>
+[[Wikipedia:Userbox|Userbox]] – [[:en:Wikipedia:WikiProject_Council/Guide|WikiProject Council Guide]]
+|-
+| style="vertical-align:top; width:20%;" |
+=== [[Tập tin:Blue_check.svg|30x30px]] Các hướng dẫn cho bản mẫu ===
+| style="line-height:2;" | <div style="font-size:110%; font-weight:bold; margin-top:0.7em;">[[:en:Wikipedia:Template_namespace|Template Namespace]]</div>
+[[:en:Wikipedia:High-risk_templates|High-Risk Templates]] – [[Wikipedia:Thay thế bản mẫu|Thay thế bản mẫu]] – [[:en:Wikipedia:Talk_page_templates|Talk Page Templates]]
+|}
+
+== Xem thêm ==
+* Tiêu chuẩn và tư vấn cộng đồng - một thư mục cho phép truy cập nhanh chóng các tiêu chuẩn cộng đồng và văn bản hướng dẫn liên quan.
+* Trang Tư vấn - về các trang tư vấn bằng văn bản của WikiProjects. 
+; Hướng dẫn
+* Giới thiệu về các chính sách và hướng dẫn - một giới thiệu nhanh về các chính sách và hướng dẫn lớn cho người dùng mới.
+* [[Wikipedia:Sách hướng dẫn/Điều cần nhớ|Điều cần nhớ]]– một trang giới thiệu nhanh về làm thế nào để áp dụng các chính sách và hướng dẫn chỉnh sửa.
+; Các bài luận liên quan<br>
+* [[Wikipedia:Bộ quy tắc giản lược|Bộ quy tắc giản lược]]&#x20;–  một số khía cạnh cơ bản của các chuẩn mực và thông lệ Wikipedia. Tám quy tắc để chỉnh sửa - nếu bạn bắt đầu bằng cách làm theo các quy tắc đơn giản, phần còn lại sẽ rất tự nhiên.
+** Mười nguyên tắc để chỉnh sửa - Wikipedia có thể khó khăn, nhưng ở đây chúng tôi cung cấp lời khuyên để thực hiện chỉnh sửa mượt mà hơn.
+** Trifecta - tổng quan về cực nhanh của nguyên tắc cơ bản liên quan đến các chính sách và hướng dẫn.
+* Các quy định là nguyên tắc - chính sách và hướng dẫn là những phiên bản thô của các nguyên tắc cơ bản.
+
+{{Quy định và hướng dẫn Wikipedia}}
+[[Thể loại:Quy định và hướng dẫn Wikipedia]]

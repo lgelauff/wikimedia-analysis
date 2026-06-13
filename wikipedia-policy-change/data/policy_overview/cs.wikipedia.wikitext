@@ -1,0 +1,150 @@
+[[Soubor:PICOL icon Paragraph.svg|vlevo|60px|class=skin-invert-image|link=]]
+Níže se nachází přehled základních '''pravidel Wikipedie'''. Tučně jsou zvýrazněna '''závazná pravidla''', která popisují nejdůležitější principy, bez kterých by Wikipedie nemohla fungovat. Ostatní jsou tzv. '''doporučení Wikipedie''', která je potřeba také dodržovat, aby spolupráce na encyklopedii mohla úspěšně fungovat.
+
+Pravidla jsou nedokonalým výběrem a zachycením [[Wikipedie:Konsenzus|konsenzuálně]] nejdůležitějších principů a zvyklostí. Při spolupráci na projektu Wikipedie je proto potřeba se zamýšlet nad jejich smyslem a brát ohled i na další zásady a zvyklosti, které jsou popsané na ostatních stránkách nápovědy nebo jsou jen nepsanými, ale v článcích dodržovanými pravidly.
+
+{{Nápověda podrobně|Wikipedie:Pravidlo Wikipedie}}
+:''Základní principy pravidel naleznete na stránce [[Wikipedie:Pět pilířů]].''
+
+{|valign="top"|
+|
+== Encyklopedický obsah ==
+=== Významnost a mazání ===
+{{Vseznam|
+* [[Wikipedie:Encyklopedická významnost|Encyklopedická významnost]]
+* [[Wikipedie:Významnost (hudba)|Významnost (hudba)]]
+* [[Wikipedie:Významnost (lidé)|Významnost (lidé)]]
+* [[Wikipedie:Významnost (web)|Významnost (web)]]
+* [[Wikipedie:Rychlé smazání|Rychlé smazání]]
+* [[Wikipedie:Odložené smazání|Odložené smazání]]
+* [[Wikipedie:Diskuse o smazání|Diskuse o smazání]]
+* [[Wikipedie:Revize smazání|Revize smazání]]
+}}
+
+=== Vhodný obsah ===
+{{Vseznam|
+* '''[[Wikipedie:Co Wikipedie není|Co Wikipedie není]]'''
+* [[Wikipedie:Autobiografie|Autobiografie]]
+* [[Wikipedie:Články o žijících lidech|Články o žijících lidech]]
+* [[Wikipedie:Pahýl|Pahýl]]
+* [[Wikipedie:Pomluva|Pomluva]]
+* [[Wikipedie:Propagační článek|Propagační článek]]
+}}
+
+=== Ověřitelnost ===
+{{Vseznam|
+* '''[[Wikipedie:Ověřitelnost|Ověřitelnost]]'''
+* '''[[Wikipedie:Žádný vlastní výzkum|Žádný vlastní výzkum]]'''
+* [[Wikipedie:Věrohodné zdroje|Věrohodné zdroje]]
+* [[Wikipedie:Uvádění zdrojů|Uvádění zdrojů]]
+}}
+
+== Encyklopedická forma ==
+=== Styl ===
+{{Vseznam|
+* '''[[Wikipedie:Nezaujatý úhel pohledu|Nezaujatý úhel pohledu]]'''
+* [[Wikipedie:Encyklopedický styl|Encyklopedický styl]]
+* [[Wikipedie:Vyhněte se vyhýbavým slovům|Vyhněte se vyhýbavým slovům]]
+}}
+
+=== Pravopis ===
+{{Vseznam|
+* '''[[Wikipedie:Pravopis|Pravopis]]'''
+* [[Wikipedie:Přechylování ženských příjmení|Přechylování ženských příjmení]]
+* [[Wikipedie:Transkripce hebrejštiny|Transkripce hebrejštiny]]
+* [[Wikipedie:Transkripce latinských a řeckých jmen|Transkripce latinských a řeckých jmen]]
+* [[Wikipedie:Transkripce perštiny|Transkripce perštiny]]
+}}
+
+=== Uspořádání a náležitosti článku ===
+{{Vseznam|
+* [[Wikipedie:Název článku|Název článku]]
+* [[Wikipedie:Vzhled a styl|Vzhled a styl]]
+* [[Wikipedie:Délka článku|Délka článku]]
+* [[Wikipedie:Rozdělování článků|Rozdělování článků]]
+* [[Wikipedie:Slučování a přesun stránek|Slučování a přesun stránek]]
+* [[Wikipedie:Externí odkazy|Externí odkazy]]
+* [[Wikipedie:Kategorizace|Kategorizace]]
+* [[Wikipedie:Pojmenování kategorií|Pojmenování kategorií]]
+}}
+
+=== Speciální články a stránky ===
+{{Vseznam|
+* [[Wikipedie:Biografie|Biografie]]
+* [[Wikipedie:Články o datech|Články o datech]]
+* [[Wikipedie:Články o rocích|Články o rocích]]
+* [[Wikipedie:Rozcestníky|Rozcestníky]]
+* [[Wikipedie:Wikiportál|Wikiportál]]
+}}
+
+|valign="top"|
+== Komunita ==
+=== Účet a diskuse ===
+{{Vseznam|
+* [[Wikipedie:Uživatelské jméno|Uživatelské jméno]]
+* [[Wikipedie:Uživatelská stránka|Uživatelská stránka]]
+* [[Wikipedie:Nálepka|Nálepka]]
+* [[Wikipedie:Podpis|Podpis]]
+}}
+
+=== Spolupráce ===
+{{Vseznam|
+* [[Wikipedie:Editujte s odvahou|Editujte s odvahou]]
+* [[Wikipedie:Konsenzus|Konsenzus]]
+* [[Wikipedie:Hlasování|Hlasování]]
+* [[Wikipedie:Žádost o komentář|Žádost o komentář]]
+* [[Wikipedie:Nenarušujte encyklopedii kvůli ilustraci tvrzení|Nenarušujte encyklopedii kvůli ilustraci tvrzení]]
+* [[Wikipedie:Vlastnění článků|Vlastnění článků]]
+}}
+
+=== Etiketa ===
+{{Vseznam|
+* [[Wikipedie:Buďte laskaví k nováčkům|Buďte laskaví k nováčkům]]
+* [[Wikipedie:Předpokládejte dobrou vůli|Předpokládejte dobrou vůli]]
+* [[Wikipedie:Wikietiketa|Wikietiketa]]
+* [[Wikipedie:Zdvořilost|Zdvořilost]]
+* [[Wikipedie:Žádné osobní útoky|Žádné osobní útoky]]
+* '''[[Wikipedie:Právní kroky a právní výhrůžky|Právní kroky a právní výhrůžky]]'''
+}}
+
+=== Řešení sporů ===
+{{Vseznam|
+* [[Wikipedie:Řešení sporů|Řešení sporů]]
+* [[Wikipedie:Vyjednávání|Vyjednávání]]
+* [[Wikipedie:Mediace|Mediace]]
+* '''[[Wikipedie:Pravidlo tří revertů|Pravidlo tří revertů]]'''
+* [[Wikipedie:Arbitrážní proces|Arbitrážní proces]]
+* '''[[Wikipedie:Pravidla arbitráže|Pravidla arbitráže]]'''
+* [[Wikipedie:Žádost o opatření|Žádost o opatření]]
+}}
+
+== Wikipedie ==
+=== Práva a pravidla ===
+{{Vseznam|
+* [[Wikipedie:Autorské právo|Autorské právo]]
+* '''[[Wikipedie:Pravidlo Wikipedie|Pravidlo Wikipedie]]'''
+}}
+
+=== Ochrana projektu ===
+{{Vseznam|
+* '''[[Wikipedie:Blokování|Blokování]]'''
+* [[Wikipedie:Loutkový účet|Loutkový účet]]
+* [[Wikipedie:Vandalismus|Vandalismus]]
+* [[Wikipedie:Zamykání|Zamykání]]
+* '''[[Wikipedie:Žádné open proxy|Žádné open proxy]]'''
+}}
+
+=== Pravomoci ===
+{{Vseznam|
+* [[Wikipedie:Patroláři a revertéři|Patroláři a revertéři]]
+* '''[[Wikipedie:Správci rozhraní|Správci rozhraní]]'''
+* [[Wikipedie:Techničtí správci|Techničtí správci]]
+* '''[[Wikipedie:Účast v hlasování|Účast v hlasování]]'''
+* '''[[Wikipedie:Žádost o práva správce|Žádost o práva správce]]'''
+}}
+|}
+
+__NOTOC__
+__NOEDITSECTION__
+
+[[Kategorie:Wikipedie:Pravidla| ]]
