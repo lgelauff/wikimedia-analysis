@@ -6,33 +6,38 @@ M1 (enwiki depth-2) is built and validated; M2 (de/nl) is mid-run. This proposes
 
 ---
 
-## 1. The two findings that motivate the cleanup
+## 1. The findings that motivate the cleanup
 
-1. **Templates are not graph edges** — a page transcluding `{{cite web}}` says nothing about governance. Templates matter only as (a) admission *signals* (status templates) and (b) navbox grouping — and navbox-rendered links are already in the wikilink graph (`pagelinks` captures links from transcluded templates).
-2. **Categories are not graph edges either** — the M1 build showed **3,045 category edges, 0 of them policy→policy**, because category membership is policy→*category*, not policy→policy.
+1. **Templates are not graph edges**, and only *some* templates indicate policy — in two distinct ways:
+   - **Type A (located on the page):** a status banner (`{{policy}}`, `{{guideline}}`) on page X marks **X itself** as policy → admits the host.
+   - **Type B (links to policy pages):** a navbox (`{{Wikipedia policies and guidelines}}`) doesn't mark its host — it **enumerates other policy pages** → its targets are policy candidates (discovery) and a grouping facet.
+   - Everything else (`{{cite web}}`, `{{reflist}}`, infoboxes, maintenance) is noise.
+2. **`pagelinks` conflates body links with navbox boilerplate** — MediaWiki expands a Type-B navbox on every host page, so `pagelinks` records *every host → every policy in the navbox*, manufacturing a dense clique (the "complete-subgraph artifact" the methodology review warned about). `pagelinks` cannot distinguish a boilerplate link from a genuine in-body cross-reference. **Therefore the graph must come from raw-wikitext links, not `pagelinks`.** Body links are literally in the page's wikitext; navbox-injected links are not. This also makes the current slice consistent with the historical reconstruction (which parses wikitext anyway).
+3. **Categories are not graph edges either** — the M1 build showed **3,045 category edges, 0 policy→policy**, because category membership is policy→*category*, not policy→policy.
 
-→ Both are **node-level signals**, not relations in the policy→policy network.
+→ Categories and templates are **node-level signals** (admission + grouping), never edges. The one graph = genuine in-body wikilinks (from wikitext, not `pagelinks`).
 
 ---
 
 ## 2. Proposed conceptual model
 
-**One graph, two facet layers, node attributes.**
+**One graph (from wikitext), two facet layers, node attributes.**
 
-- **The network graph = wikilinks between admitted pages.** Edges are policy→policy `pagelinks`. This is the only edge set. (Out-links to non-admitted pages are kept but flagged, for in-degree/coverage — not part of the policy→policy graph.)
-- **Category membership** = a *facet* of each node (which indicator categories it sits in). Used for admission, grouping, and filtering — never an edge.
-- **Template transclusion** = a *facet* of each node (which templates it uses), each tagged with a **role**. Used for admission (status role) and optional grouping (navigation role) — never an edge.
+- **The network graph = genuine in-body wikilinks between admitted pages**, parsed from raw wikitext (NOT `pagelinks`, which is navbox-inflated). This is the only edge set. (Out-links to non-admitted pages kept but flagged, for in-degree/coverage.)
+- **Category membership** = a *facet* of each node (which indicator categories it sits in). Admission + grouping + filtering — never an edge.
+- **Template transclusion** = a *facet* of each node, each template tagged with a **role**. Admission (status) + discovery/grouping (navigation) — never an edge.
+- **Navbox membership** = a *facet*: which Type-B policy navbox(es) enumerate a page (the curated grouping), kept separate from the body-link graph.
 - **Node attributes** = title, namespace, redirect, QID, admitted_via, status tier.
 
-### Template roles (the "not every template is relevant" point)
+### Template roles (the "only some templates indicate policy, two ways" point)
 
-| role | examples | network use |
-|---|---|---|
-| `status` | `{{policy}}`, `{{guideline}}`, `{{historical}}` | **admission signal** + node attribute (tier/lifecycle). Not an edge. |
-| `navigation` | `{{Wikipedia policies and guidelines}}` sidebar/navbox | optional grouping layer; its links already in the wikilink graph |
-| `noise` | `{{cite web}}`, `{{reflist}}`, `{{shortcut}}`, infoboxes, maintenance | ignored for the network; kept in registry for completeness only |
+| role | mechanism | examples | use |
+|---|---|---|---|
+| `status` | **on the page** (Type A) | `{{policy}}`, `{{guideline}}`, `{{historical}}` | admits the **host**; node attribute (tier/lifecycle) |
+| `navigation` | **links to policies** (Type B) | `{{Wikipedia policies and guidelines}}` navbox | its **targets** are policy candidates (discovery) + grouping facet |
+| `noise` | neither | `{{cite web}}`, `{{reflist}}`, infoboxes, maintenance | ignored for the network; registry only |
 
-Role assignment: name-pattern heuristic first (cheap, covers the bulk), LLM for the ambiguous tail later (M6-adjacent). Stored in `template_registry.role`.
+Role assignment: name-pattern heuristic first (cheap), LLM for the ambiguous tail later. A Type-B navbox is identified by *what fraction of its links are already-admitted policy pages* — a navbox whose targets are mostly policy is a policy navbox. Stored in `template_registry.role`.
 
 ---
 
@@ -42,25 +47,25 @@ Role assignment: name-pattern heuristic first (cheap, covers the bulk), LLM for 
 node(wiki, page_id, year, title, namespace, is_redirect, wikidata_qid,
      admitted_via, status_tier)                         -- PK (wiki,year,page_id)
 
-link(wiki, year, from_page, to_page, to_admitted)       -- the wikilink graph only
-                                                          -- to_page NULL if target missing
+link(wiki, year, from_page, to_page, to_admitted)       -- in-body wikilinks (from WIKITEXT,
+                                                          -- not pagelinks). to_page NULL if missing.
 
 node_category(wiki, year, page_id, category_title)      -- membership facet
 node_template(wiki, year, page_id, template_title, role)-- transclusion facet (role-tagged)
+navbox_member(wiki, year, page_id, navbox_title)        -- which Type-B navbox enumerates the page
 
-category_registry(wiki, year, category_title, depth_from_root,
-                  n_members, is_indicator)
+category_registry(wiki, year, category_title, depth_from_root, n_members, is_indicator)
 template_registry(wiki, year, template_title, role, n_transclusions, is_indicator)
 
-build_run(wiki, year, built_at, source, root_category, max_depth,
-          n_nodes, n_links)
+build_run(wiki, year, built_at, source, root_category, max_depth, n_nodes, n_links)
 ```
 
 Changes from the M1 schema:
-- `edge` (lumped) → `link` (wikilink graph only). Category/template relations move to `node_category` / `node_template` facet tables.
-- `node` gains `status_tier` (policy / guideline / essay / lifecycle).
-- `template_registry` gains `role`.
-- Net effect: the graph table holds ~38k meaningful rows instead of 269k mostly-noise rows; signals live in clearly-named facet tables.
+- `edge` (lumped, navbox-inflated) → `link` (in-body wikilinks from **wikitext**, not `pagelinks`).
+- Category/template relations move to `node_category` / `node_template` facets.
+- New `navbox_member` facet for Type-B grouping.
+- `node` gains `status_tier`; `template_registry` gains `role`.
+- Net effect: the graph holds genuine cross-references (no navbox cliques); signals live in clearly-named facets.
 
 ---
 
@@ -72,13 +77,15 @@ Same pipeline, cleaner separation, template/category demoted from edges:
 resolve_seeds(wiki)            -> root category (WIKI_ROOTS), status templates
 discover_categories(root)      -> indicator category tree (BFS, bounded depth)
 admit(categories, templates)   -> admitted page set + admitted_via + status_tier
-extract_links(admitted)        -> wikilink graph (policy->policy + flagged out-links)
-extract_facets(admitted)       -> node_category, node_template (+ role tagging)
+                                  (SQL: fast — categorylinks/templatelinks)
+fetch_wikitext(admitted)       -> raw wikitext per page (current dump or API, cached)
+extract_links(wikitext)        -> in-body wikilink graph (policy->policy + flagged out-links)
+extract_facets(admitted)       -> node_category, node_template (role-tagged), navbox_member
 resolve_qids(admitted)
 write(node, link, facets, registries, build_run)   -> ToolsDB + SQLite
 ```
 
-`tag_template_role(name)` — heuristic classifier (regex on known status/nav/citation/maintenance patterns; default `noise`), with a hook for LLM refinement later.
+Note: admission stays SQL (fast); the **link graph now comes from wikitext** (mwparserfromhell `filter_wikilinks`), so the current slice needs ~1.5k wikitext fetches (cached) — modest, and it unifies current + historical on one method. `tag_template_role(name, targets)` — heuristic on name patterns + the fraction of the template's link targets that are admitted policy pages (Type-B detector); LLM for the tail later.
 
 ---
 
