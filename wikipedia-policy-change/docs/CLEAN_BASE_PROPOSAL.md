@@ -34,7 +34,7 @@ M1 (enwiki depth-2) is built and validated; M2 (de/nl) is mid-run. This proposes
 Replace blind depth-bounded BFS with **scored propagation anchored on a confirmed seed**. This is precision-oriented and self-limiting — drift can't sneak in because a wayward category/template simply scores low.
 
 **Confidence tiers (node attribute `confidence`):**
-- **`confirmed`** — carries a Type-A status template (`{{policy}}`/`{{guideline}}`/…), or sits in a hand-confirmed core category (`Category:Wikipedia policies`, `Category:Wikipedia guidelines`). Near-ground-truth. This is the anchor set **C**.
+- **`confirmed`** — meets any near-ground-truth signal: carries a Type-A status template (`{{policy}}`/`{{guideline}}`/…); sits in a core category (`Category:Wikipedia policies`, `…guidelines`); **or** asserts `P31 = Q4656150` ("Wikimedia project policies and guidelines page") on Wikidata. This is the anchor set **C**. (Wikidata is sparse — ~26% of M1 nodes had any QID — so it corroborates, never gates alone. No policy/guideline split at the Wikidata class level; that tier comes from the Type-A template.)
 - **`suspect`** — reached *through* a scored category or navbox but lacks its own status marker. Stays suspect until it (a) acquires a status template, or (b) passes the Tier-2 LLM judge (M6). May be dropped at reduction.
 
 **Indicator scoring (rank, then work down):**
@@ -56,7 +56,7 @@ Every suspect records the indicator + score that surfaced it (auditable). `s_min
 1. **The template's own categories** — a template page is itself categorized (`Category:Wikipedia policy and guideline templates`, `…navigational boxes`, `…citation templates`, maintenance). This *declares* its role; query `categorylinks` on the template's `page_id`.
 2. **Target-overlap with confirmed** — a Type-B policy-navbox is one whose link targets are mostly confirmed policy pages (the scoring above).
 3. **Name pattern** — cheap fallback.
-4. **Template QID `P31`** — supplementary Wikidata classification.
+4. **Template QID `P31`** — Wikidata navbox flag: `Q11753321` ("Wikimedia navigational template") → navigation role; `Q11266439` (generic "Wikimedia template") is uninformative. Supplementary (sparse coverage).
 
 LLM only for the ambiguous tail. Stored in `template_registry.role` (+ optionally the template's own categories/QID for audit).
 
