@@ -105,7 +105,7 @@ The pipeline splits into a cheap structural tier that builds most of the network
 
 - **Tier 1 — structural (~80%, no LLM, no content understanding):** stub-meta-history → per-year revid selection → *light* wikitext parse of selected revisions (mwparserfromhell: `[[Category:…]]`, `{{templates}}`, `[[wikilinks]]`) → nodes + category/template/link edges + rule-gate admission via discovered indicators (§1.4b-A). Builds the entire network topology and most of the membership. The exploration web app (Stage 4) can run on Tier 1 output alone.
   - *Note:* the stub gives identity + revision timeline only — template/category edges still require the light parse of each selected revision (or current SQL tables for the present slice; those have no history).
-- **Tier 2 — semantic (the fuzzy ~20%, LLM):** "smells like policy" admission for pages with no rule signal (§1.4b-B), section-level normative classification, atomic-statement decomposition, cross-wiki atomic matching. Applied only where Tier 1 doesn't decide. Runs off-Toolforge (no API egress there).
+- **Tier 2 — semantic (the fuzzy ~20%, LLM):** "smells like policy" admission for pages with no rule signal (§1.4b-B), section-level normative classification, atomic-statement decomposition, cross-wiki atomic matching. Applied only where Tier 1 doesn't decide. Runs off-Toolforge — *not* because egress is blocked (it isn't), but for secrets hygiene (no API keys on shared infra), cost, and acceptable-use spirit (don't run a commercial LLM pipeline on donated infra).
 
 This de-risks delivery: a complete structural network exists before any LLM spend.
 
@@ -322,9 +322,9 @@ PHASE D — Cross-wiki alignment (after B+C done for 2–3 wikis)
 | Stage | Where | Why |
 |---|---|---|
 | 1. Structure extraction (dumps/replicas → nodes, edges, registries, yearly snapshots) | **Toolforge jobs** | Dumps mounted at `/public/dumps/`; replicas are Toolforge-only; no TB downloads. K8s `jobs` framework, not PAWS (sessions time out). |
-| 2. LLM judging + atomic decomposition | **Local** (or wherever API egress works) | Toolforge outbound network is proxy-locked — external LLM APIs blocked. Operates on compact text exported from stage 1. |
+| 2. LLM judging + atomic decomposition | **Local** | Off-Toolforge for secrets hygiene / cost / acceptable-use spirit — NOT because egress is blocked (outbound is generally available). Operates on compact text exported from stage 1. |
 | 3. Network analysis + cross-wiki alignment + plots | **Local** | Small derived tables; iterative. |
-| 4. Exploration web app (graph/timeline/registry/audit views) | **Toolforge webservice** (Flask, reuse wiki-polis) | Serves ToolsDB; public, interactive; no API egress needed. |
+| 4. Exploration web app (graph/timeline/registry/audit views) | **Toolforge** (static export preferred for annual read-only data; or thin Flask over precomputed ToolsDB tables) | Serves precomputed output; keep heavy compute in jobs, not the request path. |
 
 **Data source — single full-history dump, not dated dumps (CORRECTION).** `dumps.wikimedia.org` / the `/public/dumps` mount retain only ~the last 6–7 monthly runs — there is NO multi-year archive of dated SQL dumps. So point-in-time `templatelinks`/`categorylinks`/`pagelinks` per year back to 2005 do **not** exist anywhere. Instead: history is cumulative, so the **single latest `pages-meta-history` XML dump contains every revision back to 2001**. That one (multi-TB, mounted on Toolforge, streamable) is the source of truth. We select the per-year revision per page and **parse its wikitext ourselves** (mwparserfromhell) to extract links/categories/templates as of that year.
 
