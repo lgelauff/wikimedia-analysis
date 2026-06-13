@@ -17,9 +17,12 @@ become wikimedia-policies
 
 # one-time: clone + venv
 cd $HOME && git clone https://github.com/lgelauff/wikimedia-analysis.git
-toolforge jobs run venv --image python3.11 --wait \
-  --command "python3 -m venv ~/venv && ~/venv/bin/pip install pymysql"
+# NB: plain `python3 -m venv` runs ensurepip, which spawns a subprocess the pod
+# blocks (hangs, no logs). Use --without-pip + curl-bootstrap (no subprocess):
+toolforge jobs run venv --image python3.11 --wait --command \
+  "python3 -m venv ~/venv --without-pip && curl -sS https://bootstrap.pypa.io/get-pip.py | ~/venv/bin/python3 && ~/venv/bin/python3 -m pip install pymysql"
 toolforge jobs logs venv
+ls ~/venv/bin/        # expect python3, pip
 
 # one-time: load schema into ToolsDB
 mariadb --defaults-file=~/replica.my.cnf -h tools.db.svc.wikimedia.cloud \
