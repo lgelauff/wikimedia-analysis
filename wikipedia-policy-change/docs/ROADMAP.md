@@ -9,7 +9,7 @@ Legend: 🟢 runs local · 🔵 runs Toolforge · ⚪ either · ⛔ gate (stop &
 ---
 
 ## M0 — Hypotheses + null-model plan  ⛔  🟢
-The #1 unresolved risk (both review rounds). **Hypotheses now defined** — see [design §Hypotheses](policy_network_design.md): H1 additive-not-reform, H2 ossification, H3 defensive accretion, H4 new-policy-as-prohibition. Thesis: mature policy ossifies and accretes defensively rather than reforming.
+The #1 unresolved risk (both review rounds). **Hypotheses now defined** — see [design §Hypotheses](policy_network_design.md): H1 additive-not-reform, H2 ossification, H3 defensive accretion, H4 new-policy-as-prohibition, H5 cross-wiki decoupling (satellites follow enwiki less over time). Thesis: mature policy ossifies and accretes defensively rather than reforming; satellite wikis decouple over time.
 - Deliverable: per-hypothesis metric + null + test layer (done, in design); pre-register reform threshold τ and trend tests; n=3 caps cross-wiki to typology/existence.
 - **Early win:** H1 + H2 are partially testable now on the existing mwparserfromhell-cleaned 10-policy drift CSVs — cheap pilot before the full build.
 - **Gate:** no quantitative network metric ships until M0 + M5 exist. Parallelizable with M1–M4.
@@ -68,6 +68,7 @@ At the atomic level; the only level where cross-wiki comparison is meaningful.
 - Architecture: block by (QID ∪ langlink) → embedding-ANN → LLM-verify top-k. Never O(n²).
 - `relationship` field (genetic/copied vs functional/convergent) from external evidence; known translations as positive control (ties to the earlier translated-page work).
 - Deliverable: cross-wiki cluster map + gap report (absence disaggregated by cause, not symmetric).
+- **Tests H5** (cross-wiki decoupling): matched-share over years, new-node independence, genetic-signal decay, lead-lag coupling. Distinguish active divergence from abandonment via the `relationship` field + per-node activity. Structural proxy H5(a) testable earlier at M2/M4.
 
 ## M10 — Analysis + write-up  🟢
 Hypotheses from M0 tested with M5 machinery; cross-wiki typology from M9; web app (M3) as the public artifact.
