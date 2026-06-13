@@ -19,7 +19,7 @@ become wikimedia-policies
 cd $HOME && git clone https://github.com/lgelauff/wikimedia-analysis.git
 # NB: plain `python3 -m venv` runs ensurepip, which spawns a subprocess the pod
 # blocks (hangs, no logs). Use --without-pip + curl-bootstrap (no subprocess):
-toolforge jobs run venv --image python3.11 --wait --command \
+toolforge jobs run venv --image python3.13 --wait --command \
   "python3 -m venv ~/venv --without-pip && curl -sS https://bootstrap.pypa.io/get-pip.py | ~/venv/bin/python3 && ~/venv/bin/python3 -m pip install pymysql"
 toolforge jobs logs venv
 ls ~/venv/bin/        # expect python3, pip
@@ -33,12 +33,12 @@ mariadb --defaults-file=~/replica.my.cnf -h tools.db.svc.wikimedia.cloud \
 git -C $HOME/wikimedia-analysis pull
 
 # smoke test (shallow, SQLite only) — read summary from logs
-toolforge jobs run net-smoke --image python3.11 --mem 1Gi --wait \
+toolforge jobs run net-smoke --image python3.13 --mem 1Gi --wait \
   --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 2 --no-toolsdb --sqlite ~/net_smoke.db"
 toolforge jobs logs net-smoke
 
 # full build (writes ToolsDB)
-toolforge jobs run net-build --image python3.11 --mem 2Gi --wait \
+toolforge jobs run net-build --image python3.13 --mem 2Gi --wait \
   --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 4"
 toolforge jobs logs net-build
 ```
