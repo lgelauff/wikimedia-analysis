@@ -37,7 +37,8 @@ mariadb --defaults-file=$HOME/replica.my.cnf -h tools.db.svc.wikimedia.cloud
 ```sql
 CREATE DATABASE s#####__policies CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
-- Replace `s#####` with the credential username prefix from `replica.my.cnf` (the `user=` line). The `s#####__` prefix must match exactly or you get "Access denied".
+- Replace `s#####` with the credential username prefix from `replica.my.cnf` (the `user=` line) — it's a **numeric** account (e.g. `s51234`), **not** the tool name `wikimedia-policies`. The `s#####__` prefix must match exactly or you get "Access denied".
+- The suffix (`policies`) is a free label but **avoid hyphens** — MySQL identifiers with `-` must be backtick-quoted everywhere. Use `policies` / `wikimedia_policies`, not `wikimedia-policies`. (Tool name and DB name are allowed to differ.)
 
 ## 4. Clone the repo (GH handoff)
 
