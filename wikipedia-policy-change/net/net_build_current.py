@@ -25,6 +25,7 @@ Admission/scoring use SQL (fast). Link graph uses the API (wikitext). Creds from
 import argparse
 import configparser
 import json
+from collections import Counter
 import re
 import sqlite3
 import ssl
@@ -148,6 +149,21 @@ def cat_members(rep, cat_titles):
             JOIN categorylinks cl ON cl.cl_target_id=lt.lt_id AND cl.cl_type='page'
             WHERE lt.lt_namespace=14 AND lt.lt_title IN ({ph})""", ch):
             res.setdefault(dec(cat), set()).add(pid)
+    return res
+
+
+def cat_member_counts(rep, cat_titles):
+    """{category_title: total member pages} via grouped COUNT (no member lists — avoids OOM)."""
+    res = {}
+    for ch in batched(list(cat_titles)):
+        ph = ",".join(["%s"] * len(ch))
+        for (cat, n) in q(rep, f"""
+            SELECT lt.lt_title, COUNT(*)
+            FROM linktarget lt
+            JOIN categorylinks cl ON cl.cl_target_id=lt.lt_id AND cl.cl_type='page'
+            WHERE lt.lt_namespace=14 AND lt.lt_title IN ({ph})
+            GROUP BY lt.lt_title""", ch):
+            res[dec(cat)] = n
     return res
 
 
@@ -405,19 +421,25 @@ def main():
         C |= st
     print(f"  confirmed seed C = {len(C):,}")
 
-    # B. scored category discovery
+    # B. scored category discovery (count-based: never materialize huge memberships)
     print("B. category scoring …")
-    cand_cats = set().union(*cats_of(rep, C).values()) if C else set()
-    members = cat_members(rep, cand_cats)
+    support_by_cat = Counter()
+    for cs in cats_of(rep, C).values():        # confirmed pages' own categories
+        for c in cs:
+            support_by_cat[c] += 1
+    cand_cats = list(support_by_cat)
+    ncounts = cat_member_counts(rep, cand_cats)  # cheap COUNT, no member lists
     cat_reg, ind_cats = [], set()
-    for cat, mem in members.items():
-        supp = len(mem & C); n = len(mem); dens = supp / n if n else 0
+    for cat in cand_cats:
+        supp = support_by_cat[cat]; n = ncounts.get(cat, 0)
+        dens = supp / n if n else 0
         is_ind = supp >= a.s_min and dens >= a.d_min
         if is_ind: ind_cats.add(cat)
         cat_reg.append((wiki, year, cat, supp, n, round(dens, 4), int(is_ind)))
+    ind_members = cat_members(rep, ind_cats)   # member lists ONLY for indicators (bounded)
     susp_cat = set()
     for cat in ind_cats:
-        susp_cat |= members[cat] - C
+        susp_cat |= ind_members.get(cat, set()) - C
     print(f"  candidate cats {len(cand_cats):,} · indicators {len(ind_cats):,} · suspects {len(susp_cat):,}")
 
     # C. scored navbox discovery (templates transcluded by >=2 confirmed)
