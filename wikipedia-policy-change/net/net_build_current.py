@@ -1,36 +1,37 @@
 #!/usr/bin/env python3
 """
-net_build_current.py — M1: build the CURRENT (2026) structural policy network for
-one wiki from the Toolforge replica link tables. No dumps, no LLM.
+net_build_current.py — clean-base build of the CURRENT policy network for one wiki.
 
-Pipeline (Tier-1 structural, rule-gate only):
-  A. BFS the category tree from the seed root ('Wikipedia policies and guidelines'),
-     bounded by --max-depth, to discover indicator categories (language-agnostic:
-     names are discovered, not hardcoded).
-  B. Admit pages: members (cl_type='page') of any indicator category, UNION pages
-     transcluding a seed status template. Exclude mainspace (ns 0).
-  C. Edges for admitted nodes: category membership, template transclusion, wikilinks.
-     Resolve targets -> page_id (and redirects -> canonical); flag policy->policy.
-  D. QIDs from page_props (wikibase_item).
-  E. Write node / edge / *_registry / build_run to ToolsDB (REPLACE) + a local SQLite mirror.
+Model (see docs/CLEAN_BASE_PROPOSAL.md):
+  * ONE graph = in-body wikilinks parsed from WIKITEXT (not pagelinks — which is
+    navbox-inflated). Categories/templates are node-level FACETS, never edges.
+  * Confirmed/suspect tiers. Confirmed = status-template transclusion OR core-category
+    membership OR Wikidata P31=Q4656150. Suspects = reached via SCORED indicator
+    categories/navboxes (support/density vs the confirmed set), promotable later.
 
-Schema confirmed live (Jun 2026): categorylinks.cl_target_id / templatelinks.tl_target_id /
-pagelinks.pl_target_id -> linktarget(lt_id, lt_namespace, lt_title). cl_to is gone.
+Pipeline:
+  A. confirmed seed C  (core categories + status templates; Wikidata promotes later)
+  B. scored category discovery -> indicator cats -> suspect members
+  C. scored navbox discovery   -> indicator navboxes -> suspect targets + navbox_member
+  D. admitted = C ∪ suspects (excl. ns0); page meta; QIDs; Wikidata P31 promotion
+  E. link graph from wikitext (API + mwparserfromhell), matched against admitted
+  F. facets: node_category, node_template(role), navbox_member
+  G. write ToolsDB + SQLite
 
-Runs on Toolforge (replica access is Toolforge-only). Locally it detects the missing
-replica and exits cleanly. Resumable-ish: writes are idempotent (REPLACE INTO);
-re-running rebuilds the slice. Reads DB creds from ~/replica.my.cnf — never hardcoded.
-
-Usage (on the bastion, in a venv with pymysql):
-  python3 net_build_current.py --wiki enwiki --year 2026 --max-depth 4
-  python3 net_build_current.py --wiki enwiki --year 2026 --no-toolsdb --sqlite /tmp/net.db
+Admission/scoring use SQL (fast). Link graph uses the API (wikitext). Creds from
+~/replica.my.cnf (never hardcoded). Runs on Toolforge; exits cleanly off-Toolforge.
 """
 
 import argparse
 import configparser
-import os
+import json
+import re
 import sqlite3
+import ssl
 import sys
+import time
+import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -38,71 +39,61 @@ try:
     import pymysql
 except ImportError:
     pymysql = None
+try:
+    import mwparserfromhell as mwp
+except ImportError:
+    mwp = None
 
-# Seed indicators (BOOTSTRAP only — the operative set is discovered from the tree).
-# Per-wiki root category (resolved from enwiki langlinks; ns-14 title WITHOUT the
-# localized "Category:" prefix). Category-BFS admission is language-agnostic from here.
 WIKI_ROOTS = {
     "enwiki": "Wikipedia policies and guidelines",
     "dewiki": "Wikipedia:Richtlinien",
     "nlwiki": "Wikipedia:Beleid",
 }
-SEED_ROOT_CATEGORY = WIKI_ROOTS["enwiki"]
-
-# Status-template seeds are en-only for now; on other wikis these find nothing and
-# admission falls back to category-BFS (the primary, language-agnostic path).
-# Localized status templates will be discovered later (M6 / registry bootstrap).
 WIKI_STATUS_TEMPLATES = {
     "enwiki": ["Policy", "Guideline", "MoS_guideline", "Subcat_guideline",
                "Naming_conventions", "Notability_guideline", "Procedural_policy"],
 }
-SEED_STATUS_TEMPLATES = WIKI_STATUS_TEMPLATES["enwiki"]
-EXCLUDE_NS = {0}                    # exclusion-based: drop only mainspace
+EXCLUDE_NS = {0}
+Q_POLICY_PAGE = "Q4656150"      # Wikimedia project policies and guidelines page
+Q_NAVBOX      = "Q11753321"     # Wikimedia navigational template
 BATCH = 500
+UA = "WikimediaAnalysis/1.0 (research; https://github.com/lgelauff/wikimedia-analysis)"
+_SSL = ssl.create_default_context()
 
 
-# ---------------------------------------------------------------------------
-# DB plumbing
-# ---------------------------------------------------------------------------
-
+# --------------------------------------------------------------------------- DB
 def creds():
-    cfg = configparser.ConfigParser()
     p = Path.home() / "replica.my.cnf"
     if not p.exists():
         return None
-    cfg.read(p)
-    return cfg["client"]["user"].strip("'\""), cfg["client"]["password"].strip("'\"")
+    c = configparser.ConfigParser(); c.read(p)
+    return c["client"]["user"].strip("'\""), c["client"]["password"].strip("'\"")
 
 
 def connect_replica(wiki):
-    if pymysql is None:
-        sys.exit("pymysql not installed — create a venv and `pip install pymysql`.")
-    c = creds()
-    if c is None:
-        print("No ~/replica.my.cnf found — this script must run on Toolforge. Exiting cleanly.")
-        sys.exit(0)
-    user, pw = c
+    if pymysql is None: sys.exit("pip install pymysql")
+    if mwp is None: sys.exit("pip install mwparserfromhell")
+    cr = creds()
+    if cr is None:
+        print("No ~/replica.my.cnf — run on Toolforge. Exiting cleanly."); sys.exit(0)
+    u, pw = cr
     try:
-        return pymysql.connect(
-            host=f"{wiki}.analytics.db.svc.wikimedia.cloud",
-            user=user, password=pw, database=f"{wiki}_p",
-            charset="utf8mb4", autocommit=True,
-        )
+        return pymysql.connect(host=f"{wiki}.analytics.db.svc.wikimedia.cloud",
+                               user=u, password=pw, database=f"{wiki}_p",
+                               charset="utf8mb4", autocommit=True)
     except Exception as e:
-        print(f"Cannot reach replica ({e}) — must run on Toolforge. Exiting cleanly.")
-        sys.exit(0)
+        print(f"Replica unreachable ({e}) — run on Toolforge. Exiting cleanly."); sys.exit(0)
 
 
 def connect_toolsdb():
-    user, pw = creds()
-    return pymysql.connect(host="tools.db.svc.wikimedia.cloud", user=user, password=pw,
-                           database=f"{user}__policies", charset="utf8mb4", autocommit=True)
+    u, pw = creds()
+    return pymysql.connect(host="tools.db.svc.wikimedia.cloud", user=u, password=pw,
+                           database=f"{u}__policies", charset="utf8mb4", autocommit=True)
 
 
 def q(conn, sql, params=None):
     with conn.cursor() as cur:
-        cur.execute(sql, params or ())
-        return cur.fetchall()
+        cur.execute(sql, params or ()); return cur.fetchall()
 
 
 def batched(seq, n=BATCH):
@@ -111,304 +102,445 @@ def batched(seq, n=BATCH):
         yield seq[i:i + n]
 
 
-# ---------------------------------------------------------------------------
-# A. Category-tree BFS  (discover indicator categories)
-# ---------------------------------------------------------------------------
-
-def discover_categories(rep, root, max_depth):
-    """BFS subcategories from root. Returns {category_title: depth}. Handles cycles."""
-    root = root.replace(" ", "_")
-    seen = {root: 0}
-    frontier = [root]
-    depth = 0
-    while frontier and depth < max_depth:
-        depth += 1
-        nxt = []
-        for chunk in batched(frontier):
-            # subcategories: pages (ns14) linked to a frontier category with cl_type='subcat'
-            ph = ",".join(["%s"] * len(chunk))
-            rows = q(rep, f"""
-                SELECT lt.lt_title AS parent, sub.page_title AS child
-                FROM linktarget lt
-                JOIN categorylinks cl ON cl.cl_target_id = lt.lt_id AND cl.cl_type='subcat'
-                JOIN page sub ON sub.page_id = cl.cl_from AND sub.page_namespace = 14
-                WHERE lt.lt_namespace = 14 AND lt.lt_title IN ({ph})
-            """, chunk)
-            for _parent, child in rows:
-                child = child.decode() if isinstance(child, bytes) else child
-                if child not in seen:
-                    seen[child] = depth
-                    nxt.append(child)
-        frontier = nxt
-        print(f"  BFS depth {depth}: +{len(nxt)} categories (total {len(seen)})")
-    return seen
+def dec(x):
+    return x.decode() if isinstance(x, bytes) else x
 
 
-def pages_in_categories(rep, cats):
-    """Admitted page_ids that are members (cl_type='page') of any indicator category."""
-    admitted = {}   # page_id -> set(category_title)
-    for chunk in batched(list(cats)):
-        ph = ",".join(["%s"] * len(chunk))
-        rows = q(rep, f"""
-            SELECT cl.cl_from AS pid, lt.lt_title AS cat
+# -------------------------------------------------------------------------- API
+def api(wiki, params):
+    lang = wiki[:-4] if wiki.endswith("wiki") else wiki
+    params = {**params, "format": "json", "formatversion": "2", "maxlag": "5"}
+    url = f"https://{lang}.wikipedia.org/w/api.php?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=60, context=_SSL) as r:
+                return json.loads(r.read())
+        except Exception as e:
+            wait = 5 * (2 ** attempt)
+            print(f"    api retry ({e}) in {wait}s"); time.sleep(wait)
+    raise RuntimeError("API failed: " + url)
+
+
+# ------------------------------------------------------------ category helpers
+def subcats(rep, cat_titles):
+    out = set()
+    for ch in batched(list(cat_titles)):
+        ph = ",".join(["%s"] * len(ch))
+        for (_p, child) in q(rep, f"""
+            SELECT lt.lt_title, sub.page_title
             FROM linktarget lt
-            JOIN categorylinks cl ON cl.cl_target_id = lt.lt_id AND cl.cl_type='page'
-            WHERE lt.lt_namespace = 14 AND lt.lt_title IN ({ph})
-        """, chunk)
-        for pid, cat in rows:
-            cat = cat.decode() if isinstance(cat, bytes) else cat
-            admitted.setdefault(pid, set()).add(cat)
-    return admitted
+            JOIN categorylinks cl ON cl.cl_target_id=lt.lt_id AND cl.cl_type='subcat'
+            JOIN page sub ON sub.page_id=cl.cl_from AND sub.page_namespace=14
+            WHERE lt.lt_namespace=14 AND lt.lt_title IN ({ph})""", ch):
+            out.add(dec(child))
+    return out
 
 
-# ---------------------------------------------------------------------------
-# B. Template-transclusion admission
-# ---------------------------------------------------------------------------
-
-def template_page_ids(rep, names):
-    rows = []
-    for chunk in batched(names):
-        ph = ",".join(["%s"] * len(chunk))
-        rows += q(rep, f"SELECT page_id, page_title FROM page "
-                       f"WHERE page_namespace=10 AND page_title IN ({ph})", chunk)
-    return {(t.decode() if isinstance(t, bytes) else t): pid for pid, t in rows}
-
-
-def pages_transcluding(rep, template_titles):
-    """Admitted page_ids transcluding any seed status template (via templatelinks)."""
-    admitted = set()
-    for chunk in batched(template_titles):
-        ph = ",".join(["%s"] * len(chunk))
-        rows = q(rep, f"""
-            SELECT tl.tl_from AS pid
+def cat_members(rep, cat_titles):
+    """{category_title: set(page_id)} for cl_type='page'."""
+    res = {}
+    for ch in batched(list(cat_titles)):
+        ph = ",".join(["%s"] * len(ch))
+        for (pid, cat) in q(rep, f"""
+            SELECT cl.cl_from, lt.lt_title
             FROM linktarget lt
-            JOIN templatelinks tl ON tl.tl_target_id = lt.lt_id
-            WHERE lt.lt_namespace = 10 AND lt.lt_title IN ({ph})
-        """, chunk)
-        admitted.update(r[0] for r in rows)
-    return admitted
+            JOIN categorylinks cl ON cl.cl_target_id=lt.lt_id AND cl.cl_type='page'
+            WHERE lt.lt_namespace=14 AND lt.lt_title IN ({ph})""", ch):
+            res.setdefault(dec(cat), set()).add(pid)
+    return res
 
 
-# ---------------------------------------------------------------------------
-# Page metadata, redirects, QIDs
-# ---------------------------------------------------------------------------
+def cats_of(rep, page_ids):
+    """{page_id: set(category_title)} for the given pages."""
+    res = {}
+    for ch in batched(list(page_ids)):
+        ph = ",".join(["%s"] * len(ch))
+        for (pid, cat) in q(rep, f"""
+            SELECT cl.cl_from, lt.lt_title
+            FROM categorylinks cl JOIN linktarget lt ON cl.cl_target_id=lt.lt_id
+            WHERE lt.lt_namespace=14 AND cl.cl_from IN ({ph})""", ch):
+            res.setdefault(pid, set()).add(dec(cat))
+    return res
 
+
+# ------------------------------------------------------------ template helpers
+def templates_of(rep, page_ids):
+    """{page_id: set(template_title ns10)}."""
+    res = {}
+    for ch in batched(list(page_ids)):
+        ph = ",".join(["%s"] * len(ch))
+        for (frm, t) in q(rep, f"""
+            SELECT tl.tl_from, lt.lt_title
+            FROM templatelinks tl JOIN linktarget lt ON tl.tl_target_id=lt.lt_id
+            WHERE lt.lt_namespace=10 AND tl.tl_from IN ({ph})""", ch):
+            res.setdefault(frm, set()).add(dec(t))
+    return res
+
+
+def title_to_pageid(rep, ns, titles):
+    out = {}
+    for ch in batched(list(titles)):
+        ph = ",".join(["%s"] * len(ch))
+        for (pid, t) in q(rep, f"SELECT page_id,page_title FROM page "
+                               f"WHERE page_namespace=%s AND page_title IN ({ph})", [ns, *ch]):
+            out[dec(t)] = pid
+    return out
+
+
+def template_targets(rep, template_pageids):
+    """{template_page_id: set(target page_id)} — what each template links to (pagelinks)."""
+    res = {}
+    for ch in batched(list(template_pageids)):
+        ph = ",".join(["%s"] * len(ch))
+        for (frm, ns, t) in q(rep, f"""
+            SELECT pl.pl_from, lt.lt_namespace, lt.lt_title
+            FROM pagelinks pl JOIN linktarget lt ON pl.pl_target_id=lt.lt_id
+            WHERE pl.pl_from IN ({ph})""", ch):
+            res.setdefault(frm, []).append((ns, dec(t)))
+    return res
+
+
+# ------------------------------------------------------------ page meta / qids
 def page_meta(rep, page_ids):
     meta = {}
-    for chunk in batched(list(page_ids)):
-        ph = ",".join(["%s"] * len(chunk))
+    for ch in batched(list(page_ids)):
+        ph = ",".join(["%s"] * len(ch))
         for pid, ns, title, isred in q(rep,
                 f"SELECT page_id,page_namespace,page_title,page_is_redirect "
-                f"FROM page WHERE page_id IN ({ph})", chunk):
-            meta[pid] = {"ns": ns,
-                         "title": title.decode() if isinstance(title, bytes) else title,
-                         "is_redirect": int(isred)}
+                f"FROM page WHERE page_id IN ({ph})", ch):
+            meta[pid] = {"ns": ns, "title": dec(title), "is_redirect": int(isred)}
     return meta
-
-
-def resolve_titles_to_pageids(rep, ns_title_pairs):
-    """Map (ns,title) -> page_id for edge-target resolution."""
-    out = {}
-    by_ns = {}
-    for ns, title in ns_title_pairs:
-        by_ns.setdefault(ns, set()).add(title)
-    for ns, titles in by_ns.items():
-        for chunk in batched(list(titles)):
-            ph = ",".join(["%s"] * len(chunk))
-            for pid, t in q(rep, f"SELECT page_id,page_title FROM page "
-                                 f"WHERE page_namespace=%s AND page_title IN ({ph})",
-                            [ns, *chunk]):
-                t = t.decode() if isinstance(t, bytes) else t
-                out[(ns, t)] = pid
-    return out
 
 
 def qids(rep, page_ids):
     out = {}
-    for chunk in batched(list(page_ids)):
-        ph = ",".join(["%s"] * len(chunk))
+    for ch in batched(list(page_ids)):
+        ph = ",".join(["%s"] * len(ch))
         for pid, val in q(rep, f"SELECT pp_page,pp_value FROM page_props "
-                               f"WHERE pp_propname='wikibase_item' AND pp_page IN ({ph})", chunk):
-            out[pid] = val.decode() if isinstance(val, bytes) else val
+                               f"WHERE pp_propname='wikibase_item' AND pp_page IN ({ph})", ch):
+            out[pid] = dec(val)
     return out
 
 
-# ---------------------------------------------------------------------------
-# C. Edges
-# ---------------------------------------------------------------------------
-
-def collect_edges(rep, admitted_ids):
-    """For each admitted page, its category/template/wikilink targets (ns,title)."""
-    edges = []   # (from_page, edge_type, to_ns, to_title)
-    specs = [
-        ("category", "categorylinks", "cl_from", "cl_target_id"),
-        ("template", "templatelinks", "tl_from", "tl_target_id"),
-        ("wikilink", "pagelinks",     "pl_from", "pl_target_id"),
-    ]
-    for etype, table, fromcol, targetcol in specs:
-        for chunk in batched(list(admitted_ids)):
-            ph = ",".join(["%s"] * len(chunk))
-            rows = q(rep, f"""
-                SELECT t.{fromcol} AS frm, lt.lt_namespace AS ns, lt.lt_title AS title
-                FROM {table} t
-                JOIN linktarget lt ON t.{targetcol} = lt.lt_id
-                WHERE t.{fromcol} IN ({ph})
-            """, chunk)
-            for frm, ns, title in rows:
-                title = title.decode() if isinstance(title, bytes) else title
-                edges.append((frm, etype, ns, title))
-        print(f"  edges[{etype}]: {sum(1 for e in edges if e[1]==etype):,}")
-    return edges
+def wikidata_p31(qid_list):
+    """{qid: set(P31 Q-ids)} via wbgetentities (batches of 50)."""
+    out = {}
+    base = "https://www.wikidata.org/w/api.php"
+    for ch in batched(qid_list, 50):
+        url = base + "?" + urllib.parse.urlencode(
+            {"action": "wbgetentities", "ids": "|".join(ch),
+             "props": "claims", "format": "json"})
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=60, context=_SSL) as r:
+                data = json.loads(r.read())
+        except Exception as e:
+            print(f"    wikidata retry skip ({e})"); continue
+        for qid, ent in data.get("entities", {}).items():
+            vals = set()
+            for c in ent.get("claims", {}).get("P31", []):
+                try: vals.add(c["mainsnak"]["datavalue"]["value"]["id"])
+                except (KeyError, TypeError): pass
+            out[qid] = vals
+        time.sleep(0.5)
+    return out
 
 
-# ---------------------------------------------------------------------------
-# E. Writers
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------- wikitext links
+def norm_title(s):
+    s = s.strip().lstrip(":").strip()
+    if not s: return ""
+    s = s.replace(" ", "_")
+    return s[0].upper() + s[1:]
 
+
+def siteinfo_ns(wiki):
+    data = api(wiki, {"action": "query", "meta": "siteinfo",
+                      "siprop": "namespaces|namespacealiases"})
+    m = {}
+    for ns in data["query"]["namespaces"].values():
+        if ns["id"] < 0: continue
+        for key in (ns.get("name", ""), ns.get("canonical", "")):
+            if key: m[key.replace(" ", "_").lower()] = ns["id"]
+    for a in data["query"].get("namespacealiases", []):
+        m[a["alias"].replace(" ", "_").lower()] = a["id"]
+    return m
+
+
+def parse_link(raw, nsmap):
+    """raw wikilink title -> (ns, normalized_title)."""
+    raw = raw.split("#")[0].strip().lstrip(":")
+    if ":" in raw:
+        pre, rest = raw.split(":", 1)
+        ns = nsmap.get(pre.replace(" ", "_").lower())
+        if ns is not None:
+            return ns, norm_title(rest)
+    return 0, norm_title(raw)
+
+
+def fetch_wikitext(wiki, page_ids):
+    """{page_id: wikitext} via API (batches of 50)."""
+    out = {}
+    for ch in batched(list(page_ids), 50):
+        data = api(wiki, {"action": "query", "pageids": "|".join(map(str, ch)),
+                          "prop": "revisions", "rvprop": "content", "rvslots": "main"})
+        for pg in data.get("query", {}).get("pages", []):
+            try:
+                out[pg["pageid"]] = pg["revisions"][0]["slots"]["main"]["content"]
+            except (KeyError, IndexError):
+                pass
+        time.sleep(0.3)
+    return out
+
+
+# --------------------------------------------------------------- role tagging
+_STATUS_CAT = re.compile(r"polic|guideline|richtlin|beleid", re.I)
+_NAV_CAT    = re.compile(r"navigat|navbox|sidebar|zijbalk", re.I)
+_NOISE_NAME = re.compile(r"^(cite|citation|reflist|sfn|harv|infobox|navbar|"
+                         r"shortcut|hatnote|cleanup|ambox|tmbox)", re.I)
+
+
+def tag_role(name, own_cats, p31, is_scored_navbox):
+    cats = " ".join(own_cats)
+    if is_scored_navbox or p31 == Q_NAVBOX or _NAV_CAT.search(cats):
+        return "navigation"
+    if _STATUS_CAT.search(cats):
+        return "status"
+    if _NOISE_NAME.match(name):
+        return "noise"
+    return "noise"
+
+
+# -------------------------------------------------------------------- writers
 DDL_SQLITE = """
-CREATE TABLE IF NOT EXISTS node(wiki,page_id,year,title,namespace,is_redirect,wikidata_qid,admitted_via,
-  PRIMARY KEY(wiki,year,page_id));
-CREATE TABLE IF NOT EXISTS edge(wiki,year,from_page,edge_type,to_ns,to_title,to_page,to_admitted);
-CREATE TABLE IF NOT EXISTS category_registry(wiki,year,category_title,n_members,depth_from_root,is_indicator,
-  PRIMARY KEY(wiki,year,category_title));
-CREATE TABLE IF NOT EXISTS template_registry(wiki,year,template_title,n_transclusions,is_indicator,
-  PRIMARY KEY(wiki,year,template_title));
-CREATE TABLE IF NOT EXISTS build_run(wiki,year,built_at,source,root_category,max_depth,n_nodes,n_edges);
+CREATE TABLE IF NOT EXISTS node(wiki,page_id,year,title,namespace,is_redirect,wikidata_qid,confidence,admitted_via,status_tier,PRIMARY KEY(wiki,year,page_id));
+CREATE TABLE IF NOT EXISTS link(wiki,year,from_page,to_ns,to_title,to_page,to_admitted);
+CREATE TABLE IF NOT EXISTS node_category(wiki,year,page_id,category_title);
+CREATE TABLE IF NOT EXISTS node_template(wiki,year,page_id,template_title,role);
+CREATE TABLE IF NOT EXISTS navbox_member(wiki,year,page_id,navbox_title);
+CREATE TABLE IF NOT EXISTS category_registry(wiki,year,category_title,support,n_members,density,is_indicator,PRIMARY KEY(wiki,year,category_title));
+CREATE TABLE IF NOT EXISTS template_registry(wiki,year,template_title,role,support,density,is_indicator,PRIMARY KEY(wiki,year,template_title));
+CREATE TABLE IF NOT EXISTS build_run(wiki,year,built_at,source,n_confirmed,n_suspect,n_links,s_min,d_min);
 """
+TABLES = ["node", "link", "node_category", "node_template", "navbox_member",
+          "category_registry", "template_registry", "build_run"]
 
 
-def write_sqlite(path, wiki, year, nodes, edges, cat_reg, tmpl_reg, run):
-    db = sqlite3.connect(path)
-    db.executescript(DDL_SQLITE)
-    db.execute("DELETE FROM node WHERE wiki=? AND year=?", (wiki, year))
-    db.execute("DELETE FROM edge WHERE wiki=? AND year=?", (wiki, year))
-    db.execute("DELETE FROM category_registry WHERE wiki=? AND year=?", (wiki, year))
-    db.execute("DELETE FROM template_registry WHERE wiki=? AND year=?", (wiki, year))
-    db.executemany("INSERT OR REPLACE INTO node VALUES(?,?,?,?,?,?,?,?)", nodes)
-    db.executemany("INSERT INTO edge VALUES(?,?,?,?,?,?,?,?)", edges)
-    db.executemany("INSERT OR REPLACE INTO category_registry VALUES(?,?,?,?,?,?)", cat_reg)
-    db.executemany("INSERT OR REPLACE INTO template_registry VALUES(?,?,?,?,?)", tmpl_reg)
-    db.execute("INSERT INTO build_run VALUES(?,?,?,?,?,?,?,?)", run)
-    db.commit(); db.close()
-    print(f"  wrote SQLite -> {path}")
+def write_sqlite(path, wiki, year, data):
+    db = sqlite3.connect(path); db.executescript(DDL_SQLITE)
+    for t in TABLES:
+        db.execute(f"DELETE FROM {t} WHERE wiki=? AND year=?", (wiki, year))
+    db.executemany("INSERT INTO node VALUES(?,?,?,?,?,?,?,?,?,?)", data["node"])
+    db.executemany("INSERT INTO link VALUES(?,?,?,?,?,?,?)", data["link"])
+    db.executemany("INSERT INTO node_category VALUES(?,?,?,?)", data["node_category"])
+    db.executemany("INSERT INTO node_template VALUES(?,?,?,?,?)", data["node_template"])
+    db.executemany("INSERT INTO navbox_member VALUES(?,?,?,?)", data["navbox_member"])
+    db.executemany("INSERT INTO category_registry VALUES(?,?,?,?,?,?,?)", data["category_registry"])
+    db.executemany("INSERT INTO template_registry VALUES(?,?,?,?,?,?,?)", data["template_registry"])
+    db.execute("INSERT INTO build_run VALUES(?,?,?,?,?,?,?,?,?)", data["build_run"])
+    db.commit(); db.close(); print(f"  wrote SQLite -> {path}")
 
 
-def write_toolsdb(wiki, year, nodes, edges, cat_reg, tmpl_reg, run):
+def write_toolsdb(wiki, year, data):
     conn = connect_toolsdb()
     with conn.cursor() as cur:
-        cur.execute("DELETE FROM node WHERE wiki=%s AND year=%s", (wiki, year))
-        cur.execute("DELETE FROM edge WHERE wiki=%s AND year=%s", (wiki, year))
-        cur.execute("DELETE FROM category_registry WHERE wiki=%s AND year=%s", (wiki, year))
-        cur.execute("DELETE FROM template_registry WHERE wiki=%s AND year=%s", (wiki, year))
-        cur.executemany("REPLACE INTO node VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
-                        [(n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7]) for n in nodes])
-        for ch in batched(edges, 1000):
-            cur.executemany("INSERT INTO edge VALUES(%s,%s,%s,%s,%s,%s,%s,%s)", ch)
-        cur.executemany("REPLACE INTO category_registry VALUES(%s,%s,%s,%s,%s,%s)", cat_reg)
-        cur.executemany("REPLACE INTO template_registry VALUES(%s,%s,%s,%s,%s)", tmpl_reg)
-        cur.execute("REPLACE INTO build_run VALUES(%s,%s,%s,%s,%s,%s,%s,%s)", run)
-    conn.close()
-    print("  wrote ToolsDB")
+        for t in TABLES:
+            cur.execute(f"DELETE FROM {t} WHERE wiki=%s AND year=%s", (wiki, year))
+        cur.executemany("INSERT INTO node VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", data["node"])
+        for ch in batched(data["link"], 1000):
+            cur.executemany("INSERT INTO link VALUES(%s,%s,%s,%s,%s,%s,%s)", ch)
+        for ch in batched(data["node_category"], 1000):
+            cur.executemany("INSERT INTO node_category VALUES(%s,%s,%s,%s)", ch)
+        for ch in batched(data["node_template"], 1000):
+            cur.executemany("INSERT INTO node_template VALUES(%s,%s,%s,%s,%s)", ch)
+        for ch in batched(data["navbox_member"], 1000):
+            cur.executemany("INSERT INTO navbox_member VALUES(%s,%s,%s,%s)", ch)
+        cur.executemany("INSERT INTO category_registry VALUES(%s,%s,%s,%s,%s,%s,%s)", data["category_registry"])
+        cur.executemany("INSERT INTO template_registry VALUES(%s,%s,%s,%s,%s,%s,%s)", data["template_registry"])
+        cur.execute("INSERT INTO build_run VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)", data["build_run"])
+    conn.close(); print("  wrote ToolsDB")
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
+# ----------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--wiki", default="enwiki")
     ap.add_argument("--year", type=int, default=2026)
-    ap.add_argument("--max-depth", type=int, default=4)
-    ap.add_argument("--root", default=None,
-                    help="ns-14 root category title (no 'Category:' prefix). "
-                         "Defaults to the per-wiki value in WIKI_ROOTS.")
+    ap.add_argument("--root", default=None)
+    ap.add_argument("--s-min", type=int, default=3)
+    ap.add_argument("--d-min", type=float, default=0.10)
     ap.add_argument("--no-toolsdb", action="store_true")
+    ap.add_argument("--no-wikidata", action="store_true")
     ap.add_argument("--sqlite", default=str(Path.home() / "policy_net.db"))
-    args = ap.parse_args()
-    wiki, year = args.wiki, args.year
-    if args.root is None:
-        if wiki not in WIKI_ROOTS:
-            sys.exit(f"No default root for {wiki}; pass --root explicitly.")
-        args.root = WIKI_ROOTS[wiki]
-    seed_templates = WIKI_STATUS_TEMPLATES.get(wiki, [])
-
+    a = ap.parse_args()
+    wiki, year = a.wiki, a.year
+    root = a.root or WIKI_ROOTS.get(wiki)
+    if not root: sys.exit(f"no root for {wiki}; pass --root")
+    status_templates = WIKI_STATUS_TEMPLATES.get(wiki, [])
     rep = connect_replica(wiki)
-    print(f"=== M1 build: {wiki} year={year} root='{args.root}' depth<={args.max_depth} ===")
+    print(f"=== clean build: {wiki} {year} root='{root}' s_min={a.s_min} d_min={a.d_min} ===")
 
-    # A. discover indicator categories
-    print("A. category BFS …")
-    cats = discover_categories(rep, args.root, args.max_depth)
+    # A. confirmed seed
+    print("A. confirmed seed …")
+    root_u = root.replace(" ", "_")
+    core_cats = {root_u} | subcats(rep, {root_u})           # root + depth-1 subcats
+    core_members = cat_members(rep, core_cats)
+    C = set().union(*core_members.values()) if core_members else set()
+    via = {pid: "core_category" for pid in C}
+    if status_templates:
+        tpid = title_to_pageid(rep, 10, status_templates)
+        tt = {dec(t) for t in tpid}
+        st = set()
+        if tt:
+            for ch in batched(list(tt)):
+                ph = ",".join(["%s"] * len(ch))
+                for (frm,) in q(rep, f"""
+                    SELECT tl.tl_from FROM templatelinks tl
+                    JOIN linktarget lt ON tl.tl_target_id=lt.lt_id
+                    WHERE lt.lt_namespace=10 AND lt.lt_title IN ({ph})""", ch):
+                    st.add(frm)
+        for pid in st:
+            via.setdefault(pid, "status_template")
+        C |= st
+    print(f"  confirmed seed C = {len(C):,}")
 
-    # B. admit
-    print("B. admission …")
-    by_cat = pages_in_categories(rep, cats.keys())
-    tmpl_ids = template_page_ids(rep, seed_templates) if seed_templates else {}
-    by_tmpl = pages_transcluding(rep, list(tmpl_ids.keys())) if tmpl_ids else set()
-    print(f"  via category: {len(by_cat):,} pages · via template: {len(by_tmpl):,} pages")
+    # B. scored category discovery
+    print("B. category scoring …")
+    cand_cats = set().union(*cats_of(rep, C).values()) if C else set()
+    members = cat_members(rep, cand_cats)
+    cat_reg, ind_cats = [], set()
+    for cat, mem in members.items():
+        supp = len(mem & C); n = len(mem); dens = supp / n if n else 0
+        is_ind = supp >= a.s_min and dens >= a.d_min
+        if is_ind: ind_cats.add(cat)
+        cat_reg.append((wiki, year, cat, supp, n, round(dens, 4), int(is_ind)))
+    susp_cat = set()
+    for cat in ind_cats:
+        susp_cat |= members[cat] - C
+    print(f"  candidate cats {len(cand_cats):,} · indicators {len(ind_cats):,} · suspects {len(susp_cat):,}")
 
-    admitted = set(by_cat) | set(by_tmpl)
+    # C. scored navbox discovery (templates transcluded by >=2 confirmed)
+    print("C. navbox scoring …")
+    tpl_of_C = templates_of(rep, C)
+    tcount = {}
+    for s in tpl_of_C.values():
+        for t in s: tcount[t] = tcount.get(t, 0) + 1
+    cand_nav_titles = [t for t, n in tcount.items() if n >= 2]
+    nav_pid = title_to_pageid(rep, 10, cand_nav_titles)
+    tgt = template_targets(rep, set(nav_pid.values()))
+    # resolve target (ns,title) -> page_id only as needed: match against C by page_id directly
+    pid2title = {v: k for k, v in nav_pid.items()}
+    tmpl_reg, ind_navbox_titles, susp_nav, navbox_members_rows = [], set(), set(), []
+    # build a quick (ns,title)->pid map for C members for target overlap
+    cmeta = page_meta(rep, C)
+    c_key = {(m["ns"], m["title"]): pid for pid, m in cmeta.items()}
+    for tt, tp in nav_pid.items():
+        targets = tgt.get(tp, [])
+        tpids = {c_key.get(k) for k in targets if k in c_key}
+        tpids.discard(None)
+        supp = len(tpids); n = len(targets); dens = supp / n if n else 0
+        is_ind = supp >= a.s_min and dens >= a.d_min
+        if is_ind:
+            ind_navbox_titles.add(tt)
+        tmpl_reg.append((wiki, year, tt, "navigation" if is_ind else "noise",
+                         supp, round(dens, 4), int(is_ind)))
+    print(f"  candidate navboxes {len(cand_nav_titles):,} · indicators {len(ind_navbox_titles):,}")
+
+    # D. admitted set
+    suspects = (susp_cat | susp_nav) - C
+    admitted = C | suspects
     meta = page_meta(rep, admitted)
-    # exclusion-based namespace filter (drop only mainspace)
-    admitted = {pid for pid in admitted
-                if pid in meta and meta[pid]["ns"] not in EXCLUDE_NS}
-    print(f"  admitted (excl. ns0): {len(admitted):,} nodes")
-
+    admitted = {p for p in admitted if p in meta and meta[p]["ns"] not in EXCLUDE_NS}
+    C &= admitted; suspects = admitted - C
     qid = qids(rep, admitted)
 
-    def admitted_via(pid):
-        c, t = pid in by_cat, pid in by_tmpl
-        return "both" if c and t else "category" if c else "template"
+    # Wikidata P31 promotion + navbox confirmation
+    if not a.no_wikidata and qid:
+        print("D. wikidata P31 …")
+        p31 = wikidata_p31(list(qid.values()))
+        for pid in list(suspects):
+            if Q_POLICY_PAGE in p31.get(qid.get(pid, ""), set()):
+                C.add(pid); suspects.discard(pid); via[pid] = "wikidata"
+    for pid in C: via.setdefault(pid, "core_category")
+    for pid in suspects: via.setdefault(pid, "scored_category")
+    print(f"  admitted {len(admitted):,}  (confirmed {len(C):,} · suspect {len(suspects):,})")
 
-    nodes = [(wiki, pid, year, meta[pid]["title"], meta[pid]["ns"],
-              meta[pid]["is_redirect"], qid.get(pid), admitted_via(pid))
-             for pid in admitted]
+    # E. link graph from wikitext
+    print("E. wikitext links …")
+    nsmap = siteinfo_ns(wiki)
+    adm_key = {(meta[p]["ns"], meta[p]["title"]): p for p in admitted}
+    wikitext = fetch_wikitext(wiki, admitted)
+    links = []
+    for pid in admitted:
+        wt = wikitext.get(pid)
+        if not wt: continue
+        seen = set()
+        for wl in mwp.parse(wt).filter_wikilinks():
+            ns, title = parse_link(str(wl.title), nsmap)
+            if (ns, title) in seen: continue
+            seen.add((ns, title))
+            to_pid = adm_key.get((ns, title))
+            links.append((wiki, year, pid, ns, title, to_pid, 1 if to_pid else 0))
+    print(f"  links {len(links):,} (policy->policy {sum(1 for l in links if l[6]):,})")
 
-    # C. edges
-    print("C. edges …")
-    raw_edges = collect_edges(rep, admitted)
-    targets = {(ns, title) for _f, _t, ns, title in raw_edges}
-    tgt_pid = resolve_titles_to_pageids(rep, targets)
-    edges = []
-    for frm, etype, ns, title in raw_edges:
-        to_page = tgt_pid.get((ns, title))
-        edges.append((wiki, year, frm, etype, ns, title, to_page,
-                      1 if (to_page in admitted) else 0))
+    # F. facets
+    print("F. facets …")
+    nc = [(wiki, year, p, c) for p, cs in cats_of(rep, admitted).items() for c in cs]
+    tpl_all = templates_of(rep, admitted)
+    # role per template: own categories + QID + name + scored-navbox
+    all_tmpl_titles = {t for s in tpl_all.values() for t in s}
+    tmpl_pid = title_to_pageid(rep, 10, all_tmpl_titles)
+    tmpl_owncats = cats_of(rep, set(tmpl_pid.values()))
+    tmpl_qid = qids(rep, set(tmpl_pid.values())) if not a.no_wikidata else {}
+    tmpl_qp31 = wikidata_p31(list(tmpl_qid.values())) if tmpl_qid else {}
+    role_of = {}
+    for t in all_tmpl_titles:
+        tp = tmpl_pid.get(t)
+        owncats = tmpl_owncats.get(tp, set()) if tp else set()
+        p31 = next(iter(tmpl_qp31.get(tmpl_qid.get(tp, ""), set())), None) if tp else None
+        role_of[t] = tag_role(t, owncats, p31, t in ind_navbox_titles)
+    nt = [(wiki, year, p, t, role_of.get(t, "noise"))
+          for p, ts in tpl_all.items() for t in ts]
+    # navbox_member: admitted pages that are targets of an indicator navbox
+    for tt in ind_navbox_titles:
+        tp = nav_pid.get(tt)
+        for (ns, title) in tgt.get(tp, []):
+            mp = adm_key.get((ns, title))
+            if mp: navbox_members_rows.append((wiki, year, mp, tt))
 
-    # registries
-    cat_member_counts = {}
-    for cset in by_cat.values():
-        for c in cset:
-            cat_member_counts[c] = cat_member_counts.get(c, 0) + 1
-    cat_reg = [(wiki, year, c, cat_member_counts.get(c, 0), cats.get(c, -1), 1) for c in cats]
-    tmpl_counts = {}
-    for _f, etype, ns, title in raw_edges:
-        if etype == "template" and ns == 10:
-            tmpl_counts[title] = tmpl_counts.get(title, 0) + 1
-    tmpl_reg = [(wiki, year, t, n, 1 if t in seed_templates else 0)
-                for t, n in tmpl_counts.items()]
+    # tier from status template route (en): policy vs guideline
+    def tier(pid):
+        v = via.get(pid)
+        return None  # left for M7 refinement; status template name mapping later
 
     built_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    run = (wiki, year, built_at, "replica:current",
-           args.root.replace(" ", "_"), args.max_depth, len(nodes), len(edges))
+    nodes = [(wiki, p, year, meta[p]["title"], meta[p]["ns"], meta[p]["is_redirect"],
+              qid.get(p), "confirmed" if p in C else "suspect", via.get(p, "scored_category"),
+              tier(p)) for p in admitted]
+    data = {
+        "node": nodes, "link": links, "node_category": nc, "node_template": nt,
+        "navbox_member": navbox_members_rows,
+        "category_registry": cat_reg, "template_registry": tmpl_reg,
+        "build_run": (wiki, year, built_at, "replica+api:current",
+                      len(C), len(suspects), len(links), a.s_min, a.d_min),
+    }
 
-    # E. write
-    print("E. writing …")
-    write_sqlite(args.sqlite, wiki, year, nodes, edges, cat_reg, tmpl_reg, run)
-    if not args.no_toolsdb:
-        write_toolsdb(wiki, year, nodes, edges, cat_reg, tmpl_reg, run)
+    print("G. writing …")
+    write_sqlite(a.sqlite, wiki, year, data)
+    if not a.no_toolsdb: write_toolsdb(wiki, year, data)
 
-    # summary (M1 gate: node count, fan-out, namespace spread)
-    print(f"\n=== summary ===")
-    print(f"  nodes:        {len(nodes):,}")
-    print(f"  edges:        {len(edges):,}  "
-          f"(policy->policy: {sum(1 for e in edges if e[7]):,})")
-    print(f"  categories:   {len(cats):,} (depth<= {args.max_depth})")
-    ns_spread = {}
-    for n in nodes:
-        ns_spread[n[4]] = ns_spread.get(n[4], 0) + 1
-    print(f"  namespace spread: {dict(sorted(ns_spread.items()))}")
-    print(f"  with QID:     {sum(1 for n in nodes if n[6]):,}")
+    print("\n=== summary ===")
+    print(f"  confirmed {len(C):,} · suspect {len(suspects):,} · total {len(admitted):,}")
+    print(f"  links {len(links):,} (policy->policy {sum(1 for l in links if l[6]):,})")
+    print(f"  indicator cats {len(ind_cats):,} · indicator navboxes {len(ind_navbox_titles):,}")
+    nsp = {}
+    for n in nodes: nsp[n[4]] = nsp.get(n[4], 0) + 1
+    print(f"  namespace spread {dict(sorted(nsp.items()))}")
+    roles = {}
+    for r in tmpl_reg: roles[r[3]] = roles.get(r[3], 0) + 1
+    print(f"  template roles (registry) {roles}")
+    print(f"  with QID {sum(1 for n in nodes if n[6]):,}")
 
 
 if __name__ == "__main__":

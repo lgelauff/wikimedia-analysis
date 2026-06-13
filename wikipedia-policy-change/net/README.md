@@ -1,30 +1,31 @@
-# net/ — policy network build (M1)
+# net/ — policy network build (clean base)
 
-Current/2026 structural slice of the policy network from the Toolforge replica.
-No dumps, no LLM. See [`../docs/policy_network_design.md`](../docs/policy_network_design.md) and [`../docs/ROADMAP.md`](../docs/ROADMAP.md).
+Current policy network for one wiki. Admission + facets from the Toolforge replica;
+the **link graph from wikitext** (API + mwparserfromhell), not pagelinks. No LLM.
+See [`../docs/CLEAN_BASE_PROPOSAL.md`](../docs/CLEAN_BASE_PROPOSAL.md) and [`../docs/ROADMAP.md`](../docs/ROADMAP.md).
 
-- `schema.sql` — ToolsDB tables (node, edge, category_registry, template_registry, build_run).
-- `net_build_current.py` — BFS the policy/guideline category tree → admit (category OR status-template) → edges (category/template/wikilink, redirect-resolved) → QIDs → write ToolsDB + local SQLite.
+- `schema.sql` — ToolsDB tables: `node` (+confidence/admitted_via/status_tier), `link`
+  (wikilink graph), facets `node_category` / `node_template`(role) / `navbox_member`,
+  `category_registry` / `template_registry` (scored), `build_run`.
+- `net_build_current.py` — confirmed seed (status-template ∪ core-category ∪ Wikidata
+  P31=Q4656150) → **scored** category + navbox discovery (support/density vs confirmed)
+  → suspects → wikitext link graph → role-tagged facets → ToolsDB + SQLite.
 
 ## Run on Toolforge
 
-**Key rule:** create the venv AND run the script with the *same* image (`python3.11`).
-A venv built in a job won't work from the bastion (different interpreter path).
-Run via `toolforge jobs run`; write SQLite to `~` (a pod's `/tmp` is ephemeral).
+**Same image for venv and run** (`python3.13`). venv needs **pymysql + mwparserfromhell**.
+Outbound API calls (wikitext, siteinfo, Wikidata) run from the job pod.
 
 ```bash
 become wikimedia-policies
 
-# one-time: clone + venv
+# one-time: clone + venv (--without-pip + curl-bootstrap; ensurepip hangs in the pod)
 cd $HOME && git clone https://github.com/lgelauff/wikimedia-analysis.git
-# NB: plain `python3 -m venv` runs ensurepip, which spawns a subprocess the pod
-# blocks (hangs, no logs). Use --without-pip + curl-bootstrap (no subprocess):
 toolforge jobs run venv --image python3.13 --wait --command \
-  "python3 -m venv ~/venv --without-pip && curl -sS https://bootstrap.pypa.io/get-pip.py | ~/venv/bin/python3 && ~/venv/bin/python3 -m pip install pymysql"
-toolforge jobs logs venv
+  "python3 -m venv ~/venv --without-pip && curl -sS https://bootstrap.pypa.io/get-pip.py | ~/venv/bin/python3 && ~/venv/bin/python3 -m pip install pymysql mwparserfromhell"
 ls ~/venv/bin/        # expect python3, pip
 
-# one-time: load schema into ToolsDB
+# one-time: (re)load schema into ToolsDB  (DROPs + recreates the clean tables)
 mariadb --defaults-file=~/replica.my.cnf -h tools.db.svc.wikimedia.cloud \
   $(grep '^user' ~/replica.my.cnf | cut -d= -f2 | tr -d ' ')__policies \
   < $HOME/wikimedia-analysis/wikipedia-policy-change/net/schema.sql
@@ -32,21 +33,23 @@ mariadb --defaults-file=~/replica.my.cnf -h tools.db.svc.wikimedia.cloud \
 # update later
 git -C $HOME/wikimedia-analysis pull
 
-# smoke test (shallow, SQLite only) — read summary from logs
-toolforge jobs run net-smoke --image python3.13 --mem 1Gi --wait \
-  --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 2 --no-toolsdb --sqlite ~/net_smoke.db"
-toolforge jobs logs net-smoke
+# smoke (SQLite only, skip Wikidata for speed) — read summary from ~/net-smoke.out
+toolforge jobs run net-smoke --image python3.13 --mem 2Gi --wait \
+  --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --no-toolsdb --no-wikidata --sqlite ~/net_smoke.db"
+cat ~/net-smoke.out
 
-# full build (writes ToolsDB)
-toolforge jobs run net-build --image python3.13 --mem 2Gi --wait \
-  --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026 --max-depth 4"
-toolforge jobs logs net-build
+# full build (ToolsDB + Wikidata) per wiki
+toolforge jobs run net-en --image python3.13 --mem 2Gi --wait \
+  --command "~/venv/bin/python -u ~/wikimedia-analysis/wikipedia-policy-change/net/net_build_current.py --wiki enwiki --year 2026"
+cat ~/net-en.out
+# then: --wiki dewiki , --wiki nlwiki  (jobs net-de / net-nl)
 ```
 
-## M1 gate (sanity-check the summary)
-- node count plausible (hundreds–low thousands, not tens of thousands → category drift)
-- namespace spread dominated by ns 4 (+ some 10/12/14/100), **no ns 0**
-- policy→policy edge count non-trivial
-- BFS depth fan-out reasonable (watch the per-depth `+N categories` log; if depth 4 explodes, lower `--max-depth`)
+## Gate (read the summary)
+- `confirmed` count plausible; `suspect` a sensible fraction (not 10× confirmed → loosen/tighten `--s-min`/`--d-min`)
+- namespace spread ns-4-dominated, **no ns 0**
+- `policy->policy` link count non-trivial (these are in-body wikilinks, no navbox cliques)
+- template roles: a handful `status` / `navigation`, the bulk `noise`
+- inspect `category_registry` / `template_registry` ordered by `support` to set the score cut by eye
 
-Tune `--max-depth` from the smoke test before the full run. Idempotent: re-running replaces that (wiki, year) slice.
+Tuning: `--s-min` (min confirmed overlap), `--d-min` (min policy-density). Idempotent: re-running replaces that (wiki, year) slice. `--no-wikidata` skips the Wikidata API calls.
