@@ -1,0 +1,9 @@
+# RfC PAWS Baseline — Summary
+Bot accounts ever flagged:        1,168
+RfC pages (new, 2006+):           1,625
+Year range:                       2006 – 2026
+Median tenure RfC unreverted:     1192 days
+Median tenure RfA unreverted:     682 days
+Median editors per RfC:           10.0
+Median RfC duration:              4958.0 days
+Median RfC revert rate:           0.0%
