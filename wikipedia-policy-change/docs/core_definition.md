@@ -76,7 +76,16 @@ across all years.
 
 Phase 1 walks only the fixed current core. Phase 2 makes each year **discover its own members**:
 
-- For year Y, don't just re-check the known set — also find pages that, *that year*, sat in a
+- **The overview page, per year (curated ground truth).** Parse the 1-Jan-Y version of the
+  official index (`Wikipedia:List of policies and guidelines` and per-wiki equivalents — we
+  already fetch the current ones in `collect_policy_overview.py`). Its links are the community's
+  own roster of what was policy/guideline *that year*; its section ("Policies" / "Guidelines")
+  gives `status_tier` directly. This is the highest-precision per-year membership source AND the
+  main remedy for Phase-1 survivorship bias: pages listed in an old overview but absent from the
+  2026 seed are exactly the historical-only policies (merged/deleted/renamed) Phase 1 misses.
+  *Caveats:* the list page may not exist / be sparse before ~2007 (the framework crystallized
+  then); it gets restructured over 20 years, so section→tier mapping is reconstructed per year.
+- For year Y, also find pages that, *that year*, sat in a
   core category or transcluded an indicator template (parsed from each snapshot's wikitext
   `[[Category:…]]` / `{{template}}`), scored against the confirmed-that-year set.
 - New members not in the current seed → added with their active-year interval. This is how
