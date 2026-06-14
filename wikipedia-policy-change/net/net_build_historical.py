@@ -229,12 +229,20 @@ def main():
         sdb.executemany("INSERT INTO link VALUES(?,?,?,?,?,?,?)", links)
         sdb.commit()
         if not a.no_toolsdb:
-            with db.cursor() as cur:
-                cur.execute("DELETE FROM node WHERE wiki=%s AND year=%s", (wiki, year))
-                cur.execute("DELETE FROM link WHERE wiki=%s AND year=%s", (wiki, year))
-                cur.executemany("INSERT INTO node VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", nodes)
-                for j in range(0, len(links), 1000):
-                    cur.executemany("INSERT INTO link VALUES(%s,%s,%s,%s,%s,%s,%s)", links[j:j+1000])
+            # atomic per-year write: node+link in ONE transaction so a mid-write
+            # failure leaves the year empty (resume redoes it cleanly), never a
+            # node-only partial that the year_done check would mistake for complete.
+            db.begin()
+            try:
+                with db.cursor() as cur:
+                    cur.execute("DELETE FROM node WHERE wiki=%s AND year=%s", (wiki, year))
+                    cur.execute("DELETE FROM link WHERE wiki=%s AND year=%s", (wiki, year))
+                    cur.executemany("INSERT INTO node VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", nodes)
+                    for j in range(0, len(links), 1000):
+                        cur.executemany("INSERT INTO link VALUES(%s,%s,%s,%s,%s,%s,%s)", links[j:j+1000])
+                db.commit()
+            except Exception:
+                db.rollback(); raise
         core_links = sum(1 for l in links if l[6])
         print(f"  {year}: exist {n_exist} · core {n_core} · core->core links {core_links}", flush=True)
 
