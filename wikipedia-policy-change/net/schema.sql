@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS node_template;
 DROP TABLE IF EXISTS navbox_member;
 DROP TABLE IF EXISTS category_registry;
 DROP TABLE IF EXISTS template_registry;
+DROP TABLE IF EXISTS provenance;
 DROP TABLE IF EXISTS build_run;
 DROP TABLE IF EXISTS edge;   -- retire the lumped M1 table
 
@@ -104,10 +105,25 @@ CREATE TABLE template_registry (
   PRIMARY KEY (wiki, year, template_title)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Per-node evidence trail: WHY each page is core/candidate (auditable backtrace).
+CREATE TABLE provenance (
+  wiki           VARCHAR(32)    NOT NULL,
+  year           SMALLINT       NOT NULL,
+  page_id        INT UNSIGNED   NOT NULL,
+  role           VARCHAR(10)    NOT NULL,            -- core | candidate
+  evidence_type  VARCHAR(24)    NOT NULL,            -- status_template|wikidata|scored_category|scored_navbox|essay
+  evidence_title VARBINARY(255) NOT NULL,            -- the template/category/navbox/QID that surfaced it
+  support        INT            DEFAULT NULL,        -- score at surfacing (scored evidence only)
+  density        FLOAT          DEFAULT NULL,
+  KEY k_pg (wiki, year, page_id),
+  KEY k_ev (wiki, year, evidence_type)
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE build_run (
   wiki        VARCHAR(32)   NOT NULL,
   year        SMALLINT      NOT NULL,
   built_at    VARBINARY(32) NOT NULL,
+  git_commit  VARBINARY(16) NOT NULL,                -- pins the exact code version
   source      VARBINARY(64) NOT NULL,
   n_confirmed INT NOT NULL,
   n_suspect   INT NOT NULL,

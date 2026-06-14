@@ -120,6 +120,17 @@ def dec(x):
     return x.decode() if isinstance(x, bytes) else x
 
 
+def git_commit():
+    """Short HEAD of the repo this script lives in (pins the build for reproduction)."""
+    try:
+        import subprocess
+        return subprocess.check_output(
+            ["git", "-C", str(Path(__file__).resolve().parent), "rev-parse", "--short", "HEAD"],
+            text=True, timeout=5).strip()
+    except Exception:
+        return "unknown"
+
+
 # -------------------------------------------------------------------------- API
 def api(wiki, params):
     lang = wiki[:-4] if wiki.endswith("wiki") else wiki
@@ -370,10 +381,11 @@ CREATE TABLE IF NOT EXISTS node_template(wiki,year,page_id,template_title,role);
 CREATE TABLE IF NOT EXISTS navbox_member(wiki,year,page_id,navbox_title);
 CREATE TABLE IF NOT EXISTS category_registry(wiki,year,category_title,support,n_members,density,is_indicator,PRIMARY KEY(wiki,year,category_title));
 CREATE TABLE IF NOT EXISTS template_registry(wiki,year,template_title,role,support,density,is_indicator,PRIMARY KEY(wiki,year,template_title));
-CREATE TABLE IF NOT EXISTS build_run(wiki,year,built_at,source,n_confirmed,n_suspect,n_links,s_min,d_min);
+CREATE TABLE IF NOT EXISTS provenance(wiki,year,page_id,role,evidence_type,evidence_title,support,density);
+CREATE TABLE IF NOT EXISTS build_run(wiki,year,built_at,git_commit,source,n_confirmed,n_suspect,n_links,s_min,d_min);
 """
 TABLES = ["node", "link", "node_category", "node_template", "navbox_member",
-          "category_registry", "template_registry", "build_run"]
+          "category_registry", "template_registry", "provenance", "build_run"]
 
 
 def write_sqlite(path, wiki, year, data):
@@ -387,7 +399,8 @@ def write_sqlite(path, wiki, year, data):
     db.executemany("INSERT INTO navbox_member VALUES(?,?,?,?)", data["navbox_member"])
     db.executemany("INSERT INTO category_registry VALUES(?,?,?,?,?,?,?)", data["category_registry"])
     db.executemany("INSERT INTO template_registry VALUES(?,?,?,?,?,?,?)", data["template_registry"])
-    db.execute("INSERT INTO build_run VALUES(?,?,?,?,?,?,?,?,?)", data["build_run"])
+    db.executemany("INSERT INTO provenance VALUES(?,?,?,?,?,?,?,?)", data["provenance"])
+    db.execute("INSERT INTO build_run VALUES(?,?,?,?,?,?,?,?,?,?)", data["build_run"])
     db.commit(); db.close(); print(f"  wrote SQLite -> {path}")
 
 
@@ -407,7 +420,9 @@ def write_toolsdb(wiki, year, data):
             cur.executemany("INSERT INTO navbox_member VALUES(%s,%s,%s,%s)", ch)
         cur.executemany("INSERT INTO category_registry VALUES(%s,%s,%s,%s,%s,%s,%s)", data["category_registry"])
         cur.executemany("INSERT INTO template_registry VALUES(%s,%s,%s,%s,%s,%s,%s)", data["template_registry"])
-        cur.execute("INSERT INTO build_run VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)", data["build_run"])
+        for ch in batched(data["provenance"], 1000):
+            cur.executemany("INSERT INTO provenance VALUES(%s,%s,%s,%s,%s,%s,%s,%s)", ch)
+        cur.execute("INSERT INTO build_run VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", data["build_run"])
     conn.close(); print("  wrote ToolsDB")
 
 
@@ -452,17 +467,19 @@ def main():
             support_by_cat[c] += 1
     cand_cats = list(support_by_cat)
     ncounts = cat_member_counts(rep, cand_cats)      # cheap COUNT, no member lists
-    cat_reg, ind_cats = [], set()
+    cat_reg, ind_cats, cat_score = [], set(), {}
     for cat in cand_cats:
         supp = support_by_cat[cat]; n = ncounts.get(cat, 0)
         dens = supp / n if n else 0
         is_ind = supp >= a.s_min and dens >= a.d_min
-        if is_ind: ind_cats.add(cat)
+        if is_ind: ind_cats.add(cat); cat_score[cat] = (supp, round(dens, 4))
         cat_reg.append((wiki, year, cat, supp, n, round(dens, 4), int(is_ind)))
     ind_members = cat_members(rep, ind_cats)         # member lists ONLY for indicators
-    susp_cat = set()
+    susp_cat, prov = set(), []                        # prov = per-node evidence trail
     for cat in ind_cats:
-        susp_cat |= ind_members.get(cat, set()) - core
+        for pid in ind_members.get(cat, set()) - core:
+            susp_cat.add(pid)
+            prov.append([pid, "candidate", "scored_category", cat, *cat_score[cat]])
     print(f"  candidate cats {len(cand_cats):,} · indicators {len(ind_cats):,} · territory {len(susp_cat):,}")
 
     # C. scored navbox discovery -> expansion candidates
@@ -474,6 +491,7 @@ def main():
     nav_pid = title_to_pageid(rep, 10, cand_nav_titles)
     tgt = template_targets(rep, set(nav_pid.values()))
     tmpl_reg, ind_navbox_titles, susp_nav, navbox_members_rows = [], set(), set(), []
+    nav_score = {}
     cmeta = page_meta(rep, core)
     c_key = {(m["ns"], m["title"]): pid for pid, m in cmeta.items()}
     for tt, tp in nav_pid.items():
@@ -481,19 +499,21 @@ def main():
         tpids = {c_key.get(k) for k in targets if k in c_key}; tpids.discard(None)
         supp = len(tpids); n = len(targets); dens = supp / n if n else 0
         is_ind = supp >= a.s_min and dens >= a.d_min
-        if is_ind: ind_navbox_titles.add(tt)
+        if is_ind: ind_navbox_titles.add(tt); nav_score[tt] = (supp, round(dens, 4))
         tmpl_reg.append((wiki, year, tt, "navigation" if is_ind else "noise",
                          supp, round(dens, 4), int(is_ind)))
+    # resolve indicator-navbox targets -> page_ids; attribute each to its navbox(es)
+    target_to_navboxes = {}
     for tt in ind_navbox_titles:
-        for (ns, title) in tgt.get(nav_pid[tt], []):
-            mp = c_key.get((ns, title))
-            # navbox targets that aren't core become expansion territory
-    # resolve indicator-navbox targets -> page_ids for candidate territory
-    nav_target_keys = {(ns, t) for tt in ind_navbox_titles for (ns, t) in tgt.get(nav_pid[tt], [])}
-    for ns in {k[0] for k in nav_target_keys}:
-        tpid = title_to_pageid(rep, ns, [t for (n, t) in nav_target_keys if n == ns])
+        for key in tgt.get(nav_pid[tt], []):
+            target_to_navboxes.setdefault(key, set()).add(tt)
+    for ns in {k[0] for k in target_to_navboxes}:
+        tpid = title_to_pageid(rep, ns, [t for (n, t) in target_to_navboxes if n == ns])
         for t, pid in tpid.items():
-            if pid not in core: susp_nav.add(pid)
+            if pid in core: continue
+            susp_nav.add(pid)
+            for tt in target_to_navboxes[(ns, t)]:
+                prov.append([pid, "candidate", "scored_navbox", tt, *nav_score[tt]])
     print(f"  candidate navboxes {len(cand_nav_titles):,} · indicators {len(ind_navbox_titles):,} · territory {len(susp_nav):,}")
 
     # D. candidates (expansion territory) + admitted set
@@ -515,7 +535,17 @@ def main():
     for pid in candidates:
         via.setdefault(pid, "essay" if pid in essay_pids else
                        "scored_navbox" if pid in susp_nav else "scored_category")
-    print(f"  admitted {len(admitted):,}  (core {len(core):,} · candidate {len(candidates):,})")
+    # evidence trail for core nodes + essays (scored evidence already in prov)
+    for pid in core:
+        et = via.get(pid, "status_template")
+        title = (Q_POLICY_PAGE if et == "wikidata"
+                 else next(iter(core_host.get(pid, {"?"})), "?"))
+        prov.append([pid, "core", et, title, None, None])
+    for pid in (essay_pids & admitted) - core:
+        prov.append([pid, "candidate", "essay",
+                     next(iter(essay_host.get(pid, {"?"})), "?"), None, None])
+    prov = [[wiki, year, *r] for r in prov if r[0] in admitted]
+    print(f"  admitted {len(admitted):,}  (core {len(core):,} · candidate {len(candidates):,}) · prov rows {len(prov):,}")
 
     # E. link graph from wikitext — CORE only (the live graph is core->core)
     print("E. wikitext links (core) …")
@@ -558,20 +588,30 @@ def main():
             if mp: navbox_members_rows.append((wiki, year, mp, tt))
 
     built_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    commit = git_commit()
     nodes = [(wiki, p, year, meta[p]["title"], meta[p]["ns"], meta[p]["is_redirect"],
               qid.get(p), "core" if p in core else "candidate",
               via.get(p, "scored_category"), tier_of.get(p)) for p in admitted]
     data = {
         "node": nodes, "link": links, "node_category": nc, "node_template": nt,
         "navbox_member": navbox_members_rows,
-        "category_registry": cat_reg, "template_registry": tmpl_reg,
-        "build_run": (wiki, year, built_at, "replica+api:current",
+        "category_registry": cat_reg, "template_registry": tmpl_reg, "provenance": prov,
+        "build_run": (wiki, year, built_at, commit, "replica+api:current",
                       len(core), len(candidates), len(links), a.s_min, a.d_min),
     }
 
     print("G. writing …")
     write_sqlite(a.sqlite, wiki, year, data)
     if not a.no_toolsdb: write_toolsdb(wiki, year, data)
+    # immutable per-build dump (audit / backtrace) — never overwritten
+    try:
+        import shutil
+        arch = Path.home() / "policy_net_archive"; arch.mkdir(exist_ok=True)
+        stamp = built_at.replace(":", "").replace("-", "")
+        dst = arch / f"{wiki}_{year}_{stamp}_{commit}.sqlite"
+        shutil.copy(a.sqlite, dst); print(f"  archived -> {dst}")
+    except Exception as e:
+        print(f"  archive skipped ({e})")
 
     print("\n=== summary ===")
     print(f"  CORE {len(core):,} · candidate(territory) {len(candidates):,} · total {len(admitted):,}")
