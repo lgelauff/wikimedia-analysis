@@ -5,7 +5,8 @@ net_build_historical.py — M4 Phase 1: walk the locked core back through time.
 Seeds from the current (2026) core in ToolsDB and reconstructs, for each year
 2005..2025, the 1-Jan snapshot of every seed page:
   * existence that year (no revision before 1-Jan-Y -> page absent -> no row)
-  * is_core that year (carried a policy/guideline banner, not an essay banner)
+  * is_core that year (EXPANSIVE: core unless absent or positively demoted by an
+    essay/proposed/historical banner — never reduced by mere regex misses)
   * the in-body wikilink graph among the seed set (edges-over-time)
 
 Writes year-keyed rows into the SAME schema (node, link) as the current build,
@@ -195,12 +196,19 @@ def main():
             if revid is None:
                 continue                                  # page absent that year
             n_exist += 1
-            is_core = bool(CORE_BANNER.search(wt)) and not ESSAY_BANNER.search(wt)
+            # EXPANSIVE rule: every seed page is core NOW (2026, by construction), so
+            # walking back it stays core unless there's POSITIVE counter-evidence that it
+            # wasn't policy that year — i.e. it carried an essay/proposed/historical banner.
+            # Mere absence of a detected policy banner is regex noise, NOT a demotion.
+            demote = ESSAY_BANNER.search(wt)
+            is_core = not demote
             if is_core: n_core += 1
-            tier = "essay" if ESSAY_BANNER.search(wt) else None
+            banner_seen = bool(CORE_BANNER.search(wt))     # explicit banner -> promotion signal
+            tier = demote.group(1).lower().replace(" ", "_").replace("-", "") if demote else None
             nodes.append((wiki, pid, year, title, ns, 0, None,
                           "core" if is_core else "candidate",
-                          "status_template" if is_core else "historical_seed", tier))
+                          ("status_template" if banner_seen else "inherited") if is_core else "demoted",
+                          tier))
             seen = set()
             for wl in mwp.parse(wt).filter_wikilinks():
                 lns, lt = parse_link(str(wl.title), nsmap)
