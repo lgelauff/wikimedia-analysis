@@ -38,7 +38,9 @@ Flask on Toolforge, reuse wiki-polis deploy pattern. Serves the current 3-wiki n
 - No API egress needed; depends only on M1–M2 output.
 
 ## M4 — Historical reconstruction (Tier 1, dumps)  🔵
-The annual time series. Stub-driven, resumable, API-by-revid (no history multistream index exists).
+The annual time series. Membership rule (positive evidence for/against core, expansive, per-wiki, per-year) is specified in [`core_definition.md`](core_definition.md).
+- **Phase 1 (done/validating):** walk the fixed current core back via API-by-revid; per-year existence + expansive `is_core` (demote only on positive essay/proposed/historical evidence) + core→core edges. `net_build_historical.py`.
+- **Phase 2:** each year discovers ITS OWN members (pages in a core category / transcluding an indicator template *that year*, scored against the confirmed-that-year set), so the node set = union over years, catching historical-only pages (merged/deleted/renamed). Per-year indicator set reconstructed + recorded in the year-keyed registries (definitions drift; expected back-compatible). Discovery year ≠ existence year.
 - **Pre-gate ⛔:** verify `stub-meta-history` availability + size for en/de/nl on `/public/dumps`; time a namespace-filtered streaming pass. If infeasible, fall back to API revision-index reconstruction.
 - Scripts (new): `stub_inventory.py` (stream stub, exclusion-filter ns, → 1-Jan revid per page-year into `manifest.sqlite`), `fetch_revisions.py` (API-by-revid → `cache/raw/`, hash + provenance), `parse_structure.py` (mwparserfromhell → `cache/struct/`: links/cats/templates), `net_build_historical.py` (per-year fixpoint + fill-back).
 - Reuse: the snapshot-selection + mwparserfromhell core from `policy_drift.py`.
