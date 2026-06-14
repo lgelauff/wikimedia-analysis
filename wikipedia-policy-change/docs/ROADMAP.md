@@ -64,13 +64,15 @@ Strict reduction after lenient admission.
 - Deliverable: reduced "policy body" + full admitted set + reduction reasons (audit archive).
 
 ## M8 — Atomic-statement layer  ⛔  🟢
-The project's core unit — highest-risk, currently least-specified.
+The project's core unit. Full design: [`atomic_statements_design.md`](atomic_statements_design.md).
 - **Pre-gate ⛔:** operational unit = extractive, span-anchored, deontic-marker-anchored (NOT generative). Do not start until run-to-run stability + human boundary-F1 + coverage clear pre-registered thresholds.
-- Deliverable: atomic statements per node-year (~100–300k section-level calls, not millions).
+- **Model:** statements are **entities with lifespans** (`first_year`/`last_year`), **versioned only on change**; identity carried across years by byte-hash (+fuzzy on the changed remainder); **change-gating** decomposes only page-years whose text differs (~1/3 the calls). Collapses ~9.5M naive rows → ~450k.
+- **Storage:** statement rows in SQLite/ToolsDB; span text by reference to the cleaned cache; **embed uniques** (~450k), embeddings in a vector store (the only layer leaving SQLite). See [`data_architecture.md`](data_architecture.md).
+- Deliverable: statement entities + versions + lifespans, embeddings keyed by `statement_id` for reuse at M9.
 
 ## M9 — Cross-wiki alignment  🟢
 At the atomic level; the only level where cross-wiki comparison is meaningful.
-- Architecture: block by (QID ∪ langlink) → embedding-ANN → LLM-verify top-k. Never O(n²).
+- Architecture: block by (QID ∪ langlink) → embedding-ANN → LLM-verify top-k. Never O(n²). Reuses the per-unique-statement embeddings from M8 (keyed by `statement_id`), not recomputed.
 - `relationship` field (genetic/copied vs functional/convergent) from external evidence; known translations as positive control (ties to the earlier translated-page work).
 - Deliverable: cross-wiki cluster map + gap report (absence disaggregated by cause, not symmetric).
 - **Tests H5** (cross-wiki decoupling): matched-share over years, new-node independence, genetic-signal decay, lead-lag coupling. Distinguish active divergence from abandonment via the `relationship` field + per-node activity. Structural proxy H5(a) testable earlier at M2/M4.

@@ -82,7 +82,7 @@ Three-reviewer panel (data-engineering, methodology, LLM). Full reviews in `.cla
 5. **Bootstrap selection bias:** the discovered-indicator snowball is homophilous — under-finds vocabulary-divergent / link-isolated governance on de/nl (the very cross-wiki signal of interest). Estimate miss-rate via capture–recapture across independent frames.
 6. **1-Jan off-by-one:** the 1-Jan-Y snapshot = state at end of Y−1; label time-series accordingly. Detect lifecycle status transitions (proposed→rejected/promoted) at *event* resolution from the stub; use annual snapshots for topology only.
 7. **Cache key bug:** add `model_id` to verdict cache keys (verdicts collide on model switch); `rubric_version` = content-hash; verdict cache is a first-class publishable artifact. For raw revisions, default to publishing **manifest + hashes only** (CC BY-SA attribution obligation) rather than the text blobs.
-8. **Atomic layer:** define the unit as **extractive, span-anchored, deontic-marker-anchored** (not generative); do NOT start until it clears a pre-registered human boundary-agreement gate. (Earlier "~6M statements" was a ~20× overcount — section-level work is ~100–300k calls.)
+8. **Atomic layer:** define the unit as **extractive, span-anchored, deontic-marker-anchored** (not generative); statements are **entities with lifespans** (version-on-change), not per-year snapshots; do NOT start until it clears a pre-registered human boundary-agreement gate. Full design: [`atomic_statements_design.md`](atomic_statements_design.md).
 9. **Cross-wiki matching:** block by (QID ∪ langlink) → embedding-ANN → LLM-verify top-k. Never O(n²). Add a `relationship` field (genetic/copied vs functional/convergent) backed by external evidence; use known translations as a positive control.
 10. **Validity hygiene:** state falsifiable hypotheses + their nulls (currently descriptive only; n=3 caps cross-wiki to typology + existence claims); inter-coder reliability (κ, ≥2 coders) at all three judging layers; pre-register the reduction threshold τ and report metrics as curves over τ.
 
@@ -316,7 +316,7 @@ PHASE D — Cross-wiki alignment (after B+C done for 2–3 wikis)
 
 ## 4b. Infrastructure, scale & dev workflow
 
-**Scale.** Derived structure is small (~50k node-years, 1–3M edge-rows, ~1.5GB snapshot text across 3 wikis — trivial for SQLite/ToolsDB). The atomic-statement layer is the only large table (~6M rows + an LLM call each). The heavy part is the **input**: dated enwiki SQL dumps (`pagelinks`/`categorylinks`/`templatelinks` are tens of GB *each, per date*) and XML history (multi-TB). Don't move those off-infra.
+**Scale.** Derived structure is small (~50k node-years, 1–3M edge-rows — trivial for SQLite/ToolsDB). The atomic-statement layer does NOT explode if modelled as statement **entities with lifespans** (version-on-change), not per-year snapshots: ~450k rows / ~150 MB, with only the ~2 GB of embeddings leaving SQLite for a vector store. Full storage tiers, size budgets, and the ToolsDB-quota constraint live in [`data_architecture.md`](data_architecture.md); the statement model in [`atomic_statements_design.md`](atomic_statements_design.md). The heavy part is the **input**: dated enwiki SQL dumps (`pagelinks`/`categorylinks`/`templatelinks` are tens of GB *each, per date*) and XML history (multi-TB). Don't move those off-infra.
 
 **Hybrid 3-stage architecture (compact handoffs):**
 | Stage | Where | Why |
