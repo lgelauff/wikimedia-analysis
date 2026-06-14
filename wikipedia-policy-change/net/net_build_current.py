@@ -389,7 +389,17 @@ TABLES = ["node", "link", "node_category", "node_template", "navbox_member",
 
 
 def write_sqlite(path, wiki, year, data):
-    db = sqlite3.connect(path); db.executescript(DDL_SQLITE)
+    db = sqlite3.connect(path)
+    # auto-heal a stale-schema mirror: if `node` exists with the wrong column count,
+    # drop ALL tables and recreate (the file is a disposable latest mirror; the
+    # immutable per-build archive preserves history).
+    if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='node'").fetchone():
+        ncols = len(db.execute("PRAGMA table_info(node)").fetchall())
+        if ncols != 10:
+            print(f"  (stale SQLite schema: node has {ncols} cols, expected 10 — recreating)")
+            for (t,) in db.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall():
+                db.execute(f"DROP TABLE IF EXISTS {t}")
+    db.executescript(DDL_SQLITE)
     for t in TABLES:
         db.execute(f"DELETE FROM {t} WHERE wiki=? AND year=?", (wiki, year))
     db.executemany("INSERT INTO node VALUES(?,?,?,?,?,?,?,?,?,?)", data["node"])
