@@ -212,6 +212,9 @@ def main():
             seen = set()
             for wl in mwp.parse(wt).filter_wikilinks():
                 lns, lt = parse_link(str(wl.title), nsmap)
+                # MediaWiki titles are <=255 bytes; longer = parse artifact from malformed
+                # wikitext (a stray [[ swallowing text). Skip empties/over-long.
+                if not lt or len(lt.encode("utf-8")) > 255: continue
                 if (lns, lt) in seen: continue
                 seen.add((lns, lt))
                 to_pid = seed_key.get((lns, lt))

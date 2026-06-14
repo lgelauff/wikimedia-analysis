@@ -572,6 +572,7 @@ def main():
         seen = set()
         for wl in mwp.parse(wt).filter_wikilinks():
             ns, title = parse_link(str(wl.title), nsmap)
+            if not title or len(title.encode("utf-8")) > 255: continue  # parse artifact
             if (ns, title) in seen: continue
             seen.add((ns, title))
             to_pid = core_key.get((ns, title))
