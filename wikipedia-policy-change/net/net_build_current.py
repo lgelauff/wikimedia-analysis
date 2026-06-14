@@ -250,6 +250,24 @@ def title_to_pageid(rep, ns, titles):
     return out
 
 
+def redirect_aliases(rep, pages_by_key):
+    """{(ns,title) of a redirect: target_page_id} for redirects pointing at the given
+    pages. Lets a link to a redirect of a core page resolve to that core page."""
+    alias = {}
+    keys = list(pages_by_key)            # [(ns, title), ...]
+    for ch in batched(keys):
+        vals = ",".join(["(%s,%s)"] * len(ch))
+        params = [x for k in ch for x in k]
+        for (rd_ns, rd_title, redir_ns, redir_title) in q(rep, f"""
+            SELECT r.rd_namespace, r.rd_title, p.page_namespace, p.page_title
+            FROM redirect r JOIN page p ON p.page_id = r.rd_from
+            WHERE (r.rd_namespace, r.rd_title) IN ({vals})""", params):
+            tgt = pages_by_key.get((rd_ns, dec(rd_title)))
+            if tgt:
+                alias[(redir_ns, dec(redir_title))] = tgt
+    return alias
+
+
 def template_targets(rep, template_pageids):
     """{template_page_id: set(target page_id)} — what each template links to (pagelinks)."""
     res = {}
@@ -564,6 +582,7 @@ def main():
     print("E. wikitext links (core) …")
     nsmap = siteinfo_ns(wiki)
     core_key = {(meta[p]["ns"], meta[p]["title"]): p for p in core}
+    core_key.update(redirect_aliases(rep, dict(core_key)))   # links via a redirect of a core page count
     wikitext = fetch_wikitext(wiki, core)
     links = []
     for pid in core:

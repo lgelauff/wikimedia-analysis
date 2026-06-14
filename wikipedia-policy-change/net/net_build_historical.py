@@ -78,6 +78,38 @@ def connect_toolsdb():
                            database=f"{u}__policies", charset="utf8mb4", autocommit=True)
 
 
+def connect_replica(wiki):
+    cr = creds()
+    if cr is None: return None
+    u, pw = cr
+    try:
+        return pymysql.connect(host=f"{wiki}.analytics.db.svc.wikimedia.cloud",
+                               user=u, password=pw, database=f"{wiki}_p",
+                               charset="utf8mb4", autocommit=True)
+    except Exception as e:
+        print(f"  replica unreachable ({e}) — redirect resolution disabled", flush=True)
+        return None
+
+
+def redirect_aliases(rep, pages_by_key):
+    """{(ns,title) of a redirect: target_page_id} for redirects pointing at the seed pages."""
+    if rep is None: return {}
+    alias = {}; keys = list(pages_by_key)
+    for i in range(0, len(keys), 500):
+        ch = keys[i:i+500]
+        vals = ",".join(["(%s,%s)"] * len(ch))
+        params = [x for k in ch for x in k]
+        with rep.cursor() as cur:
+            cur.execute(f"""
+                SELECT r.rd_namespace, r.rd_title, p.page_namespace, p.page_title
+                FROM redirect r JOIN page p ON p.page_id = r.rd_from
+                WHERE (r.rd_namespace, r.rd_title) IN ({vals})""", params)
+            for (rd_ns, rd_title, redir_ns, redir_title) in cur.fetchall():
+                tgt = pages_by_key.get((rd_ns, dec(rd_title)))
+                if tgt: alias[(redir_ns, dec(redir_title))] = tgt
+    return alias
+
+
 def dec(x): return x.decode() if isinstance(x, bytes) else x
 
 
@@ -167,7 +199,12 @@ def main():
     if not seed:
         sys.exit(f"no {a.seed_year} core in ToolsDB for {wiki} — run net_build_current first")
     seed_key = {(ns, t): pid for pid, t, ns in seed}
-    print(f"seed core ({a.seed_year}) = {len(seed):,} pages")
+    rep = connect_replica(wiki)
+    n_aliases = 0
+    if rep is not None:
+        aliases = redirect_aliases(rep, dict(seed_key))   # links via a redirect of a core page count
+        seed_key.update(aliases); n_aliases = len(aliases)
+    print(f"seed core ({a.seed_year}) = {len(seed):,} pages (+{n_aliases} redirect aliases)")
     nsmap = siteinfo_ns(wiki)
 
     import sqlite3
