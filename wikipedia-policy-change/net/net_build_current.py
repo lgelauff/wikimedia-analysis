@@ -287,6 +287,51 @@ def overview_core(wiki, overview_title):
     return pids
 
 
+def other_core_qids(wiki, year):
+    """QIDs that are core on OTHER wikis (read from ToolsDB)."""
+    try:
+        conn = connect_toolsdb()
+        with conn.cursor() as cur:
+            cur.execute("SELECT DISTINCT wikidata_qid FROM node WHERE confidence='core' "
+                        "AND wiki<>%s AND year=%s AND wikidata_qid IS NOT NULL", (wiki, year))
+            out = {dec(r[0]) for r in cur.fetchall()}
+        conn.close(); return out
+    except Exception as e:
+        print(f"  iw: cannot read other-wiki cores ({e})"); return set()
+
+
+def iw_core(wiki, year):
+    """Pages on THIS wiki whose Wikidata item is core on another wiki — cross-wiki
+    propagation of core membership via the QID/sitelink graph."""
+    qids = other_core_qids(wiki, year)
+    if not qids:
+        print("  iw: no other-wiki cores yet (build the rest, then re-run)"); return set()
+    titles = set()
+    for ch in batched(list(qids), 50):
+        url = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
+            {"action": "wbgetentities", "ids": "|".join(ch), "props": "sitelinks",
+             "sitefilter": wiki, "format": "json"})
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}),
+                                        timeout=60, context=_SSL) as r:
+                d = json.loads(r.read())
+        except Exception as e:
+            print(f"    iw wikidata skip ({e})"); continue
+        for _qid, ent in d.get("entities", {}).items():
+            sl = ent.get("sitelinks", {}).get(wiki)
+            if sl: titles.add(sl["title"])
+        time.sleep(0.3)
+    pids = set()
+    for ch in batched(list(titles), 50):
+        r = api(wiki, {"action": "query", "titles": "|".join(ch),
+                       "redirects": "1", "prop": "info"})
+        for p in r.get("query", {}).get("pages", []):
+            if not p.get("missing") and p.get("ns") == 4:
+                pids.add(p["pageid"])
+    print(f"  iw-core (QID-equivalents of other wikis' cores): {len(pids):,}")
+    return pids
+
+
 def redirect_aliases(rep, pages_by_key):
     """{(ns,title) of a redirect: target_page_id} for redirects pointing at the given
     pages. Lets a link to a redirect of a core page resolve to that core page."""
@@ -522,15 +567,18 @@ def main():
     essay_pids = set(essay_host)
     banner_core = set(core_host) - essay_pids
     overview_pids = overview_core(wiki, WIKI_OVERVIEW.get(wiki)) - essay_pids
-    core = banner_core | overview_pids
+    iw_pids = iw_core(wiki, year) - essay_pids        # QID-equivalents of other wikis' cores
+    core = banner_core | overview_pids | iw_pids
     via = {pid: "status_template" for pid in banner_core}
     for pid in overview_pids:
         via.setdefault(pid, "overview")
+    for pid in iw_pids:
+        via.setdefault(pid, "iw_qid")
     tier_of = {}
     for pid, ts in essay_host.items():
         tier_of[pid] = next((ESSAY_TIER[t] for t in ts if t in ESSAY_TIER), "essay")
     print(f"  core = banner {len(banner_core):,} ∪ overview {len(overview_pids):,} "
-          f"= {len(core):,} (essay-tagged {len(essay_pids):,})")
+          f"∪ iw {len(iw_pids):,} = {len(core):,} (essay-tagged {len(essay_pids):,})")
 
     # B. scored category discovery -> expansion candidates (anchored on core)
     print("B. category scoring …")
@@ -614,6 +662,7 @@ def main():
         et = via.get(pid, "status_template")
         title = (Q_POLICY_PAGE if et == "wikidata"
                  else WIKI_OVERVIEW.get(wiki, "?") if et == "overview"
+                 else qid.get(pid, "iw") if et == "iw_qid"
                  else next(iter(core_host.get(pid, {"?"})), "?"))
         prov.append([pid, "core", et, title, None, None])
     for pid in (essay_pids & admitted) - core:
