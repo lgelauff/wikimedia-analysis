@@ -50,6 +50,14 @@ WIKI_ROOTS = {
     "dewiki": "Wikipedia:Richtlinien",
     "nlwiki": "Wikipedia:Beleid",
 }
+# Curated overview/index page per wiki — its project-ns links are a CORE seed
+# (hybrid: core = status-banner ∪ overview-listed). Primary signal where there is
+# no status-banner culture (de/nl). Probed roster sizes: en 300, de 59, nl 83.
+WIKI_OVERVIEW = {
+    "enwiki": "Wikipedia:List of policies and guidelines",
+    "dewiki": "Wikipedia:Richtlinien",
+    "nlwiki": "Wikipedia:Richtlijnen",
+}
 # Policy/guideline status banners → CORE (the "this IS policy/guideline" templates).
 CORE_STATUS_TEMPLATES = {
     "enwiki": ["Policy", "Guideline", "MoS_guideline", "Subcat_guideline",
@@ -248,6 +256,35 @@ def title_to_pageid(rep, ns, titles):
                                f"WHERE page_namespace=%s AND page_title IN ({ph})", [ns, *ch]):
             out[dec(t)] = pid
     return out
+
+
+def overview_core(wiki, overview_title):
+    """Project-ns (ns 4) page_ids linked from the curated overview/index page.
+    The API resolves redirects + the WP:/pseudo-namespace natively."""
+    if not overview_title:
+        return set()
+    d = api(wiki, {"action": "query", "titles": overview_title, "prop": "revisions",
+                   "rvprop": "content", "rvslots": "main", "redirects": "1"})
+    pages = d.get("query", {}).get("pages", [])
+    if not pages or "revisions" not in pages[0]:
+        print(f"  overview page not found: {overview_title}"); return set()
+    wt = pages[0]["revisions"][0]["slots"]["main"]["content"]
+    raw = set()
+    for wl in mwp.parse(wt).filter_wikilinks():
+        t = str(wl.title).split("#")[0].strip().lstrip(":")
+        if t.lower().startswith(("wikipedia:", "wp:", "project:", "help:")):
+            raw.add(t)
+    pids = set()
+    raw = list(raw)
+    for i in range(0, len(raw), 50):
+        ch = raw[i:i + 50]
+        r = api(wiki, {"action": "query", "titles": "|".join(ch),
+                       "redirects": "1", "prop": "info"})
+        for p in r.get("query", {}).get("pages", []):
+            if not p.get("missing") and p.get("ns") == 4:
+                pids.add(p["pageid"])
+    print(f"  overview roster ({overview_title}): {len(pids):,} ns4 pages")
+    return pids
 
 
 def redirect_aliases(rep, pages_by_key):
@@ -476,18 +513,24 @@ def main():
     rep = connect_replica(wiki)
     print(f"=== clean build: {wiki} {year} root='{root}' s_min={a.s_min} d_min={a.d_min} ===")
 
-    # A. CORE seed — project-ns pages carrying a policy/guideline status banner,
-    #    minus essay-tagged (an essay/supplement/historical tag OVERRIDES -> candidate).
+    # A. CORE seed — HYBRID: status-banner ∪ overview-listed, minus essay-tagged.
+    #    Banner is the en signal; overview is the primary signal where there's no
+    #    banner culture (de/nl). An essay/supplement/historical tag OVERRIDES -> candidate.
     print("A. core seed …")
     core_host = transcluding(rep, core_t, ns=4)      # {pid: {tmpl}} in project ns
     essay_host = transcluding(rep, essay_t)          # {pid: {tmpl}} any ns
     essay_pids = set(essay_host)
-    core = set(core_host) - essay_pids
-    via = {pid: "status_template" for pid in core}
+    banner_core = set(core_host) - essay_pids
+    overview_pids = overview_core(wiki, WIKI_OVERVIEW.get(wiki)) - essay_pids
+    core = banner_core | overview_pids
+    via = {pid: "status_template" for pid in banner_core}
+    for pid in overview_pids:
+        via.setdefault(pid, "overview")
     tier_of = {}
     for pid, ts in essay_host.items():
         tier_of[pid] = next((ESSAY_TIER[t] for t in ts if t in ESSAY_TIER), "essay")
-    print(f"  core (policy/guideline banner, ns4, non-essay) = {len(core):,}; essay-tagged = {len(essay_pids):,}")
+    print(f"  core = banner {len(banner_core):,} ∪ overview {len(overview_pids):,} "
+          f"= {len(core):,} (essay-tagged {len(essay_pids):,})")
 
     # B. scored category discovery -> expansion candidates (anchored on core)
     print("B. category scoring …")
@@ -570,6 +613,7 @@ def main():
     for pid in core:
         et = via.get(pid, "status_template")
         title = (Q_POLICY_PAGE if et == "wikidata"
+                 else WIKI_OVERVIEW.get(wiki, "?") if et == "overview"
                  else next(iter(core_host.get(pid, {"?"})), "?"))
         prov.append([pid, "core", et, title, None, None])
     for pid in (essay_pids & admitted) - core:
