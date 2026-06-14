@@ -68,6 +68,8 @@ ESSAY_TIER = {"Essay": "essay", "Humorous_essay": "essay", "Supplement": "supple
               "WikiProject_advice": "advice", "Historical": "historical",
               "Proposed": "proposed", "Failed_proposal": "rejected", "Rejected": "rejected"}
 EXCLUDE_NS = {0}
+# Sandbox/archive subpages inherit a policy banner but aren't policy pages.
+NOISE_SUBPAGE = re.compile(r"/(sandbox\d*|archive)", re.I)
 Q_POLICY_PAGE = "Q4656150"      # Wikimedia project policies and guidelines page
 Q_NAVBOX      = "Q11753321"     # Wikimedia navigational template
 BATCH = 500
@@ -530,7 +532,8 @@ def main():
     candidates = (susp_cat | susp_nav | essay_pids) - core
     admitted = core | candidates
     meta = page_meta(rep, admitted)
-    admitted = {p for p in admitted if p in meta and meta[p]["ns"] not in EXCLUDE_NS}
+    admitted = {p for p in admitted if p in meta and meta[p]["ns"] not in EXCLUDE_NS
+                and not NOISE_SUBPAGE.search(meta[p]["title"])}
     core &= admitted; candidates = admitted - core
     qid = qids(rep, admitted)
 
