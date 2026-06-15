@@ -25,6 +25,26 @@ page (one rule, exception, qualifier, or definition). The unit is:
 human boundary-F1, and coverage clear pre-registered thresholds. Until then the layer
 "generates whatever number the model prefers, not a measurement."
 
+### 1a. Segment type — pages MIX rule and summary
+
+A page is not uniformly "policy": it interleaves (a) **genuine rule** ("editors must…"),
+(b) **summary-of-rule** (nutshell/"in short" boxes that restate the rule, or summaries of
+*other* policies), (c) **meta-pointer** (cross-references, "how X relates to Y", lists), and
+(d) **scaffolding** (examples, history, see-also, nav). So page-level "policy-ness" is best
+read as a **composition** (fraction of genuine rule vs summary vs meta vs scaffolding), not a
+binary label — and "pages that *are* policy" differ from "pages *about* policy" (Five pillars,
+Simplified ruleset, the index pages are meta; they're also the heavily-linked hubs that surface
+as core via overview/iw signals).
+
+Each extracted segment therefore carries a **type**: `rule | summary | meta | scaffolding`.
+Consequences for the model:
+- Only `rule` segments are independent **statements** for the lifespan/identity model.
+- A `summary` that restates a nearby rule is **linked to that rule, not counted as a separate
+  statement** (double-counting guard) — and it matters because summaries get rewritten as the
+  policy ecosystem shifts while the underlying rule ossifies, so conflating them would smear
+  H1/H2/H3 (additive accretion / ossification / defensive detail).
+- `meta`/`scaffolding` are excluded from the statement count (kept as page attributes if useful).
+
 ---
 
 ## 2. Core decision — statements are entities with lifespans, NOT per-year snapshots
