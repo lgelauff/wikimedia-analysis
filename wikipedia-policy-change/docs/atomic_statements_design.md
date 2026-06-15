@@ -7,6 +7,18 @@ so the storage model is decided *before* we build, not discovered mid-build.
 Companion: storage tiers & size budgets in [`data_architecture.md`](data_architecture.md);
 milestone context in [`ROADMAP.md`](ROADMAP.md) M8.
 
+## 0. Purpose (north star)
+
+The end goal is **comparable atomic policy elements across languages** — the unit of comparison
+is the *element*, not the page. This inverts the precision/recall split:
+- **Page set = recall net.** Cast wide; include borderline pages (process/venue pages like
+  polls, deletion machinery — "policy-through-structure") rather than excluding them, because
+  the real filtering happens at the element level. Excluding a process page at the page level
+  silently drops a whole *kind* of policy (procedural), which is often where wikis differ most.
+- **Element extraction = precision.** Decide what is a genuine policy element here, then align
+  elements cross-lingually (M9). Pages look nothing alike across wikis (banner vs navbox vs
+  process page); elements are what's comparable.
+
 ---
 
 ## 1. The unit
@@ -28,17 +40,21 @@ human boundary-F1, and coverage clear pre-registered thresholds. Until then the 
 ### 1a. Segment type — pages MIX rule and summary
 
 A page is not uniformly "policy": it interleaves (a) **genuine rule** ("editors must…"),
-(b) **summary-of-rule** (nutshell/"in short" boxes that restate the rule, or summaries of
-*other* policies), (c) **meta-pointer** (cross-references, "how X relates to Y", lists), and
-(d) **scaffolding** (examples, history, see-also, nav). So page-level "policy-ness" is best
+(b) **procedure** — policy-through-structure: a process/venue definition that is normative by
+*being the process* ("a vote runs N days", "deletion follows these steps"), not by deontic
+phrasing — these are real policy elements (procedural tier), NOT scaffolding;
+(c) **summary-of-rule** (nutshell/"in short" boxes that restate the rule, or summaries of
+*other* policies), (d) **meta-pointer** (cross-references, "how X relates to Y", lists), and
+(e) **scaffolding** (examples, history, see-also, nav). So page-level "policy-ness" is best
 read as a **composition** (fraction of genuine rule vs summary vs meta vs scaffolding), not a
 binary label — and "pages that *are* policy" differ from "pages *about* policy" (Five pillars,
 Simplified ruleset, the index pages are meta; they're also the heavily-linked hubs that surface
 as core via overview/iw signals).
 
-Each extracted segment therefore carries a **type**: `rule | summary | meta | scaffolding`.
+Each extracted segment therefore carries a **type**: `rule | procedure | summary | meta | scaffolding`.
 Consequences for the model:
-- Only `rule` segments are independent **statements** for the lifespan/identity model.
+- `rule` AND `procedure` segments are independent **policy elements** (statements) — procedural
+  governance counts even without deontic phrasing.
 - A `summary` that restates a nearby rule is **linked to that rule, not counted as a separate
   statement** (double-counting guard) — and it matters because summaries get rewritten as the
   policy ecosystem shifts while the underlying rule ossifies, so conflating them would smear
