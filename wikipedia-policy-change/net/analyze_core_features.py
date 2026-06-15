@@ -36,6 +36,20 @@ def load(db, wiki, year):
     return nodes, feats
 
 
+def known_indicators(db, wiki, year):
+    """Features already flagged as indicators in the registries -> 'seed' (tautological);
+    anything else high-lift is 'NEW' (a signal we didn't encode)."""
+    con = sqlite3.connect(db); k = set()
+    for (c,) in con.execute("SELECT category_title FROM category_registry "
+                            "WHERE wiki=? AND year=? AND is_indicator=1", (wiki, year)):
+        k.add("cat:" + (c.decode() if isinstance(c, bytes) else c))
+    for (t,) in con.execute("SELECT template_title FROM template_registry "
+                            "WHERE wiki=? AND year=? AND is_indicator=1", (wiki, year)):
+        t = t.decode() if isinstance(t, bytes) else t
+        k.update({f"tmpl[status]:{t}", f"tmpl[navigation]:{t}", f"tmpl[noise]:{t}"})
+    con.close(); return k
+
+
 def enrichment(nodes, feats, min_support):
     n = len(nodes); ncore = sum(1 for c in nodes.values() if c == "core")
     base = ncore / n if n else 0
@@ -100,14 +114,25 @@ def main():
         nodes, feats = load(a.db, wiki, a.year)
         if not nodes: print(f"\n=== {wiki}: no data ==="); continue
         base, n, ncore, rows = enrichment(nodes, feats, a.min_support)
+        known = known_indicators(a.db, wiki, a.year)
+        # the interesting rows are NEW (not already an encoded indicator) — surface those
+        new_rows = [r for r in rows if r[0] not in known]
         top_by_wiki[wiki] = rows
         print(f"\n=== {wiki} ===  admitted {n:,}  core {ncore:,}  base-core-rate {base:.3f}")
-        print(f"  top features by lift (support>={a.min_support}):")
-        for f, h, hc, p, lift in rows[:15]:
-            print(f"    lift {lift:5.1f}  core {hc:>4}/{h:<4} ({p:.2f})  {f[:70]}")
+        print(f"  top features by lift  ([seed]=already an indicator, tautological; [NEW]=surprise):")
+        for f, h, hc, p, lift in rows[:20]:
+            tag = "[seed]" if f in known else "[NEW] "
+            print(f"    {tag} lift {lift:5.1f}  core {hc:>4}/{h:<4}  {f[:64]}")
+        print(f"  --- NEW high-lift features (not in our indicator set) — the actual discoveries:")
+        for f, h, hc, p, lift in new_rows[:12]:
+            print(f"     lift {lift:5.1f}  core {hc:>4}/{h:<4}  {f[:64]}")
+        # off-diagonal residuals (the informative cases, not the confident center)
         miss = potential_misses(nodes, feats, rows)
-        print(f"  candidates carrying >=2 top-40 core-features (potential misses): {len(miss)}")
+        print(f"  candidates with >=2 top-40 core-features (potential MISSES): {len(miss)}")
         for pid, k in miss[:8]: print(f"     page_id {pid}  ({k} core-features)")
+        hi = {f for f, *_ in rows[:40]}
+        poor = [p for p, c in nodes.items() if c == "core" and not (feats.get(p, set()) & hi)]
+        print(f"  CORE pages with NO top-40 feature (overview/iw-only, structurally odd): {len(poor)}")
         if a.logistic:
             print("  --- logistic kitchen sink ---"); logistic(nodes, feats, a.min_support)
 
