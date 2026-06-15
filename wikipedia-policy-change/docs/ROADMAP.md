@@ -56,6 +56,7 @@ Makes network metrics defensible. Pairs with M0.
 ## M6 — Tier-2 LLM admission (rule-negative residue only)  🟢
 Cheap-draft / strong-verify. Residue is small (~1–2k pages) so cost is single-digit dollars.
 - **Pre-gate ⛔:** gold set first — 2 sets (~300–400), stratified by wiki×era×namespace×difficulty, ≥2 coders at 100% overlap, κ≥0.7 on human labels, **recall ≥ 0.95 per language** (false-rejects unrecoverable; report per-language, never pooled).
+- **Must include a held-out NEGATIVE control** — defined non-policy pages (random mainspace, non-policy project pages, known process/help pages), held out of whatever builds the indicators. Report **specificity / false-positive-rate on unseen negatives**, not just precision on training. Candidate-territory pages are NOT negatives (they're ambiguous by construction) — negatives must be confidently-not-policy. (This is the lesson from the degenerate core-feature probe: precision is tautological without a clean, held-out negative set.)
 - Scripts (new): `policy_judge.py` (versioned rubric content-hash; cache keyed by `(page_id, revid, rubric_version, model_id)` — the missing `model_id` was a correctness bug), `gold_eval.py`.
 - Deliverable: expanded admitted set + per-language accuracy report. LLM-admitted nodes label-only (don't expand).
 
