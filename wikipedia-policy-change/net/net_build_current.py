@@ -49,6 +49,10 @@ WIKI_ROOTS = {
     "enwiki": "Wikipedia policies and guidelines",
     "dewiki": "Wikipedia:Richtlinien",
     "nlwiki": "Wikipedia:Beleid",
+    # root is vestigial in the clean build (guard + print only); set to overview title.
+    "frwiki": "Wikipédia:Liste des règles et recommandations",
+    "eswiki": "Wikipedia:Lista de políticas y convenciones",
+    "jawiki": "Wikipedia:方針とガイドラインの一覧",
 }
 # Curated overview/index page per wiki — its project-ns links are a CORE seed
 # (hybrid: core = status-banner ∪ overview-listed). Primary signal where there is
@@ -57,6 +61,9 @@ WIKI_OVERVIEW = {
     "enwiki": "Wikipedia:List of policies and guidelines",
     "dewiki": "Wikipedia:Richtlinien",
     "nlwiki": "Wikipedia:Richtlijnen",
+    "frwiki": "Wikipédia:Liste des règles et recommandations",
+    "eswiki": "Wikipedia:Lista de políticas y convenciones",
+    "jawiki": "Wikipedia:方針とガイドラインの一覧",
 }
 # Policy/guideline status banners → CORE (the "this IS policy/guideline" templates).
 CORE_STATUS_TEMPLATES = {
