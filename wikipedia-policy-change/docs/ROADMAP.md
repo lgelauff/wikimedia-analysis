@@ -78,6 +78,14 @@ At the atomic level; the only level where cross-wiki comparison is meaningful.
 - Architecture: block by (QID ∪ langlink) → embedding-ANN → LLM-verify top-k. Never O(n²). Reuses the per-unique-statement embeddings from M8 (keyed by `statement_id`), not recomputed.
 - `relationship` field (genetic/copied vs functional/convergent) from external evidence; known translations as positive control (ties to the earlier translated-page work).
 - Deliverable: cross-wiki cluster map + gap report (absence disaggregated by cause, not symmetric).
+- **Unmatched element → targeted net expansion (recall on demand).** An atomic unit with no
+  cross-wiki match is a *query*, not a gap: take its content, search the other wiki wide
+  (CirrusSearch / embedding-NN over a broad page pool); if it surfaces on a page outside the
+  net, pull that page in, extract, re-align. A gap is **"genuine" only after expand-and-re-search
+  fails** — that's the mechanism behind "absence disaggregated by cause." Bonus: the fraction of
+  initial no-matches that find a home on expansion = the per-wiki recall-miss rate (capture–
+  recapture). Bound the search to policy-plausible namespaces; stop when it returns non-policy
+  (the search scope widens, the element definition does not).
 - **Tests H5** (cross-wiki decoupling): matched-share over years, new-node independence, genetic-signal decay, lead-lag coupling. Distinguish active divergence from abandonment via the `relationship` field + per-node activity. Structural proxy H5(a) testable earlier at M2/M4.
 
 ## M10 — Analysis + write-up  🟢
