@@ -265,6 +265,22 @@ def title_to_pageid(rep, ns, titles):
     return out
 
 
+def project_prefixes(wiki):
+    """Lowercased 'project:'/'help:' namespace prefixes for THIS wiki (name+canonical
+    +aliases), so the overview filter is language-agnostic — fr is 'Wikipédia:', not
+    'Wikipedia:'. Plus the WP: pseudo-namespace."""
+    d = api(wiki, {"action": "query", "meta": "siteinfo",
+                   "siprop": "namespaces|namespacealiases"})
+    pre = {"wp:", "project:"}
+    for ns in d["query"]["namespaces"].values():
+        if ns["id"] in (4, 12):
+            for k in (ns.get("name", ""), ns.get("canonical", "")):
+                if k: pre.add(k.lower() + ":")
+    for a in d["query"].get("namespacealiases", []):
+        if a["id"] in (4, 12): pre.add(a["alias"].lower() + ":")
+    return tuple(pre)
+
+
 def overview_core(wiki, overview_title):
     """Project-ns (ns 4) page_ids linked from the curated overview/index page.
     The API resolves redirects + the WP:/pseudo-namespace natively."""
@@ -276,10 +292,11 @@ def overview_core(wiki, overview_title):
     if not pages or "revisions" not in pages[0]:
         print(f"  overview page not found: {overview_title}"); return set()
     wt = pages[0]["revisions"][0]["slots"]["main"]["content"]
+    prefixes = project_prefixes(wiki)   # language-aware (fixes fr 'Wikipédia:')
     raw = set()
     for wl in mwp.parse(wt).filter_wikilinks():
         t = str(wl.title).split("#")[0].strip().lstrip(":")
-        if t.lower().startswith(("wikipedia:", "wp:", "project:", "help:")):
+        if t.lower().startswith(prefixes):
             raw.add(t)
     pids = set()
     raw = list(raw)
