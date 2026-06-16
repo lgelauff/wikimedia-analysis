@@ -8,6 +8,9 @@ with NO replica/ToolsDB access (pure local):
   2. per-node within-wiki degree, normalized by that wiki's mean (densities differ)
   3. consistently-peripheral vs consistently-central policies across languages
   4. the style/MoS apparatus per wiki (size + cross-lingual matchability)
+  5. hidden equivalents: cross-wiki page pairs that are NOT interwiki-linked but
+     sit in near-identical cross-lingual neighborhoods (candidate missing langlinks /
+     differently-subdivided families) — a no-content first pass at M9 matching.
 
 Findings (2026 snapshot) are written up in data/network/FINDINGS.md.
 Caveat: raw structural counts — no null model yet (M5 gate) before any claim.
@@ -108,6 +111,40 @@ def main():
         d_all = st.mean(deg[n] for n in alln)
         d_ex = st.mean(deg[n] for n in keep) if keep else 0
         print(f"  {w:7} full {d_all:5.1f}  ex-MoS {d_ex:5.1f}  (n {len(alln)}->{len(keep)})")
+
+    # 5. hidden equivalents — cross-wiki, NOT interwiki-linked, near-identical
+    #    cross-lingual neighborhood. Fingerprint = set of CROSS-LINGUAL clusters a
+    #    page's within-wiki neighbors belong to (a language-agnostic coordinate).
+    #    High Jaccard + not co-clustered = candidate equivalent the langlinks miss.
+    import itertools
+    cl_langs = {c: {nodes[m][0] for m in mem} for c, mem in cl.items()}
+    fp = {}
+    for n in nodes:
+        s = {find(m) for m in nbr[n] if len(cl_langs[find(m)]) >= 2}
+        if len(s) >= 6:
+            fp[n] = s
+    inv = collections.defaultdict(list)
+    for n, s in fp.items():
+        for c in s:
+            inv[c].append(n)
+    seen, cand = set(), []
+    for members in inv.values():
+        for x, y in itertools.combinations(members, 2):
+            if nodes[x][0] == nodes[y][0] or find(x) == find(y):
+                continue                                  # cross-wiki, not yet linked
+            key = (x, y) if x < y else (y, x)
+            if key in seen:
+                continue
+            seen.add(key)
+            j = len(fp[x] & fp[y]) / len(fp[x] | fp[y])
+            if j >= 0.45:
+                cand.append((j, x, y))
+    cand.sort(reverse=True)
+    print(f"\n=== hidden equivalents (cross-wiki, NOT interwiki-linked, neighborhood "
+          f"Jaccard>=0.45): {len(cand)} ===")
+    for j, x, y in cand[:20]:
+        wx, tx = nodes[x]; wy, ty = nodes[y]
+        print(f"  {j:.2f}  {wx[:2]}:{tx[:34]:34}  {wy[:2]}:{ty[:34]}")
 
 
 if __name__ == "__main__":

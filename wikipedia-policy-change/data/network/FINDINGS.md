@@ -75,6 +75,39 @@ more interconnected."
 
 ---
 
+## 4. Hidden equivalents: structure finds unlinked cross-wiki matches — in differently-subdivided families
+
+Each page gets a language-agnostic **fingerprint** = the set of cross-lingual clusters its
+within-wiki neighbors belong to. Cross-wiki page pairs that are **not** interwiki-linked (not
+co-clustered) but have near-identical fingerprints are candidate equivalents the langlinks miss.
+82 pairs at neighborhood Jaccard ≥ 0.45; the top ones share one signature:
+
+| Jacc | page A | page B |
+|---|---|---|
+| 0.75 | en:Notability (academics) | ja:特筆性 (書籍) [Notability (books)] |
+| 0.57 | en:Notability (web) | ja:特筆性 (音楽) [Notability (music)] |
+| 0.60 | en:Notability (films) | fr:Notoriété des entreprises [companies] |
+| 0.50 | nl:Fancruft | fr:Notoriété des personnes [people] |
+
+**Reading:** these are not *exact* equivalents (academics ≠ books) — they are **structural
+siblings**. Each edition subdivides a domain (notability, inclusion-criteria, trivia/style)
+into topic-specific subpages, but the subdivisions don't align 1:1, so **no langlink connects
+them** — yet they occupy the same neighborhood. So the unlinked-but-equivalent pages are exactly
+**the domains each wiki carves up differently**: the 1:1 core (NPOV, V) already has langlinks;
+the interesting cross-wiki structure lives in the differently-granular families, and structural
+neighborhood-alignment surfaces them with no content analysis.
+
+Two consequences:
+- **This is the M9 hard case, made concrete and cheap.** The real matching problem isn't the
+  1:1 core but aligning differently-granular families (does ja's one 特筆性(書籍) cover rules
+  en splits across several Notability subpages?) — which only the atomic/content layer resolves.
+  Structure is a strong, no-LLM **candidate generator** for those pairs.
+- **Structural-only has false positives** — e.g. nl:Bronvermelding [citing sources] ↔
+  fr:Diffamation [libel] share the sourcing core but aren't equivalent. So this proposes
+  candidates; M9 (content/embedding) verifies. Reproduce: `analyze_network.py` §5.
+
+---
+
 ## What this sets up
 
 The interwiki edges that align these cores are the candidate **content** matches for M8/M9.
