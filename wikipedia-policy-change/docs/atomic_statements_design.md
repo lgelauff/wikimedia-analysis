@@ -83,6 +83,14 @@ This collapse is the measurement:
 - **edit that adds a qualifier/exception** = defensive accretion (H3)
 - **removal / inversion** = genuine reform (RQ2 / H1 tail)
 
+**Separates verbosity from interconnection** (the page-level confound). Link density per
+*page* conflates two things; per *statement* it splits cleanly:
+- **verbosity / detail** = statements per policy — itself the H3 signal ("more detailed").
+- **interconnection** = cross-references per statement — verbosity-free "how woven."
+So a cross-wiki density gap (e.g. en ~2× denser per page) resolves into two distinct,
+comparable claims — is the edition more *detailed*, more *interconnected*, or both — only
+once the unit is the statement, not the page.
+
 ---
 
 ## 3. Change-gating (cost + row collapse)

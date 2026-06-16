@@ -59,11 +59,19 @@ cluster removed:
 | nl | 7.6 | 7.8 |
 
 The hypothesis was that en's density lead came from its huge, self-cross-referencing MoS.
-**The test refutes it:** removing the MoS cluster *raises* en's density (27.1), because the
-MoS subpages are *lower*-degree than en's governance core. So en's policy core is genuinely
-~2× more tightly interconnected than any other edition's — the MoS is a large but
-**structurally peripheral appendage**, not the dense center (consistent with §1, where MoS
-subpages appear among the peripheral).
+**The MoS test refutes that one:** removing the MoS cluster *raises* en's density (27.1),
+because the MoS subpages are *lower*-degree than en's governance core. The MoS is a large but
+**structurally peripheral appendage**, not the dense center (consistent with §1).
+
+**But a second confound remains and page-level structure can't resolve it: verbosity.**
+Links-per-page conflates genuine interconnection (rules that reference each other) with
+detail-level (a longer, more-elaborated page carries more wikilinks just from having more
+prose). So "en 2× denser" may mean en's governance is more *interconnected*, or that en's
+policies are more *detailed/verbose* — and the latter is itself **H3** (defensive accretion),
+a finding rather than noise. The two only separate at the **atomic-statement level**:
+verbosity = statements per policy; interconnection = cross-references *per statement*. Until
+then, #3 is "en pages carry ~2× more internal links per page," not yet "en governance is 2×
+more interconnected."
 
 ---
 
