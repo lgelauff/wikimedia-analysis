@@ -48,9 +48,15 @@ The annual time series. Membership rule (positive evidence for/against core, exp
 - Deliverable: annual structural network 2005→2026 for 3 wikis; fill-back extends pre-2005 where pages predate the anchor.
 - **Gate:** fill-back correctness; convergence of the fixpoint per year; bot-edit contamination check on snapshots.
 
-## M5 — Inference layer  ⛔  🟢
+## M5 — Inference layer  ⛔  🟢  *(in progress — current-snapshot metrics cleared)*
 Makes network metrics defensible. Pairs with M0.
 - Deliverable: null/configuration-model baselines + size-normalization + detrending for every reported metric; capture–recapture estimate of the bootstrap miss-rate (homophilous selection bias) across independent discovery frames; explicit handling of template/navbox complete-subgraph artifacts.
+- **Done (`net/null_model.py`):** the three current-snapshot FINDINGS now have null baselines —
+  (A) bootstrap CI on mean within-wiki degree (density gap: en CI non-overlapping with next → robust);
+  (B) rank-permutation null for cross-lingual periphery/centre consistency (centre p=0.002, periphery p=0.006);
+  (C) degree-preserving configuration-model rewire for hidden-equivalents (z≈67, p=0.002 — not a degree/clique artifact).
+- **Still open:** detrending for the historical time-series metrics (H1/H2/H3 trends); capture–recapture
+  miss-rate across independent discovery frames (needs ≥2 frames — ties to M6 gold set).
 - **Gate:** no density/centrality/modularity/diameter claim ships without this.
 
 ## M6 — Tier-2 LLM admission (rule-negative residue only)  🟢
