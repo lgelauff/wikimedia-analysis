@@ -5,7 +5,7 @@
 - **RQ2 (what):** what does genuine policy *reform* look like? → case studies linking textual reform to its RfC/VPP deliberation (M11; candidate detection early on existing data).
 - **RQ3 (when):** what are the inflection points in policy development? → change-point analysis on M5-normalized aggregate series (M5/M10; raw-series proxy early).
 
-Actionable companion to [`policy_network_design.md`](policy_network_design.md). Milestones are ordered by dependency; the two-tier split means **Tier 1 (structural) ships a usable artifact before any LLM spend**, and the methodology gate (M5) blocks *quantitative claims*, not the build.
+Actionable companion to [`policy_network_design.md`](policy_network_design.md). Prior art, our reproduction-and-extension framing, and the metric suite we adopt for comparability are in [`related_work.md`](related_work.md) — this project reproduces **Heaberlin & DeDeo (2016)** (EN, page-level, through 2015) and extends it cross-lingually, to 2026, and to the atomic level. Milestones are ordered by dependency; the two-tier split means **Tier 1 (structural) ships a usable artifact before any LLM spend**, and the methodology gate (M5) blocks *quantitative claims*, not the build.
 
 Decisions in force: first wikis **en + de + nl**; **exclusion-based** namespace policy; **cheap-draft/strong-verify** judge; supplements/info-page body-scope **deferred**; snapshot = **state at 1 Jan** (label = end of prior year).
 
