@@ -132,9 +132,10 @@ our languages** (80+ editions; precomputed EN dataset *TokTrack*, Zenodo 345571)
 published, validated solution to exactly the cross-revision identity problem the atomic layer
 needs, so we **build statement identity on top of WikiWho** rather than hand-rolling byte-hash +
 fuzzy matching (see [`atomic_statements_design.md`](atomic_statements_design.md) §2).
-**Open verification:** the hosted API may be article-namespace only — unconfirmed for
-`Wikipedia:` pages; the open-source algorithm runs on our own fetched histories regardless. A
-one-page cross-lingual probe settles it before we commit.
+**Verified (2026-06):** the hosted API is **articles-only** — a probe on `Wikipedia:Civility`
+returned `HTTP 400 {"Error":"Only articles! Namespace 4 is not accepted."}`. So we **self-host the
+open-source algorithm** (`wikiwho`/`wikiwho_rs`) on the revision histories we fetch — namespace is
+irrelevant when we supply the history. Reproducibility = pin the algorithm version.
 
 ---
 

@@ -89,11 +89,14 @@ H1 (birth) / H2 (long unchanged lifespan) / H3 (qualifier added = token insertio
 statement) / reform (token deletion or inversion) largely for free, and replaces the most
 error-prone part of this design — false merges that hide reform (§8) — with a measured 95% baseline.
 
-**Gate before committing:** WikiWho's hosted API may be article-namespace only — unconfirmed for
-`Wikipedia:` pages. The open-source algorithm runs on revision histories we fetch regardless, so
-the fallback is local self-hosting. A one-page cross-lingual probe (one policy across
-en/de/nl/fr/es/ja) settles which path before this is locked in. Byte-hash identity stays as the
-cheap fast-path for unchanged spans; WikiWho replaces the fuzzy remainder.
+**Gate — resolved (2026-06):** the hosted WikiWho API is **articles-only**; a direct probe on
+`Wikipedia:Civility` returned `HTTP 400 {"Error":"Only articles! Namespace 4 is not accepted."}`.
+So the hosted service will not serve policy pages, and the path is to **self-host the open-source
+algorithm** (`wikiwho`/`wikiwho_rs`) on the revision histories we already fetch — namespace is
+irrelevant when we feed it the history ourselves. Reproducibility = pin the algorithm version.
+Byte-hash identity stays as the cheap fast-path for unchanged spans; self-hosted WikiWho replaces
+the fuzzy remainder. **Next validation:** run the OSS algorithm on one policy page's history to
+confirm it ingests our fetched wikitext revisions and emits usable token provenance.
 
 This collapse is the measurement:
 - **birth year** (`first_year`) = additive accretion (H1)
