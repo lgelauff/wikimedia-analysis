@@ -77,6 +77,24 @@ not 21 independent copies.
 - The changed remainder gets **fuzzy/embedding match** to decide "same statement, edited" vs
   "new statement" vs "removed."
 
+### 2a. Build identity on WikiWho token provenance, not hand-rolled matching
+
+The fuzzy/embedding step above is exactly the cross-revision content-identity problem that
+**WikiWho** (Flöck & Acuña, WWW 2014) already solves at the **token level, 95% accuracy, open
+source, all six of our languages** — see [`related_work.md`](related_work.md) §5. Rather than
+hand-roll span matching, **anchor statement identity on WikiWho token IDs**: each token already
+carries its full add/delete/reinsert history across revisions, so a statement = a span of tokens
+whose persistence/edits aggregate from token histories that are *already validated*. This yields
+H1 (birth) / H2 (long unchanged lifespan) / H3 (qualifier added = token insertion into an existing
+statement) / reform (token deletion or inversion) largely for free, and replaces the most
+error-prone part of this design — false merges that hide reform (§8) — with a measured 95% baseline.
+
+**Gate before committing:** WikiWho's hosted API may be article-namespace only — unconfirmed for
+`Wikipedia:` pages. The open-source algorithm runs on revision histories we fetch regardless, so
+the fallback is local self-hosting. A one-page cross-lingual probe (one policy across
+en/de/nl/fr/es/ja) settles which path before this is locked in. Byte-hash identity stays as the
+cheap fast-path for unchanged spans; WikiWho replaces the fuzzy remainder.
+
 This collapse is the measurement:
 - **birth year** (`first_year`) = additive accretion (H1)
 - **long lifespan, zero edits** = ossification (H2)

@@ -104,6 +104,40 @@ comparable to a published baseline.
 
 ---
 
+## 5. Methods & tooling for the content layer
+
+Capturing each page's **content core** reproducibly across languages *and* times is the substrate
+for M8/M9 (see [`content_core_extraction.md`](content_core_extraction.md) once written). The
+literature splits the problem into a *space* step (clean text) and a *time* step (content identity
+across revisions); we don't reinvent either.
+
+**Clean-text extraction (space).** Established tools, none fitting our exact combo:
+- **WikiExtractor (Attardi)** — https://github.com/attardi/wikiextractor — popular, but *expands*
+  templates from dump-time definitions and **discards lists/tables/refs/images**. Dealbreakers:
+  it drops normative **lists**, and dump-time expansion is not our reconstructability model.
+- **Sweble** — full-grammar wikitext parser → AST
+  (https://www.researchgate.net/publication/221367823). Principled but heavy/older; precision
+  fallback if mwparserfromhell proves insufficient.
+- **mwparserfromhell (ours)** — AST-lite, no expansion; the right base. Our three differentiators —
+  **keep lists, do NOT expand templates** (so old revisions stay reconstructable), **language-
+  agnostic** — are purpose-specific; no off-the-shelf tool does reproducible + reconstructable +
+  structure-preserving, so this is a real gap we fill, not reinvention.
+
+**Cross-time content identity (time) — WikiWho.** Flöck & Acuña, WWW 2014.
+https://www.mediawiki.org/wiki/WikiWho · API https://wikiwho.wmcloud.org/ · code
+https://github.com/wikimedia/wikiwho_api (+ Rust reimpl github.com/Schuwi/wikiwho_rs).
+Computes **token-level provenance across all revisions** — for every token, the exact revisions
+that added / deleted / reinserted it — at **95% accuracy**, **open source**, covering **all six of
+our languages** (80+ editions; precomputed EN dataset *TokTrack*, Zenodo 345571). This is a
+published, validated solution to exactly the cross-revision identity problem the atomic layer
+needs, so we **build statement identity on top of WikiWho** rather than hand-rolling byte-hash +
+fuzzy matching (see [`atomic_statements_design.md`](atomic_statements_design.md) §2).
+**Open verification:** the hosted API may be article-namespace only — unconfirmed for
+`Wikipedia:` pages; the open-source algorithm runs on our own fetched histories regardless. A
+one-page cross-lingual probe settles it before we commit.
+
+---
+
 ## Citation list
 
 - Heaberlin, B. & DeDeo, S. (2016). *The Evolution of Wikipedia's Norm Network.* Future Internet
@@ -115,3 +149,8 @@ comparable to a published baseline.
   https://www.researchgate.net/publication/358838662
 - *Wikipedia Beyond the English Language Edition.* CSCW 2021.
   https://dl.acm.org/doi/pdf/10.1145/3449129
+- Flöck, F. & Acuña, M. (2014). *WikiWho: Precise and Efficient Attribution of Authorship of
+  Revisioned Content.* WWW 2014. https://www.mediawiki.org/wiki/WikiWho
+- Attardi, G. *WikiExtractor.* https://github.com/attardi/wikiextractor
+- Dohrn, H. & Riehle, D. (2011). *Design and implementation of the Sweble Wikitext parser.*
+  WikiSym 2011. https://www.researchgate.net/publication/221367823
