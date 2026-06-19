@@ -140,6 +140,40 @@ their semantic equivalence still needs content verification (M9).
 
 ---
 
+## 5. The Heaberlin–DeDeo governance typology extends to six languages (provisional)
+
+Testing whether DeDeo's EN scheme — **user-content / user-user / user-admin**
+([`related_work.md`](../../docs/related_work.md)) — generalizes. Anchors seeded by EN title
+(content = NPOV/V/NOR/Citing/NOT; user-user = Civility/Consensus/NPA/Etiquette/Edit-warring/AGF/DR;
+user-admin = Administrators/Blocking/Deletion/Protection/Banning/Username), propagated
+cross-lingually via interwiki clusters, then personalized-PageRank argmax within each wiki.
+Reproduce: [`../../net/classify_governance.py`](../../net/classify_governance.py).
+
+| wiki | content | user-user | user-admin | Other | Louvain purity |
+|---|---|---|---|---|---|
+| en | 61% | 13% | 23% | 1% | 0.82 |
+| ja | 45% | 17% | 35% | 2% | 0.82 |
+| fr | 46% | 23% | 27% | 3% | 0.86 |
+| de | 54% | 18% | 24% | 2% | 0.77 |
+| es | 41% | 19% | 33% | 5% | 0.77 |
+| nl | 43% | 20% | 31% | 4% | 0.87 |
+
+**Reading:** the three-way split holds in **all six editions** (content-dominant → admin →
+user-user, matching DeDeo's EN ordering); **Other stays 1–5%** (the scheme covers the core with a
+small honest residual, as expected); and Louvain communities agree with the assignment at
+**0.77–0.87 purity everywhere** — structural "norm bundles" line up with governance-object
+categories cross-lingually. en is the most content-heavy (61%), consistent with its style/MoS
+proliferation (#2; style → content).
+
+**Why provisional (not yet a claim):** the purity is **partly circular** — assignment is
+PageRank-over-structure and Louvain clusters that same structure, so it shows *structural
+self-consistency*, not validation against independent labels (DeDeo's check was hand-coding vs.
+Louvain). Hardening needs (a) independent category labels (M6 LLM/expert), and (b) an M5 null
+(is 0.82 above what three-region anchor-seeding yields by chance?). Per-node assignment in
+`governance_class.csv`.
+
+---
+
 ## What this sets up
 
 The interwiki edges that align these cores are the candidate **content** matches for M8/M9.
