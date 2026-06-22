@@ -47,6 +47,49 @@ signal. Anchored on the current build, which is ground truth (every seed page is
 
 ---
 
+## 3a. Namespace-4 page routing — policy vs. venue vs. deliberation
+
+The project namespace holds far more than policy. Pages are **routed by positive evidence into
+layers**; the excluded layers are **not discarded** — each is its own dataset (deliberation feeds
+the RfC / wiki-polis analysis; enforcement venues feed the governance-process analysis; historical
+policy feeds the reform/death analysis). Never silently delete; keep an explicit **Other** for the
+unrouted, which is the falsifiability check on the scheme.
+
+The two discriminators are **permanence** and **codified procedure** — *not* the presence of
+support/oppose !vote templates (noticeboards and consultations both use them) and *not* whether an
+admin tool is involved.
+
+| layer | nature | route / temporal |
+|---|---|---|
+| **Live policy/guideline** | the norms (§1) | **core**, per-year status |
+| **Request / enforcement** (noticeboards, deletion/adminship/protection requests, arbitration) | permanent **+ codified procedure** | **governance-venue layer** — the standing rules page is procedural policy (user-admin); the case-stream is the enforcement record |
+| **Discussion page** (village pump, help/reference desks, project talk) | permanent **+ free-form** | discussion corpus; not policy |
+| **Consultation** (a specific RfC/survey/Meinungsbild on one question) | **one-off** | deliberation corpus; **backward-invalidate** (event-shaped, must not read as policy change) |
+| **Archive** (`/Archive…` + archive markers) | frozen | drop, or route to deliberation if a closed RfC |
+| **Historical policy** (`{{historical}}`/`{{superseded}}`) | retired | lifecycle store; **forward-invalidate** (was relevant, no longer) |
+| **Container / index / Other** | — | review (see `data/network/core_audit.csv`) |
+
+**Temporal asymmetry:** consultation and archive pages are invalidated *backward* (they were never
+standing policy); historical policy is invalidated *forward* (it was policy, then stopped). These
+are different operations, not one "exclude" flag.
+
+**Detection is wiki-dependent (same rule as §4/§5).** The layer *concepts* above are universal;
+the *signals* that detect them are per-wiki and reconstructed, never hardcoded English:
+- **Venue identity** by langlinks of enwiki venue anchors (Articles for deletion, the
+  administrators' noticeboard, the village pump, requests-for-X) → their per-wiki equivalents
+  (nl `Te beoordelen pagina's` / `De kroeg`; de `Löschkandidaten` / `Umfragen` / `Meinungsbilder`;
+  fr `Pages à supprimer` / `Le Bistro` / `Appel à commentaires`).
+- **Type templates** discovered per wiki (an RfC/survey banner → consultation; a noticeboard
+  header/case template → request-enforcement), scored against that wiki's confirmed set the same
+  way policy indicators are, and recorded in the year-keyed `template_registry`.
+- **Subpage shape** as a weak cue (a dated/titled child of a venue = instance; the venue root =
+  standing page) — confirmatory, not decisive.
+
+So the routing indicators live alongside the policy indicators in the per-(wiki, year) registries
+and are auditable the same way.
+
+---
+
 ## 4. Rebuilt per language
 
 The indicator **names** are language-specific — never hardcode English. For each wiki, the
