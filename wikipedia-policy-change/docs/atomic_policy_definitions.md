@@ -142,9 +142,8 @@ buried in the body to placed and emphasized as a key rule.
 
 ## Notes
 
-- Several indicators already have a home in the schema: bindingness ≈ `deontic_type`,
-  function ≈ the `rule | procedure | summary | meta | scaffolding` segment type, and
-  `FOUND_deferred` ≈ statement-level cross-reference in-degree — see
+- Several indicators already have a home in the schema: bindingness ≈ `deontic_type`, and
+  function ≈ the `rule | procedure | summary | meta | scaffolding` segment type — see
   [`atomic_statements_design.md`](atomic_statements_design.md). The statement's active/removed
   lifespan (`first_year` / `last_year` / `status`) is carried as identity-model metadata, separate
   from these indicators.
