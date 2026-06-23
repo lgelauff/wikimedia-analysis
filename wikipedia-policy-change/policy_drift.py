@@ -43,7 +43,7 @@ DEFAULT_WIKI  = "en.wikipedia"
 DEFAULT_TITLE = "Wikipedia:Neutral_point_of_view"
 
 OUT_DIR    = Path(__file__).parent / "data" / "policy_drift"
-CACHE_DIR  = Path(__file__).parent / "tmp" / "revisions"
+CACHE_DIR  = Path(__file__).parent / "data" / "policy_drift" / "raw"
 RATE_DELAY = 1.0  # seconds between API calls
 
 UA = (

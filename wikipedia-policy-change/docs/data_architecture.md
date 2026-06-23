@@ -97,5 +97,9 @@ is attributable to a specific version.
 - Per-statement indicator scores → `statement_indicator`, **long-narrow** (one row per indicator),
   Structure tier (SQLite + ToolsDB); keyed by `statement_id` + `version_no`, pinned with
   `indicator_set_version` + `model_id`. *(locked, see [`atomic_policy_definitions.md`](atomic_policy_definitions.md))*
+- Drift raw wikitext (the ~621 yearly-snapshot revisions behind the drift CSVs) is now **tracked**
+  in `data/policy_drift/raw/<wiki>/<revid>.txt` (CC BY-SA; provenance = `revid` in the drift CSVs).
+  This is a bounded exception to the raw-stays-off-git default above; the bulk historical cache
+  (`net_build_historical.py`) stays off-git. *(updated)*
 - Vector store choice (FAISS / sqlite-vec / Parquet) — *deferred to M8/M9.*
 - Raw-cache publication format (full text vs hashes+titles) — *default hashes+titles; revisit.*
