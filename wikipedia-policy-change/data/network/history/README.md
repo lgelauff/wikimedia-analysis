@@ -2,8 +2,7 @@
 
 The policy/guideline **core** of six Wikipedia editions as an annual network, 2005–2026.
 Generated from ToolsDB by [`../../../net/export_history.py`](../../../net/export_history.py)
-(M4 Phase 1). Also available as a public download:
-`https://wikimedia-policies.toolforge.org/policy-net/`.
+(M4 Phase 1).
 
 This is the **2026 core walked back through time**: 2026 is the baseline (the locked core,
 identical to [`../nodes.csv`](../nodes.csv) / [`../edges.csv`](../edges.csv)); 2005–2025 are
