@@ -1,8 +1,10 @@
 # Atomic-Statement Layer — Design (M8, forward plan)
 
-**Status:** forward design. NOT yet built — M8 is gated (see ROADMAP). The `statement`
-tables land in `schema.sql` only when M8 starts and clears its pre-gate. This doc exists
-so the storage model is decided *before* we build, not discovered mid-build.
+**Status:** forward design. NOT yet built. The `statement` tables land in `schema.sql` when this
+layer starts. This doc exists so the storage model is decided *before* we build, not discovered
+mid-build. There is **no hard pre-gate** — build a small pilot and watch the §8 metrics
+diagnostically (pilot-first, not gate-first); those metrics may become gates later, before any
+formal/published claim.
 
 Companion: storage tiers & size budgets in [`data_architecture.md`](data_architecture.md);
 milestone context in [`ROADMAP.md`](ROADMAP.md) M8.
@@ -30,8 +32,14 @@ page (one rule, exception, qualifier, or definition). The unit is:
   Two runs must yield alignable spans; a generative decomposition would produce whatever the
   model prefers and isn't measurable.
 - **Span-anchored** — recorded as `(source_revid, char_start, char_end)` into the cleaned text.
-- **Deontic-marker-anchored** — segmentation guided by deontic cues (must / should / may /
-  must not / editors are expected to …), which gives reproducible boundaries.
+  *(This first layer of units is span-anchored.)*
+- **Deontic-marker-*informed*, not -required** — deontic cues (must / should / may / must not /
+  editors are expected to …) are a **strong indicator** of a statement and a clean boundary signal
+  *where present*, but are **not a necessity**. Normative content also appears without any deontic
+  marker — procedures, inclusion-criteria tables (e.g. de `Relevanzkriterien`), and descriptive-
+  consensus phrasing ("it is customary" / "op de Nederlandstalige Wikipedia is het gebruikelijk…").
+  So deontic markers are a **cue, not a filter** on what counts as a statement.
+  (See [`issues/OPEN_QUESTIONS.md`](issues/OPEN_QUESTIONS.md) OQ-2 on the implicit normative content this entails.)
 
 **Quality metrics (diagnostic — NOT gates yet):** run-to-run boundary stability, human
 boundary-F1, and coverage are computed as **metrics to identify bad statements and understand how

@@ -59,7 +59,8 @@ personalized-PageRank from seed anchors over the link graph.
 ## 2. Content-level classification — what we want next
 
 Classify the **text**, not the page. The unit is the **atomic normative statement** (extractive,
-span-anchored, deontic-anchored — [`atomic_statements_design.md`](atomic_statements_design.md),
+span-anchored; deontic-*informed* but not deontic-*required* —
+[`atomic_statements_design.md`](atomic_statements_design.md),
 M8). Each classification below is per-*statement*, so the **page becomes a composition** over them
 rather than a single label.
 
