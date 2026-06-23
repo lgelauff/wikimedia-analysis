@@ -1,8 +1,22 @@
-# Clean Base — Proposal (for review)
+# Clean Base — Decision Record (IMPLEMENTED)
 
-Status: **PROPOSAL**. Nothing executed yet. On approval, this becomes the consolidated design and the script/schema are rebuilt to match; the accreted `policy_network_design.md` stays in git history.
+> **Status: IMPLEMENTED (accepted 2026-06).** This was a proposal; it was approved and built. It is
+> kept as the **decision record** for *why* the schema and graph are shaped the way they are
+> (the wikitext-not-`pagelinks` and facets-not-edges rationale in §1–2), not as pending work.
+> Where it lives now:
+> - **§3 schema** → [`../net/schema.sql`](../net/schema.sql) (the live tables).
+> - **§1–2 model + §4 script** → [`../net/net_build_current.py`](../net/net_build_current.py) /
+>   [`../net/build_network.py`](../net/build_network.py) (in-body wikilinks, category/template facets,
+>   confirmed/suspect tiers, template roles). Membership rule → [`core_definition.md`](core_definition.md);
+>   the page-vs-content classification framing → [`classification.md`](classification.md).
+> - **§6 restart plan** → executed, and extended from en/de/nl to **6 wikis** (en/de/nl/fr/es/ja).
+> - **Open questions** → all resolved as proposed (see end).
+>
+> On the cleaning axis it is **aligned** with the current direction: it already specifies **raw
+> wikitext + mwparserfromhell**, not `action=parse`/HTML — the reconstructable-across-time choice.
+> Sections §5 (consolidated DESIGN.md) and §6 (restart) are historical planning, kept for the record.
 
-M1 (enwiki depth-2) is built and validated; M2 (de/nl) is mid-run. This proposes a cleaner conceptual base before we go further, driven by two findings from the M1 build.
+This was driven by two findings from the M1 build (below).
 
 ---
 
@@ -130,18 +144,20 @@ Old `policy_network_design.md` → preserved in git history (not deleted in work
 
 ---
 
-## 6. Restart plan (on approval)
+## 6. Restart plan (DONE)
 
-1. Write consolidated `DESIGN.md`; retire `policy_network_design.md`.
-2. New `schema.sql` (§3); refactor `net_build_current.py` (§4).
-3. `DROP`/reload ToolsDB; rebuild enwiki + dewiki + nlwiki at depth 2.
-4. Re-confirm the M1/M2 gates against the clean tables.
-5. Delete this proposal.
+1. ~~Write consolidated `DESIGN.md`; retire `policy_network_design.md`.~~ — *not done this way;
+   `policy_network_design.md` was kept, and current-state design was split across
+   `core_definition.md`, `classification.md`, `atomic_statements_design.md`, `related_work.md`.*
+2. ✅ New `schema.sql` (§3); refactored `net_build_current.py` (§4).
+3. ✅ `DROP`/reload ToolsDB; rebuilt the cores — **extended to 6 wikis** (en/de/nl/fr/es/ja), not just three.
+4. ✅ M1/M2 gates re-confirmed against the clean tables.
+5. ~~Delete this proposal.~~ — *kept instead, as this decision record (the §1–2 rationale is durable).*
 
 ---
 
-## Open questions for you
+## Open questions — RESOLVED (all adopted as proposed)
 
-- **Out-links to non-admitted pages**: keep them in `link` (flagged `to_admitted=0`) for in-degree/coverage, or drop entirely and store only the policy→policy graph? (Proposal: keep, flagged — cheap and useful for the bootstrap miss-rate analysis.)
-- **Category co-membership layer**: do you want a derived policy↔policy "shares-a-category" edge layer (separate from the wikilink graph) for analysis, or leave categories purely as node facets? (Proposal: node facets only for now; derive co-membership at analysis time if useful.)
-- **Depth**: stay at depth 2 for the clean rebuild, or retune? (Proposal: depth 2 — validated, healthy.)
+- **Out-links to non-admitted pages** → **kept**, flagged `to_admitted=0` (the `link` table carries it).
+- **Category co-membership layer** → **node facets only** (`node_category`); no derived co-membership edge layer.
+- **Depth** → **depth 2** retained.
