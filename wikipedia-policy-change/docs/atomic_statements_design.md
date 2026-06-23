@@ -48,7 +48,7 @@ the statement is the claim it supports.) The unit is therefore:
   marker — procedures, inclusion-criteria tables (e.g. de `Relevanzkriterien`), and descriptive-
   consensus phrasing ("it is customary" / "op de Nederlandstalige Wikipedia is het gebruikelijk…").
   So deontic markers are a **cue, not a filter** on what counts as a statement.
-  (See [`issues/OPEN_QUESTIONS.md`](issues/OPEN_QUESTIONS.md) OQ-2 on the implicit normative content this entails.)
+  (See [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md) OQ-2 on the implicit normative content this entails.)
 
 **Quality metrics (diagnostic — NOT gates yet):** run-to-run boundary stability, human
 boundary-F1, and coverage are computed as **metrics to identify bad statements and understand how
