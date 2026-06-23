@@ -33,6 +33,8 @@ fix aggregation now:
 
 - **span** — extractive: the agent points at tokens in the candidate span (per-language
   deontic / sanction / scope lexicons needed). Defensible under the M8 extraction gate.
+- **context** — derived from the rest of the host page (neighbouring statements, lead, nutshell),
+  not from the candidate span alone.
 - **inherited** — taken from the host page's status (banner / category / index membership).
 - **structural** — computed from the network or the statement lifespan model (cross-reference
   in-degree, first/last year, revert history), not judged from text.
@@ -59,7 +61,8 @@ fix aggregation now:
 | `FUNC_original` | it is original normative content, not a restatement/summary of a rule stated elsewhere | span |
 
 ## 3. Scope of governance
-**Definition:** what the statement governs. Three independent memberships (a statement can be mixed).
+**Three separate scope questions** — each a standalone 0–1 indicator (a statement can satisfy
+more than one). There is no combined "scope" axis.
 
 | code | indicator | source |
 |---|---|---|
@@ -67,31 +70,23 @@ fix aggregation now:
 | `SCOPE_conduct` | governs how editors behave / interact | span |
 | `SCOPE_process` | defines how a procedure / venue runs | span |
 
-## 4. Ratification
-**Definition:** strength of community-legitimacy backing behind the statement.
+## 4. Ratification — *not an atomic indicator*
+Community ratification is a property of the **page / community**, not of a single statement. It
+is carried at the page level (banner / category) and not scored per span.
+
+## 5. Currency — *not an atomic indicator*
+Whether a statement is current is **lifespan metadata** (`first_year` / `last_year` / `status`
+from the identity model), not a judged property of the span. Recorded, not scored.
+
+## 6. Contextual relation
+**Definition:** how the statement sits relative to the rest of its page — from standalone and
+central to dependent on / derivative of other statements on the page.
 
 | code | indicator | source |
 |---|---|---|
-| `RAT_selfcite` | the span cites consensus / an RfC / a discussion as its basis | span |
-| `RAT_pageratified` | the host page is in ratified status (policy/guideline banner or core category) | inherited |
-| `RAT_stable` | the statement is long-lived / stable (present across many years) | structural |
-
-## 5. Currency
-**Definition:** how active and current the statement is, from removed/historical to live.
-
-| code | indicator | source |
-|---|---|---|
-| `CUR_present` | present in the latest snapshot (status = active) | structural |
-| `CUR_pageactive` | the host page is in active (non-historical/proposed) status | inherited |
-| `CUR_norevert` | persisted without removal/revert across its interval | structural |
-
-## 6. Self-description
-**Definition:** degree to which the span declares its own normative standing.
-
-| code | indicator | source |
-|---|---|---|
-| `SELF_status` | the span states its own authority / status ("this is policy", "editors are required to follow this") | span |
-| `SELF_summary` | the span is a status-labelling nutshell / summary element | span |
+| `CTX_standalone` | interpretable on its own, not reliant on surrounding statements (no unresolved "this", "such cases", "the above") | span + context |
+| `CTX_summary` | restates / condenses another rule stated elsewhere on the page (lead, nutshell) | context |
+| `CTX_central` | central to the page's stated topic rather than a peripheral aside / example / see-also | context |
 
 ## 7. Enforcement
 **Definition:** strength of sanction attached, from none to explicit and actionable.
@@ -101,6 +96,7 @@ fix aggregation now:
 | `ENF_consequence` | the span names a consequence for violation (block, ban, delete, revert, removal) | span |
 | `ENF_agent` | it names an enforcing agent / mechanism (admins may…, may be reported to…) | span |
 | `ENF_concrete` | the consequence is concrete / actionable rather than vague | span |
+| `ENF_pagecontext` | enforcement is discussed or referred to elsewhere in the page's policy text | context |
 
 ## 8. Foundationality
 **Definition:** position in the rule hierarchy, from derived local detail to foundational principle.
@@ -135,9 +131,10 @@ body-only to restated on an official index/summary.
 ## Notes
 
 - Several indicators already have a home in the schema: bindingness ≈ `deontic_type`,
-  function ≈ the `rule | procedure | summary | meta | scaffolding` segment type, currency ≈ the
-  statement lifespan (`first_year` / `last_year` / `status`), and `FOUND_deferred` ≈ statement-level
-  cross-reference in-degree — see [`atomic_statements_design.md`](atomic_statements_design.md).
+  function ≈ the `rule | procedure | summary | meta | scaffolding` segment type, and
+  `FOUND_deferred` ≈ statement-level cross-reference in-degree — see
+  [`atomic_statements_design.md`](atomic_statements_design.md). Lifecycle/currency (§5) is carried
+  as statement lifespan metadata, not as a scored indicator.
 - The **span** indicators each need a per-language **deontic / sanction / scope lexicon**
   (six wikis); these are the lexical hooks that keep the indicators extractive and reproducible.
 - Generality and Enforcement directly feed the H3 (defensive accretion) and H4 (new policy as
