@@ -1,4 +1,4 @@
-# Issue 01 — Clean reader-text extraction + cache
+# Clean reader-text extraction + cache
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
@@ -14,7 +14,7 @@ maintenance banners, raw wikilink/HTML markup.
 
 ## Scope
 6 wikis (en/de/nl/fr/es/ja); **the confirmed core only** (~1,143 pages). **Current snapshot only.**
-Periphery is **not** in scope here — it is handled later and selectively in Issue 07.
+Periphery is **not** in scope here — it is handled later and selectively in #8.
 
 ## ⚠️ Flag — historical pages (Phase 2 carry-over, design now)
 When this extraction is later run on **historical revisions** (Phase 2, all-years — see
@@ -80,4 +80,4 @@ decision). Track flagged page-revisions so none slip through.
 Fully per-page; fan out across the page list / wikis.
 
 ## Open questions
-- Keep HTML cache long-term or prune after Issue 02 validates? (Default: keep until 02 is accepted.)
+- Keep HTML cache long-term or prune after #3 validates? (Default: keep until #3 is accepted.)

@@ -1,11 +1,11 @@
-# Issue 06 — Statement similarity, dedup, and cross-lingual mapping
+# Statement similarity, dedup, and cross-lingual mapping
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
 > 🚧 **Status: preliminary / under-specified — needs another pass.** *How* we actually find statement
 > overlap and map equivalents across languages is still an open problem (see
 > [`../OPEN_QUESTIONS.md`](../OPEN_QUESTIONS.md) OQ-1; cross-lingual mapping method is undetermined).
-> This issue is a **sketch** — rework it once Issues 04/05 land and we can see what the real
+> This issue is a **sketch** — rework it once Issues #5/#6 land and we can see what the real
 > statements look like. Do not over-build to this spec yet.
 
 ## Objective
@@ -20,24 +20,24 @@ realized. It is **M9 at the statement level**.
 
 > **Method status — UNDETERMINED.** *How* statements are mapped across languages is an **open
 > research question**, not decided here. In particular, `statement_en` is an English **translation
-> for interpretation** (Issues 03/04) — it is **not** the matching substrate; do **not** build the
+> for interpretation** (Issues #4/#5) — it is **not** the matching substrate; do **not** build the
 > cross-lingual mapping on it. The approaches in "Approach" below are **candidate options to
 > evaluate**, not a chosen pipeline. Settling the mapping method is itself a deliverable of this
 > issue (see Open questions).
 
 ## Scope
-All six languages (en/de/nl/fr/es/ja). All rated statements (Issue 04/05). Current snapshot.
+All six languages (en/de/nl/fr/es/ja). All rated statements (Issue #5/#6). Current snapshot.
 
 ## Inputs
-- **Issue 04** statement store. (`statement_en` is an English **translation for interpretation**,
+- **#5** statement store. (`statement_en` is an English **translation for interpretation**,
   NOT a match key — the mapping method is open, see the status note above.)
-- **Issue 05** ratings (optionally restrict to `ok` statements, or weight by quality).
+- **#6** ratings (optionally restrict to `ok` statements, or weight by quality).
 - Structural priors: `../../data/network/` interwiki clusters + the **hidden-equivalents** method
   (FINDINGS #4 / `../../net/analyze_network.py` §5) — pages already aligned cross-wiki are strong
   priors for where statement matches should concentrate.
 
 ## Outputs
-- Within-language dedup clusters (`cluster_id` written back per Issue 03).
+- Within-language dedup clusters (`cluster_id` written back per #4).
 - A cross-lingual statement-equivalence map: clusters of statements (across languages) expressing
   the same norm, with a `relationship` tag where inferable (genetic/translated vs convergent).
 - A **gap report**: per language, statements with no match elsewhere — disaggregated (genuine gap
@@ -60,8 +60,8 @@ Then:
 3. Within-language: dedup/cluster first; cross-language: align clusters.
 4. Known translations (the translated-page work) as a **positive control** for the matcher.
 5. Gap = no match after blocking + verify. **Do not search the periphery here** — emit the gap
-   report; the periphery search (recall-on-demand) is **Issue 07**, which consumes this report. A
-   gap is only "genuine" after Issue 07's expand-and-re-search fails.
+   report; the periphery search (recall-on-demand) is **#8**, which consumes this report. A
+   gap is only "genuine" after #8's expand-and-re-search fails.
 
 ## Context documents
 - [`../related_work.md`](../related_work.md) — M9 architecture, DeDeo typology, embedding approach.
@@ -76,7 +76,7 @@ Then:
 - No O(n²) pass (blocking demonstrated).
 
 ## Dependencies
-Issues 04 and 05. The capstone — everything feeds here.
+#5 and #6. The capstone — everything feeds here.
 
 ## Parallelism
 Embedding + ANN per-statement; verification per candidate pair (fan out).

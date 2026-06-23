@@ -1,4 +1,4 @@
-# Issue 03 — Atomic-statement data model + store
+# Atomic-statement data model + store
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
@@ -8,10 +8,10 @@ the **source quote** it came from (the closest quote that fully describes it), t
 statement** itself, its **language**, and **both** the original-language text and an English
 translation of the statement. The English text is an **interpretation aid** (so a researcher who
 doesn't read the language can understand the statement) — **not** a canonical or matching key; how
-languages are mapped to each other is undetermined (Issue 06). Plus provenance back to the
+languages are mapped to each other is undetermined (#7). Plus provenance back to the
 page/segment so a statement is always traceable.
 
-This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity reads from it).
+This gates #5 (extraction writes into this store) and #7 (similarity reads from it).
 
 ## Scope
 6 wikis; current snapshot. (Time-versioning / lifespans — `atomic_statements_design.md` §2 — are a
@@ -31,26 +31,26 @@ This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity
 |---|---|
 | `statement_id` | **`<wiki>:<page_id>:<seq>`** — the page's `node_id` plus an incremental per-page sequence number assigned at insert. A stable, legible reference handle; **not** derived from content/spans (those move on re-run) |
 | `wiki`, `page_id`, `revid` | provenance |
-| `segment_id` / `char_start`, `char_end` | span back into Issue 01 clean text (the anchor) |
+| `segment_id` / `char_start`, `char_end` | span back into #2 clean text (the anchor) |
 | `source_quote` | the **closest quote that fully describes** the statement, original language |
 | `statement_orig` | the atomic statement, **original language** |
 | `statement_en` | the atomic statement translated to **English** — interpretation aid for non-speakers; **not** a matching/canonical key |
 | `language` | source language code |
-| `segment_type`, `governance_class` | carried from Issue 02 / the page (content/user/admin) |
+| `segment_type`, `governance_class` | carried from #3 / the page (content/user/admin) |
 | `created_by`, `model_id`, `prompt_version` | reproducibility (which agent/model/rubric produced it) |
-| *(reserved)* `ratings`, `cluster_id` | filled by Issues 05 / 06 |
+| *(reserved)* `ratings`, `cluster_id` | filled by Issues #6/#7 |
 
 ## Approach
 1. Decide store: SQLite locally → ToolsDB for serving (consistent with the network tables). Text is
    stored **inline here** (statements are short) but the *source* text stays by-reference to the
-   Issue 01 cache via the span anchor.
+   #2 cache via the span anchor.
 2. `statement_id = <wiki>:<page_id>:<seq>` — the page's `node_id` plus an incremental per-page
    sequence number assigned at insert. It is a **surrogate** reference handle: do **not** derive
    identity from content or char-offsets (the cleaned-text cache can be regenerated → offsets shift;
    `statement_orig` is LLM output → paraphrase varies on re-run; and policy boilerplate repeats
    verbatim across pages → content can't be a unique key anyway). The id stays legible (you can see
    which page a statement came from) without being content-stable. (Detecting that two statements are
-   *the same / overlap* is a separate concern — the dedup/overlap layer, Issue 06 — not the job of
+   *the same / overlap* is a separate concern — the dedup/overlap layer, #7 — not the job of
    this id.)
 3. Provide insert/query helpers and a tiny validation (non-empty `statement_en`, valid span).
 
@@ -63,9 +63,9 @@ This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity
 - README documents every field + the by-reference-to-cache convention.
 
 ## Dependencies
-None (parallel with 01/02). **Gates Issue 04.**
+None (parallel with #2/#3). **Gates #5.**
 
 ## Open questions
 - One row per statement (overlap allowed → many rows per span) — confirm overlap is represented by
   distinct `statement_id`s over possibly-overlapping spans. (Default: yes; completeness > minimality.)
-- Store `statement_en` for English-source statements too (i.e. `statement_en` = `statement_orig`), so every row has a uniform English interpretation field? (Default: yes — purely an interpretation convenience; **not** a cross-lingual matching key. The mapping method is undetermined — Issue 06.)
+- Store `statement_en` for English-source statements too (i.e. `statement_en` = `statement_orig`), so every row has a uniform English interpretation field? (Default: yes — purely an interpretation convenience; **not** a cross-lingual matching key. The mapping method is undetermined — #7.)

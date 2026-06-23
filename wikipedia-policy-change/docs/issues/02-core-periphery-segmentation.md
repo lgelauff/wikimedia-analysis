@@ -1,11 +1,11 @@
-# Issue 02 — Core-policy vs periphery segmentation (within a page)
+# Core-policy vs periphery segmentation (within a page)
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
 ## Objective
 A policy page is not uniformly policy: it interleaves genuine rules with summaries, cross-
-references, examples, and history. Within each page's clean text (Issue 01), **segment the text and
-label each segment as core policy text vs periphery**, so Issue 04 extracts atomic statements only
+references, examples, and history. Within each page's clean text (#2), **segment the text and
+label each segment as core policy text vs periphery**, so #5 extracts atomic statements only
 from the parts that actually state norms.
 
 Segment types (from [`../atomic_statements_design.md`](../atomic_statements_design.md) §1a):
@@ -18,14 +18,14 @@ Segment types (from [`../atomic_statements_design.md`](../atomic_statements_desi
 | `meta` | periphery | cross-references, "how X relates to Y", pointers |
 | `scaffolding` | periphery | examples, history, see-also, navigation prose |
 
-`rule` + `procedure` = **core policy text** (feeds Issue 04). `summary` is kept but linked to the
+`rule` + `procedure` = **core policy text** (feeds #5). `summary` is kept but linked to the
 rule it restates (not a separate norm). `meta`/`scaffolding` are excluded from statement extraction.
 
 ## Scope
-6 wikis; all pages from Issue 01. Current snapshot.
+6 wikis; all pages from #2. Current snapshot.
 
 ## Inputs
-- The clean-text cache + manifest from **Issue 01** (`text/<wiki>/<page_id>.txt`).
+- The clean-text cache + manifest from **#2** (`text/<wiki>/<page_id>.txt`).
 
 ## Outputs
 - `segments/<wiki>/<page_id>.jsonl` — one row per segment: `{page_id, wiki, seq, char_start,
@@ -53,12 +53,12 @@ rule it restates (not a separate norm). `meta`/`scaffolding` are excluded from s
   not a blocking gate yet).
 
 ## Dependencies
-Issue 01.
+#2.
 
 ## Parallelism
 Per-page.
 
 ## Open questions
 - Segment granularity: sentence vs clause? (Default: sentence, but split on `and/but/because` for
-  atomicity downstream — see Issue 04.)
+  atomicity downstream — see #5.)
 - Does `summary` text get its own statements or only a link to the rule? (Default: link only, per design §1a.)

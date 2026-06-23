@@ -1,10 +1,10 @@
-# Issue 04 — Atomic-statement extraction
+# Atomic-statement extraction
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
 ## Objective
-From the **core policy text** (the `is_core` segments from Issue 02), extract **all** atomic
-statements and write them into the store (Issue 03). For each statement, also produce its
+From the **core policy text** (the `is_core` segments from #3), extract **all** atomic
+statements and write them into the store (#4). For each statement, also produce its
 **English** rendering and capture the **closest source quote that fully describes it**.
 
 **Completeness > minimality. Statements may overlap.** It is better to emit a rule twice (e.g. once
@@ -39,8 +39,8 @@ the original + English renderings.
 
 "Shines" ≠ "unchecked." The interpretive freedom is bounded by four grounding mechanisms so the
 output stays measurable: (1) every statement is anchored to a `source_quote` (provenance —
-confirmable against the page); (2) an **independent** agent rates quality (Issue 05); (3) dedup /
-clustering (Issue 06) absorbs the deliberate over-generation; (4) the §5/§8 **metrics** (diagnostic,
+confirmable against the page); (2) an **independent** agent rates quality (#6); (3) dedup /
+clustering (#7) absorbs the deliberate over-generation; (4) the §5/§8 **metrics** (diagnostic,
 not gates yet) track how the extractor is behaving. So the LLM does the decomposition; anchoring,
 rating, and dedup keep it honest.
 
@@ -48,12 +48,12 @@ rating, and dedup keep it honest.
 6 wikis; the `is_core` segments of every page. Current snapshot.
 
 ## Inputs
-- **Issue 02** core segments (`segments/<wiki>/<page_id>.jsonl`, `is_core=true`).
-- **Issue 03** statement store + schema (write target).
+- **#3** core segments (`segments/<wiki>/<page_id>.jsonl`, `is_core=true`).
+- **#4** statement store + schema (write target).
 
 ## Outputs
 - Populated statement store: one row per atomic statement with `source_quote`, `statement_orig`,
-  `statement_en`, `language`, span anchor, provenance, `model_id`/`prompt_version` (per Issue 03).
+  `statement_en`, `language`, span anchor, provenance, `model_id`/`prompt_version` (per #4).
 - A per-page extraction report: #statements, #per-segment, coverage (fraction of core text under ≥1 statement).
 
 ## Approach
@@ -62,12 +62,12 @@ rating, and dedup keep it honest.
    describing source quote, and an English rendering.
 2. Enforce the criteria above in the prompt (atomic/declarative/concrete/scoped/faithful); split
    compounds; keep deontic force.
-3. Anchor each statement to its source span; write via the Issue 03 layer (idempotent on `statement_id`).
+3. Anchor each statement to its source span; write via the #4 layer (idempotent on `statement_id`).
 4. Per-wiki: the deontic markers and phrasing differ by language — the extraction prompt is
    language-aware. `statement_en` is an **English translation for interpretation only** — so a
    researcher who doesn't read the source language can understand the statement. It is **NOT** the
    cross-lingual matching key, and **how** statements are mapped across languages is **not yet
-   determined** (an open question — see Issue 06). Do not build anything that assumes `statement_en`
+   determined** (an open question — see #7). Do not build anything that assumes `statement_en`
    is the match substrate.
 
 ## Context documents
@@ -87,7 +87,7 @@ pass/fail gates — they may be promoted to gates before any formal claim (see
 [`../atomic_statements_design.md`](../atomic_statements_design.md) §8).
 
 ## Dependencies
-Issues 02 (input text) and 03 (store). **Feeds 05 and 06.**
+#3 (input text) and #4 (store). **Feeds #6 and #7.**
 
 ## Parallelism
 Per-page / per-wiki — the primary fan-out stage for many agents.
