@@ -11,14 +11,11 @@ templates, categories, interlanguage links, `<ref>` plumbing, edit-section links
 maintenance banners, raw wikilink/HTML markup.
 
 ## Scope
-6 wikis (en/de/nl/fr/es/ja); the confirmed core (~1,143 pages) + periphery where available.
-**Current snapshot only.**
+6 wikis (en/de/nl/fr/es/ja); **the confirmed core only** (~1,143 pages). **Current snapshot only.**
+Periphery is **not** in scope here — it is handled later and selectively in Issue 07.
 
 ## Inputs
 - `../../data/network/nodes.csv` — the page list (`wiki`, `page_id`, `title`, `namespace`).
-- *(optional, for periphery)* the candidate/suspect tier from the build. **Note:** this is not in
-  the committed repo — it lives in the ToolsDB `node` table (`confidence='suspect'`). Exporting it
-  is a prerequisite if periphery is in scope; otherwise run core-only and flag periphery as TODO.
 
 ## Outputs
 - A text cache, one entry per page:
@@ -58,5 +55,4 @@ maintenance banners, raw wikilink/HTML markup.
 Fully per-page; fan out across the page list / wikis.
 
 ## Open questions
-- Include periphery now or core-only v1? (Default: core-only; periphery once the candidate set is exported.)
 - Keep HTML cache long-term or prune after Issue 02 validates? (Default: keep until 02 is accepted.)

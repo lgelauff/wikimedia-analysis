@@ -34,8 +34,9 @@ All six languages (en/de/nl/fr/es/ja). All rated statements (Issue 04/05). Curre
    then **LLM-verify** the top-k for genuine equivalence vs mere topical similarity.
 3. Within-language: dedup/cluster first; cross-language: align clusters.
 4. Known translations (the translated-page work) as a **positive control** for the matcher.
-5. Gap = no match after blocking + verify; for a clean gap, optionally widen the search to periphery
-   (recall-on-demand) before declaring it genuine.
+5. Gap = no match after blocking + verify. **Do not search the periphery here** — emit the gap
+   report; the periphery search (recall-on-demand) is **Issue 07**, which consumes this report. A
+   gap is only "genuine" after Issue 07's expand-and-re-search fails.
 
 ## Context documents
 - [`../related_work.md`](../related_work.md) — M9 architecture, DeDeo typology, embedding approach.
