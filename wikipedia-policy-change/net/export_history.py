@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 """
-export_history.py — dump the year-keyed ToolsDB tables to CSV for the repo.
+export_history.py — dump the year-keyed core network from ToolsDB to CSV for the repo.
 
 ToolsDB is Toolforge-only, quota-bound, and the per-build SQLite archives aren't in
-git — so this writes the compact, year-keyed derived tables to data/network/history/
-as the durable, committable copy of the historical (and current) network.
+git — so this writes the compact, year-keyed CORE network to data/network/history/
+as the durable, committable copy of the historical (and 2026) network.
+
+By default it exports the *core* network only — node rows that are core/candidate
+(drops the 2026 'suspect' frontier) and core->core links (to_admitted=1) — so the
+output matches the shape of data/network/ (core), NOT the full raw build (the enwiki
+2026 raw node table alone is ~34k rows; the full link graph is far larger and belongs
+in the SQLite archive, not git).
 
 Run on Toolforge (needs ~/replica.my.cnf):
   toolforge jobs run export-hist --image python3.13 --mem 1Gi --wait \
@@ -25,11 +31,6 @@ try:
 except ImportError:
     sys.exit("pip install pymysql")
 
-# year-keyed tables worth committing (small, derived). Facets are larger but still
-# compact; include them by default so the export is self-contained.
-TABLES = ["node", "link", "node_category", "node_template", "navbox_member",
-          "category_registry", "template_registry", "provenance", "build_run"]
-
 OUT_DEFAULT = Path(__file__).parent.parent / "data" / "network" / "history"
 
 
@@ -46,12 +47,30 @@ def dec(x):
     return x.decode("utf-8", "replace") if isinstance(x, (bytes, bytearray)) else x
 
 
+def dump(db, out, name, sql, params):
+    with db.cursor() as cur:
+        cur.execute(sql, params)
+        cols = [d[0] for d in cur.description]
+        rows = cur.fetchall()
+    fpath = out / f"{name}.csv"
+    with fpath.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(cols)
+        for r in rows:
+            w.writerow([dec(v) for v in r])
+    print(f"  {name}: {len(rows):,} rows -> {fpath}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(OUT_DEFAULT))
-    ap.add_argument("--tables", default=",".join(TABLES),
-                    help="comma-separated subset to export")
+    ap.add_argument("--from-year", type=int, default=2005)
+    ap.add_argument("--to-year", type=int, default=2026)
     ap.add_argument("--wiki", default=None, help="restrict to one wiki (default: all)")
+    ap.add_argument("--include-suspects", action="store_true",
+                    help="also export non-core (2026 frontier) nodes — large")
+    ap.add_argument("--all-links", action="store_true",
+                    help="export every wikilink, not just core->core — large")
     a = ap.parse_args()
 
     cr = creds()
@@ -62,35 +81,33 @@ def main():
                          database=f"{user}__policies", charset="utf8mb4", autocommit=True)
 
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
-    where = ("WHERE wiki=%s", (a.wiki,)) if a.wiki else ("", ())
+    yr = "year BETWEEN %s AND %s"
+    pr = [a.from_year, a.to_year]
+    wclause = " AND wiki=%s" if a.wiki else ""
+    wp = [a.wiki] if a.wiki else []
 
-    for tbl in a.tables.split(","):
-        tbl = tbl.strip()
-        if not tbl:
-            continue
-        with db.cursor() as cur:
-            try:
-                cur.execute(f"SELECT * FROM {tbl} {where[0]} ORDER BY 1", where[1])
-            except pymysql.err.ProgrammingError as e:
-                print(f"  {tbl}: skip ({e})"); continue
-            cols = [d[0] for d in cur.description]
-            rows = cur.fetchall()
-        fpath = out / f"{tbl}.csv"
-        with fpath.open("w", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
-            w.writerow(cols)
-            for r in rows:
-                w.writerow([dec(v) for v in r])
-        print(f"  {tbl}: {len(rows):,} rows -> {fpath}")
+    node_filter = "" if a.include_suspects else " AND confidence IN ('core','candidate')"
+    dump(db, out, "nodes",
+         f"SELECT * FROM node WHERE {yr}{wclause}{node_filter} ORDER BY wiki, year, page_id",
+         pr + wp)
 
-    # quick year coverage summary so you can see what's actually populated
-    print("\nyear coverage (node):")
+    link_filter = "" if a.all_links else " AND to_admitted=1"
+    dump(db, out, "links",
+         f"SELECT * FROM link WHERE {yr}{wclause}{link_filter} ORDER BY wiki, year, from_page",
+         pr + wp)
+
+    dump(db, out, "build_run",
+         f"SELECT * FROM build_run WHERE {yr}{wclause} ORDER BY wiki, year, built_at",
+         pr + wp)
+
+    # year coverage summary
+    print("\nyear coverage (exported nodes):")
     with db.cursor() as cur:
-        cur.execute("SELECT wiki, year, COUNT(*) c, "
-                    "SUM(confidence='core') core FROM node "
-                    f"{where[0]} GROUP BY wiki, year ORDER BY wiki, year", where[1])
-        for wiki, year, c, core in cur.fetchall():
-            print(f"  {dec(wiki):14s} {year}  rows {c:>6}  core {core or 0:>6}")
+        cur.execute(f"SELECT wiki, year, COUNT(*) AS n, SUM(confidence='core') AS core "
+                    f"FROM node WHERE {yr}{wclause}{node_filter} "
+                    f"GROUP BY wiki, year ORDER BY wiki, year", pr + wp)
+        for wiki, year, n, core in cur.fetchall():
+            print(f"  {dec(wiki):14s} {year}  n {n:>6}  core {core or 0:>6}")
 
 
 if __name__ == "__main__":
