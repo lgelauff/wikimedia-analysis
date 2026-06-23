@@ -104,7 +104,7 @@ central to dependent on / derivative of other statements on the page.
 | code | indicator | source |
 |---|---|---|
 | `FOUND_principle` | phrased as a general principle (broad, abstract) | span |
-| `FOUND_deferred` | other statements / pages defer to or restate it (cross-ref in-degree above the per-wiki median) | structural |
+| `FOUND_derived` | the page gives clear indications of more specific derived rules / policy stemming from it ("see X for details", "implemented by…", "in more detail at…") | context |
 | `FOUND_notexception` | not itself an exception / qualifier | span |
 
 ## 9. Generality
