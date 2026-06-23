@@ -29,6 +29,21 @@ A good atomic statement is:
 
 Source: https://github.com/lgelauff/wiki-polis/blob/main/guidance/guide_organizer.md#3-writing-good-statements
 
+## Why an LLM here (and its guardrails)
+This stage is where an LLM genuinely shines: decomposing dense policy prose into atomic
+propositions requires reading for **meaning** — resolving coordination, subordinate clauses,
+embedded exceptions, anaphora, and cross-references, and rendering across six languages. That is
+exactly what marker/regex segmentation cannot do, and it's why the unit is deontic-*informed* (not
+-required) and the statement is an *interpretation* (not a span). The same step naturally produces
+the original + English renderings.
+
+"Shines" ≠ "unchecked." The interpretive freedom is bounded by four grounding mechanisms so the
+output stays measurable: (1) every statement is anchored to a `source_quote` (provenance —
+confirmable against the page); (2) an **independent** agent rates quality (Issue 05); (3) dedup /
+clustering (Issue 06) absorbs the deliberate over-generation; (4) the §5/§8 **metrics** (diagnostic,
+not gates yet) track how the extractor is behaving. So the LLM does the decomposition; anchoring,
+rating, and dedup keep it honest.
+
 ## Scope
 6 wikis; the `is_core` segments of every page. Current snapshot.
 
