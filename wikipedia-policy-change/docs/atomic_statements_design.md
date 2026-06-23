@@ -141,6 +141,31 @@ So a cross-wiki density gap (e.g. en ~2× denser per page) resolves into two dis
 comparable claims — is the edition more *detailed*, more *interconnected*, or both — only
 once the unit is the statement, not the page.
 
+### 2b. Temporal scope — atomize ALL years, anchored on the current year (the link)
+
+**Decision:** atomize **every year**, not just the current snapshot. The time series *is* the
+analysis (H1/H2/H3, reform) — a single snapshot shows no change. But the years are **not atomized
+independently** (that would produce a different, hard-to-align statement set per year). Instead:
+
+- **The current-year statement set is the anchor / reference spine.** Extract it first (the
+  current-snapshot pipeline, Issues 01–06).
+- **Walk earlier years back and match their text to the current-year statements by *meaning*** (§2 —
+  semantic identity, not byte/token). Stay **as close as possible to the current-year form**: a
+  historical instance that means the same thing is the *same statement entity*, just with earlier
+  wording.
+- **The link = a statement *entity* threaded across years.** Each entity has a stable id and an
+  interval (`first_year`→`last_year`); the **current-year form is its canonical version**, and every
+  historical instance links to it via the entity id. This is the lineage thread the user asked for.
+- **Statements with no current-year form** (removed/reformed before now) are the **reform/death
+  tail** — discovered by their *absence* from the anchor, given their own entity with
+  `last_year < current`. (Mirrors the network's Phase-2 fill-back: anchor on current, walk back, and
+  also catch historical-only items the anchor can't see.)
+
+Because identity is **semantic** (§2), the HTML-vs-wikitext substrate seam between the current
+snapshot and the historical wikitext doesn't have to byte-align — we match by meaning across
+substrates, which removes that concern. Practically: **current snapshot = Phase 1** (the reference
+set); **all-years anchored walk-back = Phase 2.**
+
 ---
 
 ## 3. Change-gating (cost + row collapse)

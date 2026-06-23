@@ -15,10 +15,14 @@ Each issue has an objective, identified inputs/outputs, context docs, and accept
   (01–06) does **not** run on the periphery/candidate tier. Periphery is handled **after** the
   pipeline, selectively and gap-driven, in **Issue 07** (recall-on-demand: only pull in a periphery
   page if it fills a real gap found at Issue 06).
-- **Snapshot, not time-series.** These target the current state. Rendered HTML / `action=parse`
-  is acceptable here (and cached). The *reconstructable-across-time* path (raw wikitext only, per
-  [`../atomic_statements_design.md`](../atomic_statements_design.md) §2a / WikiWho) is a **later
-  extension**, out of scope.
+- **Current snapshot first — but all years is the goal.** These issues (01–06) build the
+  **current-year** statement set, which is the **anchor/reference spine**. The full intent is to
+  atomize **all years** (the time series powers H1/H2/H3 + reform) — done as **Phase 2**, anchored
+  on this snapshot and walked back, matching by *meaning* (see
+  [`../atomic_statements_design.md`](../atomic_statements_design.md) §2b). So the snapshot is Phase 1
+  of the statement work, not the whole of it. Rendered HTML / `action=parse` is fine for the current
+  snapshot (and cached); the historical walk-back uses raw wikitext, and because identity is semantic
+  the two substrates need not byte-align.
 - **Principle:** statements may **overlap**; **completeness > minimality**. Better to capture a
   rule twice than miss it.
 
