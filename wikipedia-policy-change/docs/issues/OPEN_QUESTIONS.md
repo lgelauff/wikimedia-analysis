@@ -62,6 +62,25 @@ already types as `procedure`) is tractable within scope. **Owner decision needed
 
 ---
 
+## OQ-3 — Demotion signals for de/nl (no `{{historical}}` banner) (PARKED — revisit later)
+
+de and nl rarely use lifecycle banners (`{{historical}}`/`{{proposed}}`); they signal that a rule is
+abandoned/superseded through **category exit** and **removal from the official policy index**, not a
+banner. The current core-membership rule ([`../core_definition.md`](../core_definition.md) §2–3) only
+lists banner-style negative evidence, so its stickiness/inherit rule may keep abandoned de/nl pages
+flagged "core." **Provisional fix (when revisited):** add *category-exit* and *index-removal* as
+first-class §2 demotion signals for those wikis. Low-priority; revisit before any de/nl historical
+claim. (Panel finding, confirmed.)
+
+## OQ-4 — Browseable visualization + crowd-sourced corrections (FUTURE IDEA)
+
+Rather than exhaustively reviewing the pipeline output up front, ship a **browseable visualization** of
+the network / statements and let people (editors, researchers) **explore it and suggest improvements**
+in place — surfacing mis-classifications, bad extractions, missing equivalents as community feedback
+instead of a closed review. Fits the "see how far we get, then reflect" approach: get a usable
+artifact in front of people early; corrections become data. Ties to M3 (web app). Capture now;
+design later.
+
 ## How to use this file
 When a question here is taken up, either fold it into the relevant numbered issue or promote it to its
 own issue, and note the resolution here. Don't delete — keep the resolved rationale.
