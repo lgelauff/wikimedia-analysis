@@ -49,6 +49,25 @@ git clone https://github.com/lgelauff/wikimedia-analysis.git
 ```
 Update pattern later: `git -C $HOME/wikimedia-analysis pull`.
 
+### 4a. Push changes back to GitHub (deploy key)
+
+The clone above is over HTTPS, but GitHub disabled password auth, so pushing from the bastion
+needs a credential — and you should **not** put your personal username/PAT on shared infra. Use a
+**repo-scoped SSH deploy key** (authenticates as the key, not you). Full reusable how-to (and the
+ephemeral GitHub-App alternative for multi-repo): **lessons repo →
+[`git-push-from-toolforge.md`](https://github.com/lgelauff/wikimedia-coding-agent-lessons/blob/main/git-push-from-toolforge.md)**.
+
+Quick version:
+```
+ssh-keygen -t ed25519 -C "wikimedia-policies-toolforge" -f ~/.ssh/id_ed25519 -N ""
+cat ~/.ssh/id_ed25519.pub     # add on the repo as a Deploy key WITH write access
+git -C ~/wikimedia-analysis remote set-url origin git@github.com:lgelauff/wikimedia-analysis.git
+git -C ~/wikimedia-analysis push origin <branch>
+# optional: commit as the tool, not you
+git -C ~/wikimedia-analysis config user.name  "wikimedia-policies tool"
+git -C ~/wikimedia-analysis config user.email "wikimedia-policies@tools.wmflabs.org"
+```
+
 ## 5. Confirm dumps mount
 
 ```
