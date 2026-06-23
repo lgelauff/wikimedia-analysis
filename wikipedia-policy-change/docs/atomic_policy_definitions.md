@@ -12,6 +12,8 @@ extraction gate are in [`atomic_statements_design.md`](atomic_statements_design.
 
 - **Input:** the host page (as context) + one candidate statement span.
 - **Output:** a score in **[0, 1]** for each indicator below — independently.
+- **Out of band:** dimensions §4 (ratification) and §5 (live invocation) are **not** scored by
+  the span agent; they are populated by a separate **deliberation** pass over discussion pages.
 
 A *definition* is the 0→1 axis (e.g. bindingness = purely descriptive → hard obligation).
 The lettered items under it are **indicators** — signals that place a statement on that axis.
@@ -38,6 +40,8 @@ fix aggregation now:
 - **inherited** — taken from the host page's status (banner / category / index membership).
 - **structural** — computed from the network or the statement lifespan model (cross-reference
   in-degree, first/last year, revert history), not judged from text.
+- **deliberation** — established from discussion / talk / RfC / Village-Pump pages via a separate
+  pass, **not** scored by the span agent (see §4, §5).
 
 ---
 
@@ -70,13 +74,21 @@ more than one). There is no combined "scope" axis.
 | `SCOPE_conduct` | governs how editors behave / interact | span |
 | `SCOPE_process` | defines how a procedure / venue runs | span |
 
-## 4. Ratification — *not an atomic indicator*
-Community ratification is a property of the **page / community**, not of a single statement. It
-is carried at the page level (banner / category) and not scored per span.
+## 4. Ratification — *deliberation-sourced, not agent-scored*
+**Definition:** strength of community-legitimacy backing behind the statement.
 
-## 5. Currency — *not an atomic indicator*
-Whether a statement is current is **lifespan metadata** (`first_year` / `last_year` / `status`
-from the identity model), not a judged property of the span. Recorded, not scored.
+Relevant, but it cannot be read off the policy page or the candidate span. Establishing that a
+statement is community-ratified means tracing its **deliberation history** — the talk-page / RfC /
+Village-Pump discussion that adopted it. Populated by a separate deliberation pass (after digging
+through the discussion record), **not** by the span agent. No per-span score.
+
+## 5. Live invocation — *deliberation-sourced, not agent-scored*
+**Definition:** how actively the statement functions as a live rule — the degree to which editors
+**cite it as a justification** when arguing for, or asking for, a decision.
+
+Sourced the same way as §4: read from discussion pages where editors refer to the statement as a
+motivation in an argument, **not** scored by the span agent. (The statement's active/removed
+lifespan is separate metadata from the identity model.)
 
 ## 6. Contextual relation
 **Definition:** how the statement sits relative to the rest of its page — from standalone and
@@ -116,15 +128,15 @@ central to dependent on / derivative of other statements on the page.
 | `GEN_unconditional` | free of conditional scoping ("except", "unless", "in the case of", "for X articles") | span |
 | `GEN_primary` | a primary rule, not a qualifier hanging off another rule | span |
 
-## 10. Institutional recognition
-**Definition:** extent to which the norm is recognized in the project's own catalogue, from
-body-only to restated on an official index/summary.
+## 10. Layout prominence
+**Definition:** extent to which the **page layout affirms the statement's importance**, from
+buried in the body to placed and emphasized as a key rule.
 
 | code | indicator | source |
 |---|---|---|
-| `INST_restated` | the norm is restated on an index / summary / Five-Pillars / simplified-ruleset page | structural |
-| `INST_pagelisted` | the host page is listed in the official policy index / core category | inherited |
-| `INST_shortcut` | the statement carries a stable shortcut / anchor that other pages link to | structural |
+| `LAYOUT_lead` | appears in the page lead / opening section rather than deep in the body | context |
+| `LAYOUT_highlighted` | set off by layout — nutshell box, highlighted/boxed, bold or emphasized | context |
+| `LAYOUT_heading` | is, or sits directly under, a top-level section heading rather than buried in a sub-list / footnote | context |
 
 ---
 
@@ -133,8 +145,11 @@ body-only to restated on an official index/summary.
 - Several indicators already have a home in the schema: bindingness ≈ `deontic_type`,
   function ≈ the `rule | procedure | summary | meta | scaffolding` segment type, and
   `FOUND_deferred` ≈ statement-level cross-reference in-degree — see
-  [`atomic_statements_design.md`](atomic_statements_design.md). Lifecycle/currency (§5) is carried
-  as statement lifespan metadata, not as a scored indicator.
+  [`atomic_statements_design.md`](atomic_statements_design.md). The statement's active/removed
+  lifespan (`first_year` / `last_year` / `status`) is carried as identity-model metadata, separate
+  from these indicators.
+- Dimensions §4 and §5 join the **deliberation / RfC track** (see [`ROADMAP.md`](ROADMAP.md) M11,
+  RQ2) — the discussion record behind a statement, not its policy-page text.
 - The **span** indicators each need a per-language **deontic / sanction / scope lexicon**
   (six wikis); these are the lexical hooks that keep the indicators extractive and reproducible.
 - Generality and Enforcement directly feed the H3 (defensive accretion) and H4 (new policy as
