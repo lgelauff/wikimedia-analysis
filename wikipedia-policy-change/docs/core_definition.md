@@ -5,6 +5,8 @@ The rule that decides whether a page is **core** (active policy/guideline) for a
 per year**, because the indicators (banners, categories, templates) differ by wiki and shift over
 time. Used by `net_build_current.py` (current year, SQL) and `net_build_historical.py` (past
 years, wikitext). Companion: [`ROADMAP.md`](ROADMAP.md) M4, [`atomic_statements_design.md`](atomic_statements_design.md).
+This doc is **page-level** classification; the full page→content classification framework
+(and the shift to content-level) is in [`classification.md`](classification.md).
 
 ---
 
