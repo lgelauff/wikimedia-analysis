@@ -18,7 +18,7 @@ members) is captured separately in the build output, not in this dataset.
 
 ## How we got here (method)
 
-Built by [`net/net_build_current.py`](../../net/net_build_current.py). A page is **core** iff
+Built by [`net/net_build_current.py`](../../../net/net_build_current.py). A page is **core** iff
 it is in the project namespace (ns 4) **and** meets a near-ground-truth signal:
 
 1. **Status banner** — transcludes a policy/guideline status template

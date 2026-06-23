@@ -24,5 +24,5 @@ regenerated (`build_core_datasets.py --include-en`, which would overwrite the ha
 enwiki README — left as a deliberate choice, not done automatically).
 
 Method, membership rule, and the namespace-4 page-routing (policy vs. venue vs. deliberation)
-are in [`../docs/core_definition.md`](../docs/core_definition.md). The full network (nodes,
-edges, governance class, core audit) is in [`../data/network/`](../data/network/).
+are in [`../../docs/core_definition.md`](../../docs/core_definition.md). The full network (nodes,
+edges, governance class, core audit) is in [`../network/`](../network/).
