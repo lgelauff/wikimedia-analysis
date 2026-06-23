@@ -108,7 +108,7 @@ its wording changes.
   imply a statement change — the changed remainder needs a **same-statement-by-meaning** decision
   (rephrase / refine / genuine reform / new / removed).
 - **Across-time and across-language identity are the same problem** — "are these two the same
-  statement?", decided by meaning (Issue 06 / OQ-1). Solve it once, apply both directions.
+  statement?", decided by meaning (#7 / OQ-1). Solve it once, apply both directions.
 
 ### 2a. WikiWho — a text-change *signal*, NOT the statement-identity mechanism (reconsidered)
 

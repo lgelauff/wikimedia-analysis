@@ -8,10 +8,10 @@ relevant stage runs.
 
 ---
 
-## OQ-1 — Statement overlap & the minimal complete set (ACTIVE — affects Issues 04 & 06)
+## OQ-1 — Statement overlap & the minimal complete set (ACTIVE — affects #5 & 06)
 
 **The problem.** Raw statement *count* is not yet a meaningful unit: under "completeness > minimality"
-(Issue 04) the count tracks prose verbosity and boilerplate density, not how much policy a page
+(#5) the count tracks prose verbosity and boilerplate density, not how much policy a page
 carries (en is the most boilerplate-heavy of the six, so it would inflate). We accept over-extraction
 for recall — **but a count is only interpretable once we understand the overlap structure.**
 
@@ -26,7 +26,7 @@ for recall — **but a count is only interpretable once we understand the overla
 
 **Status:** the user's framing — "count isn't necessarily helpful yet, but if we understand how
 [statements] overlap with each other, we can correct for that; still figuring out how to find the
-overlap and the complete set with minimal overlap." This is the core method question behind Issue 06's
+overlap and the complete set with minimal overlap." This is the core method question behind #7's
 dedup and the right unit for any cross-wiki/density claim. **Not yet solved.** Keep raw extraction
 inclusive (recall); resolve the overlap→cover method before making count-based comparisons.
 
@@ -57,7 +57,7 @@ project's scope. The concern is **valid** and should not be silently dropped.
 
 **Decision (provisional):** treat it as a **known, documented coverage limitation** of the extraction
 layer rather than a thing this project resolves. Record per-page unresolved cross-references as a
-coverage caveat (cheap). Revisit whether any subset (e.g. procedural statements, which Issue 02
+coverage caveat (cheap). Revisit whether any subset (e.g. procedural statements, which #3
 already types as `procedure`) is tractable within scope. **Owner decision needed:** in or out of scope.
 
 ---
@@ -95,7 +95,7 @@ Consequences:
 - **WikiWho is reconsidered** (atomic_statements_design §2a): token provenance tracks *text*, not
   *statements*, so it's at most a cheap change-*signal*, never the identity layer. The user is
   unconvinced it's worth using even for that. **Open.**
-- Shared machinery with Issue 06 (cross-language matching) and OQ-1 (overlap): solve
+- Shared machinery with #7 (cross-language matching) and OQ-1 (overlap): solve
   statement-equivalence-by-meaning once, apply in all three places.
 
 ## How to use this file
