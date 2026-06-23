@@ -1,0 +1,7 @@
+wiki,year,built_at,git_commit,source,n_confirmed,n_suspect,n_links,s_min,d_min
+dewiki,2026,2026-06-15T17:08:16Z,446901b,replica+api:current,149,337,8043,3,0.1
+enwiki,2026,2026-06-15T17:07:36Z,446901b,replica+api:current,347,34045,32021,3,0.1
+eswiki,2026,2026-06-15T17:09:42Z,446901b,replica+api:current,148,181,5833,3,0.1
+frwiki,2026,2026-06-15T21:29:27Z,f3b792a,replica+api:current,177,671,10320,3,0.1
+jawiki,2026,2026-06-15T17:10:17Z,446901b,replica+api:current,193,1140,9016,3,0.1
+nlwiki,2026,2026-06-15T17:08:42Z,446901b,replica+api:current,129,359,5026,3,0.1
