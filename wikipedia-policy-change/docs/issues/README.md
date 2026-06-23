@@ -47,3 +47,7 @@ Each issue has an objective, identified inputs/outputs, context docs, and accept
 **Background everyone should read first:** [`../classification.md`](../classification.md)
 (page→content classification, the level this pipeline operates at), and
 [`../atomic_statements_design.md`](../atomic_statements_design.md) (the statement model).
+
+**Unresolved design/research questions and parked concerns:** [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md)
+— incl. the statement-overlap / minimal-complete-set problem (OQ-1, affects Issues 04 & 06) and the
+non-explicit/implicit-policy coverage concern (OQ-2, parked, scope decision needed).

@@ -29,7 +29,7 @@ This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity
 
 | field | notes |
 |---|---|
-| `statement_id` | stable id (hash-seeded on wiki+page+span+text) |
+| `statement_id` | **surrogate** unique id (UUID or autoincrement), assigned once at insert — an opaque reference handle, **not** derived from content/spans (those move on re-run) |
 | `wiki`, `page_id`, `revid` | provenance |
 | `segment_id` / `char_start`, `char_end` | span back into Issue 01 clean text (the anchor) |
 | `source_quote` | the **closest quote that fully describes** the statement, original language |
@@ -44,9 +44,14 @@ This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity
 1. Decide store: SQLite locally → ToolsDB for serving (consistent with the network tables). Text is
    stored **inline here** (statements are short) but the *source* text stays by-reference to the
    Issue 01 cache via the span anchor.
-2. Define `statement_id` so re-extraction of an unchanged span yields the same id (hash of
-   `wiki|page_id|char_start|char_end|statement_orig`).
-3. Provide insert/query/dedupe-by-id helpers and a tiny validation (non-empty `statement_en`, valid span).
+2. `statement_id` is a **surrogate key** — assign an opaque unique id (UUID or autoincrement) once,
+   at insert. Do **not** derive identity from content or char-offsets: the cleaned-text cache can be
+   regenerated (offsets shift) and `statement_orig` is LLM output (paraphrase varies on re-run), so a
+   content-hash id would churn for statements that didn't really change; and policy boilerplate
+   repeats verbatim across pages, so content can't be a unique key anyway. The surrogate id is purely
+   a stable reference handle. (Detecting that two statements are *the same / overlap* is a separate
+   concern — the dedup/overlap layer, Issue 06 — not the job of this id.)
+3. Provide insert/query helpers and a tiny validation (non-empty `statement_en`, valid span).
 
 ## Context documents
 - [`../atomic_statements_design.md`](../atomic_statements_design.md), [`../data_architecture.md`](../data_architecture.md), [`../classification.md`](../classification.md) §2.
