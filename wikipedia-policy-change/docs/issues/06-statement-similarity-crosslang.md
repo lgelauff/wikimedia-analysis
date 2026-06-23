@@ -12,11 +12,19 @@ produce a **gap report** — statements with no cross-lingual match are candidat
 This is the project's core unit of comparison — *atomic policy elements compared across languages* —
 realized. It is **M9 at the statement level**.
 
+> **Method status — UNDETERMINED.** *How* statements are mapped across languages is an **open
+> research question**, not decided here. In particular, `statement_en` is an English **translation
+> for interpretation** (Issues 03/04) — it is **not** the matching substrate; do **not** build the
+> cross-lingual mapping on it. The approaches in "Approach" below are **candidate options to
+> evaluate**, not a chosen pipeline. Settling the mapping method is itself a deliverable of this
+> issue (see Open questions).
+
 ## Scope
 All six languages (en/de/nl/fr/es/ja). All rated statements (Issue 04/05). Current snapshot.
 
 ## Inputs
-- **Issue 04** statement store (with `statement_en` — the shared cross-lingual key).
+- **Issue 04** statement store. (`statement_en` is an English **translation for interpretation**,
+  NOT a match key — the mapping method is open, see the status note above.)
 - **Issue 05** ratings (optionally restrict to `ok` statements, or weight by quality).
 - Structural priors: `../../data/network/` interwiki clusters + the **hidden-equivalents** method
   (FINDINGS #4 / `../../net/analyze_network.py` §5) — pages already aligned cross-wiki are strong
@@ -29,11 +37,20 @@ All six languages (en/de/nl/fr/es/ja). All rated statements (Issue 04/05). Curre
 - A **gap report**: per language, statements with no match elsewhere — disaggregated (genuine gap
   vs. likely-missed). Ties to the M9 "unmatched element → targeted net expansion" idea.
 
-## Approach
-1. Embed statements via `statement_en` (shared space) — embeddings in a vector store
-   ([`../data_architecture.md`](../data_architecture.md); reuse keys per `statement_id`).
+## Approach — candidate options to evaluate (method not yet chosen)
+First task of this issue: **decide and justify the mapping method.** Candidate building blocks to
+weigh (and likely combine), none mandated, and **`statement_en` is not assumed as the substrate**:
+- multilingual sentence embeddings over the **original-language** `statement_orig` (shared space
+  without an English pivot);
+- structural priors — the interwiki/QID page alignment + the hidden-equivalents method (FINDINGS #4);
+- LLM equivalence verification performed on the **original-language** texts (not their English glosses);
+- `statement_en` used only as an *interpretation aid* for the human researcher reviewing candidates.
+Then:
+1. Embed/represent statements by the chosen method (embeddings in a vector store —
+   [`../data_architecture.md`](../data_architecture.md); reuse keys per `statement_id`).
 2. **Block, never O(n²):** candidate pairs from (QID ∪ langlink page-alignment ∪ embedding-ANN),
-   then **LLM-verify** the top-k for genuine equivalence vs mere topical similarity.
+   then **verify** the top-k for genuine equivalence vs mere topical similarity — verification on
+   original-language text.
 3. Within-language: dedup/cluster first; cross-language: align clusters.
 4. Known translations (the translated-page work) as a **positive control** for the matcher.
 5. Gap = no match after blocking + verify. **Do not search the periphery here** — emit the gap
@@ -59,5 +76,7 @@ Issues 04 and 05. The capstone — everything feeds here.
 Embedding + ANN per-statement; verification per candidate pair (fan out).
 
 ## Open questions
-- Match on `statement_en` only, or also use original-language embeddings as a check? (Default: en for blocking, original for verification.)
+- **The core open question: what is the cross-lingual mapping method?** (Undetermined — deciding it
+  is part of this issue.) `statement_en` (a translation for interpretation) must **not** be assumed
+  as the matching key; favour original-language representation + verification.
 - Equivalence threshold / how strict is "the same norm"? (Default: LLM-verified semantic equivalence, not paraphrase similarity — set on the control.)

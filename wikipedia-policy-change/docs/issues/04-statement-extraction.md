@@ -43,7 +43,11 @@ Source: https://github.com/lgelauff/wiki-polis/blob/main/guidance/guide_organize
    compounds; keep deontic force.
 3. Anchor each statement to its source span; write via the Issue 03 layer (idempotent on `statement_id`).
 4. Per-wiki: the deontic markers and phrasing differ by language — the extraction prompt is
-   language-aware; the **English rendering is the shared key** used downstream (Issue 06).
+   language-aware. `statement_en` is an **English translation for interpretation only** — so a
+   researcher who doesn't read the source language can understand the statement. It is **NOT** the
+   cross-lingual matching key, and **how** statements are mapped across languages is **not yet
+   determined** (an open question — see Issue 06). Do not build anything that assumes `statement_en`
+   is the match substrate.
 
 ## Context documents
 - wiki-polis guide §3 (above) — the definition.

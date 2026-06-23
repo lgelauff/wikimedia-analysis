@@ -5,8 +5,11 @@
 ## Objective
 Design and implement the storage for atomic statements. Each statement records its **identifier**,
 the **source quote** it came from (the closest quote that fully describes it), the **atomic
-statement** itself, its **language**, and **both** the original-language and an English rendering
-of the statement. Plus provenance back to the page/segment so a statement is always traceable.
+statement** itself, its **language**, and **both** the original-language text and an English
+translation of the statement. The English text is an **interpretation aid** (so a researcher who
+doesn't read the language can understand the statement) — **not** a canonical or matching key; how
+languages are mapped to each other is undetermined (Issue 06). Plus provenance back to the
+page/segment so a statement is always traceable.
 
 This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity reads from it).
 
@@ -31,7 +34,7 @@ This gates Issue 04 (extraction writes into this store) and Issue 06 (similarity
 | `segment_id` / `char_start`, `char_end` | span back into Issue 01 clean text (the anchor) |
 | `source_quote` | the **closest quote that fully describes** the statement, original language |
 | `statement_orig` | the atomic statement, **original language** |
-| `statement_en` | the atomic statement, **English** |
+| `statement_en` | the atomic statement translated to **English** — interpretation aid for non-speakers; **not** a matching/canonical key |
 | `language` | source language code |
 | `segment_type`, `governance_class` | carried from Issue 02 / the page (content/user/admin) |
 | `created_by`, `model_id`, `prompt_version` | reproducibility (which agent/model/rubric produced it) |
@@ -59,4 +62,4 @@ None (parallel with 01/02). **Gates Issue 04.**
 ## Open questions
 - One row per statement (overlap allowed → many rows per span) — confirm overlap is represented by
   distinct `statement_id`s over possibly-overlapping spans. (Default: yes; completeness > minimality.)
-- Store `statement_en` for English-source statements too (identity), for a uniform cross-lingual key? (Default: yes.)
+- Store `statement_en` for English-source statements too (i.e. `statement_en` = `statement_orig`), so every row has a uniform English interpretation field? (Default: yes — purely an interpretation convenience; **not** a cross-lingual matching key. The mapping method is undetermined — Issue 06.)
