@@ -1,5 +1,7 @@
 # Issue 05 — Atomic-statement criteria + rating
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 Two deliverables: **(a)** define an explicit, versioned set of **criteria** for what makes a good
 atomic statement (so quality is measurable, not vibes); **(b)** run a **rating agent** that scores

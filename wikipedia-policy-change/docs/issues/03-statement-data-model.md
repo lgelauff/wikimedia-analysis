@@ -1,5 +1,7 @@
 # Issue 03 — Atomic-statement data model + store
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 Design and implement the storage for atomic statements. Each statement records its **identifier**,
 the **source quote** it came from (the closest quote that fully describes it), the **atomic

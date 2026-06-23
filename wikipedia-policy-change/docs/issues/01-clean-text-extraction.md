@@ -1,5 +1,7 @@
 # Issue 01 — Clean reader-text extraction + cache
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 For every page in the 6-wiki network, extract the **clean reader-facing text** — everything that
 carries meaning to a reader — and **discard navigation, layout, and link/markup machinery**. Cache

@@ -1,5 +1,7 @@
 # Issue 06 — Statement similarity, dedup, and cross-lingual mapping
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 Find similarities between statements: **(a)** deduplicate near-identical statements *within* a
 language (overlap was allowed at extraction by design, so duplicates are expected and fine — here we

@@ -1,5 +1,7 @@
 # Issue 04 — Atomic-statement extraction
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 From the **core policy text** (the `is_core` segments from Issue 02), extract **all** atomic
 statements and write them into the store (Issue 03). For each statement, also produce its

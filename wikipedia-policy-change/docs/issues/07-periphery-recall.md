@@ -1,5 +1,7 @@
 # Issue 07 — Periphery review (recall-on-demand, selective)
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 The pipeline (01–06) runs on the **core only**. This issue is the **follow-up** that, *after* the
 core pipeline is complete, goes through the **periphery** (candidate/suspect tier — pages outside

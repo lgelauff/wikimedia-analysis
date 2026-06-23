@@ -1,5 +1,7 @@
 # Issue 02 — Core-policy vs periphery segmentation (within a page)
 
+> **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
+
 ## Objective
 A policy page is not uniformly policy: it interleaves genuine rules with summaries, cross-
 references, examples, and history. Within each page's clean text (Issue 01), **segment the text and

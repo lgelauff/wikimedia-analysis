@@ -4,7 +4,12 @@ A pipeline of discrete, agent-runnable work units that take the **current, compl
 policy network** and turn each page into **rated, cross-lingually-aligned atomic statements**.
 Each issue has an objective, identified inputs/outputs, context docs, and acceptance criteria.
 
+> ⚠️ **All issues here apply to the `wikipedia-policy-change/` project ONLY** (inside the
+> `wikimedia-analysis` repo). Every path, dataset, and context doc is within this folder; this work
+> must not touch or depend on any other project folder in the repo.
+
 **Scope (shared by all issues):**
+- **Project:** `wikipedia-policy-change/` only (see banner above).
 - **Wikis:** en, de, nl, fr, es, ja (all six).
 - **Pages: the confirmed core only** (`../../data/network/nodes.csv`, 1,143 pages). The pipeline
   (01–06) does **not** run on the periphery/candidate tier. Periphery is handled **after** the
