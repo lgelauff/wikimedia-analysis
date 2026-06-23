@@ -28,6 +28,12 @@ is the *element*, not the page. This inverts the precision/recall split:
 An **atomic normative statement** = one prescriptive/proscriptive proposition (one rule, exception,
 qualifier, or definition).
 
+**One source span can carry several statements — even a single sentence.** Policy prose (especially
+English) packs multiple propositions into one complex sentence via coordination, subordinate
+clauses, and embedded exceptions. So statements are **not 1:1 with sentences or spans**: many
+distinct statements may share the same `source_quote`, and a segment is a *container*, not a unit.
+Extraction decomposes to **propositions, not sentences** (completeness > minimality — §0, §4).
+
 **The statement is an interpretation, not a span of text.** The statement is *our* normalized
 proposition — usually **not** verbatim page text, and usually not even page-shaped. The **span is
 the *source*, not the statement**: it's where we found the statement, and how we **confirm it exists

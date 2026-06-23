@@ -10,6 +10,12 @@ statements and write them into the store (Issue 03). For each statement, also pr
 **Completeness > minimality. Statements may overlap.** It is better to emit a rule twice (e.g. once
 narrowly, once with its exception) than to miss it. Do not try to minimize statement count.
 
+**One segment/sentence → possibly many statements.** A segment is a *container*, not a unit, and a
+single sentence often packs several propositions (coordination, subordinate clauses, embedded
+exceptions). Decompose to **propositions, not sentences** — emit every distinct statement a span
+supports, even when they share the **same `source_quote`** (multiple statement rows may point at one
+quote; that's expected, not a bug). See [`../atomic_statements_design.md`](../atomic_statements_design.md) §1.
+
 ## What an atomic statement is (from the wiki-polis organizer guide §3)
 A good atomic statement is:
 - **Atomic — a single claim.** Never join two claims with "and / but / because"; split compounds.
