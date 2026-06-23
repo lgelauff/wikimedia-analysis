@@ -155,6 +155,20 @@ statement_version(
   char_end       INT,
   KEY (wiki, statement_id)
 )
+
+-- Per-statement indicator scores (long-narrow: one row per indicator, not ~26 columns,
+-- so adding/removing an indicator is a data change, not a migration).
+-- Indicator catalogue + derivation: docs/atomic_policy_definitions.md.
+statement_indicator(
+  wiki                  VARCHAR,
+  statement_id          BIGINT,
+  version_no            SMALLINT,    -- scores can change when the span text changes
+  indicator_code        VARCHAR,     -- BIND_operator, FUNC_normative, SCOPE_content, …
+  score                 REAL,        -- [0,1]
+  indicator_set_version VARCHAR,     -- catalogue version (content-hash)
+  model_id              VARCHAR,     -- pinned for reproducibility (cache-key discipline)
+  PRIMARY KEY (wiki, statement_id, version_no, indicator_code, indicator_set_version, model_id)
+)
 ```
 
 These are **structure rows** (small) — they live in SQLite + ToolsDB like `node`/`link`.

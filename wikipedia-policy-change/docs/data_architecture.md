@@ -31,6 +31,7 @@ blobs. Text is recovered from the cache via `(revid, char_span)`; embeddings via
 | raw wikitext cache | ~0.1–1.3 GB | files | ✅ (disk) |
 | cleaned text | ~0.5–1 GB | files | ✅ (disk) |
 | atomic statements (rows, identity model) | ~450k rows, ~150 MB | SQLite/ToolsDB | ✅ |
+| statement **indicators** (long-narrow: ~26/statement) | small, scales with uniques | SQLite/ToolsDB | ✅ |
 | statement **embeddings** | **~2 GB** | vector store | ✅ (not in DB) |
 
 SQLite is happy into the tens of GB with indexing; nothing here approaches that. See
@@ -93,5 +94,8 @@ is attributable to a specific version.
 - ToolsDB = served structural network only; quota is the binding limit. *(locked)*
 - Statement text stored by reference (span anchor), never inline. *(locked, see atomic doc)*
 - Embed unique statements, not statement-years. *(locked, see atomic doc)*
+- Per-statement indicator scores → `statement_indicator`, **long-narrow** (one row per indicator),
+  Structure tier (SQLite + ToolsDB); keyed by `statement_id` + `version_no`, pinned with
+  `indicator_set_version` + `model_id`. *(locked, see [`atomic_policy_definitions.md`](atomic_policy_definitions.md))*
 - Vector store choice (FAISS / sqlite-vec / Parquet) — *deferred to M8/M9.*
 - Raw-cache publication format (full text vs hashes+titles) — *default hashes+titles; revisit.*

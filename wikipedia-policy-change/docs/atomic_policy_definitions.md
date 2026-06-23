@@ -140,6 +140,18 @@ buried in the body to placed and emphasized as a key rule.
 
 ---
 
+## Storage
+
+Indicator scores are **structure-tier** data — they live in **SQLite + ToolsDB**, never as text
+or vectors (see [`data_architecture.md`](data_architecture.md) §1). One row per
+(statement, indicator), keyed by `statement_id` (+ `version_no`, since a span's scores can change
+when its text changes) and pinned with `indicator_set_version` + `model_id` for reproducibility.
+The **long-narrow** shape — one row per indicator, not ~26 columns — means adding or removing an
+indicator is a data change, not a schema migration, which suits the "keep generating indicators"
+plan. DDL: [`atomic_statements_design.md`](atomic_statements_design.md) §4 (`statement_indicator`).
+
+---
+
 ## Notes
 
 - Several indicators already have a home in the schema: bindingness ≈ `deontic_type`, and
@@ -153,3 +165,40 @@ buried in the body to placed and emphasized as a key rule.
   (six wikis); these are the lexical hooks that keep the indicators extractive and reproducible.
 - Generality and Enforcement directly feed the H3 (defensive accretion) and H4 (new policy as
   prohibition) hypotheses at the atomic level — see [`policy_network_design.md`](policy_network_design.md).
+
+---
+
+## Derivation log — how we got here
+
+Kept so the reasoning is recoverable, not just the result. This set was derived in one working
+session by reframing the page-level definitions step by step:
+
+1. **Origin.** Roadmap-review concern: the project decides "is this a policy" and the
+   governance/style typology only at the **page level** (admission M6, reduction M7,
+   `classify_governance.py`); nothing pushed it down to the atomic statement — the level where the
+   project claims cross-wiki comparison is meaningful (FINDINGS: "style as its own policy type").
+2. **Translate, don't invent.** Took the ten page-level definitions in
+   [`policy_definitions_for_review.md`](policy_definitions_for_review.md) and reframed each as a
+   property of a *single candidate statement*, with the agent given the page as context.
+3. **0–1 + indicators.** Put each on a 0–1 axis and decomposed it into yes/no **indicators**, keeping
+   the distinction sharp: the **definition is the axis**; the indicators are signals that place a
+   statement on it — not the definition.
+4. **Flat bag.** Dropped all gating and fixed weights — each indicator scores independently;
+   aggregation is a downstream empirical question. The task now is to generate indicators and
+   collect scores.
+5. **Per-dimension moves:**
+   - **#2 Function** — split the conflated gate into four standalone indicators.
+   - **#3 Scope** — flattened to three standalone scope questions; no combined axis.
+   - **#4 Ratification** — kept, but not span-readable → **deliberation-sourced**, not agent-scored.
+   - **#5 Currency → Live invocation** — recast as "editors cite it as justification when
+     seeking/making a decision"; deliberation-sourced like #4.
+   - **#6 Self-description → Contextual relation** — how the statement sits relative to the rest of
+     the page.
+   - **#7 Enforcement** — added `ENF_pagecontext` (enforcement referred to elsewhere on the page).
+   - **#8 Foundationality** — recast 8b from a structural cross-reference metric to an in-page
+     textual cue that derived rules stem from it (`FOUND_derived`).
+   - **#10 Institutional recognition → Layout prominence** — does the page layout affirm the
+     statement's importance.
+6. **Consequence.** After these moves every agent-scored indicator is answerable from **page + span
+   alone** (span or context), with no precomputed network — so the indicators can run before the
+   full structural build exists. Only #4 / #5 sit outside, on the deliberation track (M11 / RQ2).
