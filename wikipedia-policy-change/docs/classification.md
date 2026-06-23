@@ -111,14 +111,16 @@ as the wide net and the router; content-level is the precision layer that the ne
 
 ---
 
-## 4. Validation & gates
+## 4. Validation
 
 - **Page-level:** structural null models (M5), the isolate audit (`core_audit.csv`, no
   auto-demotion), and the expert definitions for the membership boundary (M6 gold set, κ≥0.7,
   recall≥0.95/lang, held-out negatives).
-- **Content-level:** boundary stability run-to-run, human boundary-F1, coverage (the M8 pre-gate),
-  identity-precision audit (false merges hide reform), and inter-coder κ at the segment and
-  cross-lingual layers. → `atomic_statements_design.md` §8, ROADMAP M6/M7/M9.
+- **Content-level (diagnostic metrics for now, not gates):** boundary stability run-to-run, human
+  boundary-F1, coverage, identity-precision audit (false merges hide reform), and inter-coder κ at
+  the segment and cross-lingual layers — computed to **find bad statements and understand the
+  system**, not to block the pipeline; promotable to gates before a formal claim.
+  → `atomic_statements_design.md` §8, ROADMAP M6/M7/M9.
 
 ---
 

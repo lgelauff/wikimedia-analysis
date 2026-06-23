@@ -54,12 +54,16 @@ Source: https://github.com/lgelauff/wiki-polis/blob/main/guidance/guide_organize
 - [`../atomic_statements_design.md`](../atomic_statements_design.md) §1 — extractive/span-anchored unit; §1a segment mixing.
 - [`../classification.md`](../classification.md) §2a/2b — segment type + governance object per statement.
 
-## Acceptance criteria
-- **Coverage:** ≥ a pre-registered fraction of core-policy text is covered by ≥1 statement (report it; completeness is the goal).
+## Quality metrics (diagnostic — report to find bad statements, not blocking gates yet)
+- **Coverage:** fraction of core-policy text covered by ≥1 statement (report it; completeness is the goal).
 - **Atomicity:** sampled audit — statements contain a single claim (no un-split "and/but/because").
 - **Translation present + faithful:** every row has a non-empty `statement_en`; sampled bilingual check that `statement_en` matches `statement_orig`.
-- **Run-to-run stability:** two runs on the same page produce alignable statement sets (a precursor
-  to the M8 boundary-stability gate — report Jaccard over source spans).
+- **Run-to-run stability:** two runs on the same page produce alignable statement sets (report
+  Jaccard over source spans).
+
+These are **metrics to understand how the system is working and surface bad statements**, not
+pass/fail gates — they may be promoted to gates before any formal claim (see
+[`../atomic_statements_design.md`](../atomic_statements_design.md) §8).
 
 ## Dependencies
 Issues 02 (input text) and 03 (store). **Feeds 05 and 06.**

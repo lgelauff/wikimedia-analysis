@@ -16,7 +16,7 @@ self-grading bias.
 ## Inputs
 - **Issue 04** statement store (populated).
 - The wiki-polis guide §3 criteria (atomicity, declarative, concrete, scoped, neutral framing).
-- [`../atomic_statements_design.md`](../atomic_statements_design.md) §8 (eval gates) for the evaluation discipline.
+- [`../atomic_statements_design.md`](../atomic_statements_design.md) §8 (eval metrics — diagnostic for now, not gates) for the evaluation discipline.
 
 ## Outputs
 - `statement_criteria.md` — the versioned criteria/rubric (each criterion: definition, pass/fail
@@ -47,8 +47,11 @@ self-grading bias.
 ## Acceptance criteria
 - `statement_criteria.md` exists, versioned, with examples per criterion.
 - Every statement has a rating row; the summary reports per-criterion pass-rates per language (never pooled-only).
-- **Inter-rater check:** on a sample (≥50 statements), a second rater (or human) agrees with the
-  rating agent above a pre-registered floor (report agreement).
+- **Inter-rater check:** on a sample (≥50 statements), report how often a second rater (or human)
+  agrees with the rating agent — a **metric** to gauge rating quality, not a blocking floor (yet).
+
+The ratings themselves are **diagnostic** — their purpose is to flag bad statements (so they can be
+fixed/revised) and to help us understand how the extraction is working, not to gate the pipeline.
 
 ## Dependencies
 Issue 04. (Criteria definition (a) can start immediately, in parallel with 04.)

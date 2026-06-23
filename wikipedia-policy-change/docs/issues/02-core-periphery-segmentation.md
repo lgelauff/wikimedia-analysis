@@ -49,7 +49,8 @@ rule it restates (not a separate norm). `meta`/`scaffolding` are excluded from s
 - Every page's text is fully partitioned (segments cover the text, no gaps/overlaps in the segmentation itself).
 - Per-page composition summary produced for all pages.
 - **Human spot-check** (≥20 pages, all 6 wikis): `is_core` labels agree with a human reading on a
-  sampled set (report agreement; this is a precursor to the formal κ gate).
+  sampled set (report agreement — a **metric** to spot bad segmentation and understand the system,
+  not a blocking gate yet).
 
 ## Dependencies
 Issue 01.

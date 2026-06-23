@@ -33,9 +33,11 @@ page (one rule, exception, qualifier, or definition). The unit is:
 - **Deontic-marker-anchored** — segmentation guided by deontic cues (must / should / may /
   must not / editors are expected to …), which gives reproducible boundaries.
 
-**Pre-gate (⛔, same as ROADMAP M8):** do not start until run-to-run boundary stability,
-human boundary-F1, and coverage clear pre-registered thresholds. Until then the layer
-"generates whatever number the model prefers, not a measurement."
+**Quality metrics (diagnostic — NOT gates yet):** run-to-run boundary stability, human
+boundary-F1, and coverage are computed as **metrics to identify bad statements and understand how
+the extraction is behaving** — not as pass/fail gates that block the work. We want to fill them out
+to learn how the system works first. They may be **promoted to hard pre-registered gates later**,
+before any formal/published claim — but for now they inform, they don't block.
 
 ### 1a. Segment type — pages MIX rule and summary
 
@@ -197,7 +199,11 @@ Assumes ~3,000 pages (core + expansion × 3 wikis) × ~21 years × ~150 statemen
 
 ---
 
-## 8. Eval gates (pre-registered, before any analysis uses statements)
+## 8. Eval metrics (diagnostic for now; candidates to become gates before formal claims)
+
+**For now these are metrics, not gates** — we compute them to spot bad statements and understand
+the system, not to block the pipeline. Promote to hard pre-registered gates only before a
+formal/published claim.
 
 - **Boundary stability** — two decomposition runs on the same snapshot produce alignable spans
   (Jaccard/F1 over boundaries above a floor).
