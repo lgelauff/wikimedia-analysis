@@ -2,6 +2,12 @@
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
+> 🚧 **Status: preliminary / under-specified — needs another pass.** *How* we actually find statement
+> overlap and map equivalents across languages is still an open problem (see
+> [`../OPEN_QUESTIONS.md`](../OPEN_QUESTIONS.md) OQ-1; cross-lingual mapping method is undetermined).
+> This issue is a **sketch** — rework it once Issues 04/05 land and we can see what the real
+> statements look like. Do not over-build to this spec yet.
+
 ## Objective
 Find similarities between statements: **(a)** deduplicate near-identical statements *within* a
 language (overlap was allowed at extraction by design, so duplicates are expected and fine — here we

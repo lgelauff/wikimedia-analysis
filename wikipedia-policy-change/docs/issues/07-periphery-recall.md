@@ -2,6 +2,12 @@
 
 > **Scope: `wikipedia-policy-change/` only** — all paths/context are within this project of the `wikimedia-analysis` repo; do not touch other folders.
 
+> 🚧 **Status: very ill-defined — placeholder, needs substantial work.** This issue depends entirely
+> on what the earlier stages surface and on a clearer picture of *what else has happened* (the shape
+> of the periphery, where the gaps actually are, how much recall the core missed). Treat everything
+> below as a **rough placeholder**; it must be rewritten once 01–06 are done and we can see the real
+> situation. Do not build to this spec.
+
 ## Objective
 The pipeline (01–06) runs on the **core only**. This issue is the **follow-up** that, *after* the
 core pipeline is complete, goes through the **periphery** (candidate/suspect tier — pages outside

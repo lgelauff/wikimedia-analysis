@@ -23,8 +23,15 @@ Each issue has an objective, identified inputs/outputs, context docs, and accept
   of the statement work, not the whole of it. Rendered HTML / `action=parse` is fine for the current
   snapshot (and cached); the historical walk-back uses raw wikitext, and because identity is semantic
   the two substrates need not byte-align.
-- **Principle:** statements may **overlap**; **completeness > minimality**. Better to capture a
-  rule twice than miss it.
+- **Principle — completeness:** statements may **overlap**; **completeness > minimality**. Better to
+  capture a rule twice than miss it.
+- **Principle — reify & reproduce (applies to every issue):** prefer the **more reified** option
+  everywhere — every intermediate is a **concrete, inspectable, materialized artifact** (a file/row
+  with an explicit schema), never an implicit or in-memory step — and make every stage **as
+  reproducible as possible**: versioned inputs, pinned `model_id`/`prompt_version`, content-hashes,
+  cached outputs, recorded provenance, deterministic where it can be. (LLM stages aren't bit-
+  identical, so "reproducible" here means **re-traceable + cached + provenanced**, not necessarily
+  identical output.)
 
 **Pipeline & dependencies:**
 
@@ -45,8 +52,8 @@ Each issue has an objective, identified inputs/outputs, context docs, and accept
 | [03](03-statement-data-model.md) | Atomic-statement data model + store | — |
 | [04](04-statement-extraction.md) | Atomic-statement extraction | 02, 03 |
 | [05](05-statement-criteria-and-rating.md) | Atomic-statement criteria + rating | 04 |
-| [06](06-statement-similarity-crosslang.md) | Similarity, dedup, cross-lingual mapping | 04, 05 |
-| [07](07-periphery-recall.md) | Periphery review — recall-on-demand (selective) | 06 |
+| [06](06-statement-similarity-crosslang.md) | Similarity, dedup, cross-lingual mapping 🚧 *preliminary* | 04, 05 |
+| [07](07-periphery-recall.md) | Periphery review — recall-on-demand (selective) 🚧 *very ill-defined, placeholder* | 06 |
 
 **Background everyone should read first:** [`../classification.md`](../classification.md)
 (page→content classification, the level this pipeline operates at), and
