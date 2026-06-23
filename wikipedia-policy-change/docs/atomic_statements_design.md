@@ -25,14 +25,23 @@ is the *element*, not the page. This inverts the precision/recall split:
 
 ## 1. The unit
 
-An **atomic normative statement** = one prescriptive/proscriptive proposition in a policy
-page (one rule, exception, qualifier, or definition). The unit is:
+An **atomic normative statement** = one prescriptive/proscriptive proposition (one rule, exception,
+qualifier, or definition).
 
-- **Extractive, not generative** — a span of the actual cleaned text, not an LLM paraphrase.
-  Two runs must yield alignable spans; a generative decomposition would produce whatever the
-  model prefers and isn't measurable.
-- **Span-anchored** — recorded as `(source_revid, char_start, char_end)` into the cleaned text.
-  *(This first layer of units is span-anchored.)*
+**The statement is an interpretation, not a span of text.** The statement is *our* normalized
+proposition — usually **not** verbatim page text, and usually not even page-shaped. The **span is
+the *source*, not the statement**: it's where we found the statement, and how we **confirm it exists
+and what it means** — evidence/provenance, not identity. (Like a citation: the quote is the source;
+the statement is the claim it supports.) The unit is therefore:
+
+- **Interpretive, but span-*sourced* (not "whatever the model prefers").** Every statement is
+  anchored to a source span that evidences it (`source_quote` + the offsets below), so it is
+  grounded and confirmable — that grounding, plus the §5/§8 rating against criteria, is what makes
+  it measurable, *not* verbatim-ness. The statement text itself (`statement_orig`/`statement_en`) is
+  a normalized rendering, the span (`source_quote`) is the evidence.
+- **Span-anchored for provenance** — the source is recorded as `(source_revid, char_start,
+  char_end)` + `source_quote` into the cleaned text. This anchors *where the statement was
+  confirmed*; it is not the statement's identity (see §2 — wording changes, the statement persists).
 - **Deontic-marker-*informed*, not -required** — deontic cues (must / should / may / must not /
   editors are expected to …) are a **strong indicator** of a statement and a clean boundary signal
   *where present*, but are **not a necessity**. Normative content also appears without any deontic
@@ -80,39 +89,49 @@ So a statement present in 2020 is byte-identical in 2021 ~90%+ of the time. Stor
 per year is both wasteful and analytically wrong: we want statement **identity over time**,
 not 21 independent copies.
 
-**Model:** decompose once, then track each statement's **interval** and version only on change.
+**Model:** decompose once, then track each statement's **interval**; a statement persists even as
+its wording changes.
 
-- Identity across years is carried by **byte-hash** of the span text: unchanged span → same
-  hash → same `statement_id`, for free (~90% of cases).
-- The changed remainder gets **fuzzy/embedding match** to decide "same statement, edited" vs
-  "new statement" vs "removed."
+- **Identity is by *meaning*, not by text.** A wording change — rephrasing, clearer language, a
+  better shared understanding — usually does **not** change the statement; the statement persists,
+  the source text moves. So same-statement-over-time is a **semantic** judgment, *not* a hash of the
+  span. (This is the heart of the user's correction: text change ≠ statement change.)
+- **Byte-identity is only a cheap shortcut for the *unchanged* case.** If the source span is
+  byte-identical across years (≈90% of the time — the ossification stability) the statement is
+  certainly unchanged → carry the same `statement_id` for free. But a text *change* does **not**
+  imply a statement change — the changed remainder needs a **same-statement-by-meaning** decision
+  (rephrase / refine / genuine reform / new / removed).
+- **Across-time and across-language identity are the same problem** — "are these two the same
+  statement?", decided by meaning (Issue 06 / OQ-1). Solve it once, apply both directions.
 
-### 2a. Build identity on WikiWho token provenance, not hand-rolled matching
+### 2a. WikiWho — a text-change *signal*, NOT the statement-identity mechanism (reconsidered)
 
-The fuzzy/embedding step above is exactly the cross-revision content-identity problem that
-**WikiWho** (Flöck & Acuña, WWW 2014) already solves at the **token level, 95% accuracy, open
-source, all six of our languages** — see [`related_work.md`](related_work.md) §5. Rather than
-hand-roll span matching, **anchor statement identity on WikiWho token IDs**: each token already
-carries its full add/delete/reinsert history across revisions, so a statement = a span of tokens
-whose persistence/edits aggregate from token histories that are *already validated*. This yields
-H1 (birth) / H2 (long unchanged lifespan) / H3 (qualifier added = token insertion into an existing
-statement) / reform (token deletion or inversion) largely for free, and replaces the most
-error-prone part of this design — false merges that hide reform (§8) — with a measured 95% baseline.
+**Reservation (open).** An earlier draft proposed anchoring statement identity on **WikiWho** token
+provenance (Flöck & Acuña 2014; token-level, 95%, OSS, our 6 languages — [`related_work.md`](related_work.md) §5).
+On reflection that conflates the two things §1–§2 just separated: **WikiWho tracks *token/text*
+identity, not *statement* identity.** A reworded statement has entirely different tokens yet is the
+**same statement**, so token provenance cannot tell us whether the *statement* changed — that is the
+semantic judgment of §2. WikiWho would over-report "change" every time the text was merely rephrased.
 
-**Gate — resolved (2026-06):** the hosted WikiWho API is **articles-only**; a direct probe on
-`Wikipedia:Civility` returned `HTTP 400 {"Error":"Only articles! Namespace 4 is not accepted."}`.
-So the hosted service will not serve policy pages, and the path is to **self-host the open-source
-algorithm** (`wikiwho`/`wikiwho_rs`) on the revision histories we already fetch — namespace is
-irrelevant when we feed it the history ourselves. Reproducibility = pin the algorithm version.
-Byte-hash identity stays as the cheap fast-path for unchanged spans; self-hosted WikiWho replaces
-the fuzzy remainder. **Next validation:** run the OSS algorithm on one policy page's history to
-confirm it ingests our fetched wikitext revisions and emits usable token provenance.
+So WikiWho is, at most, a **cheap change-detector / pre-filter**, not the identity layer: it tells us
+**where the text moved**, which (a) confirms the unchanged-text shortcut (no token change in a span →
+statement certainly unchanged) and (b) localizes *where* to run the semantic same-statement check.
+**We do not anchor statement identity on token IDs.** Whether to use WikiWho at all for this — even
+as a signal — is **open** (the user is unconvinced); the real identity mechanism is semantic
+matching (§2), shared with the cross-language problem.
 
-This collapse is the measurement:
+**Factual note (if WikiWho is used at all):** the hosted WikiWho API is **articles-only** — a probe
+on `Wikipedia:Civility` returned `HTTP 400 {"Error":"Only articles! Namespace 4 is not accepted."}` —
+so policy pages would require **self-hosting** the OSS algorithm (`wikiwho`/`wikiwho_rs`) on the
+revision histories we fetch. That remains true, but per §2a WikiWho would only be a change-localizing
+**signal**: byte-identity is the cheap fast-path for unchanged spans, and the changed remainder is
+resolved by **semantic same-statement matching (§2), not** by token provenance.
+
+This collapse is the measurement (all keyed on *statement* change, not text change):
 - **birth year** (`first_year`) = additive accretion (H1)
-- **long lifespan, zero edits** = ossification (H2)
-- **edit that adds a qualifier/exception** = defensive accretion (H3)
-- **removal / inversion** = genuine reform (RQ2 / H1 tail)
+- **long lifespan, statement unchanged** = ossification (H2) — *even if the wording was tidied/reworded*
+- **statement edited to add a qualifier/exception** = defensive accretion (H3)
+- **statement removed / inverted** = genuine reform (RQ2 / H1 tail)
 
 **Separates verbosity from interconnection** (the page-level confound). Link density per
 *page* conflates two things; per *statement* it splits cleanly:

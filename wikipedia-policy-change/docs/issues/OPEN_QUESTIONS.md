@@ -81,6 +81,23 @@ instead of a closed review. Fits the "see how far we get, then reflect" approach
 artifact in front of people early; corrections become data. Ties to M3 (web app). Capture now;
 design later.
 
+## OQ-5 — Same-statement identity by *meaning* (across time AND across language) (ACTIVE)
+
+A statement is an **interpretation**, not its source span (atomic_statements_design §1). So whether
+two statements are "the same" — the **same statement reworded a year later**, or the **same norm in
+another language** — is a **semantic** judgment, *not* text/token identity. These are **one problem**:
+statement equivalence by meaning, applied across-time and across-language.
+
+Consequences:
+- **Byte/token identity only settles the *unchanged* case** (identical text → same statement, cheap).
+  A text *change* does not imply a statement change (rephrasing / clearer wording / better
+  understanding leave the statement intact) — that needs a semantic decision.
+- **WikiWho is reconsidered** (atomic_statements_design §2a): token provenance tracks *text*, not
+  *statements*, so it's at most a cheap change-*signal*, never the identity layer. The user is
+  unconvinced it's worth using even for that. **Open.**
+- Shared machinery with Issue 06 (cross-language matching) and OQ-1 (overlap): solve
+  statement-equivalence-by-meaning once, apply in all three places.
+
 ## How to use this file
 When a question here is taken up, either fold it into the relevant numbered issue or promote it to its
 own issue, and note the resolution here. Don't delete — keep the resolved rationale.
