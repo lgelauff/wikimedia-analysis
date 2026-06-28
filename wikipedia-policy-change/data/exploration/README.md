@@ -57,6 +57,11 @@ statements are **proposed** rules; in a real run that page routes to the deliber
   recovered from over-exclusion, carried with `location=lead, salience=low` (see `atomic_statements_design.md` §1b).
 - **governance_class** — user-admin throughout (a clean case).
 
+**Page inclusion tool:** [`page_inclusion_viz.py`](page_inclusion_viz.py) takes the **real rendered page**
+(`action=parse` → reader text, no markup) and shades each actual block green (included → statement) or
+red (excluded), as HTML + a minimap PNG. Output: [`nlwiki_stemgerechtigde_gebruikers/page_inclusion.html`](nlwiki_stemgerechtigde_gebruikers/page_inclusion.html) / [`.png`](nlwiki_stemgerechtigde_gebruikers/page_inclusion.png) — 31% of text included, the rest deliberation.
+(Block→statement match is content-word overlap; a few vote comments that *quote* a rule false-match — exact once spans land.)
+
 **Exclusion tool:** [`exclusion_viz.py`](exclusion_viz.py) shades each block of an annotated page by
 kind (included vs excluded: deliberation/meta/scaffolding/summary) → HTML + PNG, so it's instantly
 visible how much is dropped and why. Output (vote instance): [`nlwiki_stemgerechtigde_gebruikers/exclusion_marked.png`](nlwiki_stemgerechtigde_gebruikers/exclusion_marked.png)
