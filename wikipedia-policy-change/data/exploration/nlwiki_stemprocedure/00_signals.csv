@@ -1,0 +1,5 @@
+signal_type,name,indicates,note
+template,Sjabloon:Vast,POLICY (status banner),'{{Vast}}' = fixed/permanent regulation — the nl equivalent of {{policy}}
+category,Categorie:Wikipedia:Vaste reglementen,POLICY,'Fixed regulations' — a core policy category
+category,Categorie:Wikipedia:Stemmen en peilen,policy area,the voting/polling policy topic area
+template,Sjabloon:Zijbalk menu stemmen en peilen / Infobox / Flexbox,nav/layout,sidebar + styling

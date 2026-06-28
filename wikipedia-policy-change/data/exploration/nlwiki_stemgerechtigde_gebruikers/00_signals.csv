@@ -1,0 +1,7 @@
+signal_type,name,indicates,note
+template,Sjabloon:Stemvoorstel,NOT-policy (vote proposal),THE marker — this is a proposal to be voted on; nl equivalent of an enwiki RfC
+template,Sjabloon:Tegen,deliberation,"'oppose' vote template, used inside the vote lists"
+template,26x Gebruiker:*/Handtekening,deliberation,"personal signature templates -> a page full of votes/discussion, not norms"
+template,Sjabloon:Blauw / Sjabloon:Einde,layout,coloured-block wrapper around the proposed edits
+category,(none),NOT-policy,a standing regulation would sit in a policy/reglementen category; the absence is itself a signal
+location,subpage of Wikipedia:Stemlokaal/,deliberation,"under the voting venue (Stemlokaal) -> a vote instance, not a standing rule page"
