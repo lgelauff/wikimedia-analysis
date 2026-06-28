@@ -1,12 +1,12 @@
-statement_id,atomicity,declarative,concreteness,scope,faithfulness,translation_fidelity,source_grounding,overall,flag_reason
-nlwiki:5097832:1,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:2,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:3,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:4,pass,pass,pass,pass,note,pass,pass,ok,superseded by this vote; mark as historical state
-nlwiki:5097832:5,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:6,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:7,weak,pass,pass,pass,pass,pass,pass,revise,lists 5 procedures — candidate to split (overlap-OK)
-nlwiki:5097832:8,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:9,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:10,pass,pass,pass,pass,pass,pass,pass,ok,
-nlwiki:5097832:11,pass,pass,pass,pass,pass,pass,pass,ok,
+statement_id,atomicity,declarative,concreteness,scope,neutrality,faithfulness,subject_correct,deontic_direction,qualifier_completeness,self_contained,translation_fidelity,source_grounding,overall,reason
+nlwiki:5097832:1,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:2,2,2,2,2,2,2,2,2,2,2,2,2,note,near-duplicate of :3 (lifetime vs 12-mo recency) — non_redundancy would flag; see 06_within_overlap
+nlwiki:5097832:3,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:4,2,2,2,2,2,2,2,2,2,2,2,2,note,"faithful but states a SUPERSEDED rule — lifecycle flag, not a quality defect"
+nlwiki:5097832:5,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:6,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:7,1,2,2,2,2,2,2,2,2,2,2,2,review,"lists 5 procedures — atomicity weak, candidate split (overlap-OK)"
+nlwiki:5097832:8,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:9,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:10,2,2,2,2,2,2,2,2,2,2,2,2,ok,
+nlwiki:5097832:11,2,2,2,2,2,2,2,2,2,2,2,2,ok,

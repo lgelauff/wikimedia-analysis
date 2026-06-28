@@ -26,7 +26,7 @@ Each sample is a subfolder with the pipeline stages laid out as files:
 | `02_segments.jsonl` | #3 | segments tagged `segment_type` + `is_core` |
 | `04_statements.csv` | #5 | atomic statements (schema = the #4 store) |
 | `04_exclusions.csv` | — | what was *not* extracted + why (**completeness invariant**) |
-| `05_ratings.csv` | #6 | per-statement ratings against the criteria rubric |
+| `05_ratings.csv` | #6 | per-statement ratings — **12 granular criteria, numeric 0/1/2** (see [`RATING_RUBRIC.md`](RATING_RUBRIC.md)) |
 | `06_within_overlap.csv` | #7 | within-page near-duplicate / overlap pairs |
 
 Cross-page / cross-lingual matching (#7) is a *shared* artifact at this level, not per-page.
