@@ -8,6 +8,13 @@ what each intermediate artifact would roughly look like before the scripted pipe
 rater-validation set in #6, the boundary-F1 set in #5). The real pipeline regenerates its own data;
 these stay as reference examples and hand labels.
 
+> ⚠️ **Scale caveat.** The statement counts here (24 / 11) are a **minimal, representative** pass —
+> *not* the completeness-maximal extraction the pipeline targets. A real "completeness > minimality,
+> overlap OK" run decomposes every qualifier/exception/conjunction and keeps narrow+broad variants, so
+> the raw count climbs steeply (dozens → 100+ even on a short page). **Raw count tracks extractor
+> aggressiveness, not policy verbosity** — so the analytical unit is always the **deduplicated norm**
+> (post-#7 cluster, see `06_*`), never the raw statement count. (OQ-1.)
+
 ## Per-page subfolders (stage → file)
 Each sample is a subfolder with the pipeline stages laid out as files:
 
