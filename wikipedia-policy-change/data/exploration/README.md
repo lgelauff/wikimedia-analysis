@@ -10,15 +10,28 @@ its own data; these stay as reference examples and hand labels to compare agains
 
 Schema matches the planned statement store (#4): `statement_id` = `<wiki>:<page_id>:<seq>`, plus
 `source_quote` (closest original-language quote), `statement_orig` (nl), `statement_en`
-(interpretation aid — **not** a matching key), `segment_type`, `governance_class`. Char offsets are
-omitted (hand sample). See [`../../docs/classification.md`](../../docs/classification.md) and
-[`../../docs/atomic_statements_design.md`](../../docs/atomic_statements_design.md).
+(interpretation aid — **not** a matching key), `segment_type`, `deontic_type`, `governance_class`.
+Char offsets are omitted (hand sample). See [`../../docs/classification.md`](../../docs/classification.md)
+and [`../../docs/atomic_statements_design.md`](../../docs/atomic_statements_design.md).
+
+**Each sample is paired with an `_exclusions.csv`** — what we deliberately did *not* turn into a
+statement, and why (proposal metadata → meta, vote rationales → deliberation, layout → scaffolding,
+duplicated summaries → linked-not-counted). **Completeness invariant:** every part of the page is
+accounted for as either an extracted statement *or* a logged exclusion — no silent drops, so a
+reviewer can audit whether a real norm was wrongly excluded.
+
+**Framing note (`deontic_type`):** statements carry the correct **normative relation**, not just the
+proposition. Eligibility rules are rendered as *"a user is eligible to vote only if…"* (subject = the
+person acquiring the right), **never** as *"a voter must…"* (which reverses an eligibility condition
+into an obligation). `deontic_type` ∈ {eligibility, obligation, prohibition, permission, condition,
+definition, scope}.
 
 ## Samples
 
 | file | page | page_id / revid | n | notes |
 |---|---|---|---|---|
 | [`nlwiki_stemgerechtigde_gebruikers.csv`](nlwiki_stemgerechtigde_gebruikers.csv) | nl `Wikipedia:Stemlokaal/Stemgerechtigde gebruikers` | 5097832 / 52475456 (2018-10-18) | 11 | voter-eligibility rules |
+| [`nlwiki_stemgerechtigde_gebruikers_exclusions.csv`](nlwiki_stemgerechtigde_gebruikers_exclusions.csv) | ↳ exclusions for the above | — | 9 | what was *not* extracted + why |
 
 ### nlwiki_stemgerechtigde_gebruikers
 Source: https://nl.wikipedia.org/wiki/Wikipedia:Stemlokaal/Stemgerechtigde_gebruikers — a 2018

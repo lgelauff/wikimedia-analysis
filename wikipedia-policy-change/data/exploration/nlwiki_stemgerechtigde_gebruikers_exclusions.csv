@@ -1,0 +1,10 @@
+excerpt,kind,routes_to,reason
+{{Stemvoorstel}} 'voorstel' param (restates the proposed rule),summary,linked to :3 (not counted),"duplicates the rule statement -> summary, double-counting guard"
+{{Stemvoorstel}} process metadata (begintijd/eindtijd/stemopties/quorum/coordinator),meta,kept as event metadata,"describes THIS vote's mechanics, not a standing norm"
+Justification prose ('vertrokken gebruikers ... is dat onwenselijk ... zou je ook niet mee moeten beslissen'),meta/rationale,deliberation corpus,"argument FOR the proposal, not itself a norm"
+~86 Voor/Tegen vote lines (signatures + timestamps),deliberation,deliberation corpus,"individual votes, not norms"
+Vote rationale comments (e.g. 'Slapende stemmers komen doorgaans toch maar trollen'; Effe/Vinvlugt arguments),deliberation,deliberation corpus,"opinions/arguments, not norms"
+"'Indien dit voorstel wordt aangenomen, zullen de volgende wijzigingen doorgevoerd worden'",meta,dropped,describes that edits will be made; the edits themselves -> :7/:8/:9
+'Dit voorstel is op de overlegpagina besproken ... peiling geweest',meta,dropped,cross-reference pointer
+"Conclusie ('86 personen ... 60 voor 69,8% / 26 tegen 30,2% ... aangenomen ... onmiddellijke ingang')",meta/outcome,kept as ADOPTION-EVENT metadata,dates the birth of :3/:5/:6 (first_year~2018); not itself a norm
+"Layout/markup ({{blauw}}/{{einde}}, <font>, signature templates, == headers)",scaffolding,dropped,pure layout/markup
