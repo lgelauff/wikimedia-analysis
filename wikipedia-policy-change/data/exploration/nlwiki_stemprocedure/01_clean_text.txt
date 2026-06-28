@@ -1,0 +1,21 @@
+Wikipedia: Stemprocedure
+
+In een democratie is het meestal mogelijk door middel van een stemming mee te beslissen over allerlei zaken. Voorafgaand aan een stemming worden doorgaans regels gesteld ten aanzien van de stemprocedure. Wikipedia is een gemeenschapsproject en kent een democratische traditie waarin in principe niemand de baas is en er zo veel mogelijk gezocht wordt naar consensus. Alleen in gevallen waarin geen consensus lijkt te ontstaan kan het zinnig zijn om daarover een stemming te houden. Het zoeken naar consensus verdient steeds de grote voorkeur.
+
+Artikel 1. Wanneer mag een stemming gehouden worden?
+Een stemming zou door iedereen op ieder moment om elke reden gehouden kunnen worden. In de praktijk gaat een stemming meestal over generieke zaken zoals lay-out, naamgeving, gewenstheid van soorten artikelen. Er zijn zowel qua inhoud als qua vorm beperkingen. Niet voor ieder wissewasje moet gestemd worden, en een stemming kan verkeerd geformuleerd worden. Daarom is voorbereiding in veel gevallen verstandig; dat voorkomt ook dat het resultaat naderhand in twijfel getrokken wordt.
+
+Artikel 2. Hoe wordt een stemming voorbereid?
+Als gewoon overleg tot te veel welles/nietes leidt is een niet-bindende opiniepeiling op een relevante overlegpagina een goede eerste keuze. Werkt dat niet, dan is de volgende stap een stemming in het Stemlokaal. Ter voorbereiding wordt in het Stemlokaal een Stemvoorstel opgezet met de bedoeling daar later over te stemmen. Degene die de stemming initieert is daarmee stemcoordinator. Het komt de duidelijkheid ten goede als de keuzemogelijkheden eenvoudig zijn en bij voorkeur een ja/nee-karakter hebben. Als de stemming eenmaal begonnen is mogen er geen nieuwe keuzemogelijkheden meer bijgemaakt worden. Het stemvoorstel wordt van tevoren aangekondigd in de Mededelingen en De kroeg. Een voorbereidingstijd van een week geldt als normaal, maar bij spoedeisende zaken mag het minder zijn, met een minimum van een etmaal. Indien de stemming over specifieke gebruiker(s) gaat, voeg dan een noindex-sjabloon toe bovenaan de stempagina en bijbehorende overlegpagina.
+
+Artikel 3. Wie zijn stemgerechtigd?
+Stemmen mag iedere gebruiker met bewerkingsrechten op de stempagina, die voldoet aan twee voorwaarden: hij of zij heeft minstens twee weken voor het begin van de stemming zijn eerste bewerking gedaan als aangemelde gebruiker; en hij of zij had meer dan 100 bewerkingen (geen vandalisme) gedaan voordat het stemvoorstel in het stemlokaal gezet werd.
+
+Artikel 4. Hoe verloopt de stemming?
+De stemming duurt minimaal twee weken. Stemmen geschiedt door bij "voor" of "tegen" een stem te plaatsen. Gedurende de stemperiode mag een gebruiker van stem wisselen, zo vaak als deze wil. Gebruikers die neutraal stemmen tellen niet mee voor de uitslag.
+
+Artikel 5. Hoe wordt de uitslag bepaald?
+Een voorstel wordt aangenomen als het de steun heeft van minstens 20 geldige stemmen en minimaal 55% van het totale aantal geldige stemmen behaald heeft.
+
+Artikel 6. Wat gebeurt er met de uitslag?
+Na afloop vat de stemcoordinator de uitslag samen in het stemlokaal. De gemeenschap heeft dan nog een week om over eventuele problemen te overleggen. Als er geen problemen blijken te zijn wordt de uitslag als bindend beschouwd. De stemcoordinator plaatst een samenvatting op Wikipedia:Archief peilingen en stemmingen. Over hetzelfde onderwerp mag niet binnen 6 maanden opnieuw een stemming gehouden worden, tenzij de MediaWiki-software of de wetgeving heel nieuwe mogelijkheden biedt.

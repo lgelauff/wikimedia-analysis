@@ -1,0 +1,8 @@
+excerpt,kind,routes_to,reason
+{{Vast}} status banner,status-signal,node attribute (admitted_via),"marks the page as fixed policy; a signal, not content"
+{{Zijbalk menu stemmen en peilen}} sidebar,scaffolding,dropped,navigation
+Intro about democracy ('In een democratie ... allerlei zaken'),meta/framing,dropped,"background, not a norm"
+Art.1 rationale prose ('De voorbereiding zorgt ervoor dat het resultaat niet in twijfel ...'),meta/rationale,dropped,"justification, not a norm"
+'(in feite een corvee-functie zonder privileges)',meta/aside,dropped,parenthetical aside
+'Zie Speciaal:Bijdragen (selecteer oudste) voor het tijdstip ...',meta/help,dropped,"how to check, not a norm"
+[[Categorie:Wikipedia:Stemmen en peilen]],scaffolding,node facet (category),"category membership, not an edge/statement"

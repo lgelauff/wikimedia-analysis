@@ -1,0 +1,8 @@
+{"seq": 1, "section": "intro", "segment_type": "meta", "is_core": false, "text": "democratie/achtergrond"}
+{"seq": 2, "section": "intro", "segment_type": "rule", "is_core": true, "text": "consensus verdient de voorkeur (-> :1,:2)"}
+{"seq": 3, "section": "Art.1", "segment_type": "meta", "is_core": false, "text": "wanneer mag gestemd worden — grotendeels rationale"}
+{"seq": 4, "section": "Art.2", "segment_type": "procedure", "is_core": true, "text": "voorbereiding: peiling, stemvoorstel, coordinator, opties, aankondiging, termijn, noindex (-> :3..:10)"}
+{"seq": 5, "section": "Art.3", "segment_type": "rule", "is_core": true, "text": "stemgerechtigdheid: 2 voorwaarden (-> :11,:12,:13)"}
+{"seq": 6, "section": "Art.4", "segment_type": "procedure", "is_core": true, "text": "verloop: duur, wijze, wisselen, neutraal (-> :14..:17)"}
+{"seq": 7, "section": "Art.5", "segment_type": "rule", "is_core": true, "text": "uitslag: >=20 stemmen EN >=55% (-> :18,:19)"}
+{"seq": 8, "section": "Art.6", "segment_type": "procedure", "is_core": true, "text": "na de uitslag: samenvatten, week bezwaar, bindend, archiveren, 6-mnd-herhaalverbod (-> :20..:24)"}

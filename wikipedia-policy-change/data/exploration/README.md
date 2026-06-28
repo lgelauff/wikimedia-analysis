@@ -1,49 +1,47 @@
 # Exploration data — hand-authored pipeline samples
 
-Small, **hand-authored** samples that walk a single real page through the atomic-statement pipeline
-*by hand* (a human/LLM acting as the black-box extractor), to sanity-check the design **before** the
-scripted pipeline (GitHub issues #2–#8) exists.
+Small, **hand-authored** samples that walk a single real page through **every stage of the
+atomic-statement pipeline** (GitHub issues #2–#6), materializing one file per stage — so we can *see*
+what each intermediate artifact would roughly look like before the scripted pipeline exists.
 
-**These are not pipeline output.** They are illustrative + a seed for a future gold/eval set (the
-rater-validation set in #6, the boundary-F1 set in #5). When the real pipeline runs, it regenerates
-its own data; these stay as reference examples and hand labels to compare against.
+**These are not pipeline output.** They are illustrative + a seed for future gold/eval sets (the
+rater-validation set in #6, the boundary-F1 set in #5). The real pipeline regenerates its own data;
+these stay as reference examples and hand labels.
 
-Schema matches the planned statement store (#4): `statement_id` = `<wiki>:<page_id>:<seq>`, plus
-`source_quote` (closest original-language quote), `statement_orig` (nl), `statement_en`
-(interpretation aid — **not** a matching key), `segment_type`, `deontic_type`, `governance_class`.
-Char offsets are omitted (hand sample). See [`../../docs/classification.md`](../../docs/classification.md)
-and [`../../docs/atomic_statements_design.md`](../../docs/atomic_statements_design.md).
+## Per-page subfolders (stage → file)
+Each sample is a subfolder with the pipeline stages laid out as files:
 
-**Each sample is paired with an `_exclusions.csv`** — what we deliberately did *not* turn into a
-statement, and why (proposal metadata → meta, vote rationales → deliberation, layout → scaffolding,
-duplicated summaries → linked-not-counted). **Completeness invariant:** every part of the page is
-accounted for as either an extracted statement *or* a logged exclusion — no silent drops, so a
-reviewer can audit whether a real norm was wrongly excluded.
+| file | stage (issue) | what it is |
+|---|---|---|
+| `00_source.md` | — | provenance + #3a routing classification |
+| `01_clean_text.txt` | #2 | reader-meaningful text (layout/markup stripped) |
+| `02_segments.jsonl` | #3 | segments tagged `segment_type` + `is_core` |
+| `04_statements.csv` | #5 | atomic statements (schema = the #4 store) |
+| `04_exclusions.csv` | — | what was *not* extracted + why (**completeness invariant**) |
+| `05_ratings.csv` | #6 | per-statement ratings against the criteria rubric |
+| `06_within_overlap.csv` | #7 | within-page near-duplicate / overlap pairs |
 
-**Framing note (`deontic_type`):** statements carry the correct **normative relation**, not just the
-proposition. Eligibility rules are rendered as *"a user is eligible to vote only if…"* (subject = the
-person acquiring the right), **never** as *"a voter must…"* (which reverses an eligibility condition
-into an obligation). `deontic_type` ∈ {eligibility, obligation, prohibition, permission, condition,
-definition, scope}.
+Cross-page / cross-lingual matching (#7) is a *shared* artifact at this level, not per-page.
 
 ## Samples
+| sample | page | kind | n stmts |
+|---|---|---|---|
+| [`nlwiki_stemprocedure/`](nlwiki_stemprocedure/) | `Wikipedia:Stemprocedure` (75512) | **standing policy** `{{Vast}}`, 6 articles | 24 |
+| [`nlwiki_stemgerechtigde_gebruikers/`](nlwiki_stemgerechtigde_gebruikers/) | `Wikipedia:Stemlokaal/Stemgerechtigde gebruikers` (5097832) | **vote instance** (2018), dated adoption event | 11 |
+| [`06_crosspage_alignment.md`](06_crosspage_alignment.md) | the two above, aligned | #7 cross-page mapping | — |
 
-| file | page | page_id / revid | n | notes |
-|---|---|---|---|---|
-| [`nlwiki_stemgerechtigde_gebruikers.csv`](nlwiki_stemgerechtigde_gebruikers.csv) | nl `Wikipedia:Stemlokaal/Stemgerechtigde gebruikers` | 5097832 / 52475456 (2018-10-18) | 11 | voter-eligibility rules |
-| [`nlwiki_stemgerechtigde_gebruikers_exclusions.csv`](nlwiki_stemgerechtigde_gebruikers_exclusions.csv) | ↳ exclusions for the above | — | 9 | what was *not* extracted + why |
+The pair is deliberate: the **standing rule** (Stemprocedure Art. 3) and the **vote that amended
+related rules** (Stemgerechtigde gebruikers) — so the cross-page file shows real **matches** (the two
+base eligibility conditions; the "no new options" rule) **and a real divergence** (the activity
+requirement exists only for personnel votes, not general ones).
 
-### nlwiki_stemgerechtigde_gebruikers
-Source: https://nl.wikipedia.org/wiki/Wikipedia:Stemlokaal/Stemgerechtigde_gebruikers — a 2018
-*Stemvoorstel* (vote instance). **Routing note:** by the §3a router this page is a
-**deliberation/consultation instance**, not standing policy — the canonical eligibility rule lives at
-`Wikipedia:Stemprocedure#Artikel 3`. It was atomized here anyway because (a) it states the rules in
-prose and (b) a *passed* vote is a **dated adoption event** (accepted 60–26, 17 Oct 2018), so it dates
-the birth of the activity-requirement rules. What this sample exercises:
-- **deontic-informed-not-required** — `:1 :2 :3 :7 :8` are conditional eligibility *definitions* with
-  no must/should; a marker/regex extractor misses them.
-- **routing before counting** — ~80% of the page is vote rationales (deliberation), dropped at
-  segmentation; only the ~11 norms survive.
-- **overlap = finding** — `:2`→`:3` reads as H3 accretion (recency qualifier added); `:4`→`:5` as
-  genuine reform (lifetime → lapsing).
-- **governance_class** = user-admin throughout (a clean case).
+## What these samples exercise (design checks)
+- **deontic-informed-not-required** — eligibility conditions with no must/should are still captured.
+- **routing before counting** — ~80% of the vote instance is deliberation, dropped at segmentation.
+- **framing (`deontic_type`)** — eligibility rendered as *"a user is eligible only if…"*, not *"a voter must…"*.
+- **overlap = finding** — `:2`→`:3` reads as H3 accretion; `:4`→`:5` as reform.
+- **completeness invariant** — every part of each page is a statement *or* a logged exclusion (no silent drops).
+- **governance_class** — user-admin throughout (a clean case).
+
+Schema/refs: [`../../docs/atomic_statements_design.md`](../../docs/atomic_statements_design.md),
+[`../../docs/classification.md`](../../docs/classification.md).

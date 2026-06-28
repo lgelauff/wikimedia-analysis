@@ -1,0 +1,8 @@
+{"seq": 1, "section": "{{Stemvoorstel}}", "segment_type": "meta", "is_core": false, "text": "proposal box: subject + process metadata"}
+{"seq": 2, "section": "body", "segment_type": "rule", "is_core": true, "text": "current 2 conditions (-> :1,:2)"}
+{"seq": 3, "section": "body", "segment_type": "meta", "is_core": false, "text": "justification / problem framing"}
+{"seq": 4, "section": "body", "segment_type": "rule", "is_core": true, "text": "voor-het-leven + lapse + restore + scope (-> :4,:5,:6,:7)"}
+{"seq": 5, "section": "regelingswijzigingen", "segment_type": "rule", "is_core": true, "text": "activity req + ArbCom 55% + 5-members (-> :3,:8,:9)"}
+{"seq": 6, "section": "stemregels", "segment_type": "procedure", "is_core": true, "text": "no extra options; replies on talk (-> :10,:11)"}
+{"seq": 7, "section": "Voor/Tegen", "segment_type": "deliberation", "is_core": false, "text": "~86 votes + rationales"}
+{"seq": 8, "section": "Conclusie", "segment_type": "meta", "is_core": false, "text": "outcome 60-26 accepted (adoption-event metadata)"}

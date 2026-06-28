@@ -1,0 +1,17 @@
+Wikipedia: Stemlokaal/Stemgerechtigde gebruikers  (Stemvoorstel, okt 2018)
+
+[proposal box -> meta]: Onderwerp: Enkel (enigszins) actieve gebruikers zullen stemgerechtigd zijn.
+
+Momenteel zijn er twee voorwaarden aan de stemgerechtigdheid van gebruikers: hij of zij heeft minstens twee weken voor het begin van de stemming zijn eerste bewerking gedaan als aangemelde gebruiker; en hij of zij had meer dan 100 bewerkingen (geen vandalisme) gedaan voordat het stemvoorstel in het stemlokaal gezet werd.
+
+[justification -> meta/rationale]: Je moet dus iets gedaan hebben voordat je stemrecht ontvangt; zodra je dit hebt gekregen, heb je het voor het leven. Het komt voor dat "vertrokken gebruikers" toch nog langskomen om te stemmen; volgens een deel van de gemeenschap is dat onwenselijk. Vandaar dit voorstel om het stemrecht na inactiviteit te laten verlopen; bij hernieuwde activiteit krijgt men na 100 nieuwe bewerkingen het stemrecht terug.
+
+Dit verlopen geldt enkel voor: aanmeldings- en afzettingsprocedures moderatoren, verkiezingen en afzettingsprocedures arbitragecommissie, en blokpeilingen.
+
+[exacte wijzigingen aan regelingen -> rules]: ... toevoeging "Enkel gebruikers met minimaal 100 niet-vandalistische edits in de twaalf maanden voorafgaand aan twee weken voor het startmoment van de stemming kunnen deelnemen" ... ArbCom-reglement art. 3.12: afzetten kan alleen bij meerderheid van minstens 55%; een commissielid kan ook worden afgezet als ten minste vijf commissieleden daarvoor zijn.
+
+[stemregels -> procedure]: Het toevoegen van extra opties is niet toegestaan. Reacties op stemmen dienen op de Overlegpagina plaats te vinden.
+
+[VOOR: ~60 ondertekende stemmen + motiveringen  -> DELIBERATION, niet-kern]
+[TEGEN: ~26 ondertekende stemmen + motiveringen -> DELIBERATION, niet-kern]
+[Conclusie -> meta/uitslag]: 86 stemmen, 60 voor (69,8%) / 26 tegen (30,2%); aangenomen, met onmiddellijke ingang (17 okt 2018).
