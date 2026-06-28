@@ -1,5 +1,5 @@
 # Sample: nl Wikipedia:Stemprocedure (standing policy, {{Vast}})
-Per-stage pipeline artifacts (hand-authored; black-box extractor). Stage → file:
+Per-stage pipeline artifacts (LLM-generated; black-box extractor). Stage → file:
 - `00_source.md` — provenance + routing (standing policy)
 - `00_signals.csv` — project-specific category/template signals + the policy-vs-not verdict
 - `01_clean_text.txt` — #2 reader text (cleaned nl prose, 6 articles)

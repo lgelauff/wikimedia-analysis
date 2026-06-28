@@ -1,15 +1,16 @@
-# Exploration data — hand-authored pipeline samples
+# Exploration data — LLM-generated qualitative pipeline samples
 
-Small, **hand-authored** samples that walk a single real page through **every stage of the
+Small, **LLM-generated** samples that qualitatively walk a single real page through **every stage of the
 atomic-statement pipeline** (GitHub issues #2–#6), materializing one file per stage — so we can *see*
 what each intermediate artifact would roughly look like before the scripted pipeline exists.
 
-> ⭐ **GOLD STANDARD (hand-labeled reference).** These hand-authored samples are the **canonical
-> reference set** the scripted pipeline (#2–#7) is validated against — an automated run's output is
-> **diffed against these**. They are not pipeline output; treat them as fixtures, update deliberately.
-> They also seed the #6 rater-validation set and the #5 boundary-F1 set. The issues were reconciled to
-> what these samples taught us (exclusions-as-output, `salience`, `deontic_type`, char-offset spans,
-> numeric rubric, count = deduped norm).
+> ⭐ **QUALITATIVE REFERENCE (LLM-generated).** These are an **LLM's worked pass** through the pipeline
+> (the model acting as the black-box extractor) — a **qualitative** exercise to build a feel for what
+> each stage produces and where the design strains, **not** a quantitative gold/eval set. They are not
+> pipeline output, and they can't validate themselves: a **human-labeled** set for the #5 boundary-F1 /
+> #6 rater-validation gates is a *separate* thing still to be created. Use these as reference examples
+> that informed the design (exclusions-as-output, `salience`, `deontic_type`, char-offset spans, the
+> numeric rubric, count = deduped norm) — not as a scoring benchmark.
 
 > ⚠️ **Scale caveat.** The statement counts here (24 / 11) are a **minimal, representative** pass —
 > *not* the completeness-maximal extraction the pipeline targets. A real "completeness > minimality,

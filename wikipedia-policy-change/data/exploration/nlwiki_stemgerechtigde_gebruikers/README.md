@@ -1,5 +1,5 @@
 # Sample: nl Wikipedia:Stemlokaal/Stemgerechtigde gebruikers (vote instance, 2018)
-Per-stage pipeline artifacts (hand-authored; black-box extractor). Stage → file:
+Per-stage pipeline artifacts (LLM-generated; black-box extractor). Stage → file:
 - `00_source.md` — provenance + routing (NOT policy: a {{Stemvoorstel}} proposal ≈ enwiki RfC)
 - `00_signals.csv` — project-specific category/template signals + the policy-vs-not verdict
 - `01_clean_text.txt` — #2 reader text (vote section retained but marked non-core)

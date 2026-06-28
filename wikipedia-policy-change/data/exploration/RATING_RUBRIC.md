@@ -22,5 +22,5 @@ pass/fail, but deliberately low-resolution (LLMs aren't calibrated for fine scor
 
 `overall` = `review` if any criterion < 2 · `note` if flagged but all 2 · else `ok`.
 **Still open (OQ-6/OQ-7):** 3- vs 4-point scale; whether to add `non_redundancy` as a 13th criterion
-(currently handled by `06_within_overlap` + #7). These scores are **diagnostic**, hand-authored, and
+(currently handled by `06_within_overlap` + #7). These scores are **diagnostic**, LLM-generated, and
 **not calibrated** — a real run calibrates against a human gold set (α≈0.8).
