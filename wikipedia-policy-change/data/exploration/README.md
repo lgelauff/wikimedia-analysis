@@ -57,6 +57,11 @@ statements are **proposed** rules; in a real run that page routes to the deliber
   recovered from over-exclusion, carried with `location=lead, salience=low` (see `atomic_statements_design.md` §1b).
 - **governance_class** — user-admin throughout (a clean case).
 
+**Exclusion tool:** [`exclusion_viz.py`](exclusion_viz.py) shades each block of an annotated page by
+kind (included vs excluded: deliberation/meta/scaffolding/summary) → HTML + PNG, so it's instantly
+visible how much is dropped and why. Output (vote instance): [`nlwiki_stemgerechtigde_gebruikers/exclusion_marked.png`](nlwiki_stemgerechtigde_gebruikers/exclusion_marked.png)
+— ~66% of blocks (~80%+ by volume) is excluded deliberation.
+
 **Coverage tool:** [`coverage_viz.py`](coverage_viz.py) colours each sentence of the page text by how
 many statements cover it (gap→yellow→green→blue) — spots accidental skips and over-coverage. Output:
 `nlwiki_stemprocedure/`'s set → [`coverage_stemprocedure_v2.html`](coverage_stemprocedure_v2.html). Matching is
