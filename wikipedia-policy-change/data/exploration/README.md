@@ -4,9 +4,12 @@ Small, **hand-authored** samples that walk a single real page through **every st
 atomic-statement pipeline** (GitHub issues #2–#6), materializing one file per stage — so we can *see*
 what each intermediate artifact would roughly look like before the scripted pipeline exists.
 
-**These are not pipeline output.** They are illustrative + a seed for future gold/eval sets (the
-rater-validation set in #6, the boundary-F1 set in #5). The real pipeline regenerates its own data;
-these stay as reference examples and hand labels.
+> ⭐ **GOLD STANDARD (hand-labeled reference).** These hand-authored samples are the **canonical
+> reference set** the scripted pipeline (#2–#7) is validated against — an automated run's output is
+> **diffed against these**. They are not pipeline output; treat them as fixtures, update deliberately.
+> They also seed the #6 rater-validation set and the #5 boundary-F1 set. The issues were reconciled to
+> what these samples taught us (exclusions-as-output, `salience`, `deontic_type`, char-offset spans,
+> numeric rubric, count = deduped norm).
 
 > ⚠️ **Scale caveat.** The statement counts here (24 / 11) are a **minimal, representative** pass —
 > *not* the completeness-maximal extraction the pipeline targets. A real "completeness > minimality,
