@@ -84,7 +84,23 @@ Consequences for the model:
   statement** (double-counting guard) — and it matters because summaries get rewritten as the
   policy ecosystem shifts while the underlying rule ossifies, so conflating them would smear
   H1/H2/H3 (additive accretion / ossification / defensive detail).
-- `meta`/`scaffolding` are excluded from the statement count (kept as page attributes if useful).
+- `scaffolding` and **purely** non-normative material (signatures, layout, nav, generic background)
+  are excluded. **`meta`/framing is NOT hard-excluded**, see §1b.
+
+### 1b. Inclusive extraction with a location/context salience weight
+
+Extraction is **inclusive** (recall-first): we do **not** hard-drop the lead/intro/framing, because
+**the lead is often where the *foundational*, highest-generality statements live** — e.g. a policy's
+opening "on Wikipedia, in principle no one is in charge; decisions seek consensus" is a real high-level
+norm, not background. Hard exclusion is reserved for **purely** non-normative material (signatures,
+layout, nav, generic encyclopedic background).
+
+Instead of include/exclude being binary, every statement carries a **`salience` weight driven by its
+location/context on the page** — lead/framing **down-weighted**, body/operative sections normal. This
+is a **metric** (a prior on how operative the statement is), *not* a filter: a down-weighted lead
+statement is still extracted and still compared. It composes with the orthogonal **generality** axis
+(foundational / general / local) — a lead statement is typically *low salience but high generality*,
+which is exactly the foundational tier we most want for cross-wiki comparison. Down-weight, don't drop.
 
 ---
 

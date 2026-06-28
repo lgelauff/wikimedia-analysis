@@ -52,6 +52,9 @@ statements are **proposed** rules; in a real run that page routes to the deliber
 - **framing (`deontic_type`)** — eligibility rendered as *"a user is eligible only if…"*, not *"a voter must…"*.
 - **overlap = finding** — `:2`→`:3` reads as H3 accretion; `:4`→`:5` as reform.
 - **completeness invariant** — every part of each page is a statement *or* a logged exclusion (no silent drops).
+- **inclusive extraction + location salience** — the lead/intro is **down-weighted, not dropped**:
+  `nlwiki:75512:25` ("on Wikipedia, in principle no one is in charge") is a *foundational* lead norm
+  recovered from over-exclusion, carried with `location=lead, salience=low` (see `atomic_statements_design.md` §1b).
 - **governance_class** — user-admin throughout (a clean case).
 
 Schema/refs: [`../../docs/atomic_statements_design.md`](../../docs/atomic_statements_design.md),
