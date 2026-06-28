@@ -98,6 +98,41 @@ Consequences:
 - Shared machinery with #7 (cross-language matching) and OQ-1 (overlap): solve
   statement-equivalence-by-meaning once, apply in all three places.
 
+## OQ-6 — Numeric (not pass/fail) statement ratings, done right (TO-DO — affects #6)
+
+Move the rating layer from `pass/fail` to **useful numeric** scores — but the literature is clear that
+naive 0–100 is *worse*, not better (LLMs aren't calibrated for fine-grained scores; binary is more
+reliable than high-resolution). Recommended design, grounded in the LLM-as-judge literature:
+- **Low-resolution anchored ordinal** per criterion (e.g. 0/1/2 = fail/partial/pass, or 4-point with an
+  explicit `NA/unknown`) — keeps the "partial" signal pass/fail discards, without false precision.
+- **Anchor each level** with a definition + a worked example in the rubric (rater-training for the model).
+- **Chain-of-thought then score** (G-Eval): reason first, number last; the `reason` field becomes the
+  audit trail.
+- **Calibrate against the human gold set** and report agreement (Krippendorff's α ≈ 0.8 target) — this
+  *is* #6's rater-validation step; treat scores as diagnostic, never compare raw scores cross-time/
+  cross-wiki without calibration (they drift).
+- Advanced (optional): token-logprob-weighted scores; post-hoc (Wasserstein) calibration to human.
+- **Reproducibility:** release the rubric + prompts + ratings (reify-and-reproduce).
+Refs: Evidently / Confident-AI (G-Eval) / Monte Carlo LLM-as-judge guides; RULERS (arXiv:2601.08654,
+evidence-anchored locked rubrics). **Owner decision:** ordinal resolution (3- vs 4-point) + whether to
+add logprob weighting. Until taken up, the exploration `05_ratings.csv` stays pass/fail (diagnostic).
+
+## OQ-7 — The rating rubric: which quality criteria, and split vs merge (ACTIVE — affects #6)
+
+The exploration `05_ratings.csv` applied 7 criteria (`atomicity, declarative, concreteness, scope,
+faithfulness, translation_fidelity, source_grounding`), folding wiki-polis §3's **neutrality** into
+`faithfulness`. Open: is that the full set? Candidate additions/splits to decide:
+- **subject + deontic-direction** as its own criterion (the "eligibility, not obligation" reversal check) —
+  currently buried in `faithfulness`;
+- **qualifier-completeness** — did the statement keep its exception/parenthetical qualifier vs flatten it
+  (the parenthetical-as-qualifier point);
+- **self-contained / standalone** — interpretable without surrounding context;
+- **neutrality** split back out from faithfulness;
+- **non-redundancy** — flag pure duplicates (ties to #7 dedup / OQ-1).
+Also unresolved: keep **(A) classification attributes** (segment_type/deontic_type/governance/
+generality/location/salience) separate from **(B) these quality criteria** and **(C) §8 system metrics** —
+three different label kinds that shouldn't be conflated. **Owner decision needed:** the final (B) list.
+
 ## How to use this file
 When a question here is taken up, either fold it into the relevant numbered issue or promote it to its
 own issue, and note the resolution here. Don't delete — keep the resolved rationale.
