@@ -117,21 +117,34 @@ Refs: Evidently / Confident-AI (G-Eval) / Monte Carlo LLM-as-judge guides; RULER
 evidence-anchored locked rubrics). **Owner decision:** ordinal resolution (3- vs 4-point) + whether to
 add logprob weighting. Until taken up, the exploration `05_ratings.csv` stays pass/fail (diagnostic).
 
-## OQ-7 — The rating rubric: which quality criteria, and split vs merge (ACTIVE — affects #6)
+## OQ-7 — The rating rubric: granular, split-out criteria (DECIDED: split out, do not merge)
 
-The exploration `05_ratings.csv` applied 7 criteria (`atomicity, declarative, concreteness, scope,
-faithfulness, translation_fidelity, source_grounding`), folding wiki-polis §3's **neutrality** into
-`faithfulness`. Open: is that the full set? Candidate additions/splits to decide:
-- **subject + deontic-direction** as its own criterion (the "eligibility, not obligation" reversal check) —
-  currently buried in `faithfulness`;
-- **qualifier-completeness** — did the statement keep its exception/parenthetical qualifier vs flatten it
-  (the parenthetical-as-qualifier point);
-- **self-contained / standalone** — interpretable without surrounding context;
-- **neutrality** split back out from faithfulness;
-- **non-redundancy** — flag pure duplicates (ties to #7 dedup / OQ-1).
-Also unresolved: keep **(A) classification attributes** (segment_type/deontic_type/governance/
-generality/location/salience) separate from **(B) these quality criteria** and **(C) §8 system metrics** —
-three different label kinds that shouldn't be conflated. **Owner decision needed:** the final (B) list.
+**Decision (user):** the rubric uses **granular, split-out** criteria — do **not** merge them. The
+exploration sample wrongly folded `neutrality` (and the subject/direction check) into `faithfulness`;
+split them back out. This is **in line with the LLM-as-judge literature** (OQ-6): decomposing one fused
+judgment into several narrow per-criterion judgments ("decision-tree decomposition") is more reliable
+and lower-bias than a single conflated score — *granular criteria*, even though each criterion's *score*
+stays a coarse ordinal (OQ-6).
+
+**Quality-criteria set (B), split-out:**
+1. `atomicity` — exactly one claim (no un-split and/but/because)
+2. `declarative` — a claim, not a question/heading
+3. `concreteness` — specific obligation/condition, not vague
+4. `scope` — neither trivially-broad nor a single obscure detail
+5. `neutrality` — non-leading, non-editorializing framing  *(split out of faithfulness)*
+6. `faithfulness` — preserves the source's **meaning** (no distortion/inversion of content) *(now narrower)*
+7. `subject_correct` — the actual normative subject (e.g. "a user", not a presupposed role) *(split out)*
+8. `deontic_direction` — correct normative relation (eligibility/permission/obligation/prohibition as in
+   source; not an eligibility rendered as an obligation) *(split out)*
+9. `qualifier_completeness` — keeps exceptions/parenthetical qualifiers; doesn't flatten hedges
+10. `self_contained` — interpretable without surrounding context
+11. `translation_fidelity` — `statement_en` faithfully renders `statement_orig` (NA if source = en)
+12. `source_grounding` — `source_quote` supports the statement
+
+Keep the three label kinds distinct: **(A) classification attributes** (segment_type/deontic_type/
+governance/generality/location/salience), **(B) these quality criteria**, **(C) §8 system metrics**.
+**Still open:** whether to add `non_redundancy` (overlaps #7/OQ-1) as a 13th, and the OQ-6 score
+resolution (3- vs 4-point ordinal). The exploration `05_ratings.csv` should be re-run on this set.
 
 ## How to use this file
 When a question here is taken up, either fold it into the relevant numbered issue or promote it to its
