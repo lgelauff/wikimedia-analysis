@@ -20,7 +20,12 @@ Usage:
       --out review.html --out-csv review.csv
   uv run python find_review_changes.py --pages "nlwiki:Wikipedia:Stemprocedure" --out review.html
 """
-import argparse, csv, html, json, re, urllib.parse, urllib.request
+import argparse, collections, csv, datetime, html, json, re, urllib.parse, urllib.request
+
+
+def epoch(ts):
+    return datetime.datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ").replace(
+        tzinfo=datetime.timezone.utc).timestamp()
 
 UA = "WikimediaAnalysis/1.0 (research; https://github.com/lgelauff/wikimedia-analysis)"
 REVERTING = {"mw-manual-revert", "mw-rollback", "mw-undo", "mw-revert"}
@@ -81,6 +86,8 @@ def main():
     ap.add_argument("--wiki-filter", default=None)
     ap.add_argument("--min-bytes", type=int, default=1)
     ap.add_argument("--max-bytes", type=int, default=300)
+    ap.add_argument("--series-window-hours", type=float, default=168.0,
+                    help="same author editing OTHER dataset pages within this window = a series")
     ap.add_argument("--limit", type=int, default=None, help="max pages")
     ap.add_argument("--out", default="review_changes.html")
     ap.add_argument("--out-csv", default=None)
@@ -93,12 +100,26 @@ def main():
     if a.limit:
         pages = pages[:a.limit]
 
-    cands, scanned = [], 0
+    # pass 1 — fetch every page's history; build an author → all-edits index (across pages)
+    allrevs = {}
+    author_idx = collections.defaultdict(list)     # user -> [(epoch, title)]
     for wiki, title in pages:
-        host = host_of(wiki)
-        revs = revisions(host, title)
+        revs = revisions(host_of(wiki), title)
         if not revs:
             continue
+        allrevs[(wiki, title)] = revs
+        for r in revs:
+            u = r.get("user")
+            if u:
+                author_idx[u].append((epoch(r["timestamp"]), title))
+    for u in author_idx:
+        author_idx[u].sort()
+    window = a.series_window_hours * 3600
+
+    # pass 2 — flag the small-change band + enrich (revert, same-page neighbours, cross-page series)
+    cands, scanned = [], 0
+    for (wiki, title), revs in allrevs.items():
+        host = host_of(wiki)
         scanned += len(revs)
         for i, rv in enumerate(revs):
             if i == 0:
@@ -106,20 +127,25 @@ def main():
             delta = rv["size"] - revs[i - 1]["size"]
             if not (a.min_bytes <= abs(delta) <= a.max_bytes):
                 continue
-            tags = rv.get("tags", [])
+            tags = rv.get("tags", []); u = rv.get("user", "(hidden)")
             prev_u = revs[i - 1].get("user")
             next_u = revs[i + 1].get("user") if i + 1 < len(revs) else None
-            u = rv.get("user", "(hidden)")
+            t = epoch(rv["timestamp"])
+            sib = {et for (e, et) in author_idx.get(u, []) if et != title and abs(e - t) <= window}
             cands.append({
                 "wiki": wiki, "title": title, "ts": rv["timestamp"][:10],
                 "user": u, "delta": delta,
                 "summary": rv.get("comment", "") or "",
                 "reverted": "mw-reverted" in tags,
-                "is_revert": any(t in REVERTING for t in tags),
-                "same_before": prev_u == u, "same_after": next_u == u,
+                "is_revert": any(t2 in REVERTING for t2 in tags),
+                "same_page_before": prev_u == u, "same_page_after": next_u == u,
+                "series_n": len(sib),                       # same author, OTHER pages, within window
+                "series_pages": "; ".join(sorted(sib)[:5]),
+                "series_id": f"{u}@{rv['timestamp'][:10]}" if sib else "",
                 "diff_url": f"https://{host}/wiki/Special:Diff/{rv['revid']}",
             })
-    cands.sort(key=lambda c: (c["title"], c["ts"]))
+    # sort series together (a series is one decision → review as a group), then loners by page/date
+    cands.sort(key=lambda c: (c["series_id"] == "", c["series_id"], c["title"], c["ts"]))
 
     # CSV
     if a.out_csv:
@@ -142,10 +168,10 @@ def main():
              '<th>page</th><th>date</th><th>author</th><th>Δ</th><th>summary</th><th>flags</th><th>diff</th></tr></thead><tbody>')
     for c in cands:
         flags = " ".join(filter(None, [
+            chip(c["series_n"] > 0, f'series ×{c["series_n"]}', "#d9c2f0"),
             chip(c["reverted"], "reverted", "#f4b8b8"),
             chip(c["is_revert"], "is-revert", "#f7d9a0"),
-            chip(c["same_before"], "same-author before", "#cfe3f7"),
-            chip(c["same_after"], "same-author after", "#cfe3f7")]))
+            chip(c["same_page_before"] or c["same_page_after"], "same-page run", "#cfe3f7")]))
         H.append('<tr style="border-bottom:1px solid var(--border-subtle)">'
                  f'<td style="font-size:11px">{html.escape(c["title"][:38])}</td>'
                  f'<td>{c["ts"]}</td><td>{html.escape(str(c["user"])[:18])}</td>'

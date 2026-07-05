@@ -82,7 +82,10 @@ Schema/refs: [`../../docs/atomic_statements_design.md`](../../docs/atomic_statem
 **Change-review tool:** [`find_review_changes.py`](find_review_changes.py) — given a dataset of pages
 (any language; reads the wiki per row, e.g. `../network/nodes.csv`), flags the **small-change band**
 (1–300 B) that a human checks for "typo/reword vs real change", each row showing **author · diff URL ·
-summary · reverted? · same-author immediately before/after** → HTML (clickable diffs) + CSV. On
+summary · reverted? · same-page run · **cross-page series** (same author editing OTHER dataset pages within a
+window = one coordinated decision, grouped by `series_id`)** → HTML (clickable diffs) + CSV. On
 `Wikipedia:Stemprocedure`: 123 candidates over 22 yr, ~half auto-resolvable (revert/same-author/typo-summary).
 Note: per-edit view (upper bound); the annual-snapshot pipeline reviews fewer, and deliberation pages
-(most small edits = votes) are routed out first.
+(most small edits = votes) are routed out first. **Series demo:** across the 5 nl voting-regulation pages it
+recovered CaAl's 2018-10-17 rollout (4 pages, summary "per [the vote]") as one series, and separated it from
+bulk maintenance series (Romaine "Linkfix", Melsaran "{{vast}}" rename) — so the human resolves decisions, not edits.
