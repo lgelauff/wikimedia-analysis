@@ -87,20 +87,23 @@ Consequences for the model:
 - `scaffolding` and **purely** non-normative material (signatures, layout, nav, generic background)
   are excluded. **`meta`/framing is NOT hard-excluded**, see §1b.
 
-### 1b. Inclusive extraction with a location/context salience weight
+### 1b. Inclusive extraction with a location/context **prominence** weight
 
 Extraction is **inclusive** (recall-first): we do **not** hard-drop the lead/intro/framing, because
 **the lead is often where the *foundational*, highest-generality statements live** — e.g. a policy's
 opening "on Wikipedia, in principle no one is in charge; decisions seek consensus" is a real high-level
 norm, not background. Hard exclusion is reserved for **purely** non-normative material (signatures,
-layout, nav, generic encyclopedic background).
+layout, nav, generic encyclopedic background) and for **non-text** routed elsewhere (deliberation →
+deliberation corpus; `{{status}}`/category → node facets).
 
-Instead of include/exclude being binary, every statement carries a **`salience` weight driven by its
-location/context on the page** — lead/framing **down-weighted**, body/operative sections normal. This
-is a **metric** (a prior on how operative the statement is), *not* a filter: a down-weighted lead
-statement is still extracted and still compared. It composes with the orthogonal **generality** axis
-(foundational / general / local) — a lead statement is typically *low salience but high generality*,
-which is exactly the foundational tier we most want for cross-wiki comparison. Down-weight, don't drop.
+Instead of include/exclude being binary, every statement carries a **`prominence` weight driven by its
+location/context on the page** — `central | supporting | context` (lead/framing = `context`,
+down-weighted; operative sections = `central`). This is a **metric** (a prior on how operative the
+statement is), *not* a filter: a `context` lead statement is still extracted and still compared. It
+composes with the orthogonal **generality** axis (foundational / general / local) — a lead statement is
+typically *low prominence but high generality*, exactly the foundational tier we most want for
+cross-wiki comparison. Down-weight, don't drop. (`prominence` is a **text-level** weight and is *not*
+the page-level `confidence` (core/candidate) from `core_definition` — orthogonal axes.)
 
 ---
 
@@ -200,41 +203,55 @@ roughly **1/3 the decomposition calls**, same IDs carried forward.
 
 ---
 
-## 4. Provisional schema (add to `schema.sql` at M8, not before)
+## 4. Schema — meaning-first: entity + occurrence + segment (add to `schema.sql` at M8, not before)
 
-Text is stored **by reference** to the cleaned-text cache, never duplicated inline.
+Identity is **meaning** (`entity_id`); text/position are **evidence** (occurrences). Two independent
+span-layers sit over one immutable `cache/clean/<vN>/<revid>.txt`: a **segment** layer that tiles the
+text (labels), and a **statement** layer (entity + occurrences). Full worked example + rationale:
+[`segment_statement_schema_draft.md`](segment_statement_schema_draft.md).
 
 ```sql
--- One row per statement ENTITY (its whole life), not per year.
-statement(
-  statement_id   BIGINT,          -- stable id (hash-seeded)
-  wiki           VARCHAR,
-  page_id        INT,             -- host page (cross-page lineage = extension, see §6)
-  first_year     SMALLINT,
-  last_year      SMALLINT,        -- NULL/open if still present in latest snapshot
-  n_versions     SMALLINT,        -- 1 for the stable majority
-  deontic_type   VARCHAR,         -- obligation|prohibition|permission|definition|other
-  status         VARCHAR,         -- active|removed
-  PRIMARY KEY (wiki, statement_id)
+-- SEGMENT layer (#3): tiles a revid's clean text; a labelling pass, not a filter.
+segment(
+  wiki VARCHAR, page_id INT, revid INT,
+  seq  INT,
+  char_start INT, char_end INT,          -- span into that revid's clean text (code points, NFC)
+  segment_type VARCHAR,                   -- rule|procedure|summary|meta|scaffolding
+  prominence   VARCHAR,                   -- central|supporting|context  (text weight, NOT confidence)
+  candidate    BOOL,                      -- extraction candidate?  false => not a statement source
+  exclusion    VARCHAR,                   -- for non-candidates: deliberation|chrome|signal (route, logged)
+  PRIMARY KEY (wiki, page_id, revid, seq)
 )
 
--- Only rows where the span text MATERIALLY CHANGED (most statements have exactly one).
-statement_version(
-  wiki           VARCHAR,
-  statement_id   BIGINT,
-  version_no     SMALLINT,
-  year_from      SMALLINT,
-  year_to        SMALLINT,
-  text_hash      VARBINARY,       -- identity key
-  source_revid   INT,             -- the snapshot this version was extracted from
-  char_start     INT,             -- span anchor into cleaned text of source_revid
-  char_end       INT,
-  KEY (wiki, statement_id)
+-- STATEMENT layer (#4/#5): identity is MEANING.
+statement_entity(
+  entity_id VARCHAR,                      -- <wiki>:<page_id>:<seq>  -- THE identity (surrogate)
+  wiki VARCHAR, page_id INT,              -- host page (cross-page lineage = extension, §6)
+  statement_en   TEXT,                    -- canonical meaning (interpretation aid, not a match key)
+  deontic_type   VARCHAR,                 -- eligibility|obligation|prohibition|permission|condition|definition|scope
+  governance_class VARCHAR,               -- content|user-user|user-admin
+  first_year SMALLINT, last_year SMALLINT,-- lifespan; last_year NULL/open if still present
+  status VARCHAR,                         -- active|removed
+  PRIMARY KEY (entity_id)
+)
+
+-- OCCURRENCE: evidence of an entity in a snapshot. Many-to-one. Stores the VERBATIM text, not offsets.
+statement_occurrence(
+  entity_id VARCHAR,
+  year SMALLINT, revid INT,
+  source_quote TEXT,                      -- the text AS IT APPEARS that year (may vary by typo/rewording)
+  quote_hash VARBINARY,                   -- checksum of source_quote (self-verifying)
+  match_method VARCHAR,                   -- exact|fuzzy|semantic  (how attributed to the entity)
+  KEY (entity_id), KEY (wiki, page_id, revid)
 )
 ```
 
-These are **structure rows** (small) — they live in SQLite + ToolsDB like `node`/`link`.
-The span text itself is recovered from `cache/clean/<vN>/<revid>.txt` via the anchor.
+Why this shape: **same meaning ⇒ same `entity_id`** (occurrences merge); **different meaning ⇒
+different entity** (a non-merge means a real atomic distinction). Occurrences are attributed by the
+**exact → fuzzy(τ_typo) → semantic** cascade (§2). Positions are never identity — a segment's char
+span is only for tiling/coverage *within* one immutable revid, self-checked by `quote_hash`. Storage is
+**O(entities + occurrences)**, no segment×statement join. **Cross-wiki: do NOT merge** — same meaning
+across wikis is recorded as an *equivalence* (#7 / M9), because the comparison is the goal.
 
 ---
 
@@ -243,9 +260,9 @@ The span text itself is recovered from `cache/clean/<vN>/<revid>.txt` via the an
 For cross-wiki matching (M9) and "same statement, edited" detection. **Embed unique
 statements (~450k), not statement-years** — the identity collapse cuts the vector count ~20×.
 
-- Stored in a **vector store** (FAISS / `sqlite-vec` / Parquet), keyed by `statement_id`
-  (and `version_no` when a statement is edited). **Out of the relational DB** — embeddings are
-  the only layer that genuinely outgrows SQLite (see `data_architecture.md`).
+- Stored in a **vector store** (FAISS / `sqlite-vec` / Parquet), keyed by `entity_id`
+  (one vector per meaning; occurrences don't each need one). **Out of the relational DB** — embeddings
+  are the only layer that genuinely outgrows SQLite (see `data_architecture.md`).
 - Specific store chosen at M8 (options recorded, not locked).
 
 ---

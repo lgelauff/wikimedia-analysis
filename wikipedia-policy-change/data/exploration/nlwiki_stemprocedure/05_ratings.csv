@@ -1,5 +1,5 @@
 statement_id,atomicity,declarative,concreteness,scope,neutrality,faithfulness,subject_correct,deontic_direction,qualifier_completeness,self_contained,translation_fidelity,source_grounding,overall,reason
-nlwiki:75512:1,2,2,1,2,2,2,2,2,2,2,2,2,review,soft principle (consensus preferred) — abstract but faithful; low salience
+nlwiki:75512:1,2,2,1,2,2,2,2,2,2,2,2,2,review,soft principle (consensus preferred) — abstract but faithful; low prominence
 nlwiki:75512:2,2,2,1,2,2,2,2,2,2,2,2,2,review,soft conditional on when a vote is sensible
 nlwiki:75512:3,2,2,2,2,2,2,2,2,2,2,2,2,ok,
 nlwiki:75512:4,2,2,2,2,2,2,2,2,2,2,2,2,ok,
@@ -23,4 +23,4 @@ nlwiki:75512:21,2,2,2,2,2,2,2,2,2,2,2,2,ok,
 nlwiki:75512:22,2,2,2,2,2,2,2,2,2,2,2,2,ok,
 nlwiki:75512:23,2,2,2,2,2,2,2,2,2,2,2,2,ok,
 nlwiki:75512:24,2,2,2,2,2,2,2,2,2,2,2,2,ok,
-nlwiki:75512:25,2,2,1,1,2,2,2,2,2,2,2,2,review,"foundational lead principle — broad/abstract by nature (high generality, low salience); kept, not dropped"
+nlwiki:75512:25,2,2,1,1,2,2,2,2,2,2,2,2,review,"foundational lead principle — broad/abstract by nature (high generality, low prominence); kept, not dropped"

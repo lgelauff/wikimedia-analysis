@@ -9,7 +9,7 @@ what each intermediate artifact would roughly look like before the scripted pipe
 > each stage produces and where the design strains, **not** a quantitative gold/eval set. They are not
 > pipeline output, and they can't validate themselves: a **human-labeled** set for the #5 boundary-F1 /
 > #6 rater-validation gates is a *separate* thing still to be created. Use these as reference examples
-> that informed the design (exclusions-as-output, `salience`, `deontic_type`, char-offset spans, the
+> that informed the design (exclusions-as-output, `prominence`, `deontic_type`, char-offset spans, the
 > numeric rubric, count = deduped norm) — not as a scoring benchmark.
 
 > ⚠️ **Scale caveat.** The statement counts here (24 / 11) are a **minimal, representative** pass —
@@ -56,9 +56,9 @@ statements are **proposed** rules; in a real run that page routes to the deliber
 - **framing (`deontic_type`)** — eligibility rendered as *"a user is eligible only if…"*, not *"a voter must…"*.
 - **overlap = finding** — `:2`→`:3` reads as H3 accretion; `:4`→`:5` as reform.
 - **completeness invariant** — every part of each page is a statement *or* a logged exclusion (no silent drops).
-- **inclusive extraction + location salience** — the lead/intro is **down-weighted, not dropped**:
+- **inclusive extraction + location prominence** — the lead/intro is **down-weighted, not dropped**:
   `nlwiki:75512:25` ("on Wikipedia, in principle no one is in charge") is a *foundational* lead norm
-  recovered from over-exclusion, carried with `location=lead, salience=low` (see `atomic_statements_design.md` §1b).
+  recovered from over-exclusion, carried with `location=lead, prominence=low` (see `atomic_statements_design.md` §1b).
 - **governance_class** — user-admin throughout (a clean case).
 
 **Page inclusion tool:** [`page_inclusion_viz.py`](page_inclusion_viz.py) takes the **real rendered page**

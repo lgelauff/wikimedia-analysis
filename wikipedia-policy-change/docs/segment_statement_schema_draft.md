@@ -1,8 +1,10 @@
 # DRAFT — segment + statement schema (revises #3, knock-ons to #2/#4/#5)
 
-**Status: DRAFT for review.** Not yet applied to the GitHub issues. Resolves two things the
-exploration surfaced: (a) segmentation should *label*, not *filter*; (b) statement↔text linkage must
-be many-to-many-with-a-primary so it stays exact **and** doesn't explode.
+**Status: APPLIED** (this doc is the rationale/worked-example; the canonical schema now lives in
+[`atomic_statements_design.md`](atomic_statements_design.md) §4, and the pipeline specs are GitHub
+issues #3/#4/#5/#6). Resolves two things the exploration surfaced: (a) segmentation should *label*,
+not *filter*; (b) statement identity is **meaning** (entity + occurrences), not text/position — so it
+stays exact **and** doesn't explode.
 
 ## The key idea: two independent span-layers over one clean text (no join table)
 
