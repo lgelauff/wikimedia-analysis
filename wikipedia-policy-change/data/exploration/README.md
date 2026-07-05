@@ -78,3 +78,11 @@ content-word overlap (a proxy); becomes exact once extraction stores char-offset
 
 Schema/refs: [`../../docs/atomic_statements_design.md`](../../docs/atomic_statements_design.md),
 [`../../docs/classification.md`](../../docs/classification.md).
+
+**Change-review tool:** [`find_review_changes.py`](find_review_changes.py) — given a dataset of pages
+(any language; reads the wiki per row, e.g. `../network/nodes.csv`), flags the **small-change band**
+(1–300 B) that a human checks for "typo/reword vs real change", each row showing **author · diff URL ·
+summary · reverted? · same-author immediately before/after** → HTML (clickable diffs) + CSV. On
+`Wikipedia:Stemprocedure`: 123 candidates over 22 yr, ~half auto-resolvable (revert/same-author/typo-summary).
+Note: per-edit view (upper bound); the annual-snapshot pipeline reviews fewer, and deliberation pages
+(most small edits = votes) are routed out first.

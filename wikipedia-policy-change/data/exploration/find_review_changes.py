@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""
+find_review_changes.py — surface the small-change ("typo / minor reword") edits that a human
+should eyeball when deciding same-statement-vs-changed. Language-agnostic: works off whatever
+wiki each dataset row names, via the MediaWiki API (never scrapes).
+
+For each page it pulls the full revision history and flags edits whose byte-delta is in a small
+band (default 1..300 B — big enough to maybe change meaning, small enough to maybe be a reword),
+then enriches each with what a reviewer needs:
+  author · edit (diff) URL · edit summary · was-it-reverted · same author immediately before/after.
+
+Input dataset (CSV, unknown languages OK) — needs a wiki column + a title column. Accepts:
+  wiki codes (`nlwiki`, `dewiki`) or hosts (`nl.wikipedia.org`), and `title` (or `page_id`).
+  Our `data/network/nodes.csv` works directly.
+
+Output: an HTML table (clickable diff links, grouped by page) + a CSV. Pure stdlib.
+
+Usage:
+  uv run python find_review_changes.py --dataset ../network/nodes.csv --wiki-filter nlwiki --limit 20 \
+      --out review.html --out-csv review.csv
+  uv run python find_review_changes.py --pages "nlwiki:Wikipedia:Stemprocedure" --out review.html
+"""
+import argparse, csv, html, json, re, urllib.parse, urllib.request
+
+UA = "WikimediaAnalysis/1.0 (research; https://github.com/lgelauff/wikimedia-analysis)"
+REVERTING = {"mw-manual-revert", "mw-rollback", "mw-undo", "mw-revert"}
+
+
+def host_of(wiki):
+    if "." in wiki:
+        return wiki
+    if wiki.endswith("wiki"):
+        return f"{wiki[:-4]}.wikipedia.org"
+    return f"{wiki}.wikipedia.org"
+
+
+def api(host, params):
+    params = {**params, "format": "json", "formatversion": "2"}
+    url = f"https://{host}/w/api.php?" + urllib.parse.urlencode(params)
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
+        return json.loads(r.read())
+
+
+def revisions(host, title, cap=3000):
+    out, cont = [], None
+    while len(out) < cap:
+        p = {"action": "query", "prop": "revisions", "titles": title, "rvdir": "newer",
+             "rvlimit": "500", "rvprop": "ids|timestamp|user|comment|size|tags"}
+        if cont:
+            p["rvcontinue"] = cont
+        d = api(host, p)
+        pg = d["query"]["pages"][0]
+        if "missing" in pg:
+            return None
+        out.extend(pg.get("revisions", []))
+        cont = d.get("continue", {}).get("rvcontinue")
+        if not cont:
+            break
+    return out
+
+
+def load_dataset(path, wiki_filter):
+    rows = list(csv.DictReader(open(path, encoding="utf-8")))
+    wcol = next((c for c in rows[0] if c.lower() in ("wiki", "host", "project")), None)
+    tcol = next((c for c in rows[0] if c.lower() in ("title", "page", "page_title")), None)
+    seen, out = set(), []
+    for r in rows:
+        w = r[wcol]
+        if wiki_filter and w != wiki_filter:
+            continue
+        t = r[tcol]
+        if (w, t) not in seen:
+            seen.add((w, t)); out.append((w, t))
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dataset")
+    ap.add_argument("--pages", help="comma list of wiki:title")
+    ap.add_argument("--wiki-filter", default=None)
+    ap.add_argument("--min-bytes", type=int, default=1)
+    ap.add_argument("--max-bytes", type=int, default=300)
+    ap.add_argument("--limit", type=int, default=None, help="max pages")
+    ap.add_argument("--out", default="review_changes.html")
+    ap.add_argument("--out-csv", default=None)
+    a = ap.parse_args()
+
+    if a.pages:
+        pages = [(p.split(":", 1)[0], p.split(":", 1)[1]) for p in a.pages.split(",")]
+    else:
+        pages = load_dataset(a.dataset, a.wiki_filter)
+    if a.limit:
+        pages = pages[:a.limit]
+
+    cands, scanned = [], 0
+    for wiki, title in pages:
+        host = host_of(wiki)
+        revs = revisions(host, title)
+        if not revs:
+            continue
+        scanned += len(revs)
+        for i, rv in enumerate(revs):
+            if i == 0:
+                continue
+            delta = rv["size"] - revs[i - 1]["size"]
+            if not (a.min_bytes <= abs(delta) <= a.max_bytes):
+                continue
+            tags = rv.get("tags", [])
+            prev_u = revs[i - 1].get("user")
+            next_u = revs[i + 1].get("user") if i + 1 < len(revs) else None
+            u = rv.get("user", "(hidden)")
+            cands.append({
+                "wiki": wiki, "title": title, "ts": rv["timestamp"][:10],
+                "user": u, "delta": delta,
+                "summary": rv.get("comment", "") or "",
+                "reverted": "mw-reverted" in tags,
+                "is_revert": any(t in REVERTING for t in tags),
+                "same_before": prev_u == u, "same_after": next_u == u,
+                "diff_url": f"https://{host}/wiki/Special:Diff/{rv['revid']}",
+            })
+    cands.sort(key=lambda c: (c["title"], c["ts"]))
+
+    # CSV
+    if a.out_csv:
+        with open(a.out_csv, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=list(cands[0].keys()) if cands else
+                               ["wiki", "title", "ts", "user", "delta", "summary", "reverted",
+                                "is_revert", "same_before", "same_after", "diff_url"])
+            w.writeheader(); w.writerows(cands)
+
+    # HTML
+    def chip(b, t, c):
+        return f'<span style="background:{c};color:#222;padding:0 5px;border-radius:3px;font-size:11px">{t}</span>' if b else ""
+    H = ['<div style="font-family:var(--font-sans);font-size:13px;color:var(--text-primary)">']
+    H.append(f'<div style="font-size:16px;font-weight:600">Small-change review queue — {len(cands)} '
+             f'candidate edits ({a.min_bytes}–{a.max_bytes} B) across {len(pages)} pages, {scanned} revisions scanned</div>')
+    H.append('<div style="font-size:12px;color:var(--text-secondary);margin:2px 0 8px">'
+             'the band a human would check for "typo/reword vs real change". '
+             'reverted / same-author-adjacent edits are usually auto-resolvable.</div>')
+    H.append('<table style="border-collapse:collapse;width:100%"><thead><tr style="text-align:left;border-bottom:1px solid var(--border)">'
+             '<th>page</th><th>date</th><th>author</th><th>Δ</th><th>summary</th><th>flags</th><th>diff</th></tr></thead><tbody>')
+    for c in cands:
+        flags = " ".join(filter(None, [
+            chip(c["reverted"], "reverted", "#f4b8b8"),
+            chip(c["is_revert"], "is-revert", "#f7d9a0"),
+            chip(c["same_before"], "same-author before", "#cfe3f7"),
+            chip(c["same_after"], "same-author after", "#cfe3f7")]))
+        H.append('<tr style="border-bottom:1px solid var(--border-subtle)">'
+                 f'<td style="font-size:11px">{html.escape(c["title"][:38])}</td>'
+                 f'<td>{c["ts"]}</td><td>{html.escape(str(c["user"])[:18])}</td>'
+                 f'<td style="text-align:right;color:{"#087443" if c["delta"]>0 else "#b3261e"}">{c["delta"]:+d}</td>'
+                 f'<td style="font-size:11px;max-width:280px">{html.escape(c["summary"][:120])}</td>'
+                 f'<td>{flags}</td>'
+                 f'<td><a href="{c["diff_url"]}" target="_blank">view</a></td></tr>')
+    H.append('</tbody></table></div>')
+    open(a.out, "w", encoding="utf-8").write("\n".join(H))
+    print(f"wrote {a.out}"
+          + (f" + {a.out_csv}" if a.out_csv else "")
+          + f" | {len(cands)} candidates / {scanned} revisions / {len(pages)} pages")
+
+
+if __name__ == "__main__":
+    main()
