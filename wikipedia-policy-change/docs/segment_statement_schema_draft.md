@@ -38,30 +38,55 @@ Segments **tile** the clean text (every char belongs to exactly one segment; min
   is untouched and means "is this page policy." `prominence` is within-page weight. Orthogonal.
 - Because segments tile, **coverage/inclusion is exact** (fixes the fuzzy-match false positives).
 
-## STATEMENT layer (#4) — one-to-one primary, rare secondary
+## STATEMENT layer (#4) — identity is MEANING; text/position are evidence
 
+**Core principle:** a statement's identity is its **meaning**, carried by a stable `entity_id`.
+- **Same meaning ⇒ same statement** (one entity) — regardless of location on the page or minor
+  wording. So two same-meaning occurrences collapse to one entity; ambiguous location is moot.
+- **Different meaning ⇒ different statement.** If two near-duplicates won't merge, the residual
+  difference *is* a distinct atomic claim (not a failure — that's what "atomic" guarantees).
+- **Slightly different versions ⇒ overlapping occurrences of one entity** — evidence of one norm.
+
+Text (a `source_quote`) and position are **not** the identity — they are *occurrences*: evidence of
+where/when the meaning appears. Two tables:
+
+`statement_entity` — the durable identity:
 | field | notes |
 |---|---|
-| `statement_id` | `<wiki>:<page_id>:<seq>` (unchanged) |
-| `primary_char_start`, `primary_char_end` | **the one frontrunner span** — inline, one-to-one (the common case) |
-| `statement_orig`, `statement_en`, `deontic_type`, `governance_class` | as before |
-| *(derived, not stored)* `segment_type`, `prominence` | = the segment containing the primary span |
+| `entity_id` | `<wiki>:<page_id>:<seq>` — stable surrogate; **the** identity |
+| `statement_en`, `deontic_type`, `governance_class` | the canonical meaning |
+| `first_year`, `last_year`, `status` | lifespan (§2b) |
 
-`statement_extra_span(statement_id, char_start, char_end)` — a **side table, used only for the rare
-multi-span statement** (a rule whose exception lives elsewhere). Empty for ~all statements, so it
-stays tiny. This is the "enforced one-to-one with optional secondary" you asked for: every statement
-*must* have exactly one primary; secondaries are the exception, not the rule.
+`statement_occurrence` — the evidence, many-to-one onto an entity:
+| field | notes |
+|---|---|
+| `entity_id` | which meaning this is evidence for |
+| `year` (or revid) | snapshot it appears in |
+| `source_quote`, `quote_hash` | the verbatim text **as it appears that year** (may vary by typo/rewording) |
+| `match_method` | `exact` \| `fuzzy` \| `semantic` — how this occurrence was attributed to the entity |
+| *(derived, not stored)* `segment_type`, `prominence`, position | via the segment/text containing the quote |
+
+**Attribution cascade** (how an occurrence is tied to an entity — cheap → expensive):
+1. **exact** — the quote is a verbatim substring of the year's clean text → same entity (H2, free, ~90%).
+2. **fuzzy** — normalized + small edit-distance/token-ratio ≤ τ_typo → same entity; a typo/whitespace
+   fix **extends the run, does not spawn a version.** τ_typo is **conservative** (typo-tolerant, not
+   meaning-tolerant — a loose threshold false-merges distinct rules and hides reform).
+3. **semantic** (LLM) — the arbiter for the residue: same entity → new **version** (H3), new entity
+   (birth), or entity ended (removal/reform). The `entity_id` carries continuity once text drifts.
+
+**Scope of merging** — the one subtlety:
+- **within a page/wiki: same meaning → merge** to one entity.
+- **across wikis: same meaning → do NOT merge; record equivalence** (that's #7). The cross-wiki
+  *comparison* is the goal, so the separate entities are kept and linked, never collapsed.
 
 ## Why it doesn't explode
 
-- Storage is **O(#statements)** — one small row each. No segment×statement pairing is ever materialised.
-- Overlapping/duplicate statements (completeness > minimality) are allowed but each is *one* row;
-  the raw count is linear, not combinatorial.
-- Secondary spans are rare → the side table is near-empty.
-- The **deduplicated norm** (#7 cluster) is the *analytical* unit; the raw statements are the audit
-  trail. So "many overlapping statements" is cheap to store and collapses for analysis.
-- Snapshot ≈ 1,143 pages × ~50–150 statements ≈ 60k–170k rows. All-years stays bounded by
-  version-on-change (§2b), not a per-year copy.
+- **Entities ≈ distinct norms** (small); **occurrences are linear** and mostly exact-matched (free).
+- Overlapping/duplicate statements (completeness > minimality) **merge by meaning** into one entity,
+  so the *entity* set stays close to the true rule count; raw occurrences are the audit trail.
+- No positions stored as identity, no segment×statement join — attribution is the cheap cascade above.
+- Snapshot ≈ 1,143 pages × ~50–150 raw statements → far fewer entities after meaning-merge. All-years
+  bounded by version-on-change (§2b), not a per-year copy.
 
 ## What this really changes (vs the current issues)
 
@@ -69,9 +94,10 @@ stays tiny. This is the "enforced one-to-one with optional secondary" you asked 
 - **#3 segmentation** — *the real change*: `is_core` (binary filter) → **segments tile the text** with
   `segment_type` + `prominence` + `candidate` + `exclusion` route. Adds the structural pre-pass that
   routes votes/chrome/signals out (logged). Nothing dropped un-logged.
-- **#4 extraction** — statement carries a **primary span** (+ rare secondary side table) instead of a
-  segment foreign key; `prominence` is a *prior* (weight, don't skip low-prominence text). `statement_id`
-  and the store are otherwise unchanged.
+- **#4 extraction** — the big reframe: identity is **meaning** (`entity_id`), not position or exact
+  text. Split into `statement_entity` (the meaning) + `statement_occurrence` (verbatim text per year,
+  attributed by the exact→fuzzy→semantic cascade). No stored offsets; `source_quote` + `exists_in`
+  (occurrence years) give H1/H2 for free. `prominence` is a *prior* (weight, don't skip).
 - **#5 rating** — `prominence` is now a first-class field (the "location/context weight" metric),
   available via the containing segment; the exploration's `salience` column renames to `prominence`.
 - **page-level `confidence`** (core_definition) — **unchanged**; explicitly *not* the same axis as prominence.
@@ -82,3 +108,8 @@ stays tiny. This is the "enforced one-to-one with optional secondary" you asked 
   central the norm is)? Lean: segment default, LLM overrides at statement level when they diverge
   (a throwaway line stating a load-bearing rule).
 - 3- vs 4-point `prominence` scale; whether `context` and `scaffolding` collapse.
+- **τ_typo** (the fuzzy band): how much edit-distance counts as "same text, typo" before it must go to
+  the semantic arbiter. Conservative default; tuned against the identity-precision metric (false merge =
+  hidden reform = the dangerous error).
+- Whether same-meaning merge is **automatic** (fuzzy/semantic decides) or **proposed-then-confirmed**
+  (a review step), given false-merges are costly.
