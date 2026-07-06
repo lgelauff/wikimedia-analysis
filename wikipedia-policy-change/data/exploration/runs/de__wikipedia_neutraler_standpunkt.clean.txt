@@ -1,0 +1,87 @@
+# de.wikipedia.org :: Wikipedia:Neutraler Standpunkt
+
+WP:NS ist eine Weiterleitung auf diese Seite. Vielleicht war Wikipedia:Gesichtete Versionen/Nachsichtung oder Hilfe:Namensräume (engl. NameSpace) gesucht.
+Autorenportal
+Richtlinien
+Grundprinzipien
+Neutraler Standpunkt
+Abkürzung: WP:NPOV, WP:NNPOV, WP:N Richtlinien
+Grundprinzipien
+Was Wikipedia nicht ist
+Neutraler Standpunkt
+Urheberrechte beachten
+Wikiquette
+Anonymität
+Artikel
+Systematik
+Verlinken
+Formatierung
+Künstliche Intelligenz
+Themenbereiche
+Erklärvideo zu Neutralität und Quellen
+Der neutrale Standpunkt (neutrale Sichtweise; engl. Neutral Point Of View, kurz NPOV) ist eines der vier unveränderlichen Grundprinzipien von Wikipedia. Er soll im Sinne wissenschaftlicher Wertfreiheit dazu dienen, Themen sachlich darzustellen und persönliche Standpunkte aus Wikipedia-Artikeln herauszuhalten. Um das zu gewährleisten, werden Artikel quellenbasiert, im Gesamten ausgewogen und möglichst objektiv verfasst, wie im Folgenden beschrieben wird. Die Einhaltung dieses Prinzips ist eine Voraussetzung eines guten Wikipedia-Artikels.
+Erklärung des neutralen Standpunkts
+Ein neutraler Standpunkt beschreibt eine Thematik weder mit abwertendem noch mit sympathisierendem Unterton. Er steht ihr nicht befürwortend, aber auch nicht ablehnend gegenüber. Das heißt nicht, dass Wertungen sich in überhaupt keiner Form im Artikel wiederfinden sollten, sondern vielmehr, dass sie aus einer redaktionell neutralen Sicht dargestellt werden müssen. Ein Artikel und seine Unterartikel sollen alle unterschiedlichen Standpunkte, Meinungen und Streitigkeiten eines Themas klar beschreiben und charakterisieren, ohne einzelne davon zu befürworten, zu vertreten oder abzulehnen. Es soll so gut wie möglich aufgezeigt werden,
+wer welche Meinung vertritt,
+wieso er sie vertritt und
+wie verbreitet sie ist.
+Dabei dürfen auch Sichtweisen wiedergegeben werden, die eine kritische Haltung zu anderen Sichtweisen einnehmen. Aber auch wenn ein Text solche Kritik erklärt, soll die Darstellung an sich neutral bleiben und diese Kritik lediglich beschreiben, nicht üben. Alle dargestellten Standpunkte müssen sich zudem einer zuverlässigen Quelle zuordnen lassen.
+Erst diese neutrale Sichtweise ermöglicht es, mehrere unvereinbare Standpunkte zum gleichen Thema richtig zu handhaben. Sie setzt natürlich voraus, dass die Ansichten der Mehrheit angemessen dargestellt werden. Sie verlangt aber auch, dass die Meinungen von Minderheiten zu Wort kommen, sofern sich dafür eine zuverlässige Quelle finden lässt. Die Beschreibung soll einen neutralen Ton haben, und der Anteil der einzelnen Standpunkte am Gesamtumfang soll ihre jeweilige Relevanz widerspiegeln. Daher sollte Text nicht entfernt werden, nur weil es sich dabei um die Darstellung einer abweichenden Meinung handelt; jedoch sollte er gegebenenfalls gekürzt oder in einen neuen Unterartikel ausgelagert werden, wenn ihr sonst überproportional viel Gewicht gegeben würde.
+Neutralität verlangt, dass die Standpunkte unvoreingenommen dargestellt werden. Dass alle Benutzer und alle Quellen zu bestimmten Standpunkten neigen (also eine eigene Meinung haben), schließt nicht aus, dass sich dennoch ein Artikel schreiben lässt, der alle diese – möglicherweise einander widersprechenden – Standpunkte im Artikel zusammenführt und korrekt beschreibt und der als Ganzes neutral ist. Dabei soll nicht so getan werden, als wären die Quellen unvoreingenommen, sondern es soll im Gegenteil verdeutlicht werden, dass es Meinungsverschiedenheiten gibt, beispielsweise durch die direkte Gegenüberstellung zu den anderen relevanten Sichtweisen.
+Grundsätze
+Belegt
+Die Faktenbasis von Wikipedia-Artikeln stammt grundsätzlich aus veröffentlichten Informationsquellen. Näheres über diesen Grundsatz findest du im Artikel Wikipedia:Belege unter Grundsätze, Näheres über die Informationsquellen findest du unter „Was sind zuverlässige Informationsquellen?“.
+Bei Darstellungen oder Standpunkten, für die es keine zuverlässige Informationsquelle gibt, handelt es sich um unerwünschte Theoriefindung, siehe Wikipedia:Keine Theoriefindung.
+Ausgewogene Darstellung der Standpunkte
+Ein ausgewogener Artikel beschreibt den Gegenstand des Lemmas und nachfolgend die damit verbundenen unterschiedlichen Standpunkte.
+Mehrere verschiedene oder einander widersprechende Standpunkte können in einem Artikel beschrieben werden. Die Akzeptanz der verschiedenen Darstellungen sollte dabei klar dargestellt werden.
+Die angemessene Darstellung des Lemmas und von Argumenten hat Vorrang vor dem Bestreben, konkurrierende Sichtweisen möglichst in gleichem Umfang wiederzugeben.
+Im besten Fall sind alle bekannten Standpunkte zu erwähnen, die von relevanten gesellschaftlichen Gruppen und Organisationen sowie von den maßgeblichen Wissenschaftlern eines Fachgebiets aktuell vertreten werden.
+Durch bloße Aneinanderreihung verschiedener Meinungen dürfen wissenschaftliche Erkenntnisse nicht relativiert werden. Durch eine unangemessen gewichtete Darstellung von Positionen entstünde ein verzerrtes Bild des Forschungsstands. Siehe auch: False Balance
+Sachlichkeit der Darstellung
+Ein enzyklopädischer Artikel ist in einem durchgehend sachlich-neutralen, d. h. nicht emotional gefärbten Ton gefasst.
+Ein enzyklopädischer Artikel enthält sich, für oder gegen Standpunkte Stellung zu beziehen. Vielmehr wird darin erwähnt, welche relevanten Personen, (weltanschaulichen) Gruppen, Religions- und Wissenschaftsvertreter etc. welche Standpunkte vertreten.
+Standpunkte dürfen weder ungebührlich akzentuiert noch apodiktisch noch mit ausweichenden Formulierungen, wie etwa „Es wird allgemein angenommen, X gelte …“ dargestellt werden. Um eine schwerlich zu beweisende Absolutsetzung zu vermeiden, empfiehlt es sich, beispielsweise statt „X gilt“ einleitend „Für X spricht, …“ zu schreiben.
+Persönliche Interessen dürfen nie den Inhalt von Artikeln bestimmen. Siehe dazu Wikipedia:Interessenkonflikt. Autoren sollen stets wertfrei und ohne Parteilichkeit („sine ira et studio“) agieren.
+Vorgehen
+Inhaltliche Fragen
+Was ist Tatsache, was ist Wertung?
+Offenkundige Tatsachen können in Artikeln auch als solche dargestellt werden. Beispielsweise ist aus unzähligen Quellen nachweisbar, dass Vincent van Gogh ein niederländischer Maler war und dass Brasilien auf dem südamerikanischen Kontinent liegt.
+Werturteile sind Aussagen, die nicht beschreibend (deskriptiv), sondern vorschreibend (präskriptiv oder normativ) sind. Da kein Schluss vom Sein auf das Sollen möglich ist (naturalistischer Fehlschluss, Humes Gesetz), sind diese Urteile immer subjektiv. Man kann nur den Inhalt von empirischen Aussagen überprüfen, nicht aber von normativen. Für ein Lexikon sind Urteile daher immer problematisch. Abhängig von der Bedeutung der urteilenden Instanz können sie aber als Information (Fakt) selbst wieder zum Artikelgegenstand werden. In jedem Fall müssen Urteile von allgemein akzeptierten Tatsachen getrennt und als solche ausgewiesen werden. So ist es beispielsweise eine Wertung, Vincent van Gogh als den bedeutendsten niederländischen Maler zu bezeichnen, aber auch, Brasilien als Entwicklungsland zu bezeichnen.
+Wie schildere ich Standpunkte?
+Werturteile müssen zwingend den Urteilenden zugeordnet werden. Wikipedia-Autoren sollen niemals selbst urteilen. Besonders bei umstrittenen Themen ist es wichtig, Standpunkte zuzuordnen. Dabei können auch besonders prägnante Meinungen wörtlich zitiert werden.
+Wichtig ist, Meinungen exakt wiederzugeben und sie in den jeweiligen Zusammenhang einzuordnen, hilfreich ist unter Umständen die Nennung des Zeitpunkts der angegebenen Einordnung.
+Beispiele für eine korrekte Wiedergabe eines zuzuordnenden Werturteils:
+„Der Deutsche Gewerkschaftsbund bezeichnete in einer Stellungnahme den Gesetzesentwurf zur Regelung des Beschäftigtendatenschutzes als problematischer als die Vorratsdatenspeicherung.“
+„Im Ranking der 500 einflussreichsten Musikalben bewertete das Magazin Rolling Stone das Album Sgt. Pepper’s Lonely Hearts Club Band der Beatles als einflussreichstes Album aller Zeiten.“
+Was ist unparteiische Darstellung?
+Um einen neutralen Standpunkt zu wahren, müssen alle maßgeblichen Standpunkte repräsentiert werden (es darf kein verstecktes Werturteil durch die Auswahl oder Gewichtung einzelner Sichtweisen erfolgen). Bedeutsame Wertungen müssen ausgewogen dargestellt werden. Zur unparteiischen Darstellung gehört also in erster Linie, die Sichtweisen und Argumente aller Seiten angemessen zu schildern, das heißt, sowohl vom Umfang her eine Ausgewogenheit zu wahren als auch in der Wortwahl keine (implizite) Wertung vorzunehmen. Die Kunst besteht hier in der Konzentration auf das Wesentliche.
+Es ist der Neutralität auch nicht förderlich, wenn Autoren sich Sichtweisen und Argumente verschiedener Seiten eines Konflikts zu eigen machen und mit ihrer Hilfe im Stil einer Erörterung einen eigenen Standpunkt argumentativ darlegen. Eine Trennung der verschiedenen Argumente in separate Listen (Pro- und Kontraliste) ist keine geeignete Form der Darstellung.
+Insbesondere ist die lediglich auf Außenwirkung bedachte Selbstdarstellung von Behörden, Institutionen, Parteien, Unternehmen, Vereinen, Personen etc. bei Wikipedia ausdrücklich unerwünscht. Gleiches gilt für Darstellungen, die die Rufschädigung Dritter durch falsche Tatsachenbehauptungen, Verbreiten von Gerüchten und Spekulationen, sinnentstellende Zitatwahl u. ä. zum Ziel haben. So ein Verhalten kann mit einer Sperre geahndet werden.
+Inwieweit empfiehlt es sich, Minderheitenmeinungen zu erwähnen?
+Wenn z. B. eine wissenschaftliche Theorie in der Fachwelt nur von einem Professor und dessen drei Assistenten anerkannt wird, darf die Darstellung dieser abweichenden Haltung nicht in gleichem Umfang geschildert werden wie die etablierten Positionen. Dies gilt natürlich nur für Minderheitenmeinungen im Sinne einer sogenannten Mindermeinung und als Gegenstück zu einer herrschenden Auffassung, nicht für so begrenzte Themen, bei denen die Ansicht des Autors die einzig existierende wissenschaftliche Meinung ist.
+Wenn Minderheitenmeinungen bereits dadurch historisches Gewicht haben, dass sie öffentlich entsprechend häufig diskutiert werden, ist es angebracht, die betreffenden Standpunkte und ihre Diskussion sowie die gesellschaftlichen, politischen, wirtschaftlichen usw. Auswirkungen in angemessenem Umfang zu erwähnen.
+Beispiel: Die theoretische und praktische Forschung über die Möglichkeiten extraterrestrischen Lebens gegenüber den Berichten von UFO-Sichtungen und Kontakten mit Außerirdischen; die beiden Letzteren nehmen einen gewissen Minderheitenstatus ein.
+Wortwahl und Formulierung
+Die Wahl der Worte ist wichtig. Bereits ein einzelnes Wort in einem Satz kann die Sachlichkeit zerstören und den Satz zu einer tendenziösen Aussage machen. Ein Beispiel: Im Satz Er hat es versäumt, die Öffentlichkeit zu informieren ist es das Wort versäumt. Es impliziert und unterstellt eine nachlässige Haltung, die zu diesem angeblichen Versäumnis führte. Der Satz kann auch ohne das Wort versäumt geschrieben werden. Die Formulierung Er hat die Öffentlichkeit nicht informiert ist neutraler, da sie keine Wertung beinhaltet. Ein weiteres Beispiel: Sie informieren immer noch nicht impliziert, dass sie es längst hätten tun müssen, womöglich aufgrund eines Gesetzes o. Ä. Sie informieren nicht ist neutraler.
+Mit der Wortwahl kann der Autor den Leser manipulieren. Es gibt Autoren, die sich dessen nicht bewusst sind, und Autoren, die diese Möglichkeit bewusst und gezielt einsetzen. Manche Leser fühlen sich manipuliert, andere werden manipuliert, ohne sich dessen bewusst zu werden.
+Wörter wie oft, selten, viele, wenige sind ungenau, und was wenig ist, hängt oft vom Standpunkt ab. Wörter wie bekannt, berühmt, bedeutend, erfolgreich, beliebt sind häufig relativ und sollten nachvollziehbar sowie gezielt, nicht aber werbend oder als Füllwörter eingesetzt werden. Aus der Beschreibung im Artikel sollte zumindest hervorgehen, wofür und bei welchem Publikum das Beschriebene bekannt, berühmt, bedeutend, erfolgreich bzw. beliebt ist.
+Auch die Bezeichnung von sprachlichen Ausdrücken als falsch verstößt gegen den neutralen Standpunkt; Einordnungen wie umgangssprachlich, veraltet oder dergleichen sind nicht nach eigenem Ermessen vorzunehmen, sondern bedürfen der Absicherung mittels sprachwissenschaftlicher Fachliteratur.
+Strukturierung
+In vielen Fällen gibt es den Kern eines Phänomens, der von (fast) allen Akteuren unbestritten gesehen wird, während es darüber hinaus kontroverse Aspekte oder Bewertungen des Phänomens gibt. In diesen Fällen empfiehlt es sich, zunächst die unumstrittenen Aspekte darzustellen und im Folgenden dann in einem separaten Abschnitt die Rezeption des Phänomens aus der Sicht der verschiedenen relevanten Akteure darzustellen. Dieser Abschnitt sollte ausdrücklich nicht nur negative Beurteilungen, sondern alle relevanten Stimmen umfassen, die im Einzelfall natürlich durchweg negativ ausfallen können.
+Statistiken und Zahlenangaben
+Statistiken drücken Sachverhalte in Zahlen aus, sie sind deswegen aber nicht grundsätzlich sachlich. Die Probleme beginnen einerseits dort, wo man festlegt, was überhaupt gemessen werden soll, und hören dort auf, wo die Messwerte ausgewertet, zusammengefasst und mit Sätzen kommentiert werden.
+Generell gilt: Wer eine Statistik bringt, sollte immer eine Quellenangabe beifügen.
+Was tun bei nichtneutralen Texten?
+Artikel, in denen ein oder mehrere Standpunkte nur ungenügend erklärt werden, lassen sich nicht dadurch neutraler gestalten, dass man den Gegenstandpunkt kürzt. Stattdessen sollte darauf hingewirkt werden, dass der nur ungenau erklärte Standpunkt besser begründet (z. B. mit Quellen) und ausformuliert wird. Es empfiehlt sich, besonders gefährdete und umstrittene Artikel, in die wiederholt nichtneutrale Passagen eingefügt werden, auf Beobachtungskandidaten zu verlinken, von wo aus sie von mehr Benutzern längerfristig beobachtet werden.
+Zur Abhilfe bei nicht neutralen Artikeln gibt es mehrere Möglichkeiten:
+Im ersten Schritt ist unter Versionsgeschichte zu prüfen, wie viele Personen bereits an dem Text gearbeitet haben. Wenn die Versionsgeschichte auf den ersten Blick nicht nachvollziehbar erscheint, befinden sich unter Diskussion meist wichtige Hinweise.
+Wer das Thema ausreichend kennt oder über entsprechende Quellen verfügt, kann den Artikel entsprechend umschreiben oder erweitern.
+Eine andere, höflichere Möglichkeit ist, die nicht neutral erscheinenden Teile auf die Diskussionsseite als Zitat zu stellen oder auszulagern mit einer – bestenfalls argumentativ schlüssigen – Bitte an den Autor, sie umzuformulieren.
+Artikel, die einige als nicht neutral betrachten und die sich nicht ohne größeren Aufwand umschreiben lassen, kann man mit dem Baustein {{Neutralität}} kennzeichnen, der auf diese Seite verweist. Das Ganze sieht dann so aus:
+Die Neutralität dieses Artikels oder Abschnitts ist umstritten. Eine Begründung steht auf der Diskussionsseite.
+Die Ergänzung mit dem Baustein ist natürlich nur dann ohne Weiteres möglich, wenn der Artikel nicht gesperrt ist. Sollte der Artikel aufgrund eines Edit-Wars gesperrt sein, so ist die Ergänzung mit dem Baustein bei Wikipedia:Administratoren/Anfragen zu beantragen. Dies gilt jedoch nur, wenn Grund des der Sperre vorausgehenden Edit-Wars nicht der Neutralitätsbaustein selbst war.
+Die Ultima Ratio bei Artikeln, die als nicht „neutralisierbar“ erscheinen, ist ein Löschantrag. In seinem Text ist zu begründen, warum eine Überarbeitung nicht möglich oder sinnvoll ist, damit andere Personen den Grund des Löschantrags nachvollziehen können.
+Siehe auch
+Medienmanipulation
+Falsche Ausgewogenheit

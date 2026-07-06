@@ -1,0 +1,306 @@
+# en.wikipedia.org :: Wikipedia:Requests for comment
+
+"WP:RFC" redirects here. For active RfCs, see Wikipedia:Requests for comment/All. For requests for checkuser, see Wikipedia:Sockpuppet investigations. For redirects for creation, see Wikipedia:Articles for creation/Redirects. For requests for closure, see Wikipedia:Closure requests. Information page on the process of requests for comment on Wikipedia Wikipedia information page
+This is an information page.It is not a Wikipedia policy or guideline; rather, its purpose is to explain certain aspects of Wikipedia's norms or practices. It may reflect varying levels of consensus.
+Shortcut
+WP:RFCWP:RFC
+You can sign up to receive invitations to participate in RfC discussions that interest you.
+Dispute resolution(Requests)
+Tips
+Assume good faith
+Use etiquette
+Be civil
+Be open to compromise
+Discuss on talk pages
+Failure to discuss
+Help desk (Request)
+Content disputes
+Third opinion (Request)
+Mediation
+Noticeboards
+Requests for comment
+Resolution noticeboard (Request)
+Conduct disputes
+Administrator assistance (Request)
+Arbitration (Request)
+v
+t
+e
+Centralized discussion
+Village pumps
+policy
+tech
+proposals
+idea lab
+WMF
+misc
+RfC on adding this week's article for improvement to the main page
+Discussion about the bureaucrat permission
+RfC on changes to the requirements for autoconfirmed, extended confirmed, and page creation
+RfC on using non-free photos of low-profile victims in articles about death-related events
+WMF questions to the community regarding the future of the Wishlist
+Reform of community elections to the WMF board
+For a listing of ongoing discussions, see the dashboard.
+view
+edit
+history
+watch
+archive
+talk
+purge
+This page describes the process, including instructions for how and why to create a request for comment (RfC), to participate in one, and to end one.
+RfC is one of several processes available within Wikipedia's dispute resolution system. Alternative processes include third opinion, reliable sources noticeboard, neutral point of view noticeboard, the dispute resolution noticeboard, and, for editors' behavior, the administrator's incident noticeboard and binding arbitration.
+A list of all current RfCs can be found at Wikipedia:Requests for comment/All (WP:RFC/A).
+An archive of (selected) past RfCs and other discussions can be found at Wikipedia:Centralized discussion/Archive.
+What an RfC is
+See also: Wikipedia:Consensus § Consensus-building
+A request for comment (RfC) is a way to ask the Wikipedia community for input on an issue. Often, the issue is what an article should say. Sometimes it is a proposal for a Wikipedia process or policy change. The aim of RfC discussions is to improve the encyclopedia, and they may relate to article content pages, editorial disputes; changes to policies, guidelines, or procedures; or other topics.
+An RfC invites comment from a broader selection of editors than an unadvertised discussion on a talk page; the results of a broadly-attended RfC are therefore the opposite of WP:LOCALCONSENSUS. And, because Wikipedia makes decisions by consensus, an RfC can act as a dispute resolution. If, for example, the usual group of editors of an article cannot agree on whether a certain fact should be mentioned, they can use an RfC to find out what the community thinks and, if a consensus emerges, that usually resolves the dispute.
+Comments are provided and discussed via an ordinary Wikipedia discussion that follows the normal talk page guidelines and procedures, including possible closing. Closing an RfC discussion, particularly a longer one, is especially helpful, as the purpose of an RfC is usually to develop a consensus about some disputed point. Because consensus can change, no consensus is permanently binding, including a consensus formed in a discussion advertised via RfC.
+Before starting the process
+Shortcuts
+WP:RFCBEFOREWP:RFCBEFORE
+WP:RFC#BEFOREWP:RFC#BEFORE
+This section is about alternatives to RfCs. For advice on wording an RfC question, see Wikipedia:Requests for comment § Statement should be neutral and brief. Are you starting an RfC? This is good advice, and you'll be more successful if you follow it. Are you trying to shut down someone else's RfC? "RFCBEFORE" is good advice, but it's not required.
+RfCs are time-consuming, and Wikipedia being a volunteer project, editor time is valuable. If you are considering an RfC to resolve a dispute between editors, you should try first to resolve your issues other ways. Try discussing the matter with any other parties on the related talk page. If you can reach a consensus or have your questions answered through discussion, then there is no need to start an RfC.
+Shortcut
+WP:RFCALTWP:RFCALT
+If a local discussion does not answer your question or resolve the problem, then some other forums for resolution include:
+Asking over at the Teahouse.
+Asking for input or assistance at a relevant content noticeboard or one or more relevant WikiProjects, the latter of which are often listed at the top of the article's talk page.
+If an article content question is just between two editors, you can simply and quickly ask for a third opinion on the Third opinion page.
+If more than two editors are involved or the issue is complex, dispute resolution is available through the Dispute resolution noticeboard.
+If you want general help in improving an article, such as achieving Featured status, then list it at Peer review.
+For a more complete description of dispute resolution options, see the Dispute resolution policy and the list of noticeboards.
+If you are not sure if an RfC is necessary, or about how best to frame it, ask on the talk page of this project.
+What not to use the RfC process for
+Shortcut
+WP:RFCNOTWP:RFCNOT
+For the rationale originating this section, see Wikipedia talk:Requests for comment/Archive 16 § Specifying that RfCs should not be listed on AfDs.
+Alternative processes to RfC
+Problem
+Follow the procedures described at
+Help needed
+Help:Contents or {{help me}}
+Deletion processes
+WP:Deletion process § Deletion discussion venues or Deletion review
+Did You Know suggestions
+Template talk:Did you know
+Featured Article/List/Picture/Topic discussions
+Featured article candidates, Featured article review, Featured list candidates, Featured list removal candidates, Featured picture candidates, Featured topic candidates, Featured topic removal candidates, or Today's featured article/requests
+Good Article/Topic discussions
+Good article nominations, Good article reassessment, Good topic nominations, Good topic removal candidates
+In the news candidates
+In the news candidates
+Merge proposals
+Articles for deletion
+Split proposals
+Splitting
+Peer review
+Peer review
+Renaming categories
+Categories for discussion
+Renaming pages (other than categories)
+Moving a page or Requested moves
+About the conduct of another user
+For reporting usernames that violate the username policy, see Wikipedia:Requests for comment/User names. For reporting spam, page blanking, and other blatant vandalism, see Wikipedia:Vandalism.
+The use of requests for comment on user conduct has been discontinued. In severe cases of misconduct, you may try Wikipedia:Administrators' noticeboard/Incidents. If the dispute cannot be resolved there, then arbitration may be warranted as a last resort. You may want to read about other options in the Resolving user conduct disputes policy.
+Creating an RfC
+Shortcuts
+WP:RFCOPENWP:RFCOPEN
+WP:RFCSTWP:RFCST
+WP:RFCTPWP:RFCTP
+You create an RfC by starting a discussion which typically takes place on a section or subsection of a talk page or noticeboard, and including in that discussion an {{rfc}} template tag. That tag must be followed by a neutral and brief statement and a valid timestamp; the following details how to do these things.
+Issues by topic area (View all)
+Article topics (View all)
+Biographies
+{{rfc|bio}}
+Economy, trade, and companies
+{{rfc|econ}}
+History and geography
+{{rfc|hist}}
+Language and linguistics
+{{rfc|lang}}
+Maths, science, and technology
+{{rfc|sci}}
+Media, the arts, and architecture
+{{rfc|media}}
+Politics, government, and law
+{{rfc|pol}}
+Religion and philosophy
+{{rfc|reli}}
+Society, sports, and culture
+{{rfc|soc}}
+Project-wide topics (View all)
+Wikipedia style and naming
+{{rfc|style}}
+Wikipedia policies and guidelines
+{{rfc|policy}}
+WikiProjects and collaborations
+{{rfc|proj}}
+Wikipedia technical issues and templates
+{{rfc|tech}}
+Wikipedia proposals
+{{rfc|prop}}
+Unsorted
+Unsorted RfCs
+{{rfc}}
+Shortcuts
+WP:RFCBOTWP:RFCBOT
+WP:RFCCATWP:RFCCAT
+Before starting the process, make sure that any relevant alternatives to starting an RfC have been tried.
+Open a new section at the bottom of the talk page of the article or project page that you are interested in.
+In some situations, such as when you expect an extremely high number of comments (e.g., 100+ comments) or there is no obviously relevant talk page, you may instead place an RfC discussion on a subpage of an appropriate, relevant page, such as: a subpage of the article's talk page, of a project page (or its talk page), of one of the Village pumps, or of this page. For example: Wikipedia:Pending changes/Request for Comment 2012, Wikipedia:Village pump (proposals)/RfC: Ending the system of portals, and Wikipedia:Requests for comment/Categorization of persons.
+The section heading should begin with "RfC" or "Request for comment", for example "RfC on beak length" or "Request for comment on past or present tense for television series".
+Insert one {{rfc}} template tag at the top of the new talk page section, directly below the section header.
+The tag must include as parameters one or more categories from the table of RfC topics, and the category must be in lower case. For example: {{rfc|econ}}. If no category seems to fit, pick the one that seems closest. If the RfC is relevant to two categories, include them both in the same {{rfc}} tag. For example: {{rfc|econ|bio}}.
+The "Language and linguistics" category is for requests related to a Wikipedia article (or part of one) about language and linguistics, not for requests concerning the language on a page. If you want comments on how an article should be worded, categorize your request according to the topic of the article.
+The "Wikipedia policies and guidelines" category is for discussing changes to the policies and guidelines themselves, not for discussing how to apply them to a specific case. The same applies to "Wikipedia style and naming", and the other non-article topics categories.
+Include an initial brief, neutral statement or question about the issue in the talk page section, immediately below the {{rfc}} tag (see § Example). If the RfC is about an edit that's been disputed, consider including a diff.
+The statement should be self-contained, and should not assume that the section title is available (because the section title will not be copied to the RfC list pages).
+A long statement (including wiki markup), may be truncated or may fail to be copied at all. If you have more information to say concerning the issue, first publish the initial brief and neutral statement on the page, and then place your additional comments below the initial statement and timestamp. Your additional comments should follow normal talk page rules.
+For technical reasons, initial statements are not allowed to contain tables or complex formatting. Similarly, the statement should not begin with a list – but if this is unavoidable, use the markup &#32; before the list, either directly after the {{rfc}} tag or on a line of its own.
+Add a timestamp at the end of the brief statement, using either ~~~~ (four tildes: username, time, and date) or ~~~~~ (five tildes: just the time and date). Signing with your username is optional. Failing to provide a time and date will cause Legobot to remove your discussion from the pages that notify interested editors of RfCs.
+Publish the talk page edit.
+Legobot will, as a result of the {{rfc}} tag, advertise the RfC by copying the markup of the initial statement to a subpage of Wikipedia:Requests for comment (this page), posting the RfC in the corresponding lists of active RfCs. Whilst Legobot normally runs once an hour, it may take it up to a day to list an RfC, so be patient.
+You may wish to publicize it further.
+If you subsequently amend the text of the initial RfC statement (or if you add another RfC category), Legobot will copy the amended version to the RfC listings the next time that it runs. If you add another RfC category, this must not be placed after the |rfcid= parameter (if one is present), because Legobot will not process it properly if you do.
+Statement should be neutral and brief
+Shortcuts
+WP:RFCBRIEFWP:RFCBRIEF
+WP:RFCNEUTRALWP:RFCNEUTRAL
+You can ask for help with writing your RfC question on this page's talk page.
+See also: WP:Writing requests for comment
+Y Good questions:
+Should the picture in the lead be changed?
+Is this website a good source for information about this product's invention?
+N Bad questions:
+What do other editors think about the discussions on this page?
+We should talk about this some more.
+Please vote on the following four five six options for the first sentence.
+The initial RfC statement (and heading) should be neutrally worded and brief. Statements are often phrased as questions, for example: "Should this article say in the lead that John Smith was a contender for the Pulitzer Prize?" There is no actual rule saying that editors who start RfCs must make their initial explanations look like they are responses to the question (e.g., by placing them inside a ===Discussion=== subsection) or otherwise making them less prominent.
+If you feel that you cannot describe the issue neutrally, you may either ask someone else to write the initial statement or question, or simply do your best and leave a note asking others to improve it. It may be helpful to discuss your planned RfC question on the talk page or on this page's talk page, before starting the RfC, to see whether other editors have ideas for making it clearer or more concise.
+Formatting example
+Main page: Wikipedia:Requests for comment/Example formatting
+There are many acceptable ways to format an RfC discussion. Below is one example of how a simple RfC discussion could appear when you are editing the talk page. This example will work best for average or smaller discussions; for major disputes, other, more structured formats may be more appropriate.
+You can copy and paste this example, but be sure to change the wording to reflect your particular topic (for example, the "hist" category may need to be changed). A signature ("~~~~") or at least a time and date ("~~~~~") is required. Do not include any opening html tags (e.g., <small>) in the initial RfC statement unless its corresponding closing tag (e.g., </small>) also comes before the first timestamp, i.e., don't "straddle" the first timestamp inside html code, otherwise it may corrupt the entry of the RfC on the topic discussion pages. Similarly, the timestamp must not be placed inside a template parameter. After you have inserted text similar to this into the talk page, you must publish the page.
+== RfC about the photo in the history section == {{rfc|hist}} Should the "History" section contain a photograph of the ship? ~~~~
+Multiple simultaneous RfCs on one page
+* Overuse of RfCs doesn't help.
+It is rare for a single article, or a single editor, to have more than one or two productive RfCs open at a time. Before starting a lot of RfCs, please check in on the RfC talk page for advice.
+There is no technical limit to the number of simultaneous RfCs that may be held on a single talk page, but to avoid discussion forks, they should not overlap significantly in their subject matter.
+Each {{rfc}} tag should also be added in a separate edit, with a delay between each edit to let the bot assign an id number to the first before attempting to start a new RfC. If you are starting another RfC on a page which already has one or more ongoing RfCs, first ensure that all of the existing {{rfc}} tags already contain a |rfcid= parameter. The process looks like this:
+Add your question with one {{rfc}} tag.
+Wait for the bot to edit the page and add an id number to the first RfC question. (Part of the text will change from "Within 24 hours, this page will be added ..." to "This page has been added ..."; this usually takes less than an hour.)
+Add another question with a second {{rfc}} tag.
+If any {{rfc}} tag anywhere on the page lacks the |rfcid= parameter, even if that RfC was started by another editor, then wait for Legobot to add it before adding another {{rfc}} tag anywhere on the page. If there are two {{rfc}} tags on the same page that both lack the |rfcid= parameter, Legobot will assign the same id number to both, with the result that only the lowest one of the page will be publicised; moreover, the incoming link will lead to the higher RfC question, which will cause confusion. To repair this, remove the |rfcid= parameter from the unpublicised one (usually the higher one) and wait for the bot to assign a unique id number to it.
+Publicizing RfCs
+See also: Wikipedia:Canvassing § Appropriate notification, and Wikipedia:Publicising discussions
+After you create an RfC it should be noticed by editors that watch the talk page. To encourage a broader range of editors to contribute to the discussion, you may also publicize the RfC by posting a notice at one or more of the following locations, if related to it:
+One of the Village Pump forums, such as those for policy issues, proposals, or miscellaneous (The technical forum is almost never an appropriate venue. You may want to ask there before starting an RfC.)
+Noticeboards such as point-of-view noticeboard, reliable source noticeboard, or original research noticeboard
+Talk pages of relevant WikiProjects
+Talk pages of closely related articles or policies
+When posting a notice at those locations, provide a link to the RfC, and a brief statement, but do not argue the RfC. You may use {{rfc notice}} to inform other editors. Take care to adhere to the canvassing guideline, which prohibits notifying a chosen group of editors who may be biased. When creating a new Wikipedia policy or suggesting major modifications to a policy, follow the instructions at WP:PROPOSAL. Centralized discussion may be used for policy-related RfCs but is not for publicizing any content disputes in articles.
+How to find RfCs
+If you would like to know which RfCs are underway, here are some ways to do that:
+You can bookmark and visit Wikipedia:Requests for comment/All or its subpages regularly. If you want to put them on your watchlist, you need to watch the individual subpages (e.g., Wikipedia:Requests for comment/Biographies) instead of the /All page.
+You can subscribe to the Feedback request service (FRS). You choose the subject areas you want to be notified about, at a rate you choose (e.g., one RfC per month). You will then be automatically notified on your talk page about randomly selected RfCs in your chosen settings by SodiumBot (the replacement for Yapperbot).
+You can bookmark or watch Wikipedia:Dashboard/Requests for comment.
+You can put Category:Wikipedia requests for comment on your watchlist, if you have the relevant setting for "Hide categorization of pages" saved in Special:Preferences#mw-htmlform-changeswatchlist.
+If you want to find out when RfCs and other important discussions are happening for articles related to a specific WikiProject, check out Wikipedia:Article alerts. RfC listings by broad topic or area are also available to watchlist at WP:RFCCAT.
+Responding to RfCs
+Shortcut
+WP:RFCRESPONDWP:RFCRESPOND
+All editors (including temporary account users) are welcome to respond to any RfC, unless there are specific behavioral restrictions in place, including page protection, partial blocks, or Arbitration Committee restrictions.
+Responses may be submitted in a variety of formats. Some RfCs are structured as a series of distinct responses, one per editor. Others result in a threaded (indented) conversation involving multiple editors. Yet others offer one or more alternative proposals that are separately endorsed or opposed by editors using a polling process. Other RfCs combine polling with threaded discussions. See the example section above for a suggested format.
+Edits to content under RfC discussion may be particularly controversial. Avoid making edits that others may view as unhelpful. Editing after others have raised objections may be viewed as disruptive editing or edit warring. Be patient; make your improvements in accord with consensus after the RfC is resolved.
+Try not to be confrontational. Be friendly and civil, and assume good faith of other editors' actions.
+Mediate where possible—identify common ground, and attempt to draw editors together rather than push them apart.
+Changing the RfC question
+Opponents of a proposal or RfC question should normally ask for help instead of boldly re-writing someone else's question.
+Before many editors have responded, it is acceptable to modify the question. For example, this might be done if participants express confusion about the question.
+If you feel an RfC is improperly worded:
+Ask the originator to voluntarily improve the wording.
+Explain your concerns in your own comment or response to the RfC question.
+If the original question is too long or has technical formatting problems, add a very brief summary question to the top (after the {{rfc}} tag but before the first timestamp).
+Add an alternative unbiased statement immediately below the original RfC question (after the {{rfc}} tag and the first timestamp).
+You can also ask for help or a second opinion at Wikipedia talk:Requests for comment.
+Do not end an RfC just because you think the wording is biased. An {{rfc}} tag generally remains on the page until removed by Legobot or the originator. An RfC can be ended only when the criteria at Ending RfCs are met.
+Ending RfCs
+See also: WP:Advice on closing discussions Shortcuts
+WP:RFCENDWP:RFCEND
+WP:RFCEXTENDWP:RFCEXTEND
+WP:RFCCLOSEWP:RFCCLOSE
+As an RfC is the solicitation of comment in a discussion, ending an RfC consists of ending that solicitation. When an RfC is used to resolve a dispute, the resolution is determined the same way as for any other discussion: the participants in the discussion determine what they have agreed on and try to implement their agreement.
+Some terms we use:
+Ending an RfC
+Removing the link to the discussion from the central RfC lists. This is accomplished by removing the {{rfc}} tag from the talk page; a bot takes care of the rest. The bot will also remove the tag, if you wait long enough.
+The end of a discussion
+This means people have stopped discussing the question. When a discussion has naturally ended, you should consider ending the RfC.
+Closing the discussion
+Someone lists conclusions (if any) and discourages further discussion. Some editors make a distinction between "closing" a discussion (discouraging further discussion, usually with the {{closed rfc top}} tag pair) and "summarizing" a discussion (naming outcomes). Neither "closing" nor "summarizing" are required.
+Duration
+An RfC should last until enough comment has been received that consensus is reached, or until it is apparent that it won't be. There is no required minimum or maximum duration; typically 7 days is a minimum, and after 30 days the discussion is ripe for closure. Legobot assumes an RfC has been forgotten and automatically ends it (removes the {{rfc}} tag) 30 days after it begins, to avoid a buildup of stale discussions cluttering the lists and wasting commenters' time.
+But editors should not wait for that. If one of the reasons to end RfCs applies, someone should end it manually, as soon as it is clear the discussion has run its course. Conversely, whenever additional comments are still wanted after 30 days, someone should delay Legobot's automatic action. This latter function is based on the very first timestamp following the {{rfc}} tag.
+To extend a current RfC for another 30 days, and to prevent Legobot from automatically ending the RfC during the next month, insert a current timestamp immediately before the original timestamp of the opening statement with either ~~~~ (name, time and date) or ~~~~~ (just the time and date).
+Reasons and ways to end RfCs
+Like other discussions, RfCs sometimes end without an agreement or clear resolution. There are several ways an RfC can end:
+The question may be withdrawn by the poster (e.g., if the community's response became obvious very quickly). In this situation, the editor who started the RfC would normally be the person to remove the {{rfc}} tag.
+The RfC participants can agree to end it at any time; one of them removes the {{rfc}} tag.
+The dispute may be moved to another dispute resolution forum.
+Any uninvolved editor can post a closing summary of the discussion; if consensus is undoubtedly clear, even an involved editor may summarize the discussion. The editor removes the {{rfc}} tag while closing the discussion. To avoid concerns about biased summaries, involved editors (on all sides of a dispute) are encouraged to let someone else write a summary (WP:NACINV).
+The discussion may just stop, and no one cares to restore the {{rfc}} tag after the bot removes it.
+Please remove the {{rfc}} tag when the dispute has been resolved, or when discussion has ended.
+To end an RfC manually, remove the {{rfc}} tag from the talk page. Legobot will remove the discussion from the central lists on its next run. (When Legobot automatically ends an RfC because of its age, it will remove the {{rfc}} tag.) If you are also closing the discussion, you should do this in the same edit.
+Do not enclose the {{rfc}} tag in <nowiki>...</nowiki> or <syntaxhighlight>...</syntaxhighlight> tags, nor place it in HTML comment markers <!--...--> since Legobot will ignore these and treat the RfC as if it is still open – and may also corrupt the RfC listing pages.
+Closing the discussion
+Anyone who wants an uninvolved editor to write a closing summary of the discussion (ideally with a determination of consensus) can formally request closure by posting at Wikipedia:Closure requests. If the matter under discussion is not contentious and the consensus is obvious to the participants, then formal closure is neither necessary nor advisable. Written closing statements are not required. Editors are expected to be able to evaluate and agree upon the results of most RfCs without outside assistance.
+To alert readers that an RfC has ended, you may optionally enclose the talk page section in a box using a tag pair such as {{closed rfc top}}/{{closed rfc bottom}} or {{archive top}}/{{archive bottom}}. This is not required, and may be done with or without a closing statement about the discussions results. This example shows one way to do this:
+== RfC about the photo in the History section == {{closed rfc top|result= Consensus was reached to keep the photo. ~~~~ }} .... here is the entire RfC discussion... {{closed rfc bottom}}
+If a closed RfC discussion results in a major policy change, strongly consider updating related guides such as Help:Introduction to Wikipedia.
+Restarting an RfC
+Shortcut
+WP:RFCRESTARTWP:RFCRESTART
+Anyone who wants to have more comments on the topic can restart an RfC that has ended, as long as the discussion has not been closed. For example, the original poster of an RfC might withdraw it, but someone else may have become interested in the topic in the meantime and restart it.
+To restart an RfC, reinsert the {{rfc}} tag. If it was automatically removed by Legobot, then be sure to insert a current timestamp after the RfC statement, and before its original timestamp, or it will just get re-removed by the bot. This will give a thirty-day extension; but if the RfC is to be of long duration, you may instead add the line
+<!-- RFCBot Ignore Expired -->
+before the {{rfc}} tag.
+You should mention at the end of the RfC statement that the RfC ended and restarted, and add your signature if appropriate.
+See also
+This page is referenced in the Wikipedia Glossary.
+Wikipedia:Supervote
+For ongoing discussions and current requests, see Wikipedia:Dashboard.
+Wikipedia:Decisions not subject to consensus of editors
+Archives of user conduct disputes
+Special:Prefixindex/Wikipedia:Requests for comment – a list of all subpages of this page
+Wikipedia:Requests for comment/All – a listing of all current RfCs
+Wikipedia:Feedback request service – sign up to receive notifications of new RfCs on your user talk page
+Wikipedia:Request directory – all other request departments
+Wikipedia:Expert help
+Notes
+v
+t
+e
+Requests for comment (All)
+Articles (All)
+Biographies (bio)
+Economy, trade, and companies (econ)
+History and geography (hist)
+Language and linguistics (lang)
+Maths, science, and technology (sci)
+Media, the arts, and architecture (media)
+Politics, government, and law (pol)
+Religion and philosophy (reli)
+Society, sports, and culture (soc)
+Non-articles (All)
+Wikipedia style and naming (style)
+Wikipedia policies and guidelines (policy)
+WikiProjects and collaborations (proj)
+Wikipedia technical issues and templates (tech)
+Wikipedia proposals (prop)
+Unsorted
+Instructions
+To add a discussion to this list:
+Add the tag {{rfc|xxx}} at the top of a talk page section, where "xxx" is the category abbreviation. The different category abbreviations that should be used with {{rfc}} are listed above in parenthesis. Multiple categories are separated by a vertical pipe. For example, {{rfc|xxx|yyy}}, where "xxx" is the first category and "yyy" is the second category.
+For more information, see Wikipedia:Requests for comment. Report problems to Wikipedia talk:Requests for comment. Lists are updated every hour by Legobot.

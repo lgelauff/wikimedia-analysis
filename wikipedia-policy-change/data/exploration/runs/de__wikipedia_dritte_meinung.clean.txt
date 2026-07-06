@@ -1,0 +1,120 @@
+# de.wikipedia.org :: Wikipedia:Dritte Meinung
+
+Abkürzung: WP:3M, WP:DM
+Autorenportal
+Konflikte
+Dritte Meinung
+Die Dritte Meinung bietet eine kollaborative Möglichkeit der Konfliktlösung. Hier kannst du Benutzer auf verfahrene inhaltliche Konflikte in Diskussionen aufmerksam machen und um weitere Sichtweisen von vermittlungsfreudigen Wikipedianern bitten.
+Hier finden keine Diskussionen statt, sondern auf den verlinkten Diskussionsseiten.Themenbezogene Diskussionen gehören immer auf die jeweilige Diskussionsseite, dort sind sie auch später noch nachvollziehbar. Dennoch hier erschienene Diskussionsbeiträge sollten mit entsprechendem Vermerk auf die jeweilige Diskussionsseite verschoben werden. Kurze organisatorische Beiträge wie Hinweise auf weitere Diskussionsorte sind hingegen immer gerne gesehen.
+Siehe auch:
+Belege-Fließband zur Klärung, ob sich eine Quelle im konkreten Fall als zuverlässiger Nachweis eignet
+Vandalismusmeldungen bei persönlichen Angriffen oder Edit-Wars
+Portale und WikiProjekte für fachbereichsbezogene Fragestellungen und um facherfahrene Enzyklopädisten auf eine Diskussion hinzuweisen
+↓zu den Einträgen↓
+Wenn du eine dritte Meinung suchst
+Ein Diskussionshinweis sollte die folgenden Informationen enthalten:
+Ein Verweis auf den thematisierten Artikel (ggf. mehrere).
+Ein Verweis zum bereits bestehenden Diskussionsabschnitt, zum Beispiel [[Diskussion:Notarzt#Bild Notarztwagen im Einsatz]]. Die inhaltliche Diskussion findet nur dort statt, auch dritte Meinungen werden dort abgegeben.
+Eine sachliche und zusammenfassende Umschreibung des Konfliktes. Wenn eine konkrete Änderung umstritten ist, ist ein Diff-Link auf diese hilfreich. Bitte verwende keine Strohmann-Argumente und versuche, den Konflikt neutral wiederzugeben. Mit einem kurzen, prägnanten Text (zwei bis drei Sätze) lässt sich eher eine Dritte Meinung finden, längere Ausführungen gehören in die Diskussion und sind hier kontraproduktiv.
+Deine Signatur (--~~~~)
+Denke bitte möglichst daran, den Diskussionshinweis später der Archivierung (siehe unten) zuzuführen, wenn er sich erledigt hat.
+Nach weiteren Meinungen fragen
+Wenn du an einem Konflikt beteiligt bist
+Wenn du eine Konfliktbeschreibung siehst, die dir tendenziös erscheint, kannst du als Beteiligter eine einzige Gegendarstellung hinzufügen. Damit hast du die Chance, Vermittlern eine sachliche Zusammenfassung anzubieten.
+Wenn du eine dritte Meinung anbieten willst
+Lies die gesamte Diskussion zum Thema und die Argumente der Beteiligten, bevor du antwortest.
+Biete deine Meinung nicht leichtfertig an, sondern nur, wenn du etwas Konstruktives beitragen kannst. Unbegründete Stellungnahmen oder Wiederholungen der Argumente anderer sind nicht hilfreich.
+Deine Haltung sowohl zum Konfliktthema als auch zu den beteiligten Benutzern muss neutral sein. Du solltest vorher nicht in diesen Konflikt, in Konflikte verwandter Themengebiete oder in Konflikte mit den beteiligten Benutzern verwickelt gewesen sein.
+Geh von guten Absichten aus und formuliere deine Meinung sachlich, freundlich und ohne persönliche Angriffe. Deine Aufgabe ist neben dem inhaltlichen Lösen vor allem das Deeskalieren und Vermitteln.
+Um Missverständnisse zu vermeiden, empfiehlt es sich, auf der Diskussionsseite zu dem Eintrag auf dieser Seite zu verlinken, weil Wikipedia:Dritte Meinung nicht allen Beteiligten bekannt ist. Am besten eignet sich dafür ein Permanentlink, um auch nach der Archivierung auf dieser Seite dein Angebot und die ursprüngliche Anfrage für spätere Leser der Diskussion nachvollziehbar zu machen.
+Archivierung
+Diese Seite soll trotz einer Vielzahl von Diskussionshinweisen übersichtlich bleiben, deshalb werden Verweise auf gelöste oder eingeschlafene Diskussionen archiviert. Füge dazu ans Ende des betreffenden Abschnitts den Erledigt-Baustein ein:
+{{Erledigt|1=~~~~|2=gelöst}}
+Der Konflikt ist deiner Meinung nach gelöst (Konsens über die Streitfrage).
+{{Erledigt|1=~~~~|2=keinebeiträge}}
+Der Konflikt ist womöglich noch nicht gelöst, aber es wurden schon dritte Meinungen abgegeben und die Diskussion ist eingeschlafen (mehr als 10 Tage keine Beiträge).
+{{Erledigt|1=~~~~|2= }}
+Die Anfrage kann aus anderen Gründen als erledigt betrachtet werden, z. B. weil der Artikel gelöscht wurde oder weil sich dessen Inhalte so weit verändert haben, dass die Streitfrage ihren Bezug verloren hat (bitte jeweils den konkreten Grund eintragen).
+Ein Baustein kann problemlos wieder entfernt werden, wenn ein Beteiligter einen Konflikt als ungelöst ansieht, neue Beiträge die Diskussion wiederbelebt haben oder eine Erledigung aus einem anderen gutem Grund nicht für gültig erachtet wird.
+Markierte Abschnitte werden frühestens nach zwei Tagen ohne Widerspruch vom SpBot ins Archiv verschoben. Ein ungelöster Konflikt zum gleichen Thema kann auch erneut hier eingetragen werden (bitte mit Verweis auf die vorhergehende Anfrage).
+Wikipedia-LogoAutorenportal
+Konflikte
+Edit-War
+Dritte Meinung
+Vermittlung
+Probleme mit Admins
+Benutzersperrung
+Vandalismusmeldung
+Sperrprüfung
+globaler Ausschluss
+Checkuser
+Checkuser-Anfragen
+Ombudsleute
+Schiedsgericht
+Schiedsgerichts-Anfragen
+Archiv
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+2025
+2026
+Wie wird ein Archiv angelegt?
+Automatische Archivierung
+Auf dieser Seite werden Abschnitte ab Überschriftenebene 2 automatisch archiviert, die seit 2 Tagen mit dem Baustein {{Erledigt|1=--~~~~}} versehen sind.
+Vorlage:Autoarchiv-Erledigt/Wartung/Parameter Zeigen auf Nein gesetztVorlage:Autoarchiv-Erledigt/Wartung/Festes_Ziel
+Reinkarnation (2)
+Da die bisherige 3M zum Artikel Reinkarnation nur ein Thema erfasst und nachträglich nicht erweitert werden darf, hier eine neue 3M die die derzeitigen drei Hauptstreitpunkte im Artikel aufführt:
+Geht es weiterhin um die Frage, ob - und falls ja, wie - die Anthroposophie im Intro erwähnt werden soll. Meine Rücksetzung einer auch sprachlich fehlerhaften Einfügung der Anthroposophie ins Intro hat die Diskussion ausgelöst. Ein Benutzer besteht seitdem auf der Einfügung und zwar exakt, dass Reinkarnationsglaube(!) eine zentrale(!) Bedeutung in der Anthroposophie(!) hat. Alle neutraleren Kompromissvorschläge - auch durch 3M - wurden bisher durch den Benutzer blockiert oder ignoriert.
+In unmittelbarer Reaktion darauf hat der Benutzer den Abschnitt Christentum umgearbeitet. Strittig ist hier insb. die Frage, ob der Satz In der Bibel finden sich nicht einmal Anspielungen auf Reinkarnation, der wohl der herrschenden Meinung in der Theologie entspricht, aber trotzdem nicht unstrittig ist, wie auch die folgenden Passagen belegen, direkt als Urteil für das ganze Christentum übernommen werden soll oder dies gegen WP:NPOV verstößt. Dieser Satz war vor der Änderung des Benutzers gemäß WP:NPOV als Werturteil dem katholischen Theologen Helmut Zander zugeschrieben.
+Ebenfalls in unmittelbarer Reaktion auf 1. wurde vom selben Benutzer der Abschnitt Neuzeit ausgebaut. Hier wurden Aussagen eingebaut, die die Anthroposophie einseitig in Verbindung mit Rassismus bringen und m.M.n. an diese Stelle u.a. gemäß WP:NPOV so nicht hingehören. Auch über diese Frage ist ein nicht immer ganz sachlicher Disput ausgebrochen. Ein Vorschlag, sie andernorts in Wikipedia thematisch passender unterzubringen, wurde von ihm abgelehnt.
+Diskussion und 3M zu 1. hier, zu 2. hier und zu 3. hier
+--Kryb (Diskussion) 10:35, 19. Mai 2026 (CEST)[Beantworten]
+Hüseyin Doğru
+Diskussion:Hüseyin Doğru#„[…] der die FAZ die Verbreitung russischer Propaganda attestiert.“
+Es geht im Prinzip um diese Ergänzungen des Artikels.
+Umstritten ist, ob die Einordnung der Jungen Welt im Artikel genannt werden darf, oder nicht. Auch die BDS-Einordnung ist umstritten, wenn auch das in der verlinkten Diskussion derzeit nur einen Randaspekt darstellt.Ich finde insbesondere die Einordnung der Jungen Welt in diesem Kontext dringend geboten, da dem Journalisten ja vorgeworfen wird, Teil der russischen Propaganda-Maschinerie zu sein - dass sich dann ausgerechnet die Chefredakteur*innen einer als pro-russische Narrative verbreitenden Zeitung mit Doğru solidarisieren, muss im Artikel transparent sein.Bitte Dritte Meinungen in der verlinkten Diskussion im dafür vorgesehenen Abschnitt abgeben. -- Chaddy · D 17:16, 23. Jun. 2026 (CEST)[Beantworten]
+Gabriele Krone-Schmalz
+Diskussion:Gabriele Krone-Schmalz#Formulierung in der Einleitung
+Revertierte Änderung: [1]
+Es geht um eine Formulierung in der Einleitung zur Person. Strittig ist die Neutralität des folgenden Satzes: „wird […] in Verbindung mit ihrer offenen Verteidigung der aggressiven russischen Außen- und Innenpolitik rezipiert“. Es wird eingewendet, dass sich mit dieser Formulierung eine mediale Zuschreibung als objektive Tatsache zu eigen gemacht werde. Der Lösungsvorschlag, dies durch Standpunktzuweisung zu beheben, wird von der Gegenposition unter Verweis auf WP:KORR abgelehnt. ([2]) --Numerus (Diskussion) 00:13, 24. Jun. 2026 (CEST)[Beantworten]
+Veit Bach
+Diskussion:Veit Bach#Proportionalität_in_der_Einleitung_und_WP:NPOV
+Strittig ist, ob bereits im Einleitungssatz zwei deutlich voneinander abweichende Einschätzungen der Lebensdaten genannt werden sollen, die beide in fachwissenschaftlichen Darstellungen vorkommen, oder ob eine der beiden Datierungen nur im Haupttext behandelt werden sollte.--Kliojünger (Diskussion) 23:09, 24. Jun. 2026 (CEST)[Beantworten]
+Nach meiner Ansicht ist dieser Konflikt gelöst. Redrobsche (Diskussion) 10:57, 4. Jul. 2026 (CEST)
+Irfan Peci
+Es geht hier konkret um einen Abschnitt, der nach meinem Dafürhalten gelöscht gehört. Auf der Diskussionsseite habe ich bereits eine ausführliche Löschbegründung vorgenommen (Diskussion:Irfan_Peci#Abschnitt_zu_YouTube-Sperrung_2025). Der Ersteller des Abschnittes jedoch scheint mir nicht sehr einsichtig zu sein, und bevor es zu einem Edit-War kommt, möchte ich den Konflik regelkonform über eine Diskussion:Irfan_Peci#Dritte_Meinungen lösen.--KarlV 13:51, 30. Jun. 2026 (CEST)[Beantworten]
+Andreas Zeller (Informatiker)
+Diskussionsabschnitt: Diskussion:Andreas Zeller (Informatiker)#Überarbeitung
+Diff-Link: https://de.wikipedia.org/w/index.php?title=Andreas_Zeller_%28Informatiker%29&diff=268383696&oldid=255747008
+Fünf Jahre alter Hinweis, die Seite mal wieder aufzufrischen: Diskussion:Andreas_Zeller_(Informatiker)#Aktuelles
+Ich habe mit Interesse und dem Wunsch mal einen guten Beitrag zu leisten einen Artikel zu einem bekannten Forscher vollständig überarbeitet und auf den neusten Stand gebracht. Dabei habe ich wesentliche Zeit investiert und vor allem sicher gestellt, dass die Relevanzkriterien für Wissenschaftler klar erkennbar erfüllt sind. Ich habe Quellen hinzugefügt und Stichpunkte in fliessenden Text überführt. Dennoch wurden meine Änderungen alle immer vollständig rückgängig gemacht. --Marcel.boehme (Diskussion) 18:06, 2. Jul. 2026 (CEST)[Beantworten]
+Reichstagsbrand
+Diskussionsabschnitt: Diskussion:Reichstagsbrand#Film-Dokumentation_als_Beleg
+Diff-Link: https://de.wikipedia.org/w/index.php?title=Reichstagsbrand&diff=prev&oldid=268390221
+Ich habe die aus meiner Sicht interessanten und bis dato fehlenden Einblicke aus dem Reichstagsbrandprozess ergänzt und dafür die arte-Dokumentation als Beleg genutzt. Sicher, diese Medien sind nicht dauerhaft verfügbar, deshalb frage ich auch nach Alternativen bzw. stellte frei, sie durch andere Quellen zu ersetzen. Ich halte die Informationen daraus, basierend auf historischen Bild- und Tonmaterial, aber für wichtig und erwähnenswert. Diesbezüglich herrscht leider Dissenz insbesondere zu --Φ (Diskussion), der sie als nicht legitim/valide betrachtet, obwohl es sich um eine seriöse Redaktion einer öffentlich-rechtlichen Rundfunkanstalt handelt. Ich bin kompromissbereit, die Gegenseite wiederholt nur ihre Aussagen ohne konstruktiv zu sein und mischt meines Erachtens persönliche Wertungen hinein.
+--R eddiotos (Diskussion) 18:52, 3. Jul. 2026 (CEST)[Beantworten]
+Hilfswerk der Vereinten Nationen für Palästina-Flüchtlinge im Nahen Osten
+Diskussion:Hilfswerk_der_Vereinten_Nationen_für_Palästina-Flüchtlinge_im_Nahen_Osten#Literatur_Revert_2
+Diff-Link: [3]
+Es geht um die Einfügung dieses Fachaufsatzes in die Literaturliste des Artikels:
+Riccardo Bocco: UNRWA and the Palestinian Refugees: A History within History. In: Refugee Survey Quarterly. Band 28, Nr. 2-3, 1. Januar 2009, ISSN 1020-4067, S. 229–252, doi:10.1093/rsq/hdq001 (englisch, unrwa.org [PDF; abgerufen am 4. Juli 2026]).
+Zur Quelle:
+Der Fachaufsatz erschien [4] in einem von Oxford University Press veröffentlichten wissenschaftlichen Journal [5].
+Der Autor ist (inzwischen emeritierter) Professor am Hochschulinstitut für internationale Studien und Entwicklung in Genf [6].
+Der Fachaufsatz ist laut Google Scholar die am meisten zitierte wissenschaftliche Quelle zum Lemma, mit Zitationen im dreistelligen Bereich: [7]
+Eine Open-Access-Kopie ist auf der UN-Webseite verfügbar: [8]
+Uneinigkeit besteht darüber, ob das gemäß Wikipedia:Literatur#Abschnitt_„Literatur“ eine gute Quelle für die Literaturliste des Artikels ist und ggf. der Link zu der öffentlich zugänglichen Kopie auf der UN-Webseite angegeben werden sollte. Meinungen dazu auf der Diskussionsseite willkommen. --Andreas JN466 11:24, 5. Jul. 2026 (CEST)[Beantworten]
