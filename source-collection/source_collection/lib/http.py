@@ -29,6 +29,40 @@ MAX_RETRIES = 3
 MAX_RETRY_WAIT = 120  # never wait more than 2 minutes on a single Retry-After
 
 
+def _decompress(body: bytes, encoding: str) -> bytes:
+    """Inflate a response body per its Content-Encoding, BEFORE any text decode.
+
+    urllib (unlike requests) never auto-decompresses. Live sites are unaffected —
+    urllib sends no Accept-Encoding, so servers reply uncompressed. But the Wayback
+    Machine REPLAYS each capture's ORIGINAL Content-Encoding (commonly gzip) no matter
+    what we request, so archive fetches arrive compressed. Left compressed, the bytes
+    reach html_to_text() and get lossily decoded to U+FFFD garbage. Decompress here.
+    Falls back to the raw body on any failure (never worse than the old behavior).
+    """
+    enc = (encoding or "").strip().lower()
+    if not enc or enc == "identity":
+        return body
+    try:
+        if enc == "gzip":
+            import gzip
+            return gzip.decompress(body)
+        if enc in ("deflate", "zlib"):
+            import zlib
+            try:
+                return zlib.decompress(body)
+            except zlib.error:
+                return zlib.decompress(body, -zlib.MAX_WBITS)  # raw deflate stream
+        if enc == "br":
+            try:
+                import brotli  # optional dep; stdlib has no brotli
+                return brotli.decompress(body)
+            except ImportError:
+                return body
+    except Exception:
+        return body
+    return body
+
+
 def netloc(url: str) -> str:
     """Return scheme://host for use as a rate-limit domain key."""
     p = urllib.parse.urlparse(url)
@@ -69,6 +103,8 @@ def get(url: str, rl: RateLimitRegistry, accept: str = "text/html") -> tuple[byt
             with urllib.request.urlopen(req, timeout=20, context=_SSL_CTX) as resp:
                 body = resp.read()
                 ct = resp.headers.get("Content-Type", "").lower()
+                ce = resp.headers.get("Content-Encoding", "")
+            body = _decompress(body, ce)   # Wayback replays captured gzip; urllib won't auto-inflate
             return body, ct
         except urllib.error.HTTPError as exc:
             if exc.code in (429, 503) and attempt < MAX_RETRIES:
