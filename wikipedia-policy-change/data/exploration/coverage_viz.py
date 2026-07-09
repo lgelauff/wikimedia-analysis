@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# /// script
+# dependencies = ["matplotlib"]
+# ///
 """
 coverage_viz.py — visualize how well a set of atomic statements covers a page's text.
 
@@ -46,6 +49,7 @@ def main():
     ap.add_argument("--statements", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--title", default="statement coverage")
+    ap.add_argument("--out-png", default=None)
     ap.add_argument("--floor", type=float, default=0.34)   # overlap-coefficient threshold
     a = ap.parse_args()
 
@@ -98,6 +102,23 @@ def main():
                    f'<sup style="color:#666;font-size:9px">&nbsp;{c}</sup></span> ')
     out.append('</div>')
     Path(a.out).write_text("\n".join(out), encoding="utf-8")
+
+    if a.out_png:                                  # minimap: one bar per sentence, coloured by coverage count
+        import matplotlib; matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        from matplotlib.patches import Patch
+        seq = [counts[i] for i in sent_idx]
+        fig, ax = plt.subplots(figsize=(5.4, max(3.0, len(seq) * 0.05)))
+        for j, c in enumerate(seq):
+            ax.add_patch(plt.Rectangle((0, len(seq) - j - 1), 1, 1,
+                                       facecolor=COLORS[min(c, 3)], edgecolor="none"))
+        ax.set_xlim(0, 1); ax.set_ylim(0, len(seq)); ax.axis("off")
+        ax.set_title(f"{a.title}\n{pct}% covered · {n-covered} gaps · top→bottom = page order",
+                     fontsize=10, loc="left")
+        ax.legend(handles=[Patch(facecolor=COLORS[k], label=LABEL[k]) for k in (0, 1, 2, 3)],
+                  loc="lower center", bbox_to_anchor=(0.5, -0.03), ncol=4, fontsize=8, frameon=False)
+        fig.tight_layout(); fig.savefig(a.out_png, dpi=150, bbox_inches="tight"); plt.close(fig)
+
     print(f"wrote {a.out} | {n} sentences, {pct}% covered, {n-covered} gaps, "
           f"max coverage {max(counts.values()) if counts else 0}")
 
