@@ -1,0 +1,14 @@
+tgt_id,best_src_score,tgt_statement_en
+enwiki:npov:88,0.3559037148952484,POV forks are not permitted on Wikipedia.
+enwiki:npov:9,0.3563890755176544,"The NPOV policy is non-negotiable and cannot be superseded by other policies, guidelines, or editor consensus."
+enwiki:npov:23,0.3866713345050812,Editors should prefer nonjudgmental language.
+enwiki:npov:93,0.3881649076938629,"A single name should be chosen as the article title even when multiple terms are in common usage, in line with the article titling policy."
+enwiki:npov:14,0.41153377294540405,NPOV does not mean excluding points of view; it means including all verifiable points of view that have sufficient due weight.
+enwiki:npov:34,0.4127781093120575,"Bias problems should be fixed when possible through the normal editing process, balancing biased material with material from other sources."
+enwiki:npov:87,0.41706332564353943,A POV fork is an attempt to evade the neutrality policy by creating a new article about a subject already treated in an existing article.
+enwiki:npov:45,0.4313952922821045,"Undue weight can be given through depth of detail, quantity of text, prominence of placement, juxtaposition of statements, and use of imagery."
+enwiki:npov:83,0.4416568875312805,Coverage of beliefs and practices should encompass both what motivates their adherents and how those beliefs and practices developed.
+enwiki:npov:110,0.44200509786605835,"No words or expressions are forbidden on Wikipedia, but certain expressions should be used with care because they may introduce bias."
+enwiki:npov:38,0.44568195939064026,Segregating content into regions or subsections based solely on its apparent point of view may produce an unencyclopedic structure and should be avoided.
+enwiki:npov:60,0.44967982172966003,A little-believed theory may be appropriately included once it has been presented and discussed in reliable sources.
+enwiki:npov:25,0.4497314393520355,The preference for nonjudgmental language must sometimes be balanced against clarity.
