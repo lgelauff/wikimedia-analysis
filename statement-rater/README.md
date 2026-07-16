@@ -8,10 +8,38 @@ Built to replace hand-labelling the `align_de_en_npov` review CSV
 (`wikipedia-policy-change/data/exploration/runs/`), but the schema is generic — any batch of
 "one source + N candidates" items can be loaded.
 
-## Status
+## Status — PROVISIONAL, pending a go/no-go
 
-Local-dev complete and tested. **Not yet deployed**: deploying to Toolforge and registering
-the OAuth consumer are manual steps (see *Deployment*).
+Local-dev complete and tested. **Not yet deployed**, and **not yet decided that it will be.**
+Deploying to Toolforge and registering the OAuth consumer are manual steps (see *Deployment*).
+
+**Why it exists rather than reusing something.** Every existing Wikimedia microtask framework
+is bound to a *wiki-edit* action model, and this task's output is a research annotation, not an
+edit — there is no item/property/statement for a "these two policy sentences mean the same rule"
+judgment to land in:
+
+- **WikiLabels** — built around revisions/edits; new campaigns need a PR + maintainer review; docs
+  carry an "outdated" banner post-ORES→LiftWing.
+- **Distributed Game** (Magnus Manske) — genuinely generic tile providers and static-text tiles,
+  *but* decisions are recorded as Wikidata Recent Changes / user contributions, i.e. edits. Its
+  yes/no/skip model would also force our 3-candidate × full/partial UI into 195 binary tiles.
+  (Its tile spec could not be verified — the Bitbucket/GitHub sources are unreachable.)
+
+**The open risk.** The Distributed Game's real advantage was its existing player base; this tool
+has none. Recruiting raters is the unsolved part: K=3 over 65 items needs 195 judgments. Settle
+that *before* deploying.
+
+**If we don't use it, clean up.** The app is self-contained — nothing outside this folder
+references it — so removal is:
+
+```bash
+git rm -r statement-rater          # then commit
+rm -rf statement-rater             # drops the gitignored .venv/ and instance/dev.db too
+# also remove the statement-rater entry from .claude/launch.json (gitignored dev config)
+```
+
+Commit `368d0b8` stays in history; a revert commit is the record. Nothing in
+`wikipedia-policy-change/` depends on this app, so the alignment pipeline is unaffected.
 
 ## Run locally
 
