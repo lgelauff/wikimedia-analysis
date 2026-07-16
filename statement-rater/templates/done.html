@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card intro">
+  <h1>All done — thank you!</h1>
+  <p>There are no more statements left for you to rate right now.</p>
+  <p class="muted">You have submitted {{ done }} rating{{ '' if done == 1 else 's' }}. Check back later as new sets are added.</p>
+</section>
+{% endblock %}

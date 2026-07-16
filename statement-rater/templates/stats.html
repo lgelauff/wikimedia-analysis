@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>Progress</h1>
+  <table class="stats">
+    <thead>
+      <tr><th>Set</th><th>K</th><th>Items</th><th>Retired</th><th>%</th><th>Judgments</th><th>Raters</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.set.name }} <span class="muted">({{ r.set.id }})</span>{% if not r.set.is_active %} <span class="muted">— inactive</span>{% endif %}</td>
+        <td>{{ r.set.k_target }}</td>
+        <td>{{ r.n_items }}</td>
+        <td>{{ r.n_retired }}</td>
+        <td>{{ r.pct }}%</td>
+        <td>{{ r.n_judg }}</td>
+        <td>{{ r.n_raters }}</td>
+        <td><a href="{{ url_for('admin.export', set_id=r.set.id) }}">export CSV</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

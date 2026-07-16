@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+<form class="card rating" method="post" action="{{ url_for('rate.submit') }}" id="rating-form">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <input type="hidden" name="item_id" value="{{ item.id }}">
+  <input type="hidden" name="none_selected" id="none_selected" value="0">
+
+  <div class="source">
+    <div class="source-primary">{{ item.source_text }}</div>
+    {% if item.source_sub %}<div class="source-sub">{{ item.source_sub }}</div>{% endif %}
+  </div>
+
+  <p class="prompt">Does each candidate express the <strong>same rule</strong>?</p>
+
+  <ul class="candidates">
+    {% for c in candidates %}
+    <li class="candidate" data-cid="{{ c.id }}">
+      <div class="candidate-text">{{ c.text }}</div>
+      <div class="candidate-buttons">
+        <button type="button" class="choice full"    data-val="full">Full equivalent</button>
+        <button type="button" class="choice partial" data-val="partial">Partial match</button>
+      </div>
+      <input type="hidden" name="rating__{{ c.id }}" value="">
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="none-row">
+    <button type="button" id="none-btn" class="choice none">None of these match</button>
+  </div>
+
+  <div class="submit-row">
+    <button type="submit" id="submit-btn" class="btn primary" disabled>Submit &amp; next</button>
+  </div>
+</form>
+
+<script>
+(function () {
+  const form = document.getElementById('rating-form');
+  const noneField = document.getElementById('none_selected');
+  const noneBtn = document.getElementById('none-btn');
+  const submitBtn = document.getElementById('submit-btn');
+  const candidates = Array.from(document.querySelectorAll('.candidate'));
+
+  function anyCandidateChosen() {
+    return candidates.some(li => li.querySelector('input').value !== '');
+  }
+  function refresh() {
+    const noneOn = noneField.value === '1';
+    submitBtn.disabled = !(noneOn || anyCandidateChosen());
+  }
+  function clearNone() {
+    noneField.value = '0';
+    noneBtn.classList.remove('active');
+  }
+  function clearCandidates() {
+    candidates.forEach(li => {
+      li.querySelector('input').value = '';
+      li.querySelectorAll('.choice').forEach(b => b.classList.remove('active'));
+    });
+  }
+
+  candidates.forEach(li => {
+    const input = li.querySelector('input');
+    li.querySelectorAll('.choice').forEach(btn => {
+      btn.addEventListener('click', () => {
+        clearNone();
+        const val = btn.dataset.val;
+        if (input.value === val) {           // toggle off
+          input.value = '';
+          btn.classList.remove('active');
+        } else {                             // pick one (mutually exclusive in row)
+          input.value = val;
+          li.querySelectorAll('.choice').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+        refresh();
+      });
+    });
+  });
+
+  noneBtn.addEventListener('click', () => {
+    const turningOn = noneField.value !== '1';
+    clearCandidates();
+    noneField.value = turningOn ? '1' : '0';
+    noneBtn.classList.toggle('active', turningOn);
+    refresh();
+  });
+})();
+</script>
+{% endblock %}

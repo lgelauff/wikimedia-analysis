@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card intro">
+  <h1>Help align policy statements</h1>
+  <p>You'll see one statement and up to three candidate statements. For each candidate,
+     say whether it means the <strong>same rule</strong> as the first statement —
+     <em>fully</em>, <em>partly</em>, or not at all.</p>
+  {% if oauth_ready %}
+    <a class="btn primary" href="{{ url_for('login') }}">Log in with Wikimedia</a>
+  {% else %}
+    <p class="muted">OAuth is not configured on this instance. In local dev, visit
+       <code>/dev-login?username=YourName</code>.</p>
+  {% endif %}
+</section>
+{% endblock %}
