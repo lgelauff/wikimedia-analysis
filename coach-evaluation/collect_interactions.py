@@ -77,7 +77,8 @@ def talk_page_revisions_since(since: str) -> tuple[list[dict], dict]:
 def venue(title: str) -> str:
     if title == TALK_PAGE:
         return "eigen overlegpagina"
-    if any(title == f"Overleg gebruiker:{m}" for m in config.MENTOR_USERS):
+    base = title.split("/")[0]
+    if any(base == f"Overleg gebruiker:{m}" for m in config.MENTOR_USERS):
         return "overlegpagina mentor"
     if title.startswith("Overleg gebruiker:"):
         return "overlegpagina andere gebruiker"

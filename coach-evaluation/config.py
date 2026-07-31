@@ -6,10 +6,9 @@ API_URL = f"https://{WIKI}/w/api.php"
 # Subject of the evaluation (on-wiki username).
 SUBJECT_USER = "10Guillot"
 
-# Mentor / coach usernames, once confirmed. Interactions with these users are
-# split out from general community interaction in the report. Leave empty to
-# collect everything unsplit.
-MENTOR_USERS: list[str] = []
+# Mentor / coach usernames. Interactions with these users are split out from
+# general community interaction in the report.
+MENTOR_USERS: list[str] = ["Bob.v.R"]
 
 # Wikimedia's User-Agent policy requires a descriptive UA with contact + purpose.
 USER_AGENT = (
