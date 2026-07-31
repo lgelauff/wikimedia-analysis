@@ -39,8 +39,14 @@ All collection follows the repo's agreed fetching restrictions
 ```bash
 python3 collect_articles.py            # → data/articles_<date>.json + articles_under_review.md
 python3 collect_interactions.py        # → data/interactions_<date>.json + interactions_since_unblock.md
+python3 evaluate_articles.py           # → evaluation/<article>.md sheets + evaluation/INDEX.md
 python3 collect_interactions.py --since 2025-05-22T00:00:00Z   # override auto-detected unblock date
 ```
+
+The evaluation goal and method are written up in **`coach_prompt.md`**:
+one pass over all articles (what Gio added since the ruling, whether the
+improvements included proper sources, policy alignment, and what people
+complained about) plus a conduct pass over mentor/community interaction.
 
 `collect_interactions.py` auto-detects the most recent unblock from the public
 block log; pass `--since` to override. Set `MENTOR_USERS` in `config.py` once
