@@ -1,24 +1,24 @@
 {
-  "hooks": [
-    {
-      "event": "PreToolUse",
-      "matcher": "Edit",
-      "hooks": [
-        {
-          "type": "command",
-          "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/lint_sources.py\""
-        }
-      ]
-    },
-    {
-      "event": "PreToolUse",
-      "matcher": "Write",
-      "hooks": [
-        {
-          "type": "command",
-          "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/lint_sources.py\""
-        }
-      ]
-    }
-  ]
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/lint_sources.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/lint_sources.py\""
+          }
+        ]
+      }
+    ]
+  }
 }
