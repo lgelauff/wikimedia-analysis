@@ -57,6 +57,28 @@ def test_rel_attribute_and_context():
     assert links[0]["rel_or_context"] == "noopener direct"
 
 
+def test_data_prefixed_attributes_are_not_mistaken_for_the_real_ones():
+    """Regression: `\\bhref` also matched the tail of `data-href`.
+
+    Found in the wild on www.dnc.ac.jp, whose header link carries
+    data-href="url" — every page's first link came back as <base>/url and the
+    real href was lost.
+    """
+    links = extract_links(
+        '<a class="c" data-href="url" data-rel="x" data-type="y" '
+        'href="/real.pdf" rel="noopener">X</a>',
+        base_url="https://h.test/",
+    )
+    assert links[0]["url"] == "https://h.test/real.pdf"
+    assert links[0]["rel_or_context"] == "noopener"
+    # and the same boundary rule for <base>
+    assert extract_links(
+        '<head><base data-href="/wrong/" href="https://cdn.test/ok/"></head>'
+        '<body><a href="s.pdf">S</a>',
+        base_url="https://h.test/",
+    )[0]["url"] == "https://cdn.test/ok/s.pdf"
+
+
 def test_base_href_overrides_page_url():
     raw = '<html><head><base href="https://cdn.test/docs/"></head><body><a href="s.pdf">S</a>'
     links = extract_links(raw, base_url="https://x.test/page/")

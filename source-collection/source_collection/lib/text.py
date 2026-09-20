@@ -17,11 +17,16 @@ MAX_ANCHOR_CHARS = 200   # anchor text is a label, not content
 _SKIP_SCHEMES = ("javascript:", "mailto:", "tel:", "data:", "about:")
 
 _A_TAG_RE = re.compile(r"<a\b([^>]*)>(.*?)</a\s*>", re.IGNORECASE | re.DOTALL)
-_HREF_RE = re.compile(r"""\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s">]+))""", re.IGNORECASE)
-_REL_RE = re.compile(r"""\brel\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s">]+))""", re.IGNORECASE)
-_TYPE_RE = re.compile(r"""\btype\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s">]+))""", re.IGNORECASE)
+# `\b` is the wrong boundary for an attribute name: `-` is a non-word character,
+# so \bhref also matches the tail of `data-href`, silently returning the wrong
+# attribute AND losing the real href. Require a non-word, non-hyphen char before.
+_ATTR_START = r"(?<![\w-])"
+_ATTR_VALUE = r"""\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s">]+))"""
+_HREF_RE = re.compile(_ATTR_START + "href" + _ATTR_VALUE, re.IGNORECASE)
+_REL_RE = re.compile(_ATTR_START + "rel" + _ATTR_VALUE, re.IGNORECASE)
+_TYPE_RE = re.compile(_ATTR_START + "type" + _ATTR_VALUE, re.IGNORECASE)
 _BASE_RE = re.compile(
-    r"""<base\b[^>]*\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s">]+))""", re.IGNORECASE
+    r"<base\b[^>]*" + _ATTR_START + "href" + _ATTR_VALUE, re.IGNORECASE
 )
 
 
