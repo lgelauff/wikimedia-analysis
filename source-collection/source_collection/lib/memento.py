@@ -55,8 +55,18 @@ def _first_memento(link_header: str) -> str | None:
     return None
 
 
-def fetch_text(url: str, rl: RateLimitRegistry, session: requests.Session | None = None) -> tuple[str, str] | None:
-    """Find a memento and return (cleaned_text, memento_url). None on miss."""
+def fetch_text(
+    url: str,
+    rl: RateLimitRegistry,
+    session: requests.Session | None = None,
+    links_out: list | None = None,
+) -> tuple[str, str] | None:
+    """Find a memento and return (cleaned_text, memento_url). None on miss.
+
+    Optional `links_out` additionally collects the memento's outbound links;
+    the return value is unchanged. Archive replays rewrite hrefs onto the
+    archive host, so they are resolved against the memento URL.
+    """
     memento = find_memento(url, rl, session)
     if not memento:
         return None
@@ -66,7 +76,10 @@ def fetch_text(url: str, rl: RateLimitRegistry, session: requests.Session | None
         resp = getter(memento, headers={"User-Agent": _UA}, timeout=25)
         resp.raise_for_status()
         ct = resp.headers.get("Content-Type", "").lower()
-        text = html_to_text(resp.content, content_type=ct)
+        text = html_to_text(
+            resp.content, content_type=ct,
+            links_out=links_out, base_url=memento, link_context="memento",
+        )
     except Exception:
         return None
     return text, memento

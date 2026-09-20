@@ -4,6 +4,13 @@ fetch.py — director script for research source fetching.
 Reads sources.txt, fetches each entry through a configurable pipeline,
 and writes cleaned text to cache/<citekey>.md.
 
+Alongside each HTML-sourced page it also writes cache/<citekey>.links.tsv — the
+page's outbound <a href> links, absolute-resolved and deduplicated. Landing pages
+that exist only to point at a document (an exam syllabus PDF, a dataset release)
+otherwise collect as text that mentions the document without ever naming its URL.
+Sidecars are additive: the .md file and its format are unchanged, and no sidecar
+is written when a page has no links. Disable with --no-links.
+
 Default pipeline (tried in order until one succeeds):
   wikimedia → arxiv → wayback → spn2
 
@@ -22,6 +29,7 @@ Usage:
     python fetch.py [--dry-run] [--citekey KEY] [--force]
                    [--pipeline STAGE,...] [--no-spn2] [--ignore-robots]
                    [--no-enrich] [--rate-override DOMAIN=SECS ...]
+                   [--links-dir DIR] [--no-links]
 
 sources.txt format (--- separated blocks):
     ---
@@ -49,7 +57,7 @@ import requests
 
 from .lib.ratelimits import RateLimitRegistry
 from .lib.http import get as http_get, _UA
-from .lib.text import html_to_text, pdf_to_text
+from .lib.text import html_to_text, pdf_to_text, links_to_tsv, MAX_LINKS
 from .lib.sources import parse as parse_sources, max_age_days
 from .lib import (
     wikimedia, wayback as wb, spn2 as spn2_mod, citoid, openalex,
@@ -112,14 +120,14 @@ _ARXIV_RE = re.compile(r"arxiv\.org/(?:abs|pdf|html)/([0-9]+\.[0-9v]+)")
 # Each returns (text, snapshot_date, method) or None to try the next stage.
 # ---------------------------------------------------------------------------
 
-def _stage_wikimedia(entry, url, rl, spn2, raw_dir):
+def _stage_wikimedia(entry, url, rl, spn2, raw_dir, *, links=None):
     if not wikimedia.is_wikimedia(url):
         return None
     text = wikimedia.fetch(url, rl)
     return text, "live", "wikimedia-api"
 
 
-def _stage_arxiv(entry, url, rl, spn2, raw_dir):
+def _stage_arxiv(entry, url, rl, spn2, raw_dir, *, links=None):
     arxiv_id = entry.get("arxiv", "").strip()
     if not arxiv_id or arxiv_id == "—":
         m = _ARXIV_RE.search(url)
@@ -130,7 +138,7 @@ def _stage_arxiv(entry, url, rl, spn2, raw_dir):
     return text, "live", "arxiv"
 
 
-def _stage_wayback(entry, url, rl, spn2, raw_dir):
+def _stage_wayback(entry, url, rl, spn2, raw_dir, *, links=None):
     # Pull several recent clean snapshots so we can skip a soft-404/empty capture.
     snaps = wb.recent_snapshots(url, rl, _session(), n=5)
     if not snaps:
@@ -143,14 +151,14 @@ def _stage_wayback(entry, url, rl, spn2, raw_dir):
         # stale capture than no collection at all.
         if age > max_age and spn2 is not None:
             continue
-        text = wb.fetch_snapshot(snap["url"], rl)  # raw (id_) by default
+        text = wb.fetch_snapshot(snap["url"], rl, links_out=links, base_url=url)  # raw (id_) by default
         if text and text.strip():
             date = datetime.strptime(snap["timestamp"][:8], "%Y%m%d").strftime("%Y-%m-%d")
             return text, date, "wayback"
     return None
 
 
-def _stage_unpaywall(entry, url, rl, spn2, raw_dir):
+def _stage_unpaywall(entry, url, rl, spn2, raw_dir, *, links=None):
     """OA-PDF resolution for scholarly DOIs — preferred over archive HTML."""
     doi = (entry.get("doi") or "").strip()
     if not doi:
@@ -162,29 +170,29 @@ def _stage_unpaywall(entry, url, rl, spn2, raw_dir):
     return text, "live", "unpaywall"
 
 
-def _stage_memento(entry, url, rl, spn2, raw_dir):
+def _stage_memento(entry, url, rl, spn2, raw_dir, *, links=None):
     """Memento aggregator — best archived copy across many web archives."""
     if not url:
         return None
-    res = memento.fetch_text(url, rl, _session())
+    res = memento.fetch_text(url, rl, _session(), links_out=links)
     if res is None:
         return None
     text, memento_url = res
     return text, "archived", "memento"
 
 
-def _stage_archivetoday(entry, url, rl, spn2, raw_dir):
+def _stage_archivetoday(entry, url, rl, spn2, raw_dir, *, links=None):
     """archive.today — captures many pages the Internet Archive misses."""
     if not url:
         return None
-    res = archivetoday.fetch_text(url, rl, _session())
+    res = archivetoday.fetch_text(url, rl, _session(), links_out=links)
     if res is None:
         return None
     text, snap_url = res
     return text, "archived", "archive.today"
 
 
-def _stage_spn2(entry, url, rl, spn2, raw_dir):
+def _stage_spn2(entry, url, rl, spn2, raw_dir, *, links=None):
     if spn2 is None:
         return None
     age_str = f"{max_age_days(url)}d"
@@ -200,12 +208,12 @@ def _stage_spn2(entry, url, rl, spn2, raw_dir):
     snap = wb.availability(url, rl)
     if snap is None:
         return None
-    text = wb.fetch_snapshot(snap["url"], rl)
+    text = wb.fetch_snapshot(snap["url"], rl, links_out=links, base_url=url)
     date = datetime.strptime(snap["timestamp"][:8], "%Y%m%d").strftime("%Y-%m-%d")
     return text, date, "spn2+wayback"
 
 
-def _stage_pdf(entry, url, rl, spn2, raw_dir):
+def _stage_pdf(entry, url, rl, spn2, raw_dir, *, links=None):
     """Explicit opt-in stage — not in DEFAULT_PIPELINE.
     Detects PDF via Content-Type, not URL extension (avoids landing-page traps).
     """
@@ -219,7 +227,7 @@ def _stage_pdf(entry, url, rl, spn2, raw_dir):
     return text, "live", "direct-pdf"
 
 
-def _stage_direct(entry, url, rl, spn2, raw_dir):
+def _stage_direct(entry, url, rl, spn2, raw_dir, *, links=None):
     """Explicit opt-in stage — not in DEFAULT_PIPELINE.
     Respects robots.txt unless ignore_robots: true is set on the entry.
     Handles both HTML and PDF responses.
@@ -232,7 +240,12 @@ def _stage_direct(entry, url, rl, spn2, raw_dir):
         dest = raw_dir / f"{entry['citekey']}.pdf"
         dest.write_bytes(body)
         return pdf_to_text(body), "live", "direct-pdf"
-    return html_to_text(body, content_type=ct), "live", "direct"
+    return (
+        html_to_text(body, content_type=ct, links_out=links,
+                     base_url=url, link_context="direct"),
+        "live",
+        "direct",
+    )
 
 
 _STAGES = {
@@ -258,11 +271,16 @@ def fetch_entry(
     spn2,
     pipeline: list[str],
     raw_dir: Path,
+    links_out: list | None = None,
 ) -> tuple[str, str, str]:
     """
     Try each stage in pipeline until one returns content.
     Returns (text, snapshot_date, method).
     Raises RuntimeError if all stages fail.
+
+    Optional `links_out`: a list into which the winning stage's outbound links
+    are collected (HTML stages only). The return value is unchanged; callers
+    that pass nothing behave exactly as before.
     """
     url = entry.get("url", "").strip()
 
@@ -279,8 +297,13 @@ def fetch_entry(
         if handler is None:
             print(f"    unknown pipeline stage '{stage_name}' — skipping", end=" ")
             continue
-        result = handler(entry, url, rl, spn2, raw_dir)
+        # Each stage gets its own bucket, so links harvested by a stage that
+        # then fails (empty text → next stage) never leak into the winner's.
+        stage_links: list = []
+        result = handler(entry, url, rl, spn2, raw_dir, links=stage_links)
         if result is not None:
+            if links_out is not None:
+                links_out.extend(stage_links[:MAX_LINKS])
             return result
 
     raise RuntimeError(f"all pipeline stages failed for {url}")
@@ -342,8 +365,12 @@ def run(
     enrich: bool = True,
     project: str = "",
     pending_file: Path | None = None,
+    links_dir: Path | None = None,
+    save_links: bool = True,
 ):
     pending_path = pending_file or _PENDING_DEFAULT
+    # Outbound-link sidecars live beside the cleaned text unless redirected.
+    links_path_dir = links_dir or cache_dir
     entries = parse_sources(sources_path)
     if only_citekey:
         entries = [e for e in entries if e.get("citekey") == only_citekey]
@@ -378,6 +405,8 @@ def run(
     )
     cache_dir.mkdir(parents=True, exist_ok=True)
     raw_dir.mkdir(parents=True, exist_ok=True)
+    if save_links:
+        links_path_dir.mkdir(parents=True, exist_ok=True)
 
     ok = skip = err = 0
     for i, e in enumerate(to_fetch, 1):
@@ -400,7 +429,11 @@ def run(
             continue
 
         try:
-            text, snapshot_date, method = fetch_entry(e, rl, spn2, pipeline, raw_dir)
+            links: list = []
+            text, snapshot_date, method = fetch_entry(
+                e, rl, spn2, pipeline, raw_dir,
+                links_out=links if save_links else None,
+            )
             if not text.strip():
                 print("EMPTY — logged as failed")
                 _log_failed(e, "empty extraction (all stages returned no text)",
@@ -417,7 +450,16 @@ def run(
                 + "\n\n"
             )
             (cache_dir / f"{citekey}.md").write_text(header + text, encoding="utf-8")
-            print(f"ok ({len(text):,} chars, snapshot={snapshot_date}, method={method})")
+            # Additive sidecar: the page's outbound links, which tag-stripping
+            # would otherwise discard. Never written when there are none, so no
+            # empty files appear for PDFs or API-sourced text.
+            links_note = ""
+            if save_links and links:
+                (links_path_dir / f"{citekey}.links.tsv").write_text(
+                    links_to_tsv(links), encoding="utf-8"
+                )
+                links_note = f", {len(links)} links"
+            print(f"ok ({len(text):,} chars, snapshot={snapshot_date}, method={method}{links_note})")
             ok += 1
         except Exception as exc:
             print(f"ERROR: {exc}")
@@ -458,6 +500,17 @@ def main():
         default="",
         help="Where to log failed fetches (default: ./fetch_errors.txt). "
              "Point at a shared inbox, e.g. ../../research-vault/inbox/pending.txt",
+    )
+    p.add_argument(
+        "--links-dir",
+        default="",
+        help="Directory for the <citekey>.links.tsv outbound-link sidecars "
+             "(default: the same directory as --out)",
+    )
+    p.add_argument(
+        "--no-links",
+        action="store_true",
+        help="Do not write the outbound-link sidecars",
     )
     p.add_argument(
         "--ignore-robots",
@@ -501,6 +554,8 @@ def main():
         enrich=not a.no_enrich,
         project=a.project,
         pending_file=Path(a.pending_file) if a.pending_file else None,
+        links_dir=Path(a.links_dir) if a.links_dir else None,
+        save_links=not a.no_links,
     )
 
 

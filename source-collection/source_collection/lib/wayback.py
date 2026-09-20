@@ -154,13 +154,30 @@ def _raw_snapshot_url(snapshot_url: str) -> str:
     return re.sub(r"(/web/\d{14})/", r"\1id_/", snapshot_url, count=1)
 
 
-def fetch_snapshot(snapshot_url: str, rl: RateLimitRegistry, raw: bool = True) -> str:
+def fetch_snapshot(
+    snapshot_url: str,
+    rl: RateLimitRegistry,
+    raw: bool = True,
+    links_out: list | None = None,
+    base_url: str = "",
+) -> str:
     """
     Fetch a Wayback snapshot and return cleaned plain text.
 
     Uses http_get() so rl.wait() and Retry-After handling are applied.
     With raw=True, requests the un-rewritten capture via the `id_` modifier.
+
+    Optional `links_out` collects the capture's outbound links; the return value
+    is unchanged. With raw=True the capture's hrefs are the ORIGINAL page's, so
+    pass `base_url` = the original URL to resolve them. With raw=False Wayback has
+    rewritten them onto its own host and they resolve against the snapshot URL.
     """
     target = _raw_snapshot_url(snapshot_url) if raw else snapshot_url
     body, ct = http_get(target, rl, accept="text/html")
-    return html_to_text(body, content_type=ct)
+    return html_to_text(
+        body,
+        content_type=ct,
+        links_out=links_out,
+        base_url=base_url or target,
+        link_context="wayback",
+    )

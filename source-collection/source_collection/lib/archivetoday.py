@@ -35,8 +35,18 @@ def newest(url: str, rl: RateLimitRegistry, session: requests.Session | None = N
     return final
 
 
-def fetch_text(url: str, rl: RateLimitRegistry, session: requests.Session | None = None) -> tuple[str, str] | None:
-    """Find newest archive.today snapshot and return (text, snapshot_url). None on miss."""
+def fetch_text(
+    url: str,
+    rl: RateLimitRegistry,
+    session: requests.Session | None = None,
+    links_out: list | None = None,
+) -> tuple[str, str] | None:
+    """Find newest archive.today snapshot and return (text, snapshot_url). None on miss.
+
+    Optional `links_out` additionally collects the snapshot's outbound links;
+    the return value is unchanged. archive.today rewrites hrefs onto its own
+    host, so they are resolved against the snapshot URL.
+    """
     snap = newest(url, rl, session)
     if not snap:
         return None
@@ -46,7 +56,10 @@ def fetch_text(url: str, rl: RateLimitRegistry, session: requests.Session | None
         resp = getter(snap, headers={"User-Agent": _UA}, timeout=25)
         resp.raise_for_status()
         ct = resp.headers.get("Content-Type", "").lower()
-        text = html_to_text(resp.content, content_type=ct)
+        text = html_to_text(
+            resp.content, content_type=ct,
+            links_out=links_out, base_url=snap, link_context="archive.today",
+        )
     except Exception:
         return None
     return text, snap
