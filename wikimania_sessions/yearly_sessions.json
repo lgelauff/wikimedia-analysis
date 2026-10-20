@@ -1,0 +1,241 @@
+{
+ "meta": {
+  "generated": "2026-10-20",
+  "unit": "sessions",
+  "note": "identified = with_recording + with_slide - with_both + unrecorded_nonposter + poster_no_media; `posters` is an overlapping flag, not part of that sum.",
+  "source_repo": "lgelauff/schroedinger1000 \u2192 wikimania-recordings/"
+ },
+ "years": [
+  {
+   "year": 2005,
+   "identified_sessions": 15,
+   "with_recording": 3,
+   "with_slide": 12,
+   "with_both": 0,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2006,
+   "identified_sessions": 60,
+   "with_recording": 56,
+   "with_slide": 4,
+   "with_both": 0,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2007,
+   "identified_sessions": 20,
+   "with_recording": 0,
+   "with_slide": 5,
+   "with_both": 0,
+   "posters": 1,
+   "unrecorded_nonposter": 14,
+   "poster_no_media": 1
+  },
+  {
+   "year": 2008,
+   "identified_sessions": 89,
+   "with_recording": 82,
+   "with_slide": 6,
+   "with_both": 2,
+   "posters": 0,
+   "unrecorded_nonposter": 3,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2009,
+   "identified_sessions": 129,
+   "with_recording": 85,
+   "with_slide": 23,
+   "with_both": 6,
+   "posters": 0,
+   "unrecorded_nonposter": 27,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2010,
+   "identified_sessions": 61,
+   "with_recording": 3,
+   "with_slide": 38,
+   "with_both": 0,
+   "posters": 0,
+   "unrecorded_nonposter": 20,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2011,
+   "identified_sessions": 232,
+   "with_recording": 201,
+   "with_slide": 39,
+   "with_both": 8,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2012,
+   "identified_sessions": 283,
+   "with_recording": 229,
+   "with_slide": 65,
+   "with_both": 19,
+   "posters": 0,
+   "unrecorded_nonposter": 8,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2013,
+   "identified_sessions": 439,
+   "with_recording": 390,
+   "with_slide": 68,
+   "with_both": 20,
+   "posters": 0,
+   "unrecorded_nonposter": 1,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2014,
+   "identified_sessions": 333,
+   "with_recording": 261,
+   "with_slide": 89,
+   "with_both": 21,
+   "posters": 1,
+   "unrecorded_nonposter": 4,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2015,
+   "identified_sessions": 176,
+   "with_recording": 84,
+   "with_slide": 95,
+   "with_both": 3,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2016,
+   "identified_sessions": 159,
+   "with_recording": 98,
+   "with_slide": 53,
+   "with_both": 10,
+   "posters": 0,
+   "unrecorded_nonposter": 18,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2017,
+   "identified_sessions": 229,
+   "with_recording": 102,
+   "with_slide": 134,
+   "with_both": 12,
+   "posters": 2,
+   "unrecorded_nonposter": 5,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2018,
+   "identified_sessions": 202,
+   "with_recording": 98,
+   "with_slide": 96,
+   "with_both": 10,
+   "posters": 1,
+   "unrecorded_nonposter": 17,
+   "poster_no_media": 1
+  },
+  {
+   "year": 2019,
+   "identified_sessions": 356,
+   "with_recording": 177,
+   "with_slide": 180,
+   "with_both": 25,
+   "posters": 1,
+   "unrecorded_nonposter": 23,
+   "poster_no_media": 1
+  },
+  {
+   "year": 2021,
+   "identified_sessions": 240,
+   "with_recording": 208,
+   "with_slide": 58,
+   "with_both": 26,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2022,
+   "identified_sessions": 178,
+   "with_recording": 157,
+   "with_slide": 36,
+   "with_both": 15,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  },
+  {
+   "year": 2023,
+   "identified_sessions": 731,
+   "with_recording": 584,
+   "with_slide": 225,
+   "with_both": 127,
+   "posters": 4,
+   "unrecorded_nonposter": 48,
+   "poster_no_media": 1
+  },
+  {
+   "year": 2024,
+   "identified_sessions": 397,
+   "with_recording": 253,
+   "with_slide": 89,
+   "with_both": 22,
+   "posters": 1,
+   "unrecorded_nonposter": 76,
+   "poster_no_media": 1
+  },
+  {
+   "year": 2025,
+   "identified_sessions": 449,
+   "with_recording": 305,
+   "with_slide": 109,
+   "with_both": 21,
+   "posters": 1,
+   "unrecorded_nonposter": 55,
+   "poster_no_media": 1
+  },
+  {
+   "year": 2026,
+   "identified_sessions": 492,
+   "with_recording": 252,
+   "with_slide": 139,
+   "with_both": 12,
+   "posters": 3,
+   "unrecorded_nonposter": 111,
+   "poster_no_media": 2
+  },
+  {
+   "year": 2027,
+   "identified_sessions": 5,
+   "with_recording": 3,
+   "with_slide": 2,
+   "with_both": 0,
+   "posters": 0,
+   "unrecorded_nonposter": 0,
+   "poster_no_media": 0
+  }
+ ],
+ "totals": {
+  "records": 3910,
+  "recorded_sessions": 3631,
+  "identified_sessions": 5275,
+  "slides": 1844,
+  "rec_hours": 2622,
+  "session_hours": 1890,
+  "poster_files": 1327,
+  "delivered": 999,
+  "note": "known-year only; see reconciliation in README"
+ }
+}

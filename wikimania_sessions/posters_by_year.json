@@ -1,0 +1,91 @@
+{
+ "meta": {
+  "generated": "2026-10-20",
+  "unit": "poster files (PDF + photos)",
+  "note": "images may be photos of the poster hall; PDFs are the poster files; some rows un-year'd"
+ },
+ "years": [
+  {
+   "year": 2010,
+   "files": 1,
+   "pdf": 1,
+   "image": 0,
+   "other": 0
+  },
+  {
+   "year": 2014,
+   "files": 11,
+   "pdf": 8,
+   "image": 3,
+   "other": 0
+  },
+  {
+   "year": 2016,
+   "files": 65,
+   "pdf": 7,
+   "image": 58,
+   "other": 0
+  },
+  {
+   "year": 2017,
+   "files": 48,
+   "pdf": 21,
+   "image": 27,
+   "other": 0
+  },
+  {
+   "year": 2018,
+   "files": 93,
+   "pdf": 34,
+   "image": 58,
+   "other": 1
+  },
+  {
+   "year": 2019,
+   "files": 116,
+   "pdf": 42,
+   "image": 74,
+   "other": 0
+  },
+  {
+   "year": 2023,
+   "files": 209,
+   "pdf": 33,
+   "image": 176,
+   "other": 0
+  },
+  {
+   "year": 2024,
+   "files": 83,
+   "pdf": 35,
+   "image": 48,
+   "other": 0
+  },
+  {
+   "year": 2025,
+   "files": 367,
+   "pdf": 78,
+   "image": 288,
+   "other": 1
+  },
+  {
+   "year": 2026,
+   "files": 334,
+   "pdf": 98,
+   "image": 236,
+   "other": 0
+  },
+  {
+   "year": "unknown",
+   "files": 620,
+   "pdf": 1,
+   "image": 618,
+   "other": 1
+  }
+ ],
+ "totals": {
+  "files": 1947,
+  "known_year_files": 1327,
+  "unknown_year_files": 620
+ }
+}
