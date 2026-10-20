@@ -1,4 +1,4 @@
-year,records,identified_sessions,rec_hours,session_hours,full_day_h,delivered,speakers,slides,missing_duration
+year,records,recorded_sessions,rec_hours,session_hours,full_day_h,delivered,speakers,slides,missing_duration
 2005,3,3,2,2,0,,,13,1
 2006,56,56,2,2,0,,,5,54
 2008,83,82,1,1,0,,,6,76
