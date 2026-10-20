@@ -28,7 +28,7 @@ _Generated 2026-10-20. **JSON is canonical** (house convention); no CSVs in this
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 2005 | 3 | 3 | 15 | 3 | 12 | — | 13 | — | 2/2 |
 | 2006 | 56 | 56 | 60 | 56 | 4 | — | 5 | — | 2/2 |
-| 2007 | — | — | 20 | 0 | 5 | — | — | — | —/— |
+| 2007 | — | — | 20 | 0 | 5 | — | 6 | — | —/— |
 | 2008 | 83 | 82 | 89 | 82 | 6 | — | 6 | — | 1/1 |
 | 2009 | 85 | 85 | 129 | 85 | 23 | — | 25 | — | 61/61 |
 | 2010 | 3 | 3 | 61 | 3 | 38 | — | 41 | 1/1 | 0/0 |
@@ -51,6 +51,8 @@ _Generated 2026-10-20. **JSON is canonical** (house convention); no CSVs in this
 | **Σ table** | **3910** | **3631** | **5275** | — | — | **999** | **1844** | **1327** | **2622/1890** |
 
 **Totals reconciliation.** Per-year rows cover known conference year only. Dataset-wide totals add what rows cannot: 4015 records (+105 no-year), 1872 Wikimania-related slide PDFs (+28 un-year'd), ≈2,642 recording-hours (+≈20 un-year'd), 1947 poster files (+620 un-year'd).
+
+- **Verbatim typo, kept on purpose:** two 2019 rows read `Libraties Ideation sessions` — the source page's own typo (its link target is `2019:Libraries`). Do not "fix" it silently.
 
 ## Caveats
 
