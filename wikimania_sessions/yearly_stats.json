@@ -38,7 +38,7 @@
    "full_day_h": 0,
    "delivered": null,
    "speakers": null,
-   "slides": 0,
+   "slides": 6,
    "missing_duration": 0
   },
   {
@@ -274,7 +274,7 @@
   "records": 3910,
   "recorded_sessions": 3631,
   "identified_sessions": 5275,
-  "slides": 1838,
+  "slides": 1844,
   "rec_hours": 2622,
   "session_hours": 1890,
   "poster_files": 1327,

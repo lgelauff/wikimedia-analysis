@@ -74,6 +74,18 @@
    "pdf": 98,
    "image": 236,
    "other": 0
+  },
+  {
+   "year": "unknown",
+   "files": 620,
+   "pdf": 1,
+   "image": 618,
+   "other": 1
   }
- ]
+ ],
+ "totals": {
+  "files": 1947,
+  "known_year_files": 1327,
+  "unknown_year_files": 620
+ }
 }

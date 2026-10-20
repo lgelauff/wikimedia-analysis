@@ -48,9 +48,9 @@ _Generated 2026-10-20. **JSON is canonical** (house convention); no CSVs in this
 | 2025 | 335 | 305 | 449 | 305 | 109 | 195 | 146 | 78/367 | 313/309 |
 | 2026 | 256 | 252 | 492 | 252 | 139 | 291 | 176 | 98/334 | 451/242 |
 | 2027 | 3 | 3 | 5 | 3 | 2 | — | 5 | — | 2/0 |
-| **Σ table** | **3910** | **3631** | **5275** | — | — | **999** | **1838** | **1327** | **2622/1890** |
+| **Σ table** | **3910** | **3631** | **5275** | — | — | **999** | **1844** | **1327** | **2622/1890** |
 
-**Totals reconciliation.** Per-year rows cover known conference year only. Dataset-wide totals add what rows cannot: 4015 records (+105 no-year), 1872 Wikimania-related slide PDFs (+34 un-year'd), ≈2,642 recording-hours (+≈20 un-year'd), 1947 poster files (+620 un-year'd).
+**Totals reconciliation.** Per-year rows cover known conference year only. Dataset-wide totals add what rows cannot: 4015 records (+105 no-year), 1872 Wikimania-related slide PDFs (+28 un-year'd), ≈2,642 recording-hours (+≈20 un-year'd), 1947 poster files (+620 un-year'd).
 
 ## Caveats
 
