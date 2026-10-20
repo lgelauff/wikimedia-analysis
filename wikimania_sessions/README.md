@@ -2,40 +2,25 @@
 
 Session-level companion to `wikimania_deadlines/` (when) and `wikimania_attendees/` (who): **what ran, and what media exists for it** — recordings, delivered programme, slide decks, posters.
 
-_Generated 2026-10-20._
+_Generated 2026-10-20. **JSON is canonical** (house convention); no CSVs in this folder._
 
 ## How these files were produced (provenance)
 
 - **Sources** (all public):
-  - **Wikimedia Commons** – `action=query` category members + `prop=imageinfo` (durations via `videoinfo`); slide decks via `list=search` `wikimania filetype:pdf`; posters via the per-edition poster categories.
+  - **Wikimedia Commons** – `action=query` category members + `prop=imageinfo` (`videoinfo` durations); slide decks via `list=search` `wikimania filetype:pdf`; posters via the per-edition poster categories.
   - **eventyay / pretalx public schedule JSON** – `wikimedia.eventyay.com/wm/wikimaniaYYYY/schedule/export/schedule.json` for the **delivered programme, 2023–2026** (talks, speakers, room, track).
-  - **`wikimania.wikimedia.org` `YYYY:Videos`** curated playlist pages (2011–2022 subset) — the recorded-session index.
-  - **Per-edition wikis** (`wikimaniaYYYY.wikimedia.org`) `File:` namespaces — for locally hosted decks.
-- **Method:** harvest → normalise titles → deduplicate within/across platforms (title + near-identical duration) → classify recording type → match slide decks by title stem → join the delivered programme → count. Deterministic and snapshot-cached, so re-runs are byte-identical.
-- **Scripts** (pipeline names): `stage_commons.py`, `stage_youtube.py`, `stage_archive.py`, `stage_usage.py`, `stage_compile.py`, `stage_dedupe.py`, `parse_videos_pages.py`, `parse_eventyay.py`, `parse_eventyay_full.py`, `stage_slides.py`, `match_slides.py`, `poster_inventory.py`, `make_session_set.py`, `yearly_stats.py`, `identified_sessions.py`, `make_session_overview.py`.
-- The full pipeline **with evidence and a decision log** lives in a companion repository (`lgelauff/schroedinger1000 → wikimania-recordings/`), private at time of writing; the four CSVs here are a direct projection of it. Ask @lgelauff for access, or re-derive from the public sources above.
+  - **`wikimania.wikimedia.org` `YYYY:Videos`** curated playlist pages (2011–2022) — the recorded-session index.
+  - **Per-edition wikis** (`wikimaniaYYYY.wikimedia.org`) `File:` namespaces — locally hosted decks.
+- **Method:** harvest → normalise titles → deduplicate within/across platforms (title + near-identical duration) → classify recording type → match slide decks by title stem → join the delivered programme → count. Deterministic and snapshot-cached (byte-identical re-runs).
+- **Pipeline scripts** (private repo): `stage_commons.py`, `stage_youtube.py`, `stage_archive.py`, `stage_usage.py`, `stage_compile.py`, `stage_dedup.py`, `parse_videos_pages.py`, `parse_eventyay.py`, `parse_eventyay_full.py`, `stage_slides.py`, `match_slides.py`, `poster_inventory.py`, `make_session_set.py`, `yearly_stats.py`, `identified_sessions.py`.
+- These JSON files are a **direct projection** of the companion repository (`lgelauff/schroedinger1000 → wikimania-recordings/`), kept in sync; the small table builder that emits them is not part of the numbered pipeline.
 
-## Column definitions
+## Files & schema (JSON)
 
-**`yearly_stats.csv`**
-- `records` — platform records (one per media file/page; a session can have several).
-- `recorded_sessions` — distinct **recorded** sessions (deduped by `session_key`). This is *not* the cross-source union (that is `yearly_sessions.identified_sessions`).
-- `rec_hours` — runtime of all media with a known duration; `session_hours` — single-session recordings only; `full_day_h` — full-day room streams.
-- `delivered` — sessions on the official programme (eventyay, **2023–2026 only**).
-- `speakers` — speaker-edition records from eventyay (same years).
-- `slides` — Commons slide PDFs dated to that year.
-- `missing_duration` — records with no known duration (mostly Internet Archive items).
-
-**`yearly_sessions.csv`**
-- `identified_sessions` — distinct sessions nameable from *any* source (recording, delivered programme, or slide deck), union-merged by title.
-- `with_recording` / `with_slide` / `with_both` — has a recording / a slide deck / both.
-- `posters` — poster sessions (**flag that overlaps** the columns above: a poster with a deck counts in both).
-- `unrecorded_nonposter` — real talks with no recording and no slide.
-- `poster_no_media` — poster sessions with no recording or slide (expected — posters are rarely recorded).
-- **These partition the total:** `identified_sessions = with_recording + with_slide − with_both + unrecorded_nonposter + poster_no_media`. (`posters` is a cross-cutting flag, not part of the sum.)
-
-**`posters_by_year.csv`** — `files` = poster files (PDFs + photos), split into `pdf` / `image` / `other`.
-**`wikimania_org_sessions.csv`** — the curated index: `year`, `commons_file`, `session_title`, `program_page`, `speakers` (names only), `track` (session track/label), `in_dataset`.
+- **`yearly_sessions.json`** — `{meta, years:[{year, identified_sessions, with_recording, with_slide, with_both, posters, unrecorded_nonposter, poster_no_media}], totals}`. Partition identity: `identified_sessions = with_recording + with_slide − with_both + unrecorded_nonposter + poster_no_media`; `posters` is an **overlapping flag**, not part of the sum.
+- **`yearly_stats.json`** — `{meta, years:[{year, records, recorded_sessions, rec_hours, session_hours, full_day_h, delivered, speakers, slides, missing_duration}], totals}`. `recorded_sessions` = distinct *recorded* sessions (by `session_key`), **not** the cross-source union (that is `yearly_sessions.identified_sessions`).
+- **`posters_by_year.json`** — `{meta, years:[{year, files, pdf, image, other}]}`.
+- **`wikimania_org_sessions.json`** — `{meta, sessions:[{year, commons_file, session_title, program_page, speakers, track, slides_link, in_dataset}]}`; `speakers` = names (+ roles/affiliations where the page gave them), `track` = the session track/label only, `slides_link` = a direct deck link when the page supplied one.
 
 ## Per-year
 
@@ -65,21 +50,17 @@ _Generated 2026-10-20._
 | 2027 | 3 | 3 | 5 | 3 | 2 | — | 5 | — | 2/0 |
 | **Σ table** | **3910** | **3631** | **5275** | — | — | **999** | **1838** | **1327** | **2622/1890** |
 
-**Totals reconciliation.** The table sums only records with a known conference year. Dataset-wide totals include what the per-year rows cannot: 4015 records (+105 with no conference year), 1872 Wikimania-related slide PDFs (+34 un-year'd), ≈2,642 recording-hours (+≈20 un-year'd), and 1947 poster files (+620 un-year'd). These are listed, not distributed across years.
+**Totals reconciliation.** Per-year rows cover known conference year only. Dataset-wide totals add what rows cannot: 4015 records (+105 no-year), 1872 Wikimania-related slide PDFs (+34 un-year'd), ≈2,642 recording-hours (+≈20 un-year'd), 1947 poster files (+620 un-year'd).
 
-## Caveats (please don't quote without these)
+## Caveats
 
-- **2020 did not happen** (cancelled) — excluded; some 2020-dated files are misfiled.
+- **2020 did not happen** (cancelled) — excluded; 2020-dated files are misfiled.
+- **2027** counts are **not sessions**: 3 items are scholarship-orientation recordings and the Santiago announcement, for an edition not yet held. Treat as pre-event material.
 - **2010** has almost no recordings — a *recording gap*, not a missing edition (a poster category exists).
-- Matching is **title-based → a lower bound**; `identified` / `with_slide` will rise with better matching.
-- `identified_sessions` is a **heuristic union**, not a certified count — pending human review.
-- **Posters are not "missing recordings"**; they are counted from poster PDFs/photos. (A rare live-streamed 2026 poster hall is recorded.)
+- Matching is **title-based → a lower bound**; `identified_sessions` is a **heuristic union**, pending human review.
+- **Posters are not "missing recordings"** — judged by poster artifacts (a rare live-streamed 2026 hall is recorded).
 - **Delivered** programme exists only for **2023–2026**; pre-2023 schedules are being reconstructed.
 
-## Curated index accuracy (the `in_dataset` column)
+## Curated index accuracy (`in_dataset`)
 
-**1,084 of 1,085** curated sessions are in the recorded dataset. The single exception is `File:Podcast PhD thesis Imagine a world Wikimania 2021.ogg` — it **exists on Commons** (page id 108369907) but was **missed by the v1.8.0 harvest**, so it is neither in the dataset nor in the exclusion list. It is a known **harvest miss**, not a deliberate exclusion; it should be added in the next dataset build.
-
-## Files
-
-- `yearly_stats.csv` · `yearly_sessions.csv` · `posters_by_year.csv` · `wikimania_org_sessions.csv`
+**1,084 of 1,085** curated sessions are in the recorded dataset. The one exception is `File:Podcast PhD thesis Imagine a world Wikimania 2021.ogg` — it **exists on Commons** (page id 108369907) but was **missed by the v1.8.0 harvest** (not in the dataset, not in the exclusion list). A known harvest miss to add next build, not a deliberate exclusion.
